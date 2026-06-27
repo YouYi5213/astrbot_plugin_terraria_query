@@ -1,7 +1,7 @@
 """
 泰拉瑞亚 Wiki 查询插件（离线版）
 ==================================
-指令: /泰拉查询 <物品名称>
+指令: 泰拉查询 <物品名称>（无需 / 前缀）
 功能: 从本地离线数据库查询物品，以图片卡片展示属性与合成配方
 """
 
@@ -96,6 +96,35 @@ def _try_get_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
             except Exception:
                 continue
     return ImageFont.load_default()
+
+
+def _normalize_message(text: str) -> str:
+    text = text.strip()
+    if text.startswith("/"):
+        return text[1:].strip()
+    return text
+
+
+def _extract_query_text(text: str) -> str | None:
+    """解析查询指令参数，非查询指令时返回 None。"""
+    normalized = _normalize_message(text)
+    if normalized == "泰拉更新" or normalized.startswith("泰拉更新 "):
+        return None
+    for prefix in ("泰拉查询", "泰拉", "terraria"):
+        if normalized == prefix:
+            return ""
+        if normalized.startswith(prefix + " "):
+            return normalized[len(prefix) + 1 :].strip()
+    return None
+
+
+def _is_update_command(text: str) -> bool:
+    normalized = _normalize_message(text)
+    return normalized == "泰拉更新"
+
+
+# 匹配 泰拉查询/泰拉/泰拉更新/terraria，无需 / 前缀（/ 也兼容）
+_TERRARIA_CMD_RE = r"^/?(泰拉更新|泰拉查询|泰拉|terraria)(\s|$)"
 
 
 def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
@@ -352,23 +381,34 @@ class TerrariaQueryPlugin(Star):
             logger.error(f"加载 items.json 失败: {e}")
             self.items = {}
 
-    @filter.command("泰拉查询")
-    async def query_item(self, event: AstrMessageEvent):
-        """查询泰拉瑞亚物品信息。用法: /泰拉查询 <物品名>"""
-        text = event.message_str.strip()
-        for prefix in ("/泰拉查询", "/泰拉", "/terraria"):
-            if text.startswith(prefix):
-                text = text[len(prefix) :].strip()
-                break
+    @filter.regex(_TERRARIA_CMD_RE, priority=10)
+    async def on_terraria_command(self, event: AstrMessageEvent):
+        """处理泰拉瑞亚查询/更新指令（支持无 / 前缀）。"""
+        raw = event.message_str.strip()
 
+        if _is_update_command(raw):
+            async for result in self._handle_update(event):
+                yield result
+            event.stop_event()
+            return
+
+        query_text = _extract_query_text(raw)
+        if query_text is None:
+            return
+
+        async for result in self._handle_query(event, query_text):
+            yield result
+        event.stop_event()
+
+    async def _handle_query(self, event: AstrMessageEvent, text: str):
         if not text:
-            yield event.plain_result("用法: /泰拉查询 <物品名>\n例如: /泰拉查询 天顶剑")
+            yield event.plain_result("用法: 泰拉查询 <物品名>\n例如: 泰拉查询 天顶剑")
             return
 
         if not self.items:
             yield event.plain_result(
                 "❌ 离线数据尚未准备。\n"
-                "请在 WebUI 配置插件后发送 /泰拉更新，或从仓库拉取已包含的 data/ 目录。"
+                "请在 WebUI 配置插件后发送「泰拉更新」，或从仓库拉取已包含的 data/ 目录。"
             )
             return
 
@@ -395,9 +435,7 @@ class TerrariaQueryPlugin(Star):
                 logger.error(f"生成图片失败 ({name}): {e}")
                 yield event.plain_result(_format_text_result(data))
 
-    @filter.command("泰拉更新")
-    async def update_wiki(self, event: AstrMessageEvent):
-        """从 Wiki 增量更新物品数据。用法: /泰拉更新"""
+    async def _handle_update(self, event: AstrMessageEvent):
         if not self._can_update(event):
             yield event.plain_result("❌ 仅管理员可执行 Wiki 数据更新。")
             return

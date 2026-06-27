@@ -8,13 +8,13 @@
   "update_admin_id": {
     "description": "更新指令管理员 ID",
     "type": "string",
-    "hint": "仅该用户可执行 /泰拉更新。留空则不限制（任何人可触发更新）。",
+    "hint": "仅该用户可执行「泰拉更新」。留空则不限制（任何人可触发更新）。",
     "default": ""
   },
   "show_update_progress": {
     "description": "更新时发送提示",
     "type": "bool",
-    "hint": "手动执行 /泰拉更新 时，是否先发送「正在更新…」提示消息。",
+    "hint": "手动执行「泰拉更新」时，是否先发送「正在更新…」提示消息。",
     "default": true
   }
 }

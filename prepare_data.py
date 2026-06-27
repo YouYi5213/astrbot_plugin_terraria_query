@@ -1436,6 +1436,137 @@ def _apply_overview_page_meta(item: dict, wiki_title: str) -> None:
         item["wiki_title"] = wiki_title
 
 
+def _wing_search_terms(name: str) -> list[str]:
+    terms: list[str] = []
+    if name.endswith("之翼") and len(name) > 2:
+        terms.append(name[:-2])
+    return terms
+
+
+def _parse_wing_row(tr: Tag) -> dict | None:
+    anchor = tr.select_one("s.anchor[id]")
+    if not anchor:
+        return None
+
+    display_el = (
+        tr.select_one("td.il2c span[title]")
+        or tr.select_one("td.il1c img[title]")
+        or tr.select_one("td.il2c img[title]")
+    )
+    name = _clean_text(display_el.get("title", "")) if display_el else ""
+    if not name:
+        name = _clean_text(anchor.get("id", "")).replace("_", " ")
+    if not name:
+        return None
+
+    img_el = tr.select_one("td.il1c img") or tr.select_one("span.i img")
+    image = _filename_from_url(_image_url_from_src(img_el["src"])) if img_el and img_el.get("src") else ""
+
+    cells = tr.select("td")
+    source = _clean_text(cells[3].get_text(" ", strip=True)) if len(cells) > 3 else ""
+    flight_time = _clean_text(cells[4].get_text(" ", strip=True)) if len(cells) > 4 else ""
+    height = _clean_text(cells[5].get_text(" ", strip=True)) if len(cells) > 5 else ""
+    speed_attr = _clean_text(cells[6].get_text(" ", strip=True)) if len(cells) > 6 else ""
+    h_speed = _clean_text(cells[8].get_text(" ", strip=True)) if len(cells) > 8 else ""
+    h_accel = _clean_text(cells[9].get_text(" ", strip=True)) if len(cells) > 9 else ""
+    v_mult = _clean_text(cells[10].get_text(" ", strip=True)) if len(cells) > 10 else ""
+
+    rarity_cell = tr.select_one("td .rarity")
+    if rarity_cell:
+        rarity_cell = rarity_cell.find_parent("td")
+    rarity_stat = _parse_rarity_stat(rarity_cell, "稀有度") if rarity_cell else None
+
+    notes: list[str] = []
+    for li in tr.select("td ul li"):
+        note = _clean_text(li.get_text(" ", strip=True))
+        if note:
+            notes.append(note)
+
+    stats: list[dict] = [{"label": "类型", "value": "配饰", "extra": ""}]
+    if source:
+        stats.append({"label": "来源", "value": source, "extra": ""})
+    if flight_time:
+        stats.append({"label": "飞行时间", "value": flight_time, "extra": ""})
+    if height:
+        stats.append({"label": "高度（格）", "value": height, "extra": ""})
+    if speed_attr:
+        stats.append({"label": "速度", "value": speed_attr, "extra": ""})
+    if h_speed:
+        stats.append({"label": "最大水平速度", "value": h_speed, "extra": ""})
+    if h_accel:
+        stats.append({"label": "水平加速度", "value": h_accel, "extra": ""})
+    if v_mult:
+        stats.append({"label": "垂直倍率", "value": v_mult, "extra": ""})
+    if rarity_stat:
+        stats.append(rarity_stat)
+
+    desc_parts: list[str] = []
+    if source:
+        desc_parts.append(source)
+    desc_parts.extend(notes)
+
+    item: dict = {
+        "name": name,
+        "image": image,
+        "stats": stats,
+        "recipe": None,
+        "page_type": "wing",
+        "from_wings_table": True,
+        "parent_page": "翅膀",
+    }
+    if desc_parts:
+        item["description"] = "\n\n".join(desc_parts)
+        item["description_rich"] = description_text_to_rich(item["description"])
+    terms = _wing_search_terms(name)
+    if terms:
+        item["search_terms"] = terms
+    return item
+
+
+def parse_wings_from_soup(soup: BeautifulSoup) -> dict[str, dict]:
+    """从「翅膀」总览页的对比表中解析各翅膀条目"""
+    wings: dict[str, dict] = {}
+    for table in soup.select("table.terraria"):
+        anchors = table.select("s.anchor[id]")
+        if len(anchors) < 10:
+            continue
+        for tr in table.select("tbody tr"):
+            wing = _parse_wing_row(tr)
+            if wing:
+                wings[wing["name"]] = wing
+        if wings:
+            break
+    return wings
+
+
+def _merge_wing_en_names(zh_wings: dict[str, dict], en_wings: dict[str, dict]) -> None:
+    en_by_image = {w.get("image"): w for w in en_wings.values() if w.get("image")}
+    for wing in zh_wings.values():
+        en_wing = en_by_image.get(wing.get("image"))
+        if not en_wing:
+            continue
+        wing["en_name"] = en_wing["name"]
+        wing["en"] = {
+            "name": en_wing["name"],
+            "image": en_wing.get("image") or wing.get("image", ""),
+            "stats": en_wing.get("stats", []),
+            "recipe": None,
+            "description": en_wing.get("description"),
+            "description_rich": en_wing.get("description_rich"),
+        }
+
+
+def _merge_parsed_wings(items: dict[str, dict], wings: dict[str, dict]) -> int:
+    added = 0
+    for name, wing in wings.items():
+        existing = items.get(name)
+        if existing and not existing.get("from_wings_table"):
+            continue
+        items[name] = wing
+        added += 1
+    return added
+
+
 def _existing_wiki_titles(items: dict[str, dict]) -> set[str]:
     titles = set(items.keys())
     for item in items.values():
@@ -1451,12 +1582,15 @@ async def refresh_overview_pages(
     session: aiohttp.ClientSession,
     items: dict[str, dict],
 ) -> int:
-    """刷新 Wiki 物品类型总览页（如「翅膀」）"""
+    """刷新 Wiki 物品类型总览页（如「翅膀」）并展开翅膀子条目"""
     updated = 0
+    image_urls: dict[str, str] = {}
+
     for title, meta in OVERVIEW_PAGES.items():
         html = await fetch_page_html(session, title)
         if not html:
             continue
+        soup = BeautifulSoup(html, "html.parser")
         item = parse_item_page(html, title)
         if not item:
             continue
@@ -1468,8 +1602,28 @@ async def refresh_overview_pages(
             item["aliases"] = list(meta["aliases"])
         items[name] = item
         updated += 1
+
+        zh_wings = parse_wings_from_soup(soup)
+        en_html = await fetch_page_html(session, "Wings", api_url=API_URL_EN)
+        if en_html:
+            en_wings = parse_wings_from_soup(BeautifulSoup(en_html, "html.parser"))
+            _merge_wing_en_names(zh_wings, en_wings)
+        wing_added = _merge_parsed_wings(items, zh_wings)
+        updated += wing_added
+        for wing in zh_wings.values():
+            image_urls.update(_collect_image_urls(wing))
+
         await asyncio.sleep(0.15)
+
     if updated:
+        if image_urls:
+            semaphore = asyncio.Semaphore(8)
+            await asyncio.gather(
+                *[
+                    download_image(session, fn, url, semaphore)
+                    for fn, url in image_urls.items()
+                ]
+            )
         with open(ITEMS_JSON, "w", encoding="utf-8") as f:
             json.dump(items, f, ensure_ascii=False, indent=2)
     return updated

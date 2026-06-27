@@ -842,12 +842,14 @@ def _item_en_name(item: dict) -> str:
 
 def _item_zh_search_names(key: str, item: dict) -> set[str]:
     names = {key, item.get("name", ""), item.get("wiki_title", "")}
+    names.update(item.get("search_terms") or [])
     return {n for n in names if n}
 
 
 def _item_en_search_names(item: dict) -> set[str]:
     names = {_item_en_name(item)}
     names.update(item.get("aliases") or [])
+    names.update(item.get("search_terms") or [])
     return {n for n in names if n}
 
 
@@ -871,7 +873,7 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[tuple[str, str]]:
                 if query == zh_name:
                     add(key, "zh", 0)
                 elif query in zh_name:
-                    add(key, "zh", min(len(key), len(zh_name)))
+                    add(key, "zh", len(zh_name))
 
         if locale_hint in (None, "en"):
             for en_name in _item_en_search_names(item):

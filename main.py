@@ -24,13 +24,16 @@ from .prepare_data import (
     COIN_SPECS,
     RARITY_LABELS,
     normalize_stat_for_display,
+    resolve_bool_icon,
     update_wiki_data,
 )
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 _FONT_DIR = os.path.join(_PLUGIN_DIR, "assets", "fonts")
 _COIN_DIR = os.path.join(_PLUGIN_DIR, "assets", "coins")
+_ICON_DIR = os.path.join(_PLUGIN_DIR, "assets", "icons")
 _COIN_ICON_SIZE = (18, 18)
+_BOOL_ICON_SIZE = (20, 20)
 _BUNDLED_FONT_CANDIDATES = (
     os.path.join(_FONT_DIR, "NotoSansSC-Bold.otf"),
     os.path.join(_FONT_DIR, "NotoSansSC-Regular.otf"),
@@ -158,6 +161,12 @@ def _load_coin_icon(coin_type: str) -> Image.Image | None:
     return _load_image(os.path.join(_COIN_DIR, filename), _COIN_ICON_SIZE)
 
 
+def _load_bool_icon(kind: str) -> Image.Image | None:
+    if kind not in ("yes", "no"):
+        return None
+    return _load_image(os.path.join(_ICON_DIR, f"{kind}.png"), _BOOL_ICON_SIZE)
+
+
 def _format_stat_text(value: str, extra: str) -> str:
     value = (value or "").strip()
     extra = (extra or "").strip()
@@ -214,6 +223,10 @@ def _stat_value_height(
     if stat.get("coins"):
         return STAT_MIN_ROW
 
+    bool_icon = resolve_bool_icon(stat)
+    if bool_icon:
+        return STAT_MIN_ROW
+
     v_text = _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
     if not v_text:
         return 0
@@ -246,6 +259,13 @@ def _draw_stat_value(
             if coin_img:
                 card.paste(coin_img, (cx, y + 1), coin_img)
                 cx += _COIN_ICON_SIZE[0] + 8
+        return STAT_MIN_ROW
+
+    bool_icon = resolve_bool_icon(stat)
+    if bool_icon:
+        icon_img = _load_bool_icon(bool_icon)
+        if icon_img:
+            card.paste(icon_img, (x, y + 2), icon_img)
         return STAT_MIN_ROW
 
     v_text = _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
@@ -401,6 +421,10 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
                 )
                 parts.append(f"{coin.get('amount', '')} {abbr}".strip())
             v = " ".join(parts)
+        elif resolve_bool_icon(stat) == "yes":
+            v = "✔"
+        elif resolve_bool_icon(stat) == "no":
+            v = "✘"
         else:
             value = stat.get("value", "")
             extra = stat.get("extra", "")
@@ -434,7 +458,15 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     font_body = _try_get_font(16)
     font_small = _try_get_font(13)
 
-    stats = [s for s in data.get("stats", []) if s.get("value") or s.get("extra")]
+    stats = [
+        s
+        for s in data.get("stats", [])
+        if s.get("value")
+        or s.get("extra")
+        or s.get("coins")
+        or s.get("bool_icon")
+        or resolve_bool_icon(s)
+    ]
     recipe = data.get("recipe")
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
@@ -564,7 +596,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v4_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v5_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

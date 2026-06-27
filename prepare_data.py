@@ -229,6 +229,43 @@ def _parse_stat_value(td) -> tuple[str, str]:
     return value, extra
 
 
+def _parse_bool_icon(td) -> str | None:
+    if td.select_one(".t-yes"):
+        return "yes"
+    if td.select_one(".t-no"):
+        return "no"
+    return None
+
+
+def _parse_generic_stat(td, label: str) -> dict:
+    bool_icon = _parse_bool_icon(td)
+    if bool_icon:
+        return {"label": label, "value": "", "extra": "", "bool_icon": bool_icon}
+
+    img_el = td.select_one("img")
+    value, extra = _parse_stat_value(td)
+    stat: dict = {"label": label, "value": value, "extra": extra}
+    if img_el and img_el.get("src") and not value:
+        stat["value_image"] = _filename_from_url(_image_url_from_src(img_el["src"]))
+    return stat
+
+
+BOOL_YES_MARKERS = frozenset({"✔", "✔️", "✅", "☑", "☑️", "✓"})
+BOOL_NO_MARKERS = frozenset({"❌", "❎", "✖", "✖️", "☒", "✗", "✘"})
+
+
+def resolve_bool_icon(stat: dict) -> str | None:
+    icon = stat.get("bool_icon")
+    if icon in ("yes", "no"):
+        return icon
+    value = (stat.get("value") or "").strip().replace("\ufe0f", "")
+    if value in BOOL_YES_MARKERS:
+        return "yes"
+    if value in BOOL_NO_MARKERS:
+        return "no"
+    return None
+
+
 def _parse_item_span(span) -> tuple[str, str]:
     """从 span.i 元素提取 (名称, 图片文件名)"""
     link = span.select_one("a[title]") or span.select_one("a")
@@ -281,10 +318,9 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
         if label in SELL_LABELS:
             item["stats"].append(_parse_sell_stat(td, label))
             continue
-        value, extra = _parse_stat_value(td)
         if not label:
             continue
-        item["stats"].append({"label": label, "value": value, "extra": extra})
+        item["stats"].append(_parse_generic_stat(td, label))
 
     for table in soup.select("table.terraria.cellborder.recipes"):
         # 跳过微光嬗变等带 caption 的配方表

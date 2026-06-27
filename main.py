@@ -114,6 +114,8 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 CARD_WIDTH = 600
 CARD_PADDING = 20
 ROW_HEIGHT = 32
+STAT_LINE_HEIGHT = 22
+STAT_MIN_ROW = 28
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -156,6 +158,71 @@ def _load_coin_icon(coin_type: str) -> Image.Image | None:
     return _load_image(os.path.join(_COIN_DIR, filename), _COIN_ICON_SIZE)
 
 
+def _format_stat_text(value: str, extra: str) -> str:
+    value = (value or "").strip()
+    extra = (extra or "").strip()
+    if not extra:
+        return value
+    extra_core = extra.strip("()（）[] ")
+    if extra_core and extra_core in value:
+        return value
+    if extra[0] in "(（[":
+        return f"{value} {extra}".strip() if value else extra
+    if value:
+        return f"{value} ({extra})"
+    return f"({extra})"
+
+
+def _text_width(draw: ImageDraw.ImageDraw, text: str, font) -> int:
+    if not text:
+        return 0
+    bbox = draw.textbbox((0, 0), text, font=font)
+    return bbox[2] - bbox[0]
+
+
+def _wrap_text_lines(
+    draw: ImageDraw.ImageDraw, text: str, font, max_width: int
+) -> list[str]:
+    if not text:
+        return []
+    if max_width <= 0 or _text_width(draw, text, font) <= max_width:
+        return [text]
+    lines: list[str] = []
+    current = ""
+    for ch in text:
+        trial = current + ch
+        if _text_width(draw, trial, font) <= max_width:
+            current = trial
+        else:
+            if current:
+                lines.append(current)
+            current = ch
+    if current:
+        lines.append(current)
+    return lines
+
+
+def _stat_value_height(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image | None,
+    x: int,
+    stat: dict,
+    font,
+    locale: str,
+) -> int:
+    stat = normalize_stat_for_display(stat, locale)
+    if stat.get("coins"):
+        return STAT_MIN_ROW
+
+    v_text = _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
+    if not v_text:
+        return 0
+
+    max_width = CARD_WIDTH - CARD_PADDING - x
+    lines = _wrap_text_lines(draw, v_text, font, max_width)
+    return max(STAT_MIN_ROW, len(lines) * STAT_LINE_HEIGHT + 6)
+
+
 def _draw_stat_value(
     draw: ImageDraw.ImageDraw,
     card: Image.Image,
@@ -164,7 +231,7 @@ def _draw_stat_value(
     stat: dict,
     font: ImageFont.FreeTypeFont | ImageFont.ImageFont,
     locale: str,
-) -> None:
+) -> int:
     stat = normalize_stat_for_display(stat, locale)
     label = stat.get("label", "")
 
@@ -179,16 +246,18 @@ def _draw_stat_value(
             if coin_img:
                 card.paste(coin_img, (cx, y + 1), coin_img)
                 cx += _COIN_ICON_SIZE[0] + 8
-        return
+        return STAT_MIN_ROW
 
-    value = stat.get("value", "")
-    extra = stat.get("extra", "")
-    if not value and not extra:
-        return
+    v_text = _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
+    if not v_text:
+        return 0
 
     color = stat.get("color") if label in RARITY_LABELS else COLORS["value"]
-    v_text = value + (f" ({extra})" if extra else "")
-    draw.text((x, y), v_text, fill=color, font=font)
+    max_width = CARD_WIDTH - CARD_PADDING - x
+    lines = _wrap_text_lines(draw, v_text, font, max_width)
+    for i, line in enumerate(lines):
+        draw.text((x, y + i * STAT_LINE_HEIGHT), line, fill=color, font=font)
+    return max(STAT_MIN_ROW, len(lines) * STAT_LINE_HEIGHT + 6)
 
 
 def _normalize_message(text: str) -> str:
@@ -337,7 +406,7 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
             extra = stat.get("extra", "")
             if not value and not extra:
                 continue
-            v = value + (f" ({extra})" if extra else "")
+            v = _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
         lines.append(f"  {label}: {v}")
 
     recipe = data.get("recipe")
@@ -368,12 +437,30 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     stats = [s for s in data.get("stats", []) if s.get("value") or s.get("extra")]
     recipe = data.get("recipe")
 
+    measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
+    stats_area = 20
+    for stat in stats:
+        label = stat.get("label", "")
+        label_bbox = measure.textbbox((0, 0), label, font=font_body)
+        label_w = label_bbox[2] - label_bbox[0]
+        value_x = CARD_PADDING + 30 + label_w + 20
+        stats_area += _stat_value_height(measure, None, value_x, stat, font_body, locale)
+
     title_area = 60
-    stats_area = len(stats) * ROW_HEIGHT + 20
     sep_area = 30
     recipe_area = 0
     if recipe:
         recipe_area = 80
+        station = recipe.get("station", "")
+        if station:
+            station_text = f"{ui['station']} {station}"
+            station_lines = _wrap_text_lines(
+                measure,
+                station_text,
+                font_small,
+                CARD_WIDTH - CARD_PADDING * 2 - 40,
+            )
+            recipe_area += len(station_lines) * 18 + 10
         ing_count = len(recipe.get("ingredients", []))
         recipe_area += max(1, (ing_count + 3) // 4) * 36 + 44
 
@@ -412,8 +499,8 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         bbox = draw.textbbox((0, 0), label, font=font_body)
         label_w = bbox[2] - bbox[0]
         value_x = CARD_PADDING + 30 + label_w + 20
-        _draw_stat_value(draw, card, value_x, y, stat, font_body, locale)
-        y += ROW_HEIGHT
+        row_h = _draw_stat_value(draw, card, value_x, y, stat, font_body, locale)
+        y += row_h
 
     y += 10
     draw.line(
@@ -429,13 +516,21 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
 
         station = recipe.get("station", "")
         if station:
-            draw.text(
-                (CARD_PADDING + 20, y),
-                f"{ui['station']} {station}",
-                fill=COLORS["label"],
-                font=font_small,
+            station_text = f"{ui['station']} {station}"
+            station_x = CARD_PADDING + 20
+            station_max_w = CARD_WIDTH - CARD_PADDING * 2 - 40
+            station_lines = _wrap_text_lines(
+                draw, station_text, font_small, station_max_w
             )
-            y += 22
+            for line in station_lines:
+                draw.text(
+                    (station_x, y),
+                    line,
+                    fill=COLORS["label"],
+                    font=font_small,
+                )
+                y += 18
+            y += 4
 
         ingredients = recipe.get("ingredients", [])
         if ingredients:
@@ -469,7 +564,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v3_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v4_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

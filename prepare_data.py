@@ -222,6 +222,10 @@ def _parse_stat_value(td) -> tuple[str, str]:
     if extra_el:
         extra_el.extract()
     value = _clean_text(td.get_text())
+    if extra:
+        extra_core = extra.strip("()（）[] ")
+        if extra_core and extra_core in value:
+            extra = ""
     return value, extra
 
 

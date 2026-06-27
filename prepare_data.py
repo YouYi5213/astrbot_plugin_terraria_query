@@ -719,11 +719,40 @@ def _description_fallback_from_stats(item: dict) -> str | None:
     return None
 
 
+    return None
+
+
+def _apply_description_to_item(item: dict, parsed: dict | str | None) -> bool:
+    if isinstance(parsed, dict):
+        text = parsed.get("text")
+        if not text:
+            return False
+        item["description"] = text
+        rich = parsed.get("rich")
+        item["description_rich"] = rich if rich else description_text_to_rich(text)
+        return True
+    if isinstance(parsed, str) and parsed.strip():
+        text = parsed.strip()
+        item["description"] = text
+        item["description_rich"] = description_text_to_rich(text)
+        return True
+    return False
+
+
+def _apply_description_fallback(item: dict) -> bool:
+    fallback = _description_fallback_from_stats(item)
+    if not fallback:
+        return False
+    item["description"] = fallback
+    item["description_rich"] = description_text_to_rich(fallback)
+    return True
+
+
 async def fetch_item_description(
     session: aiohttp.ClientSession,
     item: dict,
     key: str,
-) -> str | None:
+) -> bool:
     """抓取物品导语，依次尝试多个 Wiki 标题"""
     for title in _iter_wiki_titles(item, key):
         html = await fetch_page_html(session, title)
@@ -731,10 +760,10 @@ async def fetch_item_description(
             html = await fetch_page_html(session, title, api_url=API_URL_EN)
         if not html:
             continue
-        description = parse_description_from_soup(BeautifulSoup(html, "html.parser"))
-        if description:
-            return description
-    return _description_fallback_from_stats(item)
+        parsed = parse_description_from_soup(BeautifulSoup(html, "html.parser"))
+        if _apply_description_to_item(item, parsed):
+            return True
+    return _apply_description_fallback(item)
 
 
 def _is_intro_table(table: Tag) -> bool:
@@ -767,25 +796,145 @@ def _should_skip_intro_div(div: Tag) -> str:
     return "stop"
 
 
+def _parse_key_element(el: Tag) -> dict:
+    kbd = el.select_one("kbd") or el
+    full = _clean_text(kbd.get_text("", strip=True))
+    symbol = ""
+    sym_span = el.select_one("span[style*='font-size']")
+    if sym_span:
+        symbol = _clean_text(sym_span.get_text("", strip=True))
+    if symbol and full.startswith(symbol):
+        label = full[len(symbol) :].strip()
+    else:
+        label = full
+    return {"type": "key", "symbol": symbol, "label": label}
+
+
+def _parse_description_paragraph_rich(p: Tag) -> list[dict]:
+    from bs4 import NavigableString
+
+    segments: list[dict] = []
+
+    def append_text(text: str) -> None:
+        text = _clean_text(text)
+        if not text:
+            return
+        if segments and segments[-1]["type"] == "text":
+            segments[-1]["text"] += text
+        else:
+            segments.append({"type": "text", "text": text})
+
+    def walk(node) -> None:
+        if isinstance(node, NavigableString):
+            append_text(str(node))
+            return
+        if not isinstance(node, Tag):
+            return
+        classes = set(node.get("class") or [])
+        if node.name == "span" and "key" in classes:
+            segments.append(_parse_key_element(node))
+            return
+        if node.name == "sup" and "reference" in classes:
+            ref_num = re.sub(r"[\[\]\s]", "", node.get_text("", strip=True))
+            append_text(f"[{ref_num}]" if ref_num else "")
+            return
+        if node.name == "span" and "coin" in classes:
+            amt_el = node.select_one("span.pc, span.gc, span.sc, span.cc")
+            if amt_el:
+                match = re.search(r"(\d+)", _clean_text(amt_el.get_text()))
+                append_text(match.group(1) if match else "")
+            return
+        if node.name == "img" and node.get("src"):
+            segments.append(
+                {
+                    "type": "icon",
+                    "image": _filename_from_url(_image_url_from_src(node["src"])),
+                    "alt": _clean_text(node.get("alt", "")),
+                }
+            )
+            return
+        if node.name == "i":
+            for child in node.children:
+                walk(child)
+            return
+        for child in node.children:
+            walk(child)
+
+    for child in p.children:
+        walk(child)
+
+    cleaned: list[dict] = []
+    for seg in segments:
+        if seg["type"] == "text" and not seg["text"].strip():
+            continue
+        cleaned.append(seg)
+    return cleaned
+
+
+def _rich_segments_to_text(segments: list[dict]) -> str:
+    parts: list[str] = []
+    for seg in segments:
+        if seg["type"] == "text":
+            parts.append(seg["text"])
+        elif seg["type"] == "key":
+            parts.append(f"{seg.get('symbol', '')}{seg.get('label', '')}")
+        elif seg["type"] == "icon":
+            alt = seg.get("alt") or ""
+            if alt:
+                parts.append(alt)
+    return re.sub(r"\s+", " ", "".join(parts)).strip()
+
+
+DESCRIPTION_KEY_RE = re.compile(
+    r"(⚷)(打开/激活)"
+    r"|(⚒)(使用/攻击)"
+    r"|(↷)(跳键|跳)"
+    r"|(▼)\s*(下)"
+    r"|(▲)\s*(上)"
+    r"|(◀)\s*(左)"
+    r"|(▶)\s*(右)"
+)
+
+
+def _match_description_key(match: re.Match) -> tuple[str, str]:
+    groups = [g for g in match.groups() if g is not None]
+    if len(groups) >= 2:
+        return groups[0], groups[1]
+    return "", ""
+
+
+def description_text_to_rich(text: str) -> list[list[dict]]:
+    """从已存储的导语纯文本还原按键分段（兼容旧数据）"""
+    if not text:
+        return []
+    paragraphs: list[list[dict]] = []
+    for para in text.split("\n\n"):
+        para = para.strip()
+        if not para:
+            continue
+        segments: list[dict] = []
+        pos = 0
+        for match in DESCRIPTION_KEY_RE.finditer(para):
+            if match.start() > pos:
+                segments.append({"type": "text", "text": para[pos : match.start()]})
+            symbol, label = _match_description_key(match)
+            if symbol:
+                segments.append({"type": "key", "symbol": symbol, "label": label})
+            pos = match.end()
+        if pos < len(para):
+            segments.append({"type": "text", "text": para[pos:]})
+        if not segments:
+            segments = [{"type": "text", "text": para}]
+        paragraphs.append(segments)
+    return paragraphs
+
+
 def _clean_description_paragraph(p: Tag) -> str:
     """将 Wiki 导语段落转为纯文本"""
-    for sup in p.select("sup.reference"):
-        ref_num = re.sub(r"[\[\]\s]", "", sup.get_text("", strip=True))
-        sup.replace_with(f"[{ref_num}]" if ref_num else "")
-    for coin in p.select("span.coin"):
-        amt_el = coin.select_one("span.pc, span.gc, span.sc, span.cc")
-        if amt_el:
-            match = re.search(r"(\d+)", _clean_text(amt_el.get_text()))
-            coin.replace_with(match.group(1) if match else "")
-        else:
-            coin.decompose()
-    for italic in p.select("i"):
-        italic.unwrap()
-    text = _clean_text(p.get_text("", strip=True))
-    return re.sub(r"\s+", " ", text).strip()
+    return _rich_segments_to_text(_parse_description_paragraph_rich(p))
 
 
-def parse_description_from_soup(soup: BeautifulSoup) -> str | None:
+def parse_description_from_soup(soup: BeautifulSoup) -> dict | None:
     """提取 Wiki 正文开头导语（infobox 后、目录/章节前的连续段落）"""
     root = (
         soup.select_one("#mw-content-text .mw-parser-output")
@@ -796,6 +945,7 @@ def parse_description_from_soup(soup: BeautifulSoup) -> str | None:
 
     stop_tags = frozenset({"h2", "h3", "h4", "ul", "ol", "figure", "style", "script"})
     paragraphs: list[str] = []
+    rich_paragraphs: list[list[dict]] = []
     for child in root.children:
         if not isinstance(child, Tag):
             continue
@@ -811,9 +961,11 @@ def parse_description_from_soup(soup: BeautifulSoup) -> str | None:
         if child.name == "blockquote":
             continue
         if child.name == "p":
-            text = _clean_description_paragraph(child)
+            rich = _parse_description_paragraph_rich(child)
+            text = _rich_segments_to_text(rich)
             if text:
                 paragraphs.append(text)
+                rich_paragraphs.append(rich)
             continue
         if child.name in stop_tags:
             break
@@ -821,7 +973,10 @@ def parse_description_from_soup(soup: BeautifulSoup) -> str | None:
 
     if not paragraphs:
         return None
-    return "\n\n".join(paragraphs)
+    return {
+        "text": "\n\n".join(paragraphs),
+        "rich": rich_paragraphs,
+    }
 
 
 def parse_item_page(html: str, fallback_name: str) -> dict | None:
@@ -914,11 +1069,9 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
     if drops:
         item["drops"] = drops
 
-    description = parse_description_from_soup(soup)
-    if not description:
-        description = _description_fallback_from_stats(item)
-    if description:
-        item["description"] = description
+    parsed = parse_description_from_soup(soup)
+    if not _apply_description_to_item(item, parsed):
+        _apply_description_fallback(item)
 
     return item
 
@@ -931,6 +1084,7 @@ def _extract_en_locale(en_item: dict, zh_item: dict) -> dict:
         "recipe": en_item.get("recipe"),
         "drops": en_item.get("drops"),
         "description": en_item.get("description"),
+        "description_rich": en_item.get("description_rich"),
     }
 
 
@@ -1118,13 +1272,11 @@ async def backfill_descriptions(
             item = items[key]
             description = None
             for attempt in range(3):
-                description = await fetch_item_description(session, item, key)
-                if description:
+                if await fetch_item_description(session, item, key):
+                    description = item.get("description")
                     break
                 if attempt < 2:
                     await asyncio.sleep(1.5 * (attempt + 1))
-            if description:
-                item["description"] = description
             await asyncio.sleep(0.12)
             return bool(description)
 

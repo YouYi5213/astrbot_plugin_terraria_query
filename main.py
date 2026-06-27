@@ -23,6 +23,7 @@ from astrbot.api import AstrBotConfig, logger
 from .prepare_data import (
     COIN_SPECS,
     RARITY_LABELS,
+    description_text_to_rich,
     drops_display_block,
     normalize_stat_for_display,
     resolve_bool_icon,
@@ -140,7 +141,12 @@ COLORS = {
     "value": (255, 255, 255),
     "accent": (100, 180, 255),
     "separator": (60, 60, 70),
+    "key_bg": (55, 55, 70, 255),
+    "key_border": (120, 120, 140),
 }
+DESC_LINE_HEIGHT = 18
+KEY_BADGE_PAD_X = 5
+KEY_BADGE_PAD_Y = 2
 
 
 def _ensure_dirs() -> None:
@@ -301,6 +307,151 @@ def _layout_rich_segments(
                 lines.append([])
             lines[-1].append(("icon", fn))
     return [line for line in lines if line]
+
+
+def _key_badge_label(seg: dict) -> str:
+    symbol = seg.get("symbol", "")
+    label = seg.get("label", "")
+    if symbol and label:
+        return f"{symbol}{label}"
+    return symbol or label
+
+
+def _key_badge_width(draw: ImageDraw.ImageDraw, seg: dict, font) -> int:
+    inner = _key_badge_label(seg)
+    bbox = draw.textbbox((0, 0), inner, font=font)
+    return bbox[2] - bbox[0] + KEY_BADGE_PAD_X * 2
+
+
+def _layout_description_segments(
+    draw: ImageDraw.ImageDraw,
+    segments: list[dict],
+    font,
+    max_width: int,
+) -> list[list[tuple[str, object]]]:
+    lines: list[list[tuple[str, object]]] = [[]]
+
+    def line_width(line: list[tuple[str, object]]) -> int:
+        width = 0
+        for kind, payload in line:
+            if kind == "text":
+                width += _text_width(draw, payload, font)
+            elif kind == "key":
+                width += _key_badge_width(draw, payload, font) + 2
+            else:
+                img = _load_inline_icon(payload)
+                width += (img.width + 2) if img else 18
+        return width
+
+    for seg in segments:
+        if seg.get("type") == "text":
+            for ch in seg.get("text", ""):
+                if ch == "\n":
+                    lines.append([])
+                    continue
+                if lines[-1] and line_width(lines[-1]) + _text_width(draw, ch, font) > max_width:
+                    lines.append([])
+                if lines[-1] and lines[-1][-1][0] == "text":
+                    kind, payload = lines[-1][-1]
+                    lines[-1][-1] = (kind, payload + ch)
+                else:
+                    lines[-1].append(("text", ch))
+        elif seg.get("type") == "key":
+            bw = _key_badge_width(draw, seg, font) + 2
+            if lines[-1] and line_width(lines[-1]) + bw > max_width:
+                lines.append([])
+            lines[-1].append(("key", seg))
+        elif seg.get("type") == "icon":
+            fn = seg.get("image", "")
+            img = _load_inline_icon(fn)
+            iw = (img.width + 2) if img else 18
+            if lines[-1] and line_width(lines[-1]) + iw > max_width:
+                lines.append([])
+            lines[-1].append(("icon", fn))
+    return [line for line in lines if line]
+
+
+def _draw_key_badge(
+    draw: ImageDraw.ImageDraw,
+    x: int,
+    y: int,
+    seg: dict,
+    font,
+) -> int:
+    inner = _key_badge_label(seg)
+    bbox = draw.textbbox((0, 0), inner, font=font)
+    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    w = tw + KEY_BADGE_PAD_X * 2
+    h = th + KEY_BADGE_PAD_Y * 2
+    draw.rounded_rectangle(
+        [x, y, x + w, y + h],
+        radius=4,
+        outline=COLORS["key_border"],
+        fill=COLORS["key_bg"],
+    )
+    draw.text((x + KEY_BADGE_PAD_X, y + KEY_BADGE_PAD_Y), inner, fill=COLORS["text"], font=font)
+    return w + 2
+
+
+def _draw_description_line(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    x: int,
+    y: int,
+    line: list[tuple[str, object]],
+    font,
+) -> None:
+    cx = x
+    for kind, payload in line:
+        if kind == "text":
+            draw.text((cx, y), payload, fill=COLORS["text"], font=font)
+            cx += _text_width(draw, payload, font)
+        elif kind == "key":
+            cx += _draw_key_badge(draw, cx, y - 1, payload, font)
+        else:
+            img = _load_inline_icon(payload)
+            if img:
+                card.paste(img, (cx, y + 1), img)
+                cx += img.width + 2
+
+
+def _resolve_description_rich(data: dict) -> list[list[dict]]:
+    rich = data.get("description_rich")
+    if rich:
+        return rich
+    text = (data.get("description") or "").strip()
+    return description_text_to_rich(text) if text else []
+
+
+def _calc_description_area(measure, description_rich: list[list[dict]], font) -> int:
+    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
+    area = 20 + 30
+    for para in description_rich:
+        lines = _layout_description_segments(measure, para, font, max_w)
+        area += max(1, len(lines)) * DESC_LINE_HEIGHT
+        area += 6
+    return area + 10
+
+
+def _draw_description_section(
+    draw,
+    card: Image.Image,
+    y: int,
+    description_rich: list[list[dict]],
+    font_header,
+    font_small,
+    ui,
+) -> int:
+    draw.text((CARD_PADDING + 10, y), ui["description"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    desc_x = CARD_PADDING + 20
+    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
+    for para in description_rich:
+        for line in _layout_description_segments(draw, para, font_small, max_w):
+            _draw_description_line(draw, card, desc_x, y, line, font_small)
+            y += DESC_LINE_HEIGHT
+        y += 6
+    return y + 10
 
 
 def _rich_stat_height(
@@ -738,7 +889,9 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
             "recipe": merge_en_recipe(item.get("recipe"), en.get("recipe")),
             "drops": en.get("drops"),
             "description": en.get("description") or item.get("description"),
+            "description_rich": en.get("description_rich") or item.get("description_rich"),
         }
+    rich = item.get("description_rich")
     return {
         "name": item.get("name", ""),
         "image": item.get("image", ""),
@@ -746,6 +899,7 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
         "recipe": item.get("recipe"),
         "drops": item.get("drops"),
         "description": item.get("description"),
+        "description_rich": rich,
     }
 
 
@@ -826,28 +980,6 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
     return "\n".join(lines)
 
 
-def _calc_description_area(measure, description: str, font) -> int:
-    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
-    area = 20 + 30
-    for para in description.split("\n\n"):
-        area += len(_wrap_text_lines(measure, para, font, max_w)) * 16
-        area += 6
-    return area + 10
-
-
-def _draw_description_section(draw, y: int, description: str, font_header, font_small, ui) -> int:
-    draw.text((CARD_PADDING + 10, y), ui["description"], fill=COLORS["accent"], font=font_header)
-    y += 30
-    desc_x = CARD_PADDING + 20
-    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
-    for para in description.split("\n\n"):
-        for line in _wrap_text_lines(draw, para, font_small, max_w):
-            draw.text((desc_x, y), line, fill=COLORS["text"], font=font_small)
-            y += 16
-        y += 6
-    return y + 10
-
-
 def _generate_item_card(data: dict, locale: str = "zh") -> str:
     _ensure_dirs()
     ui = _CARD_UI.get(locale, _CARD_UI["zh"])
@@ -869,7 +1001,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     ]
     recipe = data.get("recipe")
     drops = data.get("drops")
-    description = (data.get("description") or "").strip()
+    description_rich = _resolve_description_rich(data)
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
     stat_value_x = _stat_value_x(measure, stats, font_body)
@@ -880,8 +1012,8 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         )
 
     desc_area = 0
-    if description:
-        desc_area = _calc_description_area(measure, description, font_small) + 20
+    if description_rich:
+        desc_area = _calc_description_area(measure, description_rich, font_small) + 20
 
     title_area = 60
     sep_area = 30
@@ -952,8 +1084,10 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     )
 
     y = CARD_PADDING + title_area + 10
-    if description:
-        y = _draw_description_section(draw, y, description, font_header, font_small, ui)
+    if description_rich:
+        y = _draw_description_section(
+            draw, card, y, description_rich, font_header, font_small, ui
+        )
         draw.line(
             [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
             fill=COLORS["separator"],
@@ -1055,7 +1189,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v14_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v15_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

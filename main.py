@@ -125,6 +125,8 @@ STAT_LABEL_VALUE_GAP = 10
 DROP_ROW_HEIGHT = 44
 DROP_MODE_HEADER = 22
 DROP_TABLE_HEADER = 22
+ITEM_ICON_SLOT = (48, 48)
+ING_ICON_SLOT = (28, 28)
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -148,13 +150,41 @@ def _image_path(filename: str) -> str:
     return os.path.join(IMAGES_DIR, filename)
 
 
+def _fit_image(img: Image.Image, max_w: int, max_h: int) -> Image.Image:
+    w, h = img.size
+    if w <= 0 or h <= 0:
+        return img
+    scale = min(max_w / w, max_h / h)
+    new_w = max(1, round(w * scale))
+    new_h = max(1, round(h * scale))
+    if (new_w, new_h) == (w, h):
+        return img
+    resample = Image.NEAREST if scale > 1 else Image.LANCZOS
+    return img.resize((new_w, new_h), resample)
+
+
+def _paste_in_slot(
+    card: Image.Image,
+    img: Image.Image | None,
+    x: int,
+    y: int,
+    slot_w: int,
+    slot_h: int,
+) -> None:
+    if not img:
+        return
+    ox = x + max(0, (slot_w - img.width) // 2)
+    oy = y + max(0, (slot_h - img.height) // 2)
+    card.paste(img, (ox, oy), img)
+
+
 def _load_image(path: str, size: tuple[int, int] | None = None) -> Image.Image | None:
     if not path or not os.path.exists(path):
         return None
     try:
         img = Image.open(path).convert("RGBA")
         if size:
-            img = img.resize(size, Image.LANCZOS)
+            img = _fit_image(img, size[0], size[1])
         return img
     except Exception:
         return None
@@ -312,9 +342,7 @@ def _load_entity_image(filename: str) -> Image.Image | None:
     img = _load_image(_image_path(filename))
     if not img:
         return None
-    target_h = 36
-    target_w = min(48, int(img.width * target_h / max(img.height, 1)))
-    return img.resize((target_w, target_h), Image.LANCZOS)
+    return _fit_image(img, 48, 36)
 
 
 def _calc_drops_area(drops: dict | None) -> int:
@@ -357,10 +385,10 @@ def _draw_drops_section(
             y += DROP_MODE_HEADER
         for entry in mode.get("entries", []):
             img = _load_entity_image(entry.get("image", ""))
-            text_x = col_entity
+            entity_slot_w = 48
+            text_x = col_entity + entity_slot_w + 8
             if img:
-                card.paste(img, (col_entity, y + 2), img)
-                text_x = col_entity + img.width + 8
+                _paste_in_slot(card, img, col_entity, y, entity_slot_w, DROP_ROW_HEIGHT)
             draw.text((text_x, y + 4), entry.get("name", ""), fill=COLORS["text"], font=font_small)
             draw.text(
                 (col_qty, y + 4),
@@ -628,7 +656,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
 
-    item_img = _load_image(_image_path(data.get("image", "")), (48, 48))
+    item_img = _load_image(_image_path(data.get("image", "")), ITEM_ICON_SLOT)
     draw.rounded_rectangle(
         [CARD_PADDING, CARD_PADDING, CARD_WIDTH - CARD_PADDING, CARD_PADDING + title_area],
         radius=8,
@@ -637,8 +665,15 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
 
     icon_x = CARD_PADDING + 15
     if item_img:
-        card.paste(item_img, (icon_x, CARD_PADDING + 6), item_img)
-        text_x = icon_x + 60
+        _paste_in_slot(
+            card,
+            item_img,
+            icon_x,
+            CARD_PADDING,
+            ITEM_ICON_SLOT[0],
+            title_area,
+        )
+        text_x = icon_x + ITEM_ICON_SLOT[0] + 12
     else:
         text_x = icon_x
 
@@ -703,22 +738,31 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
                 x_pos = ing_start_x
                 for ing in row_items:
                     ing_name = ing.get("name", "")
-                    ing_img = _load_image(_image_path(ing.get("image", "")), (28, 28))
+                    ing_img = _load_image(
+                        _image_path(ing.get("image", "")), ING_ICON_SLOT
+                    )
                     if ing_img:
-                        card.paste(ing_img, (x_pos, y), ing_img)
-                    draw.text((x_pos + 32, y + 2), ing_name, fill=COLORS["text"], font=font_small)
+                        _paste_in_slot(
+                            card, ing_img, x_pos, y, ING_ICON_SLOT[0], ing_row_h
+                        )
+                    draw.text(
+                        (x_pos + ING_ICON_SLOT[0] + 4, y + 2),
+                        ing_name,
+                        fill=COLORS["text"],
+                        font=font_small,
+                    )
                     bbox = draw.textbbox((0, 0), ing_name, font=font_small)
-                    x_pos += 32 + (bbox[2] - bbox[0]) + 15
+                    x_pos += ING_ICON_SLOT[0] + 4 + (bbox[2] - bbox[0]) + 15
                 y += ing_row_h
 
         result = recipe.get("result", {})
         result_name = result.get("name", data.get("name", ""))
-        result_img = _load_image(_image_path(result.get("image", "")), (28, 28))
+        result_img = _load_image(_image_path(result.get("image", "")), ING_ICON_SLOT)
         draw.text((CARD_PADDING + 20, y), ui["result"], fill=COLORS["accent"], font=font_body)
         rx = CARD_PADDING + 100
         if result_img:
-            card.paste(result_img, (rx, y), result_img)
-            rx += 32
+            _paste_in_slot(card, result_img, rx, y, ING_ICON_SLOT[0], ING_ICON_SLOT[1])
+            rx += ING_ICON_SLOT[0] + 4
         draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
         y += 36
 
@@ -733,7 +777,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v7_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v8_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

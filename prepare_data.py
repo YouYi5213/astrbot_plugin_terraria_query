@@ -450,6 +450,25 @@ _DEFAULT_DROP_MODES = [
     {"mode": "master", "label": "大师"},
 ]
 
+_DROP_MODE_LABEL_EN = {
+    "经典": "Classic",
+    "专家": "Expert",
+    "大师": "Master",
+}
+
+
+def _translate_drop_banner(label: str, locale: str) -> str:
+    if locale != "en" or not label:
+        return label
+    parts = [part.strip() for part in label.split("/")]
+    return " / ".join(_DROP_MODE_LABEL_EN.get(part, part) for part in parts if part)
+
+
+def _translate_mode_label(label: str, locale: str) -> str:
+    if locale != "en" or not label:
+        return label
+    return _DROP_MODE_LABEL_EN.get(label, label)
+
 
 def parse_drops_from_soup(soup: BeautifulSoup) -> dict | None:
     box = soup.select_one("div.drop.infobox.modesbox")
@@ -507,6 +526,8 @@ def compact_drop_modes(drops: dict | None) -> list[dict]:
 def _join_mode_labels(labels: list[str], locale: str = "zh") -> str:
     if not labels:
         return ""
+    if locale == "en":
+        labels = [_translate_mode_label(label, locale) for label in labels]
     if len(labels) == 1:
         return labels[0]
     if locale == "en":
@@ -548,6 +569,7 @@ def drops_display_block(drops: dict | None, locale: str = "zh") -> dict | None:
         return None
 
     labels = " / ".join(m.get("label", "") for m in modes if m.get("label"))
+    labels = _translate_drop_banner(labels, locale)
     row_count = max((len(m.get("entries", [])) for m in modes), default=0)
     merged: list[dict] = []
     for i in range(row_count):
@@ -570,6 +592,33 @@ def drops_display_block(drops: dict | None, locale: str = "zh") -> dict | None:
             }
         )
     return {"label": labels, "entries": merged}
+
+
+def merge_en_recipe(zh_recipe: dict | None, en_recipe: dict | None) -> dict | None:
+    if not en_recipe:
+        return en_recipe
+    if not zh_recipe:
+        return en_recipe
+    merged = {
+        "station": en_recipe.get("station", ""),
+        "ingredients": [],
+        "result": dict(en_recipe.get("result") or {}),
+    }
+    zh_by_image = {
+        ing.get("image"): ing for ing in zh_recipe.get("ingredients", []) if ing.get("image")
+    }
+    for ing in en_recipe.get("ingredients", []):
+        entry = dict(ing)
+        zh_ing = zh_by_image.get(entry.get("image", ""))
+        if zh_ing and zh_ing.get("amount") and not entry.get("amount"):
+            entry["amount"] = zh_ing["amount"]
+        merged["ingredients"].append(entry)
+    zh_res = zh_recipe.get("result") or {}
+    res = merged["result"]
+    if zh_res.get("amount") and not res.get("amount"):
+        res["amount"] = zh_res["amount"]
+    merged["result"] = res
+    return merged
 
 
 def _collect_drop_image_urls(drops: dict) -> dict[str, str]:
@@ -661,6 +710,7 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
         row = rows[0]
         station_el = row.select_one("td.station")
         station = _clean_text(station_el.get_text()) if station_el else ""
+        station = re.sub(r"(?<=[a-zA-Z\)）])or(?=[A-Z])", " or ", station)
 
         ingredients = []
         for li in row.select("td.ingredients li"):
@@ -756,8 +806,9 @@ async def attach_en_locale(
     session: aiohttp.ClientSession,
     item: dict,
     zh_title: str,
+    force: bool = False,
 ) -> bool:
-    if item.get("en", {}).get("name"):
+    if not force and item.get("en", {}).get("name"):
         return False
 
     en_title = await fetch_en_langlink(session, zh_title)
@@ -802,7 +853,7 @@ async def backfill_en_locales(
         async with semaphore:
             item = items[key]
             zh_title = item.get("wiki_title") or item.get("name") or key
-            ok = await attach_en_locale(session, item, zh_title)
+            ok = await attach_en_locale(session, item, zh_title, force=force)
             await asyncio.sleep(0.05)
             return ok
 

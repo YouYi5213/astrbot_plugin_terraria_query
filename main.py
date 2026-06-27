@@ -27,6 +27,7 @@ from .prepare_data import (
     normalize_stat_for_display,
     resolve_bool_icon,
     update_wiki_data,
+    merge_en_recipe,
 )
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -216,6 +217,49 @@ def _recipe_item_label(entry: dict) -> str:
     if amount and str(amount) not in ("1", ""):
         return f"{name}×{amount}"
     return name
+
+
+def _ingredient_item_width(
+    draw: ImageDraw.ImageDraw, ing: dict, font
+) -> int:
+    return ING_ICON_SLOT[0] + 4 + _text_width(draw, _recipe_item_label(ing), font) + 15
+
+
+def _layout_ingredient_rows(
+    draw: ImageDraw.ImageDraw,
+    ingredients: list[dict],
+    font,
+    start_x: int,
+    max_x: int,
+) -> list[list[dict]]:
+    rows: list[list[dict]] = []
+    row: list[dict] = []
+    x_pos = start_x
+    for ing in ingredients:
+        item_w = _ingredient_item_width(draw, ing, font)
+        if row and x_pos + item_w > max_x:
+            rows.append(row)
+            row = []
+            x_pos = start_x
+        row.append(ing)
+        x_pos += item_w
+    if row:
+        rows.append(row)
+    return rows
+
+
+def _recipe_ingredients_height(
+    draw: ImageDraw.ImageDraw,
+    ingredients: list[dict],
+    font,
+    start_x: int,
+    max_x: int,
+    row_h: int = 36,
+) -> int:
+    if not ingredients:
+        return 0
+    rows = _layout_ingredient_rows(draw, ingredients, font, start_x, max_x)
+    return len(rows) * row_h
 
 
 def _layout_rich_segments(
@@ -687,8 +731,8 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
             "name": en.get("name", item.get("name", "")),
             "image": en.get("image") or item.get("image", ""),
             "stats": en.get("stats", []),
-            "recipe": en.get("recipe"),
-            "drops": en.get("drops") or item.get("drops"),
+            "recipe": merge_en_recipe(item.get("recipe"), en.get("recipe")),
+            "drops": en.get("drops"),
         }
     return {
         "name": item.get("name", ""),
@@ -814,7 +858,17 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
             )
             recipe_area += len(station_lines) * 18 + 10
         ing_count = len(recipe.get("ingredients", []))
-        recipe_area += max(1, (ing_count + 3) // 4) * 36 + 44
+        if ing_count:
+            ing_start_x = CARD_PADDING + 36
+            ing_max_x = CARD_WIDTH - CARD_PADDING - 10
+            recipe_area += (
+                _recipe_ingredients_height(
+                    measure, recipe.get("ingredients", []), font_small, ing_start_x, ing_max_x
+                )
+                + 44
+            )
+        else:
+            recipe_area += 44
 
     drops_area = 0
     if drops:
@@ -902,9 +956,12 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
             mat_bbox = draw.textbbox((mat_x, y), ui["materials"], font=font_small)
             y += mat_bbox[3] - mat_bbox[1] + 10
             ing_start_x = CARD_PADDING + 36
+            ing_max_x = CARD_WIDTH - CARD_PADDING - 10
             ing_row_h = 36
-            for i in range(0, len(ingredients), 4):
-                row_items = ingredients[i : i + 4]
+            ing_rows = _layout_ingredient_rows(
+                draw, ingredients, font_small, ing_start_x, ing_max_x
+            )
+            for row_items in ing_rows:
                 x_pos = ing_start_x
                 for ing in row_items:
                     ing_name = _recipe_item_label(ing)
@@ -921,8 +978,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
                         fill=COLORS["text"],
                         font=font_small,
                     )
-                    bbox = draw.textbbox((0, 0), ing_name, font=font_small)
-                    x_pos += ING_ICON_SLOT[0] + 4 + (bbox[2] - bbox[0]) + 15
+                    x_pos += _ingredient_item_width(draw, ing, font_small)
                 y += ing_row_h
 
         result = recipe.get("result", {})
@@ -947,7 +1003,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v11_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v12_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

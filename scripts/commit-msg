@@ -1,0 +1,8 @@
+#!/bin/sh
+# 移除 Cursor Agent 自动追加的 Co-authored-by
+MSG="$1"
+[ -f "$MSG" ] || exit 0
+TMP="${MSG}.cursor-strip"
+grep -v 'Co-authored-by: Cursor' "$MSG" > "$TMP" 2>/dev/null || cat "$MSG" > "$TMP"
+mv -f "$TMP" "$MSG"
+exit 0

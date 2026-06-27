@@ -43,6 +43,8 @@ CATEGORIES = [
     "Category:盔甲套装",
     "Category:配饰物品",
     "Category:治疗物品",
+    "Category:家具物品",
+    "Category:其他物品",
 ]
 
 # Wiki 上的物品类型总览页（非单个物品，有独立 infobox + 导语）
@@ -51,6 +53,12 @@ OVERVIEW_PAGES: dict[str, dict] = {
 }
 
 OVERVIEW_PAGE_TITLES = frozenset(OVERVIEW_PAGES)
+
+# 常用别名（Wiki 正式名 → 玩家俗称）
+ITEM_SEARCH_ALIASES: dict[str, list[str]] = {
+    "炼金瓶": ["炼药瓶"],
+    "放置的瓶子": ["炼药瓶", "放置瓶子"],
+}
 HEADERS = {
     "User-Agent": "AstrBot-TerrariaQuery/1.0 (offline data preparation; +https://docs.astrbot.app)",
     "Accept": "text/html,application/xhtml+xml",
@@ -2179,6 +2187,7 @@ async def update_wiki_data(
                     continue
                 item["wiki_title"] = title
                 _apply_overview_page_meta(item, title)
+                _apply_search_aliases(item)
                 items[name] = item
                 await attach_en_locale(session, item, title)
                 if _is_set_item(item):
@@ -2298,6 +2307,124 @@ async def resync_set_en_only() -> dict:
     }
 
 
+def _apply_search_aliases(item: dict) -> None:
+    name = item.get("name", "")
+    aliases = ITEM_SEARCH_ALIASES.get(name)
+    if aliases:
+        existing = list(item.get("search_terms") or [])
+        for alias in aliases:
+            if alias not in existing:
+                existing.append(alias)
+        item["search_terms"] = existing
+
+
+async def ingest_wiki_titles(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+    title_list: list[str],
+    *,
+    attach_en: bool = False,
+    refresh_sets: bool = False,
+) -> tuple[int, int, int]:
+    """抓取指定 Wiki 标题列表，返回 (新增数, 图片成功数, 图片总数)。"""
+    existing_titles = _existing_wiki_titles(items)
+    pending = [t for t in title_list if t not in existing_titles]
+    pending.sort()
+    image_urls: dict[str, str] = {}
+    new_count = 0
+
+    for i, title in enumerate(pending, 1):
+        html = await fetch_page_html(session, title)
+        if not html:
+            continue
+        item = parse_item_page(html, title)
+        if not item:
+            continue
+        name = item["name"]
+        if name in items:
+            continue
+        item["wiki_title"] = title
+        _apply_overview_page_meta(item, title)
+        _apply_search_aliases(item)
+        items[name] = item
+        if attach_en:
+            await attach_en_locale(session, item, title)
+        if _is_set_item(item):
+            _merge_set_pieces(items, name, item)
+        image_urls.update(_collect_image_urls(item))
+        new_count += 1
+        if i % 25 == 0 or i == len(pending):
+            print(
+                f"抓取进度 {i}/{len(pending)}，新增 {new_count}，总计 {len(items)}",
+                flush=True,
+            )
+        await asyncio.sleep(0.12)
+
+    images_ok = 0
+    if image_urls:
+        semaphore = asyncio.Semaphore(8)
+        results = await asyncio.gather(
+            *[
+                download_image(session, fn, url, semaphore)
+                for fn, url in image_urls.items()
+            ]
+        )
+        images_ok = sum(1 for r in results if r)
+
+    if refresh_sets:
+        await refresh_armor_sets(session, items)
+
+    return new_count, images_ok, len(image_urls)
+
+
+async def ingest_new_categories(
+    categories: list[str] | None = None,
+    *,
+    attach_en: bool = False,
+    refresh_sets: bool = False,
+) -> dict:
+    """仅抓取指定分类中的新条目（默认：家具 + 其他）。"""
+    cats = categories or ["Category:家具物品", "Category:其他物品"]
+    items = _load_existing_items()
+    before = len(items)
+
+    connector = aiohttp.TCPConnector(limit=10)
+    timeout = aiohttp.ClientTimeout(total=60)
+    async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
+        all_titles: set[str] = set()
+        for cat in cats:
+            titles = await fetch_category_members(session, cat)
+            all_titles.update(titles)
+            print(f"{cat}：{len(titles)} 个标题", flush=True)
+            await asyncio.sleep(0.2)
+
+        existing_titles = _existing_wiki_titles(items)
+        new_titles = sorted(all_titles - existing_titles)
+        print(f"待抓取新条目：{len(new_titles)}", flush=True)
+
+        new_count, images_ok, images_total = await ingest_wiki_titles(
+            session,
+            items,
+            new_titles,
+            attach_en=attach_en,
+            refresh_sets=refresh_sets,
+        )
+
+    migrate_item_image_filenames(items)
+    piece_sync_count = resync_set_piece_locales(items)
+    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+        json.dump(items, f, ensure_ascii=False, indent=2)
+
+    return {
+        "before": before,
+        "new_count": new_count,
+        "total": len(items),
+        "images_ok": images_ok,
+        "images_total": images_total,
+        "piece_sync_count": piece_sync_count,
+    }
+
+
 async def maintain_local_data() -> dict:
     """本地维护：规范化图片名、同步套装部件英文。"""
     items = _load_existing_items()
@@ -2412,9 +2539,22 @@ if __name__ == "__main__":
         action="store_true",
         help="仅重新抓取套装页英文并同步部件（较快）",
     )
+    parser.add_argument(
+        "--ingest-categories",
+        action="store_true",
+        help="仅抓取新分类中的条目（家具/其他），跳过全量更新",
+    )
     args = parser.parse_args()
     try:
-        if args.resync_pieces:
+        if args.ingest_categories:
+            result = asyncio.run(ingest_new_categories())
+            print(
+                f"分类抓取完成：新增 {result['new_count']} 个，"
+                f"共 {result['total']} 条目，"
+                f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.resync_pieces:
             result = asyncio.run(maintain_local_data())
             print(
                 f"本地维护完成：图片名修正 {result['image_migrate_count']} 处，"

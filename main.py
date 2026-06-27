@@ -185,7 +185,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
 CARD_WIDTH = 600
 CARD_PADDING = 20
-CARD_VERSION = "v21"
+CARD_VERSION = "v22"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -310,6 +310,10 @@ def _load_bool_icon(kind: str) -> Image.Image | None:
 
 def _load_item_image(filename: str, size: tuple[int, int] | None = None) -> Image.Image | None:
     return _load_image(_resolve_inline_icon_path(filename), size)
+
+
+def _load_inline_icon(filename: str) -> Image.Image | None:
+    return _load_item_image(filename, _INLINE_ICON_SIZE)
 
 
 def _recipe_item_label(entry: dict) -> str:
@@ -1140,7 +1144,12 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
         for para in description.split("\n\n"):
             lines.append(f"  {para}")
 
-    for stat in _display_stats(data, locale):
+    stat_rows = _display_stats(data, locale)
+    if stat_rows:
+        lines.append("")
+        lines.append(ui["stats"].lstrip("▎"))
+        lines.append("-" * 30)
+    for stat in stat_rows:
         label = stat.get("label", "")
         v = _format_stat_plain(stat, locale)
         if not v and not stat.get("coins") and not resolve_bool_icon(stat):

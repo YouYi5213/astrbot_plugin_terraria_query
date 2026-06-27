@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="196.209" height="196.498" viewBox="0 0 196.209 196.498">
+  <defs>
+    <radialGradient id="d" cx="24.529" cy="11.821" r="14.35" fx="24.529" fy="11.821" gradientTransform="matrix(0 1.49852 -1.27915 0 38.156 -20.965)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+    <linearGradient id="a">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="e" cx="24.529" cy="11.821" r="14.35" fx="24.529" fy="11.821" gradientTransform="matrix(0 1.49852 -1.27915 0 38.156 -20.965)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+    <radialGradient id="f" cx="24.529" cy="11.821" r="14.35" fx="24.529" fy="11.821" gradientTransform="matrix(0 1.49852 -1.27915 0 38.156 -20.965)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+    <linearGradient id="g" x1="17.161" x2="13.206" y1="21.54" y2="16.9" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+    <linearGradient id="b">
+      <stop offset="0" stop-color="#97ca43"/>
+      <stop offset="1" stop-color="#97ca43" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="h" x1="19.663" x2="23.287" y1="13.09" y2="5.046" gradientUnits="userSpaceOnUse" xlink:href="#c"/>
+    <linearGradient id="c">
+      <stop offset="0" stop-color="#97ca43"/>
+      <stop offset="1" stop-color="#97ca43" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="i" x1="17.161" x2="13.206" y1="21.54" y2="16.9" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+    <linearGradient id="j" x1="17.551" x2="20.647" y1="12.031" y2="6.988" gradientUnits="userSpaceOnUse" xlink:href="#c"/>
+  </defs>
+  <path fill="#666" d="M196.166 98.25a98.061 96.95 0 1 1-196.123 0 98.061 96.95 0 1 1 196.123 0z"/>
+  <path fill="url(#d)" d="M37.683 17.392a14.35 14.758 0 1 1-28.7 0 14.35 14.758 0 1 1 28.7 0z" transform="matrix(6.83354 0 0 6.56923 -61.345 -16)"/>
+  <path fill="url(#e)" d="M37.683 17.392a14.35 14.758 0 1 1-28.7 0 14.35 14.758 0 1 1 28.7 0z" transform="matrix(6.83354 0 0 6.56923 -61.345 -16)"/>
+  <path fill="url(#f)" d="M37.683 17.392a14.35 14.758 0 1 1-28.7 0 14.35 14.758 0 1 1 28.7 0z" transform="matrix(6.83354 0 0 6.56923 -61.345 -16)"/>
+  <path fill="#00a54d" d="M73.218 55.787C62.398 68.912 17.04 122.255 21.06 158.324c2.802 3.55 5.884 6.867 9.151 10-.476-27.61 31.926-57.157 57.214-79.461z"/>
+  <path fill="url(#g)" d="M17.75 10.656c-1.848 2.256-9.593 11.425-8.906 17.625.478.61 1.004 1.18 1.562 1.719-.081-4.746 5.452-9.825 9.77-13.658z" transform="matrix(5.85642 0 0 5.81772 -30.733 -6.208)"/>
+  <path fill="#02a74d" d="M46.604 15.79c-5.655 3.404-10.91 7.403-15.74 11.818 15.557 2.955 31.162 16.653 39.715 27.998 7.451 11.644 11.498 22.32 16.758 33.343 3.562-3.016 7.183-6.088 11.105-9.231l-.022-47.86c-11.59-7.201-30.745-16.68-51.633-16.067-.045.027-.138-.027-.183 0z"/>
+  <path fill="url(#h)" d="M13.344 3.75a16.936 16.936 0 0 0-2.688 2.031c2.657.508 5.321 2.863 6.781 4.813 1.273 2.001 1.964 3.836 2.862 5.731.608-.518 1.227-1.046 1.896-1.587l-.004-8.226c-1.979-1.238-5.25-2.867-8.816-2.762-.008.005-.024-.005-.031 0z" transform="matrix(5.85642 0 0 5.81772 -31.543 -6.026)"/>
+  <path fill="#00a54d" d="M123.024 55.82c10.785 13.137 55.993 66.525 51.986 102.624-2.792 3.552-5.864 6.873-9.12 10.008.474-27.632-31.82-57.205-57.024-79.528z"/>
+  <path fill="url(#i)" d="M17.75 10.656c-1.848 2.256-9.593 11.425-8.906 17.625.478.61 1.004 1.18 1.562 1.719-.081-4.746 5.452-9.825 9.77-13.658z" transform="matrix(-5.83704 0 0 5.82262 226.632 -6.227)"/>
+  <path fill="#02a74d" d="M149.55 15.79c5.637 3.407 10.874 7.409 15.687 11.828-15.505 2.958-31.058 16.667-39.582 28.021-7.427 11.654-11.46 22.34-16.703 33.371-3.55-3.018-7.16-6.092-11.069-9.239l.023-47.9c11.551-7.207 30.643-16.693 51.462-16.08.044.027.138-.027.182 0z"/>
+  <path fill="url(#j)" d="M13.344 3.75a16.936 16.936 0 0 0-2.688 2.031c2.657.508 5.321 2.863 6.781 4.813 1.273 2.001 1.964 3.836 2.862 5.731.608-.518 1.227-1.046 1.896-1.587l-.004-8.226c-1.979-1.238-5.25-2.867-8.816-2.762-.008.005-.024-.005-.031 0z" transform="matrix(-5.83704 0 0 5.82262 227.438 -6.044)"/>
+</svg>

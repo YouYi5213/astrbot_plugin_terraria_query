@@ -79,6 +79,11 @@ def test_format_text_includes_set_pieces():
     assert "秘银砧" in text
 
 
+def test_load_inline_icon_helper_exists():
+    assert callable(main._load_inline_icon)
+    assert callable(main._load_item_image)
+
+
 def test_teraria_cmd_regex():
     pattern = re.compile(main._TERRARIA_CMD_RE, re.I)
     assert pattern.match("泰拉 天顶剑")

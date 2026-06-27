@@ -23,6 +23,63 @@ from astrbot.api import AstrBotConfig, logger
 from .prepare_data import update_wiki_data
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
+_FONT_DIR = os.path.join(_PLUGIN_DIR, "assets", "fonts")
+_BUNDLED_FONT_CANDIDATES = (
+    os.path.join(_FONT_DIR, "NotoSansSC-Regular.otf"),
+    os.path.join(_FONT_DIR, "NotoSansSC-Regular.ttf"),
+    os.path.join(_FONT_DIR, "wqy-microhei.ttc"),
+)
+_FONT_CACHE: dict[int, ImageFont.FreeTypeFont | ImageFont.ImageFont] = {}
+_RESOLVED_FONT_PATH: str | None = None
+
+
+def _resolve_font_path() -> str | None:
+    global _RESOLVED_FONT_PATH
+    if _RESOLVED_FONT_PATH is not None:
+        return _RESOLVED_FONT_PATH or None
+
+    candidates = list(_BUNDLED_FONT_CANDIDATES) + [
+        "C:/Windows/Fonts/msyh.ttc",
+        "C:/Windows/Fonts/msyhbd.ttc",
+        "C:/Windows/Fonts/simsun.ttc",
+        "C:/Windows/Fonts/simhei.ttf",
+        "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
+        "/usr/share/fonts/wqy-microhei/wqy-microhei.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/google-noto-cjk/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc",
+    ]
+    for path in candidates:
+        if os.path.exists(path):
+            try:
+                ImageFont.truetype(path, 16)
+                _RESOLVED_FONT_PATH = path
+                return path
+            except Exception:
+                continue
+
+    logger.warning("未找到可用中文字体，卡片中文可能显示为方框")
+    _RESOLVED_FONT_PATH = ""
+    return None
+
+
+def _try_get_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+    if size in _FONT_CACHE:
+        return _FONT_CACHE[size]
+
+    font_path = _resolve_font_path()
+    if font_path:
+        try:
+            font = ImageFont.truetype(font_path, size)
+            _FONT_CACHE[size] = font
+            return font
+        except Exception as e:
+            logger.warning(f"加载字体失败 ({font_path}): {e}")
+
+    font = ImageFont.load_default()
+    _FONT_CACHE[size] = font
+    return font
 
 
 def _resolve_data_dir() -> str:
@@ -77,25 +134,6 @@ def _load_image(path: str, size: tuple[int, int] | None = None) -> Image.Image |
         return img
     except Exception:
         return None
-
-
-def _try_get_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
-    font_paths = [
-        "C:/Windows/Fonts/msyh.ttc",
-        "C:/Windows/Fonts/msyhbd.ttc",
-        "C:/Windows/Fonts/simsun.ttc",
-        "C:/Windows/Fonts/simhei.ttf",
-        "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
-        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
-        "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
-    ]
-    for path in font_paths:
-        if os.path.exists(path):
-            try:
-                return ImageFont.truetype(path, size)
-            except Exception:
-                continue
-    return ImageFont.load_default()
 
 
 def _normalize_message(text: str) -> str:

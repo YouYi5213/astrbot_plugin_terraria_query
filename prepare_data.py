@@ -45,6 +45,14 @@ CATEGORIES = [
     "Category:治疗物品",
 ]
 
+# Wiki 上的物品类型总览页（非单个物品，有独立 infobox + 导语）
+OVERVIEW_PAGES: dict[str, dict] = {
+    "翅膀": {"aliases": ["Wings"]},
+}
+
+OVERVIEW_PAGE_TITLES = frozenset(OVERVIEW_PAGES)
+MAX_ITEM_RECIPE_ROWS = 4
+
 HEADERS = {
     "User-Agent": "AstrBot-TerrariaQuery/1.0 (offline data preparation; +https://docs.astrbot.app)",
     "Accept": "text/html,application/xhtml+xml",
@@ -1031,6 +1039,10 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
         rows = [tr for tr in table.select("tbody tr") if tr.get("data-rowid")]
         if not rows:
             continue
+        if fallback_name in OVERVIEW_PAGE_TITLES or item["name"] in OVERVIEW_PAGE_TITLES:
+            break
+        if len(rows) > MAX_ITEM_RECIPE_ROWS:
+            continue
         row = rows[0]
         station_el = row.select_one("td.station")
         station = _clean_text(station_el.get_text()) if station_el else ""
@@ -1072,6 +1084,8 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
     parsed = parse_description_from_soup(soup)
     if not _apply_description_to_item(item, parsed):
         _apply_description_fallback(item)
+
+    _apply_overview_page_meta(item, fallback_name)
 
     return item
 
@@ -1410,6 +1424,57 @@ def _collect_image_urls(item: dict) -> dict[str, str]:
     return urls
 
 
+def _apply_overview_page_meta(item: dict, wiki_title: str) -> None:
+    meta = OVERVIEW_PAGES.get(wiki_title) or OVERVIEW_PAGES.get(item.get("name", ""))
+    if not meta:
+        return
+    item["page_type"] = "overview"
+    item["recipe"] = None
+    aliases = list(meta.get("aliases") or [])
+    item["aliases"] = aliases
+    if wiki_title:
+        item["wiki_title"] = wiki_title
+
+
+def _existing_wiki_titles(items: dict[str, dict]) -> set[str]:
+    titles = set(items.keys())
+    for item in items.values():
+        wt = item.get("wiki_title")
+        if wt:
+            titles.add(wt)
+        for alias in item.get("aliases") or []:
+            titles.add(alias)
+    return titles
+
+
+async def refresh_overview_pages(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+) -> int:
+    """刷新 Wiki 物品类型总览页（如「翅膀」）"""
+    updated = 0
+    for title, meta in OVERVIEW_PAGES.items():
+        html = await fetch_page_html(session, title)
+        if not html:
+            continue
+        item = parse_item_page(html, title)
+        if not item:
+            continue
+        name = item["name"]
+        item["wiki_title"] = title
+        _apply_overview_page_meta(item, title)
+        await attach_en_locale(session, item, title)
+        if meta.get("aliases"):
+            item["aliases"] = list(meta["aliases"])
+        items[name] = item
+        updated += 1
+        await asyncio.sleep(0.15)
+    if updated:
+        with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+            json.dump(items, f, ensure_ascii=False, indent=2)
+    return updated
+
+
 def _load_existing_items() -> dict[str, dict]:
     if not os.path.exists(ITEMS_JSON):
         return {}
@@ -1440,6 +1505,7 @@ async def update_wiki_data(
     en_backfill_count = 0
     drops_backfill_count = 0
     desc_backfill_count = 0
+    overview_count = 0
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -1452,15 +1518,16 @@ async def update_wiki_data(
                 limit=desc_limit,
             )
         elif not en_only:
-            all_titles: set[str] = set()
+            all_titles: set[str] = set(OVERVIEW_PAGE_TITLES)
             for cat in CATEGORIES:
                 titles = await fetch_category_members(session, cat)
                 all_titles.update(titles)
                 await asyncio.sleep(0.3)
 
+            existing_titles = _existing_wiki_titles(items)
             title_list = sorted(all_titles)
             if not force:
-                title_list = [t for t in title_list if t not in items]
+                title_list = [t for t in title_list if t not in existing_titles]
             if limit:
                 title_list = title_list[:limit]
             pages_scanned = len(title_list)
@@ -1478,6 +1545,7 @@ async def update_wiki_data(
                 if not force and name in items:
                     continue
                 item["wiki_title"] = title
+                _apply_overview_page_meta(item, title)
                 items[name] = item
                 await attach_en_locale(session, item, title)
                 image_urls.update(_collect_image_urls(item))
@@ -1497,6 +1565,8 @@ async def update_wiki_data(
                 ]
                 results = await asyncio.gather(*tasks)
                 images_ok = sum(1 for r in results if r)
+
+            overview_count = await refresh_overview_pages(session, items)
 
         effective_en_limit = en_limit if en_only else (100 if en_limit is None else en_limit)
         if not desc_only:
@@ -1544,6 +1614,7 @@ async def update_wiki_data(
         "en_backfill_count": en_backfill_count,
         "drops_backfill_count": drops_backfill_count,
         "desc_backfill_count": desc_backfill_count,
+        "overview_count": overview_count,
     }
 
 

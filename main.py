@@ -840,6 +840,17 @@ def _item_en_name(item: dict) -> str:
     return en.get("name") or item.get("en_name") or ""
 
 
+def _item_zh_search_names(key: str, item: dict) -> set[str]:
+    names = {key, item.get("name", ""), item.get("wiki_title", "")}
+    return {n for n in names if n}
+
+
+def _item_en_search_names(item: dict) -> set[str]:
+    names = {_item_en_name(item)}
+    names.update(item.get("aliases") or [])
+    return {n for n in names if n}
+
+
 def _fuzzy_match(query: str, items: dict[str, dict]) -> list[tuple[str, str]]:
     query = query.strip()
     if not query:
@@ -855,21 +866,20 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[tuple[str, str]]:
             found[slot] = rank
 
     for key, item in items.items():
-        zh_name = item.get("name", key)
-        en_name = _item_en_name(item)
-
         if locale_hint in (None, "zh"):
-            if query == key or query == zh_name:
-                add(key, "zh", 0)
-            elif query in key or query in zh_name:
-                add(key, "zh", min(len(key), len(zh_name)))
+            for zh_name in _item_zh_search_names(key, item):
+                if query == zh_name:
+                    add(key, "zh", 0)
+                elif query in zh_name:
+                    add(key, "zh", min(len(key), len(zh_name)))
 
-        if locale_hint in (None, "en") and en_name:
-            en_lower = en_name.lower()
-            if query_lower == en_lower:
-                add(key, "en", 0)
-            elif query_lower in en_lower:
-                add(key, "en", len(en_name))
+        if locale_hint in (None, "en"):
+            for en_name in _item_en_search_names(item):
+                en_lower = en_name.lower()
+                if query_lower == en_lower:
+                    add(key, "en", 0)
+                elif query_lower in en_lower:
+                    add(key, "en", len(en_name))
 
     ranked = sorted(found.items(), key=lambda x: (x[1], x[0][1], x[0][0]))
     if any(rank == 0 for _, rank in ranked):

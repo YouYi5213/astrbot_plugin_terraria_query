@@ -7,15 +7,20 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import os
 import re
+from datetime import datetime
 
+from croniter import croniter
 from PIL import Image, ImageDraw, ImageFont
 
 from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.star import Context, Star
-from astrbot.api import logger
+from astrbot.api import AstrBotConfig, logger
+
+from prepare_data import update_wiki_data
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -242,12 +247,96 @@ def _generate_item_card(data: dict) -> str:
     return output_path
 
 
+def _format_update_result(result: dict) -> str:
+    if result.get("new_count", 0) == 0:
+        return (
+            f"✅ Wiki 数据已是最新\n"
+            f"当前共 {result.get('total', 0)} 个物品"
+        )
+    return (
+        f"✅ Wiki 数据更新完成\n"
+        f"本次新增：{result.get('new_count', 0)} 个\n"
+        f"当前总计：{result.get('total', 0)} 个\n"
+        f"新图片：{result.get('images_ok', 0)}/{result.get('images_total', 0)}"
+    )
+
+
 class TerrariaQueryPlugin(Star):
-    def __init__(self, context: Context):
+    def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
+        self.config = config
+        self.cron_time: str = (config.get("cron_time") or "").strip()
+        self.update_admin_id: str = str(config.get("update_admin_id") or "").strip()
+        self.show_update_progress: bool = bool(config.get("show_update_progress", True))
+
         _ensure_dirs()
         self.items: dict[str, dict] = {}
         self._load_items()
+
+        self._cron_task: asyncio.Task | None = None
+        self._update_lock = asyncio.Lock()
+
+        try:
+            if self.cron_time:
+                self._start_cron_task()
+        except RuntimeError:
+            pass
+
+    def _can_update(self, event: AstrMessageEvent | None) -> bool:
+        if not self.update_admin_id:
+            return True
+        if event is None:
+            return True
+        return str(event.get_sender_id() or "").strip() == self.update_admin_id
+
+    async def _run_wiki_update(self, force: bool = False) -> dict:
+        async with self._update_lock:
+            result = await update_wiki_data(force=force)
+            self._load_items()
+            return result
+
+    def _start_cron_task(self) -> None:
+        if self._cron_task and not self._cron_task.done():
+            self._cron_task.cancel()
+        self._cron_task = asyncio.create_task(self._cron_loop())
+
+    async def _cron_loop(self) -> None:
+        try:
+            cron = croniter(self.cron_time)
+        except (ValueError, KeyError) as e:
+            logger.error(f"泰拉瑞亚 Wiki 定时更新：无效的 Cron 表达式 '{self.cron_time}': {e}")
+            return
+
+        while True:
+            try:
+                next_time = cron.get_next(datetime)
+                wait_seconds = (next_time - datetime.now()).total_seconds()
+                if wait_seconds > 0:
+                    logger.info(
+                        f"泰拉瑞亚 Wiki 定时更新：下次执行 "
+                        f"{next_time.strftime('%Y-%m-%d %H:%M:%S')}，等待 {wait_seconds:.0f} 秒"
+                    )
+                    await asyncio.sleep(wait_seconds)
+
+                result = await self._run_wiki_update(force=False)
+                logger.info(
+                    f"泰拉瑞亚 Wiki 定时更新完成：新增 {result.get('new_count', 0)} 个，"
+                    f"总计 {result.get('total', 0)} 个"
+                )
+            except asyncio.CancelledError:
+                logger.info("泰拉瑞亚 Wiki 定时更新任务已取消")
+                break
+            except Exception as e:
+                logger.error(f"泰拉瑞亚 Wiki 定时更新失败: {e}")
+                await asyncio.sleep(60)
+
+    @filter.on_astrbot_loaded()
+    async def on_loaded(self):
+        if self.cron_time and (self._cron_task is None or self._cron_task.done()):
+            self._start_cron_task()
+            logger.info(f"泰拉瑞亚 Wiki 定时更新已启用，Cron: {self.cron_time}")
+        elif not self.cron_time:
+            logger.info("未配置 Cron，泰拉瑞亚 Wiki 定时更新未启用")
 
     def _load_items(self) -> None:
         if not os.path.exists(ITEMS_JSON):
@@ -279,7 +368,7 @@ class TerrariaQueryPlugin(Star):
         if not self.items:
             yield event.plain_result(
                 "❌ 离线数据尚未准备。\n"
-                "请运行插件目录下的 prepare_data.py 生成数据，或从仓库拉取已包含的 data/ 目录。"
+                "请在 WebUI 配置插件后发送 /泰拉更新，或从仓库拉取已包含的 data/ 目录。"
             )
             return
 
@@ -288,21 +377,50 @@ class TerrariaQueryPlugin(Star):
             yield event.plain_result(f"❌ 未找到「{text}」的相关信息。")
             return
 
-        if len(matches) > 1:
-            preview = "、".join(matches[:10])
-            suffix = f" 等 {len(matches)} 个" if len(matches) > 10 else ""
-            yield event.plain_result(
-                f"找到多个匹配结果，请输入更精确的名称：\n{preview}{suffix}"
-            )
+        if len(matches) > 3:
+            lines = [f"找到 {len(matches)} 个匹配结果，请输入更精确的名称后重新查询：", ""]
+            lines.extend(f"· {name}" for name in matches)
+            yield event.plain_result("\n".join(lines))
             return
 
-        data = self.items[matches[0]]
+        if len(matches) > 1:
+            yield event.plain_result(f"找到 {len(matches)} 个匹配结果：")
+
+        for name in matches:
+            data = self.items[name]
+            try:
+                card_path = _generate_item_card(data)
+                yield event.image_result(card_path)
+            except Exception as e:
+                logger.error(f"生成图片失败 ({name}): {e}")
+                yield event.plain_result(_format_text_result(data))
+
+    @filter.command("泰拉更新")
+    async def update_wiki(self, event: AstrMessageEvent):
+        """从 Wiki 增量更新物品数据。用法: /泰拉更新"""
+        if not self._can_update(event):
+            yield event.plain_result("❌ 仅管理员可执行 Wiki 数据更新。")
+            return
+
+        if self._update_lock.locked():
+            yield event.plain_result("⏳ 已有更新任务进行中，请稍候。")
+            return
+
+        if self.show_update_progress:
+            yield event.plain_result("🔄 正在从 Wiki 增量更新物品数据，请稍候…")
+
         try:
-            card_path = _generate_item_card(data)
-            yield event.image_result(card_path)
+            result = await self._run_wiki_update(force=False)
+            yield event.plain_result(_format_update_result(result))
         except Exception as e:
-            logger.error(f"生成图片失败: {e}")
-            yield event.plain_result(_format_text_result(data))
+            logger.error(f"Wiki 数据更新失败: {e}")
+            yield event.plain_result(f"❌ 更新失败：{str(e)[:120]}")
 
     async def terminate(self):
+        if self._cron_task and not self._cron_task.done():
+            self._cron_task.cancel()
+            try:
+                await self._cron_task
+            except asyncio.CancelledError:
+                pass
         logger.info("泰拉瑞亚查询插件已卸载")

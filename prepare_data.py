@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import logging
 import os
 import re
 import sys
@@ -48,6 +49,8 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml",
     "Accept-Language": "zh-CN,zh;q=0.9",
 }
+
+logger = logging.getLogger(__name__)
 
 
 def _clean_text(text: str) -> str:
@@ -280,23 +283,23 @@ def _load_existing_items() -> dict[str, dict]:
         return {}
 
 
-async def main(limit: int | None = None, force: bool = False) -> None:
+async def update_wiki_data(limit: int | None = None, force: bool = False) -> dict:
+    """增量（或全量）更新 Wiki 离线数据，返回统计信息。"""
     os.makedirs(IMAGES_DIR, exist_ok=True)
 
     items: dict[str, dict] = {} if force else _load_existing_items()
-    if force:
-        print("全量模式：将重新抓取所有物品", flush=True)
-    else:
-        print(f"增量模式：已有 {len(items)} 个物品，跳过已存在的", flush=True)
+    before_total = len(items)
+    pages_scanned = 0
+    new_count = 0
+    images_total = 0
+    images_ok = 0
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
     async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
-        print("正在收集分类页面列表...", flush=True)
         all_titles: set[str] = set()
         for cat in CATEGORIES:
             titles = await fetch_category_members(session, cat)
-            print(f"  {cat}: {len(titles)} 页", flush=True)
             all_titles.update(titles)
             await asyncio.sleep(0.3)
 
@@ -305,10 +308,9 @@ async def main(limit: int | None = None, force: bool = False) -> None:
             title_list = [t for t in title_list if t not in items]
         if limit:
             title_list = title_list[:limit]
-        print(f"共 {len(title_list)} 个待处理页面", flush=True)
+        pages_scanned = len(title_list)
 
         image_urls: dict[str, str] = {}
-        new_count = 0
 
         for i, title in enumerate(title_list, 1):
             html = await fetch_page_html(session, title)
@@ -324,22 +326,52 @@ async def main(limit: int | None = None, force: bool = False) -> None:
             image_urls.update(_collect_image_urls(item))
             new_count += 1
             if i % 50 == 0 or i == len(title_list):
-                print(f"  已扫描 {i}/{len(title_list)}，本次新增 {new_count}，总计 {len(items)}", flush=True)
+                logger.info(
+                    f"Wiki 更新进度 {i}/{len(title_list)}，新增 {new_count}，总计 {len(items)}"
+                )
             await asyncio.sleep(0.15)
 
-        print(f"正在下载 {len(image_urls)} 张新图片...", flush=True)
-        semaphore = asyncio.Semaphore(8)
-        tasks = [
-            download_image(session, fn, url, semaphore)
-            for fn, url in image_urls.items()
-        ]
-        results = await asyncio.gather(*tasks)
-        ok = sum(1 for r in results if r)
-        print(f"  图片下载完成: {ok}/{len(image_urls)}", flush=True)
+        images_total = len(image_urls)
+        if image_urls:
+            semaphore = asyncio.Semaphore(8)
+            tasks = [
+                download_image(session, fn, url, semaphore)
+                for fn, url in image_urls.items()
+            ]
+            results = await asyncio.gather(*tasks)
+            images_ok = sum(1 for r in results if r)
 
     with open(ITEMS_JSON, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
-    print(f"已保存 {len(items)} 个物品到 {ITEMS_JSON}", flush=True)
+
+    return {
+        "ok": True,
+        "force": force,
+        "before_total": before_total,
+        "new_count": new_count,
+        "total": len(items),
+        "pages_scanned": pages_scanned,
+        "images_total": images_total,
+        "images_ok": images_ok,
+    }
+
+
+async def main(limit: int | None = None, force: bool = False) -> None:
+    if force:
+        print("全量模式：将重新抓取所有物品", flush=True)
+    else:
+        existing = _load_existing_items()
+        print(f"增量模式：已有 {len(existing)} 个物品，跳过已存在的", flush=True)
+
+    print("正在收集并更新 Wiki 数据...", flush=True)
+    result = await update_wiki_data(limit=limit, force=force)
+    print(
+        f"更新完成：新增 {result['new_count']} 个，"
+        f"共 {result['total']} 个物品，"
+        f"新图片 {result['images_ok']}/{result['images_total']}",
+        flush=True,
+    )
+    print(f"已保存到 {ITEMS_JSON}", flush=True)
 
 
 if __name__ == "__main__":

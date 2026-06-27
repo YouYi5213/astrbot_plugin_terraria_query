@@ -120,6 +120,8 @@ CARD_PADDING = 20
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
+STAT_LABEL_LEFT = CARD_PADDING + 20
+STAT_LABEL_VALUE_GAP = 10
 DROP_ROW_HEIGHT = 44
 DROP_MODE_HEADER = 22
 DROP_TABLE_HEADER = 22
@@ -213,6 +215,28 @@ def _wrap_text_lines(
     if current:
         lines.append(current)
     return lines
+
+
+def _stat_value_x(draw: ImageDraw.ImageDraw, stats: list[dict], font) -> int:
+    if not stats:
+        return STAT_LABEL_LEFT + 60
+    max_label_w = max(
+        (_text_width(draw, stat.get("label", ""), font) for stat in stats),
+        default=0,
+    )
+    return STAT_LABEL_LEFT + max_label_w + STAT_LABEL_VALUE_GAP
+
+
+def _draw_stat_label(
+    draw: ImageDraw.ImageDraw,
+    label: str,
+    y: int,
+    font,
+    value_x: int,
+) -> None:
+    label_w = _text_width(draw, label, font)
+    label_x = value_x - STAT_LABEL_VALUE_GAP - label_w
+    draw.text((label_x, y), label, fill=COLORS["label"], font=font)
 
 
 def _stat_value_height(
@@ -569,13 +593,12 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     drops = data.get("drops")
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
+    stat_value_x = _stat_value_x(measure, stats, font_body)
     stats_area = 20
     for stat in stats:
-        label = stat.get("label", "")
-        label_bbox = measure.textbbox((0, 0), label, font=font_body)
-        label_w = label_bbox[2] - label_bbox[0]
-        value_x = CARD_PADDING + 30 + label_w + 20
-        stats_area += _stat_value_height(measure, None, value_x, stat, font_body, locale)
+        stats_area += _stat_value_height(
+            measure, None, stat_value_x, stat, font_body, locale
+        )
 
     title_area = 60
     sep_area = 30
@@ -630,13 +653,11 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     draw.text((CARD_PADDING + 10, y), ui["stats"], fill=COLORS["accent"], font=font_header)
     y += 30
 
+    stat_value_x = _stat_value_x(draw, stats, font_body)
     for stat in stats:
         label = stat.get("label", "")
-        draw.text((CARD_PADDING + 20, y), label, fill=COLORS["label"], font=font_body)
-        bbox = draw.textbbox((0, 0), label, font=font_body)
-        label_w = bbox[2] - bbox[0]
-        value_x = CARD_PADDING + 30 + label_w + 20
-        row_h = _draw_stat_value(draw, card, value_x, y, stat, font_body, locale)
+        _draw_stat_label(draw, label, y, font_body, stat_value_x)
+        row_h = _draw_stat_value(draw, card, stat_value_x, y, stat, font_body, locale)
         y += row_h
 
     y += 10
@@ -712,7 +733,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v6_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v7_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

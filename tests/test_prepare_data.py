@@ -7,13 +7,14 @@ sys.path.insert(0, str(ROOT))
 
 from prepare_data import (  # noqa: E402
     _description_needs_coin_refresh,
+    _description_needs_zh_refresh,
     _is_set_item,
     _merge_set_pieces,
-    _needs_en_locale_refresh,
     _normalize_image_filename,
     _parse_description_paragraph_rich,
     migrate_item_image_filenames,
     resync_set_piece_locales,
+    strip_en_locale_data,
 )
 from bs4 import BeautifulSoup  # noqa: E402
 
@@ -32,24 +33,17 @@ def test_is_set_item_detects_armor_and_vanity():
     assert not _is_set_item({"stats": [{"label": "类型", "value": "武器"}]})
 
 
-def test_merge_set_pieces_syncs_en_by_index():
+def test_merge_set_pieces_uses_image_for_en_name():
     items: dict = {}
     set_item = {
         "set_pieces": [
             {"name": "钛金面具", "image": "Titanium_Mask.png", "stats": [], "recipe": None},
-            {"name": "钛金头盔", "image": "Titanium_Helmet.png", "stats": [], "recipe": None},
         ],
-        "en": {
-            "set_pieces": [
-                {"name": "Titanium Mask", "image": "Titanium_Mask.png", "stats": [], "recipe": None},
-                {"name": "Titanium Helmet", "image": "Titanium_Helmet.png", "stats": [], "recipe": None},
-            ]
-        },
     }
     count = _merge_set_pieces(items, "钛金盔甲", set_item)
-    assert count == 2
-    assert items["钛金面具"]["en"]["name"] == "Titanium Mask"
+    assert count == 1
     assert items["钛金面具"]["en_name"] == "Titanium Mask"
+    assert "en" not in items["钛金面具"]
 
 
 def test_resync_set_piece_locales():
@@ -59,16 +53,23 @@ def test_resync_set_piece_locales():
             "set_pieces": [
                 {"name": "寒霜头盔", "image": "Frost_Helmet.png", "stats": [], "recipe": None},
             ],
-            "en": {
-                "set_pieces": [
-                    {"name": "Frost Helmet", "image": "Frost_Helmet.png", "stats": [], "recipe": None},
-                ]
-            },
         }
     }
     updated = resync_set_piece_locales(items)
     assert updated == 1
     assert items["寒霜头盔"]["en_name"] == "Frost Helmet"
+
+
+def test_strip_en_locale_data_keeps_en_name():
+    items = {
+        "环境改造枪": {
+            "name": "环境改造枪",
+            "en": {"name": "Clentaminator", "stats": []},
+        }
+    }
+    assert strip_en_locale_data(items) == 1
+    assert items["环境改造枪"]["en_name"] == "Clentaminator"
+    assert "en" not in items["环境改造枪"]
 
 
 def test_migrate_item_image_filenames():
@@ -78,25 +79,15 @@ def test_migrate_item_image_filenames():
             "stats": [
                 {
                     "label": "防御",
-                    "segments": [{"type": "icon", "image": "17px-Titanium_Mask.png"}],
+                    "value": "10",
+                    "value_image": "17px-Titanium_Mask.png",
                 }
             ],
         }
     }
-    changed = migrate_item_image_filenames(items)
-    assert changed >= 2
+    assert migrate_item_image_filenames(items) == 2
     assert items["测试"]["image"] == "Amethyst_Staff.png"
-    assert items["测试"]["stats"][0]["segments"][0]["image"] == "Titanium_Mask.png"
-
-
-def test_needs_en_locale_refresh_when_set_pieces_missing():
-    item = {
-        "en": {"name": "Titanium armor", "set_pieces": []},
-        "set_pieces": [{"name": "钛金面具"}],
-    }
-    assert _needs_en_locale_refresh(item)
-    item["en"]["set_pieces"] = [{"name": "Titanium Mask"}]
-    assert not _needs_en_locale_refresh(item)
+    assert items["测试"]["stats"][0]["value_image"] == "Titanium_Mask.png"
 
 
 def test_parse_description_coin_segment():
@@ -117,6 +108,16 @@ def test_description_needs_coin_refresh():
     assert _description_needs_coin_refresh(item)
     item["description_rich"] = [[{"type": "coin", "amount": "1", "coin_type": "pc"}]]
     assert not _description_needs_coin_refresh(item)
+
+
+def test_description_needs_zh_refresh_detects_english_on_chinese_item():
+    item = {
+        "name": "环境改造枪",
+        "description": "The Clentaminator is a Hardmode tool.",
+    }
+    assert _description_needs_zh_refresh(item)
+    item["description"] = "环境改造枪是一种困难模式工具。"
+    assert not _description_needs_zh_refresh(item)
 
 
 def test_items_json_is_valid():

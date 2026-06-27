@@ -7,6 +7,10 @@
     python prepare_data.py              # 增量更新，仅抓取新增物品
     python prepare_data.py --limit 20   # 调试：仅处理前 20 个新页面
     python prepare_data.py --force      # 全量重建（覆盖已有数据）
+
+本地 Wiki 镜像（可选，显著加速开发）:
+    先运行 ../terraria_data/mirror_wiki.py 抓取页面
+    prepare_data 会优先读 terraria_data/wiki/ 下的 HTML
 """
 
 from __future__ import annotations
@@ -30,6 +34,24 @@ _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(_PLUGIN_DIR, "data", "terraria_query")
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
 ITEMS_JSON = os.path.join(DATA_DIR, "items.json")
+
+_WIKI_MIRROR_DIR = os.path.normpath(
+    os.environ.get(
+        "TERRARIA_WIKI_MIRROR",
+        os.path.join(os.path.dirname(_PLUGIN_DIR), "terraria_data"),
+    )
+)
+if os.path.isdir(_WIKI_MIRROR_DIR) and _WIKI_MIRROR_DIR not in sys.path:
+    sys.path.insert(0, _WIKI_MIRROR_DIR)
+
+try:
+    from wiki_cache import api_url_to_locale, load_page_html as _load_mirror_html
+except ImportError:
+    def _load_mirror_html(title: str, locale: str = "zh") -> str | None:  # type: ignore[misc]
+        return None
+
+    def api_url_to_locale(api_url: str) -> str:  # type: ignore[misc]
+        return "en" if api_url == API_URL_EN else "zh"
 
 CATEGORIES = [
     "Category:近战武器",
@@ -640,33 +662,6 @@ def drops_display_block(drops: dict | None, locale: str = "zh") -> dict | None:
     return {"label": labels, "entries": merged}
 
 
-def merge_en_recipe(zh_recipe: dict | None, en_recipe: dict | None) -> dict | None:
-    if not en_recipe:
-        return en_recipe
-    if not zh_recipe:
-        return en_recipe
-    merged = {
-        "station": en_recipe.get("station", ""),
-        "ingredients": [],
-        "result": dict(en_recipe.get("result") or {}),
-    }
-    zh_by_image = {
-        ing.get("image"): ing for ing in zh_recipe.get("ingredients", []) if ing.get("image")
-    }
-    for ing in en_recipe.get("ingredients", []):
-        entry = dict(ing)
-        zh_ing = zh_by_image.get(entry.get("image", ""))
-        if zh_ing and zh_ing.get("amount") and not entry.get("amount"):
-            entry["amount"] = zh_ing["amount"]
-        merged["ingredients"].append(entry)
-    zh_res = zh_recipe.get("result") or {}
-    res = merged["result"]
-    if zh_res.get("amount") and not res.get("amount"):
-        res["amount"] = zh_res["amount"]
-    merged["result"] = res
-    return merged
-
-
 def _collect_drop_image_urls(drops: dict) -> dict[str, str]:
     urls: dict[str, str] = {}
     for mode in drops.get("modes", []):
@@ -735,8 +730,12 @@ _INTRO_SKIP_DIV_CLASSES = frozenset({
 })
 
 
-def _iter_wiki_titles(item: dict, key: str) -> list[str]:
-    """按优先级返回可用于抓取 Wiki 的标题候选"""
+def _has_cjk(text: str) -> bool:
+    return bool(re.search(r"[\u4e00-\u9fff]", text or ""))
+
+
+def _iter_zh_wiki_titles(item: dict, key: str) -> list[str]:
+    """中文描述抓取用的 Wiki 标题（不含英文 en_name）。"""
     titles: list[str] = []
     for raw in (item.get("wiki_title"), item.get("name"), key):
         title = _clean_text(raw or "")
@@ -747,6 +746,12 @@ def _iter_wiki_titles(item: dict, key: str) -> list[str]:
             base = _clean_text(match.group(1))
             if base and base not in titles:
                 titles.append(base)
+    return titles
+
+
+def _iter_wiki_titles(item: dict, key: str) -> list[str]:
+    """按优先级返回可用于抓取 Wiki 的标题候选"""
+    titles = _iter_zh_wiki_titles(item, key)
     en_name = item.get("en_name") or (item.get("en") or {}).get("name")
     if en_name and en_name not in titles:
         titles.append(en_name)
@@ -804,11 +809,10 @@ async def fetch_item_description(
     item: dict,
     key: str,
 ) -> bool:
-    """抓取物品导语，依次尝试多个 Wiki 标题"""
-    for title in _iter_wiki_titles(item, key):
-        html = await fetch_page_html(session, title)
-        if not html:
-            html = await fetch_page_html(session, title, api_url=API_URL_EN)
+    """抓取物品中文导语（仅中文 Wiki，不回退英文 API）。"""
+    _relocate_misplaced_en_description(item)
+    for title in _iter_zh_wiki_titles(item, key):
+        html = await fetch_page_html(session, title, api_url=API_URL)
         if not html:
             continue
         parsed = parse_description_from_soup(BeautifulSoup(html, "html.parser"))
@@ -1282,16 +1286,6 @@ def _attach_armor_set_pieces(soup: BeautifulSoup, item: dict) -> None:
     item["recipe"] = None
 
 
-def _extract_piece_en_locale(en_piece: dict, zh_piece: dict) -> dict:
-    return {
-        "name": en_piece.get("name", ""),
-        "image": en_piece.get("image") or zh_piece.get("image", ""),
-        "stats": en_piece.get("stats", []),
-        "recipe": en_piece.get("recipe"),
-        "page_type": en_piece.get("page_type") or "armor_piece",
-    }
-
-
 def _piece_page_type(parent_item: dict) -> str:
     if parent_item.get("page_type") == "vanity_set":
         return "vanity_piece"
@@ -1300,9 +1294,8 @@ def _piece_page_type(parent_item: dict) -> str:
 
 def _merge_set_pieces(items: dict[str, dict], set_name: str, set_item: dict) -> int:
     added = 0
-    en_pieces = (set_item.get("en") or {}).get("set_pieces") or []
     piece_type = _piece_page_type(set_item)
-    for idx, piece in enumerate(set_item.get("set_pieces") or []):
+    for piece in set_item.get("set_pieces") or []:
         pname = piece.get("name")
         if not pname:
             continue
@@ -1318,10 +1311,9 @@ def _merge_set_pieces(items: dict[str, dict], set_name: str, set_item: dict) -> 
             "from_armor_set": True,
             "parent_set": set_name,
         }
-        if idx < len(en_pieces):
-            en_piece = en_pieces[idx]
-            entry["en"] = _extract_piece_en_locale(en_piece, piece)
-            entry["en_name"] = en_piece.get("name", "")
+        en_name = _guess_en_title_from_image(piece)
+        if en_name:
+            entry["en_name"] = en_name
         items[pname] = entry
         added += 1
     return added
@@ -1332,7 +1324,7 @@ def _merge_armor_set_pieces(items: dict[str, dict], set_name: str, set_item: dic
 
 
 def resync_set_piece_locales(items: dict[str, dict]) -> int:
-    """从套装父条目同步部件英文，无需重新抓取 Wiki。"""
+    """从套装父条目同步部件条目（中文数据 + 图片推断 en_name）。"""
     updated = 0
     for key, item in list(items.items()):
         if item.get("page_type") not in ("armor_set", "vanity_set") and not _is_set_item(item):
@@ -1385,9 +1377,6 @@ def _migrate_item_images(item: dict) -> int:
                 changed += 1
     for piece in item.get("set_pieces") or []:
         changed += _migrate_item_images(piece)
-    en = item.get("en")
-    if isinstance(en, dict):
-        changed += _migrate_item_images(en)
     return changed
 
 
@@ -1421,7 +1410,7 @@ async def refresh_armor_sets(
             continue
         parsed["wiki_title"] = title
         items[key] = parsed
-        await attach_en_locale(session, parsed, title, force=True)
+        await attach_en_name(session, parsed, title)
         updated += 1
         _merge_set_pieces(items, key, parsed)
         image_urls.update(_collect_image_urls(parsed))
@@ -1512,18 +1501,40 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
     return item
 
 
-def _extract_en_locale(en_item: dict, zh_item: dict) -> dict:
-    return {
-        "name": en_item.get("name", ""),
-        "image": en_item.get("image") or zh_item.get("image", ""),
-        "stats": en_item.get("stats", []),
-        "recipe": en_item.get("recipe"),
-        "drops": en_item.get("drops"),
-        "description": en_item.get("description"),
-        "description_rich": en_item.get("description_rich"),
-        "set_pieces": en_item.get("set_pieces"),
-        "page_type": en_item.get("page_type"),
-    }
+async def attach_en_name(
+    session: aiohttp.ClientSession,
+    item: dict,
+    zh_title: str,
+) -> bool:
+    """仅抓取英文 Wiki 标题供搜索别名，不存储完整 en 数据块。"""
+    if item.get("en_name"):
+        return False
+
+    en_title = await fetch_en_langlink(session, zh_title)
+    if not en_title:
+        en_title = _guess_en_title_from_image(item)
+    if not en_title:
+        return False
+
+    item["en_name"] = en_title
+    return True
+
+
+def strip_en_locale_data(items: dict[str, dict]) -> int:
+    """移除 item.en 大块数据，保留 en_name 供英文搜索。"""
+    stripped = 0
+    for item in items.values():
+        en = item.pop("en", None)
+        if en and isinstance(en, dict) and not item.get("en_name"):
+            name = en.get("name")
+            if name:
+                item["en_name"] = name
+        if en:
+            stripped += 1
+        for piece in item.get("set_pieces") or []:
+            if isinstance(piece, dict):
+                piece.pop("en", None)
+    return stripped
 
 
 async def fetch_en_langlink(session: aiohttp.ClientSession, zh_title: str) -> str | None:
@@ -1556,10 +1567,6 @@ async def fetch_en_langlink(session: aiohttp.ClientSession, zh_title: str) -> st
     return None
 
 
-async def fetch_en_page_html(session: aiohttp.ClientSession, en_title: str) -> str | None:
-    return await fetch_page_html(session, en_title, api_url=API_URL_EN)
-
-
 def _guess_en_title_from_image(item: dict) -> str | None:
     image = item.get("image", "")
     if not image:
@@ -1568,86 +1575,6 @@ def _guess_en_title_from_image(item: dict) -> str | None:
     if not stem:
         return None
     return stem.replace("_", " ")
-
-
-def _needs_en_locale_refresh(item: dict) -> bool:
-    """已有英文但缺少或与中文不同步的套装部件时，仍需重新抓取。"""
-    en = item.get("en") or {}
-    if not en.get("name"):
-        return True
-    zh_pieces = item.get("set_pieces") or []
-    if not zh_pieces:
-        return False
-    en_pieces = en.get("set_pieces") or []
-    return len(en_pieces) != len(zh_pieces)
-
-
-async def attach_en_locale(
-    session: aiohttp.ClientSession,
-    item: dict,
-    zh_title: str,
-    force: bool = False,
-) -> bool:
-    if not force and not _needs_en_locale_refresh(item):
-        return False
-
-    en_title = await fetch_en_langlink(session, zh_title)
-    if not en_title:
-        en_title = _guess_en_title_from_image(item)
-
-    if not en_title:
-        return False
-
-    en_html = await fetch_en_page_html(session, en_title)
-    if not en_html:
-        return False
-
-    en_item = parse_item_page(en_html, en_title)
-    if not en_item or not en_item.get("name"):
-        return False
-
-    item["en"] = _extract_en_locale(en_item, item)
-    item["en_name"] = en_item["name"]
-    return True
-
-
-async def backfill_en_locales(
-    session: aiohttp.ClientSession,
-    items: dict[str, dict],
-    force: bool = False,
-    limit: int | None = None,
-) -> int:
-    pending = [
-        key
-        for key, item in items.items()
-        if force or _needs_en_locale_refresh(item)
-    ]
-    pending.sort()
-    if limit:
-        pending = pending[:limit]
-
-    updated = 0
-    semaphore = asyncio.Semaphore(8)
-
-    async def _process_one(key: str) -> bool:
-        async with semaphore:
-            item = items[key]
-            zh_title = item.get("wiki_title") or item.get("name") or key
-            ok = await attach_en_locale(session, item, zh_title, force=force)
-            await asyncio.sleep(0.05)
-            return ok
-
-    batch_size = 50
-    for batch_start in range(0, len(pending), batch_size):
-        batch = pending[batch_start : batch_start + batch_size]
-        results = await asyncio.gather(*[_process_one(key) for key in batch])
-        updated += sum(1 for ok in results if ok)
-        done = batch_start + len(batch)
-        logger.info(f"英文数据回填进度 {done}/{len(pending)}，新增 {updated}")
-        with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-            json.dump(items, f, ensure_ascii=False, indent=2)
-
-    return updated
 
 
 async def backfill_drops(
@@ -1699,6 +1626,28 @@ async def backfill_drops(
     return found, image_urls
 
 
+def _relocate_misplaced_en_description(item: dict) -> bool:
+    """中文物品顶层误存英文描述时清空，等待重新抓取中文。"""
+    desc = item.get("description") or ""
+    name = item.get("name") or ""
+    if not desc or _has_cjk(desc) or not _has_cjk(name):
+        return False
+    item.pop("description", None)
+    item.pop("description_rich", None)
+    return True
+
+
+def _description_needs_zh_refresh(item: dict) -> bool:
+    """中文物品缺少描述，或顶层描述实为英文。"""
+    desc = item.get("description") or ""
+    name = item.get("name") or ""
+    if not desc:
+        return True
+    if _has_cjk(name) and not _has_cjk(desc):
+        return True
+    return _description_needs_coin_refresh(item)
+
+
 def _description_needs_coin_refresh(item: dict) -> bool:
     """旧描述只存了金额数字、未解析金币图标时需重新抓取。"""
     text = item.get("description") or ""
@@ -1720,7 +1669,7 @@ async def backfill_descriptions(
     pending = [
         key
         for key, item in items.items()
-        if force or not item.get("description") or _description_needs_coin_refresh(item)
+        if force or _description_needs_zh_refresh(item)
     ]
     pending.sort()
     if limit:
@@ -1786,7 +1735,12 @@ async def fetch_category_members(
 async def fetch_page_html(
     session: aiohttp.ClientSession, title: str, api_url: str = API_URL
 ) -> str | None:
-    """通过 MediaWiki API 获取页面 HTML（比直接抓取更稳定）"""
+    """通过 MediaWiki API 获取页面 HTML；优先读本地镜像。"""
+    locale = api_url_to_locale(api_url)
+    cached = _load_mirror_html(title, locale)
+    if cached:
+        return cached
+
     params = {
         "action": "parse",
         "page": title,
@@ -1799,6 +1753,18 @@ async def fetch_page_html(
             async with session.get(
                 api_url, params=params, headers=HEADERS, timeout=aiohttp.ClientTimeout(total=25)
             ) as resp:
+                if resp.status == 429:
+                    retry_after = resp.headers.get("Retry-After", "").strip()
+                    wait = (
+                        float(retry_after)
+                        if retry_after.isdigit()
+                        else 3.0 * (attempt + 1)
+                    )
+                    logger.warning(
+                        f"Wiki 429 限速 ({title})，等待 {wait:.0f}s 后重试…"
+                    )
+                    await asyncio.sleep(wait)
+                    continue
                 if resp.status == 404:
                     return None
                 data = await resp.json()
@@ -2054,21 +2020,11 @@ def parse_wings_from_soup(soup: BeautifulSoup, *, locale: str = "zh") -> dict[st
     return wings
 
 
-def _merge_wing_en_names(zh_wings: dict[str, dict], en_wings: dict[str, dict]) -> None:
-    en_by_image = {w.get("image"): w for w in en_wings.values() if w.get("image")}
-    for wing in zh_wings.values():
-        en_wing = en_by_image.get(wing.get("image"))
-        if not en_wing:
-            continue
-        wing["en_name"] = en_wing["name"]
-        wing["en"] = {
-            "name": en_wing["name"],
-            "image": en_wing.get("image") or wing.get("image", ""),
-            "stats": en_wing.get("stats", []),
-            "recipe": None,
-            "description": en_wing.get("description"),
-            "description_rich": en_wing.get("description_rich"),
-        }
+def _apply_wing_en_names(wings: dict[str, dict]) -> None:
+    for wing in wings.values():
+        en_name = _guess_en_title_from_image(wing)
+        if en_name:
+            wing["en_name"] = en_name
 
 
 def _merge_parsed_wings(items: dict[str, dict], wings: dict[str, dict]) -> int:
@@ -2112,19 +2068,14 @@ async def refresh_overview_pages(
         name = item["name"]
         item["wiki_title"] = title
         _apply_overview_page_meta(item, title)
-        await attach_en_locale(session, item, title)
+        await attach_en_name(session, item, title)
         if meta.get("aliases"):
             item["aliases"] = list(meta["aliases"])
         items[name] = item
         updated += 1
 
         zh_wings = parse_wings_from_soup(soup)
-        en_html = await fetch_page_html(session, "Wings", api_url=API_URL_EN)
-        if en_html:
-            en_wings = parse_wings_from_soup(
-                BeautifulSoup(en_html, "html.parser"), locale="en"
-            )
-            _merge_wing_en_names(zh_wings, en_wings)
+        _apply_wing_en_names(zh_wings)
         wing_added = _merge_parsed_wings(items, zh_wings)
         updated += wing_added
         for wing in zh_wings.values():
@@ -2159,8 +2110,6 @@ def _load_existing_items() -> dict[str, dict]:
 async def update_wiki_data(
     limit: int | None = None,
     force: bool = False,
-    en_limit: int | None = None,
-    en_only: bool = False,
     desc_only: bool = False,
     desc_limit: int | None = None,
 ) -> dict:
@@ -2173,12 +2122,13 @@ async def update_wiki_data(
     new_count = 0
     images_total = 0
     images_ok = 0
-    en_backfill_count = 0
+    en_name_count = 0
     drops_backfill_count = 0
     desc_backfill_count = 0
     overview_count = 0
     image_migrate_count = 0
     piece_sync_count = 0
+    strip_count = 0
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -2190,7 +2140,7 @@ async def update_wiki_data(
                 force=force,
                 limit=desc_limit,
             )
-        elif not en_only:
+        else:
             all_titles: set[str] = set(OVERVIEW_PAGE_TITLES)
             for cat in CATEGORIES:
                 titles = await fetch_category_members(session, cat)
@@ -2221,7 +2171,8 @@ async def update_wiki_data(
                 _apply_overview_page_meta(item, title)
                 _apply_search_aliases(item)
                 items[name] = item
-                await attach_en_locale(session, item, title)
+                if await attach_en_name(session, item, title):
+                    en_name_count += 1
                 if _is_set_item(item):
                     _merge_set_pieces(items, name, item)
                 image_urls.update(_collect_image_urls(item))
@@ -2246,16 +2197,6 @@ async def update_wiki_data(
             armor_set_count = await refresh_armor_sets(session, items)
             overview_count += armor_set_count
 
-        effective_en_limit = en_limit if en_only else (350 if en_limit is None else en_limit)
-        if not desc_only:
-            en_backfill_count = await backfill_en_locales(
-                session,
-                items,
-                force=bool(en_only and force),
-                limit=effective_en_limit,
-            )
-
-        if not en_only and not desc_only:
             drops_limit = 50 if limit is None else min(50, limit or 50)
             drops_backfill_count, drop_image_urls = await backfill_drops(
                 session, items, limit=drops_limit
@@ -2277,6 +2218,7 @@ async def update_wiki_data(
                 limit=desc_limit if desc_limit is not None else 100,
             )
 
+    strip_count = strip_en_locale_data(items)
     image_migrate_count = migrate_item_image_filenames(items)
     piece_sync_count = resync_set_piece_locales(items)
 
@@ -2292,50 +2234,13 @@ async def update_wiki_data(
         "pages_scanned": pages_scanned,
         "images_total": images_total,
         "images_ok": images_ok,
-        "en_backfill_count": en_backfill_count,
+        "en_name_count": en_name_count,
+        "en_stripped_count": strip_count,
         "drops_backfill_count": drops_backfill_count,
         "desc_backfill_count": desc_backfill_count,
         "overview_count": overview_count,
         "image_migrate_count": image_migrate_count,
         "piece_sync_count": piece_sync_count,
-    }
-
-
-async def resync_set_en_from_wiki(
-    session: aiohttp.ClientSession,
-    items: dict[str, dict],
-) -> int:
-    """为套装页重新抓取英文（含 set_pieces），并同步到部件条目。"""
-    updated = 0
-    targets: list[tuple[str, str]] = []
-    for key, item in items.items():
-        if item.get("page_type") in ("armor_set", "vanity_set") or _is_set_item(item):
-            if item.get("set_pieces"):
-                targets.append((key, item.get("wiki_title") or key))
-
-    for key, title in targets:
-        item = items[key]
-        if await attach_en_locale(session, item, title, force=True):
-            updated += 1
-        await asyncio.sleep(0.12)
-
-    return updated
-
-
-async def resync_set_en_only() -> dict:
-    """仅重新抓取套装页英文并同步部件，不重新解析中文套装结构。"""
-    items = _load_existing_items()
-    connector = aiohttp.TCPConnector(limit=10)
-    timeout = aiohttp.ClientTimeout(total=60)
-    async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
-        en_updated = await resync_set_en_from_wiki(session, items)
-    piece_sync_count = resync_set_piece_locales(items)
-    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
-    return {
-        "en_updated": en_updated,
-        "piece_sync_count": piece_sync_count,
-        "total": len(items),
     }
 
 
@@ -2355,7 +2260,6 @@ async def ingest_wiki_titles(
     items: dict[str, dict],
     title_list: list[str],
     *,
-    attach_en: bool = False,
     refresh_sets: bool = False,
 ) -> tuple[int, int, int]:
     """抓取指定 Wiki 标题列表，返回 (新增数, 图片成功数, 图片总数)。"""
@@ -2379,8 +2283,7 @@ async def ingest_wiki_titles(
         _apply_overview_page_meta(item, title)
         _apply_search_aliases(item)
         items[name] = item
-        if attach_en:
-            await attach_en_locale(session, item, title)
+        await attach_en_name(session, item, title)
         if _is_set_item(item):
             _merge_set_pieces(items, name, item)
         image_urls.update(_collect_image_urls(item))
@@ -2412,7 +2315,6 @@ async def ingest_wiki_titles(
 async def ingest_new_categories(
     categories: list[str] | None = None,
     *,
-    attach_en: bool = False,
     refresh_sets: bool = False,
 ) -> dict:
     """仅抓取指定分类中的新条目（默认：家具 + 其他）。"""
@@ -2438,11 +2340,11 @@ async def ingest_new_categories(
             session,
             items,
             new_titles,
-            attach_en=attach_en,
             refresh_sets=refresh_sets,
         )
 
     migrate_item_image_filenames(items)
+    strip_en_locale_data(items)
     piece_sync_count = resync_set_piece_locales(items)
     with open(ITEMS_JSON, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
@@ -2458,11 +2360,12 @@ async def ingest_new_categories(
 
 
 async def maintain_local_data() -> dict:
-    """本地维护：规范化图片名、同步套装部件英文。"""
+    """本地维护：规范化图片名、同步套装部件、清理 en 数据块。"""
     items = _load_existing_items()
     result = {
         "image_migrate_count": migrate_item_image_filenames(items),
         "piece_sync_count": resync_set_piece_locales(items),
+        "en_stripped_count": strip_en_locale_data(items),
         "total": len(items),
         "sets_refreshed": 0,
     }
@@ -2480,6 +2383,7 @@ async def refresh_sets_only() -> dict:
     async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
         sets_refreshed = await refresh_armor_sets(session, items)
     piece_sync_count = resync_set_piece_locales(items)
+    strip_en_locale_data(items)
     with open(ITEMS_JSON, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
     return {
@@ -2492,17 +2396,12 @@ async def refresh_sets_only() -> dict:
 async def main(
     limit: int | None = None,
     force: bool = False,
-    en_only: bool = False,
-    en_limit: int | None = None,
     desc_only: bool = False,
     desc_limit: int | None = None,
 ) -> None:
     if desc_only:
         existing = _load_existing_items()
         print(f"描述回填模式：已有 {len(existing)} 个物品", flush=True)
-    elif en_only:
-        existing = _load_existing_items()
-        print(f"英文回填模式：已有 {len(existing)} 个物品", flush=True)
     elif force:
         print("全量模式：将重新抓取所有物品", flush=True)
     else:
@@ -2513,8 +2412,6 @@ async def main(
     result = await update_wiki_data(
         limit=limit,
         force=force,
-        en_only=en_only,
-        en_limit=en_limit,
         desc_only=desc_only,
         desc_limit=desc_limit,
     )
@@ -2522,7 +2419,8 @@ async def main(
         f"更新完成：新增 {result['new_count']} 个，"
         f"共 {result['total']} 个物品，"
         f"新图片 {result['images_ok']}/{result['images_total']}，"
-        f"英文回填 {result['en_backfill_count']} 个，"
+        f"英文名 {result.get('en_name_count', 0)} 个，"
+        f"清理 en 块 {result.get('en_stripped_count', 0)} 个，"
         f"掉落来源 {result['drops_backfill_count']} 个，"
         f"描述 {result['desc_backfill_count']} 个",
         flush=True,
@@ -2534,17 +2432,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="准备泰拉瑞亚 Wiki 离线数据")
     parser.add_argument("--limit", type=int, default=None, help="仅处理前 N 个页面（调试用）")
     parser.add_argument("--force", action="store_true", help="全量重建，覆盖已有数据")
-    parser.add_argument(
-        "--en-only",
-        action="store_true",
-        help="仅回填英文数据，不抓取中文 Wiki",
-    )
-    parser.add_argument(
-        "--en-limit",
-        type=int,
-        default=None,
-        help="英文回填最多处理 N 个物品（调试用）",
-    )
     parser.add_argument(
         "--desc-only",
         action="store_true",
@@ -2559,7 +2446,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--resync-pieces",
         action="store_true",
-        help="本地维护：规范化图片名并同步套装部件英文",
+        help="本地维护：规范化图片名、同步套装部件、清理 en 数据块",
     )
     parser.add_argument(
         "--refresh-sets",
@@ -2567,9 +2454,9 @@ if __name__ == "__main__":
         help="从 Wiki 重新抓取所有套装页（盔甲/时装）",
     )
     parser.add_argument(
-        "--resync-set-en",
+        "--strip-en",
         action="store_true",
-        help="仅重新抓取套装页英文并同步部件（较快）",
+        help="仅移除 items.json 中的 en 数据块（保留 en_name）",
     )
     parser.add_argument(
         "--ingest-categories",
@@ -2600,20 +2487,17 @@ if __name__ == "__main__":
                 f"部件同步 {result['piece_sync_count']} 个，共 {result['total']} 条目",
                 flush=True,
             )
-        elif args.resync_set_en:
-            result = asyncio.run(resync_set_en_only())
-            print(
-                f"套装英文同步完成：{result['en_updated']} 套，"
-                f"部件同步 {result['piece_sync_count']} 个，共 {result['total']} 条目",
-                flush=True,
-            )
+        elif args.strip_en:
+            items = _load_existing_items()
+            count = strip_en_locale_data(items)
+            with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+                json.dump(items, f, ensure_ascii=False, indent=2)
+            print(f"已清理 {count} 个 en 数据块，共 {len(items)} 条目", flush=True)
         else:
             asyncio.run(
                 main(
                     limit=args.limit,
                     force=args.force,
-                    en_only=args.en_only,
-                    en_limit=args.en_limit,
                     desc_only=args.desc_only,
                     desc_limit=args.desc_limit,
                 )

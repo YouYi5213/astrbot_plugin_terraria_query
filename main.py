@@ -28,7 +28,6 @@ from .prepare_data import (
     normalize_stat_for_display,
     resolve_bool_icon,
     update_wiki_data,
-    merge_en_recipe,
 )
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -185,7 +184,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
 CARD_WIDTH = 600
 CARD_PADDING = 20
-CARD_VERSION = "v23"
+CARD_VERSION = "v24"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -973,52 +972,24 @@ def _display_stats(data: dict, locale: str) -> list[dict]:
 
 
 _CARD_UI = {
-    "zh": {
-        "description": "▎描述",
-        "stats": "▎属性",
-        "recipe": "▎合成配方",
-        "drops": "▎来自",
-        "col_entity": "实体",
-        "col_qty": "数量",
-        "col_chance": "几率",
-        "station": "制作站:",
-        "materials": "材料:",
-        "result": "→ 产物:",
-        "unknown": "未知物品",
-        "recipe_title": "📜 合成配方",
-        "set_pieces": "▎套装部件",
-    },
-    "en": {
-        "description": "▎Description",
-        "stats": "▎Stats",
-        "recipe": "▎Recipe",
-        "drops": "▎From",
-        "col_entity": "Entity",
-        "col_qty": "Qty",
-        "col_chance": "Rate",
-        "station": "Station:",
-        "materials": "Materials:",
-        "result": "→ Result:",
-        "unknown": "Unknown Item",
-        "recipe_title": "📜 Recipe",
-        "set_pieces": "▎Set pieces",
-    },
+    "description": "▎描述",
+    "stats": "▎属性",
+    "recipe": "▎合成配方",
+    "drops": "▎来自",
+    "col_entity": "实体",
+    "col_qty": "数量",
+    "col_chance": "几率",
+    "station": "制作站:",
+    "materials": "材料:",
+    "result": "→ 产物:",
+    "unknown": "未知物品",
+    "recipe_title": "📜 合成配方",
+    "set_pieces": "▎套装部件",
 }
 
 
-def _query_locale_hint(query: str) -> str | None:
-    has_cjk = bool(re.search(r"[\u4e00-\u9fff]", query))
-    has_latin = bool(re.search(r"[A-Za-z]", query))
-    if has_cjk and not has_latin:
-        return "zh"
-    if has_latin and not has_cjk:
-        return "en"
-    return None
-
-
 def _item_en_name(item: dict) -> str:
-    en = item.get("en") or {}
-    return en.get("name") or item.get("en_name") or ""
+    return item.get("en_name") or ""
 
 
 def _item_zh_search_names(key: str, item: dict) -> set[str]:
@@ -1030,63 +1001,39 @@ def _item_zh_search_names(key: str, item: dict) -> set[str]:
 def _item_en_search_names(item: dict) -> set[str]:
     names = {_item_en_name(item)}
     names.update(item.get("aliases") or [])
-    names.update(item.get("search_terms") or [])
     return {n for n in names if n}
 
 
-def _fuzzy_match(query: str, items: dict[str, dict]) -> list[tuple[str, str]]:
+def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
+    """中英文名称均可匹配，结果统一为中文物品键。"""
     query = query.strip()
     if not query:
         return []
 
-    locale_hint = _query_locale_hint(query)
     query_lower = query.lower()
-    found: dict[tuple[str, str], int] = {}
-
-    def add(key: str, locale: str, rank: int) -> None:
-        slot = (key, locale)
-        if slot not in found or rank < found[slot]:
-            found[slot] = rank
+    found: dict[str, int] = {}
 
     for key, item in items.items():
-        if locale_hint in (None, "zh"):
-            for zh_name in _item_zh_search_names(key, item):
-                if query == zh_name:
-                    add(key, "zh", 0)
-                elif query in zh_name:
-                    add(key, "zh", len(zh_name))
+        for zh_name in _item_zh_search_names(key, item):
+            if query == zh_name:
+                found[key] = min(found.get(key, 999), 0)
+            elif query in zh_name:
+                found[key] = min(found.get(key, 999), len(zh_name))
 
-        if locale_hint in (None, "en"):
-            for en_name in _item_en_search_names(item):
-                en_lower = en_name.lower()
-                if query_lower == en_lower:
-                    add(key, "en", 0)
-                elif query_lower in en_lower:
-                    add(key, "en", len(en_name))
+        for en_name in _item_en_search_names(item):
+            en_lower = en_name.lower()
+            if query_lower == en_lower:
+                found[key] = min(found.get(key, 999), 0)
+            elif query_lower in en_lower:
+                found[key] = min(found.get(key, 999), len(en_name))
 
-    ranked = sorted(found.items(), key=lambda x: (x[1], x[0][1], x[0][0]))
+    ranked = sorted(found.items(), key=lambda x: (x[1], x[0]))
     if any(rank == 0 for _, rank in ranked):
-        ranked = [(pair, rank) for pair, rank in ranked if rank == 0]
-    return [pair for pair, _ in ranked]
+        ranked = [(k, r) for k, r in ranked if r == 0]
+    return [key for key, _ in ranked]
 
 
-def _resolve_display_item(item: dict, locale: str) -> dict | None:
-    if locale == "en":
-        en = item.get("en")
-        if not en or not en.get("name"):
-            return None
-        return {
-            "name": en.get("name", item.get("name", "")),
-            "image": en.get("image") or item.get("image", ""),
-            "stats": en.get("stats", []),
-            "recipe": merge_en_recipe(item.get("recipe"), en.get("recipe")),
-            "drops": en.get("drops"),
-            "description": en.get("description") or item.get("description"),
-            "description_rich": en.get("description_rich") or item.get("description_rich"),
-            "set_pieces": en.get("set_pieces") or item.get("set_pieces"),
-            "page_type": en.get("page_type") or item.get("page_type"),
-        }
-    rich = item.get("description_rich")
+def _display_item(item: dict) -> dict:
     return {
         "name": item.get("name", ""),
         "image": item.get("image", ""),
@@ -1094,16 +1041,18 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
         "recipe": item.get("recipe"),
         "drops": item.get("drops"),
         "description": item.get("description"),
-        "description_rich": rich,
+        "description_rich": item.get("description_rich"),
         "set_pieces": item.get("set_pieces"),
         "page_type": item.get("page_type"),
     }
 
 
-def _match_label(key: str, item: dict, locale: str) -> str:
-    if locale == "en":
-        return _item_en_name(item) or item.get("name", key)
-    return item.get("name", key)
+def _match_list_label(key: str, item: dict, query: str) -> str:
+    label = item.get("name", key)
+    en = _item_en_name(item)
+    if en and en.lower() in query.lower() and label != en:
+        return f"{label}（{en}）"
+    return label
 
 
 def _format_stat_plain(stat: dict, locale: str) -> str:
@@ -1136,15 +1085,13 @@ def _format_stat_plain(stat: dict, locale: str) -> str:
 def _format_recipe_plain(
     recipe: dict | None,
     fallback_name: str,
-    locale: str = "zh",
 ) -> list[str]:
     if not recipe:
         return []
-    ui = _CARD_UI.get(locale, _CARD_UI["zh"])
     lines: list[str] = []
     station = recipe.get("station", "")
     if station:
-        lines.append(f"    {ui['station']} {station}")
+        lines.append(f"    {_CARD_UI['station']} {station}")
     ings = " + ".join(_recipe_item_label(ing) for ing in recipe.get("ingredients", []))
     result = _recipe_item_label(recipe.get("result", {}) or {}) or fallback_name
     if ings:
@@ -1152,8 +1099,8 @@ def _format_recipe_plain(
     return lines
 
 
-def _format_text_result(data: dict, locale: str = "zh") -> str:
-    ui = _CARD_UI.get(locale, _CARD_UI["zh"])
+def _format_text_result(data: dict) -> str:
+    ui = _CARD_UI
     lines = [f"📦 {data.get('name', ui['unknown'])}", "=" * 30]
 
     description = data.get("description")
@@ -1164,14 +1111,14 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
         for para in description.split("\n\n"):
             lines.append(f"  {para}")
 
-    stat_rows = _display_stats(data, locale)
+    stat_rows = _display_stats(data, "zh")
     if stat_rows:
         lines.append("")
         lines.append(ui["stats"].lstrip("▎"))
         lines.append("-" * 30)
     for stat in stat_rows:
         label = stat.get("label", "")
-        v = _format_stat_plain(stat, locale)
+        v = _format_stat_plain(stat, "zh")
         if not v and not stat.get("coins") and not resolve_bool_icon(stat):
             if not stat.get("segments"):
                 continue
@@ -1187,24 +1134,24 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
             lines.append(f"  · {piece.get('name', '')}")
             for pstat in piece.get("stats", []):
                 plabel = pstat.get("label", "")
-                pv = _format_stat_plain(pstat, locale)
+                pv = _format_stat_plain(pstat, "zh")
                 if pv:
                     lines.append(f"      {plabel}: {pv}")
-            for rline in _format_recipe_plain(piece.get("recipe"), piece.get("name", ""), locale):
+            for rline in _format_recipe_plain(piece.get("recipe"), piece.get("name", "")):
                 lines.append(rline)
 
     if recipe:
         lines.append("")
         lines.append(ui["recipe_title"])
         lines.append("-" * 30)
-        for rline in _format_recipe_plain(recipe, data.get("name", ""), locale):
+        for rline in _format_recipe_plain(recipe, data.get("name", "")):
             lines.append(f"  {rline.strip()}")
 
     drops = data.get("drops")
     if drops:
         lines.append("")
         lines.append(ui["drops"].lstrip("▎"))
-        block = drops_display_block(drops, locale)
+        block = drops_display_block(drops, "zh")
         if block:
             label = block.get("label", "")
             if label:
@@ -1411,10 +1358,11 @@ def _draw_set_pieces_section(
     return y
 
 
-def _generate_item_card(data: dict, locale: str = "zh") -> str:
+def _generate_item_card(data: dict) -> str:
     _ensure_dirs()
     _prune_old_card_cache()
-    ui = _CARD_UI.get(locale, _CARD_UI["zh"])
+    ui = _CARD_UI
+    locale = "zh"
 
     font_title = _try_get_font(26)
     font_header = _try_get_font(20)
@@ -1564,14 +1512,11 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
 
 
 def _format_update_result(result: dict, force: bool = False) -> str:
-    en_count = result.get("en_backfill_count", 0)
     drops_count = result.get("drops_backfill_count", 0)
     desc_count = result.get("desc_backfill_count", 0)
     extra_lines = ""
     if force:
         extra_lines += "\n模式：全量重建"
-    if en_count:
-        extra_lines += f"\n英文数据回填：{en_count} 个"
     if drops_count:
         extra_lines += f"\n掉落来源回填：{drops_count} 个"
     if desc_count:
@@ -1731,33 +1676,24 @@ class TerrariaQueryPlugin(Star):
 
         if len(matches) > 3:
             lines = [f"找到 {len(matches)} 个匹配结果，请输入更精确的名称后重新查询：", ""]
-            for key, locale in matches:
+            for key in matches:
                 item = self.items[key]
-                label = _match_label(key, item, locale)
-                if locale == "en" and item.get("name"):
-                    lines.append(f"· {label} ({item['name']})")
-                else:
-                    lines.append(f"· {label}")
+                lines.append(f"· {_match_list_label(key, item, text)}")
             yield event.plain_result("\n".join(lines))
             return
 
         if len(matches) > 1:
             yield event.plain_result(f"找到 {len(matches)} 个匹配结果：")
 
-        for key, locale in matches:
+        for key in matches:
             item = self.items[key]
-            display = _resolve_display_item(item, locale)
-            if not display:
-                yield event.plain_result(
-                    f"❌ 「{item.get('name', key)}」暂无英文数据，请尝试中文查询或执行「泰拉更新」。"
-                )
-                continue
+            display = _display_item(item)
             try:
-                card_path = _generate_item_card(display, locale=locale)
+                card_path = _generate_item_card(display)
                 yield event.image_result(card_path)
             except Exception as e:
-                logger.error(f"生成图片失败 ({key}/{locale}): {e}")
-                yield event.plain_result(_format_text_result(display, locale=locale))
+                logger.error(f"生成图片失败 ({key}): {e}")
+                yield event.plain_result(_format_text_result(display))
 
     async def _handle_update(self, event: AstrMessageEvent, force: bool = False):
         if not self._can_update(event):

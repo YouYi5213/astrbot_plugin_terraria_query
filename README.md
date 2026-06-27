@@ -1,16 +1,16 @@
 # astrbot_plugin_terraria_query
 
-泰拉瑞亚 Wiki 离线查询 AstrBot 插件。发送 `泰拉查询 <物品名>` 或 `泰拉 <物品名>`（无需 `/` 前缀），以图片卡片展示物品属性与合成配方，支持中英文模糊匹配。
+泰拉瑞亚 Wiki 离线查询 AstrBot 插件。发送 `泰拉查询 <物品名>` 或 `泰拉 <物品名>`（无需 `/` 前缀），以**中文**图片卡片展示物品属性与合成配方；可用**中文或英文名称**搜索。
 
 ## 功能
 
 - **物品查询** — `泰拉查询 天顶剑` / `泰拉 Zenith` / `泰拉 天顶剑`
 - **中文模糊匹配** — 如「天顶」→「天顶剑」
+- **英文名搜索** — 如 `泰拉 Clentaminator` → 显示「环境改造枪」中文卡片
 - **图片卡片** — 属性、描述、合成配方、掉落来源；失败时降级为文本
 - **盔甲/时装套装** — 分部件展示属性与配方（如寒霜盔甲、兔兔套装）
 - **套装部件** — 可单独查询（如 `泰拉 钛金面具` / `泰拉 Titanium Mask`）
 - **翅膀** — 支持总览页与按名称查询（如猪龙鱼之翼）
-- **双语** — 中文/英文 Wiki 数据，英文查询展示英文卡片
 
 ## 安装
 
@@ -31,8 +31,8 @@ pip install -r requirements.txt
 
 | 指令 | 说明 |
 |------|------|
-| `泰拉查询 <物品名>` / `泰拉 <物品名>` | 查询物品，支持中英文模糊匹配 |
-| `泰拉更新` | 从 Wiki **增量**更新（新增物品、刷新套装、回填英文等） |
+| `泰拉查询 <物品名>` / `泰拉 <物品名>` | 查询物品（中文展示，支持中/英文名称搜索） |
+| `泰拉更新` | 从 Wiki **增量**更新（新增物品、刷新套装、回填描述等） |
 | `泰拉强制更新` | **全量重建**（管理员，耗时较长） |
 
 > 群聊中无需 `/` 前缀；`/泰拉查询` 等写法仍然有效。
@@ -60,23 +60,19 @@ python prepare_data.py
 # 全量重建
 python prepare_data.py --force
 
-# 本地维护：规范化图片名 + 同步套装部件英文
+# 本地维护：规范化图片名 + 同步套装部件 + 清理旧 en 数据块
 python prepare_data.py --resync-pieces
 
 # 从 Wiki 重新抓取所有套装页（盔甲 + 时装）
 python prepare_data.py --refresh-sets
 
-# 仅重新抓取套装英文并同步部件（较快，推荐在 refresh-sets 后或 en 不同步时使用）
-python prepare_data.py --resync-set-en
-
-# 仅回填英文
-python prepare_data.py --en-only
+# 仅移除 items.json 中的 en 数据块（保留 en_name 供英文搜索）
+python prepare_data.py --strip-en
 ```
 
 ## 数据来源
 
 - [官方中文 Terraria Wiki](https://terraria.wiki.gg/zh/wiki/Terraria_Wiki)
-- [官方英文 Terraria Wiki](https://terraria.wiki.gg/wiki/Terraria_Wiki)
 
 ## 开发与测试
 

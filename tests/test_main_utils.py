@@ -73,7 +73,7 @@ def test_format_text_includes_set_pieces():
             }
         ],
     }
-    text = main._format_text_result(data, locale="zh")
+    text = main._format_text_result(data)
     assert "套装部件" in text
     assert "钛金面具" in text
     assert "秘银砧" in text
@@ -89,3 +89,17 @@ def test_teraria_cmd_regex():
     assert pattern.match("泰拉 天顶剑")
     assert pattern.match("泰拉强制更新")
     assert pattern.match("/泰拉查询 剑")
+
+
+def test_fuzzy_match_english_name_shows_chinese_item():
+    items = {
+        "环境改造枪": {
+            "name": "环境改造枪",
+            "en_name": "Clentaminator",
+            "stats": [],
+        }
+    }
+    matches = main._fuzzy_match("Clentaminator", items)
+    assert matches == ["环境改造枪"]
+    display = main._display_item(items["环境改造枪"])
+    assert display["name"] == "环境改造枪"

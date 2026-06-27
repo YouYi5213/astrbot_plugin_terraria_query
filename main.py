@@ -719,6 +719,8 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[tuple[str, str]]:
                 add(key, "en", len(en_name))
 
     ranked = sorted(found.items(), key=lambda x: (x[1], x[0][1], x[0][0]))
+    if any(rank == 0 for _, rank in ranked):
+        ranked = [(pair, rank) for pair, rank in ranked if rank == 0]
     return [pair for pair, _ in ranked]
 
 

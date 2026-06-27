@@ -23,7 +23,7 @@ from astrbot.api import AstrBotConfig, logger
 from .prepare_data import (
     COIN_SPECS,
     RARITY_LABELS,
-    compact_drop_modes,
+    drops_display_block,
     normalize_stat_for_display,
     resolve_bool_icon,
     update_wiki_data,
@@ -125,6 +125,8 @@ STAT_LABEL_VALUE_GAP = 10
 DROP_ROW_HEIGHT = 44
 DROP_MODE_HEADER = 22
 DROP_TABLE_HEADER = 22
+DROP_COL_QTY = 300
+DROP_COL_CHANCE = 480
 ITEM_ICON_SLOT = (48, 48)
 ING_ICON_SLOT = (28, 28)
 COLORS = {
@@ -345,16 +347,58 @@ def _load_entity_image(filename: str) -> Image.Image | None:
     return _fit_image(img, 48, 36)
 
 
-def _calc_drops_area(drops: dict | None) -> int:
+def _drop_column_widths() -> tuple[int, int, int]:
+    col_entity = CARD_PADDING + 20
+    col_qty = DROP_COL_QTY
+    col_chance = DROP_COL_CHANCE
+    return col_entity, col_qty, col_chance
+
+
+def _drop_entry_row_height(
+    draw: ImageDraw.ImageDraw,
+    entry: dict,
+    font,
+    col_qty: int,
+    col_chance: int,
+) -> int:
+    qty_w = max(40, col_chance - col_qty - 10)
+    chance_w = max(40, CARD_WIDTH - CARD_PADDING - col_chance)
+    qty_lines = _wrap_text_lines(draw, entry.get("quantity", ""), font, qty_w)
+    chance_lines = _wrap_text_lines(draw, entry.get("chance", ""), font, chance_w)
+    line_count = max(len(qty_lines), len(chance_lines), 1)
+    return max(DROP_ROW_HEIGHT, line_count * STAT_LINE_HEIGHT + 8)
+
+
+def _draw_drop_field_lines(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    x: int,
+    y: int,
+    max_w: int,
+    font,
+    fill,
+) -> int:
+    lines = _wrap_text_lines(draw, text, font, max_w)
+    for i, line in enumerate(lines):
+        draw.text((x, y + i * STAT_LINE_HEIGHT), line, fill=fill, font=font)
+    return len(lines)
+
+
+def _calc_drops_area(drops: dict | None, locale: str = "zh") -> int:
     if not drops:
         return 0
-    blocks = compact_drop_modes(drops)
+    block = drops_display_block(drops, locale)
+    if not block:
+        return 0
+    measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
+    font_small = _try_get_font(13)
+    _, col_qty, col_chance = _drop_column_widths()
     area = 34
-    for block in blocks:
-        if block.get("label"):
-            area += DROP_MODE_HEADER
-        area += DROP_TABLE_HEADER
-        area += len(block.get("entries", [])) * DROP_ROW_HEIGHT
+    if block.get("label"):
+        area += DROP_MODE_HEADER
+    area += DROP_TABLE_HEADER
+    for entry in block.get("entries", []):
+        area += _drop_entry_row_height(measure, entry, font_small, col_qty, col_chance)
     return area + 12
 
 
@@ -366,46 +410,44 @@ def _draw_drops_section(
     font_header,
     font_small,
     ui: dict,
+    locale: str = "zh",
 ) -> int:
-    blocks = compact_drop_modes(drops)
+    block = drops_display_block(drops, locale)
+    if not block:
+        return y
+
     draw.text((CARD_PADDING + 10, y), ui["drops"], fill=COLORS["accent"], font=font_header)
     y += 30
 
-    col_entity = CARD_PADDING + 20
-    col_qty = CARD_WIDTH - CARD_PADDING - 120
-    col_chance = CARD_WIDTH - CARD_PADDING - 52
+    col_entity, col_qty, col_chance = _drop_column_widths()
+    qty_w = max(40, col_chance - col_qty - 10)
+    chance_w = max(40, CARD_WIDTH - CARD_PADDING - col_chance)
 
-    for block in blocks:
-        label = block.get("label", "")
-        if label:
-            draw.text((col_entity, y), label, fill=COLORS["label"], font=font_small)
-            y += DROP_MODE_HEADER
+    label = block.get("label", "")
+    if label:
+        draw.text((col_entity, y), label, fill=COLORS["label"], font=font_small)
+        y += DROP_MODE_HEADER
 
-        draw.text((col_entity, y), ui["col_entity"], fill=COLORS["label"], font=font_small)
-        draw.text((col_qty, y), ui["col_qty"], fill=COLORS["label"], font=font_small)
-        draw.text((col_chance, y), ui["col_chance"], fill=COLORS["label"], font=font_small)
-        y += DROP_TABLE_HEADER
+    draw.text((col_entity, y), ui["col_entity"], fill=COLORS["label"], font=font_small)
+    draw.text((col_qty, y), ui["col_qty"], fill=COLORS["label"], font=font_small)
+    draw.text((col_chance, y), ui["col_chance"], fill=COLORS["label"], font=font_small)
+    y += DROP_TABLE_HEADER
 
-        for entry in block.get("entries", []):
-            img = _load_entity_image(entry.get("image", ""))
-            entity_slot_w = 48
-            text_x = col_entity + entity_slot_w + 8
-            if img:
-                _paste_in_slot(card, img, col_entity, y, entity_slot_w, DROP_ROW_HEIGHT)
-            draw.text((text_x, y + 4), entry.get("name", ""), fill=COLORS["text"], font=font_small)
-            draw.text(
-                (col_qty, y + 4),
-                entry.get("quantity", ""),
-                fill=COLORS["value"],
-                font=font_small,
-            )
-            draw.text(
-                (col_chance, y + 4),
-                entry.get("chance", ""),
-                fill=COLORS["value"],
-                font=font_small,
-            )
-            y += DROP_ROW_HEIGHT
+    for entry in block.get("entries", []):
+        row_h = _drop_entry_row_height(draw, entry, font_small, col_qty, col_chance)
+        img = _load_entity_image(entry.get("image", ""))
+        entity_slot_w = 48
+        text_x = col_entity + entity_slot_w + 8
+        if img:
+            _paste_in_slot(card, img, col_entity, y, entity_slot_w, row_h)
+        draw.text((text_x, y + 4), entry.get("name", ""), fill=COLORS["text"], font=font_small)
+        _draw_drop_field_lines(
+            draw, entry.get("quantity", ""), col_qty, y + 4, qty_w, font_small, COLORS["value"]
+        )
+        _draw_drop_field_lines(
+            draw, entry.get("chance", ""), col_chance, y + 4, chance_w, font_small, COLORS["value"]
+        )
+        y += row_h
     return y
 
 
@@ -589,14 +631,15 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
     if drops:
         lines.append("")
         lines.append(ui["drops"].lstrip("▎"))
-        for mode in compact_drop_modes(drops):
-            label = mode.get("label", "")
+        block = drops_display_block(drops, locale)
+        if block:
+            label = block.get("label", "")
             if label:
                 lines.append(f"  [{label}]")
             lines.append(
                 f"  {ui['col_entity']}\t{ui['col_qty']}\t{ui['col_chance']}"
             )
-            for entry in mode.get("entries", []):
+            for entry in block.get("entries", []):
                 lines.append(
                     f"  {entry.get('name', '')}: "
                     f"{entry.get('quantity', '')} ({entry.get('chance', '')})"
@@ -654,7 +697,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
 
     drops_area = 0
     if drops:
-        drops_area = 20 + _calc_drops_area(drops)
+        drops_area = 20 + _calc_drops_area(drops, locale)
         if recipe:
             drops_area += 20
 
@@ -780,10 +823,10 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
                 width=1,
             )
             y += 20
-        _draw_drops_section(draw, card, y, drops, font_header, font_small, ui)
+        _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v9_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v10_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

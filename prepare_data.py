@@ -406,6 +406,74 @@ def compact_drop_modes(drops: dict | None) -> list[dict]:
     return modes
 
 
+def _join_mode_labels(labels: list[str], locale: str = "zh") -> str:
+    if not labels:
+        return ""
+    if len(labels) == 1:
+        return labels[0]
+    if locale == "en":
+        if len(labels) == 2:
+            return f"{labels[0]} and {labels[1]}"
+        return ", ".join(labels[:-1]) + f" and {labels[-1]}"
+    if len(labels) == 2:
+        return f"{labels[0]}和{labels[1]}"
+    return "、".join(labels[:-1]) + f"和{labels[-1]}"
+
+
+def _format_mode_values(pairs: list[tuple[str, str]], locale: str = "zh") -> str:
+    if not pairs:
+        return ""
+    value_to_labels: dict[str, list[str]] = {}
+    value_order: list[str] = []
+    for label, val in pairs:
+        val = (val or "").strip()
+        if val not in value_to_labels:
+            value_to_labels[val] = []
+            value_order.append(val)
+        if label and label not in value_to_labels[val]:
+            value_to_labels[val].append(label)
+    if len(value_order) == 1:
+        return value_order[0]
+    parts = []
+    for val in value_order:
+        label_text = _join_mode_labels(value_to_labels[val], locale)
+        parts.append(f"{label_text}:{val}")
+    return "/".join(parts)
+
+
+def drops_display_block(drops: dict | None, locale: str = "zh") -> dict | None:
+    """合并三难度为单行展示，差异写入数量/几率列。"""
+    if not drops:
+        return None
+    modes = drops.get("modes", [])
+    if not modes:
+        return None
+
+    labels = " / ".join(m.get("label", "") for m in modes if m.get("label"))
+    row_count = max((len(m.get("entries", [])) for m in modes), default=0)
+    merged: list[dict] = []
+    for i in range(row_count):
+        per_mode: list[tuple[str, dict]] = []
+        for m in modes:
+            entries = m.get("entries", [])
+            if i < len(entries):
+                per_mode.append((m.get("label", ""), entries[i]))
+        if not per_mode:
+            continue
+        base = per_mode[0][1]
+        qty_pairs = [(lb, e.get("quantity", "")) for lb, e in per_mode]
+        ch_pairs = [(lb, e.get("chance", "")) for lb, e in per_mode]
+        merged.append(
+            {
+                "name": base.get("name", ""),
+                "image": base.get("image", ""),
+                "quantity": _format_mode_values(qty_pairs, locale),
+                "chance": _format_mode_values(ch_pairs, locale),
+            }
+        )
+    return {"label": labels, "entries": merged}
+
+
 def _collect_drop_image_urls(drops: dict) -> dict[str, str]:
     urls: dict[str, str] = {}
     for mode in drops.get("modes", []):

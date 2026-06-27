@@ -229,6 +229,85 @@ def _parse_stat_value(td) -> tuple[str, str]:
     return value, extra
 
 
+def _parse_rich_segments(root) -> list[dict]:
+    from bs4 import NavigableString, Tag
+
+    segments: list[dict] = []
+
+    def append_text(text: str) -> None:
+        text = _clean_text(text)
+        if not text or text in ("(", ")", "（", "）"):
+            return
+        if segments and segments[-1]["type"] == "text":
+            segments[-1]["text"] += text
+        else:
+            segments.append({"type": "text", "text": text})
+
+    def walk(node) -> None:
+        if isinstance(node, NavigableString):
+            append_text(str(node))
+            return
+        if not isinstance(node, Tag):
+            return
+        if node.name == "br":
+            append_text("\n")
+            return
+        if node.name == "img" and node.get("src"):
+            segments.append(
+                {
+                    "type": "icon",
+                    "image": _filename_from_url(_image_url_from_src(node["src"])),
+                    "alt": _clean_text(node.get("alt", "")),
+                }
+            )
+            return
+        for child in node.children:
+            walk(child)
+
+    for child in root.children:
+        walk(child)
+
+    cleaned: list[dict] = []
+    for i, seg in enumerate(segments):
+        if seg["type"] == "text":
+            text = seg["text"]
+            if i + 1 < len(segments) and segments[i + 1]["type"] == "icon":
+                text = text.rstrip("（(").rstrip()
+            if not text.strip():
+                continue
+            if cleaned and cleaned[-1]["type"] == "text":
+                cleaned[-1]["text"] += text
+            else:
+                cleaned.append({"type": "text", "text": text})
+        else:
+            cleaned.append(seg)
+    return cleaned
+
+
+def _segments_plain_text(segments: list[dict]) -> str:
+    parts: list[str] = []
+    for seg in segments:
+        if seg["type"] == "text":
+            parts.append(seg["text"].replace("\n", " "))
+        elif seg["type"] == "icon":
+            alt = seg.get("alt") or seg.get("image", "")
+            if alt:
+                parts.append(f"[{alt}]")
+    return _clean_text("".join(parts))
+
+
+def _collect_segment_image_urls(stat: dict) -> dict[str, str]:
+    urls: dict[str, str] = {}
+    for seg in stat.get("segments", []):
+        if seg.get("type") == "icon" and seg.get("image"):
+            fn = seg["image"]
+            urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    fn = stat.get("value_image")
+    if fn:
+        urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    return urls
+
+
 def _parse_bool_icon(td) -> str | None:
     if td.select_one(".t-yes"):
         return "yes"
@@ -242,9 +321,28 @@ def _parse_generic_stat(td, label: str) -> dict:
     if bool_icon:
         return {"label": label, "value": "", "extra": "", "bool_icon": bool_icon}
 
-    img_el = td.select_one("img")
-    value, extra = _parse_stat_value(td)
+    td_copy = BeautifulSoup(str(td), "lxml").select_one("td") or td
+    extra_el = td_copy.select_one(".small-bold, .knockback, .usetime")
+    extra = _clean_text(extra_el.get_text(" ", strip=True)) if extra_el else ""
+    if extra_el:
+        extra_el.extract()
+
+    segments = _parse_rich_segments(td_copy)
+    if any(seg.get("type") == "icon" for seg in segments):
+        return {
+            "label": label,
+            "value": _segments_plain_text(segments),
+            "extra": extra,
+            "segments": segments,
+        }
+
+    value = _clean_text(td_copy.get_text())
+    if extra:
+        extra_core = extra.strip("()（）[] ")
+        if extra_core and extra_core in value:
+            extra = ""
     stat: dict = {"label": label, "value": value, "extra": extra}
+    img_el = td_copy.select_one("img")
     if img_el and img_el.get("src") and not value:
         stat["value_image"] = _filename_from_url(_image_url_from_src(img_el["src"]))
     return stat
@@ -484,6 +582,19 @@ def _collect_drop_image_urls(drops: dict) -> dict[str, str]:
     return urls
 
 
+def _parse_recipe_entry(cell) -> dict:
+    span_i = cell.select_one("span.i")
+    name, image = "", ""
+    if span_i:
+        name, image = _parse_item_span(span_i)
+    amount_el = cell.select_one("span.am")
+    amount = _clean_text(amount_el.get_text()) if amount_el else ""
+    entry: dict = {"name": name, "image": image}
+    if amount and amount not in ("1", ""):
+        entry["amount"] = amount
+    return entry
+
+
 def _parse_item_span(span) -> tuple[str, str]:
     """从 span.i 元素提取 (名称, 图片文件名)"""
     link = span.select_one("a[title]") or span.select_one("a")
@@ -552,20 +663,31 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
         station = _clean_text(station_el.get_text()) if station_el else ""
 
         ingredients = []
-        for li in row.select("td.ingredients li span.i"):
-            name, image = _parse_item_span(li)
-            if name:
-                ingredients.append({"name": name, "image": image})
+        for li in row.select("td.ingredients li"):
+            span_i = li.select_one("span.i")
+            if not span_i:
+                continue
+            name, image = _parse_item_span(span_i)
+            if not name:
+                continue
+            entry: dict = {"name": name, "image": image}
+            amount_el = li.select_one("span.am")
+            amount = _clean_text(amount_el.get_text()) if amount_el else ""
+            if amount and amount not in ("1", ""):
+                entry["amount"] = amount
+            ingredients.append(entry)
 
-        result_el = row.select_one("td.result span.i")
-        result_name, result_image = "", ""
-        if result_el:
-            result_name, result_image = _parse_item_span(result_el)
+        result_el = row.select_one("td.result")
+        result = _parse_recipe_entry(result_el) if result_el else {"name": "", "image": ""}
+        if not result.get("name"):
+            result["name"] = item["name"]
+        if not result.get("image"):
+            result["image"] = item["image"]
 
         item["recipe"] = {
             "station": station,
             "ingredients": ingredients,
-            "result": {"name": result_name or item["name"], "image": result_image or item["image"]},
+            "result": result,
         }
         break
 
@@ -845,6 +967,8 @@ def _collect_image_urls(item: dict) -> dict[str, str]:
     if item.get("image"):
         fn = item["image"]
         urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    for stat in item.get("stats", []):
+        urls.update(_collect_segment_image_urls(stat))
     recipe = item.get("recipe")
     if recipe:
         for ing in recipe.get("ingredients", []):

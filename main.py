@@ -35,6 +35,7 @@ _COIN_DIR = os.path.join(_PLUGIN_DIR, "assets", "coins")
 _ICON_DIR = os.path.join(_PLUGIN_DIR, "assets", "icons")
 _COIN_ICON_SIZE = (18, 18)
 _BOOL_ICON_SIZE = (20, 20)
+_INLINE_ICON_SIZE = (18, 16)
 _BUNDLED_FONT_CANDIDATES = (
     os.path.join(_FONT_DIR, "NotoSansSC-Bold.otf"),
     os.path.join(_FONT_DIR, "NotoSansSC-Regular.otf"),
@@ -205,6 +206,114 @@ def _load_bool_icon(kind: str) -> Image.Image | None:
     return _load_image(os.path.join(_ICON_DIR, f"{kind}.png"), _BOOL_ICON_SIZE)
 
 
+def _load_inline_icon(filename: str) -> Image.Image | None:
+    return _load_image(_image_path(filename), _INLINE_ICON_SIZE)
+
+
+def _recipe_item_label(entry: dict) -> str:
+    name = entry.get("name", "")
+    amount = entry.get("amount")
+    if amount and str(amount) not in ("1", ""):
+        return f"{name}×{amount}"
+    return name
+
+
+def _layout_rich_segments(
+    draw: ImageDraw.ImageDraw,
+    segments: list[dict],
+    font,
+    max_width: int,
+) -> list[list[tuple[str, str]]]:
+    lines: list[list[tuple[str, str]]] = [[]]
+
+    def line_width(line: list[tuple[str, str]]) -> int:
+        width = 0
+        for kind, payload in line:
+            if kind == "text":
+                width += _text_width(draw, payload, font)
+            else:
+                img = _load_inline_icon(payload)
+                width += (img.width + 2) if img else 18
+        return width
+
+    for seg in segments:
+        if seg.get("type") == "text":
+            for ch in seg.get("text", ""):
+                if ch == "\n":
+                    lines.append([])
+                    continue
+                if lines[-1] and line_width(lines[-1]) + _text_width(draw, ch, font) > max_width:
+                    lines.append([])
+                if lines[-1] and lines[-1][-1][0] == "text":
+                    kind, payload = lines[-1][-1]
+                    lines[-1][-1] = (kind, payload + ch)
+                else:
+                    lines[-1].append(("text", ch))
+        elif seg.get("type") == "icon":
+            fn = seg.get("image", "")
+            img = _load_inline_icon(fn)
+            iw = (img.width + 2) if img else 18
+            if lines[-1] and line_width(lines[-1]) + iw > max_width:
+                lines.append([])
+            lines[-1].append(("icon", fn))
+    return [line for line in lines if line]
+
+
+def _rich_stat_height(
+    draw: ImageDraw.ImageDraw,
+    segments: list[dict],
+    font,
+    max_width: int,
+    extra: str,
+) -> int:
+    lines = _layout_rich_segments(draw, segments, font, max_width)
+    if extra:
+        extra_text = _format_stat_text("", extra)
+        if extra_text:
+            lines.extend(
+                [[("text", line)] for line in _wrap_text_lines(draw, extra_text, font, max_width)]
+            )
+    if not lines:
+        return 0
+    return max(STAT_MIN_ROW, len(lines) * STAT_LINE_HEIGHT + 6)
+
+
+def _draw_rich_stat_value(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    x: int,
+    y: int,
+    stat: dict,
+    font,
+    locale: str,
+) -> int:
+    label = stat.get("label", "")
+    segments = stat.get("segments", [])
+    extra = stat.get("extra", "")
+    max_width = CARD_WIDTH - CARD_PADDING - x
+    color = stat.get("color") if label in RARITY_LABELS else COLORS["value"]
+    lines = _layout_rich_segments(draw, segments, font, max_width)
+    if extra:
+        extra_text = _format_stat_text("", extra)
+        if extra_text:
+            for line in _wrap_text_lines(draw, extra_text, font, max_width):
+                lines.append([("text", line)])
+
+    for i, line in enumerate(lines):
+        cx = x
+        cy = y + i * STAT_LINE_HEIGHT
+        for kind, payload in line:
+            if kind == "text":
+                draw.text((cx, cy), payload, fill=color, font=font)
+                cx += _text_width(draw, payload, font)
+            else:
+                img = _load_inline_icon(payload)
+                if img:
+                    card.paste(img, (cx, cy + 2), img)
+                    cx += img.width + 2
+    return max(STAT_MIN_ROW, len(lines) * STAT_LINE_HEIGHT + 6)
+
+
 def _format_stat_text(value: str, extra: str) -> str:
     value = (value or "").strip()
     extra = (extra or "").strip()
@@ -287,6 +396,12 @@ def _stat_value_height(
     if bool_icon:
         return STAT_MIN_ROW
 
+    if stat.get("segments"):
+        max_width = CARD_WIDTH - CARD_PADDING - x
+        return _rich_stat_height(
+            draw, stat.get("segments", []), font, max_width, stat.get("extra", "")
+        )
+
     v_text = _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
     if not v_text:
         return 0
@@ -327,6 +442,9 @@ def _draw_stat_value(
         if icon_img:
             card.paste(icon_img, (x, y + 2), icon_img)
         return STAT_MIN_ROW
+
+    if stat.get("segments"):
+        return _draw_rich_stat_value(draw, card, x, y, stat, font, locale)
 
     v_text = _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
     if not v_text:
@@ -622,8 +740,10 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
         station = recipe.get("station", "")
         if station:
             lines.append(f"  {ui['station']} {station}")
-        ings = " + ".join(ing.get("name", "") for ing in recipe.get("ingredients", []))
-        result = recipe.get("result", {}).get("name", data.get("name", ""))
+        ings = " + ".join(_recipe_item_label(ing) for ing in recipe.get("ingredients", []))
+        result = _recipe_item_label(recipe.get("result", {}) or {})
+        if not result:
+            result = data.get("name", "")
         if ings:
             lines.append(f"  {ings} → {result}")
 
@@ -664,6 +784,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         or s.get("extra")
         or s.get("coins")
         or s.get("bool_icon")
+        or s.get("segments")
         or resolve_bool_icon(s)
     ]
     recipe = data.get("recipe")
@@ -786,7 +907,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
                 row_items = ingredients[i : i + 4]
                 x_pos = ing_start_x
                 for ing in row_items:
-                    ing_name = ing.get("name", "")
+                    ing_name = _recipe_item_label(ing)
                     ing_img = _load_image(
                         _image_path(ing.get("image", "")), ING_ICON_SLOT
                     )
@@ -805,7 +926,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
                 y += ing_row_h
 
         result = recipe.get("result", {})
-        result_name = result.get("name", data.get("name", ""))
+        result_name = _recipe_item_label(result) or data.get("name", "")
         result_img = _load_image(_image_path(result.get("image", "")), ING_ICON_SLOT)
         draw.text((CARD_PADDING + 20, y), ui["result"], fill=COLORS["accent"], font=font_body)
         rx = CARD_PADDING + 100
@@ -826,7 +947,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v10_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v11_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

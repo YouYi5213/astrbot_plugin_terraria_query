@@ -3,10 +3,10 @@
 ================================
 一次性运行，从 terraria.wiki.gg 中文 Wiki 爬取物品数据并保存到本地。
 
-用法（请在 AstrBot 根目录下运行，数据会写入 data/terraria_query/）:
-    cd /path/to/AstrBot
-    python data/plugins/astrbot_plugin_terraria_query/prepare_data.py
-    python data/plugins/astrbot_plugin_terraria_query/prepare_data.py --limit 20
+用法:
+    python prepare_data.py              # 增量更新，仅抓取新增物品
+    python prepare_data.py --limit 20   # 调试：仅处理前 20 个新页面
+    python prepare_data.py --force      # 全量重建（覆盖已有数据）
 """
 
 from __future__ import annotations
@@ -24,7 +24,8 @@ from bs4 import BeautifulSoup
 
 WIKI_BASE = "https://terraria.wiki.gg/zh"
 API_URL = f"{WIKI_BASE}/api.php"
-DATA_DIR = os.path.join(os.getcwd(), "data", "terraria_query")
+_PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(_PLUGIN_DIR, "data", "terraria_query")
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
 ITEMS_JSON = os.path.join(DATA_DIR, "items.json")
 
@@ -269,8 +270,24 @@ def _collect_image_urls(item: dict) -> dict[str, str]:
     return urls
 
 
-async def main(limit: int | None = None) -> None:
+def _load_existing_items() -> dict[str, dict]:
+    if not os.path.exists(ITEMS_JSON):
+        return {}
+    try:
+        with open(ITEMS_JSON, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+async def main(limit: int | None = None, force: bool = False) -> None:
     os.makedirs(IMAGES_DIR, exist_ok=True)
+
+    items: dict[str, dict] = {} if force else _load_existing_items()
+    if force:
+        print("全量模式：将重新抓取所有物品", flush=True)
+    else:
+        print(f"增量模式：已有 {len(items)} 个物品，跳过已存在的", flush=True)
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -284,12 +301,14 @@ async def main(limit: int | None = None) -> None:
             await asyncio.sleep(0.3)
 
         title_list = sorted(all_titles)
+        if not force:
+            title_list = [t for t in title_list if t not in items]
         if limit:
             title_list = title_list[:limit]
         print(f"共 {len(title_list)} 个待处理页面", flush=True)
 
-        items: dict[str, dict] = {}
         image_urls: dict[str, str] = {}
+        new_count = 0
 
         for i, title in enumerate(title_list, 1):
             html = await fetch_page_html(session, title)
@@ -299,13 +318,16 @@ async def main(limit: int | None = None) -> None:
             if not item:
                 continue
             name = item["name"]
+            if not force and name in items:
+                continue
             items[name] = item
             image_urls.update(_collect_image_urls(item))
+            new_count += 1
             if i % 50 == 0 or i == len(title_list):
-                print(f"  已解析 {i}/{len(title_list)}，有效物品 {len(items)}", flush=True)
+                print(f"  已扫描 {i}/{len(title_list)}，本次新增 {new_count}，总计 {len(items)}", flush=True)
             await asyncio.sleep(0.15)
 
-        print(f"正在下载 {len(image_urls)} 张图片...", flush=True)
+        print(f"正在下载 {len(image_urls)} 张新图片...", flush=True)
         semaphore = asyncio.Semaphore(8)
         tasks = [
             download_image(session, fn, url, semaphore)
@@ -323,9 +345,10 @@ async def main(limit: int | None = None) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="准备泰拉瑞亚 Wiki 离线数据")
     parser.add_argument("--limit", type=int, default=None, help="仅处理前 N 个页面（调试用）")
+    parser.add_argument("--force", action="store_true", help="全量重建，覆盖已有数据")
     args = parser.parse_args()
     try:
-        asyncio.run(main(limit=args.limit))
+        asyncio.run(main(limit=args.limit, force=args.force))
     except KeyboardInterrupt:
         print("\n已中断")
         sys.exit(1)

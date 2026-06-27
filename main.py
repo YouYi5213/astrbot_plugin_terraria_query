@@ -17,7 +17,21 @@ from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.star import Context, Star
 from astrbot.api import logger
 
-DATA_DIR = os.path.join(os.getcwd(), "data", "terraria_query")
+_PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+def _resolve_data_dir() -> str:
+    candidates = [
+        os.path.join(_PLUGIN_DIR, "data", "terraria_query"),
+        os.path.join(os.getcwd(), "data", "terraria_query"),
+    ]
+    for d in candidates:
+        if os.path.exists(os.path.join(d, "items.json")):
+            return d
+    return candidates[0]
+
+
+DATA_DIR = _resolve_data_dir()
 ITEMS_JSON = os.path.join(DATA_DIR, "items.json")
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
 CARDS_DIR = os.path.join(DATA_DIR, "cards")
@@ -265,8 +279,7 @@ class TerrariaQueryPlugin(Star):
         if not self.items:
             yield event.plain_result(
                 "❌ 离线数据尚未准备。\n"
-                "请在 AstrBot 工作目录下运行:\n"
-                "  python data/plugins/astrbot_plugin_terraria_query/prepare_data.py"
+                "请运行插件目录下的 prepare_data.py 生成数据，或从仓库拉取已包含的 data/ 目录。"
             )
             return
 

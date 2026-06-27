@@ -17,11 +17,13 @@
 pip install -r requirements.txt
 ```
 
-3. 在 **AstrBot 根目录** 运行数据准备脚本（仅需一次）：
+3. 插件已自带 `data/terraria_query/` 离线数据，克隆后可直接使用；如需更新 Wiki 数据，在插件目录运行：
 
 ```bash
-python data/plugins/astrbot_plugin_terraria_query/prepare_data.py
+python prepare_data.py
 ```
+
+默认**增量更新**，仅抓取新增物品，已有数据不会重复处理。
 
 4. 在 AstrBot WebUI 重载插件
 

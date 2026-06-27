@@ -1,7 +1,7 @@
 name: astrbot_plugin_terraria_query
 display_name: 泰拉瑞亚查询
 desc: 泰拉瑞亚 Wiki 离线查询插件 — 输入物品名称，返回面板数据和合成配方图片
-version: 1.2.0
+version: 1.2.1
 author: Hermes Agent
 repo: https://github.com/YouYi5213/astrbot_plugin_terraria_query
 short_desc: 泰拉瑞亚物品离线查询，支持中英文模糊匹配与图片展示

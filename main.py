@@ -25,6 +25,7 @@ from .prepare_data import update_wiki_data
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 _FONT_DIR = os.path.join(_PLUGIN_DIR, "assets", "fonts")
 _BUNDLED_FONT_CANDIDATES = (
+    os.path.join(_FONT_DIR, "NotoSansSC-Bold.otf"),
     os.path.join(_FONT_DIR, "NotoSansSC-Regular.otf"),
     os.path.join(_FONT_DIR, "NotoSansSC-Regular.ttf"),
     os.path.join(_FONT_DIR, "wqy-microhei.ttc"),
@@ -38,16 +39,21 @@ def _resolve_font_path() -> str | None:
     if _RESOLVED_FONT_PATH is not None:
         return _RESOLVED_FONT_PATH or None
 
-    candidates = list(_BUNDLED_FONT_CANDIDATES) + [
-        "C:/Windows/Fonts/msyh.ttc",
+    candidates = [
         "C:/Windows/Fonts/msyhbd.ttc",
+        "C:/Windows/Fonts/msyh.ttc",
+        *list(_BUNDLED_FONT_CANDIDATES),
         "C:/Windows/Fonts/simsun.ttc",
         "C:/Windows/Fonts/simhei.ttf",
         "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
         "/usr/share/fonts/wqy-microhei/wqy-microhei.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/google-noto-cjk/NotoSansCJK-Bold.ttc",
         "/usr/share/fonts/google-noto-cjk/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/noto-cjk/NotoSansCJK-Bold.ttc",
         "/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc",
     ]
     for path in candidates:
@@ -310,7 +316,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     if recipe:
         recipe_area = 80
         ing_count = len(recipe.get("ingredients", []))
-        recipe_area += max(1, (ing_count + 3) // 4) * 60 + 30
+        recipe_area += max(1, (ing_count + 3) // 4) * 36 + 44
 
     total_height = title_area + stats_area + sep_area + recipe_area + CARD_PADDING * 2
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
@@ -376,11 +382,15 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
 
         ingredients = recipe.get("ingredients", [])
         if ingredients:
-            draw.text((CARD_PADDING + 20, y), ui["materials"], fill=COLORS["label"], font=font_small)
-            y += 5
+            mat_x = CARD_PADDING + 20
+            draw.text((mat_x, y), ui["materials"], fill=COLORS["label"], font=font_small)
+            mat_bbox = draw.textbbox((mat_x, y), ui["materials"], font=font_small)
+            y += mat_bbox[3] - mat_bbox[1] + 10
+            ing_start_x = CARD_PADDING + 36
+            ing_row_h = 36
             for i in range(0, len(ingredients), 4):
                 row_items = ingredients[i : i + 4]
-                x_pos = CARD_PADDING + 20
+                x_pos = ing_start_x
                 for ing in row_items:
                     ing_name = ing.get("name", "")
                     ing_img = _load_image(_image_path(ing.get("image", "")), (28, 28))
@@ -389,7 +399,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
                     draw.text((x_pos + 32, y + 2), ing_name, fill=COLORS["text"], font=font_small)
                     bbox = draw.textbbox((0, 0), ing_name, font=font_small)
                     x_pos += 32 + (bbox[2] - bbox[0]) + 15
-                y += 35
+                y += ing_row_h
 
         result = recipe.get("result", {})
         result_name = result.get("name", data.get("name", ""))
@@ -402,7 +412,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v2_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

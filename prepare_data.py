@@ -85,52 +85,68 @@ SELL_LABELS = frozenset({"卖出", "Sell"})
 BUY_LABELS = frozenset({"买入", "Buy"})
 COIN_STAT_LABELS = SELL_LABELS | BUY_LABELS
 
-RARITY_SORTKEY_HEX = {
-    "00*": "#b8b8b8",
-    "01*": "#ffffff",
-    "02*": "#5a9cff",
-    "03*": "#55dd55",
-    "04*": "#ffaa44",
-    "05*": "#ff7777",
-    "06*": "#ff88bb",
-    "07*": "#cc88ff",
-    "08*": "#aa55ff",
-    "09*": "#dd66ff",
-    "10*": "#ff5050",
-    "11*": "#ffff66",
-    "12*": "#88ff88",
+# Wiki 稀有度：sortkey「NN*」= 稀有度级别 N；显示名称/颜色以页面链接 title 为准
+#（如 08* → Yellow/黄色）。翅膀对比表与普通物品 infobox 使用同一套规则。
+RARITY_SORTKEY_EN = {
+    "00*": "White",
+    "01*": "Blue",
+    "02*": "Blue",
+    "03*": "Green",
+    "04*": "Light Red",
+    "05*": "Pink",
+    "06*": "Pink",
+    "07*": "Lime",
+    "08*": "Yellow",
+    "09*": "Cyan",
+    "10*": "Red",
+    "11*": "Yellow",
+    "12*": "Rainbow",
+}
+
+RARITY_EN_TO_ZH = {
+    "Gray": "灰色",
+    "White": "白色",
+    "Blue": "蓝色",
+    "Green": "绿色",
+    "Orange": "橙色",
+    "Light Red": "浅红色",
+    "Pink": "粉红色",
+    "Light Purple": "浅紫色",
+    "Purple": "紫色",
+    "Lime": "淡紫色",
+    "Violet": "淡紫色",
+    "Red": "红色",
+    "Yellow": "黄色",
+    "Cyan": "渐变色",
+    "Rainbow": "彩虹",
+    "Gradient": "渐变色",
+}
+
+RARITY_EN_TO_HEX = {
+    "Gray": "#b8b8b8",
+    "White": "#ffffff",
+    "Blue": "#5a9cff",
+    "Green": "#55dd55",
+    "Orange": "#ffaa44",
+    "Light Red": "#ff7777",
+    "Pink": "#ff88bb",
+    "Light Purple": "#cc88ff",
+    "Purple": "#aa55ff",
+    "Lime": "#dd66ff",
+    "Violet": "#dd66ff",
+    "Red": "#ff5050",
+    "Yellow": "#ffff66",
+    "Cyan": "#88ff88",
+    "Rainbow": "#88ff88",
+    "Gradient": "#88ff88",
 }
 
 RARITY_SORTKEY_ZH = {
-    "00*": "灰色",
-    "01*": "白色",
-    "02*": "蓝色",
-    "03*": "绿色",
-    "04*": "橙色",
-    "05*": "浅红色",
-    "06*": "粉红色",
-    "07*": "浅紫色",
-    "08*": "紫色",
-    "09*": "淡紫色",
-    "10*": "红色",
-    "11*": "黄色",
-    "12*": "渐变色",
+    sk: RARITY_EN_TO_ZH.get(en, en) for sk, en in RARITY_SORTKEY_EN.items()
 }
 
-RARITY_SORTKEY_EN = {
-    "00*": "Gray",
-    "01*": "White",
-    "02*": "Blue",
-    "03*": "Green",
-    "04*": "Orange",
-    "05*": "Light Red",
-    "06*": "Pink",
-    "07*": "Light Purple",
-    "08*": "Purple",
-    "09*": "Violet",
-    "10*": "Red",
-    "11*": "Yellow",
-    "12*": "Gradient",
+RARITY_SORTKEY_HEX = {
+    sk: RARITY_EN_TO_HEX.get(en, "#ffffff") for sk, en in RARITY_SORTKEY_EN.items()
 }
 
 COIN_SPECS = {
@@ -151,23 +167,6 @@ def _extract_rarity_sortkey(td) -> str:
     return ""
 
 
-RARITY_EN_TO_ZH = {
-    "Gray": "灰色",
-    "White": "白色",
-    "Blue": "蓝色",
-    "Green": "绿色",
-    "Orange": "橙色",
-    "Light Red": "浅红色",
-    "Pink": "粉红色",
-    "Light Purple": "浅紫色",
-    "Purple": "紫色",
-    "Lime": "淡紫色",
-    "Red": "红色",
-    "Yellow": "黄色",
-    "Cyan": "渐变色",
-}
-
-
 def _extract_rarity_name_from_title(title: str) -> str:
     if not title:
         return ""
@@ -176,22 +175,26 @@ def _extract_rarity_name_from_title(title: str) -> str:
 
 
 def _parse_rarity_stat(td, label: str) -> dict:
+    """解析稀有度。翅膀对比表与物品 infobox 结构相同，均优先采用链接 title。"""
     sortkey = _extract_rarity_sortkey(td)
     link = td.select_one(".rarity a") or td.select_one("a")
     title = link.get("title", "") if link else ""
     en_name = _extract_rarity_name_from_title(title)
     if label == "稀有度":
-        display = RARITY_SORTKEY_ZH.get(sortkey) or RARITY_EN_TO_ZH.get(
-            en_name, en_name or sortkey
+        display = RARITY_EN_TO_ZH.get(en_name) or RARITY_SORTKEY_ZH.get(
+            sortkey, en_name or sortkey
         )
     else:
         display = en_name or RARITY_SORTKEY_EN.get(sortkey, sortkey)
+    color = RARITY_EN_TO_HEX.get(en_name) or RARITY_SORTKEY_HEX.get(
+        sortkey, "#ffffff"
+    )
     return {
         "label": label,
         "value": display or _clean_text(td.get_text()),
         "extra": "",
         "sortkey": sortkey,
-        "color": RARITY_SORTKEY_HEX.get(sortkey, "#ffffff"),
+        "color": color,
     }
 
 

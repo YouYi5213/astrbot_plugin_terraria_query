@@ -1230,7 +1230,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v16_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v17_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

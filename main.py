@@ -927,6 +927,7 @@ _CARD_UI = {
         "result": "→ 产物:",
         "unknown": "未知物品",
         "recipe_title": "📜 合成配方",
+        "set_pieces": "▎套装部件",
     },
     "en": {
         "description": "▎Description",
@@ -941,6 +942,7 @@ _CARD_UI = {
         "result": "→ Result:",
         "unknown": "Unknown Item",
         "recipe_title": "📜 Recipe",
+        "set_pieces": "▎Set pieces",
     },
 }
 
@@ -1022,6 +1024,8 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
             "drops": en.get("drops"),
             "description": en.get("description") or item.get("description"),
             "description_rich": en.get("description_rich") or item.get("description_rich"),
+            "set_pieces": en.get("set_pieces") or item.get("set_pieces"),
+            "page_type": en.get("page_type") or item.get("page_type"),
         }
     rich = item.get("description_rich")
     return {
@@ -1032,6 +1036,8 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
         "drops": item.get("drops"),
         "description": item.get("description"),
         "description_rich": rich,
+        "set_pieces": item.get("set_pieces"),
+        "page_type": item.get("page_type"),
     }
 
 
@@ -1112,6 +1118,196 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
     return "\n".join(lines)
 
 
+def _visible_stats(stats: list[dict]) -> list[dict]:
+    return [
+        s
+        for s in stats
+        if s.get("value")
+        or s.get("extra")
+        or s.get("coins")
+        or s.get("bool_icon")
+        or s.get("segments")
+        or resolve_bool_icon(s)
+    ]
+
+
+def _calc_recipe_block_height(
+    measure,
+    recipe: dict,
+    font_small,
+    ui: dict,
+) -> int:
+    if not recipe:
+        return 0
+    height = 30
+    station = recipe.get("station", "")
+    if station:
+        station_text = f"{ui['station']} {station}"
+        station_lines = _wrap_text_lines(
+            measure,
+            station_text,
+            font_small,
+            CARD_WIDTH - CARD_PADDING * 2 - 40,
+        )
+        height += len(station_lines) * 18 + 10
+    ing_count = len(recipe.get("ingredients", []))
+    if ing_count:
+        ing_start_x = CARD_PADDING + 36
+        ing_max_x = CARD_WIDTH - CARD_PADDING - 10
+        height += (
+            _recipe_ingredients_height(
+                measure, recipe.get("ingredients", []), font_small, ing_start_x, ing_max_x
+            )
+            + 44
+        )
+    else:
+        height += 44
+    return height
+
+
+def _draw_recipe_block(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    recipe: dict,
+    font_header,
+    font_body,
+    font_small,
+    ui: dict,
+) -> int:
+    draw.text((CARD_PADDING + 10, y), ui["recipe"], fill=COLORS["accent"], font=font_header)
+    y += 30
+
+    station = recipe.get("station", "")
+    if station:
+        station_text = f"{ui['station']} {station}"
+        station_x = CARD_PADDING + 20
+        station_max_w = CARD_WIDTH - CARD_PADDING * 2 - 40
+        for line in _wrap_text_lines(draw, station_text, font_small, station_max_w):
+            draw.text((station_x, y), line, fill=COLORS["label"], font=font_small)
+            y += 18
+        y += 4
+
+    ingredients = recipe.get("ingredients", [])
+    if ingredients:
+        mat_x = CARD_PADDING + 20
+        draw.text((mat_x, y), ui["materials"], fill=COLORS["label"], font=font_small)
+        mat_bbox = draw.textbbox((mat_x, y), ui["materials"], font=font_small)
+        y += mat_bbox[3] - mat_bbox[1] + 10
+        ing_start_x = CARD_PADDING + 36
+        ing_max_x = CARD_WIDTH - CARD_PADDING - 10
+        ing_row_h = 36
+        for row_items in _layout_ingredient_rows(
+            draw, ingredients, font_small, ing_start_x, ing_max_x
+        ):
+            x_pos = ing_start_x
+            for ing in row_items:
+                ing_name = _recipe_item_label(ing)
+                ing_img = _load_image(_image_path(ing.get("image", "")), ING_ICON_SLOT)
+                if ing_img:
+                    _paste_in_slot(card, ing_img, x_pos, y, ING_ICON_SLOT[0], ing_row_h)
+                draw.text(
+                    (x_pos + ING_ICON_SLOT[0] + 4, y + 2),
+                    ing_name,
+                    fill=COLORS["text"],
+                    font=font_small,
+                )
+                x_pos += _ingredient_item_width(draw, ing, font_small)
+            y += ing_row_h
+
+    result = recipe.get("result", {}) or {}
+    result_name = _recipe_item_label(result)
+    result_img = _load_image(_image_path(result.get("image", "")), ING_ICON_SLOT)
+    draw.text((CARD_PADDING + 20, y), ui["result"], fill=COLORS["accent"], font=font_body)
+    rx = CARD_PADDING + 100
+    if result_img:
+        _paste_in_slot(card, result_img, rx, y, ING_ICON_SLOT[0], ING_ICON_SLOT[1])
+        rx += ING_ICON_SLOT[0] + 4
+    draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
+    return y + 36
+
+
+def _calc_set_pieces_area(
+    measure,
+    set_pieces: list[dict],
+    font_header,
+    font_body,
+    font_small,
+    ui: dict,
+    locale: str,
+) -> int:
+    if not set_pieces:
+        return 0
+    area = 20
+    for piece in set_pieces:
+        area += 42
+        pstats = _visible_stats(piece.get("stats", []))
+        stat_value_x = _stat_value_x(measure, pstats, font_body)
+        for stat in pstats:
+            area += _stat_value_height(
+                measure, None, stat_value_x, stat, font_body, locale
+            )
+        area += 8
+        if piece.get("recipe"):
+            area += _calc_recipe_block_height(measure, piece["recipe"], font_small, ui)
+        area += 16
+    return area
+
+
+def _draw_set_pieces_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    set_pieces: list[dict],
+    font_header,
+    font_body,
+    font_small,
+    ui: dict,
+    locale: str,
+) -> int:
+    draw.text((CARD_PADDING + 10, y), ui["set_pieces"], fill=COLORS["accent"], font=font_header)
+    y += 30
+
+    for piece in set_pieces:
+        piece_img = _load_image(_image_path(piece.get("image", "")), ING_ICON_SLOT)
+        px = CARD_PADDING + 16
+        if piece_img:
+            _paste_in_slot(card, piece_img, px, y, ING_ICON_SLOT[0], ING_ICON_SLOT[1])
+            text_x = px + ING_ICON_SLOT[0] + 8
+        else:
+            text_x = px
+        draw.text(
+            (text_x, y + 4),
+            piece.get("name", ""),
+            fill=COLORS["title"],
+            font=font_body,
+        )
+        y += 40
+
+        pstats = _visible_stats(piece.get("stats", []))
+        stat_value_x = _stat_value_x(draw, pstats, font_body)
+        for stat in pstats:
+            label = stat.get("label", "")
+            _draw_stat_label(draw, label, y, font_body, stat_value_x)
+            row_h = _draw_stat_value(draw, card, stat_value_x, y, stat, font_body, locale)
+            y += row_h
+
+        y += 6
+        if piece.get("recipe"):
+            y = _draw_recipe_block(
+                draw, card, y, piece["recipe"], font_header, font_body, font_small, ui
+            )
+
+        draw.line(
+            [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+            fill=COLORS["separator"],
+            width=1,
+        )
+        y += 16
+
+    return y
+
+
 def _generate_item_card(data: dict, locale: str = "zh") -> str:
     _ensure_dirs()
     ui = _CARD_UI.get(locale, _CARD_UI["zh"])
@@ -1131,7 +1327,8 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         or s.get("segments")
         or resolve_bool_icon(s)
     ]
-    recipe = data.get("recipe")
+    set_pieces = data.get("set_pieces") or []
+    recipe = data.get("recipe") if not set_pieces else None
     drops = data.get("drops")
     description_rich = _resolve_description_rich(data)
 
@@ -1151,38 +1348,29 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     sep_area = 30
     recipe_area = 0
     if recipe:
-        recipe_area = 80
-        station = recipe.get("station", "")
-        if station:
-            station_text = f"{ui['station']} {station}"
-            station_lines = _wrap_text_lines(
-                measure,
-                station_text,
-                font_small,
-                CARD_WIDTH - CARD_PADDING * 2 - 40,
-            )
-            recipe_area += len(station_lines) * 18 + 10
-        ing_count = len(recipe.get("ingredients", []))
-        if ing_count:
-            ing_start_x = CARD_PADDING + 36
-            ing_max_x = CARD_WIDTH - CARD_PADDING - 10
-            recipe_area += (
-                _recipe_ingredients_height(
-                    measure, recipe.get("ingredients", []), font_small, ing_start_x, ing_max_x
-                )
-                + 44
-            )
-        else:
-            recipe_area += 44
+        recipe_area = _calc_recipe_block_height(measure, recipe, font_small, ui)
 
     drops_area = 0
     if drops:
         drops_area = 20 + _calc_drops_area(drops, locale)
-        if recipe:
+        if recipe or set_pieces:
             drops_area += 20
 
+    pieces_area = 0
+    if set_pieces:
+        pieces_area = _calc_set_pieces_area(
+            measure, set_pieces, font_header, font_body, font_small, ui, locale
+        )
+
     total_height = (
-        title_area + desc_area + stats_area + sep_area + recipe_area + drops_area + CARD_PADDING * 2
+        title_area
+        + desc_area
+        + stats_area
+        + sep_area
+        + pieces_area
+        + recipe_area
+        + drops_area
+        + CARD_PADDING * 2
     )
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
@@ -1245,73 +1433,18 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     )
     y += 20
 
+    if set_pieces:
+        y = _draw_set_pieces_section(
+            draw, card, y, set_pieces, font_header, font_body, font_small, ui, locale
+        )
+
     if recipe:
-        draw.text((CARD_PADDING + 10, y), ui["recipe"], fill=COLORS["accent"], font=font_header)
-        y += 30
-
-        station = recipe.get("station", "")
-        if station:
-            station_text = f"{ui['station']} {station}"
-            station_x = CARD_PADDING + 20
-            station_max_w = CARD_WIDTH - CARD_PADDING * 2 - 40
-            station_lines = _wrap_text_lines(
-                draw, station_text, font_small, station_max_w
-            )
-            for line in station_lines:
-                draw.text(
-                    (station_x, y),
-                    line,
-                    fill=COLORS["label"],
-                    font=font_small,
-                )
-                y += 18
-            y += 4
-
-        ingredients = recipe.get("ingredients", [])
-        if ingredients:
-            mat_x = CARD_PADDING + 20
-            draw.text((mat_x, y), ui["materials"], fill=COLORS["label"], font=font_small)
-            mat_bbox = draw.textbbox((mat_x, y), ui["materials"], font=font_small)
-            y += mat_bbox[3] - mat_bbox[1] + 10
-            ing_start_x = CARD_PADDING + 36
-            ing_max_x = CARD_WIDTH - CARD_PADDING - 10
-            ing_row_h = 36
-            ing_rows = _layout_ingredient_rows(
-                draw, ingredients, font_small, ing_start_x, ing_max_x
-            )
-            for row_items in ing_rows:
-                x_pos = ing_start_x
-                for ing in row_items:
-                    ing_name = _recipe_item_label(ing)
-                    ing_img = _load_image(
-                        _image_path(ing.get("image", "")), ING_ICON_SLOT
-                    )
-                    if ing_img:
-                        _paste_in_slot(
-                            card, ing_img, x_pos, y, ING_ICON_SLOT[0], ing_row_h
-                        )
-                    draw.text(
-                        (x_pos + ING_ICON_SLOT[0] + 4, y + 2),
-                        ing_name,
-                        fill=COLORS["text"],
-                        font=font_small,
-                    )
-                    x_pos += _ingredient_item_width(draw, ing, font_small)
-                y += ing_row_h
-
-        result = recipe.get("result", {})
-        result_name = _recipe_item_label(result) or data.get("name", "")
-        result_img = _load_image(_image_path(result.get("image", "")), ING_ICON_SLOT)
-        draw.text((CARD_PADDING + 20, y), ui["result"], fill=COLORS["accent"], font=font_body)
-        rx = CARD_PADDING + 100
-        if result_img:
-            _paste_in_slot(card, result_img, rx, y, ING_ICON_SLOT[0], ING_ICON_SLOT[1])
-            rx += ING_ICON_SLOT[0] + 4
-        draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
-        y += 36
+        y = _draw_recipe_block(
+            draw, card, y, recipe, font_header, font_body, font_small, ui
+        )
 
     if drops:
-        if recipe:
+        if recipe or set_pieces:
             draw.line(
                 [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
                 fill=COLORS["separator"],
@@ -1321,7 +1454,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v18_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v19_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

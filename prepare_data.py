@@ -670,6 +670,10 @@ def _parse_recipe_entry(cell) -> dict:
         name, image = _parse_item_span(span_i)
     amount_el = cell.select_one("span.am")
     amount = _clean_text(amount_el.get_text()) if amount_el else ""
+    if not name:
+        sort_val = cell.get("data-sort-value")
+        if sort_val:
+            name = _clean_text(sort_val)
     entry: dict = {"name": name, "image": image}
     if amount and amount not in ("1", ""):
         entry["amount"] = amount
@@ -683,6 +687,12 @@ def _parse_item_span(span) -> tuple[str, str]:
     name = ""
     if link:
         name = _clean_text(link.get("title") or link.get_text())
+    elif img and img.get("title"):
+        name = _clean_text(img.get("title"))
+    if not name:
+        title_el = span.select_one("[title]")
+        if title_el:
+            name = _clean_text(title_el.get("title") or title_el.get_text())
     image = _filename_from_url(_image_url_from_src(img["src"])) if img and img.get("src") else ""
     return name, image
 
@@ -1015,6 +1025,266 @@ def parse_description_from_soup(soup: BeautifulSoup) -> dict | None:
     }
 
 
+_STOP_SET_SECTION_IDS = frozenset(
+    {
+        "配方",
+        "Recipes",
+        "Crafting",
+        "制作",
+        "来源",
+        "From",
+        "历史",
+        "History",
+        "成就",
+        "Achievements",
+        "物品掉落",
+        "Item_drop",
+    }
+)
+
+
+def _is_armor_set_item(item: dict) -> bool:
+    for stat in item.get("stats", []):
+        if stat.get("label") not in ("类型", "Type"):
+            continue
+        val = stat.get("value", "")
+        if "盔甲套装" in val or "Armor Set" in val:
+            return True
+    return False
+
+
+def parse_piece_infobox(infobox: Tag, fallback_name: str = "") -> dict | None:
+    """解析套装面板中的单个部件 infobox"""
+    if not infobox:
+        return None
+
+    piece: dict = {
+        "name": fallback_name,
+        "image": "",
+        "stats": [],
+    }
+
+    title_el = infobox.select_one(".title")
+    if title_el:
+        piece["name"] = _clean_text(title_el.get_text())
+
+    img_el = infobox.select_one(".section.images img")
+    if img_el and img_el.get("src"):
+        piece["image"] = _filename_from_url(_image_url_from_src(img_el["src"]))
+
+    for row in infobox.select(".section.statistics table.stat tr"):
+        th, td = row.select_one("th"), row.select_one("td")
+        if not th or not td:
+            continue
+        label = _clean_text(th.get_text())
+        if label in RARITY_LABELS:
+            piece["stats"].append(_parse_rarity_stat(td, label))
+            continue
+        if label in COIN_STAT_LABELS:
+            piece["stats"].append(_parse_sell_stat(td, label))
+            continue
+        if not label:
+            continue
+        piece["stats"].append(_parse_generic_stat(td, label))
+
+    if not piece["name"]:
+        return None
+    return piece
+
+
+def _collect_set_piece_infoboxes(soup: BeautifulSoup) -> list[Tag]:
+    """收集 #套装 区块内的各部件 infobox"""
+    set_head = soup.select_one("h2 span#套装") or soup.select_one("h2 span#Set")
+    if not set_head:
+        return []
+
+    start_h2 = set_head.find_parent("h2")
+    if not start_h2:
+        return []
+
+    pieces: list[Tag] = []
+    in_helmet_section = False
+
+    for sib in start_h2.find_next_siblings():
+        if sib.name == "h2":
+            hid_el = sib.select_one("span.mw-headline")
+            if hid_el and hid_el.get("id") in _STOP_SET_SECTION_IDS:
+                break
+            continue
+
+        if sib.name == "h3":
+            hid_el = sib.select_one("span.mw-headline")
+            if hid_el and hid_el.get("id") in ("头盔种类", "Helmet_variants"):
+                in_helmet_section = True
+                for sib2 in sib.find_next_siblings():
+                    if sib2.name == "h2":
+                        hid2 = sib2.select_one("span.mw-headline")
+                        if hid2 and hid2.get("id") in _STOP_SET_SECTION_IDS:
+                            break
+                        continue
+                    if sib2.name == "h3":
+                        continue
+                    if sib2.name == "div" and "infobox-wrapper" in (sib2.get("class") or []):
+                        pieces.extend(sib2.select("div.infobox.item"))
+                break
+            continue
+
+        if in_helmet_section:
+            continue
+
+        if sib.name == "div" and "infobox-wrapper" in (sib.get("class") or []):
+            pieces.extend(sib.select("div.infobox.item"))
+
+    return pieces
+
+
+def _parse_recipe_row(row: Tag) -> dict | None:
+    station_el = row.select_one("td.station")
+    station = _clean_text(station_el.get_text()) if station_el else ""
+    station = re.sub(r"(?<=[a-zA-Z\)）])or(?=[A-Z])", " or ", station)
+
+    ingredients: list[dict] = []
+    for li in row.select("td.ingredients li"):
+        span_i = li.select_one("span.i")
+        if not span_i:
+            continue
+        name, image = _parse_item_span(span_i)
+        if not name:
+            continue
+        entry: dict = {"name": name, "image": image}
+        amount_el = li.select_one("span.am")
+        amount = _clean_text(amount_el.get_text()) if amount_el else ""
+        if amount and amount not in ("1", ""):
+            entry["amount"] = amount
+        ingredients.append(entry)
+
+    result_el = row.select_one("td.result")
+    result = _parse_recipe_entry(result_el) if result_el else {"name": "", "image": ""}
+    if not result.get("name") and not ingredients:
+        return None
+    return {"station": station, "ingredients": ingredients, "result": result}
+
+
+def parse_recipe_table(table: Tag) -> list[dict]:
+    """解析配方表的全部行"""
+    if table.select_one("caption"):
+        return []
+    rows = [tr for tr in table.select("tbody tr") if tr.get("data-rowid")]
+    recipes: list[dict] = []
+    last_station = ""
+    for row in rows:
+        parsed = _parse_recipe_row(row)
+        if not parsed:
+            continue
+        if parsed.get("station"):
+            last_station = parsed["station"]
+        elif last_station:
+            parsed["station"] = last_station
+        recipes.append(parsed)
+    return recipes
+
+
+def _attach_armor_set_pieces(soup: BeautifulSoup, item: dict) -> None:
+    """为盔甲套装页附加各部件数据，并匹配配方"""
+    infoboxes = _collect_set_piece_infoboxes(soup)
+    if not infoboxes:
+        return
+
+    recipes: list[dict] = []
+    for table in soup.select("table.terraria.cellborder.recipes"):
+        recipes = parse_recipe_table(table)
+        if recipes:
+            break
+
+    recipe_by_result: dict[str, dict] = {}
+    for recipe in recipes:
+        rname = recipe.get("result", {}).get("name", "")
+        if rname:
+            recipe_by_result[rname] = recipe
+
+    set_pieces: list[dict] = []
+    for ib in infoboxes:
+        piece = parse_piece_infobox(ib)
+        if not piece:
+            continue
+        pname = piece["name"]
+        if pname in recipe_by_result:
+            piece["recipe"] = recipe_by_result[pname]
+        set_pieces.append(piece)
+
+    if not set_pieces:
+        return
+
+    item["page_type"] = "armor_set"
+    item["set_pieces"] = set_pieces
+    item["recipe"] = None
+
+
+def _merge_armor_set_pieces(items: dict[str, dict], set_name: str, set_item: dict) -> int:
+    added = 0
+    for piece in set_item.get("set_pieces") or []:
+        pname = piece.get("name")
+        if not pname:
+            continue
+        existing = items.get(pname)
+        if existing and not existing.get("from_armor_set"):
+            continue
+        entry = {
+            "name": pname,
+            "image": piece.get("image", ""),
+            "stats": piece.get("stats", []),
+            "recipe": piece.get("recipe"),
+            "page_type": "armor_piece",
+            "from_armor_set": True,
+            "parent_set": set_name,
+        }
+        items[pname] = entry
+        added += 1
+    return added
+
+
+async def refresh_armor_sets(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+) -> int:
+    """刷新所有盔甲套装页的部件与配方数据"""
+    updated = 0
+    image_urls: dict[str, str] = {}
+
+    targets: list[tuple[str, str]] = []
+    for key, item in items.items():
+        if item.get("page_type") == "armor_set" or _is_armor_set_item(item):
+            title = item.get("wiki_title") or key
+            targets.append((key, title))
+
+    for key, title in targets:
+        html = await fetch_page_html(session, title)
+        if not html:
+            continue
+        parsed = parse_item_page(html, title)
+        if not parsed or not parsed.get("set_pieces"):
+            continue
+        parsed["wiki_title"] = title
+        items[key] = parsed
+        await attach_en_locale(session, parsed, title)
+        updated += 1
+        _merge_armor_set_pieces(items, key, parsed)
+        image_urls.update(_collect_image_urls(parsed))
+        for piece in parsed.get("set_pieces") or []:
+            image_urls.update(_collect_image_urls(piece))
+        await asyncio.sleep(0.12)
+
+    if updated and image_urls:
+        semaphore = asyncio.Semaphore(8)
+        await asyncio.gather(
+            *[
+                download_image(session, fn, url, semaphore)
+                for fn, url in image_urls.items()
+            ]
+        )
+    return updated
+
+
 def parse_item_page(html: str, fallback_name: str) -> dict | None:
     """解析物品页面 HTML，无有效 infobox 时返回 None"""
     soup = BeautifulSoup(html, "lxml")
@@ -1115,6 +1385,9 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
 
     _apply_overview_page_meta(item, fallback_name)
 
+    if _is_armor_set_item(item):
+        _attach_armor_set_pieces(soup, item)
+
     return item
 
 
@@ -1127,6 +1400,8 @@ def _extract_en_locale(en_item: dict, zh_item: dict) -> dict:
         "drops": en_item.get("drops"),
         "description": en_item.get("description"),
         "description_rich": en_item.get("description_rich"),
+        "set_pieces": en_item.get("set_pieces"),
+        "page_type": en_item.get("page_type"),
     }
 
 
@@ -1449,6 +1724,8 @@ def _collect_image_urls(item: dict) -> dict[str, str]:
     drops = item.get("drops")
     if drops:
         urls.update(_collect_drop_image_urls(drops))
+    for piece in item.get("set_pieces") or []:
+        urls.update(_collect_image_urls(piece))
     return urls
 
 
@@ -1795,6 +2072,8 @@ async def update_wiki_data(
                     continue
                 item["wiki_title"] = title
                 _apply_overview_page_meta(item, title)
+                if _is_armor_set_item(item):
+                    _merge_armor_set_pieces(items, name, item)
                 items[name] = item
                 await attach_en_locale(session, item, title)
                 image_urls.update(_collect_image_urls(item))
@@ -1816,6 +2095,8 @@ async def update_wiki_data(
                 images_ok = sum(1 for r in results if r)
 
             overview_count = await refresh_overview_pages(session, items)
+            armor_set_count = await refresh_armor_sets(session, items)
+            overview_count += armor_set_count
 
         effective_en_limit = en_limit if en_only else (100 if en_limit is None else en_limit)
         if not desc_only:

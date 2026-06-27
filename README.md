@@ -11,6 +11,8 @@
 - **盔甲/时装套装** — 分部件展示属性与配方（如寒霜盔甲、兔兔套装）
 - **套装部件** — 可单独查询（如 `泰拉 钛金面具` / `泰拉 Titanium Mask`）
 - **翅膀** — 支持总览页与按名称查询（如猪龙鱼之翼）
+- **坐骑召唤物** — 独立查询（如 `泰拉 虾松露` / `泰拉 Shrimpy Truffle`）
+- **宠物召唤物** — 独立查询（如 `泰拉 蚊子琥珀` / `泰拉 恐龙宝宝`）
 
 ## 安装
 
@@ -68,6 +70,10 @@ python prepare_data.py --refresh-sets
 
 # 仅移除 items.json 中的 en 数据块（保留 en_name 供英文搜索）
 python prepare_data.py --strip-en
+
+# 仅抓取坐骑 / 宠物召唤物
+python prepare_data.py --ingest-mounts
+python prepare_data.py --ingest-pets
 ```
 
 ## 数据来源

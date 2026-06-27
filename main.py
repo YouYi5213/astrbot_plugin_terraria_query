@@ -179,12 +179,14 @@ def _resolve_data_dir() -> str:
 
 DATA_DIR = _resolve_data_dir()
 ITEMS_JSON = os.path.join(DATA_DIR, "items.json")
+MOUNTS_JSON = os.path.join(DATA_DIR, "mounts.json")
+PETS_JSON = os.path.join(DATA_DIR, "pets.json")
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
 CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
 CARD_WIDTH = 600
 CARD_PADDING = 20
-CARD_VERSION = "v25"
+CARD_VERSION = "v27"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -197,6 +199,9 @@ DROP_COL_QTY = 300
 DROP_COL_CHANCE = 480
 ITEM_ICON_SLOT = (48, 48)
 ING_ICON_SLOT = (28, 28)
+BUFF_ICON_SLOT = (32, 32)
+MOUNT_PREVIEW_SLOT = (80, 72)
+PET_PREVIEW_SLOT = (80, 72)
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -675,6 +680,14 @@ def _text_width(draw: ImageDraw.ImageDraw, text: str, font) -> int:
     return bbox[2] - bbox[0]
 
 
+def _font_line_height(font) -> int:
+    try:
+        bbox = font.getbbox("Ag")
+        return max(bbox[3] - bbox[1], 16)
+    except Exception:
+        return 18
+
+
 def _wrap_text_lines(
     draw: ImageDraw.ImageDraw, text: str, font, max_width: int
 ) -> list[str]:
@@ -908,6 +921,153 @@ def _draw_drops_section(
     return y
 
 
+def _calc_buff_section_area(
+    measure: ImageDraw.ImageDraw,
+    buff: dict,
+    font_header,
+    font_body,
+    ui: dict,
+) -> int:
+    area = 20 + 30
+    name_h = max(BUFF_ICON_SLOT[1], _font_line_height(font_body))
+    area += name_h + 8
+    if buff.get("tooltip"):
+        stat_value_x = _stat_value_x(measure, [{"label": ui["buff_tooltip"]}], font_body)
+        area += _stat_value_height(
+            measure,
+            None,
+            stat_value_x,
+            {"label": ui["buff_tooltip"], "value": buff["tooltip"]},
+            font_body,
+            "zh",
+        )
+    return area
+
+
+def _draw_buff_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    buff: dict,
+    font_header,
+    font_body,
+    ui: dict,
+) -> int:
+    draw.text((CARD_PADDING + 10, y), ui["buff"], fill=COLORS["accent"], font=font_header)
+    y += 30
+
+    icon_x = CARD_PADDING + 10
+    buff_img = _load_item_image(buff.get("image", ""), BUFF_ICON_SLOT)
+    row_h = max(BUFF_ICON_SLOT[1], _font_line_height(font_body))
+    if buff_img:
+        _paste_in_slot(card, buff_img, icon_x, y, BUFF_ICON_SLOT[0], row_h)
+    text_x = icon_x + BUFF_ICON_SLOT[0] + 8
+    draw.text((text_x, y + 2), buff.get("name", ""), fill=COLORS["text"], font=font_body)
+    y += row_h + 8
+
+    tooltip = buff.get("tooltip", "")
+    if tooltip:
+        stat_value_x = _stat_value_x(draw, [{"label": ui["buff_tooltip"]}], font_body)
+        _draw_stat_label(draw, ui["buff_tooltip"], y, font_body, stat_value_x)
+        row_h = _draw_stat_value(
+            draw,
+            card,
+            stat_value_x,
+            y,
+            {"label": ui["buff_tooltip"], "value": tooltip},
+            font_body,
+            "zh",
+        )
+        y += row_h
+    return y
+
+
+def _calc_mount_section_area(
+    mount: dict,
+    font_header,
+    font_body,
+) -> int:
+    area = 20 + 30
+    area += _font_line_height(font_body) + 8
+    area += MOUNT_PREVIEW_SLOT[1] + 10
+    return area
+
+
+def _draw_mount_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    mount: dict,
+    font_header,
+    font_body,
+    ui: dict,
+) -> int:
+    draw.text((CARD_PADDING + 10, y), ui["mount"], fill=COLORS["accent"], font=font_header)
+    y += 30
+
+    name = mount.get("name", "")
+    if name:
+        draw.text((CARD_PADDING + 10, y), name, fill=COLORS["text"], font=font_body)
+        y += _font_line_height(font_body) + 8
+
+    mount_img = _load_item_image(mount.get("image", ""), MOUNT_PREVIEW_SLOT)
+    if mount_img:
+        preview_x = CARD_PADDING + 10
+        _paste_in_slot(
+            card,
+            mount_img,
+            preview_x,
+            y,
+            MOUNT_PREVIEW_SLOT[0],
+            MOUNT_PREVIEW_SLOT[1],
+        )
+        y += MOUNT_PREVIEW_SLOT[1] + 10
+    return y
+
+
+def _calc_pet_section_area(
+    pet: dict,
+    font_header,
+    font_body,
+) -> int:
+    area = 20 + 30
+    area += _font_line_height(font_body) + 8
+    area += PET_PREVIEW_SLOT[1] + 10
+    return area
+
+
+def _draw_pet_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    pet: dict,
+    font_header,
+    font_body,
+    ui: dict,
+) -> int:
+    draw.text((CARD_PADDING + 10, y), ui["pet"], fill=COLORS["accent"], font=font_header)
+    y += 30
+
+    name = pet.get("name", "")
+    if name:
+        draw.text((CARD_PADDING + 10, y), name, fill=COLORS["text"], font=font_body)
+        y += _font_line_height(font_body) + 8
+
+    pet_img = _load_item_image(pet.get("image", ""), PET_PREVIEW_SLOT)
+    if pet_img:
+        preview_x = CARD_PADDING + 10
+        _paste_in_slot(
+            card,
+            pet_img,
+            preview_x,
+            y,
+            PET_PREVIEW_SLOT[0],
+            PET_PREVIEW_SLOT[1],
+        )
+        y += PET_PREVIEW_SLOT[1] + 10
+    return y
+
+
 def _normalize_message(text: str) -> str:
     text = text.strip()
     if text.startswith("/"):
@@ -974,6 +1134,11 @@ def _display_stats(data: dict, locale: str) -> list[dict]:
 _CARD_UI = {
     "description": "▎描述",
     "stats": "▎属性",
+    "buff": "▎给予增益",
+    "buff_label": "增益",
+    "buff_tooltip": "增益提示",
+    "mount": "▎召唤坐骑",
+    "pet": "▎召唤宠物",
     "recipe": "▎合成配方",
     "drops": "▎来自",
     "col_entity": "实体",
@@ -995,6 +1160,15 @@ def _item_en_name(item: dict) -> str:
 def _item_zh_search_names(key: str, item: dict) -> set[str]:
     names = {key, item.get("name", ""), item.get("wiki_title", "")}
     names.update(item.get("search_terms") or [])
+    buff = item.get("buff") or {}
+    mount = item.get("mount") or {}
+    pet = item.get("pet") or {}
+    for label in (buff.get("name"), mount.get("name"), pet.get("name")):
+        if not label:
+            continue
+        names.add(label)
+        if label.endswith("坐骑"):
+            names.add(label[:-2])
     return {n for n in names if n}
 
 
@@ -1033,6 +1207,35 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
     return [key for key, _ in ranked]
 
 
+def _fuzzy_match_all(
+    query: str,
+    items: dict[str, dict],
+    mounts: dict[str, dict],
+    pets: dict[str, dict] | None = None,
+) -> list[tuple[str, str]]:
+    """返回 (来源, 键) 列表，来源为 item、mount 或 pet。"""
+    if pets is None:
+        pets = {}
+    mount_keys = _fuzzy_match(query, mounts)
+    pet_keys = _fuzzy_match(query, pets)
+    item_keys = _fuzzy_match(query, items)
+    seen: set[str] = set()
+    results: list[tuple[str, str]] = []
+    for key in mount_keys:
+        if key not in seen:
+            results.append(("mount", key))
+            seen.add(key)
+    for key in pet_keys:
+        if key not in seen:
+            results.append(("pet", key))
+            seen.add(key)
+    for key in item_keys:
+        if key not in seen:
+            results.append(("item", key))
+            seen.add(key)
+    return results
+
+
 def _display_item(item: dict) -> dict:
     return {
         "name": item.get("name", ""),
@@ -1044,6 +1247,9 @@ def _display_item(item: dict) -> dict:
         "description_rich": item.get("description_rich"),
         "set_pieces": item.get("set_pieces"),
         "page_type": item.get("page_type"),
+        "buff": item.get("buff"),
+        "mount": item.get("mount"),
+        "pet": item.get("pet"),
     }
 
 
@@ -1123,6 +1329,32 @@ def _format_text_result(data: dict) -> str:
             if not stat.get("segments"):
                 continue
         lines.append(f"  {label}: {v}")
+
+    buff = data.get("buff")
+    if buff:
+        lines.append("")
+        lines.append(ui["buff"].lstrip("▎"))
+        lines.append("-" * 30)
+        if buff.get("name"):
+            lines.append(f"  {ui['buff_label']}: {buff['name']}")
+        if buff.get("tooltip"):
+            lines.append(f"  {ui['buff_tooltip']}: {buff['tooltip']}")
+
+    mount = data.get("mount")
+    if mount:
+        lines.append("")
+        lines.append(ui["mount"].lstrip("▎"))
+        lines.append("-" * 30)
+        if mount.get("name"):
+            lines.append(f"  {mount['name']}")
+
+    pet = data.get("pet")
+    if pet:
+        lines.append("")
+        lines.append(ui["pet"].lstrip("▎"))
+        lines.append("-" * 30)
+        if pet.get("name"):
+            lines.append(f"  {pet['name']}")
 
     set_pieces = data.get("set_pieces") or []
     recipe = data.get("recipe") if not set_pieces else None
@@ -1382,6 +1614,9 @@ def _generate_item_card(data: dict) -> str:
     set_pieces = data.get("set_pieces") or []
     recipe = data.get("recipe") if not set_pieces else None
     drops = data.get("drops")
+    buff = data.get("buff")
+    mount = data.get("mount")
+    pet = data.get("pet")
     description_rich = _resolve_description_rich(data)
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
@@ -1405,7 +1640,7 @@ def _generate_item_card(data: dict) -> str:
     drops_area = 0
     if drops:
         drops_area = 20 + _calc_drops_area(drops, locale)
-        if recipe or set_pieces:
+        if recipe or set_pieces or buff or mount or pet:
             drops_area += 20
 
     pieces_area = 0
@@ -1414,11 +1649,26 @@ def _generate_item_card(data: dict) -> str:
             measure, set_pieces, font_header, font_body, font_small, ui, locale
         )
 
+    buff_area = 0
+    if buff:
+        buff_area = _calc_buff_section_area(measure, buff, font_header, font_body, ui)
+
+    mount_area = 0
+    if mount:
+        mount_area = _calc_mount_section_area(mount, font_header, font_body)
+
+    pet_area = 0
+    if pet:
+        pet_area = _calc_pet_section_area(pet, font_header, font_body)
+
     total_height = (
         title_area
         + desc_area
         + stats_area
         + sep_area
+        + buff_area
+        + mount_area
+        + pet_area
         + pieces_area
         + recipe_area
         + drops_area
@@ -1485,6 +1735,33 @@ def _generate_item_card(data: dict) -> str:
     )
     y += 20
 
+    if buff:
+        y = _draw_buff_section(draw, card, y, buff, font_header, font_body, ui)
+        draw.line(
+            [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+            fill=COLORS["separator"],
+            width=1,
+        )
+        y += 20
+
+    if mount:
+        y = _draw_mount_section(draw, card, y, mount, font_header, font_body, ui)
+        draw.line(
+            [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+            fill=COLORS["separator"],
+            width=1,
+        )
+        y += 20
+
+    if pet:
+        y = _draw_pet_section(draw, card, y, pet, font_header, font_body, ui)
+        draw.line(
+            [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+            fill=COLORS["separator"],
+            width=1,
+        )
+        y += 20
+
     if set_pieces:
         y = _draw_set_pieces_section(
             draw, card, y, set_pieces, font_header, font_body, font_small, ui, locale
@@ -1496,7 +1773,7 @@ def _generate_item_card(data: dict) -> str:
         )
 
     if drops:
-        if recipe or set_pieces:
+        if recipe or set_pieces or buff or mount or pet:
             draw.line(
                 [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
                 fill=COLORS["separator"],
@@ -1524,6 +1801,14 @@ def _format_update_result(result: dict, force: bool = False) -> str:
     piece_sync = result.get("piece_sync_count", 0)
     if piece_sync:
         extra_lines += f"\n套装部件同步：{piece_sync} 个"
+    mount_new = result.get("mount_new_count", 0)
+    mount_total = result.get("mount_total", 0)
+    if mount_new or mount_total:
+        extra_lines += f"\n坐骑召唤物：{mount_total} 个（本次 +{mount_new}）"
+    pet_new = result.get("pet_new_count", 0)
+    pet_total = result.get("pet_total", 0)
+    if pet_new or pet_total:
+        extra_lines += f"\n宠物召唤物：{pet_total} 个（本次 +{pet_new}）"
     if result.get("new_count", 0) == 0 and not extra_lines:
         return (
             f"✅ Wiki 数据已是最新\n"
@@ -1552,7 +1837,9 @@ class TerrariaQueryPlugin(Star):
 
         _ensure_dirs()
         self.items: dict[str, dict] = {}
-        self._load_items()
+        self.mounts: dict[str, dict] = {}
+        self.pets: dict[str, dict] = {}
+        self._load_data()
 
         self._cron_task: asyncio.Task | None = None
         self._update_lock = asyncio.Lock()
@@ -1573,7 +1860,7 @@ class TerrariaQueryPlugin(Star):
     async def _run_wiki_update(self, force: bool = False) -> dict:
         async with self._update_lock:
             result = await update_wiki_data(force=force)
-            self._load_items()
+            self._load_data()
             return result
 
     def _start_cron_task(self) -> None:
@@ -1619,6 +1906,11 @@ class TerrariaQueryPlugin(Star):
         elif not self.cron_time:
             logger.info("未配置 Cron，泰拉瑞亚 Wiki 定时更新未启用")
 
+    def _load_data(self) -> None:
+        self._load_items()
+        self._load_mounts()
+        self._load_pets()
+
     def _load_items(self) -> None:
         if not os.path.exists(ITEMS_JSON):
             logger.warning(
@@ -1632,6 +1924,32 @@ class TerrariaQueryPlugin(Star):
         except (json.JSONDecodeError, OSError) as e:
             logger.error(f"加载 items.json 失败: {e}")
             self.items = {}
+
+    def _load_mounts(self) -> None:
+        if not os.path.exists(MOUNTS_JSON):
+            logger.info(f"未找到坐骑数据 {MOUNTS_JSON}，坐骑查询不可用")
+            self.mounts = {}
+            return
+        try:
+            with open(MOUNTS_JSON, "r", encoding="utf-8") as f:
+                self.mounts = json.load(f)
+            logger.info(f"已加载 {len(self.mounts)} 个坐骑召唤物")
+        except (json.JSONDecodeError, OSError) as e:
+            logger.error(f"加载 mounts.json 失败: {e}")
+            self.mounts = {}
+
+    def _load_pets(self) -> None:
+        if not os.path.exists(PETS_JSON):
+            logger.info(f"未找到宠物数据 {PETS_JSON}，宠物查询不可用")
+            self.pets = {}
+            return
+        try:
+            with open(PETS_JSON, "r", encoding="utf-8") as f:
+                self.pets = json.load(f)
+            logger.info(f"已加载 {len(self.pets)} 个宠物召唤物")
+        except (json.JSONDecodeError, OSError) as e:
+            logger.error(f"加载 pets.json 失败: {e}")
+            self.pets = {}
 
     @filter.regex(_TERRARIA_CMD_RE, priority=10)
     async def on_terraria_command(self, event: AstrMessageEvent):
@@ -1662,22 +1980,27 @@ class TerrariaQueryPlugin(Star):
             )
             return
 
-        if not self.items:
+        if not self.items and not self.mounts and not self.pets:
             yield event.plain_result(
                 "❌ 离线数据尚未准备。\n"
                 "请在 WebUI 配置插件后发送「泰拉更新」，或从仓库拉取已包含的 data/ 目录。"
             )
             return
 
-        matches = _fuzzy_match(text, self.items)
+        matches = _fuzzy_match_all(text, self.items, self.mounts, self.pets)
         if not matches:
             yield event.plain_result(f"❌ 未找到「{text}」的相关信息。")
             return
 
         if len(matches) > 3:
             lines = [f"找到 {len(matches)} 个匹配结果，请输入更精确的名称后重新查询：", ""]
-            for key in matches:
-                item = self.items[key]
+            for source, key in matches:
+                pool = {
+                    "mount": self.mounts,
+                    "pet": self.pets,
+                    "item": self.items,
+                }[source]
+                item = pool[key]
                 lines.append(f"· {_match_list_label(key, item, text)}")
             yield event.plain_result("\n".join(lines))
             return
@@ -1685,8 +2008,13 @@ class TerrariaQueryPlugin(Star):
         if len(matches) > 1:
             yield event.plain_result(f"找到 {len(matches)} 个匹配结果：")
 
-        for key in matches:
-            item = self.items[key]
+        for source, key in matches:
+            pool = {
+                "mount": self.mounts,
+                "pet": self.pets,
+                "item": self.items,
+            }[source]
+            item = pool[key]
             display = _display_item(item)
             try:
                 card_path = _generate_item_card(display)

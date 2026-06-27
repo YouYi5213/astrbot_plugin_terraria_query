@@ -13,7 +13,10 @@ from prepare_data import (  # noqa: E402
     _merge_set_pieces,
     _normalize_image_filename,
     _parse_description_paragraph_rich,
+    load_mount_overview_catalog,
+    load_pet_overview_catalog,
     migrate_item_image_filenames,
+    parse_item_page,
     resync_set_piece_locales,
     strip_en_locale_data,
 )
@@ -137,3 +140,71 @@ def test_items_json_is_valid():
         data = json.load(f)
     assert isinstance(data, dict)
     assert len(data) > 1000
+
+
+def test_parse_mount_page_shrimpy_truffle():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "虾松露.html"
+    if not html_path.is_file():
+        return
+    html = html_path.read_text(encoding="utf-8")
+    item = parse_item_page(html, "虾松露")
+    assert item is not None
+    assert item["name"] == "虾松露"
+    assert item.get("page_type") == "mount"
+    assert item["buff"]["name"] == "可爱猪龙鱼坐骑"
+    assert item["buff"]["tooltip"] == "不要让它爬行。"
+    assert item["mount"]["name"] == "可爱猪龙鱼坐骑"
+    assert item["mount"]["image"] == "Cute_Fishron_Mount.gif"
+    stat_labels = {s["label"] for s in item["stats"]}
+    assert "类型" in stat_labels
+    assert not any(s.get("label") == "使用" for s in item["stats"])
+
+
+def test_mount_overview_catalog_has_37_items():
+    catalog = load_mount_overview_catalog()
+    assert len(catalog) == 37
+    assert "虾松露" in catalog
+    assert catalog["粘鞍"]["mount_display"] == "史莱姆"
+
+
+def test_parse_mount_variant_dusty_saddle():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "蒙尘牛皮鞍.html"
+    if not html_path.is_file():
+        return
+    item = parse_item_page(html_path.read_text(encoding="utf-8"), "蒙尘牛皮鞍")
+    assert item is not None
+    assert item["name"] == "蒙尘牛皮鞍"
+    assert item["buff"]["name"] == "花马坐骑"
+    assert item["mount"]["image"] == "Painted_Horse_Mount.png"
+
+
+def test_parse_mount_roller_skates_blue():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "蓝轮滑鞋.html"
+    if not html_path.is_file():
+        return
+    item = parse_item_page(html_path.read_text(encoding="utf-8"), "蓝轮滑鞋")
+    assert item is not None
+    assert item["name"] == "蓝轮滑鞋"
+    assert item["buff"]["name"] == "蓝轮滑鞋"
+    assert "Blue_Roller_Skates" in item["mount"]["image"]
+
+
+def test_parse_pet_page_mosquito_amber():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "蚊子琥珀.html"
+    if not html_path.is_file():
+        return
+    item = parse_item_page(html_path.read_text(encoding="utf-8"), "蚊子琥珀")
+    assert item is not None
+    assert item["name"] == "蚊子琥珀"
+    assert item.get("page_type") == "pet"
+    assert item["buff"]["name"] == "恐龙宝宝"
+    assert item["pet"]["name"] == "恐龙宝宝"
+
+
+def test_pet_overview_catalog_has_items():
+    catalog = load_pet_overview_catalog()
+    assert len(catalog) >= 80
+    assert "蚊子琥珀" in catalog
+    assert catalog["蚊子琥珀"]["pet_display"] == "恐龙宝宝"
+    assert catalog["鱼"]["wiki_page"] == "鱼（物品）"
+    assert catalog["暗影珠"]["wiki_page"] == "暗影珠（物品）"

@@ -34,6 +34,23 @@ _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(_PLUGIN_DIR, "data", "terraria_query")
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
 ITEMS_JSON = os.path.join(DATA_DIR, "items.json")
+MOUNTS_JSON = os.path.join(DATA_DIR, "mounts.json")
+MOUNT_CATEGORY = "Category:坐骑召唤物品"
+MOUNT_OVERVIEW_PAGE = "坐骑"
+# Wiki 合并页/非物品栏条目，不应出现在 mounts.json
+MOUNT_CATALOG_EXCLUDE = frozenset(
+    {"马鞍", "轮滑鞋", "矿车", "矿车轨道", "挖掘鼹鼠矿车"}
+)
+
+PETS_JSON = os.path.join(DATA_DIR, "pets.json")
+PET_OVERVIEW_PAGE = "宠物"
+PET_TABLE_IDS = (
+    "table-Pets",
+    "table-Master-Mode-Pets",
+    "table-Light-Pets",
+    "table-Master-Mode-Light-Pets",
+)
+PET_CATEGORY = "Category:宠物召唤物品"
 
 _WIKI_MIRROR_DIR = os.path.normpath(
     os.environ.get(
@@ -1454,7 +1471,7 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
     if root.select_one(".noarticletext"):
         return None
 
-    infobox = soup.select_one("div.infobox.item")
+    infobox = _select_item_infobox(soup, fallback_name)
     if not infobox:
         return None
 
@@ -1473,20 +1490,26 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
     if img_el and img_el.get("src"):
         item["image"] = _filename_from_url(_image_url_from_src(img_el["src"]))
 
-    for row in infobox.select(".section.statistics table.stat tr"):
-        th, td = row.select_one("th"), row.select_one("td")
-        if not th or not td:
+    skip_stat_sections = {"声音", "Sounds"}
+    for stat_section in infobox.select("div.section.statistics"):
+        title_el = stat_section.select_one("div.title")
+        section_title = _clean_text(title_el.get_text()) if title_el else ""
+        if section_title in skip_stat_sections:
             continue
-        label = _clean_text(th.get_text())
-        if label in RARITY_LABELS:
-            item["stats"].append(_parse_rarity_stat(td, label))
-            continue
-        if label in COIN_STAT_LABELS:
-            item["stats"].append(_parse_sell_stat(td, label))
-            continue
-        if not label:
-            continue
-        item["stats"].append(_parse_generic_stat(td, label))
+        for row in stat_section.select("table.stat tr"):
+            th, td = row.select_one("th"), row.select_one("td")
+            if not th or not td:
+                continue
+            label = _clean_text(th.get_text())
+            if label in RARITY_LABELS:
+                item["stats"].append(_parse_rarity_stat(td, label))
+                continue
+            if label in COIN_STAT_LABELS:
+                item["stats"].append(_parse_sell_stat(td, label))
+                continue
+            if not label:
+                continue
+            item["stats"].append(_parse_generic_stat(td, label))
 
     for table in soup.select("table.terraria.cellborder.recipes"):
         if table.select_one("caption"):
@@ -1512,7 +1535,481 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
     if _is_armor_set_item(item):
         _attach_armor_set_pieces(soup, item)
 
+    buff = parse_mount_buff_section(infobox)
+    mount = parse_mount_preview_section(infobox)
+    pet = parse_pet_preview_section(infobox)
+    if pet or _is_pet_summon_item(item):
+        item["page_type"] = "pet"
+        if buff:
+            item["buff"] = buff
+        if pet:
+            item["pet"] = pet
+    elif buff or mount or _is_mount_summon_item(item):
+        item["page_type"] = "mount"
+        if buff:
+            item["buff"] = buff
+        if mount:
+            item["mount"] = mount
+
+    if item.get("page_type") == "mount":
+        _apply_mount_variant_overrides(soup, infobox, item, fallback_name)
+    elif item.get("page_type") == "pet":
+        _apply_pet_catalog_meta(item, fallback_name)
+
     return item
+
+
+def _select_item_infobox(soup: BeautifulSoup, fallback_name: str) -> Tag | None:
+    boxes = soup.select("div.infobox.item")
+    if not boxes:
+        return None
+    if fallback_name:
+        for box in boxes:
+            title_el = box.select_one(".title")
+            title = _clean_text(title_el.get_text()) if title_el else ""
+            if title == fallback_name:
+                return box
+    return boxes[0]
+
+
+_MOUNT_CATALOG_CACHE: dict[str, dict] | None = None
+
+
+def _mount_overview_html_path() -> str | None:
+    path = os.path.join(_WIKI_MIRROR_DIR, "wiki", "zh", "pages", f"{MOUNT_OVERVIEW_PAGE}.html")
+    return path if os.path.isfile(path) else None
+
+
+def _table_cell_item_name(td: Tag) -> str:
+    text_link = td.select_one("span > span > a")
+    if text_link:
+        return _clean_text(text_link.get_text())
+    for a in td.select("a"):
+        title = _clean_text(a.get("title") or "")
+        if title:
+            return title
+        alt = _clean_text(a.get("alt") or "")
+        if alt:
+            return alt
+    sp = td.select_one("span[title]")
+    if sp:
+        return _clean_text(sp.get("title", ""))
+    return _clean_text(td.get_text())
+
+
+def _table_cell_wiki_title(td: Tag) -> str:
+    """物品栏链接的 Wiki 页面标题（优先 title 属性，避免消歧义页）。"""
+    text_link = td.select_one("span > span > a")
+    if text_link:
+        title = _clean_text(text_link.get("title") or "")
+        if title:
+            return title
+        return _clean_text(text_link.get_text())
+    for a in td.select("a"):
+        title = _clean_text(a.get("title") or "")
+        if title:
+            return title
+    return _table_cell_item_name(td)
+
+
+def load_mount_overview_catalog() -> dict[str, dict]:
+    """坐骑总览页「物品」栏：item_name -> {mount_display, mount_image}"""
+    global _MOUNT_CATALOG_CACHE
+    if _MOUNT_CATALOG_CACHE is not None:
+        return _MOUNT_CATALOG_CACHE
+
+    catalog: dict[str, dict] = {}
+    path = _mount_overview_html_path()
+    if not path:
+        _MOUNT_CATALOG_CACHE = catalog
+        return catalog
+
+    with open(path, encoding="utf-8") as f:
+        soup = BeautifulSoup(f.read(), "lxml")
+    seen: set[tuple[str, str]] = set()
+    for table in soup.select("table.terraria.lined"):
+        for tr in table.select("tr")[1:]:
+            tds = tr.select("td")
+            if len(tds) < 2:
+                continue
+            mount_display = _table_cell_item_name(tds[0])
+            item_name = _table_cell_item_name(tds[1])
+            if not mount_display or not item_name:
+                continue
+            key = (mount_display, item_name)
+            if key in seen:
+                continue
+            seen.add(key)
+            mount_img_el = tds[0].select_one("img")
+            mount_image = ""
+            if mount_img_el and mount_img_el.get("src"):
+                mount_image = _filename_from_url(
+                    _image_url_from_src(mount_img_el["src"])
+                )
+            catalog[item_name] = {
+                "mount_display": mount_display,
+                "mount_image": mount_image,
+            }
+
+    _MOUNT_CATALOG_CACHE = catalog
+    return catalog
+
+
+def load_mount_summon_item_titles() -> list[str]:
+    return sorted(load_mount_overview_catalog().keys())
+
+
+def _row_item_name(tr: Tag) -> str | None:
+    anchor = tr.select_one("s.anchor")
+    if anchor and anchor.get("id"):
+        return _clean_text(anchor["id"])
+    il2 = tr.select_one("td.il2c span[title]")
+    if il2:
+        return _clean_text(il2.get("title", ""))
+    return None
+
+
+def parse_mount_variant_row(soup: BeautifulSoup, item_name: str) -> dict | None:
+    """解析合并页（马鞍/轮滑鞋等）种类表中的单个召唤物。"""
+    for tr in soup.select("table.terraria.lined tr, table.terraria.sortable.lined tr"):
+        if _row_item_name(tr) != item_name:
+            continue
+        result: dict = {}
+        img = tr.select_one("td.il1c img") or tr.select_one("img")
+        if img and img.get("src"):
+            result["image"] = _filename_from_url(_image_url_from_src(img["src"]))
+        tds = tr.select("td")
+        if len(tds) >= 5:
+            mount_img = tds[2].select_one("img")
+            buff_block = tds[3]
+            tooltip_el = tds[4].select_one("i")
+            buff_name = ""
+            sp = buff_block.select_one("span[title]")
+            if sp:
+                buff_name = _clean_text(sp.get("title", ""))
+            buff_img = buff_block.select_one("img")
+            result["buff"] = {
+                "name": buff_name,
+                "image": (
+                    _filename_from_url(_image_url_from_src(buff_img["src"]))
+                    if buff_img and buff_img.get("src")
+                    else ""
+                ),
+                "tooltip": _clean_text(tooltip_el.get_text()) if tooltip_el else "",
+            }
+            result["mount"] = {
+                "name": buff_name,
+                "image": (
+                    _filename_from_url(_image_url_from_src(mount_img["src"]))
+                    if mount_img and mount_img.get("src")
+                    else ""
+                ),
+            }
+        return result or None
+    return None
+
+
+def parse_mount_buff_for_name(infobox: Tag, buff_name: str) -> dict | None:
+    section = infobox.select_one("div.section.buff")
+    if not section:
+        return None
+    for table in section.select("table.stat"):
+        buff = {"name": "", "image": "", "tooltip": ""}
+        for row in table.select("tr"):
+            th, td = row.select_one("th"), row.select_one("td")
+            if not th or not td:
+                continue
+            label = _clean_text(th.get_text())
+            if label in ("增益", "Buff"):
+                img = td.select_one("img")
+                if img and img.get("src"):
+                    buff["image"] = _filename_from_url(_image_url_from_src(img["src"]))
+                name_link = (
+                    td.select_one("a.mw-selflink")
+                    or td.select_one("span > span > a")
+                    or td.select_one("a")
+                )
+                buff["name"] = _clean_text(
+                    name_link.get_text() if name_link else td.get_text()
+                )
+            elif label in ("增益提示", "Buff tooltip"):
+                tooltip_el = td.select_one("i") or td
+                buff["tooltip"] = _clean_text(tooltip_el.get_text())
+        if buff["name"] == buff_name:
+            return buff
+    return None
+
+
+def _mount_image_from_buff_image(buff_image: str) -> str:
+    if not buff_image:
+        return ""
+    if "(buff)" in buff_image.lower():
+        return buff_image.replace("(buff)", "(mount)").replace("(Buff)", "(mount)")
+    stem, ext = os.path.splitext(buff_image)
+    return f"{stem}_(mount){ext}"
+
+
+def _apply_mount_catalog_search(item: dict, catalog_entry: dict) -> None:
+    mount_display = catalog_entry.get("mount_display", "")
+    if not mount_display:
+        return
+    terms = list(item.get("search_terms") or [])
+    for alias in (mount_display, f"{mount_display}坐骑"):
+        if alias and alias not in terms and alias != item.get("name"):
+            terms.append(alias)
+    item["search_terms"] = terms
+
+
+def _apply_mount_variant_overrides(
+    soup: BeautifulSoup,
+    infobox: Tag,
+    item: dict,
+    fallback_name: str,
+) -> None:
+    if not fallback_name:
+        return
+
+    catalog = load_mount_overview_catalog()
+    catalog_entry = catalog.get(fallback_name)
+
+    if item.get("name") != fallback_name:
+        variant = parse_mount_variant_row(soup, fallback_name)
+        named_buff = parse_mount_buff_for_name(infobox, fallback_name)
+        if variant or named_buff or catalog_entry:
+            item["name"] = fallback_name
+            item["page_type"] = "mount"
+        if variant and variant.get("image"):
+            item["image"] = variant["image"]
+        if named_buff:
+            item["buff"] = named_buff
+            mount_image = (
+                (catalog_entry or {}).get("mount_image")
+                or _mount_image_from_buff_image(named_buff.get("image", ""))
+            )
+            item["mount"] = {"name": fallback_name, "image": mount_image}
+        elif variant:
+            if variant.get("buff"):
+                item["buff"] = variant["buff"]
+            if variant.get("mount"):
+                item["mount"] = variant["mount"]
+
+    if catalog_entry:
+        _apply_mount_catalog_search(item, catalog_entry)
+        if catalog_entry.get("mount_image") and item.get("mount"):
+            item["mount"]["image"] = catalog_entry["mount_image"]
+
+
+def _prune_mounts_to_catalog(mounts: dict[str, dict]) -> dict[str, dict]:
+    catalog = load_mount_overview_catalog()
+    allowed = set(catalog) - MOUNT_CATALOG_EXCLUDE
+    pruned = {k: v for k, v in mounts.items() if k in allowed}
+    for title, meta in catalog.items():
+        if title in pruned:
+            _apply_mount_catalog_search(pruned[title], meta)
+            if meta.get("mount_image") and pruned[title].get("mount"):
+                pruned[title]["mount"]["image"] = meta["mount_image"]
+    return pruned
+
+
+_PET_CATALOG_CACHE: dict[str, dict] | None = None
+
+
+def _pet_overview_html_path() -> str | None:
+    path = os.path.join(_WIKI_MIRROR_DIR, "wiki", "zh", "pages", f"{PET_OVERVIEW_PAGE}.html")
+    return path if os.path.isfile(path) else None
+
+
+def load_pet_overview_catalog() -> dict[str, dict]:
+    """宠物总览页「物品」栏：item_name -> {pet_display, pet_image, light_pet}"""
+    global _PET_CATALOG_CACHE
+    if _PET_CATALOG_CACHE is not None:
+        return _PET_CATALOG_CACHE
+
+    catalog: dict[str, dict] = {}
+    path = _pet_overview_html_path()
+    if not path:
+        _PET_CATALOG_CACHE = catalog
+        return catalog
+
+    with open(path, encoding="utf-8") as f:
+        soup = BeautifulSoup(f.read(), "lxml")
+
+    for table_id in PET_TABLE_IDS:
+        table = soup.select_one(f"#{table_id}")
+        if not table:
+            continue
+        light_table = table_id in ("table-Light-Pets", "table-Master-Mode-Light-Pets")
+        for tr in table.select("tr")[1:]:
+            tds = tr.select("td")
+            if len(tds) < 3:
+                continue
+            pet_display = _table_cell_item_name(tds[1])
+            item_name = _table_cell_item_name(tds[2])
+            wiki_page = _table_cell_wiki_title(tds[2])
+            if not item_name:
+                continue
+            pet_img_el = tds[1].select_one("img")
+            pet_image = ""
+            if pet_img_el and pet_img_el.get("src"):
+                pet_image = _filename_from_url(
+                    _image_url_from_src(pet_img_el["src"])
+                )
+            provides_light = light_table
+            if len(tds) >= 5 and not light_table:
+                cell_text = _clean_text(tds[4].get_text())
+                provides_light = "✔" in cell_text
+            catalog[item_name] = {
+                "pet_display": pet_display or item_name,
+                "pet_image": pet_image,
+                "light_pet": provides_light,
+                "wiki_page": wiki_page or item_name,
+            }
+
+    _PET_CATALOG_CACHE = catalog
+    return catalog
+
+
+def load_pet_summon_item_titles() -> list[str]:
+    return sorted(load_pet_overview_catalog().keys())
+
+
+def _pet_fetch_tasks(catalog: dict[str, dict]) -> list[tuple[str, str]]:
+    """(catalog_key, wiki_page) 列表，用于抓取宠物召唤物页面。"""
+    tasks: list[tuple[str, str]] = []
+    for key, meta in sorted(catalog.items()):
+        wiki_page = meta.get("wiki_page") or key
+        tasks.append((key, wiki_page))
+    return tasks
+
+
+def _apply_pet_catalog_search(item: dict, catalog_entry: dict) -> None:
+    pet_display = catalog_entry.get("pet_display", "")
+    if not pet_display:
+        return
+    terms = list(item.get("search_terms") or [])
+    buff_name = (item.get("buff") or {}).get("name", "")
+    for alias in (pet_display, buff_name):
+        if alias and alias not in terms and alias != item.get("name"):
+            terms.append(alias)
+    item["search_terms"] = terms
+    if catalog_entry.get("light_pet"):
+        item["light_pet"] = True
+
+
+def _apply_pet_catalog_meta(item: dict, fallback_name: str) -> None:
+    catalog_entry = load_pet_overview_catalog().get(fallback_name)
+    if not catalog_entry:
+        return
+    _apply_pet_catalog_search(item, catalog_entry)
+    if catalog_entry.get("pet_image") and item.get("pet"):
+        item["pet"]["image"] = catalog_entry["pet_image"]
+    elif catalog_entry.get("pet_image") and not item.get("pet"):
+        item["pet"] = {
+            "name": catalog_entry.get("pet_display", fallback_name),
+            "image": catalog_entry["pet_image"],
+        }
+
+
+def _prune_pets_to_catalog(pets: dict[str, dict]) -> dict[str, dict]:
+    catalog = load_pet_overview_catalog()
+    pruned = {k: v for k, v in pets.items() if k in catalog}
+    for title, meta in catalog.items():
+        if title in pruned:
+            _apply_pet_catalog_search(pruned[title], meta)
+            if meta.get("pet_image") and pruned[title].get("pet"):
+                pruned[title]["pet"]["image"] = meta["pet_image"]
+    return pruned
+
+
+def _is_mount_summon_item(item: dict) -> bool:
+    for stat in item.get("stats", []):
+        if stat.get("label") not in ("类型", "Type"):
+            continue
+        parts = [stat.get("value") or ""]
+        for seg in stat.get("segments") or []:
+            if seg.get("type") == "text":
+                parts.append(seg.get("text") or "")
+        text = "".join(parts)
+        if "坐骑召唤" in text or "Mount summon" in text.lower():
+            return True
+    return False
+
+
+def parse_mount_buff_section(infobox: Tag) -> dict | None:
+    section = infobox.select_one("div.section.buff")
+    if not section:
+        return None
+    if len(section.select("table.stat")) > 1:
+        return None
+    buff = {"name": "", "image": "", "tooltip": ""}
+    for row in section.select("table.stat tr"):
+        th, td = row.select_one("th"), row.select_one("td")
+        if not th or not td:
+            continue
+        label = _clean_text(th.get_text())
+        if label in ("增益", "Buff"):
+            img = td.select_one("img")
+            if img and img.get("src"):
+                buff["image"] = _filename_from_url(_image_url_from_src(img["src"]))
+            name_link = (
+                td.select_one("a.mw-selflink")
+                or td.select_one("span > span > a")
+                or td.select_one("a")
+            )
+            if name_link:
+                buff["name"] = _clean_text(name_link.get_text())
+            else:
+                buff["name"] = _clean_text(td.get_text())
+        elif label in ("增益提示", "Buff tooltip"):
+            tooltip_el = td.select_one("i") or td
+            buff["tooltip"] = _clean_text(tooltip_el.get_text())
+    return buff if (buff["name"] or buff["tooltip"]) else None
+
+
+def parse_mount_preview_section(infobox: Tag) -> dict | None:
+    section = infobox.select_one("div.section.mount")
+    if not section:
+        return None
+    name_el = section.select_one("div.name")
+    img_el = section.select_one("div.image img")
+    mount = {
+        "name": _clean_text(name_el.get_text()) if name_el else "",
+        "image": "",
+    }
+    if img_el and img_el.get("src"):
+        mount["image"] = _filename_from_url(_image_url_from_src(img_el["src"]))
+    return mount if (mount["name"] or mount["image"]) else None
+
+
+def parse_pet_preview_section(infobox: Tag) -> dict | None:
+    section = infobox.select_one("div.section.projectile")
+    if not section:
+        return None
+    name_el = section.select_one("div.name")
+    img_el = section.select_one("div.image img")
+    pet = {
+        "name": _clean_text(name_el.get_text()) if name_el else "",
+        "image": "",
+    }
+    if img_el and img_el.get("src"):
+        pet["image"] = _filename_from_url(_image_url_from_src(img_el["src"]))
+    return pet if (pet["name"] or pet["image"]) else None
+
+
+def _is_pet_summon_item(item: dict) -> bool:
+    for stat in item.get("stats", []):
+        if stat.get("label") not in ("类型", "Type"):
+            continue
+        parts = [stat.get("value") or ""]
+        for seg in stat.get("segments") or []:
+            if seg.get("type") == "text":
+                parts.append(seg.get("text") or "")
+        text = "".join(parts)
+        if "宠物召唤" in text or "Pet summon" in text.lower():
+            return True
+        if "照明宠物" in text:
+            return True
+    return False
 
 
 async def attach_en_name(
@@ -1853,6 +2350,18 @@ def _collect_image_urls(item: dict) -> dict[str, str]:
         urls.update(_collect_drop_image_urls(drops))
     for piece in item.get("set_pieces") or []:
         urls.update(_collect_image_urls(piece))
+    buff = item.get("buff")
+    if buff and buff.get("image"):
+        fn = buff["image"]
+        urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    mount = item.get("mount")
+    if mount and mount.get("image"):
+        fn = mount["image"]
+        urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    pet = item.get("pet")
+    if pet and pet.get("image"):
+        fn = pet["image"]
+        urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
     return urls
 
 
@@ -2123,6 +2632,50 @@ def _load_existing_items() -> dict[str, dict]:
         return {}
 
 
+def _load_existing_mounts() -> dict[str, dict]:
+    if not os.path.exists(MOUNTS_JSON):
+        return {}
+    try:
+        with open(MOUNTS_JSON, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def _existing_mount_wiki_titles(mounts: dict[str, dict]) -> set[str]:
+    titles: set[str] = set()
+    for item in mounts.values():
+        wt = item.get("wiki_title")
+        if wt:
+            titles.add(wt)
+        name = item.get("name")
+        if name:
+            titles.add(name)
+    return titles
+
+
+def _load_existing_pets() -> dict[str, dict]:
+    if not os.path.exists(PETS_JSON):
+        return {}
+    try:
+        with open(PETS_JSON, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def _existing_pet_wiki_titles(pets: dict[str, dict]) -> set[str]:
+    titles: set[str] = set()
+    for item in pets.values():
+        wt = item.get("wiki_title")
+        if wt:
+            titles.add(wt)
+        name = item.get("name")
+        if name:
+            titles.add(name)
+    return titles
+
+
 async def update_wiki_data(
     limit: int | None = None,
     force: bool = False,
@@ -2145,6 +2698,8 @@ async def update_wiki_data(
     image_migrate_count = 0
     piece_sync_count = 0
     strip_count = 0
+    mount_result = {"new_count": 0, "total": len(_load_existing_mounts())}
+    pet_result = {"new_count": 0, "total": len(_load_existing_pets())}
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -2234,6 +2789,9 @@ async def update_wiki_data(
                 limit=desc_limit if desc_limit is not None else 100,
             )
 
+        mount_result = await refresh_mounts(session, force=force)
+        pet_result = await refresh_pets(session, force=force)
+
     strip_count = strip_en_locale_data(items)
     image_migrate_count = migrate_item_image_filenames(items)
     piece_sync_count = resync_set_piece_locales(items)
@@ -2257,6 +2815,10 @@ async def update_wiki_data(
         "overview_count": overview_count,
         "image_migrate_count": image_migrate_count,
         "piece_sync_count": piece_sync_count,
+        "mount_new_count": mount_result.get("new_count", 0),
+        "mount_total": mount_result.get("total", 0),
+        "pet_new_count": pet_result.get("new_count", 0),
+        "pet_total": pet_result.get("total", 0),
     }
 
 
@@ -2269,6 +2831,233 @@ def _apply_search_aliases(item: dict) -> None:
             if alias not in existing:
                 existing.append(alias)
         item["search_terms"] = existing
+
+
+async def ingest_mount_titles(
+    session: aiohttp.ClientSession,
+    mounts: dict[str, dict],
+    title_list: list[str],
+    *,
+    force: bool = False,
+) -> tuple[int, int, int]:
+    """抓取坐骑召唤物页面，返回 (新增数, 图片成功数, 图片总数)。"""
+    catalog_titles = load_mount_summon_item_titles()
+    if catalog_titles:
+        title_list = catalog_titles
+    if force:
+        pending = list(title_list)
+    else:
+        existing = _existing_mount_wiki_titles(mounts)
+        pending = [t for t in title_list if t not in existing]
+    pending.sort()
+    image_urls: dict[str, str] = {}
+    new_count = 0
+
+    for i, title in enumerate(pending, 1):
+        if title in MOUNT_CATALOG_EXCLUDE:
+            continue
+        html = await fetch_page_html(session, title)
+        if not html:
+            continue
+        item = parse_item_page(html, title)
+        if not item:
+            continue
+        if item.get("page_type") != "mount" and not _is_mount_summon_item(item):
+            if title not in load_mount_overview_catalog():
+                continue
+            item["page_type"] = "mount"
+        name = item.get("name") or title
+        if name != title:
+            item["name"] = title
+            name = title
+        if not force and name in mounts:
+            continue
+        item["wiki_title"] = title
+        _apply_search_aliases(item)
+        catalog_entry = load_mount_overview_catalog().get(title)
+        if catalog_entry:
+            _apply_mount_catalog_search(item, catalog_entry)
+        mounts[name] = item
+        await attach_en_name(session, item, title)
+        image_urls.update(_collect_image_urls(item))
+        new_count += 1
+        if i % 10 == 0 or i == len(pending):
+            print(
+                f"坐骑抓取 {i}/{len(pending)}，新增 {new_count}，总计 {len(mounts)}",
+                flush=True,
+            )
+        await asyncio.sleep(0.12)
+
+    images_ok = 0
+    if image_urls:
+        semaphore = asyncio.Semaphore(8)
+        results = await asyncio.gather(
+            *[
+                download_image(session, fn, url, semaphore)
+                for fn, url in image_urls.items()
+            ]
+        )
+        images_ok = sum(1 for r in results if r)
+
+    strip_en_locale_data(mounts)
+    migrate_item_image_filenames(mounts)
+    pruned = _prune_mounts_to_catalog(mounts)
+    mounts.clear()
+    mounts.update(pruned)
+    return new_count, images_ok, len(image_urls)
+
+
+async def refresh_mounts(
+    session: aiohttp.ClientSession,
+    *,
+    force: bool = False,
+) -> dict:
+    """更新 mounts.json（以坐骑总览页物品栏为准，共 37 种召唤物）。"""
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    mounts: dict[str, dict] = {} if force else _load_existing_mounts()
+    before = len(mounts)
+
+    catalog = load_mount_overview_catalog()
+    if catalog:
+        print(f"坐骑总览页：{len(catalog)} 种召唤物品", flush=True)
+        title_list = load_mount_summon_item_titles()
+    else:
+        titles = await fetch_category_members(session, MOUNT_CATEGORY)
+        print(f"{MOUNT_CATEGORY}：{len(titles)} 个标题（未找到本地总览页）", flush=True)
+        title_list = sorted(titles)
+
+    new_count, images_ok, images_total = await ingest_mount_titles(
+        session,
+        mounts,
+        title_list,
+        force=force,
+    )
+    with open(MOUNTS_JSON, "w", encoding="utf-8") as f:
+        json.dump(mounts, f, ensure_ascii=False, indent=2)
+
+    return {
+        "before": before,
+        "new_count": new_count,
+        "total": len(mounts),
+        "images_ok": images_ok,
+        "images_total": images_total,
+    }
+
+
+async def ingest_pet_titles(
+    session: aiohttp.ClientSession,
+    pets: dict[str, dict],
+    title_list: list[str],
+    *,
+    force: bool = False,
+) -> tuple[int, int, int]:
+    """抓取宠物召唤物页面，返回 (新增数, 图片成功数, 图片总数)。"""
+    catalog = load_pet_overview_catalog()
+    fetch_tasks = _pet_fetch_tasks(catalog) if catalog else []
+    if fetch_tasks:
+        pending_tasks = fetch_tasks
+    elif title_list:
+        pending_tasks = [(t, t) for t in title_list]
+    else:
+        pending_tasks = []
+
+    if force:
+        pending = list(pending_tasks)
+    else:
+        existing = _existing_pet_wiki_titles(pets)
+        pending = [
+            (key, wiki_page)
+            for key, wiki_page in pending_tasks
+            if key not in pets and wiki_page not in existing
+        ]
+    image_urls: dict[str, str] = {}
+    new_count = 0
+
+    for i, (catalog_key, wiki_page) in enumerate(pending, 1):
+        html = await fetch_page_html(session, wiki_page)
+        if not html:
+            continue
+        item = parse_item_page(html, wiki_page)
+        if not item:
+            continue
+        if item.get("page_type") != "pet" and not _is_pet_summon_item(item):
+            if catalog_key not in catalog:
+                continue
+            item["page_type"] = "pet"
+        name = catalog_key
+        if not force and name in pets:
+            continue
+        item["name"] = name
+        item["wiki_title"] = wiki_page
+        _apply_search_aliases(item)
+        catalog_entry = catalog.get(catalog_key)
+        if catalog_entry:
+            _apply_pet_catalog_search(item, catalog_entry)
+        pets[name] = item
+        await attach_en_name(session, item, wiki_page)
+        image_urls.update(_collect_image_urls(item))
+        new_count += 1
+        if i % 15 == 0 or i == len(pending):
+            print(
+                f"宠物抓取 {i}/{len(pending)}，新增 {new_count}，总计 {len(pets)}",
+                flush=True,
+            )
+        await asyncio.sleep(0.12)
+
+    images_ok = 0
+    if image_urls:
+        semaphore = asyncio.Semaphore(8)
+        results = await asyncio.gather(
+            *[
+                download_image(session, fn, url, semaphore)
+                for fn, url in image_urls.items()
+            ]
+        )
+        images_ok = sum(1 for r in results if r)
+
+    strip_en_locale_data(pets)
+    migrate_item_image_filenames(pets)
+    pruned = _prune_pets_to_catalog(pets)
+    pets.clear()
+    pets.update(pruned)
+    return new_count, images_ok, len(image_urls)
+
+
+async def refresh_pets(
+    session: aiohttp.ClientSession,
+    *,
+    force: bool = False,
+) -> dict:
+    """更新 pets.json（以宠物总览页物品栏为准）。"""
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    pets: dict[str, dict] = {} if force else _load_existing_pets()
+    before = len(pets)
+
+    catalog = load_pet_overview_catalog()
+    if catalog:
+        print(f"宠物总览页：{len(catalog)} 种召唤物品", flush=True)
+        title_list = load_pet_summon_item_titles()
+    else:
+        titles = await fetch_category_members(session, PET_CATEGORY)
+        print(f"{PET_CATEGORY}：{len(titles)} 个标题（未找到本地总览页）", flush=True)
+        title_list = sorted(titles)
+
+    new_count, images_ok, images_total = await ingest_pet_titles(
+        session,
+        pets,
+        title_list,
+        force=force,
+    )
+    with open(PETS_JSON, "w", encoding="utf-8") as f:
+        json.dump(pets, f, ensure_ascii=False, indent=2)
+
+    return {
+        "before": before,
+        "new_count": new_count,
+        "total": len(pets),
+        "images_ok": images_ok,
+        "images_total": images_total,
+    }
 
 
 async def ingest_wiki_titles(
@@ -2479,9 +3268,51 @@ if __name__ == "__main__":
         action="store_true",
         help="仅抓取新分类中的条目（家具/其他），跳过全量更新",
     )
+    parser.add_argument(
+        "--ingest-mounts",
+        action="store_true",
+        help="仅抓取坐骑召唤物到 mounts.json",
+    )
+    parser.add_argument(
+        "--ingest-pets",
+        action="store_true",
+        help="仅抓取宠物召唤物到 pets.json",
+    )
     args = parser.parse_args()
     try:
-        if args.ingest_categories:
+        if args.ingest_mounts:
+            async def _run_mounts() -> dict:
+                connector = aiohttp.TCPConnector(limit=10)
+                timeout = aiohttp.ClientTimeout(total=60)
+                async with aiohttp.ClientSession(
+                    connector=connector, timeout=timeout
+                ) as session:
+                    return await refresh_mounts(session, force=args.force)
+
+            result = asyncio.run(_run_mounts())
+            print(
+                f"坐骑抓取完成：新增 {result['new_count']} 个，"
+                f"共 {result['total']} 条目，"
+                f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.ingest_pets:
+            async def _run_pets() -> dict:
+                connector = aiohttp.TCPConnector(limit=10)
+                timeout = aiohttp.ClientTimeout(total=60)
+                async with aiohttp.ClientSession(
+                    connector=connector, timeout=timeout
+                ) as session:
+                    return await refresh_pets(session, force=args.force)
+
+            result = asyncio.run(_run_pets())
+            print(
+                f"宠物抓取完成：新增 {result['new_count']} 个，"
+                f"共 {result['total']} 条目，"
+                f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.ingest_categories:
             result = asyncio.run(ingest_new_categories())
             print(
                 f"分类抓取完成：新增 {result['new_count']} 个，"

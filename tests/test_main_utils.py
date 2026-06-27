@@ -103,3 +103,44 @@ def test_fuzzy_match_english_name_shows_chinese_item():
     assert matches == ["环境改造枪"]
     display = main._display_item(items["环境改造枪"])
     assert display["name"] == "环境改造枪"
+
+
+def test_fuzzy_match_all_includes_mounts():
+    items = {"天顶剑": {"name": "天顶剑", "stats": []}}
+    mounts = {
+        "虾松露": {
+            "name": "虾松露",
+            "en_name": "Shrimpy Truffle",
+            "page_type": "mount",
+            "stats": [],
+            "buff": {"name": "可爱猪龙鱼坐骑"},
+            "mount": {"name": "可爱猪龙鱼坐骑"},
+            "search_terms": ["可爱猪龙鱼"],
+        }
+    }
+    matches = main._fuzzy_match_all("Shrimpy Truffle", items, mounts)
+    assert matches == [("mount", "虾松露")]
+    matches_zh = main._fuzzy_match_all("虾松露", items, mounts)
+    assert matches_zh == [("mount", "虾松露")]
+    matches_mount = main._fuzzy_match_all("可爱猪龙鱼", items, mounts)
+    assert matches_mount == [("mount", "虾松露")]
+
+
+def test_fuzzy_match_all_includes_pets():
+    items = {"天顶剑": {"name": "天顶剑", "stats": []}}
+    mounts: dict = {}
+    pets = {
+        "蚊子琥珀": {
+            "name": "蚊子琥珀",
+            "en_name": "Mosquito in Amber",
+            "page_type": "pet",
+            "stats": [],
+            "buff": {"name": "恐龙宝宝"},
+            "pet": {"name": "恐龙宝宝"},
+            "search_terms": ["恐龙宝宝"],
+        }
+    }
+    matches = main._fuzzy_match_all("Mosquito in Amber", items, mounts, pets)
+    assert matches == [("pet", "蚊子琥珀")]
+    matches_pet = main._fuzzy_match_all("恐龙宝宝", items, mounts, pets)
+    assert matches_pet == [("pet", "蚊子琥珀")]

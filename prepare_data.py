@@ -151,6 +151,23 @@ def _extract_rarity_sortkey(td) -> str:
     return ""
 
 
+RARITY_EN_TO_ZH = {
+    "Gray": "灰色",
+    "White": "白色",
+    "Blue": "蓝色",
+    "Green": "绿色",
+    "Orange": "橙色",
+    "Light Red": "浅红色",
+    "Pink": "粉红色",
+    "Light Purple": "浅紫色",
+    "Purple": "紫色",
+    "Lime": "淡紫色",
+    "Red": "红色",
+    "Yellow": "黄色",
+    "Cyan": "渐变色",
+}
+
+
 def _extract_rarity_name_from_title(title: str) -> str:
     if not title:
         return ""
@@ -164,7 +181,9 @@ def _parse_rarity_stat(td, label: str) -> dict:
     title = link.get("title", "") if link else ""
     en_name = _extract_rarity_name_from_title(title)
     if label == "稀有度":
-        display = RARITY_SORTKEY_ZH.get(sortkey, en_name or sortkey)
+        display = RARITY_SORTKEY_ZH.get(sortkey) or RARITY_EN_TO_ZH.get(
+            en_name, en_name or sortkey
+        )
     else:
         display = en_name or RARITY_SORTKEY_EN.get(sortkey, sortkey)
     return {
@@ -1443,7 +1462,41 @@ def _wing_search_terms(name: str) -> list[str]:
     return terms
 
 
-def _parse_wing_row(tr: Tag) -> dict | None:
+def _format_wing_flight_time(raw: str, *, locale: str = "zh") -> str:
+    raw = _clean_text(raw)
+    if not raw:
+        return ""
+    match = re.match(r"^([\d.]+)\s*s\s*$", raw, re.I)
+    if not match:
+        return raw
+    if locale == "zh":
+        return f"{match.group(1)}秒"
+    return f"{match.group(1)} s"
+
+
+def _format_wing_height(raw: str, *, locale: str = "zh") -> str:
+    raw = _clean_text(raw)
+    if not raw:
+        return ""
+    if re.fullmatch(r"\d+", raw):
+        return f"{raw}格" if locale == "zh" else raw
+    return raw
+
+
+def _format_wing_mph(raw: str, *, locale: str = "zh") -> str:
+    raw = _clean_text(raw)
+    if not raw:
+        return ""
+    match = re.match(r"^([\d.]+)\s*mph\s*$", raw, re.I)
+    num = match.group(1) if match else raw if re.fullmatch(r"[\d.]+", raw) else ""
+    if not num:
+        return raw
+    if locale == "zh":
+        return f"{num}英里每小时"
+    return f"{num} mph"
+
+
+def _parse_wing_row(tr: Tag, *, locale: str = "zh") -> dict | None:
     anchor = tr.select_one("s.anchor[id]")
     if not anchor:
         return None
@@ -1464,39 +1517,55 @@ def _parse_wing_row(tr: Tag) -> dict | None:
 
     cells = tr.select("td")
     source = _clean_text(cells[3].get_text(" ", strip=True)) if len(cells) > 3 else ""
-    flight_time = _clean_text(cells[4].get_text(" ", strip=True)) if len(cells) > 4 else ""
-    height = _clean_text(cells[5].get_text(" ", strip=True)) if len(cells) > 5 else ""
-    speed_attr = _clean_text(cells[6].get_text(" ", strip=True)) if len(cells) > 6 else ""
-    h_speed = _clean_text(cells[8].get_text(" ", strip=True)) if len(cells) > 8 else ""
-    h_accel = _clean_text(cells[9].get_text(" ", strip=True)) if len(cells) > 9 else ""
-    v_mult = _clean_text(cells[10].get_text(" ", strip=True)) if len(cells) > 10 else ""
+    flight_time = (
+        _format_wing_flight_time(cells[4].get_text(" ", strip=True), locale=locale)
+        if len(cells) > 4
+        else ""
+    )
+    height = (
+        _format_wing_height(cells[5].get_text(" ", strip=True), locale=locale)
+        if len(cells) > 5
+        else ""
+    )
+    mph = (
+        _format_wing_mph(cells[6].get_text(" ", strip=True), locale=locale)
+        if len(cells) > 6
+        else ""
+    )
+    h_accel = _clean_text(cells[7].get_text(" ", strip=True)) if len(cells) > 7 else ""
+    v_mult = _clean_text(cells[8].get_text(" ", strip=True)) if len(cells) > 8 else ""
 
-    rarity_cell = tr.select_one("td .rarity")
-    if rarity_cell:
-        rarity_cell = rarity_cell.find_parent("td")
-    rarity_stat = _parse_rarity_stat(rarity_cell, "稀有度") if rarity_cell else None
+    rarity_label = "稀有度" if locale == "zh" else "Rarity"
+    rarity_stat = (
+        _parse_rarity_stat(cells[9], rarity_label) if len(cells) > 9 else None
+    )
 
     notes: list[str] = []
-    for li in tr.select("td ul li"):
+    note_cell = cells[10] if len(cells) > 10 else tr
+    for li in note_cell.select("ul li"):
         note = _clean_text(li.get_text(" ", strip=True))
         if note:
             notes.append(note)
 
-    stats: list[dict] = [{"label": "类型", "value": "配饰", "extra": ""}]
-    if source:
-        stats.append({"label": "来源", "value": source, "extra": ""})
+    type_label = "类型" if locale == "zh" else "Type"
+    type_value = "配饰" if locale == "zh" else "Accessory"
+    flight_label = "飞行时间" if locale == "zh" else "Flight time"
+    height_label = "高度（格）" if locale == "zh" else "Height (tiles)"
+    mph_label = "最大水平速度" if locale == "zh" else "Max horizontal speed"
+    h_accel_label = "水平加速度" if locale == "zh" else "Horizontal acceleration"
+    v_mult_label = "垂直倍率" if locale == "zh" else "Vertical multiplier"
+
+    stats: list[dict] = [{"label": type_label, "value": type_value, "extra": ""}]
     if flight_time:
-        stats.append({"label": "飞行时间", "value": flight_time, "extra": ""})
+        stats.append({"label": flight_label, "value": flight_time, "extra": ""})
     if height:
-        stats.append({"label": "高度（格）", "value": height, "extra": ""})
-    if speed_attr:
-        stats.append({"label": "速度", "value": speed_attr, "extra": ""})
-    if h_speed:
-        stats.append({"label": "最大水平速度", "value": h_speed, "extra": ""})
+        stats.append({"label": height_label, "value": height, "extra": ""})
+    if mph:
+        stats.append({"label": mph_label, "value": mph, "extra": ""})
     if h_accel:
-        stats.append({"label": "水平加速度", "value": h_accel, "extra": ""})
+        stats.append({"label": h_accel_label, "value": h_accel, "extra": ""})
     if v_mult:
-        stats.append({"label": "垂直倍率", "value": v_mult, "extra": ""})
+        stats.append({"label": v_mult_label, "value": v_mult, "extra": ""})
     if rarity_stat:
         stats.append(rarity_stat)
 
@@ -1523,7 +1592,7 @@ def _parse_wing_row(tr: Tag) -> dict | None:
     return item
 
 
-def parse_wings_from_soup(soup: BeautifulSoup) -> dict[str, dict]:
+def parse_wings_from_soup(soup: BeautifulSoup, *, locale: str = "zh") -> dict[str, dict]:
     """从「翅膀」总览页的对比表中解析各翅膀条目"""
     wings: dict[str, dict] = {}
     for table in soup.select("table.terraria"):
@@ -1531,7 +1600,7 @@ def parse_wings_from_soup(soup: BeautifulSoup) -> dict[str, dict]:
         if len(anchors) < 10:
             continue
         for tr in table.select("tbody tr"):
-            wing = _parse_wing_row(tr)
+            wing = _parse_wing_row(tr, locale=locale)
             if wing:
                 wings[wing["name"]] = wing
         if wings:
@@ -1606,7 +1675,9 @@ async def refresh_overview_pages(
         zh_wings = parse_wings_from_soup(soup)
         en_html = await fetch_page_html(session, "Wings", api_url=API_URL_EN)
         if en_html:
-            en_wings = parse_wings_from_soup(BeautifulSoup(en_html, "html.parser"))
+            en_wings = parse_wings_from_soup(
+                BeautifulSoup(en_html, "html.parser"), locale="en"
+            )
             _merge_wing_en_names(zh_wings, en_wings)
         wing_added = _merge_parsed_wings(items, zh_wings)
         updated += wing_added

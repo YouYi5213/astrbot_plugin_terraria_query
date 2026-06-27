@@ -792,6 +792,35 @@ def _is_update_command(text: str) -> bool:
 # 匹配 泰拉查询/泰拉/泰拉更新/terraria，无需 / 前缀（/ 也兼容）
 _TERRARIA_CMD_RE = r"^/?(泰拉更新|泰拉查询|泰拉|terraria)(\s|$)"
 
+_WING_STAT_LABELS = {
+    "zh": {
+        "类型",
+        "飞行时间",
+        "高度（格）",
+        "最大水平速度",
+        "水平加速度",
+        "垂直倍率",
+        "稀有度",
+    },
+    "en": {
+        "Type",
+        "Flight time",
+        "Height (tiles)",
+        "Max horizontal speed",
+        "Horizontal acceleration",
+        "Vertical multiplier",
+        "Rarity",
+    },
+}
+
+
+def _display_stats(data: dict, locale: str) -> list[dict]:
+    stats = data.get("stats", [])
+    if data.get("page_type") == "wing" or data.get("from_wings_table"):
+        allowed = _WING_STAT_LABELS.get(locale, _WING_STAT_LABELS["zh"])
+        stats = [s for s in stats if s.get("label") in allowed]
+    return stats
+
 
 _CARD_UI = {
     "zh": {
@@ -933,7 +962,7 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
         for para in description.split("\n\n"):
             lines.append(f"  {para}")
 
-    for stat in data.get("stats", []):
+    for stat in _display_stats(data, locale):
         label = stat.get("label", "")
         stat = normalize_stat_for_display(stat, locale)
         if stat.get("coins"):
@@ -1003,7 +1032,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
 
     stats = [
         s
-        for s in data.get("stats", [])
+        for s in _display_stats(data, locale)
         if s.get("value")
         or s.get("extra")
         or s.get("coins")
@@ -1201,7 +1230,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v15_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v16_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

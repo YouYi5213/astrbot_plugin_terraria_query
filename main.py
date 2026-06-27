@@ -185,6 +185,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
 CARD_WIDTH = 600
 CARD_PADDING = 20
+CARD_VERSION = "v21"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -217,6 +218,20 @@ KEY_BADGE_PAD_Y = 2
 def _ensure_dirs() -> None:
     for d in (DATA_DIR, IMAGES_DIR, CARDS_DIR):
         os.makedirs(d, exist_ok=True)
+
+
+def _prune_old_card_cache(keep_version: str = CARD_VERSION) -> None:
+    """删除旧版本卡片缓存，避免磁盘无限增长。"""
+    if not os.path.isdir(CARDS_DIR):
+        return
+    prefix = f"card_{keep_version}_"
+    for name in os.listdir(CARDS_DIR):
+        if not name.startswith("card_v") or name.startswith(prefix):
+            continue
+        try:
+            os.remove(os.path.join(CARDS_DIR, name))
+        except OSError:
+            pass
 
 
 def _image_path(filename: str) -> str:
@@ -293,8 +308,8 @@ def _load_bool_icon(kind: str) -> Image.Image | None:
     return _load_image(os.path.join(_ICON_DIR, f"{kind}.png"), _BOOL_ICON_SIZE)
 
 
-def _load_inline_icon(filename: str) -> Image.Image | None:
-    return _load_image(_resolve_inline_icon_path(filename), _INLINE_ICON_SIZE)
+def _load_item_image(filename: str, size: tuple[int, int] | None = None) -> Image.Image | None:
+    return _load_image(_resolve_inline_icon_path(filename), size)
 
 
 def _recipe_item_label(entry: dict) -> str:
@@ -760,7 +775,7 @@ def _draw_stat_value(
 
 
 def _load_entity_image(filename: str) -> Image.Image | None:
-    img = _load_image(_image_path(filename))
+    img = _load_item_image(filename)
     if not img:
         return None
     return _fit_image(img, 48, 36)
@@ -880,7 +895,7 @@ def _normalize_message(text: str) -> str:
 def _extract_query_text(text: str) -> str | None:
     """解析查询指令参数，非查询指令时返回 None。"""
     normalized = _normalize_message(text)
-    if normalized == "泰拉更新" or normalized.startswith("泰拉更新 "):
+    if normalized in ("泰拉更新", "泰拉强制更新") or normalized.startswith("泰拉更新 "):
         return None
     for prefix in ("泰拉查询", "泰拉", "terraria"):
         if normalized == prefix:
@@ -890,13 +905,18 @@ def _extract_query_text(text: str) -> str | None:
     return None
 
 
+def _is_force_update_command(text: str) -> bool:
+    normalized = _normalize_message(text)
+    return normalized == "泰拉强制更新"
+
+
 def _is_update_command(text: str) -> bool:
     normalized = _normalize_message(text)
-    return normalized == "泰拉更新"
+    return normalized in ("泰拉更新", "泰拉强制更新")
 
 
-# 匹配 泰拉查询/泰拉/泰拉更新/terraria，无需 / 前缀（/ 也兼容）
-_TERRARIA_CMD_RE = r"^/?(泰拉更新|泰拉查询|泰拉|terraria)(\s|$)"
+# 匹配 泰拉查询/泰拉/泰拉更新/泰拉强制更新/terraria，无需 / 前缀（/ 也兼容）
+_TERRARIA_CMD_RE = r"^/?(泰拉强制更新|泰拉更新|泰拉查询|泰拉|terraria)(\s|$)"
 
 _WING_STAT_LABELS = {
     "zh": {
@@ -1062,6 +1082,52 @@ def _match_label(key: str, item: dict, locale: str) -> str:
     return item.get("name", key)
 
 
+def _format_stat_plain(stat: dict, locale: str) -> str:
+    stat = normalize_stat_for_display(stat, locale)
+    if stat.get("coins"):
+        parts = []
+        for coin in stat["coins"]:
+            abbr = {"pc": "PC", "gc": "GC", "sc": "SC", "cc": "CC"}.get(
+                coin.get("type", ""), ""
+            )
+            parts.append(f"{coin.get('amount', '')} {abbr}".strip())
+        return " ".join(parts)
+    if resolve_bool_icon(stat) == "yes":
+        return "✔"
+    if resolve_bool_icon(stat) == "no":
+        return "✘"
+    if stat.get("segments"):
+        parts: list[str] = []
+        for seg in stat["segments"]:
+            if seg.get("type") == "text":
+                parts.append(seg.get("text", ""))
+            elif seg.get("type") == "icon":
+                alt = seg.get("alt") or seg.get("image", "")
+                if alt:
+                    parts.append(f"[{alt}]")
+        return _format_stat_text("".join(parts), stat.get("extra", ""))
+    return _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
+
+
+def _format_recipe_plain(
+    recipe: dict | None,
+    fallback_name: str,
+    locale: str = "zh",
+) -> list[str]:
+    if not recipe:
+        return []
+    ui = _CARD_UI.get(locale, _CARD_UI["zh"])
+    lines: list[str] = []
+    station = recipe.get("station", "")
+    if station:
+        lines.append(f"    {ui['station']} {station}")
+    ings = " + ".join(_recipe_item_label(ing) for ing in recipe.get("ingredients", []))
+    result = _recipe_item_label(recipe.get("result", {}) or {}) or fallback_name
+    if ings:
+        lines.append(f"    {ings} → {result}")
+    return lines
+
+
 def _format_text_result(data: dict, locale: str = "zh") -> str:
     ui = _CARD_UI.get(locale, _CARD_UI["zh"])
     lines = [f"📦 {data.get('name', ui['unknown'])}", "=" * 30]
@@ -1076,41 +1142,34 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
 
     for stat in _display_stats(data, locale):
         label = stat.get("label", "")
-        stat = normalize_stat_for_display(stat, locale)
-        if stat.get("coins"):
-            parts = []
-            for coin in stat["coins"]:
-                abbr = {"pc": "PC", "gc": "GC", "sc": "SC", "cc": "CC"}.get(
-                    coin.get("type", ""), ""
-                )
-                parts.append(f"{coin.get('amount', '')} {abbr}".strip())
-            v = " ".join(parts)
-        elif resolve_bool_icon(stat) == "yes":
-            v = "✔"
-        elif resolve_bool_icon(stat) == "no":
-            v = "✘"
-        else:
-            value = stat.get("value", "")
-            extra = stat.get("extra", "")
-            if not value and not extra:
+        v = _format_stat_plain(stat, locale)
+        if not v and not stat.get("coins") and not resolve_bool_icon(stat):
+            if not stat.get("segments"):
                 continue
-            v = _format_stat_text(stat.get("value", ""), stat.get("extra", ""))
         lines.append(f"  {label}: {v}")
 
-    recipe = data.get("recipe")
+    set_pieces = data.get("set_pieces") or []
+    recipe = data.get("recipe") if not set_pieces else None
+    if set_pieces:
+        lines.append("")
+        lines.append(ui["set_pieces"].lstrip("▎"))
+        lines.append("-" * 30)
+        for piece in set_pieces:
+            lines.append(f"  · {piece.get('name', '')}")
+            for pstat in piece.get("stats", []):
+                plabel = pstat.get("label", "")
+                pv = _format_stat_plain(pstat, locale)
+                if pv:
+                    lines.append(f"      {plabel}: {pv}")
+            for rline in _format_recipe_plain(piece.get("recipe"), piece.get("name", ""), locale):
+                lines.append(rline)
+
     if recipe:
         lines.append("")
         lines.append(ui["recipe_title"])
         lines.append("-" * 30)
-        station = recipe.get("station", "")
-        if station:
-            lines.append(f"  {ui['station']} {station}")
-        ings = " + ".join(_recipe_item_label(ing) for ing in recipe.get("ingredients", []))
-        result = _recipe_item_label(recipe.get("result", {}) or {})
-        if not result:
-            result = data.get("name", "")
-        if ings:
-            lines.append(f"  {ings} → {result}")
+        for rline in _format_recipe_plain(recipe, data.get("name", ""), locale):
+            lines.append(f"  {rline.strip()}")
 
     drops = data.get("drops")
     if drops:
@@ -1218,7 +1277,7 @@ def _draw_recipe_block(
             x_pos = ing_start_x
             for ing in row_items:
                 ing_name = _recipe_item_label(ing)
-                ing_img = _load_image(_image_path(ing.get("image", "")), ING_ICON_SLOT)
+                ing_img = _load_item_image(ing.get("image", ""), ING_ICON_SLOT)
                 if ing_img:
                     _paste_in_slot(card, ing_img, x_pos, y, ING_ICON_SLOT[0], ing_row_h)
                 draw.text(
@@ -1232,7 +1291,7 @@ def _draw_recipe_block(
 
     result = recipe.get("result", {}) or {}
     result_name = _recipe_item_label(result)
-    result_img = _load_image(_image_path(result.get("image", "")), ING_ICON_SLOT)
+    result_img = _load_item_image(result.get("image", ""), ING_ICON_SLOT)
     draw.text((CARD_PADDING + 20, y), ui["result"], fill=COLORS["accent"], font=font_body)
     rx = CARD_PADDING + 100
     if result_img:
@@ -1284,7 +1343,7 @@ def _draw_set_pieces_section(
     y += 30
 
     for piece in set_pieces:
-        piece_img = _load_image(_image_path(piece.get("image", "")), ING_ICON_SLOT)
+        piece_img = _load_item_image(piece.get("image", ""), ING_ICON_SLOT)
         px = CARD_PADDING + 16
         if piece_img:
             _paste_in_slot(card, piece_img, px, y, ING_ICON_SLOT[0], ING_ICON_SLOT[1])
@@ -1325,6 +1384,7 @@ def _draw_set_pieces_section(
 
 def _generate_item_card(data: dict, locale: str = "zh") -> str:
     _ensure_dirs()
+    _prune_old_card_cache()
     ui = _CARD_UI.get(locale, _CARD_UI["zh"])
 
     font_title = _try_get_font(26)
@@ -1390,7 +1450,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
 
-    item_img = _load_image(_image_path(data.get("image", "")), ITEM_ICON_SLOT)
+    item_img = _load_item_image(data.get("image", ""), ITEM_ICON_SLOT)
     draw.rounded_rectangle(
         [CARD_PADDING, CARD_PADDING, CARD_WIDTH - CARD_PADDING, CARD_PADDING + title_area],
         radius=8,
@@ -1469,22 +1529,27 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v20_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_{CARD_VERSION}_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 
 
-def _format_update_result(result: dict) -> str:
+def _format_update_result(result: dict, force: bool = False) -> str:
     en_count = result.get("en_backfill_count", 0)
     drops_count = result.get("drops_backfill_count", 0)
     desc_count = result.get("desc_backfill_count", 0)
     extra_lines = ""
+    if force:
+        extra_lines += "\n模式：全量重建"
     if en_count:
         extra_lines += f"\n英文数据回填：{en_count} 个"
     if drops_count:
         extra_lines += f"\n掉落来源回填：{drops_count} 个"
     if desc_count:
         extra_lines += f"\n描述回填：{desc_count} 个"
+    piece_sync = result.get("piece_sync_count", 0)
+    if piece_sync:
+        extra_lines += f"\n套装部件同步：{piece_sync} 个"
     if result.get("new_count", 0) == 0 and not extra_lines:
         return (
             f"✅ Wiki 数据已是最新\n"
@@ -1600,7 +1665,8 @@ class TerrariaQueryPlugin(Star):
         raw = event.message_str.strip()
 
         if _is_update_command(raw):
-            async for result in self._handle_update(event):
+            force = _is_force_update_command(raw)
+            async for result in self._handle_update(event, force=force):
                 yield result
             event.stop_event()
             return
@@ -1664,7 +1730,7 @@ class TerrariaQueryPlugin(Star):
                 logger.error(f"生成图片失败 ({key}/{locale}): {e}")
                 yield event.plain_result(_format_text_result(display, locale=locale))
 
-    async def _handle_update(self, event: AstrMessageEvent):
+    async def _handle_update(self, event: AstrMessageEvent, force: bool = False):
         if not self._can_update(event):
             yield event.plain_result("❌ 仅管理员可执行 Wiki 数据更新。")
             return
@@ -1674,11 +1740,14 @@ class TerrariaQueryPlugin(Star):
             return
 
         if self.show_update_progress:
-            yield event.plain_result("🔄 正在从 Wiki 增量更新物品数据，请稍候…")
+            if force:
+                yield event.plain_result("🔄 正在从 Wiki **全量重建**数据，请稍候…")
+            else:
+                yield event.plain_result("🔄 正在从 Wiki 增量更新物品数据，请稍候…")
 
         try:
-            result = await self._run_wiki_update(force=False)
-            yield event.plain_result(_format_update_result(result))
+            result = await self._run_wiki_update(force=force)
+            yield event.plain_result(_format_update_result(result, force=force))
         except Exception as e:
             logger.error(f"Wiki 数据更新失败: {e}")
             yield event.plain_result(f"❌ 更新失败：{str(e)[:120]}")

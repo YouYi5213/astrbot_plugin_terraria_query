@@ -51,8 +51,6 @@ OVERVIEW_PAGES: dict[str, dict] = {
 }
 
 OVERVIEW_PAGE_TITLES = frozenset(OVERVIEW_PAGES)
-MAX_ITEM_RECIPE_ROWS = 4
-
 HEADERS = {
     "User-Agent": "AstrBot-TerrariaQuery/1.0 (offline data preparation; +https://docs.astrbot.app)",
     "Accept": "text/html,application/xhtml+xml",
@@ -77,7 +75,15 @@ def _image_url_from_src(src: str) -> str:
 
 def _filename_from_url(url: str) -> str:
     name = unquote(url.split("/")[-1].split("?")[0])
-    return name or "unknown.png"
+    name = name or "unknown.png"
+    return _normalize_image_filename(name)
+
+
+def _normalize_image_filename(filename: str) -> str:
+    """Wiki 缩略图名 17px-Item.png → Item.png"""
+    if not filename:
+        return ""
+    return re.sub(r"^\d+px-", "", filename, flags=re.I) or filename
 
 
 RARITY_LABELS = frozenset({"稀有度", "Rarity"})
@@ -759,9 +765,6 @@ def _description_fallback_from_stats(item: dict) -> str | None:
     return None
 
 
-    return None
-
-
 def _apply_description_to_item(item: dict, parsed: dict | str | None) -> bool:
     if isinstance(parsed, dict):
         text = parsed.get("text")
@@ -1043,14 +1046,45 @@ _STOP_SET_SECTION_IDS = frozenset(
 )
 
 
-def _is_armor_set_item(item: dict) -> bool:
+_SET_TYPE_MARKERS = (
+    "盔甲套装",
+    "时装套装",
+    "Armor set",
+    "Armor Set",
+    "Vanity set",
+    "Vanity Set",
+)
+
+
+def _normalize_type_token(val: str) -> str:
+    return re.sub(r"[\s_]+", "", (val or "").lower())
+
+
+def _is_set_item(item: dict) -> bool:
     for stat in item.get("stats", []):
         if stat.get("label") not in ("类型", "Type"):
             continue
         val = stat.get("value", "")
-        if "盔甲套装" in val or "Armor Set" in val:
+        if any(marker in val for marker in _SET_TYPE_MARKERS):
+            return True
+        if _normalize_type_token(val) in ("armorset", "vanityset"):
             return True
     return False
+
+
+def _is_armor_set_item(item: dict) -> bool:
+    return _is_set_item(item)
+
+
+def _set_page_type(item: dict) -> str:
+    for stat in item.get("stats", []):
+        if stat.get("label") not in ("类型", "Type"):
+            continue
+        val = stat.get("value", "")
+        compact = _normalize_type_token(val)
+        if "时装" in val or "Vanity" in val or compact == "vanityset":
+            return "vanity_set"
+    return "armor_set"
 
 
 def parse_piece_infobox(infobox: Tag, fallback_name: str = "") -> dict | None:
@@ -1215,45 +1249,138 @@ def _attach_armor_set_pieces(soup: BeautifulSoup, item: dict) -> None:
     if not set_pieces:
         return
 
-    item["page_type"] = "armor_set"
+    item["page_type"] = _set_page_type(item)
     item["set_pieces"] = set_pieces
     item["recipe"] = None
 
 
-def _merge_armor_set_pieces(items: dict[str, dict], set_name: str, set_item: dict) -> int:
+def _extract_piece_en_locale(en_piece: dict, zh_piece: dict) -> dict:
+    return {
+        "name": en_piece.get("name", ""),
+        "image": en_piece.get("image") or zh_piece.get("image", ""),
+        "stats": en_piece.get("stats", []),
+        "recipe": en_piece.get("recipe"),
+        "page_type": en_piece.get("page_type") or "armor_piece",
+    }
+
+
+def _piece_page_type(parent_item: dict) -> str:
+    if parent_item.get("page_type") == "vanity_set":
+        return "vanity_piece"
+    return "armor_piece"
+
+
+def _merge_set_pieces(items: dict[str, dict], set_name: str, set_item: dict) -> int:
     added = 0
-    for piece in set_item.get("set_pieces") or []:
+    en_pieces = (set_item.get("en") or {}).get("set_pieces") or []
+    piece_type = _piece_page_type(set_item)
+    for idx, piece in enumerate(set_item.get("set_pieces") or []):
         pname = piece.get("name")
         if not pname:
             continue
         existing = items.get(pname)
         if existing and not existing.get("from_armor_set"):
             continue
-        entry = {
+        entry: dict = {
             "name": pname,
             "image": piece.get("image", ""),
             "stats": piece.get("stats", []),
             "recipe": piece.get("recipe"),
-            "page_type": "armor_piece",
+            "page_type": piece_type,
             "from_armor_set": True,
             "parent_set": set_name,
         }
+        if idx < len(en_pieces):
+            en_piece = en_pieces[idx]
+            entry["en"] = _extract_piece_en_locale(en_piece, piece)
+            entry["en_name"] = en_piece.get("name", "")
         items[pname] = entry
         added += 1
     return added
+
+
+def _merge_armor_set_pieces(items: dict[str, dict], set_name: str, set_item: dict) -> int:
+    return _merge_set_pieces(items, set_name, set_item)
+
+
+def resync_set_piece_locales(items: dict[str, dict]) -> int:
+    """从套装父条目同步部件英文，无需重新抓取 Wiki。"""
+    updated = 0
+    for key, item in list(items.items()):
+        if item.get("page_type") not in ("armor_set", "vanity_set") and not _is_set_item(item):
+            continue
+        if not item.get("set_pieces"):
+            continue
+        updated += _merge_set_pieces(items, key, item)
+    return updated
+
+
+def _migrate_item_images(item: dict) -> int:
+    changed = 0
+
+    def fix_image(field: str) -> None:
+        nonlocal changed
+        raw = item.get(field)
+        if not raw:
+            return
+        normalized = _normalize_image_filename(raw)
+        if normalized != raw:
+            item[field] = normalized
+            changed += 1
+
+    fix_image("image")
+    for stat in item.get("stats", []):
+        for seg in stat.get("segments", []):
+            if seg.get("type") == "icon" and seg.get("image"):
+                normalized = _normalize_image_filename(seg["image"])
+                if normalized != seg["image"]:
+                    seg["image"] = normalized
+                    changed += 1
+        if stat.get("value_image"):
+            normalized = _normalize_image_filename(stat["value_image"])
+            if normalized != stat["value_image"]:
+                stat["value_image"] = normalized
+                changed += 1
+    recipe = item.get("recipe")
+    if recipe:
+        for ing in recipe.get("ingredients", []):
+            if ing.get("image"):
+                normalized = _normalize_image_filename(ing["image"])
+                if normalized != ing["image"]:
+                    ing["image"] = normalized
+                    changed += 1
+        res = recipe.get("result") or {}
+        if res.get("image"):
+            normalized = _normalize_image_filename(res["image"])
+            if normalized != res["image"]:
+                res["image"] = normalized
+                changed += 1
+    for piece in item.get("set_pieces") or []:
+        changed += _migrate_item_images(piece)
+    en = item.get("en")
+    if isinstance(en, dict):
+        changed += _migrate_item_images(en)
+    return changed
+
+
+def migrate_item_image_filenames(items: dict[str, dict]) -> int:
+    total = 0
+    for item in items.values():
+        total += _migrate_item_images(item)
+    return total
 
 
 async def refresh_armor_sets(
     session: aiohttp.ClientSession,
     items: dict[str, dict],
 ) -> int:
-    """刷新所有盔甲套装页的部件与配方数据"""
+    """刷新所有套装页（盔甲/时装）的部件与配方数据"""
     updated = 0
     image_urls: dict[str, str] = {}
 
     targets: list[tuple[str, str]] = []
     for key, item in items.items():
-        if item.get("page_type") == "armor_set" or _is_armor_set_item(item):
+        if item.get("page_type") in ("armor_set", "vanity_set") or _is_set_item(item):
             title = item.get("wiki_title") or key
             targets.append((key, title))
 
@@ -1266,9 +1393,9 @@ async def refresh_armor_sets(
             continue
         parsed["wiki_title"] = title
         items[key] = parsed
-        await attach_en_locale(session, parsed, title)
+        await attach_en_locale(session, parsed, title, force=True)
         updated += 1
-        _merge_armor_set_pieces(items, key, parsed)
+        _merge_set_pieces(items, key, parsed)
         image_urls.update(_collect_image_urls(parsed))
         for piece in parsed.get("set_pieces") or []:
             image_urls.update(_collect_image_urls(piece))
@@ -1331,48 +1458,14 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
         item["stats"].append(_parse_generic_stat(td, label))
 
     for table in soup.select("table.terraria.cellborder.recipes"):
-        # 跳过微光嬗变等带 caption 的配方表
         if table.select_one("caption"):
-            continue
-        rows = [tr for tr in table.select("tbody tr") if tr.get("data-rowid")]
-        if not rows:
             continue
         if fallback_name in OVERVIEW_PAGE_TITLES or item["name"] in OVERVIEW_PAGE_TITLES:
             break
-        if len(rows) > MAX_ITEM_RECIPE_ROWS:
+        recipes = parse_recipe_table(table)
+        if not recipes:
             continue
-        row = rows[0]
-        station_el = row.select_one("td.station")
-        station = _clean_text(station_el.get_text()) if station_el else ""
-        station = re.sub(r"(?<=[a-zA-Z\)）])or(?=[A-Z])", " or ", station)
-
-        ingredients = []
-        for li in row.select("td.ingredients li"):
-            span_i = li.select_one("span.i")
-            if not span_i:
-                continue
-            name, image = _parse_item_span(span_i)
-            if not name:
-                continue
-            entry: dict = {"name": name, "image": image}
-            amount_el = li.select_one("span.am")
-            amount = _clean_text(amount_el.get_text()) if amount_el else ""
-            if amount and amount not in ("1", ""):
-                entry["amount"] = amount
-            ingredients.append(entry)
-
-        result_el = row.select_one("td.result")
-        result = _parse_recipe_entry(result_el) if result_el else {"name": "", "image": ""}
-        if not result.get("name"):
-            result["name"] = item["name"]
-        if not result.get("image"):
-            result["image"] = item["image"]
-
-        item["recipe"] = {
-            "station": station,
-            "ingredients": ingredients,
-            "result": result,
-        }
+        item["recipe"] = recipes[0]
         break
 
     drops = parse_drops_from_soup(soup)
@@ -1449,13 +1542,25 @@ def _guess_en_title_from_image(item: dict) -> str | None:
     return stem.replace("_", " ")
 
 
+def _needs_en_locale_refresh(item: dict) -> bool:
+    """已有英文但缺少或与中文不同步的套装部件时，仍需重新抓取。"""
+    en = item.get("en") or {}
+    if not en.get("name"):
+        return True
+    zh_pieces = item.get("set_pieces") or []
+    if not zh_pieces:
+        return False
+    en_pieces = en.get("set_pieces") or []
+    return len(en_pieces) != len(zh_pieces)
+
+
 async def attach_en_locale(
     session: aiohttp.ClientSession,
     item: dict,
     zh_title: str,
     force: bool = False,
 ) -> bool:
-    if not force and item.get("en", {}).get("name"):
+    if not force and not _needs_en_locale_refresh(item):
         return False
 
     en_title = await fetch_en_langlink(session, zh_title)
@@ -1487,7 +1592,7 @@ async def backfill_en_locales(
     pending = [
         key
         for key, item in items.items()
-        if force or not item.get("en", {}).get("name")
+        if force or _needs_en_locale_refresh(item)
     ]
     pending.sort()
     if limit:
@@ -2032,6 +2137,8 @@ async def update_wiki_data(
     drops_backfill_count = 0
     desc_backfill_count = 0
     overview_count = 0
+    image_migrate_count = 0
+    piece_sync_count = 0
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -2072,10 +2179,10 @@ async def update_wiki_data(
                     continue
                 item["wiki_title"] = title
                 _apply_overview_page_meta(item, title)
-                if _is_armor_set_item(item):
-                    _merge_armor_set_pieces(items, name, item)
                 items[name] = item
                 await attach_en_locale(session, item, title)
+                if _is_set_item(item):
+                    _merge_set_pieces(items, name, item)
                 image_urls.update(_collect_image_urls(item))
                 new_count += 1
                 if i % 50 == 0 or i == len(title_list):
@@ -2098,7 +2205,7 @@ async def update_wiki_data(
             armor_set_count = await refresh_armor_sets(session, items)
             overview_count += armor_set_count
 
-        effective_en_limit = en_limit if en_only else (100 if en_limit is None else en_limit)
+        effective_en_limit = en_limit if en_only else (350 if en_limit is None else en_limit)
         if not desc_only:
             en_backfill_count = await backfill_en_locales(
                 session,
@@ -2129,6 +2236,9 @@ async def update_wiki_data(
                 limit=desc_limit if desc_limit is not None else 100,
             )
 
+    image_migrate_count = migrate_item_image_filenames(items)
+    piece_sync_count = resync_set_piece_locales(items)
+
     with open(ITEMS_JSON, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
 
@@ -2145,6 +2255,78 @@ async def update_wiki_data(
         "drops_backfill_count": drops_backfill_count,
         "desc_backfill_count": desc_backfill_count,
         "overview_count": overview_count,
+        "image_migrate_count": image_migrate_count,
+        "piece_sync_count": piece_sync_count,
+    }
+
+
+async def resync_set_en_from_wiki(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+) -> int:
+    """为套装页重新抓取英文（含 set_pieces），并同步到部件条目。"""
+    updated = 0
+    targets: list[tuple[str, str]] = []
+    for key, item in items.items():
+        if item.get("page_type") in ("armor_set", "vanity_set") or _is_set_item(item):
+            if item.get("set_pieces"):
+                targets.append((key, item.get("wiki_title") or key))
+
+    for key, title in targets:
+        item = items[key]
+        if await attach_en_locale(session, item, title, force=True):
+            updated += 1
+        await asyncio.sleep(0.12)
+
+    return updated
+
+
+async def resync_set_en_only() -> dict:
+    """仅重新抓取套装页英文并同步部件，不重新解析中文套装结构。"""
+    items = _load_existing_items()
+    connector = aiohttp.TCPConnector(limit=10)
+    timeout = aiohttp.ClientTimeout(total=60)
+    async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
+        en_updated = await resync_set_en_from_wiki(session, items)
+    piece_sync_count = resync_set_piece_locales(items)
+    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+        json.dump(items, f, ensure_ascii=False, indent=2)
+    return {
+        "en_updated": en_updated,
+        "piece_sync_count": piece_sync_count,
+        "total": len(items),
+    }
+
+
+async def maintain_local_data() -> dict:
+    """本地维护：规范化图片名、同步套装部件英文。"""
+    items = _load_existing_items()
+    result = {
+        "image_migrate_count": migrate_item_image_filenames(items),
+        "piece_sync_count": resync_set_piece_locales(items),
+        "total": len(items),
+        "sets_refreshed": 0,
+    }
+    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+        json.dump(items, f, ensure_ascii=False, indent=2)
+    return result
+
+
+async def refresh_sets_only() -> dict:
+    """从 Wiki 重新抓取所有套装页并同步部件。"""
+    items = _load_existing_items()
+    migrate_item_image_filenames(items)
+    connector = aiohttp.TCPConnector(limit=10)
+    timeout = aiohttp.ClientTimeout(total=60)
+    async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
+        sets_refreshed = await refresh_armor_sets(session, items)
+    piece_sync_count = resync_set_piece_locales(items)
+    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+        json.dump(items, f, ensure_ascii=False, indent=2)
+    return {
+        "sets_refreshed": sets_refreshed,
+        "piece_sync_count": piece_sync_count,
+        "total": len(items),
     }
 
 
@@ -2215,18 +2397,55 @@ if __name__ == "__main__":
         default=None,
         help="描述回填最多处理 N 个物品（调试用）",
     )
+    parser.add_argument(
+        "--resync-pieces",
+        action="store_true",
+        help="本地维护：规范化图片名并同步套装部件英文",
+    )
+    parser.add_argument(
+        "--refresh-sets",
+        action="store_true",
+        help="从 Wiki 重新抓取所有套装页（盔甲/时装）",
+    )
+    parser.add_argument(
+        "--resync-set-en",
+        action="store_true",
+        help="仅重新抓取套装页英文并同步部件（较快）",
+    )
     args = parser.parse_args()
     try:
-        asyncio.run(
-            main(
-                limit=args.limit,
-                force=args.force,
-                en_only=args.en_only,
-                en_limit=args.en_limit,
-                desc_only=args.desc_only,
-                desc_limit=args.desc_limit,
+        if args.resync_pieces:
+            result = asyncio.run(maintain_local_data())
+            print(
+                f"本地维护完成：图片名修正 {result['image_migrate_count']} 处，"
+                f"部件同步 {result['piece_sync_count']} 个，共 {result['total']} 条目",
+                flush=True,
             )
-        )
+        elif args.refresh_sets:
+            result = asyncio.run(refresh_sets_only())
+            print(
+                f"套装刷新完成：{result['sets_refreshed']} 套，"
+                f"部件同步 {result['piece_sync_count']} 个，共 {result['total']} 条目",
+                flush=True,
+            )
+        elif args.resync_set_en:
+            result = asyncio.run(resync_set_en_only())
+            print(
+                f"套装英文同步完成：{result['en_updated']} 套，"
+                f"部件同步 {result['piece_sync_count']} 个，共 {result['total']} 条目",
+                flush=True,
+            )
+        else:
+            asyncio.run(
+                main(
+                    limit=args.limit,
+                    force=args.force,
+                    en_only=args.en_only,
+                    en_limit=args.en_limit,
+                    desc_only=args.desc_only,
+                    desc_limit=args.desc_limit,
+                )
+            )
     except KeyboardInterrupt:
         print("\n已中断")
         sys.exit(1)

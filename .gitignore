@@ -1,0 +1,7 @@
+# 离线数据由 prepare_data.py 生成，不入库
+data/
+
+__pycache__/
+*.py[cod]
+*.log
+.env

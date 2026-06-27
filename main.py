@@ -225,6 +225,21 @@ def _image_path(filename: str) -> str:
     return os.path.join(IMAGES_DIR, filename)
 
 
+def _resolve_inline_icon_path(filename: str) -> str:
+    """Wiki 属性内联图标常用缩略图名（如 17px-Titanium_Mask.png），本地存完整物品图。"""
+    if not filename:
+        return ""
+    path = _image_path(filename)
+    if os.path.exists(path):
+        return path
+    base = re.sub(r"^\d+px-", "", filename, flags=re.I)
+    if base != filename:
+        alt = _image_path(base)
+        if os.path.exists(alt):
+            return alt
+    return path
+
+
 def _fit_image(img: Image.Image, max_w: int, max_h: int) -> Image.Image:
     w, h = img.size
     if w <= 0 or h <= 0:
@@ -279,7 +294,7 @@ def _load_bool_icon(kind: str) -> Image.Image | None:
 
 
 def _load_inline_icon(filename: str) -> Image.Image | None:
-    return _load_image(_image_path(filename), _INLINE_ICON_SIZE)
+    return _load_image(_resolve_inline_icon_path(filename), _INLINE_ICON_SIZE)
 
 
 def _recipe_item_label(entry: dict) -> str:
@@ -1454,7 +1469,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v19_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v20_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

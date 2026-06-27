@@ -25,6 +25,7 @@ from bs4 import BeautifulSoup
 
 WIKI_BASE = "https://terraria.wiki.gg/zh"
 API_URL = f"{WIKI_BASE}/api.php"
+API_URL_EN = "https://terraria.wiki.gg/api.php"
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(_PLUGIN_DIR, "data", "terraria_query")
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
@@ -163,6 +164,126 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
     return item
 
 
+def _extract_en_locale(en_item: dict, zh_item: dict) -> dict:
+    return {
+        "name": en_item.get("name", ""),
+        "image": en_item.get("image") or zh_item.get("image", ""),
+        "stats": en_item.get("stats", []),
+        "recipe": en_item.get("recipe"),
+    }
+
+
+async def fetch_en_langlink(session: aiohttp.ClientSession, zh_title: str) -> str | None:
+    params = {
+        "action": "query",
+        "titles": zh_title,
+        "prop": "langlinks",
+        "lllang": "en",
+        "format": "json",
+        "redirects": "1",
+    }
+    try:
+        async with session.get(
+            API_URL, params=params, headers=HEADERS, timeout=aiohttp.ClientTimeout(total=20)
+        ) as resp:
+            resp.raise_for_status()
+            data = await resp.json()
+    except (aiohttp.ClientError, asyncio.TimeoutError):
+        return None
+
+    pages = data.get("query", {}).get("pages", {})
+    for page in pages.values():
+        if page.get("missing"):
+            continue
+        for link in page.get("langlinks", []):
+            if link.get("lang") == "en":
+                title = _clean_text(link.get("*", ""))
+                if title:
+                    return title
+    return None
+
+
+async def fetch_en_page_html(session: aiohttp.ClientSession, en_title: str) -> str | None:
+    return await fetch_page_html(session, en_title, api_url=API_URL_EN)
+
+
+def _guess_en_title_from_image(item: dict) -> str | None:
+    image = item.get("image", "")
+    if not image:
+        return None
+    stem = os.path.splitext(image)[0]
+    if not stem:
+        return None
+    return stem.replace("_", " ")
+
+
+async def attach_en_locale(
+    session: aiohttp.ClientSession,
+    item: dict,
+    zh_title: str,
+) -> bool:
+    if item.get("en", {}).get("name"):
+        return False
+
+    en_title = await fetch_en_langlink(session, zh_title)
+    if not en_title:
+        en_title = _guess_en_title_from_image(item)
+
+    if not en_title:
+        return False
+
+    en_html = await fetch_en_page_html(session, en_title)
+    if not en_html:
+        return False
+
+    en_item = parse_item_page(en_html, en_title)
+    if not en_item or not en_item.get("name"):
+        return False
+
+    item["en"] = _extract_en_locale(en_item, item)
+    item["en_name"] = en_item["name"]
+    return True
+
+
+async def backfill_en_locales(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+    force: bool = False,
+    limit: int | None = None,
+) -> int:
+    pending = [
+        key
+        for key, item in items.items()
+        if force or not item.get("en", {}).get("name")
+    ]
+    pending.sort()
+    if limit:
+        pending = pending[:limit]
+
+    updated = 0
+    semaphore = asyncio.Semaphore(8)
+
+    async def _process_one(key: str) -> bool:
+        async with semaphore:
+            item = items[key]
+            zh_title = item.get("wiki_title") or item.get("name") or key
+            ok = await attach_en_locale(session, item, zh_title)
+            await asyncio.sleep(0.05)
+            return ok
+
+    batch_size = 50
+    for batch_start in range(0, len(pending), batch_size):
+        batch = pending[batch_start : batch_start + batch_size]
+        results = await asyncio.gather(*[_process_one(key) for key in batch])
+        updated += sum(1 for ok in results if ok)
+        done = batch_start + len(batch)
+        logger.info(f"英文数据回填进度 {done}/{len(pending)}，新增 {updated}")
+        with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+            json.dump(items, f, ensure_ascii=False, indent=2)
+
+    return updated
+
+
 async def fetch_category_members(
     session: aiohttp.ClientSession, category: str
 ) -> list[str]:
@@ -191,7 +312,9 @@ async def fetch_category_members(
     return titles
 
 
-async def fetch_page_html(session: aiohttp.ClientSession, title: str) -> str | None:
+async def fetch_page_html(
+    session: aiohttp.ClientSession, title: str, api_url: str = API_URL
+) -> str | None:
     """通过 MediaWiki API 获取页面 HTML（比直接抓取更稳定）"""
     params = {
         "action": "parse",
@@ -203,7 +326,7 @@ async def fetch_page_html(session: aiohttp.ClientSession, title: str) -> str | N
     for attempt in range(3):
         try:
             async with session.get(
-                API_URL, params=params, headers=HEADERS, timeout=aiohttp.ClientTimeout(total=25)
+                api_url, params=params, headers=HEADERS, timeout=aiohttp.ClientTimeout(total=25)
             ) as resp:
                 if resp.status == 404:
                     return None
@@ -283,7 +406,12 @@ def _load_existing_items() -> dict[str, dict]:
         return {}
 
 
-async def update_wiki_data(limit: int | None = None, force: bool = False) -> dict:
+async def update_wiki_data(
+    limit: int | None = None,
+    force: bool = False,
+    en_limit: int | None = None,
+    en_only: bool = False,
+) -> dict:
     """增量（或全量）更新 Wiki 离线数据，返回统计信息。"""
     os.makedirs(IMAGES_DIR, exist_ok=True)
 
@@ -293,53 +421,65 @@ async def update_wiki_data(limit: int | None = None, force: bool = False) -> dic
     new_count = 0
     images_total = 0
     images_ok = 0
+    en_backfill_count = 0
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
     async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
-        all_titles: set[str] = set()
-        for cat in CATEGORIES:
-            titles = await fetch_category_members(session, cat)
-            all_titles.update(titles)
-            await asyncio.sleep(0.3)
+        if not en_only:
+            all_titles: set[str] = set()
+            for cat in CATEGORIES:
+                titles = await fetch_category_members(session, cat)
+                all_titles.update(titles)
+                await asyncio.sleep(0.3)
 
-        title_list = sorted(all_titles)
-        if not force:
-            title_list = [t for t in title_list if t not in items]
-        if limit:
-            title_list = title_list[:limit]
-        pages_scanned = len(title_list)
+            title_list = sorted(all_titles)
+            if not force:
+                title_list = [t for t in title_list if t not in items]
+            if limit:
+                title_list = title_list[:limit]
+            pages_scanned = len(title_list)
 
-        image_urls: dict[str, str] = {}
+            image_urls: dict[str, str] = {}
 
-        for i, title in enumerate(title_list, 1):
-            html = await fetch_page_html(session, title)
-            if not html:
-                continue
-            item = parse_item_page(html, title)
-            if not item:
-                continue
-            name = item["name"]
-            if not force and name in items:
-                continue
-            items[name] = item
-            image_urls.update(_collect_image_urls(item))
-            new_count += 1
-            if i % 50 == 0 or i == len(title_list):
-                logger.info(
-                    f"Wiki 更新进度 {i}/{len(title_list)}，新增 {new_count}，总计 {len(items)}"
-                )
-            await asyncio.sleep(0.15)
+            for i, title in enumerate(title_list, 1):
+                html = await fetch_page_html(session, title)
+                if not html:
+                    continue
+                item = parse_item_page(html, title)
+                if not item:
+                    continue
+                name = item["name"]
+                if not force and name in items:
+                    continue
+                item["wiki_title"] = title
+                items[name] = item
+                await attach_en_locale(session, item, title)
+                image_urls.update(_collect_image_urls(item))
+                new_count += 1
+                if i % 50 == 0 or i == len(title_list):
+                    logger.info(
+                        f"Wiki 更新进度 {i}/{len(title_list)}，新增 {new_count}，总计 {len(items)}"
+                    )
+                await asyncio.sleep(0.15)
 
-        images_total = len(image_urls)
-        if image_urls:
-            semaphore = asyncio.Semaphore(8)
-            tasks = [
-                download_image(session, fn, url, semaphore)
-                for fn, url in image_urls.items()
-            ]
-            results = await asyncio.gather(*tasks)
-            images_ok = sum(1 for r in results if r)
+            images_total = len(image_urls)
+            if image_urls:
+                semaphore = asyncio.Semaphore(8)
+                tasks = [
+                    download_image(session, fn, url, semaphore)
+                    for fn, url in image_urls.items()
+                ]
+                results = await asyncio.gather(*tasks)
+                images_ok = sum(1 for r in results if r)
+
+        effective_en_limit = en_limit if en_only else (100 if en_limit is None else en_limit)
+        en_backfill_count = await backfill_en_locales(
+            session,
+            items,
+            force=bool(en_only and force),
+            limit=effective_en_limit,
+        )
 
     with open(ITEMS_JSON, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
@@ -353,22 +493,34 @@ async def update_wiki_data(limit: int | None = None, force: bool = False) -> dic
         "pages_scanned": pages_scanned,
         "images_total": images_total,
         "images_ok": images_ok,
+        "en_backfill_count": en_backfill_count,
     }
 
 
-async def main(limit: int | None = None, force: bool = False) -> None:
-    if force:
+async def main(
+    limit: int | None = None,
+    force: bool = False,
+    en_only: bool = False,
+    en_limit: int | None = None,
+) -> None:
+    if en_only:
+        existing = _load_existing_items()
+        print(f"英文回填模式：已有 {len(existing)} 个物品", flush=True)
+    elif force:
         print("全量模式：将重新抓取所有物品", flush=True)
     else:
         existing = _load_existing_items()
         print(f"增量模式：已有 {len(existing)} 个物品，跳过已存在的", flush=True)
 
     print("正在收集并更新 Wiki 数据...", flush=True)
-    result = await update_wiki_data(limit=limit, force=force)
+    result = await update_wiki_data(
+        limit=limit, force=force, en_only=en_only, en_limit=en_limit
+    )
     print(
         f"更新完成：新增 {result['new_count']} 个，"
         f"共 {result['total']} 个物品，"
-        f"新图片 {result['images_ok']}/{result['images_total']}",
+        f"新图片 {result['images_ok']}/{result['images_total']}，"
+        f"英文回填 {result['en_backfill_count']} 个",
         flush=True,
     )
     print(f"已保存到 {ITEMS_JSON}", flush=True)
@@ -378,9 +530,27 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="准备泰拉瑞亚 Wiki 离线数据")
     parser.add_argument("--limit", type=int, default=None, help="仅处理前 N 个页面（调试用）")
     parser.add_argument("--force", action="store_true", help="全量重建，覆盖已有数据")
+    parser.add_argument(
+        "--en-only",
+        action="store_true",
+        help="仅回填英文数据，不抓取中文 Wiki",
+    )
+    parser.add_argument(
+        "--en-limit",
+        type=int,
+        default=None,
+        help="英文回填最多处理 N 个物品（调试用）",
+    )
     args = parser.parse_args()
     try:
-        asyncio.run(main(limit=args.limit, force=args.force))
+        asyncio.run(
+            main(
+                limit=args.limit,
+                force=args.force,
+                en_only=args.en_only,
+                en_limit=args.en_limit,
+            )
+        )
     except KeyboardInterrupt:
         print("\n已中断")
         sys.exit(1)

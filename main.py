@@ -165,19 +165,106 @@ def _is_update_command(text: str) -> bool:
 _TERRARIA_CMD_RE = r"^/?(泰拉更新|泰拉查询|泰拉|terraria)(\s|$)"
 
 
-def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
+_CARD_UI = {
+    "zh": {
+        "stats": "▎属性",
+        "recipe": "▎合成配方",
+        "station": "制作站:",
+        "materials": "材料:",
+        "result": "→ 产物:",
+        "unknown": "未知物品",
+        "recipe_title": "📜 合成配方",
+    },
+    "en": {
+        "stats": "▎Stats",
+        "recipe": "▎Recipe",
+        "station": "Station:",
+        "materials": "Materials:",
+        "result": "→ Result:",
+        "unknown": "Unknown Item",
+        "recipe_title": "📜 Recipe",
+    },
+}
+
+
+def _query_locale_hint(query: str) -> str | None:
+    has_cjk = bool(re.search(r"[\u4e00-\u9fff]", query))
+    has_latin = bool(re.search(r"[A-Za-z]", query))
+    if has_cjk and not has_latin:
+        return "zh"
+    if has_latin and not has_cjk:
+        return "en"
+    return None
+
+
+def _item_en_name(item: dict) -> str:
+    en = item.get("en") or {}
+    return en.get("name") or item.get("en_name") or ""
+
+
+def _fuzzy_match(query: str, items: dict[str, dict]) -> list[tuple[str, str]]:
     query = query.strip()
     if not query:
         return []
-    if query in items:
-        return [query]
-    matches = [name for name in items if query in name]
-    matches.sort(key=lambda n: (len(n), n))
-    return matches
+
+    locale_hint = _query_locale_hint(query)
+    query_lower = query.lower()
+    found: dict[tuple[str, str], int] = {}
+
+    def add(key: str, locale: str, rank: int) -> None:
+        slot = (key, locale)
+        if slot not in found or rank < found[slot]:
+            found[slot] = rank
+
+    for key, item in items.items():
+        zh_name = item.get("name", key)
+        en_name = _item_en_name(item)
+
+        if locale_hint in (None, "zh"):
+            if query == key or query == zh_name:
+                add(key, "zh", 0)
+            elif query in key or query in zh_name:
+                add(key, "zh", min(len(key), len(zh_name)))
+
+        if locale_hint in (None, "en") and en_name:
+            en_lower = en_name.lower()
+            if query_lower == en_lower:
+                add(key, "en", 0)
+            elif query_lower in en_lower:
+                add(key, "en", len(en_name))
+
+    ranked = sorted(found.items(), key=lambda x: (x[1], x[0][1], x[0][0]))
+    return [pair for pair, _ in ranked]
 
 
-def _format_text_result(data: dict) -> str:
-    lines = [f"📦 {data.get('name', '未知物品')}", "=" * 30]
+def _resolve_display_item(item: dict, locale: str) -> dict | None:
+    if locale == "en":
+        en = item.get("en")
+        if not en or not en.get("name"):
+            return None
+        return {
+            "name": en.get("name", item.get("name", "")),
+            "image": en.get("image") or item.get("image", ""),
+            "stats": en.get("stats", []),
+            "recipe": en.get("recipe"),
+        }
+    return {
+        "name": item.get("name", ""),
+        "image": item.get("image", ""),
+        "stats": item.get("stats", []),
+        "recipe": item.get("recipe"),
+    }
+
+
+def _match_label(key: str, item: dict, locale: str) -> str:
+    if locale == "en":
+        return _item_en_name(item) or item.get("name", key)
+    return item.get("name", key)
+
+
+def _format_text_result(data: dict, locale: str = "zh") -> str:
+    ui = _CARD_UI.get(locale, _CARD_UI["zh"])
+    lines = [f"📦 {data.get('name', ui['unknown'])}", "=" * 30]
 
     for stat in data.get("stats", []):
         label = stat.get("label", "")
@@ -191,11 +278,11 @@ def _format_text_result(data: dict) -> str:
     recipe = data.get("recipe")
     if recipe:
         lines.append("")
-        lines.append("📜 合成配方")
+        lines.append(ui["recipe_title"])
         lines.append("-" * 30)
         station = recipe.get("station", "")
         if station:
-            lines.append(f"  制作站: {station}")
+            lines.append(f"  {ui['station']} {station}")
         ings = " + ".join(ing.get("name", "") for ing in recipe.get("ingredients", []))
         result = recipe.get("result", {}).get("name", data.get("name", ""))
         if ings:
@@ -204,8 +291,9 @@ def _format_text_result(data: dict) -> str:
     return "\n".join(lines)
 
 
-def _generate_item_card(data: dict) -> str:
+def _generate_item_card(data: dict, locale: str = "zh") -> str:
     _ensure_dirs()
+    ui = _CARD_UI.get(locale, _CARD_UI["zh"])
 
     font_title = _try_get_font(26)
     font_header = _try_get_font(20)
@@ -244,13 +332,13 @@ def _generate_item_card(data: dict) -> str:
 
     draw.text(
         (text_x, CARD_PADDING + 6),
-        data.get("name", "未知物品"),
+        data.get("name", ui["unknown"]),
         fill=COLORS["title"],
         font=font_title,
     )
 
     y = CARD_PADDING + title_area + 10
-    draw.text((CARD_PADDING + 10, y), "▎属性", fill=COLORS["accent"], font=font_header)
+    draw.text((CARD_PADDING + 10, y), ui["stats"], fill=COLORS["accent"], font=font_header)
     y += 30
 
     for stat in stats:
@@ -273,17 +361,22 @@ def _generate_item_card(data: dict) -> str:
     y += 20
 
     if recipe:
-        draw.text((CARD_PADDING + 10, y), "▎合成配方", fill=COLORS["accent"], font=font_header)
+        draw.text((CARD_PADDING + 10, y), ui["recipe"], fill=COLORS["accent"], font=font_header)
         y += 30
 
         station = recipe.get("station", "")
         if station:
-            draw.text((CARD_PADDING + 20, y), f"制作站: {station}", fill=COLORS["label"], font=font_small)
+            draw.text(
+                (CARD_PADDING + 20, y),
+                f"{ui['station']} {station}",
+                fill=COLORS["label"],
+                font=font_small,
+            )
             y += 22
 
         ingredients = recipe.get("ingredients", [])
         if ingredients:
-            draw.text((CARD_PADDING + 20, y), "材料:", fill=COLORS["label"], font=font_small)
+            draw.text((CARD_PADDING + 20, y), ui["materials"], fill=COLORS["label"], font=font_small)
             y += 5
             for i in range(0, len(ingredients), 4):
                 row_items = ingredients[i : i + 4]
@@ -301,7 +394,7 @@ def _generate_item_card(data: dict) -> str:
         result = recipe.get("result", {})
         result_name = result.get("name", data.get("name", ""))
         result_img = _load_image(_image_path(result.get("image", "")), (28, 28))
-        draw.text((CARD_PADDING + 20, y), "→ 产物:", fill=COLORS["accent"], font=font_body)
+        draw.text((CARD_PADDING + 20, y), ui["result"], fill=COLORS["accent"], font=font_body)
         rx = CARD_PADDING + 100
         if result_img:
             card.paste(result_img, (rx, y), result_img)
@@ -309,22 +402,29 @@ def _generate_item_card(data: dict) -> str:
         draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 
 
 def _format_update_result(result: dict) -> str:
-    if result.get("new_count", 0) == 0:
+    en_count = result.get("en_backfill_count", 0)
+    en_line = f"\n英文数据回填：{en_count} 个" if en_count else ""
+    if result.get("new_count", 0) == 0 and en_count == 0:
         return (
             f"✅ Wiki 数据已是最新\n"
             f"当前共 {result.get('total', 0)} 个物品"
+        )
+    if result.get("new_count", 0) == 0:
+        return (
+            f"✅ Wiki 数据更新完成\n"
+            f"当前总计：{result.get('total', 0)} 个物品{en_line}"
         )
     return (
         f"✅ Wiki 数据更新完成\n"
         f"本次新增：{result.get('new_count', 0)} 个\n"
         f"当前总计：{result.get('total', 0)} 个\n"
-        f"新图片：{result.get('images_ok', 0)}/{result.get('images_total', 0)}"
+        f"新图片：{result.get('images_ok', 0)}/{result.get('images_total', 0)}{en_line}"
     )
 
 
@@ -440,7 +540,11 @@ class TerrariaQueryPlugin(Star):
 
     async def _handle_query(self, event: AstrMessageEvent, text: str):
         if not text:
-            yield event.plain_result("用法: 泰拉查询 <物品名>\n例如: 泰拉查询 天顶剑")
+            yield event.plain_result(
+                "用法: 泰拉查询 <物品名>\n"
+                "例如: 泰拉查询 天顶剑\n"
+                "      泰拉查询 Zenith"
+            )
             return
 
         if not self.items:
@@ -457,21 +561,33 @@ class TerrariaQueryPlugin(Star):
 
         if len(matches) > 3:
             lines = [f"找到 {len(matches)} 个匹配结果，请输入更精确的名称后重新查询：", ""]
-            lines.extend(f"· {name}" for name in matches)
+            for key, locale in matches:
+                item = self.items[key]
+                label = _match_label(key, item, locale)
+                if locale == "en" and item.get("name"):
+                    lines.append(f"· {label} ({item['name']})")
+                else:
+                    lines.append(f"· {label}")
             yield event.plain_result("\n".join(lines))
             return
 
         if len(matches) > 1:
             yield event.plain_result(f"找到 {len(matches)} 个匹配结果：")
 
-        for name in matches:
-            data = self.items[name]
+        for key, locale in matches:
+            item = self.items[key]
+            display = _resolve_display_item(item, locale)
+            if not display:
+                yield event.plain_result(
+                    f"❌ 「{item.get('name', key)}」暂无英文数据，请尝试中文查询或执行「泰拉更新」。"
+                )
+                continue
             try:
-                card_path = _generate_item_card(data)
+                card_path = _generate_item_card(display, locale=locale)
                 yield event.image_result(card_path)
             except Exception as e:
-                logger.error(f"生成图片失败 ({name}): {e}")
-                yield event.plain_result(_format_text_result(data))
+                logger.error(f"生成图片失败 ({key}/{locale}): {e}")
+                yield event.plain_result(_format_text_result(display, locale=locale))
 
     async def _handle_update(self, event: AstrMessageEvent):
         if not self._can_update(event):

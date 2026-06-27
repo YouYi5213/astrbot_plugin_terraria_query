@@ -266,27 +266,68 @@ def resolve_bool_icon(stat: dict) -> str | None:
     return None
 
 
-def _parse_drop_row(tr) -> dict | None:
-    tds = tr.select("td")
-    if len(tds) < 3:
-        return None
-    entity = tds[0]
+def _parse_mode_field(td) -> dict[str, str]:
+    mode_content = td.select_one(".mode-content")
+    if not mode_content:
+        return {}
+    values: dict[str, str] = {}
+    for span in mode_content.select("span[class]"):
+        classes = set(span.get("class", []))
+        text = _clean_text(span.get_text())
+        if not text:
+            continue
+        if classes & {"m-normal", "m-journey"}:
+            values["normal"] = text
+        if "m-expert-master" in classes:
+            values["expert"] = text
+            values["master"] = text
+        elif "m-expert" in classes:
+            values["expert"] = text
+        elif "m-master" in classes:
+            values["master"] = text
+    return values
+
+
+def _resolve_mode_values(td) -> dict[str, str]:
+    by_mode = _parse_mode_field(td)
+    fallback = _clean_text(td.get_text())
+    if not by_mode:
+        return {"normal": fallback, "expert": fallback, "master": fallback}
+    values = {
+        "normal": by_mode.get("normal", fallback),
+        "expert": by_mode.get("expert", by_mode.get("normal", fallback)),
+        "master": by_mode.get("master", by_mode.get("expert", by_mode.get("normal", fallback))),
+    }
+    return values
+
+
+def _parse_drop_entity(entity) -> tuple[str, str]:
     name_el = entity.select_one(".entity-name a[title]") or entity.select_one("a[title]")
     if name_el:
         name = _clean_text(name_el.get("title") or name_el.get_text())
     else:
         name = _clean_text(entity.get_text())
-    if not name:
-        return None
     img_el = entity.select_one(".npcimg img") or entity.select_one("img")
     image = ""
     if img_el and img_el.get("src"):
         image = _filename_from_url(_image_url_from_src(img_el["src"]))
+    return name, image
+
+
+def _parse_drop_row(tr) -> dict | None:
+    tds = tr.select("td")
+    if len(tds) < 3:
+        return None
+    name, image = _parse_drop_entity(tds[0])
+    if not name:
+        return None
+    qty_by_mode = _resolve_mode_values(tds[1])
+    chance_by_mode = _resolve_mode_values(tds[2])
     return {
         "name": name,
         "image": image,
-        "quantity": _clean_text(tds[1].get_text()),
-        "chance": _clean_text(tds[2].get_text()),
+        "qty_by_mode": qty_by_mode,
+        "chance_by_mode": chance_by_mode,
     }
 
 
@@ -305,26 +346,43 @@ def _parse_drop_modes(box) -> list[dict]:
     return modes
 
 
+_DEFAULT_DROP_MODES = [
+    {"mode": "normal", "label": "经典"},
+    {"mode": "expert", "label": "专家"},
+    {"mode": "master", "label": "大师"},
+]
+
+
 def parse_drops_from_soup(soup: BeautifulSoup) -> dict | None:
     box = soup.select_one("div.drop.infobox.modesbox")
     if not box:
         return None
 
-    entries: list[dict] = []
+    rows: list[dict] = []
     for tr in box.select("table.drop-noncustom tbody tr"):
         if tr.select("th"):
             continue
-        entry = _parse_drop_row(tr)
-        if entry:
-            entries.append(entry)
-    if not entries:
+        row = _parse_drop_row(tr)
+        if row:
+            rows.append(row)
+    if not rows:
         return None
 
-    mode_tabs = _parse_drop_modes(box)
-    if not mode_tabs:
-        mode_tabs = [{"mode": "normal", "label": "经典"}]
-
-    modes = [{**tab, "entries": entries} for tab in mode_tabs]
+    mode_tabs = _parse_drop_modes(box) or list(_DEFAULT_DROP_MODES)
+    modes = []
+    for tab in mode_tabs:
+        mode_key = tab["mode"]
+        entries = []
+        for row in rows:
+            entries.append(
+                {
+                    "name": row["name"],
+                    "image": row["image"],
+                    "quantity": row["qty_by_mode"].get(mode_key, ""),
+                    "chance": row["chance_by_mode"].get(mode_key, ""),
+                }
+            )
+        modes.append({**tab, "entries": entries})
     return {"modes": modes}
 
 

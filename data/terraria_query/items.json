@@ -5309,19 +5309,19 @@
               "name": "小丑",
               "image": "Clown.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "巨型蝙蝠",
               "image": "Giant_Bat.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "木乃伊",
               "image": "Light_Mummy.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "木乃伊",
@@ -5339,19 +5339,19 @@
               "name": "小丑",
               "image": "Clown.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "巨型蝙蝠",
               "image": "Giant_Bat.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "木乃伊",
               "image": "Light_Mummy.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "木乃伊",
@@ -5369,19 +5369,19 @@
               "name": "小丑",
               "image": "Clown.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "巨型蝙蝠",
               "image": "Giant_Bat.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "木乃伊",
               "image": "Light_Mummy.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "木乃伊",
@@ -7973,7 +7973,7 @@
               "name": "南瓜王",
               "image": "Pumpking_head.gif",
               "quantity": "1",
-              "chance": "2.5–12.5% (电脑版、主机版、和移动版)1.79–14.29% (前代主机版、和3DS版)6.25–12.5%"
+              "chance": "2.5–12.5% (电脑版、主机版、和移动版)1.79–14.29% (前代主机版、和3DS版)"
             }
           ]
         },
@@ -7985,7 +7985,7 @@
               "name": "南瓜王",
               "image": "Pumpking_head.gif",
               "quantity": "1",
-              "chance": "2.5–12.5% (电脑版、主机版、和移动版)1.79–14.29% (前代主机版、和3DS版)6.25–12.5%"
+              "chance": "6.25–12.5%"
             }
           ]
         },
@@ -7997,7 +7997,7 @@
               "name": "南瓜王",
               "image": "Pumpking_head.gif",
               "quantity": "1",
-              "chance": "2.5–12.5% (电脑版、主机版、和移动版)1.79–14.29% (前代主机版、和3DS版)6.25–12.5%"
+              "chance": "6.25–12.5%"
             }
           ]
         }
@@ -12143,13 +12143,13 @@
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "25%"
             },
             {
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "25%"
             }
           ]
         },
@@ -12161,13 +12161,13 @@
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "50%"
             },
             {
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "50%"
             }
           ]
         },
@@ -12179,13 +12179,13 @@
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "50%"
             },
             {
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "50%"
             }
           ]
         }
@@ -17562,7 +17562,7 @@
             {
               "name": "尖刺冰雪史莱姆",
               "image": "Spiked_Ice_Slime.gif",
-              "quantity": "1–21–3",
+              "quantity": "1–2",
               "chance": "100%"
             },
             {
@@ -17790,7 +17790,7 @@
             {
               "name": "尖刺冰雪史莱姆",
               "image": "Spiked_Ice_Slime.gif",
-              "quantity": "1–21–3",
+              "quantity": "1–3",
               "chance": "100%"
             },
             {
@@ -18018,7 +18018,7 @@
             {
               "name": "尖刺冰雪史莱姆",
               "image": "Spiked_Ice_Slime.gif",
-              "quantity": "1–21–3",
+              "quantity": "1–3",
               "chance": "100%"
             },
             {
@@ -18445,7 +18445,7 @@
               "name": "骷髅李",
               "image": "Bone_Lee.gif",
               "quantity": "1",
-              "chance": "8.33%15.97%"
+              "chance": "8.33%"
             }
           ]
         },
@@ -18457,7 +18457,7 @@
               "name": "骷髅李",
               "image": "Bone_Lee.gif",
               "quantity": "1",
-              "chance": "8.33%15.97%"
+              "chance": "15.97%"
             }
           ]
         },
@@ -18469,7 +18469,7 @@
               "name": "骷髅李",
               "image": "Bone_Lee.gif",
               "quantity": "1",
-              "chance": "8.33%15.97%"
+              "chance": "15.97%"
             }
           ]
         }
@@ -18792,7 +18792,7 @@
               "name": "常绿尖叫怪",
               "image": "Everscream.gif",
               "quantity": "1",
-              "chance": "3.11% - 7.78%6.22% - 31.11%"
+              "chance": "3.11% - 7.78%"
             }
           ]
         },
@@ -18804,7 +18804,7 @@
               "name": "常绿尖叫怪",
               "image": "Everscream.gif",
               "quantity": "1",
-              "chance": "3.11% - 7.78%6.22% - 31.11%"
+              "chance": "6.22% - 31.11%"
             }
           ]
         },
@@ -18816,7 +18816,7 @@
               "name": "常绿尖叫怪",
               "image": "Everscream.gif",
               "quantity": "1",
-              "chance": "3.11% - 7.78%6.22% - 31.11%"
+              "chance": "6.22% - 31.11%"
             }
           ]
         }
@@ -19568,7 +19568,7 @@
               "name": "冰雪女王",
               "image": "Ice_Queen.png",
               "quantity": "1",
-              "chance": "5.19–10.37%15.56–31.11%"
+              "chance": "5.19–10.37%"
             }
           ]
         },
@@ -19580,7 +19580,7 @@
               "name": "冰雪女王",
               "image": "Ice_Queen.png",
               "quantity": "1",
-              "chance": "5.19–10.37%15.56–31.11%"
+              "chance": "15.56–31.11%"
             }
           ]
         },
@@ -19592,7 +19592,7 @@
               "name": "冰雪女王",
               "image": "Ice_Queen.png",
               "quantity": "1",
-              "chance": "5.19–10.37%15.56–31.11%"
+              "chance": "15.56–31.11%"
             }
           ]
         }
@@ -21316,7 +21316,7 @@
               "name": "变态人",
               "image": "Psycho.gif",
               "quantity": "1",
-              "chance": "2.5%4.94%"
+              "chance": "2.5%"
             }
           ]
         },
@@ -21328,7 +21328,7 @@
               "name": "变态人",
               "image": "Psycho.gif",
               "quantity": "1",
-              "chance": "2.5%4.94%"
+              "chance": "4.94%"
             }
           ]
         },
@@ -21340,7 +21340,7 @@
               "name": "变态人",
               "image": "Psycho.gif",
               "quantity": "1",
-              "chance": "2.5%4.94%"
+              "chance": "4.94%"
             }
           ]
         }
@@ -21627,25 +21627,25 @@
               "name": "丛林史莱姆",
               "image": "Jungle_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "僵尸",
               "image": "Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "僵尸",
               "image": "Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "僵尸",
               "image": "30px-Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "僵尸",
@@ -21657,19 +21657,19 @@
               "name": "冰雪史莱姆",
               "image": "Ice_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "史莱姆之母",
               "image": "Mother_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "史莱姆宝宝",
               "image": "Baby_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "史莱姆王",
@@ -21681,25 +21681,25 @@
               "name": "夜明史莱姆",
               "image": "Illuminant_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "小史莱姆",
               "image": "Slimeling.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "尖刺丛林史莱姆",
               "image": "Spiked_Jungle_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "尖刺冰雪史莱姆",
               "image": "Spiked_Ice_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.0143%"
+              "chance": "0.01%"
             },
             {
               "name": "尖刺史莱姆",
@@ -21711,73 +21711,73 @@
               "name": "弹力史莱姆",
               "image": "Bouncy_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "毒泥",
               "image": "Toxic_Sludge.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "水晶史莱姆",
               "image": "Crystal_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "沙史莱姆",
               "image": "Sand_Slime.gif",
               "quantity": "1",
-              "chance": "0.013%0.018%"
+              "chance": "0.013%"
             },
             {
               "name": "粉史莱姆",
               "image": "Pinky.gif",
               "quantity": "1",
-              "chance": "1%1.4%"
+              "chance": "1%"
             },
             {
               "name": "紫史莱姆",
               "image": "Purple_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "红史莱姆",
               "image": "Red_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "绿史莱姆",
               "image": "Green_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "蓝史莱姆",
               "image": "Blue_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "飞翔史莱姆",
               "image": "Heavenly_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "黄史莱姆",
               "image": "Yellow_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             },
             {
               "name": "黑史莱姆",
               "image": "Black_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.01%"
             }
           ]
         },
@@ -21789,25 +21789,25 @@
               "name": "丛林史莱姆",
               "image": "Jungle_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "僵尸",
               "image": "Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "僵尸",
               "image": "Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "僵尸",
               "image": "30px-Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "僵尸",
@@ -21819,19 +21819,19 @@
               "name": "冰雪史莱姆",
               "image": "Ice_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "史莱姆之母",
               "image": "Mother_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "史莱姆宝宝",
               "image": "Baby_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "史莱姆王",
@@ -21843,25 +21843,25 @@
               "name": "夜明史莱姆",
               "image": "Illuminant_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "小史莱姆",
               "image": "Slimeling.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "尖刺丛林史莱姆",
               "image": "Spiked_Jungle_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "尖刺冰雪史莱姆",
               "image": "Spiked_Ice_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.0143%"
+              "chance": "0.0143%"
             },
             {
               "name": "尖刺史莱姆",
@@ -21873,73 +21873,73 @@
               "name": "弹力史莱姆",
               "image": "Bouncy_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "毒泥",
               "image": "Toxic_Sludge.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "水晶史莱姆",
               "image": "Crystal_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "沙史莱姆",
               "image": "Sand_Slime.gif",
               "quantity": "1",
-              "chance": "0.013%0.018%"
+              "chance": "0.018%"
             },
             {
               "name": "粉史莱姆",
               "image": "Pinky.gif",
               "quantity": "1",
-              "chance": "1%1.4%"
+              "chance": "1.4%"
             },
             {
               "name": "紫史莱姆",
               "image": "Purple_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "红史莱姆",
               "image": "Red_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "绿史莱姆",
               "image": "Green_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "蓝史莱姆",
               "image": "Blue_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "飞翔史莱姆",
               "image": "Heavenly_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "黄史莱姆",
               "image": "Yellow_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "黑史莱姆",
               "image": "Black_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             }
           ]
         },
@@ -21951,25 +21951,25 @@
               "name": "丛林史莱姆",
               "image": "Jungle_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "僵尸",
               "image": "Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "僵尸",
               "image": "Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "僵尸",
               "image": "30px-Slimed_Zombie.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "僵尸",
@@ -21981,19 +21981,19 @@
               "name": "冰雪史莱姆",
               "image": "Ice_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "史莱姆之母",
               "image": "Mother_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "史莱姆宝宝",
               "image": "Baby_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "史莱姆王",
@@ -22005,25 +22005,25 @@
               "name": "夜明史莱姆",
               "image": "Illuminant_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "小史莱姆",
               "image": "Slimeling.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "尖刺丛林史莱姆",
               "image": "Spiked_Jungle_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "尖刺冰雪史莱姆",
               "image": "Spiked_Ice_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.0143%"
+              "chance": "0.0143%"
             },
             {
               "name": "尖刺史莱姆",
@@ -22035,73 +22035,73 @@
               "name": "弹力史莱姆",
               "image": "Bouncy_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "毒泥",
               "image": "Toxic_Sludge.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "水晶史莱姆",
               "image": "Crystal_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "沙史莱姆",
               "image": "Sand_Slime.gif",
               "quantity": "1",
-              "chance": "0.013%0.018%"
+              "chance": "0.018%"
             },
             {
               "name": "粉史莱姆",
               "image": "Pinky.gif",
               "quantity": "1",
-              "chance": "1%1.4%"
+              "chance": "1.4%"
             },
             {
               "name": "紫史莱姆",
               "image": "Purple_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "红史莱姆",
               "image": "Red_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "绿史莱姆",
               "image": "Green_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "蓝史莱姆",
               "image": "Blue_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "飞翔史莱姆",
               "image": "Heavenly_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "黄史莱姆",
               "image": "Yellow_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             },
             {
               "name": "黑史莱姆",
               "image": "Black_Slime.gif",
               "quantity": "1",
-              "chance": "0.01%0.014%"
+              "chance": "0.014%"
             }
           ]
         }
@@ -28024,7 +28024,7 @@
               "name": "常绿尖叫怪",
               "image": "Everscream.gif",
               "quantity": "1",
-              "chance": "3.11% - 7.78%6.22% - 31.11%"
+              "chance": "3.11% - 7.78%"
             }
           ]
         },
@@ -28036,7 +28036,7 @@
               "name": "常绿尖叫怪",
               "image": "Everscream.gif",
               "quantity": "1",
-              "chance": "3.11% - 7.78%6.22% - 31.11%"
+              "chance": "6.22% - 31.11%"
             }
           ]
         },
@@ -28048,7 +28048,7 @@
               "name": "常绿尖叫怪",
               "image": "Everscream.gif",
               "quantity": "1",
-              "chance": "3.11% - 7.78%6.22% - 31.11%"
+              "chance": "6.22% - 31.11%"
             }
           ]
         }
@@ -28117,7 +28117,7 @@
               "name": "圣骑士",
               "image": "Paladin.gif",
               "quantity": "1",
-              "chance": "10%19%"
+              "chance": "10%"
             }
           ]
         },
@@ -28129,7 +28129,7 @@
               "name": "圣骑士",
               "image": "Paladin.gif",
               "quantity": "1",
-              "chance": "10%19%"
+              "chance": "19%"
             }
           ]
         },
@@ -28141,7 +28141,7 @@
               "name": "圣骑士",
               "image": "Paladin.gif",
               "quantity": "1",
-              "chance": "10%19%"
+              "chance": "19%"
             }
           ]
         }
@@ -28282,7 +28282,7 @@
               "name": "圣骑士",
               "image": "Paladin.gif",
               "quantity": "1",
-              "chance": "6.67%12.89%"
+              "chance": "6.67%"
             }
           ]
         },
@@ -28294,7 +28294,7 @@
               "name": "圣骑士",
               "image": "Paladin.gif",
               "quantity": "1",
-              "chance": "6.67%12.89%"
+              "chance": "12.89%"
             }
           ]
         },
@@ -28306,7 +28306,7 @@
               "name": "圣骑士",
               "image": "Paladin.gif",
               "quantity": "1",
-              "chance": "6.67%12.89%"
+              "chance": "12.89%"
             }
           ]
         }
@@ -28563,7 +28563,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "10%"
             }
           ]
         },
@@ -28581,7 +28581,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "20%"
             }
           ]
         },
@@ -28599,7 +28599,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "20%"
             }
           ]
         }
@@ -36324,7 +36324,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "16.66%25%"
+              "chance": "16.66%"
             }
           ]
         },
@@ -36342,7 +36342,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "16.66%25%"
+              "chance": "25%"
             }
           ]
         },
@@ -36360,7 +36360,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "16.66%25%"
+              "chance": "25%"
             }
           ]
         }
@@ -36747,13 +36747,13 @@
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "25%"
             },
             {
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "25%"
             }
           ]
         },
@@ -36765,13 +36765,13 @@
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "50%"
             },
             {
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "50%"
             }
           ]
         },
@@ -36783,13 +36783,13 @@
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "50%"
             },
             {
               "name": "黑暗魔法师",
               "image": "Dark_Mage.gif",
               "quantity": "1",
-              "chance": "25%50%"
+              "chance": "50%"
             }
           ]
         }
@@ -38710,7 +38710,7 @@
             {
               "name": "小雪怪",
               "image": "Snow_Flinx.gif",
-              "quantity": "1-21–3",
+              "quantity": "1-2",
               "chance": "100%"
             }
           ]
@@ -38722,7 +38722,7 @@
             {
               "name": "小雪怪",
               "image": "Snow_Flinx.gif",
-              "quantity": "1-21–3",
+              "quantity": "1–3",
               "chance": "100%"
             }
           ]
@@ -38734,7 +38734,7 @@
             {
               "name": "小雪怪",
               "image": "Snow_Flinx.gif",
-              "quantity": "1-21–3",
+              "quantity": "1–3",
               "chance": "100%"
             }
           ]
@@ -43512,7 +43512,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "10%"
             }
           ]
         },
@@ -43530,7 +43530,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "20%"
             }
           ]
         },
@@ -43548,7 +43548,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "20%"
             }
           ]
         }
@@ -43821,7 +43821,7 @@
               "name": "褴褛邪教徒法师",
               "image": "Ragged_Caster_1.png",
               "quantity": "1",
-              "chance": "5% (电脑版、主机版、和移动版)2.5% (前代主机版、和3DS版)9.75%"
+              "chance": "5% (电脑版、主机版、和移动版)2.5% (前代主机版、和3DS版)"
             }
           ]
         },
@@ -43833,7 +43833,7 @@
               "name": "褴褛邪教徒法师",
               "image": "Ragged_Caster_1.png",
               "quantity": "1",
-              "chance": "5% (电脑版、主机版、和移动版)2.5% (前代主机版、和3DS版)9.75%"
+              "chance": "9.75%"
             }
           ]
         },
@@ -43845,7 +43845,7 @@
               "name": "褴褛邪教徒法师",
               "image": "Ragged_Caster_1.png",
               "quantity": "1",
-              "chance": "5% (电脑版、主机版、和移动版)2.5% (前代主机版、和3DS版)9.75%"
+              "chance": "9.75%"
             }
           ]
         }
@@ -49179,19 +49179,19 @@
               "name": "妖精",
               "image": "Pixie.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "幻灵",
               "image": "Wraith.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "木乃伊",
               "image": "Mummy.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             }
           ]
         },
@@ -49203,19 +49203,19 @@
               "name": "妖精",
               "image": "Pixie.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "幻灵",
               "image": "Wraith.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "木乃伊",
               "image": "Mummy.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             }
           ]
         },
@@ -49227,19 +49227,19 @@
               "name": "妖精",
               "image": "Pixie.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "幻灵",
               "image": "Wraith.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "木乃伊",
               "image": "Mummy.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             }
           ]
         }
@@ -49328,7 +49328,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "10%"
             }
           ]
         },
@@ -49346,7 +49346,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "20%"
             }
           ]
         },
@@ -49364,7 +49364,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "20%"
             }
           ]
         }
@@ -81613,7 +81613,7 @@
               "name": "水月怪",
               "image": "Creature_from_the_Deep.gif",
               "quantity": "1",
-              "chance": "2%3.96%"
+              "chance": "2%"
             }
           ]
         },
@@ -81625,7 +81625,7 @@
               "name": "水月怪",
               "image": "Creature_from_the_Deep.gif",
               "quantity": "1",
-              "chance": "2%3.96%"
+              "chance": "3.96%"
             }
           ]
         },
@@ -81637,7 +81637,7 @@
               "name": "水月怪",
               "image": "Creature_from_the_Deep.gif",
               "quantity": "1",
-              "chance": "2%3.96%"
+              "chance": "3.96%"
             }
           ]
         }
@@ -82818,7 +82818,7 @@
               "name": "混沌精",
               "image": "Chaos_Elemental.gif",
               "quantity": "1",
-              "chance": "0.2%0.25%"
+              "chance": "0.2%"
             }
           ]
         },
@@ -82830,7 +82830,7 @@
               "name": "混沌精",
               "image": "Chaos_Elemental.gif",
               "quantity": "1",
-              "chance": "0.2%0.25%"
+              "chance": "0.25%"
             }
           ]
         },
@@ -82842,7 +82842,7 @@
               "name": "混沌精",
               "image": "Chaos_Elemental.gif",
               "quantity": "1",
-              "chance": "0.2%0.25%"
+              "chance": "0.25%"
             }
           ]
         }
@@ -87279,7 +87279,7 @@
               "name": "骷髅突击手",
               "image": "Skeleton_Commando.gif",
               "quantity": "1",
-              "chance": "5.56%10.8%"
+              "chance": "5.56%"
             }
           ]
         },
@@ -87291,7 +87291,7 @@
               "name": "骷髅突击手",
               "image": "Skeleton_Commando.gif",
               "quantity": "1",
-              "chance": "5.56%10.8%"
+              "chance": "10.8%"
             }
           ]
         },
@@ -87303,7 +87303,7 @@
               "name": "骷髅突击手",
               "image": "Skeleton_Commando.gif",
               "quantity": "1",
-              "chance": "5.56%10.8%"
+              "chance": "10.8%"
             }
           ]
         }
@@ -93299,19 +93299,19 @@
               "name": "毒泥",
               "image": "Toxic_Sludge.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "苔藓黄蜂",
               "image": "Moss_Hornet.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "黄蜂",
               "image": "Hornet.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1%"
             }
           ]
         },
@@ -93323,19 +93323,19 @@
               "name": "毒泥",
               "image": "Toxic_Sludge.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "苔藓黄蜂",
               "image": "Moss_Hornet.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "黄蜂",
               "image": "Hornet.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1.99%"
             }
           ]
         },
@@ -93347,19 +93347,19 @@
               "name": "毒泥",
               "image": "Toxic_Sludge.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "苔藓黄蜂",
               "image": "Moss_Hornet.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "黄蜂",
               "image": "Hornet.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1.99%"
             }
           ]
         }
@@ -93968,7 +93968,7 @@
               "name": "骷髅狙击手",
               "image": "Skeleton_Sniper.gif",
               "quantity": "1",
-              "chance": "8.33%15.97%"
+              "chance": "8.33%"
             }
           ]
         },
@@ -93980,7 +93980,7 @@
               "name": "骷髅狙击手",
               "image": "Skeleton_Sniper.gif",
               "quantity": "1",
-              "chance": "8.33%15.97%"
+              "chance": "15.97%"
             }
           ]
         },
@@ -93992,7 +93992,7 @@
               "name": "骷髅狙击手",
               "image": "Skeleton_Sniper.gif",
               "quantity": "1",
-              "chance": "8.33%15.97%"
+              "chance": "15.97%"
             }
           ]
         }
@@ -94221,7 +94221,7 @@
               "name": "魔教徒",
               "image": "Diabolist.png",
               "quantity": "1",
-              "chance": "5%9.75%"
+              "chance": "5%"
             }
           ]
         },
@@ -94233,7 +94233,7 @@
               "name": "魔教徒",
               "image": "Diabolist.png",
               "quantity": "1",
-              "chance": "5%9.75%"
+              "chance": "9.75%"
             }
           ]
         },
@@ -94245,7 +94245,7 @@
               "name": "魔教徒",
               "image": "Diabolist.png",
               "quantity": "1",
-              "chance": "5%9.75%"
+              "chance": "9.75%"
             }
           ]
         }
@@ -95359,7 +95359,7 @@
             {
               "name": "飞眼怪",
               "image": "Creeper.png",
-              "quantity": "5–125–72–4",
+              "quantity": "5–12",
               "chance": "66.67%"
             }
           ]
@@ -95389,13 +95389,13 @@
             {
               "name": "宝藏袋（克苏鲁之脑）",
               "image": "Treasure_Bag_(Brain_of_Cthulhu).png",
-              "quantity": "80–110110–135",
+              "quantity": "80–110",
               "chance": "100%"
             },
             {
               "name": "飞眼怪",
               "image": "Creeper.png",
-              "quantity": "5–125–72–4",
+              "quantity": "5–7",
               "chance": "66.67%"
             }
           ]
@@ -95425,13 +95425,13 @@
             {
               "name": "宝藏袋（克苏鲁之脑）",
               "image": "Treasure_Bag_(Brain_of_Cthulhu).png",
-              "quantity": "80–110110–135",
+              "quantity": "110–135",
               "chance": "100%"
             },
             {
               "name": "飞眼怪",
               "image": "Creeper.png",
-              "quantity": "5–125–72–4",
+              "quantity": "2–4",
               "chance": "66.67%"
             }
           ]
@@ -102522,13 +102522,13 @@
               "name": "蓝装甲骷髅",
               "image": "Blue_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1%"
             },
             {
               "name": "装甲骷髅",
               "image": "Armored_Skeleton.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1%"
             }
           ]
         },
@@ -102540,13 +102540,13 @@
               "name": "蓝装甲骷髅",
               "image": "Blue_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1.99%"
             },
             {
               "name": "装甲骷髅",
               "image": "Armored_Skeleton.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1.99%"
             }
           ]
         },
@@ -102558,13 +102558,13 @@
               "name": "蓝装甲骷髅",
               "image": "Blue_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1.99%"
             },
             {
               "name": "装甲骷髅",
               "image": "Armored_Skeleton.gif",
               "quantity": "1",
-              "chance": "1%1.99%"
+              "chance": "1.99%"
             }
           ]
         }
@@ -103450,7 +103450,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "10%"
             }
           ]
         },
@@ -103468,7 +103468,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "20%"
             }
           ]
         },
@@ -103486,7 +103486,7 @@
               "name": "食人魔",
               "image": "Ogre.png",
               "quantity": "1",
-              "chance": "10%20%"
+              "chance": "20%"
             }
           ]
         }
@@ -106210,19 +106210,19 @@
               "name": "地狱装甲骷髅",
               "image": "Hell_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.33%"
             },
             {
               "name": "生锈装甲骷髅",
               "image": "Rusty_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.33%"
             },
             {
               "name": "蓝装甲骷髅",
               "image": "Blue_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.33%"
             }
           ]
         },
@@ -106234,19 +106234,19 @@
               "name": "地狱装甲骷髅",
               "image": "Hell_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.67%"
             },
             {
               "name": "生锈装甲骷髅",
               "image": "Rusty_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.67%"
             },
             {
               "name": "蓝装甲骷髅",
               "image": "Blue_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.67%"
             }
           ]
         },
@@ -106258,19 +106258,19 @@
               "name": "地狱装甲骷髅",
               "image": "Hell_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.67%"
             },
             {
               "name": "生锈装甲骷髅",
               "image": "Rusty_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.67%"
             },
             {
               "name": "蓝装甲骷髅",
               "image": "Blue_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "0.33%0.67%"
+              "chance": "0.67%"
             }
           ]
         }
@@ -113688,19 +113688,19 @@
               "name": "狼人",
               "image": "Werewolf.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "琵琶鱼",
               "image": "Angler_Fish.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "生锈装甲骷髅",
               "image": "Rusty_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             }
           ]
         },
@@ -113712,19 +113712,19 @@
               "name": "狼人",
               "image": "Werewolf.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "琵琶鱼",
               "image": "Angler_Fish.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "生锈装甲骷髅",
               "image": "Rusty_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             }
           ]
         },
@@ -113736,19 +113736,19 @@
               "name": "狼人",
               "image": "Werewolf.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "琵琶鱼",
               "image": "Angler_Fish.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "生锈装甲骷髅",
               "image": "Rusty_Armored_Bones.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             }
           ]
         }
@@ -114067,7 +114067,7 @@
               "name": "圣诞坦克",
               "image": "Santa-NK1_phase_1.gif",
               "quantity": "1",
-              "chance": "5.55% - 12.5%12.5% - 50%"
+              "chance": "5.55% - 12.5%"
             }
           ]
         },
@@ -114079,7 +114079,7 @@
               "name": "圣诞坦克",
               "image": "Santa-NK1_phase_1.gif",
               "quantity": "1",
-              "chance": "5.55% - 12.5%12.5% - 50%"
+              "chance": "12.5% - 50%"
             }
           ]
         },
@@ -114091,7 +114091,7 @@
               "name": "圣诞坦克",
               "image": "Santa-NK1_phase_1.gif",
               "quantity": "1",
-              "chance": "5.55% - 12.5%12.5% - 50%"
+              "chance": "12.5% - 50%"
             }
           ]
         }
@@ -119932,8 +119932,8 @@
             {
               "name": "飞眼怪",
               "image": "Creeper.png",
-              "quantity": "2–51–31–2",
-              "chance": "66.67%66.67%50%"
+              "quantity": "2–5",
+              "chance": "66.67%"
             }
           ]
         },
@@ -119944,14 +119944,14 @@
             {
               "name": "宝藏袋（克苏鲁之脑）",
               "image": "Treasure_Bag_(Brain_of_Cthulhu).png",
-              "quantity": "20–4030–50",
+              "quantity": "20–40",
               "chance": "100%"
             },
             {
               "name": "飞眼怪",
               "image": "Creeper.png",
-              "quantity": "2–51–31–2",
-              "chance": "66.67%66.67%50%"
+              "quantity": "1–3",
+              "chance": "66.67%"
             }
           ]
         },
@@ -119962,14 +119962,14 @@
             {
               "name": "宝藏袋（克苏鲁之脑）",
               "image": "Treasure_Bag_(Brain_of_Cthulhu).png",
-              "quantity": "20–4030–50",
+              "quantity": "30–50",
               "chance": "100%"
             },
             {
               "name": "飞眼怪",
               "image": "Creeper.png",
-              "quantity": "2–51–31–2",
-              "chance": "66.67%66.67%50%"
+              "quantity": "1–2",
+              "chance": "50%"
             }
           ]
         }
@@ -120907,13 +120907,13 @@
               "name": "恶心浮游怪",
               "image": "Floaty_Gross.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             },
             {
               "name": "腐化者",
               "image": "Corruptor.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "1%"
             }
           ]
         },
@@ -120925,13 +120925,13 @@
               "name": "恶心浮游怪",
               "image": "Floaty_Gross.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "腐化者",
               "image": "Corruptor.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             }
           ]
         },
@@ -120943,13 +120943,13 @@
               "name": "恶心浮游怪",
               "image": "Floaty_Gross.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             },
             {
               "name": "腐化者",
               "image": "Corruptor.gif",
               "quantity": "1",
-              "chance": "1%2%"
+              "chance": "2%"
             }
           ]
         }
@@ -166019,7 +166019,7 @@
               "name": "圣诞坦克",
               "image": "Santa-NK1_phase_1.gif",
               "quantity": "1",
-              "chance": "5.55% - 12.5%12.5% - 50%"
+              "chance": "5.55% - 12.5%"
             }
           ]
         },
@@ -166031,7 +166031,7 @@
               "name": "圣诞坦克",
               "image": "Santa-NK1_phase_1.gif",
               "quantity": "1",
-              "chance": "5.55% - 12.5%12.5% - 50%"
+              "chance": "12.5% - 50%"
             }
           ]
         },
@@ -166043,7 +166043,7 @@
               "name": "圣诞坦克",
               "image": "Santa-NK1_phase_1.gif",
               "quantity": "1",
-              "chance": "5.55% - 12.5%12.5% - 50%"
+              "chance": "12.5% - 50%"
             }
           ]
         }
@@ -169489,7 +169489,7 @@
               "name": "哀木",
               "image": "Mourning_Wood.gif",
               "quantity": "1",
-              "chance": "2.86–20%5–20%"
+              "chance": "2.86–20%"
             }
           ]
         },
@@ -169501,7 +169501,7 @@
               "name": "哀木",
               "image": "Mourning_Wood.gif",
               "quantity": "1",
-              "chance": "2.86–20%5–20%"
+              "chance": "5–20%"
             }
           ]
         },
@@ -169513,7 +169513,7 @@
               "name": "哀木",
               "image": "Mourning_Wood.gif",
               "quantity": "1",
-              "chance": "2.86–20%5–20%"
+              "chance": "5–20%"
             }
           ]
         }
@@ -169572,7 +169572,7 @@
             {
               "name": "哀木",
               "image": "Mourning_Wood.gif",
-              "quantity": "15–3025–4030–50",
+              "quantity": "15–30",
               "chance": "100%"
             },
             {
@@ -169590,7 +169590,7 @@
             {
               "name": "哀木",
               "image": "Mourning_Wood.gif",
-              "quantity": "15–3025–4030–50",
+              "quantity": "25–40",
               "chance": "100%"
             },
             {
@@ -169608,7 +169608,7 @@
             {
               "name": "哀木",
               "image": "Mourning_Wood.gif",
-              "quantity": "15–3025–4030–50",
+              "quantity": "30–50",
               "chance": "100%"
             },
             {
@@ -171671,7 +171671,7 @@
               "name": "冰雪女王",
               "image": "Ice_Queen.png",
               "quantity": "1",
-              "chance": "5.19–10.37%15.56–31.11%"
+              "chance": "5.19–10.37%"
             }
           ]
         },
@@ -171683,7 +171683,7 @@
               "name": "冰雪女王",
               "image": "Ice_Queen.png",
               "quantity": "1",
-              "chance": "5.19–10.37%15.56–31.11%"
+              "chance": "15.56–31.11%"
             }
           ]
         },
@@ -171695,7 +171695,7 @@
               "name": "冰雪女王",
               "image": "Ice_Queen.png",
               "quantity": "1",
-              "chance": "5.19–10.37%15.56–31.11%"
+              "chance": "15.56–31.11%"
             }
           ]
         }
@@ -176301,7 +176301,7 @@
             {
               "name": "飞龙",
               "image": "Wyvern.png",
-              "quantity": "5–1010–20",
+              "quantity": "5–10",
               "chance": "100%"
             }
           ]
@@ -176319,7 +176319,7 @@
             {
               "name": "飞龙",
               "image": "Wyvern.png",
-              "quantity": "5–1010–20",
+              "quantity": "10–20",
               "chance": "100%"
             }
           ]
@@ -176337,7 +176337,7 @@
             {
               "name": "飞龙",
               "image": "Wyvern.png",
-              "quantity": "5–1010–20",
+              "quantity": "10–20",
               "chance": "100%"
             }
           ]
@@ -178203,26 +178203,26 @@
             {
               "name": "图书管理员骷髅",
               "image": "Librarian_Skeleton.png",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "1–3",
+              "chance": "97.09%"
             },
             {
               "name": "愤怒骷髅怪",
               "image": "Angry_Bones_1.gif",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "1–3",
+              "chance": "97.09%"
             },
             {
               "name": "暗黑法师",
               "image": "Dark_Caster.png",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "1–3",
+              "chance": "97.09%"
             },
             {
               "name": "诅咒骷髅头",
               "image": "Cursed_Skull.gif",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "1–3",
+              "chance": "97.09%"
             },
             {
               "name": "骷髅",
@@ -178239,26 +178239,26 @@
             {
               "name": "图书管理员骷髅",
               "image": "Librarian_Skeleton.png",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "2–6",
+              "chance": "100%"
             },
             {
               "name": "愤怒骷髅怪",
               "image": "Angry_Bones_1.gif",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "2–6",
+              "chance": "100%"
             },
             {
               "name": "暗黑法师",
               "image": "Dark_Caster.png",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "2–6",
+              "chance": "100%"
             },
             {
               "name": "诅咒骷髅头",
               "image": "Cursed_Skull.gif",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "2–6",
+              "chance": "100%"
             },
             {
               "name": "骷髅",
@@ -178275,26 +178275,26 @@
             {
               "name": "图书管理员骷髅",
               "image": "Librarian_Skeleton.png",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "2–6",
+              "chance": "100%"
             },
             {
               "name": "愤怒骷髅怪",
               "image": "Angry_Bones_1.gif",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "2–6",
+              "chance": "100%"
             },
             {
               "name": "暗黑法师",
               "image": "Dark_Caster.png",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "2–6",
+              "chance": "100%"
             },
             {
               "name": "诅咒骷髅头",
               "image": "Cursed_Skull.gif",
-              "quantity": "1–32–6",
-              "chance": "97.09%100%"
+              "quantity": "2–6",
+              "chance": "100%"
             },
             {
               "name": "骷髅",

@@ -348,12 +348,13 @@ def _load_entity_image(filename: str) -> Image.Image | None:
 def _calc_drops_area(drops: dict | None) -> int:
     if not drops:
         return 0
-    modes = compact_drop_modes(drops)
-    area = 34 + DROP_TABLE_HEADER
-    for mode in modes:
-        if mode.get("label"):
+    blocks = compact_drop_modes(drops)
+    area = 34
+    for block in blocks:
+        if block.get("label"):
             area += DROP_MODE_HEADER
-        area += len(mode.get("entries", [])) * DROP_ROW_HEIGHT
+        area += DROP_TABLE_HEADER
+        area += len(block.get("entries", [])) * DROP_ROW_HEIGHT
     return area + 12
 
 
@@ -366,24 +367,26 @@ def _draw_drops_section(
     font_small,
     ui: dict,
 ) -> int:
-    modes = compact_drop_modes(drops)
+    blocks = compact_drop_modes(drops)
     draw.text((CARD_PADDING + 10, y), ui["drops"], fill=COLORS["accent"], font=font_header)
     y += 30
 
     col_entity = CARD_PADDING + 20
     col_qty = CARD_WIDTH - CARD_PADDING - 120
     col_chance = CARD_WIDTH - CARD_PADDING - 52
-    draw.text((col_entity, y), ui["col_entity"], fill=COLORS["label"], font=font_small)
-    draw.text((col_qty, y), ui["col_qty"], fill=COLORS["label"], font=font_small)
-    draw.text((col_chance, y), ui["col_chance"], fill=COLORS["label"], font=font_small)
-    y += DROP_TABLE_HEADER
 
-    for mode in modes:
-        label = mode.get("label", "")
+    for block in blocks:
+        label = block.get("label", "")
         if label:
             draw.text((col_entity, y), label, fill=COLORS["label"], font=font_small)
             y += DROP_MODE_HEADER
-        for entry in mode.get("entries", []):
+
+        draw.text((col_entity, y), ui["col_entity"], fill=COLORS["label"], font=font_small)
+        draw.text((col_qty, y), ui["col_qty"], fill=COLORS["label"], font=font_small)
+        draw.text((col_chance, y), ui["col_chance"], fill=COLORS["label"], font=font_small)
+        y += DROP_TABLE_HEADER
+
+        for entry in block.get("entries", []):
             img = _load_entity_image(entry.get("image", ""))
             entity_slot_w = 48
             text_x = col_entity + entity_slot_w + 8
@@ -590,6 +593,9 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
             label = mode.get("label", "")
             if label:
                 lines.append(f"  [{label}]")
+            lines.append(
+                f"  {ui['col_entity']}\t{ui['col_qty']}\t{ui['col_chance']}"
+            )
             for entry in mode.get("entries", []):
                 lines.append(
                     f"  {entry.get('name', '')}: "
@@ -777,7 +783,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v8_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v9_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

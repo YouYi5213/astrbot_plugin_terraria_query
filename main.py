@@ -20,7 +20,7 @@ from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.star import Context, Star
 from astrbot.api import AstrBotConfig, logger
 
-from prepare_data import update_wiki_data
+from .prepare_data import update_wiki_data
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 

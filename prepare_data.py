@@ -266,6 +266,98 @@ def resolve_bool_icon(stat: dict) -> str | None:
     return None
 
 
+def _parse_drop_row(tr) -> dict | None:
+    tds = tr.select("td")
+    if len(tds) < 3:
+        return None
+    entity = tds[0]
+    name_el = entity.select_one(".entity-name a[title]") or entity.select_one("a[title]")
+    if name_el:
+        name = _clean_text(name_el.get("title") or name_el.get_text())
+    else:
+        name = _clean_text(entity.get_text())
+    if not name:
+        return None
+    img_el = entity.select_one(".npcimg img") or entity.select_one("img")
+    image = ""
+    if img_el and img_el.get("src"):
+        image = _filename_from_url(_image_url_from_src(img_el["src"]))
+    return {
+        "name": name,
+        "image": image,
+        "quantity": _clean_text(tds[1].get_text()),
+        "chance": _clean_text(tds[2].get_text()),
+    }
+
+
+def _parse_drop_modes(box) -> list[dict]:
+    modes: list[dict] = []
+    for tab in box.select(".modetabs .tab"):
+        classes = tab.get("class", [])
+        mode = "normal"
+        if "expert" in classes:
+            mode = "expert"
+        elif "master" in classes:
+            mode = "master"
+        label = _clean_text(tab.get_text())
+        if label:
+            modes.append({"mode": mode, "label": label})
+    return modes
+
+
+def parse_drops_from_soup(soup: BeautifulSoup) -> dict | None:
+    box = soup.select_one("div.drop.infobox.modesbox")
+    if not box:
+        return None
+
+    entries: list[dict] = []
+    for tr in box.select("table.drop-noncustom tbody tr"):
+        if tr.select("th"):
+            continue
+        entry = _parse_drop_row(tr)
+        if entry:
+            entries.append(entry)
+    if not entries:
+        return None
+
+    mode_tabs = _parse_drop_modes(box)
+    if not mode_tabs:
+        mode_tabs = [{"mode": "normal", "label": "经典"}]
+
+    modes = [{**tab, "entries": entries} for tab in mode_tabs]
+    return {"modes": modes}
+
+
+def _entries_signature(entries: list[dict]) -> tuple:
+    return tuple(
+        (e.get("name"), e.get("quantity"), e.get("chance"), e.get("image"))
+        for e in entries
+    )
+
+
+def compact_drop_modes(drops: dict | None) -> list[dict]:
+    if not drops:
+        return []
+    modes = drops.get("modes", [])
+    if len(modes) <= 1:
+        return modes
+    first_sig = _entries_signature(modes[0].get("entries", []))
+    if all(_entries_signature(mode.get("entries", [])) == first_sig for mode in modes[1:]):
+        labels = " / ".join(mode.get("label", "") for mode in modes if mode.get("label"))
+        return [{"mode": "all", "label": labels, "entries": modes[0].get("entries", [])}]
+    return modes
+
+
+def _collect_drop_image_urls(drops: dict) -> dict[str, str]:
+    urls: dict[str, str] = {}
+    for mode in drops.get("modes", []):
+        for entry in mode.get("entries", []):
+            fn = entry.get("image", "")
+            if fn:
+                urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    return urls
+
+
 def _parse_item_span(span) -> tuple[str, str]:
     """从 span.i 元素提取 (名称, 图片文件名)"""
     link = span.select_one("a[title]") or span.select_one("a")
@@ -351,6 +443,10 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
         }
         break
 
+    drops = parse_drops_from_soup(soup)
+    if drops:
+        item["drops"] = drops
+
     return item
 
 
@@ -360,6 +456,7 @@ def _extract_en_locale(en_item: dict, zh_item: dict) -> dict:
         "image": en_item.get("image") or zh_item.get("image", ""),
         "stats": en_item.get("stats", []),
         "recipe": en_item.get("recipe"),
+        "drops": en_item.get("drops"),
     }
 
 
@@ -474,6 +571,55 @@ async def backfill_en_locales(
     return updated
 
 
+async def backfill_drops(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+    force: bool = False,
+    limit: int | None = None,
+) -> tuple[int, dict[str, str]]:
+    pending = [
+        key
+        for key, item in items.items()
+        if force or "drops" not in item
+    ]
+    pending.sort()
+    if limit:
+        pending = pending[:limit]
+
+    image_urls: dict[str, str] = {}
+    found = 0
+    semaphore = asyncio.Semaphore(8)
+
+    async def _process_one(key: str) -> bool:
+        async with semaphore:
+            item = items[key]
+            title = item.get("wiki_title") or item.get("name") or key
+            html = await fetch_page_html(session, title)
+            if not html:
+                item["drops"] = None
+                await asyncio.sleep(0.05)
+                return False
+            soup = BeautifulSoup(html, "html.parser")
+            drops = parse_drops_from_soup(soup)
+            item["drops"] = drops
+            if drops:
+                image_urls.update(_collect_drop_image_urls(drops))
+            await asyncio.sleep(0.05)
+            return drops is not None
+
+    batch_size = 50
+    for batch_start in range(0, len(pending), batch_size):
+        batch = pending[batch_start : batch_start + batch_size]
+        results = await asyncio.gather(*[_process_one(key) for key in batch])
+        found += sum(1 for ok in results if ok)
+        done = batch_start + len(batch)
+        logger.info(f"掉落来源回填进度 {done}/{len(pending)}，发现 {found} 个")
+        with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+            json.dump(items, f, ensure_ascii=False, indent=2)
+
+    return found, image_urls
+
+
 async def fetch_category_members(
     session: aiohttp.ClientSession, category: str
 ) -> list[str]:
@@ -583,6 +729,9 @@ def _collect_image_urls(item: dict) -> dict[str, str]:
         fn = res.get("image", "")
         if fn:
             urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    drops = item.get("drops")
+    if drops:
+        urls.update(_collect_drop_image_urls(drops))
     return urls
 
 
@@ -612,6 +761,7 @@ async def update_wiki_data(
     images_total = 0
     images_ok = 0
     en_backfill_count = 0
+    drops_backfill_count = 0
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -671,6 +821,22 @@ async def update_wiki_data(
             limit=effective_en_limit,
         )
 
+        if not en_only:
+            drops_limit = 50 if limit is None else min(50, limit or 50)
+            drops_backfill_count, drop_image_urls = await backfill_drops(
+                session, items, limit=drops_limit
+            )
+            if drop_image_urls:
+                drop_total = len(drop_image_urls)
+                semaphore = asyncio.Semaphore(8)
+                tasks = [
+                    download_image(session, fn, url, semaphore)
+                    for fn, url in drop_image_urls.items()
+                ]
+                drop_ok = sum(1 for r in await asyncio.gather(*tasks) if r)
+                images_total += drop_total
+                images_ok += drop_ok
+
     with open(ITEMS_JSON, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
 
@@ -684,6 +850,7 @@ async def update_wiki_data(
         "images_total": images_total,
         "images_ok": images_ok,
         "en_backfill_count": en_backfill_count,
+        "drops_backfill_count": drops_backfill_count,
     }
 
 
@@ -710,7 +877,8 @@ async def main(
         f"更新完成：新增 {result['new_count']} 个，"
         f"共 {result['total']} 个物品，"
         f"新图片 {result['images_ok']}/{result['images_total']}，"
-        f"英文回填 {result['en_backfill_count']} 个",
+        f"英文回填 {result['en_backfill_count']} 个，"
+        f"掉落来源 {result['drops_backfill_count']} 个",
         flush=True,
     )
     print(f"已保存到 {ITEMS_JSON}", flush=True)

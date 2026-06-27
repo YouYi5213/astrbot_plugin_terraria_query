@@ -23,6 +23,7 @@ from astrbot.api import AstrBotConfig, logger
 from .prepare_data import (
     COIN_SPECS,
     RARITY_LABELS,
+    compact_drop_modes,
     normalize_stat_for_display,
     resolve_bool_icon,
     update_wiki_data,
@@ -119,6 +120,9 @@ CARD_PADDING = 20
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
+DROP_ROW_HEIGHT = 44
+DROP_MODE_HEADER = 22
+DROP_TABLE_HEADER = 22
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -280,6 +284,76 @@ def _draw_stat_value(
     return max(STAT_MIN_ROW, len(lines) * STAT_LINE_HEIGHT + 6)
 
 
+def _load_entity_image(filename: str) -> Image.Image | None:
+    img = _load_image(_image_path(filename))
+    if not img:
+        return None
+    target_h = 36
+    target_w = min(48, int(img.width * target_h / max(img.height, 1)))
+    return img.resize((target_w, target_h), Image.LANCZOS)
+
+
+def _calc_drops_area(drops: dict | None) -> int:
+    if not drops:
+        return 0
+    modes = compact_drop_modes(drops)
+    area = 34 + DROP_TABLE_HEADER
+    for mode in modes:
+        if mode.get("label"):
+            area += DROP_MODE_HEADER
+        area += len(mode.get("entries", [])) * DROP_ROW_HEIGHT
+    return area + 12
+
+
+def _draw_drops_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    drops: dict,
+    font_header,
+    font_small,
+    ui: dict,
+) -> int:
+    modes = compact_drop_modes(drops)
+    draw.text((CARD_PADDING + 10, y), ui["drops"], fill=COLORS["accent"], font=font_header)
+    y += 30
+
+    col_entity = CARD_PADDING + 20
+    col_qty = CARD_WIDTH - CARD_PADDING - 120
+    col_chance = CARD_WIDTH - CARD_PADDING - 52
+    draw.text((col_entity, y), ui["col_entity"], fill=COLORS["label"], font=font_small)
+    draw.text((col_qty, y), ui["col_qty"], fill=COLORS["label"], font=font_small)
+    draw.text((col_chance, y), ui["col_chance"], fill=COLORS["label"], font=font_small)
+    y += DROP_TABLE_HEADER
+
+    for mode in modes:
+        label = mode.get("label", "")
+        if label:
+            draw.text((col_entity, y), label, fill=COLORS["label"], font=font_small)
+            y += DROP_MODE_HEADER
+        for entry in mode.get("entries", []):
+            img = _load_entity_image(entry.get("image", ""))
+            text_x = col_entity
+            if img:
+                card.paste(img, (col_entity, y + 2), img)
+                text_x = col_entity + img.width + 8
+            draw.text((text_x, y + 4), entry.get("name", ""), fill=COLORS["text"], font=font_small)
+            draw.text(
+                (col_qty, y + 4),
+                entry.get("quantity", ""),
+                fill=COLORS["value"],
+                font=font_small,
+            )
+            draw.text(
+                (col_chance, y + 4),
+                entry.get("chance", ""),
+                fill=COLORS["value"],
+                font=font_small,
+            )
+            y += DROP_ROW_HEIGHT
+    return y
+
+
 def _normalize_message(text: str) -> str:
     text = text.strip()
     if text.startswith("/"):
@@ -313,6 +387,10 @@ _CARD_UI = {
     "zh": {
         "stats": "▎属性",
         "recipe": "▎合成配方",
+        "drops": "▎来自",
+        "col_entity": "实体",
+        "col_qty": "数量",
+        "col_chance": "几率",
         "station": "制作站:",
         "materials": "材料:",
         "result": "→ 产物:",
@@ -322,6 +400,10 @@ _CARD_UI = {
     "en": {
         "stats": "▎Stats",
         "recipe": "▎Recipe",
+        "drops": "▎From",
+        "col_entity": "Entity",
+        "col_qty": "Qty",
+        "col_chance": "Chance",
         "station": "Station:",
         "materials": "Materials:",
         "result": "→ Result:",
@@ -391,12 +473,14 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
             "image": en.get("image") or item.get("image", ""),
             "stats": en.get("stats", []),
             "recipe": en.get("recipe"),
+            "drops": en.get("drops") or item.get("drops"),
         }
     return {
         "name": item.get("name", ""),
         "image": item.get("image", ""),
         "stats": item.get("stats", []),
         "recipe": item.get("recipe"),
+        "drops": item.get("drops"),
     }
 
 
@@ -446,6 +530,20 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
         if ings:
             lines.append(f"  {ings} → {result}")
 
+    drops = data.get("drops")
+    if drops:
+        lines.append("")
+        lines.append(ui["drops"].lstrip("▎"))
+        for mode in compact_drop_modes(drops):
+            label = mode.get("label", "")
+            if label:
+                lines.append(f"  [{label}]")
+            for entry in mode.get("entries", []):
+                lines.append(
+                    f"  {entry.get('name', '')}: "
+                    f"{entry.get('quantity', '')} ({entry.get('chance', '')})"
+                )
+
     return "\n".join(lines)
 
 
@@ -468,6 +566,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         or resolve_bool_icon(s)
     ]
     recipe = data.get("recipe")
+    drops = data.get("drops")
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
     stats_area = 20
@@ -496,7 +595,13 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         ing_count = len(recipe.get("ingredients", []))
         recipe_area += max(1, (ing_count + 3) // 4) * 36 + 44
 
-    total_height = title_area + stats_area + sep_area + recipe_area + CARD_PADDING * 2
+    drops_area = 0
+    if drops:
+        drops_area = 20 + _calc_drops_area(drops)
+        if recipe:
+            drops_area += 20
+
+    total_height = title_area + stats_area + sep_area + recipe_area + drops_area + CARD_PADDING * 2
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
 
@@ -594,17 +699,33 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
             card.paste(result_img, (rx, y), result_img)
             rx += 32
         draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
+        y += 36
+
+    if drops:
+        if recipe:
+            draw.line(
+                [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+                fill=COLORS["separator"],
+                width=1,
+            )
+            y += 20
+        _draw_drops_section(draw, card, y, drops, font_header, font_small, ui)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v5_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v6_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 
 
 def _format_update_result(result: dict) -> str:
     en_count = result.get("en_backfill_count", 0)
-    en_line = f"\n英文数据回填：{en_count} 个" if en_count else ""
-    if result.get("new_count", 0) == 0 and en_count == 0:
+    drops_count = result.get("drops_backfill_count", 0)
+    extra_lines = ""
+    if en_count:
+        extra_lines += f"\n英文数据回填：{en_count} 个"
+    if drops_count:
+        extra_lines += f"\n掉落来源回填：{drops_count} 个"
+    if result.get("new_count", 0) == 0 and not extra_lines:
         return (
             f"✅ Wiki 数据已是最新\n"
             f"当前共 {result.get('total', 0)} 个物品"
@@ -612,13 +733,13 @@ def _format_update_result(result: dict) -> str:
     if result.get("new_count", 0) == 0:
         return (
             f"✅ Wiki 数据更新完成\n"
-            f"当前总计：{result.get('total', 0)} 个物品{en_line}"
+            f"当前总计：{result.get('total', 0)} 个物品{extra_lines}"
         )
     return (
         f"✅ Wiki 数据更新完成\n"
         f"本次新增：{result.get('new_count', 0)} 个\n"
         f"当前总计：{result.get('total', 0)} 个\n"
-        f"新图片：{result.get('images_ok', 0)}/{result.get('images_total', 0)}{en_line}"
+        f"新图片：{result.get('images_ok', 0)}/{result.get('images_total', 0)}{extra_lines}"
     )
 
 

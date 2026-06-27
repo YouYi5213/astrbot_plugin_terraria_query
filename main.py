@@ -45,7 +45,11 @@ _BUNDLED_FONT_CANDIDATES = (
     os.path.join(_FONT_DIR, "wqy-microhei.ttc"),
 )
 _FONT_CACHE: dict[int, ImageFont.FreeTypeFont | ImageFont.ImageFont] = {}
+_SYMBOL_FONT_CACHE: dict[int, ImageFont.FreeTypeFont | ImageFont.ImageFont] = {}
 _RESOLVED_FONT_PATH: str | None = None
+_RESOLVED_SYMBOL_FONT_PATH: str | None = None
+
+_KEY_SYMBOL_SPLIT_RE = re.compile(r"^([▼▲◀▶↷⚷⚒])(?:\s*)(.*)$")
 
 
 def _resolve_font_path() -> str | None:
@@ -100,6 +104,67 @@ def _try_get_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     font = ImageFont.load_default()
     _FONT_CACHE[size] = font
     return font
+
+
+def _resolve_symbol_font_path() -> str | None:
+    global _RESOLVED_SYMBOL_FONT_PATH
+    if _RESOLVED_SYMBOL_FONT_PATH is not None:
+        return _RESOLVED_SYMBOL_FONT_PATH or None
+
+    candidates = [
+        "C:/Windows/Fonts/seguisym.ttf",
+        "C:/Windows/Fonts/segoeui.ttf",
+        "C:/Windows/Fonts/arial.ttf",
+        "/usr/share/fonts/truetype/noto/NotoSansSymbols2-Regular.ttf",
+        "/usr/share/fonts/opentype/noto/NotoSansSymbols-Regular.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ]
+    for path in candidates:
+        if os.path.exists(path):
+            try:
+                ImageFont.truetype(path, 16)
+                _RESOLVED_SYMBOL_FONT_PATH = path
+                return path
+            except Exception:
+                continue
+
+    _RESOLVED_SYMBOL_FONT_PATH = ""
+    return None
+
+
+def _try_get_symbol_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+    if size in _SYMBOL_FONT_CACHE:
+        return _SYMBOL_FONT_CACHE[size]
+
+    font_path = _resolve_symbol_font_path()
+    if font_path:
+        try:
+            font = ImageFont.truetype(font_path, size)
+            _SYMBOL_FONT_CACHE[size] = font
+            return font
+        except Exception:
+            pass
+
+    font = _try_get_font(size)
+    _SYMBOL_FONT_CACHE[size] = font
+    return font
+
+
+def _font_size(font) -> int:
+    return getattr(font, "size", 13)
+
+
+def _normalize_key_seg(seg: dict) -> dict:
+    seg = dict(seg)
+    symbol = (seg.get("symbol") or "").strip()
+    label = (seg.get("label") or "").strip()
+    if not symbol and label:
+        match = _KEY_SYMBOL_SPLIT_RE.match(label)
+        if match:
+            symbol, label = match.group(1), match.group(2)
+    seg["symbol"] = symbol
+    seg["label"] = label
+    return seg
 
 
 def _resolve_data_dir() -> str:
@@ -310,6 +375,7 @@ def _layout_rich_segments(
 
 
 def _key_badge_label(seg: dict) -> str:
+    seg = _normalize_key_seg(seg)
     symbol = seg.get("symbol", "")
     label = seg.get("label", "")
     if symbol and label:
@@ -318,9 +384,17 @@ def _key_badge_label(seg: dict) -> str:
 
 
 def _key_badge_width(draw: ImageDraw.ImageDraw, seg: dict, font) -> int:
-    inner = _key_badge_label(seg)
-    bbox = draw.textbbox((0, 0), inner, font=font)
-    return bbox[2] - bbox[0] + KEY_BADGE_PAD_X * 2
+    seg = _normalize_key_seg(seg)
+    symbol = seg.get("symbol", "")
+    label = seg.get("label", "")
+    size = _font_size(font)
+    width = KEY_BADGE_PAD_X * 2
+    if symbol:
+        sym_font = _try_get_symbol_font(size)
+        width += _text_width(draw, symbol, sym_font)
+    if label:
+        width += _text_width(draw, label, font)
+    return width + 2
 
 
 def _layout_description_segments(
@@ -378,9 +452,20 @@ def _draw_key_badge(
     seg: dict,
     font,
 ) -> int:
-    inner = _key_badge_label(seg)
-    bbox = draw.textbbox((0, 0), inner, font=font)
-    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    seg = _normalize_key_seg(seg)
+    symbol = seg.get("symbol", "")
+    label = seg.get("label", "")
+    size = _font_size(font)
+    sym_font = _try_get_symbol_font(size)
+    sym_w = _text_width(draw, symbol, sym_font) if symbol else 0
+    label_w = _text_width(draw, label, font) if label else 0
+    tw = sym_w + label_w
+    th = max(
+        draw.textbbox((0, 0), symbol or "A", font=sym_font)[3]
+        - draw.textbbox((0, 0), symbol or "A", font=sym_font)[1],
+        draw.textbbox((0, 0), label or "A", font=font)[3]
+        - draw.textbbox((0, 0), label or "A", font=font)[1],
+    )
     w = tw + KEY_BADGE_PAD_X * 2
     h = th + KEY_BADGE_PAD_Y * 2
     draw.rounded_rectangle(
@@ -389,7 +474,13 @@ def _draw_key_badge(
         outline=COLORS["key_border"],
         fill=COLORS["key_bg"],
     )
-    draw.text((x + KEY_BADGE_PAD_X, y + KEY_BADGE_PAD_Y), inner, fill=COLORS["text"], font=font)
+    cx = x + KEY_BADGE_PAD_X
+    cy = y + KEY_BADGE_PAD_Y
+    if symbol:
+        draw.text((cx, cy), symbol, fill=COLORS["text"], font=sym_font)
+        cx += sym_w
+    if label:
+        draw.text((cx, cy), label, fill=COLORS["text"], font=font)
     return w + 2
 
 
@@ -1230,7 +1321,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v17_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v18_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

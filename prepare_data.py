@@ -837,6 +837,10 @@ def _parse_key_element(el: Tag) -> dict:
         label = full[len(symbol) :].strip()
     else:
         label = full
+    if not symbol and label:
+        match = _KEY_SYMBOL_SPLIT_RE.match(label)
+        if match:
+            symbol, label = match.group(1), match.group(2)
     return {"type": "key", "symbol": symbol, "label": label}
 
 
@@ -918,12 +922,14 @@ def _rich_segments_to_text(segments: list[dict]) -> str:
 DESCRIPTION_KEY_RE = re.compile(
     r"(⚷)(打开/激活)"
     r"|(⚒)(使用/攻击)"
-    r"|(↷)(跳键|跳)"
+    r"|(↷)\s*(跳键|跳)"
     r"|(▼)\s*(下)"
     r"|(▲)\s*(上)"
     r"|(◀)\s*(左)"
     r"|(▶)\s*(右)"
 )
+
+_KEY_SYMBOL_SPLIT_RE = re.compile(r"^([▼▲◀▶↷⚷⚒])(?:\s*)(.*)$")
 
 
 def _match_description_key(match: re.Match) -> tuple[str, str]:
@@ -1494,9 +1500,18 @@ def _format_wing_mph(raw: str, *, locale: str = "zh") -> str:
     num = match.group(1) if match else raw if re.fullmatch(r"[\d.]+", raw) else ""
     if not num:
         return raw
-    if locale == "zh":
-        return f"{num}英里每小时"
     return f"{num} mph"
+
+
+def _rich_from_wing_note_li(li: Tag) -> list[dict]:
+    """从翅膀备注 li 解析富文本（保留 Wiki span.key 结构）"""
+    if li.select("span.key"):
+        return _parse_description_paragraph_rich(li)
+    text = _clean_text(li.get_text(" ", strip=True))
+    if not text:
+        return []
+    paras = description_text_to_rich(text)
+    return paras[0] if paras else [{"type": "text", "text": text}]
 
 
 def _parse_wing_row(tr: Tag, *, locale: str = "zh") -> dict | None:
@@ -1544,11 +1559,13 @@ def _parse_wing_row(tr: Tag, *, locale: str = "zh") -> dict | None:
     )
 
     notes: list[str] = []
+    note_rich_paragraphs: list[list[dict]] = []
     note_cell = cells[10] if len(cells) > 10 else tr
     for li in note_cell.select("ul li"):
         note = _clean_text(li.get_text(" ", strip=True))
         if note:
             notes.append(note)
+            note_rich_paragraphs.append(_rich_from_wing_note_li(li))
 
     type_label = "类型" if locale == "zh" else "Type"
     type_value = "配饰" if locale == "zh" else "Accessory"
@@ -1588,7 +1605,11 @@ def _parse_wing_row(tr: Tag, *, locale: str = "zh") -> dict | None:
     }
     if desc_parts:
         item["description"] = "\n\n".join(desc_parts)
-        item["description_rich"] = description_text_to_rich(item["description"])
+        rich_paragraphs: list[list[dict]] = []
+        if source:
+            rich_paragraphs.append([{"type": "text", "text": source}])
+        rich_paragraphs.extend(note_rich_paragraphs)
+        item["description_rich"] = rich_paragraphs
     terms = _wing_search_terms(name)
     if terms:
         item["search_terms"] = terms

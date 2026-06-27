@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from prepare_data import (  # noqa: E402
+    _description_is_tooltip_only,
     _description_needs_coin_refresh,
     _description_needs_zh_refresh,
     _is_set_item,
@@ -108,6 +109,16 @@ def test_description_needs_coin_refresh():
     assert _description_needs_coin_refresh(item)
     item["description_rich"] = [[{"type": "coin", "amount": "1", "coin_type": "pc"}]]
     assert not _description_needs_coin_refresh(item)
+
+
+def test_description_needs_zh_refresh_detects_tooltip_only():
+    item = {
+        "name": "环境改造枪",
+        "description": "喷射时生成和摧毁生物群系使用彩色溶液",
+        "stats": [{"label": "工具提示", "value": "喷射时生成和摧毁生物群系使用彩色溶液"}],
+    }
+    assert _description_is_tooltip_only(item)
+    assert _description_needs_zh_refresh(item)
 
 
 def test_description_needs_zh_refresh_detects_english_on_chinese_item():

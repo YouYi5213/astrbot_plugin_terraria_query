@@ -758,13 +758,26 @@ def _iter_wiki_titles(item: dict, key: str) -> list[str]:
     return titles
 
 
-def _description_fallback_from_stats(item: dict) -> str | None:
-    """无 Wiki 导语时，用 infobox 工具提示或类型信息兜底"""
+def _item_tooltip(item: dict) -> str:
     for stat in item.get("stats", []):
         if stat.get("label") in ("工具提示", "Tooltip"):
-            value = _clean_text(stat.get("value", ""))
-            if value:
-                return value
+            return _clean_text(stat.get("value", ""))
+    return ""
+
+
+def _description_is_tooltip_only(item: dict) -> bool:
+    """描述与 infobox 工具提示完全相同（多为 Wiki 抓取失败后的兜底）。"""
+    desc = _clean_text(item.get("description") or "")
+    tooltip = _item_tooltip(item)
+    return bool(desc and tooltip and desc == tooltip)
+
+
+def _description_fallback_from_stats(item: dict, *, skip_tooltip: bool = False) -> str | None:
+    """无 Wiki 导语时，用 infobox 工具提示或类型信息兜底"""
+    if not skip_tooltip:
+        tooltip = _item_tooltip(item)
+        if tooltip:
+            return tooltip
     name = _clean_text(item.get("name", ""))
     type_value = ""
     for stat in item.get("stats", []):
@@ -795,8 +808,8 @@ def _apply_description_to_item(item: dict, parsed: dict | str | None) -> bool:
     return False
 
 
-def _apply_description_fallback(item: dict) -> bool:
-    fallback = _description_fallback_from_stats(item)
+def _apply_description_fallback(item: dict, *, skip_tooltip: bool = False) -> bool:
+    fallback = _description_fallback_from_stats(item, skip_tooltip=skip_tooltip)
     if not fallback:
         return False
     item["description"] = fallback
@@ -818,7 +831,8 @@ async def fetch_item_description(
         parsed = parse_description_from_soup(BeautifulSoup(html, "html.parser"))
         if _apply_description_to_item(item, parsed):
             return True
-    return _apply_description_fallback(item)
+    # 回填场景跳过工具提示兜底，避免把短 tooltip 当成 Wiki 导语
+    return _apply_description_fallback(item, skip_tooltip=True)
 
 
 def _is_intro_table(table: Tag) -> bool:
@@ -1638,12 +1652,14 @@ def _relocate_misplaced_en_description(item: dict) -> bool:
 
 
 def _description_needs_zh_refresh(item: dict) -> bool:
-    """中文物品缺少描述，或顶层描述实为英文。"""
+    """中文物品缺少描述，或顶层描述实为英文 / 仅工具提示。"""
     desc = item.get("description") or ""
     name = item.get("name") or ""
     if not desc:
         return True
     if _has_cjk(name) and not _has_cjk(desc):
+        return True
+    if _description_is_tooltip_only(item):
         return True
     return _description_needs_coin_refresh(item)
 

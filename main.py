@@ -20,10 +20,17 @@ from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.star import Context, Star
 from astrbot.api import AstrBotConfig, logger
 
-from .prepare_data import update_wiki_data
+from .prepare_data import (
+    COIN_SPECS,
+    RARITY_LABELS,
+    normalize_stat_for_display,
+    update_wiki_data,
+)
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 _FONT_DIR = os.path.join(_PLUGIN_DIR, "assets", "fonts")
+_COIN_DIR = os.path.join(_PLUGIN_DIR, "assets", "coins")
+_COIN_ICON_SIZE = (18, 18)
 _BUNDLED_FONT_CANDIDATES = (
     os.path.join(_FONT_DIR, "NotoSansSC-Bold.otf"),
     os.path.join(_FONT_DIR, "NotoSansSC-Regular.otf"),
@@ -140,6 +147,48 @@ def _load_image(path: str, size: tuple[int, int] | None = None) -> Image.Image |
         return img
     except Exception:
         return None
+
+
+def _load_coin_icon(coin_type: str) -> Image.Image | None:
+    filename = COIN_SPECS.get(coin_type, "")
+    if not filename:
+        return None
+    return _load_image(os.path.join(_COIN_DIR, filename), _COIN_ICON_SIZE)
+
+
+def _draw_stat_value(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    x: int,
+    y: int,
+    stat: dict,
+    font: ImageFont.FreeTypeFont | ImageFont.ImageFont,
+    locale: str,
+) -> None:
+    stat = normalize_stat_for_display(stat, locale)
+    label = stat.get("label", "")
+
+    if stat.get("coins"):
+        cx = x
+        for coin in stat["coins"]:
+            amount = str(coin.get("amount", ""))
+            draw.text((cx, y), amount, fill=COLORS["value"], font=font)
+            bbox = draw.textbbox((cx, y), amount, font=font)
+            cx = bbox[2] + 4
+            coin_img = _load_coin_icon(coin.get("type", ""))
+            if coin_img:
+                card.paste(coin_img, (cx, y + 1), coin_img)
+                cx += _COIN_ICON_SIZE[0] + 8
+        return
+
+    value = stat.get("value", "")
+    extra = stat.get("extra", "")
+    if not value and not extra:
+        return
+
+    color = stat.get("color") if label in RARITY_LABELS else COLORS["value"]
+    v_text = value + (f" ({extra})" if extra else "")
+    draw.text((x, y), v_text, fill=color, font=font)
 
 
 def _normalize_message(text: str) -> str:
@@ -274,11 +323,21 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
 
     for stat in data.get("stats", []):
         label = stat.get("label", "")
-        value = stat.get("value", "")
-        extra = stat.get("extra", "")
-        if not value and not extra:
-            continue
-        v = value + (f" ({extra})" if extra else "")
+        stat = normalize_stat_for_display(stat, locale)
+        if stat.get("coins"):
+            parts = []
+            for coin in stat["coins"]:
+                abbr = {"pc": "PC", "gc": "GC", "sc": "SC", "cc": "CC"}.get(
+                    coin.get("type", ""), ""
+                )
+                parts.append(f"{coin.get('amount', '')} {abbr}".strip())
+            v = " ".join(parts)
+        else:
+            value = stat.get("value", "")
+            extra = stat.get("extra", "")
+            if not value and not extra:
+                continue
+            v = value + (f" ({extra})" if extra else "")
         lines.append(f"  {label}: {v}")
 
     recipe = data.get("recipe")
@@ -349,13 +408,11 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
 
     for stat in stats:
         label = stat.get("label", "")
-        value = stat.get("value", "")
-        extra = stat.get("extra", "")
         draw.text((CARD_PADDING + 20, y), label, fill=COLORS["label"], font=font_body)
-        v_text = value + (f" ({extra})" if extra else "")
         bbox = draw.textbbox((0, 0), label, font=font_body)
         label_w = bbox[2] - bbox[0]
-        draw.text((CARD_PADDING + 30 + label_w + 20, y), v_text, fill=COLORS["value"], font=font_body)
+        value_x = CARD_PADDING + 30 + label_w + 20
+        _draw_stat_value(draw, card, value_x, y, stat, font_body, locale)
         y += ROW_HEIGHT
 
     y += 10
@@ -412,7 +469,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         draw.text((rx, y + 2), result_name, fill=COLORS["title"], font=font_body)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v2_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v3_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 

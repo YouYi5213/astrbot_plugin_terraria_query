@@ -72,6 +72,150 @@ def _filename_from_url(url: str) -> str:
     return name or "unknown.png"
 
 
+RARITY_LABELS = frozenset({"稀有度", "Rarity"})
+SELL_LABELS = frozenset({"卖出", "Sell"})
+
+RARITY_SORTKEY_HEX = {
+    "00*": "#b8b8b8",
+    "01*": "#ffffff",
+    "02*": "#5a9cff",
+    "03*": "#55dd55",
+    "04*": "#ffaa44",
+    "05*": "#ff7777",
+    "06*": "#ff88bb",
+    "07*": "#cc88ff",
+    "08*": "#aa55ff",
+    "09*": "#dd66ff",
+    "10*": "#ff5050",
+    "11*": "#ffff66",
+    "12*": "#88ff88",
+}
+
+RARITY_SORTKEY_ZH = {
+    "00*": "灰色",
+    "01*": "白色",
+    "02*": "蓝色",
+    "03*": "绿色",
+    "04*": "橙色",
+    "05*": "浅红色",
+    "06*": "粉红色",
+    "07*": "浅紫色",
+    "08*": "紫色",
+    "09*": "淡紫色",
+    "10*": "红色",
+    "11*": "黄色",
+    "12*": "渐变色",
+}
+
+RARITY_SORTKEY_EN = {
+    "00*": "Gray",
+    "01*": "White",
+    "02*": "Blue",
+    "03*": "Green",
+    "04*": "Orange",
+    "05*": "Light Red",
+    "06*": "Pink",
+    "07*": "Light Purple",
+    "08*": "Purple",
+    "09*": "Violet",
+    "10*": "Red",
+    "11*": "Yellow",
+    "12*": "Gradient",
+}
+
+COIN_SPECS = {
+    "pc": "Platinum_Coin.png",
+    "gc": "Gold_Coin.png",
+    "sc": "Silver_Coin.png",
+    "cc": "Copper_Coin.png",
+}
+
+
+def _extract_rarity_sortkey(td) -> str:
+    sk = td.select_one("s.sortkey")
+    if sk:
+        return _clean_text(sk.get_text())
+    txt = _clean_text(td.get_text())
+    if re.fullmatch(r"\d+\*", txt):
+        return txt
+    return ""
+
+
+def _extract_rarity_name_from_title(title: str) -> str:
+    if not title:
+        return ""
+    match = re.match(r"^([^（(]+)", title.strip())
+    return match.group(1).strip() if match else ""
+
+
+def _parse_rarity_stat(td, label: str) -> dict:
+    sortkey = _extract_rarity_sortkey(td)
+    link = td.select_one(".rarity a") or td.select_one("a")
+    title = link.get("title", "") if link else ""
+    en_name = _extract_rarity_name_from_title(title)
+    if label == "稀有度":
+        display = RARITY_SORTKEY_ZH.get(sortkey, en_name or sortkey)
+    else:
+        display = en_name or RARITY_SORTKEY_EN.get(sortkey, sortkey)
+    return {
+        "label": label,
+        "value": display or _clean_text(td.get_text()),
+        "extra": "",
+        "sortkey": sortkey,
+        "color": RARITY_SORTKEY_HEX.get(sortkey, "#ffffff"),
+    }
+
+
+def _parse_sell_stat(td, label: str) -> dict:
+    coins: list[dict] = []
+    for cls, image in COIN_SPECS.items():
+        el = td.select_one(f"span.{cls}")
+        if not el:
+            continue
+        match = re.search(r"(\d+)", _clean_text(el.get_text()))
+        if match:
+            coins.append({"type": cls, "amount": match.group(1), "image": image})
+    value = "" if coins else _clean_text(td.get_text())
+    return {"label": label, "value": value, "extra": "", "coins": coins}
+
+
+def parse_sell_text_to_coins(text: str) -> list[dict]:
+    coins: list[dict] = []
+    for match in re.finditer(r"(\d+)\s*(PC|GC|SC|CC)", text, re.I):
+        abbr = match.group(2).lower()
+        cls = {"pc": "pc", "gc": "gc", "sc": "sc", "cc": "cc"}.get(abbr)
+        if cls:
+            coins.append(
+                {"type": cls, "amount": match.group(1), "image": COIN_SPECS[cls]}
+            )
+    return coins
+
+
+def normalize_stat_for_display(stat: dict, locale: str = "zh") -> dict:
+    stat = dict(stat)
+    label = stat.get("label", "")
+
+    if label in RARITY_LABELS:
+        if stat.get("color") and stat.get("value") and "*" not in stat.get("value", ""):
+            return stat
+        sortkey = stat.get("sortkey") or stat.get("value", "")
+        if re.fullmatch(r"\d+\*", sortkey):
+            names = RARITY_SORTKEY_ZH if locale == "zh" else RARITY_SORTKEY_EN
+            stat["value"] = names.get(sortkey, sortkey)
+            stat["color"] = RARITY_SORTKEY_HEX.get(sortkey, "#ffffff")
+            stat["sortkey"] = sortkey
+
+    if label in SELL_LABELS:
+        if stat.get("coins"):
+            return stat
+        coins = parse_sell_text_to_coins(stat.get("value", ""))
+        if coins:
+            stat["coins"] = coins
+            stat["value"] = ""
+
+    return stat
+
+
 def _parse_stat_value(td) -> tuple[str, str]:
     extra_el = td.select_one(".small-bold, .knockback, .usetime")
     extra = _clean_text(extra_el.get_text(" ", strip=True)) if extra_el else ""
@@ -127,6 +271,12 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
         if not th or not td:
             continue
         label = _clean_text(th.get_text())
+        if label in RARITY_LABELS:
+            item["stats"].append(_parse_rarity_stat(td, label))
+            continue
+        if label in SELL_LABELS:
+            item["stats"].append(_parse_sell_stat(td, label))
+            continue
         value, extra = _parse_stat_value(td)
         if not label:
             continue

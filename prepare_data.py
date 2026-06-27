@@ -865,6 +865,22 @@ def _parse_key_element(el: Tag) -> dict:
     return {"type": "key", "symbol": symbol, "label": label}
 
 
+def _parse_coin_span(node: Tag) -> dict | None:
+    """解析 Wiki span.coin 为描述/属性中的金币分段。"""
+    for cls in COIN_SPECS:
+        amt_el = node.select_one(f"span.{cls}")
+        if not amt_el:
+            continue
+        match = re.search(r"(\d+)", _clean_text(amt_el.get_text()))
+        if match:
+            return {
+                "type": "coin",
+                "amount": match.group(1),
+                "coin_type": cls,
+            }
+    return None
+
+
 def _parse_description_paragraph_rich(p: Tag) -> list[dict]:
     from bs4 import NavigableString
 
@@ -894,10 +910,9 @@ def _parse_description_paragraph_rich(p: Tag) -> list[dict]:
             append_text(f"[{ref_num}]" if ref_num else "")
             return
         if node.name == "span" and "coin" in classes:
-            amt_el = node.select_one("span.pc, span.gc, span.sc, span.cc")
-            if amt_el:
-                match = re.search(r"(\d+)", _clean_text(amt_el.get_text()))
-                append_text(match.group(1) if match else "")
+            coin = _parse_coin_span(node)
+            if coin:
+                segments.append(coin)
             return
         if node.name == "img" and node.get("src"):
             segments.append(
@@ -933,6 +948,11 @@ def _rich_segments_to_text(segments: list[dict]) -> str:
             parts.append(seg["text"])
         elif seg["type"] == "key":
             parts.append(f"{seg.get('symbol', '')}{seg.get('label', '')}")
+        elif seg["type"] == "coin":
+            abbr = {"pc": "PC", "gc": "GC", "sc": "SC", "cc": "CC"}.get(
+                seg.get("coin_type", ""), ""
+            )
+            parts.append(f"{seg.get('amount', '')} {abbr}".strip())
         elif seg["type"] == "icon":
             alt = seg.get("alt") or ""
             if alt:
@@ -1679,6 +1699,18 @@ async def backfill_drops(
     return found, image_urls
 
 
+def _description_needs_coin_refresh(item: dict) -> bool:
+    """旧描述只存了金额数字、未解析金币图标时需重新抓取。"""
+    text = item.get("description") or ""
+    if not any(token in text for token in ("购买", "出售", "price", "buy", "sell", "purchase")):
+        return False
+    for para in item.get("description_rich") or []:
+        for seg in para:
+            if seg.get("type") == "coin":
+                return False
+    return bool(re.search(r"\d", text))
+
+
 async def backfill_descriptions(
     session: aiohttp.ClientSession,
     items: dict[str, dict],
@@ -1688,7 +1720,7 @@ async def backfill_descriptions(
     pending = [
         key
         for key, item in items.items()
-        if force or not item.get("description")
+        if force or not item.get("description") or _description_needs_coin_refresh(item)
     ]
     pending.sort()
     if limit:

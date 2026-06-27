@@ -185,7 +185,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
 CARD_WIDTH = 600
 CARD_PADDING = 20
-CARD_VERSION = "v22"
+CARD_VERSION = "v23"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -431,6 +431,11 @@ def _key_badge_width(draw: ImageDraw.ImageDraw, seg: dict, font) -> int:
     return width + 2
 
 
+def _coin_segment_width(draw: ImageDraw.ImageDraw, seg: dict, font) -> int:
+    amount = str(seg.get("amount", ""))
+    return _text_width(draw, amount, font) + 4 + _COIN_ICON_SIZE[0] + 2
+
+
 def _layout_description_segments(
     draw: ImageDraw.ImageDraw,
     segments: list[dict],
@@ -446,6 +451,8 @@ def _layout_description_segments(
                 width += _text_width(draw, payload, font)
             elif kind == "key":
                 width += _key_badge_width(draw, payload, font) + 2
+            elif kind == "coin":
+                width += _coin_segment_width(draw, payload, font)
             else:
                 img = _load_inline_icon(payload)
                 width += (img.width + 2) if img else 18
@@ -469,6 +476,11 @@ def _layout_description_segments(
             if lines[-1] and line_width(lines[-1]) + bw > max_width:
                 lines.append([])
             lines[-1].append(("key", seg))
+        elif seg.get("type") == "coin":
+            cw = _coin_segment_width(draw, seg, font)
+            if lines[-1] and line_width(lines[-1]) + cw > max_width:
+                lines.append([])
+            lines[-1].append(("coin", seg))
         elif seg.get("type") == "icon":
             fn = seg.get("image", "")
             img = _load_inline_icon(fn)
@@ -533,6 +545,14 @@ def _draw_description_line(
             cx += _text_width(draw, payload, font)
         elif kind == "key":
             cx += _draw_key_badge(draw, cx, y - 1, payload, font)
+        elif kind == "coin":
+            amount = str(payload.get("amount", ""))
+            draw.text((cx, y), amount, fill=COLORS["text"], font=font)
+            cx += _text_width(draw, amount, font) + 4
+            coin_img = _load_coin_icon(payload.get("coin_type", ""))
+            if coin_img:
+                card.paste(coin_img, (cx, y + 1), coin_img)
+                cx += _COIN_ICON_SIZE[0] + 2
         else:
             img = _load_inline_icon(payload)
             if img:

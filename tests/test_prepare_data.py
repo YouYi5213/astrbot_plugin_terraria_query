@@ -6,13 +6,16 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from prepare_data import (  # noqa: E402
+    _description_needs_coin_refresh,
     _is_set_item,
     _merge_set_pieces,
     _needs_en_locale_refresh,
     _normalize_image_filename,
+    _parse_description_paragraph_rich,
     migrate_item_image_filenames,
     resync_set_piece_locales,
 )
+from bs4 import BeautifulSoup  # noqa: E402
 
 
 def test_normalize_image_filename_strips_px_prefix():
@@ -94,6 +97,26 @@ def test_needs_en_locale_refresh_when_set_pieces_missing():
     assert _needs_en_locale_refresh(item)
     item["en"]["set_pieces"] = [{"name": "Titanium Mask"}]
     assert not _needs_en_locale_refresh(item)
+
+
+def test_parse_description_coin_segment():
+    html = (
+        '<p>可以从松露人处以<span class="coin">'
+        '<span class="pc">1<i> PC</i></span></span>购买它。</p>'
+    )
+    p = BeautifulSoup(html, "lxml").p
+    segments = _parse_description_paragraph_rich(p)
+    assert any(s.get("type") == "coin" and s.get("coin_type") == "pc" for s in segments)
+
+
+def test_description_needs_coin_refresh():
+    item = {
+        "description": "可以从松露人处以1购买它。",
+        "description_rich": [[{"type": "text", "text": "可以从松露人处以1购买它。"}]],
+    }
+    assert _description_needs_coin_refresh(item)
+    item["description_rich"] = [[{"type": "coin", "amount": "1", "coin_type": "pc"}]]
+    assert not _description_needs_coin_refresh(item)
 
 
 def test_items_json_is_valid():

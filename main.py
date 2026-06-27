@@ -644,6 +644,7 @@ _TERRARIA_CMD_RE = r"^/?(泰拉更新|泰拉查询|泰拉|terraria)(\s|$)"
 
 _CARD_UI = {
     "zh": {
+        "description": "▎描述",
         "stats": "▎属性",
         "recipe": "▎合成配方",
         "drops": "▎来自",
@@ -657,6 +658,7 @@ _CARD_UI = {
         "recipe_title": "📜 合成配方",
     },
     "en": {
+        "description": "▎Description",
         "stats": "▎Stats",
         "recipe": "▎Recipe",
         "drops": "▎From",
@@ -735,6 +737,7 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
             "stats": en.get("stats", []),
             "recipe": merge_en_recipe(item.get("recipe"), en.get("recipe")),
             "drops": en.get("drops"),
+            "description": en.get("description") or item.get("description"),
         }
     return {
         "name": item.get("name", ""),
@@ -742,6 +745,7 @@ def _resolve_display_item(item: dict, locale: str) -> dict | None:
         "stats": item.get("stats", []),
         "recipe": item.get("recipe"),
         "drops": item.get("drops"),
+        "description": item.get("description"),
     }
 
 
@@ -754,6 +758,14 @@ def _match_label(key: str, item: dict, locale: str) -> str:
 def _format_text_result(data: dict, locale: str = "zh") -> str:
     ui = _CARD_UI.get(locale, _CARD_UI["zh"])
     lines = [f"📦 {data.get('name', ui['unknown'])}", "=" * 30]
+
+    description = data.get("description")
+    if description:
+        lines.append("")
+        lines.append(ui["description"].lstrip("▎"))
+        lines.append("-" * 30)
+        for para in description.split("\n\n"):
+            lines.append(f"  {para}")
 
     for stat in data.get("stats", []):
         label = stat.get("label", "")
@@ -814,6 +826,28 @@ def _format_text_result(data: dict, locale: str = "zh") -> str:
     return "\n".join(lines)
 
 
+def _calc_description_area(measure, description: str, font) -> int:
+    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
+    area = 20 + 30
+    for para in description.split("\n\n"):
+        area += len(_wrap_text_lines(measure, para, font, max_w)) * 16
+        area += 6
+    return area + 10
+
+
+def _draw_description_section(draw, y: int, description: str, font_header, font_small, ui) -> int:
+    draw.text((CARD_PADDING + 10, y), ui["description"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    desc_x = CARD_PADDING + 20
+    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
+    for para in description.split("\n\n"):
+        for line in _wrap_text_lines(draw, para, font_small, max_w):
+            draw.text((desc_x, y), line, fill=COLORS["text"], font=font_small)
+            y += 16
+        y += 6
+    return y + 10
+
+
 def _generate_item_card(data: dict, locale: str = "zh") -> str:
     _ensure_dirs()
     ui = _CARD_UI.get(locale, _CARD_UI["zh"])
@@ -835,6 +869,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     ]
     recipe = data.get("recipe")
     drops = data.get("drops")
+    description = (data.get("description") or "").strip()
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
     stat_value_x = _stat_value_x(measure, stats, font_body)
@@ -843,6 +878,10 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         stats_area += _stat_value_height(
             measure, None, stat_value_x, stat, font_body, locale
         )
+
+    desc_area = 0
+    if description:
+        desc_area = _calc_description_area(measure, description, font_small) + 20
 
     title_area = 60
     sep_area = 30
@@ -878,7 +917,9 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         if recipe:
             drops_area += 20
 
-    total_height = title_area + stats_area + sep_area + recipe_area + drops_area + CARD_PADDING * 2
+    total_height = (
+        title_area + desc_area + stats_area + sep_area + recipe_area + drops_area + CARD_PADDING * 2
+    )
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
 
@@ -911,6 +952,15 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
     )
 
     y = CARD_PADDING + title_area + 10
+    if description:
+        y = _draw_description_section(draw, y, description, font_header, font_small, ui)
+        draw.line(
+            [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+            fill=COLORS["separator"],
+            width=1,
+        )
+        y += 20
+
     draw.text((CARD_PADDING + 10, y), ui["stats"], fill=COLORS["accent"], font=font_header)
     y += 30
 
@@ -1005,7 +1055,7 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_v13_{locale}_{safe_name}.png")
+    output_path = os.path.join(CARDS_DIR, f"card_v14_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 
@@ -1013,11 +1063,14 @@ def _generate_item_card(data: dict, locale: str = "zh") -> str:
 def _format_update_result(result: dict) -> str:
     en_count = result.get("en_backfill_count", 0)
     drops_count = result.get("drops_backfill_count", 0)
+    desc_count = result.get("desc_backfill_count", 0)
     extra_lines = ""
     if en_count:
         extra_lines += f"\n英文数据回填：{en_count} 个"
     if drops_count:
         extra_lines += f"\n掉落来源回填：{drops_count} 个"
+    if desc_count:
+        extra_lines += f"\n描述回填：{desc_count} 个"
     if result.get("new_count", 0) == 0 and not extra_lines:
         return (
             f"✅ Wiki 数据已是最新\n"

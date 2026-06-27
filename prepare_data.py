@@ -21,7 +21,7 @@ import sys
 from urllib.parse import quote, unquote
 
 import aiohttp
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 WIKI_BASE = "https://terraria.wiki.gg/zh"
 API_URL = f"{WIKI_BASE}/api.php"
@@ -74,6 +74,8 @@ def _filename_from_url(url: str) -> str:
 
 RARITY_LABELS = frozenset({"稀有度", "Rarity"})
 SELL_LABELS = frozenset({"卖出", "Sell"})
+BUY_LABELS = frozenset({"买入", "Buy"})
+COIN_STAT_LABELS = SELL_LABELS | BUY_LABELS
 
 RARITY_SORTKEY_HEX = {
     "00*": "#b8b8b8",
@@ -205,7 +207,7 @@ def normalize_stat_for_display(stat: dict, locale: str = "zh") -> dict:
             stat["color"] = RARITY_SORTKEY_HEX.get(sortkey, "#ffffff")
             stat["sortkey"] = sortkey
 
-    if label in SELL_LABELS:
+    if label in COIN_STAT_LABELS:
         if stat.get("coins"):
             return stat
         coins = parse_sell_text_to_coins(stat.get("value", ""))
@@ -655,6 +657,173 @@ def _parse_item_span(span) -> tuple[str, str]:
     return name, image
 
 
+_INTRO_SKIP_DIV_CLASSES = frozenset({
+    "message-box",
+    "msgbox-color-blue",
+    "msgbox-color-red",
+    "msgbox-color-green",
+    "msgbox-color-orange",
+    "nomobile",
+    "mw-empty-elt",
+    "navbox",
+    "toc",
+    "hat-note",
+    "searchaux",
+    "noexcerpt",
+    "t-for",
+    "t-dablink",
+    "t-distinguish",
+    "t-about",
+    "t-redirect",
+    "infobox-wrapper",
+    "ajaxHide",
+    "reflist",
+})
+
+
+def _iter_wiki_titles(item: dict, key: str) -> list[str]:
+    """按优先级返回可用于抓取 Wiki 的标题候选"""
+    titles: list[str] = []
+    for raw in (item.get("wiki_title"), item.get("name"), key):
+        title = _clean_text(raw or "")
+        if title and title not in titles:
+            titles.append(title)
+        match = re.match(r"^(.+?)\(电脑版、主机版、和移动版\)$", title)
+        if match:
+            base = _clean_text(match.group(1))
+            if base and base not in titles:
+                titles.append(base)
+    en_name = item.get("en_name") or (item.get("en") or {}).get("name")
+    if en_name and en_name not in titles:
+        titles.append(en_name)
+    return titles
+
+
+def _description_fallback_from_stats(item: dict) -> str | None:
+    """无 Wiki 导语时，用 infobox 工具提示或类型信息兜底"""
+    for stat in item.get("stats", []):
+        if stat.get("label") in ("工具提示", "Tooltip"):
+            value = _clean_text(stat.get("value", ""))
+            if value:
+                return value
+    name = _clean_text(item.get("name", ""))
+    type_value = ""
+    for stat in item.get("stats", []):
+        if stat.get("label") in ("类型", "Type"):
+            type_value = _clean_text(stat.get("value", ""))
+            break
+    if name and type_value:
+        return f"{name}是一种{type_value}。"
+    if name:
+        return f"{name}是泰拉瑞亚中的一种物品。"
+    return None
+
+
+async def fetch_item_description(
+    session: aiohttp.ClientSession,
+    item: dict,
+    key: str,
+) -> str | None:
+    """抓取物品导语，依次尝试多个 Wiki 标题"""
+    for title in _iter_wiki_titles(item, key):
+        html = await fetch_page_html(session, title)
+        if not html:
+            html = await fetch_page_html(session, title, api_url=API_URL_EN)
+        if not html:
+            continue
+        description = parse_description_from_soup(BeautifulSoup(html, "html.parser"))
+        if description:
+            return description
+    return _description_fallback_from_stats(item)
+
+
+def _is_intro_table(table: Tag) -> bool:
+    classes = set(table.get("class") or [])
+    if classes & {"info-request", "navbox"}:
+        return True
+    if "terraria" in classes and classes & {"lined", "mw-collapsible", "sortable"}:
+        return True
+    if classes == {"terraria"}:
+        text = table.get_text(" ", strip=True)
+        if any(token in text for token in ("增益", "基础伤害", "跳跃强化", "看 · 论 · 编")):
+            return True
+    return False
+
+
+def _should_skip_intro_div(div: Tag) -> str:
+    """返回 skip（继续扫描）或 stop（结束导语区）"""
+    classes = set(div.get("class") or [])
+    if classes & _INTRO_SKIP_DIV_CLASSES:
+        return "stop" if "toc" in classes else "skip"
+    if "infobox" in classes or "thumb" in classes:
+        return "skip"
+    text = _clean_text(div.get_text())
+    if not text:
+        return "skip"
+    if text.startswith("目录") or div.get("id") == "toc" or div.select_one("#toc, .toc"):
+        return "skip"
+    if not classes:
+        return "skip"
+    return "stop"
+
+
+def _clean_description_paragraph(p: Tag) -> str:
+    """将 Wiki 导语段落转为纯文本"""
+    for sup in p.select("sup.reference"):
+        ref_num = re.sub(r"[\[\]\s]", "", sup.get_text("", strip=True))
+        sup.replace_with(f"[{ref_num}]" if ref_num else "")
+    for coin in p.select("span.coin"):
+        amt_el = coin.select_one("span.pc, span.gc, span.sc, span.cc")
+        if amt_el:
+            match = re.search(r"(\d+)", _clean_text(amt_el.get_text()))
+            coin.replace_with(match.group(1) if match else "")
+        else:
+            coin.decompose()
+    for italic in p.select("i"):
+        italic.unwrap()
+    text = _clean_text(p.get_text("", strip=True))
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def parse_description_from_soup(soup: BeautifulSoup) -> str | None:
+    """提取 Wiki 正文开头导语（infobox 后、目录/章节前的连续段落）"""
+    root = (
+        soup.select_one("#mw-content-text .mw-parser-output")
+        or soup.select_one(".mw-parser-output")
+    )
+    if not root:
+        return None
+
+    stop_tags = frozenset({"h2", "h3", "h4", "ul", "ol", "figure", "style", "script"})
+    paragraphs: list[str] = []
+    for child in root.children:
+        if not isinstance(child, Tag):
+            continue
+        if child.name == "table":
+            if _is_intro_table(child):
+                continue
+            break
+        if child.name == "div":
+            action = _should_skip_intro_div(child)
+            if action == "skip":
+                continue
+            break
+        if child.name == "blockquote":
+            continue
+        if child.name == "p":
+            text = _clean_description_paragraph(child)
+            if text:
+                paragraphs.append(text)
+            continue
+        if child.name in stop_tags:
+            break
+        break
+
+    if not paragraphs:
+        return None
+    return "\n\n".join(paragraphs)
+
+
 def parse_item_page(html: str, fallback_name: str) -> dict | None:
     """解析物品页面 HTML，无有效 infobox 时返回 None"""
     soup = BeautifulSoup(html, "lxml")
@@ -693,7 +862,7 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
         if label in RARITY_LABELS:
             item["stats"].append(_parse_rarity_stat(td, label))
             continue
-        if label in SELL_LABELS:
+        if label in COIN_STAT_LABELS:
             item["stats"].append(_parse_sell_stat(td, label))
             continue
         if not label:
@@ -745,6 +914,12 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
     if drops:
         item["drops"] = drops
 
+    description = parse_description_from_soup(soup)
+    if not description:
+        description = _description_fallback_from_stats(item)
+    if description:
+        item["description"] = description
+
     return item
 
 
@@ -755,6 +930,7 @@ def _extract_en_locale(en_item: dict, zh_item: dict) -> dict:
         "stats": en_item.get("stats", []),
         "recipe": en_item.get("recipe"),
         "drops": en_item.get("drops"),
+        "description": en_item.get("description"),
     }
 
 
@@ -919,6 +1095,52 @@ async def backfill_drops(
     return found, image_urls
 
 
+async def backfill_descriptions(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+    force: bool = False,
+    limit: int | None = None,
+) -> int:
+    pending = [
+        key
+        for key, item in items.items()
+        if force or not item.get("description")
+    ]
+    pending.sort()
+    if limit:
+        pending = pending[:limit]
+
+    found = 0
+    semaphore = asyncio.Semaphore(4)
+
+    async def _process_one(key: str) -> bool:
+        async with semaphore:
+            item = items[key]
+            description = None
+            for attempt in range(3):
+                description = await fetch_item_description(session, item, key)
+                if description:
+                    break
+                if attempt < 2:
+                    await asyncio.sleep(1.5 * (attempt + 1))
+            if description:
+                item["description"] = description
+            await asyncio.sleep(0.12)
+            return bool(description)
+
+    batch_size = 50
+    for batch_start in range(0, len(pending), batch_size):
+        batch = pending[batch_start : batch_start + batch_size]
+        results = await asyncio.gather(*[_process_one(key) for key in batch])
+        found += sum(1 for ok in results if ok)
+        done = batch_start + len(batch)
+        logger.info(f"描述回填进度 {done}/{len(pending)}，发现 {found} 个")
+        with open(ITEMS_JSON, "w", encoding="utf-8") as f:
+            json.dump(items, f, ensure_ascii=False, indent=2)
+
+    return found
+
+
 async def fetch_category_members(
     session: aiohttp.ClientSession, category: str
 ) -> list[str]:
@@ -1051,6 +1273,8 @@ async def update_wiki_data(
     force: bool = False,
     en_limit: int | None = None,
     en_only: bool = False,
+    desc_only: bool = False,
+    desc_limit: int | None = None,
 ) -> dict:
     """增量（或全量）更新 Wiki 离线数据，返回统计信息。"""
     os.makedirs(IMAGES_DIR, exist_ok=True)
@@ -1063,11 +1287,19 @@ async def update_wiki_data(
     images_ok = 0
     en_backfill_count = 0
     drops_backfill_count = 0
+    desc_backfill_count = 0
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
     async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
-        if not en_only:
+        if desc_only:
+            desc_backfill_count = await backfill_descriptions(
+                session,
+                items,
+                force=force,
+                limit=desc_limit,
+            )
+        elif not en_only:
             all_titles: set[str] = set()
             for cat in CATEGORIES:
                 titles = await fetch_category_members(session, cat)
@@ -1115,14 +1347,15 @@ async def update_wiki_data(
                 images_ok = sum(1 for r in results if r)
 
         effective_en_limit = en_limit if en_only else (100 if en_limit is None else en_limit)
-        en_backfill_count = await backfill_en_locales(
-            session,
-            items,
-            force=bool(en_only and force),
-            limit=effective_en_limit,
-        )
+        if not desc_only:
+            en_backfill_count = await backfill_en_locales(
+                session,
+                items,
+                force=bool(en_only and force),
+                limit=effective_en_limit,
+            )
 
-        if not en_only:
+        if not en_only and not desc_only:
             drops_limit = 50 if limit is None else min(50, limit or 50)
             drops_backfill_count, drop_image_urls = await backfill_drops(
                 session, items, limit=drops_limit
@@ -1138,6 +1371,12 @@ async def update_wiki_data(
                 images_total += drop_total
                 images_ok += drop_ok
 
+            desc_backfill_count = await backfill_descriptions(
+                session,
+                items,
+                limit=desc_limit if desc_limit is not None else 100,
+            )
+
     with open(ITEMS_JSON, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
 
@@ -1152,6 +1391,7 @@ async def update_wiki_data(
         "images_ok": images_ok,
         "en_backfill_count": en_backfill_count,
         "drops_backfill_count": drops_backfill_count,
+        "desc_backfill_count": desc_backfill_count,
     }
 
 
@@ -1160,8 +1400,13 @@ async def main(
     force: bool = False,
     en_only: bool = False,
     en_limit: int | None = None,
+    desc_only: bool = False,
+    desc_limit: int | None = None,
 ) -> None:
-    if en_only:
+    if desc_only:
+        existing = _load_existing_items()
+        print(f"描述回填模式：已有 {len(existing)} 个物品", flush=True)
+    elif en_only:
         existing = _load_existing_items()
         print(f"英文回填模式：已有 {len(existing)} 个物品", flush=True)
     elif force:
@@ -1172,14 +1417,20 @@ async def main(
 
     print("正在收集并更新 Wiki 数据...", flush=True)
     result = await update_wiki_data(
-        limit=limit, force=force, en_only=en_only, en_limit=en_limit
+        limit=limit,
+        force=force,
+        en_only=en_only,
+        en_limit=en_limit,
+        desc_only=desc_only,
+        desc_limit=desc_limit,
     )
     print(
         f"更新完成：新增 {result['new_count']} 个，"
         f"共 {result['total']} 个物品，"
         f"新图片 {result['images_ok']}/{result['images_total']}，"
         f"英文回填 {result['en_backfill_count']} 个，"
-        f"掉落来源 {result['drops_backfill_count']} 个",
+        f"掉落来源 {result['drops_backfill_count']} 个，"
+        f"描述 {result['desc_backfill_count']} 个",
         flush=True,
     )
     print(f"已保存到 {ITEMS_JSON}", flush=True)
@@ -1200,6 +1451,17 @@ if __name__ == "__main__":
         default=None,
         help="英文回填最多处理 N 个物品（调试用）",
     )
+    parser.add_argument(
+        "--desc-only",
+        action="store_true",
+        help="仅回填 Wiki 导语描述，不抓取其他数据",
+    )
+    parser.add_argument(
+        "--desc-limit",
+        type=int,
+        default=None,
+        help="描述回填最多处理 N 个物品（调试用）",
+    )
     args = parser.parse_args()
     try:
         asyncio.run(
@@ -1208,6 +1470,8 @@ if __name__ == "__main__":
                 force=args.force,
                 en_only=args.en_only,
                 en_limit=args.en_limit,
+                desc_only=args.desc_only,
+                desc_limit=args.desc_limit,
             )
         )
     except KeyboardInterrupt:

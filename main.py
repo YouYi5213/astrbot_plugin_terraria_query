@@ -193,7 +193,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
 CARD_WIDTH = 600
 CARD_PADDING = 20
-CARD_VERSION = "v28"
+CARD_VERSION = "v29"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -599,6 +599,25 @@ def _draw_description_line(
             if img:
                 card.paste(img, (cx, y + 1), img)
                 cx += img.width + 2
+
+
+def _resolve_source_rich(data: dict) -> list[list[dict]]:
+    rich = data.get("source_rich")
+    if rich:
+        return rich
+    text = (data.get("source") or "").strip()
+    return description_text_to_rich(text) if text else []
+
+
+def _is_wing_item(data: dict) -> bool:
+    return data.get("page_type") == "wing" or bool(data.get("from_wings_table"))
+
+
+def _card_ui_for_data(data: dict) -> dict:
+    ui = dict(_CARD_UI)
+    if _is_wing_item(data):
+        ui["recipe"] = ui["source"]
+    return ui
 
 
 def _resolve_description_rich(data: dict) -> list[list[dict]]:
@@ -1170,6 +1189,7 @@ def _display_stats(data: dict, locale: str) -> list[dict]:
 
 _CARD_UI = {
     "description": "▎描述",
+    "source": "▎来源",
     "stats": "▎属性",
     "buff": "▎给予增益",
     "buff_label": "增益",
@@ -1435,11 +1455,14 @@ def _display_item(item: dict) -> dict:
         "image": item.get("image", ""),
         "stats": item.get("stats", []),
         "recipe": item.get("recipe"),
+        "source": item.get("source"),
+        "source_rich": item.get("source_rich"),
         "drops": item.get("drops"),
         "description": item.get("description"),
         "description_rich": item.get("description_rich"),
         "set_pieces": item.get("set_pieces"),
         "page_type": item.get("page_type"),
+        "from_wings_table": item.get("from_wings_table"),
         "buff": item.get("buff"),
         "mount": item.get("mount"),
         "pet": item.get("pet"),
@@ -1495,16 +1518,18 @@ def _format_recipe_plain(
 
 
 def _format_text_result(data: dict) -> str:
-    ui = _CARD_UI
+    ui = _card_ui_for_data(data)
     lines = [f"📦 {data.get('name', ui['unknown'])}", "=" * 30]
+    is_wing = _is_wing_item(data)
 
-    description = data.get("description")
-    if description:
-        lines.append("")
-        lines.append(ui["description"].lstrip("▎"))
-        lines.append("-" * 30)
-        for para in description.split("\n\n"):
-            lines.append(f"  {para}")
+    if not is_wing:
+        description = data.get("description")
+        if description:
+            lines.append("")
+            lines.append(ui["description"].lstrip("▎"))
+            lines.append("-" * 30)
+            for para in description.split("\n\n"):
+                lines.append(f"  {para}")
 
     stat_rows = _display_stats(data, "zh")
     if stat_rows:
@@ -1518,6 +1543,29 @@ def _format_text_result(data: dict) -> str:
             if not stat.get("segments"):
                 continue
         lines.append(f"  {label}: {v}")
+
+    recipe = data.get("recipe") if not (data.get("set_pieces") or []) else None
+    if is_wing and recipe:
+        lines.append("")
+        lines.append(ui["source"].lstrip("▎"))
+        lines.append("-" * 30)
+        for rline in _format_recipe_plain(recipe, data.get("name", "")):
+            lines.append(rline)
+    elif is_wing and data.get("source"):
+        lines.append("")
+        lines.append(ui["source"].lstrip("▎"))
+        lines.append("-" * 30)
+        for para in data["source"].split("\n\n"):
+            lines.append(f"  {para}")
+
+    if is_wing:
+        description = data.get("description")
+        if description:
+            lines.append("")
+            lines.append(ui["description"].lstrip("▎"))
+            lines.append("-" * 30)
+            for para in description.split("\n\n"):
+                lines.append(f"  {para}")
 
     buff = data.get("buff")
     if buff:
@@ -1546,7 +1594,8 @@ def _format_text_result(data: dict) -> str:
             lines.append(f"  {pet['name']}")
 
     set_pieces = data.get("set_pieces") or []
-    recipe = data.get("recipe") if not set_pieces else None
+    if not recipe:
+        recipe = data.get("recipe") if not set_pieces else None
     if set_pieces:
         lines.append("")
         lines.append(ui["set_pieces"].lstrip("▎"))
@@ -1561,7 +1610,7 @@ def _format_text_result(data: dict) -> str:
             for rline in _format_recipe_plain(piece.get("recipe"), piece.get("name", "")):
                 lines.append(rline)
 
-    if recipe:
+    if recipe and not is_wing:
         lines.append("")
         lines.append(ui["recipe_title"])
         lines.append("-" * 30)
@@ -1781,8 +1830,9 @@ def _draw_set_pieces_section(
 
 def _generate_item_card(data: dict) -> str:
     _ensure_dirs()
-    ui = _CARD_UI
+    ui = _card_ui_for_data(data)
     locale = "zh"
+    is_wing = _is_wing_item(data)
     output_path = _card_output_path(data.get("name", ""), locale)
     if os.path.isfile(output_path):
         return output_path
@@ -1809,6 +1859,7 @@ def _generate_item_card(data: dict) -> str:
     mount = data.get("mount")
     pet = data.get("pet")
     description_rich = _resolve_description_rich(data)
+    source_rich = _resolve_source_rich(data) if is_wing else []
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
     stat_value_x = _stat_value_x(measure, stats, font_body)
@@ -1819,19 +1870,25 @@ def _generate_item_card(data: dict) -> str:
         )
 
     desc_area = 0
-    if description_rich:
+    if description_rich and (not is_wing or description_rich):
         desc_area = _calc_description_area(measure, description_rich, font_small) + 20
+
+    source_area = 0
+    if is_wing and recipe:
+        source_area = _calc_recipe_block_height(measure, recipe, font_small, ui)
+    elif is_wing and source_rich:
+        source_area = _calc_description_area(measure, source_rich, font_small) + 20
 
     title_area = 60
     sep_area = 30
     recipe_area = 0
-    if recipe:
+    if recipe and not is_wing:
         recipe_area = _calc_recipe_block_height(measure, recipe, font_small, ui)
 
     drops_area = 0
     if drops:
         drops_area = 20 + _calc_drops_area(drops, locale)
-        if recipe or set_pieces or buff or mount or pet:
+        if recipe or set_pieces or buff or mount or pet or source_area:
             drops_area += 20
 
     pieces_area = 0
@@ -1852,11 +1909,16 @@ def _generate_item_card(data: dict) -> str:
     if pet:
         pet_area = _calc_pet_section_area(pet, font_header, font_body)
 
+    wing_extra_sep = 20 if is_wing and source_area and description_rich else 0
+
     total_height = (
         title_area
-        + desc_area
+        + (0 if is_wing else desc_area)
         + stats_area
         + sep_area
+        + source_area
+        + wing_extra_sep
+        + (desc_area if is_wing else 0)
         + buff_area
         + mount_area
         + pet_area
@@ -1897,7 +1959,7 @@ def _generate_item_card(data: dict) -> str:
     )
 
     y = CARD_PADDING + title_area + 10
-    if description_rich:
+    if not is_wing and description_rich:
         y = _draw_description_section(
             draw, card, y, description_rich, font_header, font_small, ui
         )
@@ -1925,6 +1987,41 @@ def _generate_item_card(data: dict) -> str:
         width=1,
     )
     y += 20
+
+    if is_wing and recipe:
+        y = _draw_recipe_block(
+            draw, card, y, recipe, font_header, font_body, font_small, ui
+        )
+        if description_rich:
+            draw.line(
+                [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+                fill=COLORS["separator"],
+                width=1,
+            )
+            y += 20
+    elif is_wing and source_rich:
+        source_ui = {**ui, "description": ui["source"]}
+        y = _draw_description_section(
+            draw, card, y, source_rich, font_header, font_small, source_ui
+        )
+        if description_rich:
+            draw.line(
+                [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+                fill=COLORS["separator"],
+                width=1,
+            )
+            y += 20
+
+    if is_wing and description_rich:
+        y = _draw_description_section(
+            draw, card, y, description_rich, font_header, font_small, ui
+        )
+        draw.line(
+            [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+            fill=COLORS["separator"],
+            width=1,
+        )
+        y += 20
 
     if buff:
         y = _draw_buff_section(draw, card, y, buff, font_header, font_body, ui)
@@ -1958,7 +2055,7 @@ def _generate_item_card(data: dict) -> str:
             draw, card, y, set_pieces, font_header, font_body, font_small, ui, locale
         )
 
-    if recipe:
+    if recipe and not is_wing:
         y = _draw_recipe_block(
             draw, card, y, recipe, font_header, font_body, font_small, ui
         )

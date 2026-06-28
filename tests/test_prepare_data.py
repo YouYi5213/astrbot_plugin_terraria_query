@@ -247,3 +247,28 @@ def test_pet_overview_catalog_has_items():
     assert catalog["蚊子琥珀"]["pet_display"] == "恐龙宝宝"
     assert catalog["鱼"]["wiki_page"] == "鱼（物品）"
     assert catalog["暗影珠"]["wiki_page"] == "暗影珠（物品）"
+
+
+def test_parse_wings_source_from_overview_table():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "翅膀.html"
+    if not html_path.is_file():
+        return
+    from prepare_data import parse_wings_from_soup  # noqa: E402
+
+    wings = parse_wings_from_soup(
+        BeautifulSoup(html_path.read_text(encoding="utf-8"), "html.parser")
+    )
+    angel = wings["天使之翼"]
+    assert angel["recipe"] is not None
+    assert len(angel["recipe"]["ingredients"]) == 3
+    assert "source" not in angel
+    assert "光明之魂" in angel["description"]
+
+    fledgling = wings["雏翼"]
+    assert fledgling.get("recipe") is None
+    assert "旅行模式" in fledgling["source"]
+    assert fledgling["source_rich"]
+
+    fin = wings["鳍翼"]
+    assert fin.get("recipe") is None
+    assert "渔夫" in fin["source"]

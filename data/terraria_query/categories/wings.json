@@ -9,28 +9,67 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "1.67秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "53格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "32 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "电脑版、主机版、移动版",
+      "ingredients": [
+        {
+          "name": "羽毛",
+          "image": "Feather.png",
+          "amount": "10"
+        },
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "光明之魂",
+          "image": "Soul_of_Light.png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "天使之翼",
+        "image": "Angel_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "： 羽毛 10 飞翔之魂 20 光明之魂 15\n\n光明之魂 仅在 困难模式 下掉落自 地下神圣之地 中的大部分敌怪。\n\n羽毛 掉落自 鸟妖 。",
+    "description": "光明之魂 仅在 困难模式 下掉落自 地下神圣之地 中的大部分敌怪。\n\n羽毛 掉落自 鸟妖 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "： 羽毛 10 飞翔之魂 20 光明之魂 15"
-        }
-      ],
       [
         {
           "type": "text",
@@ -59,28 +98,67 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "1.67秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "53格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "32 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "电脑版、主机版、移动版",
+      "ingredients": [
+        {
+          "name": "羽毛",
+          "image": "Feather.png",
+          "amount": "10"
+        },
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "暗影之魂",
+          "image": "Soul_of_Night.png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "恶魔之翼",
+        "image": "Demon_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "： 羽毛 10 飞翔之魂 20 暗影之魂 15\n\n暗影之魂 仅在 困难模式 下掉落自 地下腐化之地 或 地下猩红之地 中的大部分敌怪。\n\n羽毛 掉落自 鸟妖 。",
+    "description": "暗影之魂 仅在 困难模式 下掉落自 地下腐化之地 或 地下猩红之地 中的大部分敌怪。\n\n羽毛 掉落自 鸟妖 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "： 羽毛 10 飞翔之魂 20 暗影之魂 15"
-        }
-      ],
       [
         {
           "type": "text",
@@ -109,28 +187,62 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.17秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "67格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "35 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "电脑版、主机版、移动版",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "妖精尘",
+          "image": "Pixie_Dust.png",
+          "amount": "99"
+        }
+      ],
+      "result": {
+        "name": "仙灵之翼",
+        "image": "Fairy_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "： 飞翔之魂 20 妖精尘 99\n\n粒子效果发出黄光。\n\n妖精尘 掉落自 妖精 。",
+    "description": "粒子效果发出黄光。\n\n妖精尘 掉落自 妖精 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "： 飞翔之魂 20 妖精尘 99"
-        }
-      ],
       [
         {
           "type": "text",
@@ -159,28 +271,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.17秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "67格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "35 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "来自 渔夫 的任务奖励\n\n在完成了第 10 个 任务 后，每个 任务 都有 1/70 几率得到，但仅限 困难模式 。",
-    "description_rich": [
+    "source": "来自渔夫的任务奖励",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "来自 渔夫 的任务奖励"
+          "text": "来自渔夫的任务奖励"
         }
-      ],
+      ]
+    ],
+    "description": "在完成了第 10 个 任务 后，每个 任务 都有 1/70 几率得到，但仅限 困难模式 。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -200,28 +337,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.17秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "67格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "35 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "冰雪羽",
+          "image": "Ice_Feather.png"
+        }
+      ],
+      "result": {
+        "name": "冰冻之翼",
+        "image": "Frozen_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 冰雪羽\n\n在黑暗中可见，且散发出雪粒子。\n\n冰雪羽 掉落自 冰雪巨人 。",
+    "description": "在黑暗中可见，且散发出雪粒子。\n\n冰雪羽 掉落自 冰雪巨人 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 冰雪羽"
-        }
-      ],
       [
         {
           "type": "text",
@@ -250,28 +420,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.17秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "67格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "35 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "巨型鸟妖之羽",
+          "image": "Giant_Harpy_Feather.png"
+        }
+      ],
+      "result": {
+        "name": "鸟妖之翼",
+        "image": "Harpy_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 巨型鸟妖之羽\n\n巨型鸟妖之羽 掉落自 鸟妖 。",
+    "description": "巨型鸟妖之羽 掉落自 鸟妖 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 巨型鸟妖之羽"
-        }
-      ],
       [
         {
           "type": "text",
@@ -294,28 +497,66 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "Chippy的斗篷（停用）",
+          "image": "Chippy's_Cloak_(Inactive).png"
+        },
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "神圣锭",
+          "image": "Hallowed_Bar.png",
+          "amount": "12"
+        }
+      ],
+      "result": {
+        "name": "Chippy的斗篷",
+        "image": "Chippy's_Cloak.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "Chippy的斗篷（停用） 飞翔之魂 20 神圣锭 12\n\nChippy的斗篷（停用） 由 骷髅王的红帽变体 掉落。\n\n开发者物品",
+    "description": "Chippy的斗篷（停用） 由 骷髅王的红帽变体 掉落。\n\n开发者物品",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "Chippy的斗篷（停用） 飞翔之魂 20 神圣锭 12"
-        }
-      ],
       [
         {
           "type": "text",
@@ -341,28 +582,66 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "Heroicis的翅膀（停用）",
+          "image": "Heroicis'_Wings_(Inactive).png"
+        },
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "神圣锭",
+          "image": "Hallowed_Bar.png",
+          "amount": "12"
+        }
+      ],
+      "result": {
+        "name": "Heroicis的翅膀",
+        "image": "Heroicis'_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "Heroicis的翅膀（停用） 飞翔之魂 20 神圣锭 12\n\nHeroicis的翅膀（停用） 可通过将 铂金币 在 绿洲 中丢入 水 中获得。\n\n开发者物品",
+    "description": "Heroicis的翅膀（停用） 可通过将 铂金币 在 绿洲 中丢入 水 中获得。\n\n开发者物品",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "Heroicis的翅膀（停用） 飞翔之魂 20 神圣锭 12"
-        }
-      ],
       [
         {
           "type": "text",
@@ -388,28 +667,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -429,28 +733,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -470,28 +799,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -511,28 +865,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -552,28 +931,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -593,28 +997,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n发出微弱的紫光，且在黑暗中可见。\n\n完全无声。",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n发出微弱的紫光，且在黑暗中可见。\n\n完全无声。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -694,28 +1123,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n在黑暗中可见。",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品\n\n在黑暗中可见。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -741,28 +1195,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -806,28 +1285,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n暗红色部分在黑暗中可见。",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品\n\n暗红色部分在黑暗中可见。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -853,28 +1357,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n粒子效果发出白光，在黑暗中可见。\n\n翅膀发出的光的颜色取决于玩家上衣的颜色。",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品\n\n粒子效果发出白光，在黑暗中可见。\n\n翅膀发出的光的颜色取决于玩家上衣的颜色。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -906,28 +1435,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -947,28 +1501,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -988,28 +1567,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -1029,28 +1633,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -1073,28 +1702,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -1114,28 +1768,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -1155,28 +1834,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -1196,28 +1900,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "77格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
-    "description_rich": [
+    "source": "困难模式宝藏袋（史莱姆皇后的除外）",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+          "text": "困难模式宝藏袋（史莱姆皇后的除外）"
         }
-      ],
+      ]
+    ],
+    "description": "开发者物品",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -1237,74 +1966,57 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.67秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "81格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "翅膀是一类配饰，让玩家能通过按住↷跳键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住↷跳键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。\n\n装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。\n\n某些类型的翅膀还能让玩家在飞行中可以通过按住▼下键悬浮在固定高度，和/或按住▲上键来加快上升速度。",
+    "source": "由巫医出售",
+    "source_rich": [
+      [
+        {
+          "type": "text",
+          "text": "由巫医出售"
+        }
+      ]
+    ],
+    "description": "在击败世纪之花后， 困难模式 丛林 中，于 夜晚 以 1 PC 50 GC 出售。",
     "description_rich": [
       [
         {
           "type": "text",
-          "text": "翅膀是一类配饰，让玩家能通过按住"
-        },
-        {
-          "type": "key",
-          "symbol": "↷",
-          "label": "跳"
-        },
-        {
-          "type": "text",
-          "text": "键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住"
-        },
-        {
-          "type": "key",
-          "symbol": "↷",
-          "label": "跳"
-        },
-        {
-          "type": "text",
-          "text": "键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "某些类型的翅膀还能让玩家在飞行中可以通过按住"
-        },
-        {
-          "type": "key",
-          "symbol": "▼",
-          "label": "下"
-        },
-        {
-          "type": "text",
-          "text": "键悬浮在固定高度，和/或按住"
-        },
-        {
-          "type": "key",
-          "symbol": "▲",
-          "label": "上"
-        },
-        {
-          "type": "text",
-          "text": "键来加快上升速度。"
+          "text": "在击败世纪之花后， 困难模式 丛林 中，于 夜晚 以 1 PC 50 GC 出售。"
         }
       ]
     ],
@@ -1323,28 +2035,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.67秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "81格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "破蝙蝠之翼",
+          "image": "Broken_Bat_Wing.png"
+        }
+      ],
+      "result": {
+        "name": "蝙蝠之翼",
+        "image": "Bat_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 破蝙蝠之翼\n\n破蝙蝠之翼 掉落自 日食 事件 的 吸血鬼 。",
+    "description": "破蝙蝠之翼 掉落自 日食 事件 的 吸血鬼 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 破蝙蝠之翼"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1367,28 +2112,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.67秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "81格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "褴褛蜜蜂之翼",
+          "image": "Tattered_Bee_Wing.png"
+        }
+      ],
+      "result": {
+        "name": "蜜蜂之翼",
+        "image": "Bee_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 褴褛蜜蜂之翼\n\n褴褛蜜蜂之翼 在打败至少一个 机械 Boss 后掉落自 苔藓黄蜂 。",
+    "description": "褴褛蜜蜂之翼 在打败至少一个 机械 Boss 后掉落自 苔藓黄蜂 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 褴褛蜜蜂之翼"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1411,28 +2189,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.67秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "81格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "蝴蝶尘",
+          "image": "Butterfly_Dust.png"
+        }
+      ],
+      "result": {
+        "name": "蝴蝶之翼",
+        "image": "Butterfly_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 蝴蝶尘\n\n粒子效果发出粉红光。\n\n蝴蝶尘 在打败至少一个 机械 Boss 后掉落自 蛾 。",
+    "description": "粒子效果发出粉红光。\n\n蝴蝶尘 在打败至少一个 机械 Boss 后掉落自 蛾 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 蝴蝶尘"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1461,28 +2272,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.67秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "81格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "火羽",
+          "image": "Fire_Feather.png"
+        }
+      ],
+      "result": {
+        "name": "烈焰之翼",
+        "image": "Flame_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 火羽\n\n粒子效果发出橙光，在黑暗中可见，且显得半透明。\n\n火羽 掉落自 红魔鬼 。",
+    "description": "粒子效果发出橙光，在黑暗中可见，且显得半透明。\n\n火羽 掉落自 红魔鬼 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 火羽"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1511,28 +2355,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.83秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "94格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "166%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "骨之羽",
+          "image": "Bone_Feather.png"
+        }
+      ],
+      "result": {
+        "name": "骨之翼",
+        "image": "Bone_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 骨之羽\n\n骨之羽 掉落自任何 装甲骷髅 变体种类。",
+    "description": "骨之羽 掉落自任何 装甲骷髅 变体种类。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 骨之羽"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1555,28 +2432,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.83秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "94格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "166%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "掉落自 蛾怪\n\n掉落率： 1/20 (5%) / 39/400 (9.75%) 。蛾怪仅会在 世纪之花 后生成。\n\n发出黄色的光，且花纹在黑暗中可见。",
-    "description_rich": [
+    "source": "掉落自蛾怪",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自 蛾怪"
+          "text": "掉落自蛾怪"
         }
-      ],
+      ]
+    ],
+    "description": "掉落率： 1/20 (5%) / 39/400 (9.75%) 。蛾怪仅会在 世纪之花 后生成。\n\n发出黄色的光，且花纹在黑暗中可见。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -1605,28 +2507,62 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.83秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "94格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "166%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "幽灵锭",
+          "image": "Spectre_Bar.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "幽灵之翼",
+        "image": "Spectre_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 幽灵锭 10\n\n取代了来自 前代主机版 和 任天堂 3DS 版 的鬼魂之翼。\n\n半透明。",
+    "description": "取代了来自 前代主机版 和 任天堂 3DS 版 的鬼魂之翼。\n\n半透明。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 幽灵锭 10"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1655,28 +2591,62 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.83秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "94格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "166%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "甲虫外壳",
+          "image": "Beetle_Husk.png",
+          "amount": "8"
+        }
+      ],
+      "result": {
+        "name": "甲虫之翼",
+        "image": "Beetle_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 甲虫外壳 8\n\n完全无声。",
+    "description": "完全无声。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 甲虫外壳 8"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1699,28 +2669,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "107格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "180%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "掉落自 常绿尖叫怪\n\n掉落率：0.74%–2.22% / 1.33%–6.67% ，取决于当前波数。 [ 5 ]\n\n灯泡在黑暗中可见。",
-    "description_rich": [
+    "source": "掉落自常绿尖叫怪",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自 常绿尖叫怪"
+          "text": "掉落自常绿尖叫怪"
         }
-      ],
+      ]
+    ],
+    "description": "掉落率：0.74%–2.22% / 1.33%–6.67% ，取决于当前波数。 [ 5 ]\n\n灯泡在黑暗中可见。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -1749,28 +2744,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "107格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "180%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "阴森嫩枝",
+          "image": "Spooky_Twig.png"
+        }
+      ],
+      "result": {
+        "name": "阴森之翼",
+        "image": "Spooky_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 阴森嫩枝\n\n阴森嫩枝 掉落自 南瓜月 事件 中的 哀木 。",
+    "description": "阴森嫩枝 掉落自 南瓜月 事件 中的 哀木 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 阴森嫩枝"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1793,28 +2821,61 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "107格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "180%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "黑色仙尘",
+          "image": "Black_Fairy_Dust.png"
+        }
+      ],
+      "result": {
+        "name": "褴褛仙灵之翼",
+        "image": "Tattered_Fairy_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "飞翔之魂 20 黑色仙尘\n\n粒子效果发出黄光。\n\n黑色仙尘 掉落自 南瓜月 事件 中的 南瓜王 。",
+    "description": "粒子效果发出黄光。\n\n黑色仙尘 掉落自 南瓜月 事件 中的 南瓜王 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "飞翔之魂 20 黑色仙尘"
-        }
-      ],
       [
         {
           "type": "text",
@@ -1843,74 +2904,57 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "107格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "180%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "翅膀是一类配饰，让玩家能通过按住↷跳键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住↷跳键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。\n\n装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。\n\n某些类型的翅膀还能让玩家在飞行中可以通过按住▼下键悬浮在固定高度，和/或按住▲上键来加快上升速度。",
+    "source": "由蒸汽朋克人出售",
+    "source_rich": [
+      [
+        {
+          "type": "text",
+          "text": "由蒸汽朋克人出售"
+        }
+      ]
+    ],
+    "description": "击败 石巨人 后，以 3 PC 出售。",
     "description_rich": [
       [
         {
           "type": "text",
-          "text": "翅膀是一类配饰，让玩家能通过按住"
-        },
-        {
-          "type": "key",
-          "symbol": "↷",
-          "label": "跳"
-        },
-        {
-          "type": "text",
-          "text": "键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住"
-        },
-        {
-          "type": "key",
-          "symbol": "↷",
-          "label": "跳"
-        },
-        {
-          "type": "text",
-          "text": "键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "某些类型的翅膀还能让玩家在飞行中可以通过按住"
-        },
-        {
-          "type": "key",
-          "symbol": "▼",
-          "label": "下"
-        },
-        {
-          "type": "text",
-          "text": "键悬浮在固定高度，和/或按住"
-        },
-        {
-          "type": "key",
-          "symbol": "▲",
-          "label": "上"
-        },
-        {
-          "type": "text",
-          "text": "键来加快上升速度。"
+          "text": "击败 石巨人 后，以 3 PC 出售。"
         }
       ]
     ],
@@ -1929,28 +2973,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "119格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "掉落自 双足翼龙\n\n掉落率： 1/4 (25%)\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。",
-    "description_rich": [
+    "source": "掉落自双足翼龙",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自 双足翼龙"
+          "text": "掉落自双足翼龙"
         }
-      ],
+      ]
+    ],
+    "description": "掉落率： 1/4 (25%)\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -2027,28 +3096,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "2.5秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "128格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "41 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "200%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "275%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "掉落自 光之女皇\n\n掉落率： 1/15 (6.67%) / 1/10 (10%)\n\n用 ▲ 上 键能更快上升。",
-    "description_rich": [
+    "source": "掉落自光之女皇",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自 光之女皇"
+          "text": "掉落自光之女皇"
         }
-      ],
+      ]
+    ],
+    "description": "掉落率： 1/15 (6.67%) / 1/10 (10%)\n\n用 ▲ 上 键能更快上升。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -2086,28 +3180,53 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "143格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "41 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "200%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       }
     ],
     "recipe": null,
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "掉落自 猪龙鱼公爵\n\n掉落率： 1/15 (6.67%) / 1/10 (10%)\n\n忽略 液体 中的移动惩罚。\n\n身后留下水泡尾迹。",
-    "description_rich": [
+    "source": "掉落自猪龙鱼公爵",
+    "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自 猪龙鱼公爵"
+          "text": "掉落自猪龙鱼公爵"
         }
-      ],
+      ]
+    ],
+    "description": "掉落率： 1/15 (6.67%) / 1/10 (10%)\n\n忽略 液体 中的移动惩罚。\n\n身后留下水泡尾迹。",
+    "description_rich": [
       [
         {
           "type": "text",
@@ -2142,28 +3261,62 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "143格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "33 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "245%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "星云碎片",
+          "image": "Nebula_Fragment.png",
+          "amount": "14"
+        },
+        {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "星云斗篷",
+        "image": "Nebula_Mantle.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "星云碎片 14 夜明锭 10\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n在黑暗中可见。\n\n穿着全套 星云盔甲 套装时会有带着脉动效果的实心运动残影。",
+    "description": "用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n在黑暗中可见。\n\n穿着全套 星云盔甲 套装时会有带着脉动效果的实心运动残影。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "星云碎片 14 夜明锭 10"
-        }
-      ],
       [
         {
           "type": "text",
@@ -2243,28 +3396,62 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "143格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "33 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "245%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "星旋碎片",
+          "image": "Vortex_Fragment.png",
+          "amount": "14"
+        },
+        {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "星旋强化翼",
+        "image": "Vortex_Booster.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "星旋碎片 14 夜明锭 10\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n发出天蓝色的光，且推进器火焰在黑暗中可见。\n\n完全无声。",
+    "description": "用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n发出天蓝色的光，且推进器火焰在黑暗中可见。\n\n完全无声。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "星旋碎片 14 夜明锭 10"
-        }
-      ],
       [
         {
           "type": "text",
@@ -2344,28 +3531,62 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "167格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "46 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "300%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "日耀碎片",
+          "image": "Solar_Fragment.png",
+          "amount": "14"
+        },
+        {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "日耀之翼",
+        "image": "Solar_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "日耀碎片 14 夜明锭 10\n\n在黑暗中可见，且粒子效果发出橙光。",
+    "description": "在黑暗中可见，且粒子效果发出橙光。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "日耀碎片 14 夜明锭 10"
-        }
-      ],
       [
         {
           "type": "text",
@@ -2388,28 +3609,62 @@
         "extra": ""
       },
       {
-        "label": "工具提示",
-        "value": "可飞行和缓慢坠落",
+        "label": "飞行时间",
+        "value": "3秒",
         "extra": ""
       },
       {
-        "label": "研究",
-        "value": "需要 1 份",
+        "label": "高度（格）",
+        "value": "167格",
         "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "46 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "300%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       }
     ],
-    "recipe": null,
+    "recipe": {
+      "station": "",
+      "ingredients": [
+        {
+          "name": "星尘碎片",
+          "image": "Stardust_Fragment.png",
+          "amount": "14"
+        },
+        {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "星尘之翼",
+        "image": "Stardust_Wings.png"
+      }
+    },
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "星尘碎片 14 夜明锭 10\n\n在黑暗中可见。\n\n穿着全套 星尘盔甲 套装时会有带着拖尾效果的透明运动残影。",
+    "description": "在黑暗中可见。\n\n穿着全套 星尘盔甲 套装时会有带着拖尾效果的透明运动残影。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "星尘碎片 14 夜明锭 10"
-        }
-      ],
       [
         {
           "type": "text",

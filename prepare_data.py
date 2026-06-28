@@ -2428,6 +2428,68 @@ def _rich_from_wing_note_li(li: Tag) -> list[dict]:
     return paras[0] if paras else [{"type": "text", "text": text}]
 
 
+def _parse_wing_source_cell(
+    cell: Tag,
+    *,
+    locale: str = "zh",
+    wing_name: str = "",
+    wing_image: str = "",
+) -> dict:
+    """解析翅膀对比表「来源」列：合成材料或文字说明。"""
+    parsed: dict = {}
+    if not cell:
+        return parsed
+
+    ingredients_root = cell.select_one("div.recipes div.ingredients")
+    if not ingredients_root:
+        ingredients_root = cell.select_one("div.ingredients")
+    ingredients: list[dict] = []
+    for li in cell.select("ul li"):
+        span_i = li.select_one("span.i")
+        if not span_i:
+            continue
+        ing_name, ing_image = _parse_item_span(span_i)
+        if not ing_name:
+            continue
+        entry: dict = {"name": ing_name, "image": ing_image}
+        amount_el = li.select_one("span.am")
+        amount = _clean_text(amount_el.get_text()) if amount_el else ""
+        if amount and amount not in ("1", ""):
+            entry["amount"] = amount
+        ingredients.append(entry)
+
+    if ingredients:
+        station = ""
+        if ingredients_root:
+            prefix_parts: list[str] = []
+            for child in ingredients_root.children:
+                if getattr(child, "name", None) == "ul":
+                    break
+                if getattr(child, "name", None) == "a" and child.get("title"):
+                    title = _clean_text(child.get("title"))
+                    if title:
+                        prefix_parts.append(title)
+                elif isinstance(child, str):
+                    text = _clean_text(child)
+                    if text and text not in ("：", ":"):
+                        prefix_parts.append(text)
+            if prefix_parts:
+                station = "、".join(prefix_parts)
+        parsed["recipe"] = {
+            "station": station,
+            "ingredients": ingredients,
+            "result": {"name": wing_name, "image": wing_image},
+        }
+        return parsed
+
+    rich = _parse_description_paragraph_rich(cell)
+    text = _rich_segments_to_text(rich) if rich else _clean_text(cell.get_text(" ", strip=True))
+    if text:
+        parsed["source"] = text
+        parsed["source_rich"] = [rich] if rich else description_text_to_rich(text)
+    return parsed
+
+
 def _parse_wing_row(tr: Tag, *, locale: str = "zh") -> dict | None:
     anchor = tr.select_one("s.anchor[id]")
     if not anchor:
@@ -2448,7 +2510,13 @@ def _parse_wing_row(tr: Tag, *, locale: str = "zh") -> dict | None:
     image = _filename_from_url(_image_url_from_src(img_el["src"])) if img_el and img_el.get("src") else ""
 
     cells = tr.select("td")
-    source = _clean_text(cells[3].get_text(" ", strip=True)) if len(cells) > 3 else ""
+    source_cell = cells[3] if len(cells) > 3 else None
+    source_parsed = _parse_wing_source_cell(
+        source_cell,
+        locale=locale,
+        wing_name=name,
+        wing_image=image,
+    )
     flight_time = (
         _format_wing_flight_time(cells[4].get_text(" ", strip=True), locale=locale)
         if len(cells) > 4
@@ -2503,27 +2571,25 @@ def _parse_wing_row(tr: Tag, *, locale: str = "zh") -> dict | None:
     if rarity_stat:
         stats.append(rarity_stat)
 
-    desc_parts: list[str] = []
-    if source:
-        desc_parts.append(source)
-    desc_parts.extend(notes)
+    desc_parts: list[str] = list(notes)
+    note_rich_paragraphs = list(note_rich_paragraphs)
 
     item: dict = {
         "name": name,
         "image": image,
         "stats": stats,
-        "recipe": None,
+        "recipe": source_parsed.get("recipe"),
         "page_type": "wing",
         "from_wings_table": True,
         "parent_page": "翅膀",
     }
+    if source_parsed.get("source"):
+        item["source"] = source_parsed["source"]
+    if source_parsed.get("source_rich"):
+        item["source_rich"] = source_parsed["source_rich"]
     if desc_parts:
         item["description"] = "\n\n".join(desc_parts)
-        rich_paragraphs: list[list[dict]] = []
-        if source:
-            rich_paragraphs.append([{"type": "text", "text": source}])
-        rich_paragraphs.extend(note_rich_paragraphs)
-        item["description_rich"] = rich_paragraphs
+        item["description_rich"] = note_rich_paragraphs
     terms = _wing_search_terms(name)
     if terms:
         item["search_terms"] = terms

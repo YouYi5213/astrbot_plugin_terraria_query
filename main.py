@@ -4076,6 +4076,10 @@ def _format_update_result(result: dict, force: bool = False) -> str:
     boss_total = result.get("boss_total", 0)
     if boss_new or boss_total:
         extra_lines += f"\nBoss：{boss_total} 个（本次 +{boss_new}）"
+    content_img_ok = result.get("content_images_ok", 0)
+    content_img_total = result.get("content_images_total", 0)
+    if content_img_total:
+        extra_lines += f"\n内容区图片补全：{content_img_ok}/{content_img_total}"
     if result.get("new_count", 0) == 0 and not extra_lines:
         return (
             f"✅ Wiki 数据已是最新\n"

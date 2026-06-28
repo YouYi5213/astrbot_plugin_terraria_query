@@ -3106,6 +3106,10 @@ async def update_wiki_data(
         event_result = await _event_data_module().refresh_events(session, force=force)
         npc_result = await _npc_data_module().refresh_npcs(session, force=force)
         boss_result = await _boss_data_module().refresh_bosses(session, force=force)
+        content_img_result = await _page_section_data_module().backfill_page_content_images(
+            session
+        )
+        boss_img_result = await _boss_data_module().backfill_boss_images(session)
 
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
@@ -3139,6 +3143,10 @@ async def update_wiki_data(
         "npc_total": npc_result.get("total", 0),
         "boss_new_count": boss_result.get("new_count", 0),
         "boss_total": boss_result.get("total", 0),
+        "content_images_ok": content_img_result.get("images_ok", 0),
+        "content_images_total": content_img_result.get("images_total", 0),
+        "boss_images_ok": boss_img_result.get("images_ok", 0),
+        "boss_images_total": boss_img_result.get("images_total", 0),
     }
 
 
@@ -3595,6 +3603,20 @@ async def main(
         f"描述 {result['desc_backfill_count']} 个",
         flush=True,
     )
+    if result.get("mount_total"):
+        print(
+            f"坐骑 {result['mount_total']}（+{result.get('mount_new_count', 0)}），"
+            f"宠物 {result.get('pet_total', 0)}（+{result.get('pet_new_count', 0)}），"
+            f"群系 {result.get('biome_total', 0)}（+{result.get('biome_new_count', 0)}），"
+            f"事件 {result.get('event_total', 0)}（+{result.get('event_new_count', 0)}），"
+            f"NPC {result.get('npc_total', 0)}（+{result.get('npc_new_count', 0)}），"
+            f"Boss {result.get('boss_total', 0)}（+{result.get('boss_new_count', 0)}）",
+            flush=True,
+        )
+    ci_ok = result.get("content_images_ok", 0)
+    ci_total = result.get("content_images_total", 0)
+    if ci_total:
+        print(f"内容区图片补全：{ci_ok}/{ci_total}", flush=True)
     print(f"已保存到 {CATEGORIES_DIR}", flush=True)
 
 

@@ -238,6 +238,27 @@ def _prune_old_card_cache(keep_version: str = CARD_VERSION) -> None:
             pass
 
 
+_CARD_CACHE_PRUNED = False
+
+
+def _clear_card_cache(keep_version: str = CARD_VERSION) -> None:
+    """清除当前版本卡片缓存（Wiki 数据更新后调用）。"""
+    if not os.path.isdir(CARDS_DIR):
+        return
+    prefix = f"card_{keep_version}_"
+    for name in os.listdir(CARDS_DIR):
+        if name.startswith(prefix):
+            try:
+                os.remove(os.path.join(CARDS_DIR, name))
+            except OSError:
+                pass
+
+
+def _card_output_path(name: str, locale: str = "zh") -> str:
+    safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", name or "unknown")
+    return os.path.join(CARDS_DIR, f"card_{CARD_VERSION}_{locale}_{safe_name}")
+
+
 def _image_path(filename: str) -> str:
     if not filename:
         return ""
@@ -1178,6 +1199,46 @@ def _item_en_search_names(item: dict) -> set[str]:
     return {n for n in names if n}
 
 
+_SEARCH_INDEX: list[tuple[str, str, frozenset[str], tuple[str, ...]]] | None = None
+_SEARCH_INDEX_SIG: tuple | None = None
+
+
+def _search_index_signature(
+    items: dict[str, dict],
+    mounts: dict[str, dict],
+    pets: dict[str, dict],
+) -> tuple:
+    return (
+        len(items),
+        len(mounts),
+        len(pets),
+        tuple(sorted(items.keys())),
+        tuple(sorted(mounts.keys())),
+        tuple(sorted(pets.keys())),
+    )
+
+
+def rebuild_search_index(
+    items: dict[str, dict],
+    mounts: dict[str, dict],
+    pets: dict[str, dict],
+) -> None:
+    """预构建搜索索引，避免每次查询重复计算别名集合。"""
+    global _SEARCH_INDEX, _SEARCH_INDEX_SIG
+    entries: list[tuple[str, str, frozenset[str], tuple[str, ...]]] = []
+    for pool_name, pool in (
+        ("mount", mounts),
+        ("pet", pets),
+        ("item", items),
+    ):
+        for key, item in pool.items():
+            zh_names = frozenset(_item_zh_search_names(key, item))
+            en_names = tuple(_item_en_search_names(item))
+            entries.append((pool_name, key, zh_names, en_names))
+    _SEARCH_INDEX = entries
+    _SEARCH_INDEX_SIG = _search_index_signature(items, mounts, pets)
+
+
 def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
     """中英文名称均可匹配，结果统一为中文物品键。"""
     query = query.strip()
@@ -1207,6 +1268,39 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
     return [key for key, _ in ranked]
 
 
+def _rank_pool_from_index(query: str, pool_name: str) -> list[str]:
+    global _SEARCH_INDEX
+    if not _SEARCH_INDEX:
+        return []
+
+    query = query.strip()
+    if not query:
+        return []
+
+    query_lower = query.lower()
+    found: dict[str, int] = {}
+
+    for p_name, key, zh_names, en_names in _SEARCH_INDEX:
+        if p_name != pool_name:
+            continue
+        for zh_name in zh_names:
+            if query == zh_name:
+                found[key] = min(found.get(key, 999), 0)
+            elif query in zh_name:
+                found[key] = min(found.get(key, 999), len(zh_name))
+        for en_name in en_names:
+            en_lower = en_name.lower()
+            if query_lower == en_lower:
+                found[key] = min(found.get(key, 999), 0)
+            elif query_lower in en_lower:
+                found[key] = min(found.get(key, 999), len(en_name))
+
+    ranked = sorted(found.items(), key=lambda x: (x[1], x[0]))
+    if any(rank == 0 for _, rank in ranked):
+        ranked = [(k, r) for k, r in ranked if r == 0]
+    return [key for key, _ in ranked]
+
+
 def _fuzzy_match_all(
     query: str,
     items: dict[str, dict],
@@ -1216,23 +1310,25 @@ def _fuzzy_match_all(
     """返回 (来源, 键) 列表，来源为 item、mount 或 pet。"""
     if pets is None:
         pets = {}
-    mount_keys = _fuzzy_match(query, mounts)
-    pet_keys = _fuzzy_match(query, pets)
-    item_keys = _fuzzy_match(query, items)
+    global _SEARCH_INDEX, _SEARCH_INDEX_SIG
+    sig = _search_index_signature(items, mounts, pets)
+    if _SEARCH_INDEX is None or _SEARCH_INDEX_SIG != sig:
+        rebuild_search_index(items, mounts, pets)
+
+    mount_keys = _rank_pool_from_index(query, "mount")
+    pet_keys = _rank_pool_from_index(query, "pet")
+    item_keys = _rank_pool_from_index(query, "item")
     seen: set[str] = set()
     results: list[tuple[str, str]] = []
-    for key in mount_keys:
-        if key not in seen:
-            results.append(("mount", key))
-            seen.add(key)
-    for key in pet_keys:
-        if key not in seen:
-            results.append(("pet", key))
-            seen.add(key)
-    for key in item_keys:
-        if key not in seen:
-            results.append(("item", key))
-            seen.add(key)
+    for pool_name, keys in (
+        ("mount", mount_keys),
+        ("pet", pet_keys),
+        ("item", item_keys),
+    ):
+        for key in keys:
+            if key not in seen:
+                results.append((pool_name, key))
+                seen.add(key)
     return results
 
 
@@ -1592,9 +1688,11 @@ def _draw_set_pieces_section(
 
 def _generate_item_card(data: dict) -> str:
     _ensure_dirs()
-    _prune_old_card_cache()
     ui = _CARD_UI
     locale = "zh"
+    output_path = _card_output_path(data.get("name", ""), locale)
+    if os.path.isfile(output_path):
+        return output_path
 
     font_title = _try_get_font(26)
     font_header = _try_get_font(20)
@@ -1782,8 +1880,6 @@ def _generate_item_card(data: dict) -> str:
             y += 20
         _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
 
-    safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", data.get("name", "unknown"))
-    output_path = os.path.join(CARDS_DIR, f"card_{CARD_VERSION}_{locale}_{safe_name}.png")
     card.convert("RGB").save(output_path, "PNG")
     return output_path
 
@@ -1860,7 +1956,7 @@ class TerrariaQueryPlugin(Star):
     async def _run_wiki_update(self, force: bool = False) -> dict:
         async with self._update_lock:
             result = await update_wiki_data(force=force)
-            self._load_data()
+            self._load_data(invalidate_cards=True)
             return result
 
     def _start_cron_task(self) -> None:
@@ -1906,10 +2002,17 @@ class TerrariaQueryPlugin(Star):
         elif not self.cron_time:
             logger.info("未配置 Cron，泰拉瑞亚 Wiki 定时更新未启用")
 
-    def _load_data(self) -> None:
+    def _load_data(self, *, invalidate_cards: bool = False) -> None:
+        global _CARD_CACHE_PRUNED
         self._load_items()
         self._load_mounts()
         self._load_pets()
+        rebuild_search_index(self.items, self.mounts, self.pets)
+        if not _CARD_CACHE_PRUNED:
+            _prune_old_card_cache()
+            _CARD_CACHE_PRUNED = True
+        if invalidate_cards:
+            _clear_card_cache()
 
     def _load_items(self) -> None:
         if not os.path.exists(ITEMS_JSON):

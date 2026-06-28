@@ -1,4 +1,5 @@
 import importlib.util
+import os
 import re
 import sys
 import types
@@ -144,3 +145,20 @@ def test_fuzzy_match_all_includes_pets():
     assert matches == [("pet", "蚊子琥珀")]
     matches_pet = main._fuzzy_match_all("恐龙宝宝", items, mounts, pets)
     assert matches_pet == [("pet", "蚊子琥珀")]
+
+
+def test_generate_item_card_uses_disk_cache(tmp_path, monkeypatch):
+    cards_dir = tmp_path / "cards"
+    cards_dir.mkdir()
+    monkeypatch.setattr(main, "CARDS_DIR", str(cards_dir))
+
+    data = {"name": "测试物品", "stats": [{"label": "类型", "value": "武器"}]}
+    path1 = main._generate_item_card(data)
+    assert os.path.isfile(path1)
+
+    real_path = cards_dir / os.path.basename(path1)
+    real_path.write_bytes(b"cached")
+
+    path2 = main._generate_item_card(data)
+    assert path2 == str(real_path)
+    assert real_path.read_bytes() == b"cached"

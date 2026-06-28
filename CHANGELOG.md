@@ -6,6 +6,15 @@
 
 ---
 
+## [1.5.1] - 2026-06-28
+
+### 修复
+
+- 修复启用 GitHub 镜像站（如 gh-proxy）时 WebUI 更新失败（400）：`metadata.yaml` 的 `repo` 改为 `tree/main`，使 AstrBot 使用 `github.com/.../archive/` 下载而非 API `zipball`
+- Release 附带可直接下载的源码 zip 资产包
+
+---
+
 ## [1.5.0] - 2026-06-27
 
 ### 新增

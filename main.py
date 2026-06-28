@@ -22,6 +22,7 @@ from astrbot.api import AstrBotConfig, logger
 
 from .category_data import (
     load_biomes_for_plugin,
+    load_bosses_for_plugin,
     load_items_for_plugin,
     load_mounts_for_plugin,
     load_npcs_for_plugin,
@@ -192,8 +193,9 @@ IMAGES_DIR = os.path.join(DATA_DIR, "images")
 CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
 CARD_WIDTH = 600
+BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
-CARD_VERSION = "v31"
+CARD_VERSION = "v32"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -217,6 +219,10 @@ NPC_TABLE_ROW_MIN = 36
 NPC_COL_PRICE = 220
 NPC_COL_AVAIL = 330
 NPC_SHIMMER_MAX_SIZE = (56, 72)
+BOSS_SPRITE_MAX_SIZE = (240, 180)
+BOSS_PART_SPRITE_MAX_SIZE = (120, 100)
+BOSS_MODE_LABELS = ("normal", "expert", "master")
+BOSS_DROP_ICON_SLOT = (24, 24)
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -1216,6 +1222,14 @@ _CARD_UI = {
     "npc_shop_col_avail": "何时有售",
     "npc_pref_col_biome": "生物群系",
     "npc_pref_col_neighbor": "邻居",
+    "boss_spawn": "▎召唤条件",
+    "boss_stats": "▎属性",
+    "boss_drops": "▎掉落",
+    "boss_parts": "▎部位",
+    "boss_mode_normal": "经典",
+    "boss_mode_expert": "专家",
+    "boss_mode_master": "大师",
+    "boss_money": "金币",
 }
 
 
@@ -1246,6 +1260,12 @@ def _npc_zh_search_names(key: str, npc: dict) -> set[str]:
     return {n for n in names if n}
 
 
+def _boss_zh_search_names(key: str, boss: dict) -> set[str]:
+    names = {key, boss.get("name", ""), boss.get("wiki_title", "")}
+    names.update(boss.get("search_terms") or [])
+    return {n for n in names if n}
+
+
 _SEARCH_INDEX: list[tuple[str, str, frozenset[str]]] | None = None
 _SEARCH_INDEX_SIG: tuple | None = None
 
@@ -1256,22 +1276,27 @@ def _search_index_signature(
     pets: dict[str, dict],
     biomes: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
+    bosses: dict[str, dict] | None = None,
 ) -> tuple:
     if biomes is None:
         biomes = {}
     if npcs is None:
         npcs = {}
+    if bosses is None:
+        bosses = {}
     return (
         len(items),
         len(mounts),
         len(pets),
         len(biomes),
         len(npcs),
+        len(bosses),
         tuple(sorted(items.keys())),
         tuple(sorted(mounts.keys())),
         tuple(sorted(pets.keys())),
         tuple(sorted(biomes.keys())),
         tuple(sorted(npcs.keys())),
+        tuple(sorted(bosses.keys())),
     )
 
 
@@ -1281,16 +1306,20 @@ def rebuild_search_index(
     pets: dict[str, dict],
     biomes: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
+    bosses: dict[str, dict] | None = None,
 ) -> None:
     """预构建搜索索引，避免每次查询重复计算别名集合。"""
     if biomes is None:
         biomes = {}
     if npcs is None:
         npcs = {}
+    if bosses is None:
+        bosses = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
     entries: list[tuple[str, str, frozenset[str]]] = []
     for pool_name, pool, name_fn in (
         ("biome", biomes, _biome_zh_search_names),
+        ("boss", bosses, _boss_zh_search_names),
         ("npc", npcs, _npc_zh_search_names),
         ("mount", mounts, _item_zh_search_names),
         ("pet", pets, _item_zh_search_names),
@@ -1324,7 +1353,7 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
     return [key for key, _ in ranked]
 
 
-_POOL_SEARCH_ORDER = ("biome", "npc", "mount", "pet", "item")
+_POOL_SEARCH_ORDER = ("biome", "boss", "npc", "mount", "pet", "item")
 _POOL_PRIORITY = {name: idx for idx, name in enumerate(_POOL_SEARCH_ORDER)}
 _FUZZY_MATCH_CARD_MAX = 2
 
@@ -1390,6 +1419,7 @@ def _split_search_matches(
     pets: dict[str, dict] | None = None,
     biomes: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
+    bosses: dict[str, dict] | None = None,
 ) -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
     """拆分为精确匹配与模糊匹配（均按相关度排序）。"""
     if pets is None:
@@ -1398,10 +1428,12 @@ def _split_search_matches(
         biomes = {}
     if npcs is None:
         npcs = {}
+    if bosses is None:
+        bosses = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
-    sig = _search_index_signature(items, mounts, pets, biomes, npcs)
+    sig = _search_index_signature(items, mounts, pets, biomes, npcs, bosses)
     if _SEARCH_INDEX is None or _SEARCH_INDEX_SIG != sig:
-        rebuild_search_index(items, mounts, pets, biomes, npcs)
+        rebuild_search_index(items, mounts, pets, biomes, npcs, bosses)
 
     exact: list[tuple[str, str]] = []
     partial: list[tuple[str, str]] = []
@@ -1432,10 +1464,11 @@ def _fuzzy_match_all(
     pets: dict[str, dict] | None = None,
     biomes: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
+    bosses: dict[str, dict] | None = None,
 ) -> list[tuple[str, str]]:
-    """返回 (来源, 键) 列表，来源为 biome、npc、item、mount 或 pet。"""
+    """返回 (来源, 键) 列表，来源为 biome、boss、npc、item、mount 或 pet。"""
     exact, partial = _split_search_matches(
-        query, items, mounts, pets, biomes, npcs
+        query, items, mounts, pets, biomes, npcs, bosses
     )
     if exact:
         return exact
@@ -2558,6 +2591,500 @@ def _generate_npc_card(data: dict) -> str:
     return output_path
 
 
+def _boss_mode_ui_labels(ui: dict) -> dict[str, str]:
+    return {
+        "normal": ui["boss_mode_normal"],
+        "expert": ui["boss_mode_expert"],
+        "master": ui["boss_mode_master"],
+    }
+
+
+def _boss_mode_column_layout(card_width: int = BOSS_CARD_WIDTH) -> list[tuple[str, int, int]]:
+    inner = card_width - CARD_PADDING * 2
+    gap = 12
+    col_w = (inner - gap * 2) // 3
+    x0 = CARD_PADDING + 10
+    return [
+        ("normal", x0, col_w),
+        ("expert", x0 + col_w + gap, col_w),
+        ("master", x0 + (col_w + gap) * 2, col_w),
+    ]
+
+
+def _boss_stat_mode_value(stat: dict, mode: str) -> str:
+    modes = stat.get("modes") or {}
+    return (modes.get(mode) or modes.get("normal") or "").strip()
+
+
+def _calc_boss_mode_stats_area(
+    measure,
+    stats: list[dict],
+    font_label,
+    font_value,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    if not stats:
+        return 0
+    area = 34
+    columns = _boss_mode_column_layout(card_width)
+    col_heights = [0, 0, 0]
+    for mode, x, col_w in columns:
+        idx = BOSS_MODE_LABELS.index(mode)
+        y = 0
+        for stat in stats:
+            label = stat.get("label", "")
+            value = _boss_stat_mode_value(stat, mode)
+            if not value:
+                continue
+            label_lines = _wrap_text_lines(measure, f"{label}:", font_label, col_w - 8)
+            value_lines = _wrap_text_lines(measure, value, font_value, col_w - 8)
+            y += len(label_lines) * STAT_LINE_HEIGHT
+            y += max(1, len(value_lines)) * STAT_LINE_HEIGHT + 6
+        col_heights[idx] = y
+    area += max(col_heights) + 12
+    return area
+
+
+def _draw_boss_mode_stats(
+    draw,
+    y: int,
+    stats: list[dict],
+    font_header,
+    font_label,
+    font_value,
+    ui: dict,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    if not stats:
+        return y
+    draw.text((CARD_PADDING + 10, y), ui["boss_stats"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    mode_labels = _boss_mode_ui_labels(ui)
+    columns = _boss_mode_column_layout(card_width)
+    header_y = y
+    for mode, x, col_w in columns:
+        draw.text((x, header_y), mode_labels[mode], fill=COLORS["title"], font=font_label)
+    y += 24
+    col_bottoms = [y, y, y]
+    for stat in stats:
+        row_start = min(col_bottoms)
+        row_bottom = row_start
+        for mode, x, col_w in columns:
+            idx = BOSS_MODE_LABELS.index(mode)
+            value = _boss_stat_mode_value(stat, mode)
+            if not value:
+                continue
+            cy = col_bottoms[idx]
+            label = stat.get("label", "")
+            draw.text((x, cy), f"{label}:", fill=COLORS["label"], font=font_label)
+            cy += STAT_LINE_HEIGHT
+            for line in _wrap_text_lines(draw, value, font_value, col_w - 8):
+                draw.text((x, cy), line, fill=COLORS["value"], font=font_value)
+                cy += STAT_LINE_HEIGHT
+            col_bottoms[idx] = cy + 6
+            row_bottom = max(row_bottom, col_bottoms[idx])
+        if row_bottom > row_start:
+            col_bottoms = [row_bottom, row_bottom, row_bottom]
+    return max(col_bottoms) + 8
+
+
+def _calc_boss_mode_drop_entry_height(
+    measure,
+    entry: dict,
+    font,
+    col_w: int,
+) -> int:
+    if entry.get("type") == "caption":
+        lines = _wrap_text_lines(measure, entry.get("text", ""), font, col_w - 8)
+        return max(DROP_ROW_HEIGHT // 2, len(lines) * STAT_LINE_HEIGHT + 8)
+    name = entry.get("name", "")
+    chance = entry.get("chance", "")
+    text_w = col_w - BOSS_DROP_ICON_SLOT[0] - 12
+    name_lines = _wrap_text_lines(measure, name, font, text_w)
+    chance_lines = _wrap_text_lines(measure, chance, font, text_w) if chance else []
+    lines = max(len(name_lines), 1) + len(chance_lines)
+    return max(BOSS_DROP_ICON_SLOT[1] + 4, lines * STAT_LINE_HEIGHT + 8)
+
+
+def _calc_boss_mode_drops_area(
+    measure,
+    drops: dict | None,
+    font,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    if not drops:
+        return 0
+    items_by_mode = drops.get("items") or {}
+    money = drops.get("money") or {}
+    if not any(items_by_mode.get(m) for m in BOSS_MODE_LABELS) and not any(money.values()):
+        return 0
+    area = 34
+    columns = _boss_mode_column_layout(card_width)
+    col_heights = [24, 24, 24]
+    for mode, _, col_w in columns:
+        idx = BOSS_MODE_LABELS.index(mode)
+        y = 0
+        coin = (money.get(mode) or "").strip()
+        if coin:
+            y += STAT_LINE_HEIGHT + 4
+        for entry in items_by_mode.get(mode) or []:
+            y += _calc_boss_mode_drop_entry_height(measure, entry, font, col_w)
+        col_heights[idx] = y
+    area += max(col_heights) + 12
+    return area
+
+
+def _draw_boss_mode_drops(
+    draw,
+    card: Image.Image,
+    y: int,
+    drops: dict,
+    font_header,
+    font_label,
+    font_small,
+    ui: dict,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    items_by_mode = drops.get("items") or {}
+    money = drops.get("money") or {}
+    if not any(items_by_mode.get(m) for m in BOSS_MODE_LABELS) and not any(money.values()):
+        return y
+
+    draw.text((CARD_PADDING + 10, y), ui["boss_drops"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    mode_labels = _boss_mode_ui_labels(ui)
+    columns = _boss_mode_column_layout(card_width)
+    header_y = y
+    for mode, x, col_w in columns:
+        draw.text((x, header_y), mode_labels[mode], fill=COLORS["title"], font=font_label)
+    y += 24
+    col_bottoms = [y, y, y]
+
+    for mode, x, col_w in columns:
+        idx = BOSS_MODE_LABELS.index(mode)
+        cy = col_bottoms[idx]
+        coin = (money.get(mode) or "").strip()
+        if coin:
+            draw.text(
+                (x, cy),
+                f"{ui['boss_money']}: {coin}",
+                fill=COLORS["label"],
+                font=font_small,
+            )
+            cy += STAT_LINE_HEIGHT + 4
+        for entry in items_by_mode.get(mode) or []:
+            if entry.get("type") == "caption":
+                for line in _wrap_text_lines(draw, entry.get("text", ""), font_small, col_w - 8):
+                    draw.text((x, cy), line, fill=COLORS["accent"], font=font_small)
+                    cy += STAT_LINE_HEIGHT
+                cy += 4
+                continue
+            row_h = _calc_boss_mode_drop_entry_height(draw, entry, font_small, col_w)
+            icon = _load_item_image(entry.get("image", ""), BOSS_DROP_ICON_SLOT)
+            text_x = x + BOSS_DROP_ICON_SLOT[0] + 6
+            if icon:
+                _paste_in_slot(card, icon, x, cy, BOSS_DROP_ICON_SLOT[0], row_h)
+            name_y = cy
+            for line in _wrap_text_lines(draw, entry.get("name", ""), font_small, col_w - text_x + x - 6):
+                draw.text((text_x, name_y), line, fill=COLORS["text"], font=font_small)
+                name_y += STAT_LINE_HEIGHT
+            chance = entry.get("chance", "")
+            if chance:
+                draw.text((text_x, name_y), chance, fill=COLORS["label"], font=font_small)
+            cy += row_h
+        col_bottoms[idx] = cy
+    return max(col_bottoms) + 8
+
+
+def _calc_boss_parts_area(
+    measure,
+    parts: list[dict],
+    font_title,
+    font_label,
+    font_value,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    if not parts:
+        return 0
+    gap = 10
+    part_w = (card_width - CARD_PADDING * 2 - gap * (len(parts) - 1)) // len(parts)
+    area = 34
+    max_h = 0
+    for part in parts:
+        h = 0
+        title_lines = _wrap_text_lines(measure, part.get("name", ""), font_title, part_w - 8)
+        h += len(title_lines) * STAT_LINE_HEIGHT + 8
+        h += BOSS_PART_SPRITE_MAX_SIZE[1] + 8
+        stats = part.get("stats") or []
+        if stats:
+            h += 20
+            inner_gap = 6
+            mini_w = (part_w - inner_gap * 2) // 3
+            mini_heights = [0, 0, 0]
+            for mode_idx, mode in enumerate(BOSS_MODE_LABELS):
+                my = 0
+                for stat in stats:
+                    value = _boss_stat_mode_value(stat, mode)
+                    if not value:
+                        continue
+                    label_lines = _wrap_text_lines(
+                        measure, f"{stat.get('label', '')}:", font_label, mini_w - 4
+                    )
+                    value_lines = _wrap_text_lines(measure, value, font_value, mini_w - 4)
+                    my += len(label_lines) * STAT_LINE_HEIGHT
+                    my += max(1, len(value_lines)) * STAT_LINE_HEIGHT + 4
+                mini_heights[mode_idx] = my
+            h += max(mini_heights) + 8
+        max_h = max(max_h, h)
+    return area + max_h + 12
+
+
+def _draw_boss_parts_section(
+    draw,
+    card: Image.Image,
+    y: int,
+    parts: list[dict],
+    font_header,
+    font_title,
+    font_label,
+    font_value,
+    ui: dict,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    if not parts:
+        return y
+    draw.text((CARD_PADDING + 10, y), ui["boss_parts"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    gap = 10
+    part_w = (card_width - CARD_PADDING * 2 - gap * (len(parts) - 1)) // len(parts)
+    mode_labels = _boss_mode_ui_labels(ui)
+    row_bottom = y
+    for idx, part in enumerate(parts):
+        px = CARD_PADDING + 10 + idx * (part_w + gap)
+        py = y
+        for line in _wrap_text_lines(draw, part.get("name", ""), font_title, part_w - 8):
+            draw.text((px, py), line, fill=COLORS["title"], font=font_title)
+            py += STAT_LINE_HEIGHT
+        py += 4
+        part_img = _load_item_image(part.get("image", ""), BOSS_PART_SPRITE_MAX_SIZE)
+        if part_img:
+            ix = px + max(0, (part_w - part_img.width) // 2)
+            card.paste(part_img, (ix, py), part_img)
+            py += part_img.height + 8
+        stats = part.get("stats") or []
+        if stats:
+            inner_gap = 6
+            mini_w = (part_w - inner_gap * 2) // 3
+            header_y = py
+            for mi, mode in enumerate(BOSS_MODE_LABELS):
+                mx = px + mi * (mini_w + inner_gap)
+                draw.text((mx, header_y), mode_labels[mode], fill=COLORS["label"], font=font_label)
+            py += 20
+            col_bottoms = [py, py, py]
+            for stat in stats:
+                row_start = min(col_bottoms)
+                for mi, mode in enumerate(BOSS_MODE_LABELS):
+                    value = _boss_stat_mode_value(stat, mode)
+                    if not value:
+                        continue
+                    mx = px + mi * (mini_w + inner_gap)
+                    cy = col_bottoms[mi]
+                    label = stat.get("label", "")
+                    draw.text((mx, cy), f"{label}:", fill=COLORS["label"], font=font_label)
+                    cy += STAT_LINE_HEIGHT
+                    for line in _wrap_text_lines(draw, value, font_value, mini_w - 4):
+                        draw.text((mx, cy), line, fill=COLORS["value"], font=font_value)
+                        cy += STAT_LINE_HEIGHT
+                    col_bottoms[mi] = cy + 4
+                if max(col_bottoms) > row_start:
+                    base = max(col_bottoms)
+                    col_bottoms = [base, base, base]
+            py = max(col_bottoms)
+        row_bottom = max(row_bottom, py)
+    return row_bottom + 8
+
+
+def _calc_boss_text_block_area(
+    measure,
+    lines: list[str],
+    font,
+    max_w: int,
+) -> int:
+    area = 0
+    for line in lines:
+        wrapped = _wrap_text_lines(measure, line, font, max_w)
+        area += max(1, len(wrapped)) * DESC_LINE_HEIGHT + 4
+    return area
+
+
+def _draw_boss_text_block(
+    draw,
+    y: int,
+    lines: list[str],
+    font,
+    max_w: int,
+    x: int,
+) -> int:
+    for line in lines:
+        for wrapped in _wrap_text_lines(draw, line, font, max_w):
+            draw.text((x, y), wrapped, fill=COLORS["value"], font=font)
+            y += DESC_LINE_HEIGHT
+        y += 4
+    return y
+
+
+def _display_boss(boss: dict) -> dict:
+    return {
+        "name": boss.get("name", ""),
+        "image": boss.get("image", ""),
+        "description": boss.get("description"),
+        "spawn": boss.get("spawn"),
+        "stats": boss.get("stats") or [],
+        "drops": boss.get("drops") or {},
+        "parts": boss.get("parts") or [],
+        "page_type": "boss",
+    }
+
+
+def _format_boss_text(data: dict) -> str:
+    ui = _CARD_UI
+    mode_labels = _boss_mode_ui_labels(ui)
+    lines = [data.get("name", ""), ""]
+    if data.get("description"):
+        lines.extend([ui["description"].lstrip("▎"), data["description"], ""])
+    if data.get("spawn"):
+        lines.extend([ui["boss_spawn"].lstrip("▎"), data["spawn"], ""])
+    stats = data.get("stats") or []
+    if stats:
+        lines.append(ui["boss_stats"].lstrip("▎"))
+        for mode in BOSS_MODE_LABELS:
+            mode_lines = [
+                f"{stat['label']}: {_boss_stat_mode_value(stat, mode)}"
+                for stat in stats
+                if _boss_stat_mode_value(stat, mode)
+            ]
+            if mode_lines:
+                lines.append(f"  [{mode_labels[mode]}]")
+                lines.extend(f"  {row}" for row in mode_lines)
+        lines.append("")
+    drops = data.get("drops") or {}
+    items_by_mode = drops.get("items") or {}
+    money = drops.get("money") or {}
+    if any(items_by_mode.get(m) for m in BOSS_MODE_LABELS) or any(money.values()):
+        lines.append(ui["boss_drops"].lstrip("▎"))
+        for mode in BOSS_MODE_LABELS:
+            mode_items = items_by_mode.get(mode) or []
+            coin = (money.get(mode) or "").strip()
+            if not mode_items and not coin:
+                continue
+            lines.append(f"  [{mode_labels[mode]}]")
+            if coin:
+                lines.append(f"  {ui['boss_money']}: {coin}")
+            for entry in mode_items:
+                if entry.get("type") == "caption":
+                    lines.append(f"  · {entry.get('text', '')}")
+                else:
+                    chance = entry.get("chance", "")
+                    suffix = f" ({chance})" if chance else ""
+                    lines.append(f"  · {entry.get('name', '')}{suffix}")
+        lines.append("")
+    for part in data.get("parts") or []:
+        lines.append(ui["boss_parts"].lstrip("▎"))
+        lines.append(f"  {part.get('name', '')}")
+        for mode in BOSS_MODE_LABELS:
+            part_stats = part.get("stats") or []
+            mode_lines = [
+                f"{stat['label']}: {_boss_stat_mode_value(stat, mode)}"
+                for stat in part_stats
+                if _boss_stat_mode_value(stat, mode)
+            ]
+            if mode_lines:
+                lines.append(f"    [{mode_labels[mode]}]")
+                lines.extend(f"    {row}" for row in mode_lines)
+        lines.append("")
+    return "\n".join(lines).strip()
+
+
+def _generate_boss_card(data: dict) -> str:
+    _ensure_dirs()
+    ui = _CARD_UI
+    locale = "zh"
+    output_path = _card_output_path(data.get("name", ""), locale, kind="boss")
+    if os.path.isfile(output_path):
+        return output_path
+
+    card_w = BOSS_CARD_WIDTH
+    font_title = _try_get_font(26)
+    font_header = _try_get_font(20)
+    font_label = _try_get_font(15)
+    font_small = _try_get_font(14)
+
+    measure = ImageDraw.Draw(Image.new("RGBA", (card_w, 100)))
+    title_area = 52
+    sprite_img = _load_item_image(data.get("image", ""), BOSS_SPRITE_MAX_SIZE)
+    sprite_w = sprite_img.width if sprite_img else 0
+    sprite_h = sprite_img.height if sprite_img else 0
+    top_text_x = CARD_PADDING + 20 + max(sprite_w, 180) + 16
+    top_text_w = card_w - top_text_x - CARD_PADDING - 10
+
+    desc_lines = [data["description"]] if data.get("description") else []
+    spawn_lines = [data["spawn"]] if data.get("spawn") else []
+    top_text_area = 0
+    if desc_lines:
+        top_text_area += 30 + _calc_boss_text_block_area(measure, desc_lines, font_small, top_text_w)
+    if spawn_lines:
+        top_text_area += 30 + _calc_boss_text_block_area(measure, spawn_lines, font_small, top_text_w)
+    top_row_h = max(sprite_h + 16, top_text_area)
+
+    stats = data.get("stats") or []
+    drops = data.get("drops") or {}
+    parts = data.get("parts") or []
+    stats_area = _calc_boss_mode_stats_area(measure, stats, font_label, font_small, card_w)
+    drops_area = _calc_boss_mode_drops_area(measure, drops, font_small, card_w)
+    parts_area = _calc_boss_parts_area(
+        measure, parts, font_header, font_label, font_small, card_w
+    )
+
+    total_height = CARD_PADDING * 2 + title_area + top_row_h + stats_area + drops_area + parts_area + 16
+    card = Image.new("RGBA", (card_w, total_height), COLORS["bg"])
+    draw = ImageDraw.Draw(card)
+
+    draw.rounded_rectangle(
+        [CARD_PADDING, CARD_PADDING, card_w - CARD_PADDING, CARD_PADDING + title_area],
+        radius=8,
+        fill=COLORS["header_bg"],
+    )
+    draw.text(
+        (CARD_PADDING + 15, CARD_PADDING + 10),
+        data.get("name", ui["unknown"]),
+        fill=COLORS["title"],
+        font=font_title,
+    )
+
+    y = CARD_PADDING + title_area + 12
+    if sprite_img:
+        card.paste(sprite_img, (CARD_PADDING + 20, y), sprite_img)
+    text_y = y
+    if desc_lines:
+        draw.text((top_text_x, text_y), ui["description"], fill=COLORS["accent"], font=font_header)
+        text_y += 30
+        text_y = _draw_boss_text_block(draw, text_y, desc_lines, font_small, top_text_w, top_text_x)
+    if spawn_lines:
+        draw.text((top_text_x, text_y), ui["boss_spawn"], fill=COLORS["accent"], font=font_header)
+        text_y += 30
+        text_y = _draw_boss_text_block(draw, text_y, spawn_lines, font_small, top_text_w, top_text_x)
+    y += top_row_h
+
+    y = _draw_boss_mode_stats(draw, y, stats, font_header, font_label, font_small, ui, card_w)
+    y = _draw_boss_mode_drops(draw, card, y, drops, font_header, font_label, font_small, ui, card_w)
+    y = _draw_boss_parts_section(
+        draw, card, y, parts, font_header, font_header, font_label, font_small, ui, card_w
+    )
+
+    card.convert("RGB").save(output_path, "PNG")
+    return output_path
+
+
 def _format_update_result(result: dict, force: bool = False) -> str:
     drops_count = result.get("drops_backfill_count", 0)
     desc_count = result.get("desc_backfill_count", 0)
@@ -2587,6 +3114,10 @@ def _format_update_result(result: dict, force: bool = False) -> str:
     npc_total = result.get("npc_total", 0)
     if npc_new or npc_total:
         extra_lines += f"\n城镇 NPC：{npc_total} 个（本次 +{npc_new}）"
+    boss_new = result.get("boss_new_count", 0)
+    boss_total = result.get("boss_total", 0)
+    if boss_new or boss_total:
+        extra_lines += f"\nBoss：{boss_total} 个（本次 +{boss_new}）"
     if result.get("new_count", 0) == 0 and not extra_lines:
         return (
             f"✅ Wiki 数据已是最新\n"
@@ -2619,6 +3150,7 @@ class TerrariaQueryPlugin(Star):
         self.pets: dict[str, dict] = {}
         self.biomes: dict[str, dict] = {}
         self.npcs: dict[str, dict] = {}
+        self.bosses: dict[str, dict] = {}
         self._load_data()
 
         self._cron_task: asyncio.Task | None = None
@@ -2693,7 +3225,10 @@ class TerrariaQueryPlugin(Star):
         self._load_pets()
         self._load_biomes()
         self._load_npcs()
-        rebuild_search_index(self.items, self.mounts, self.pets, self.biomes, self.npcs)
+        self._load_bosses()
+        rebuild_search_index(
+            self.items, self.mounts, self.pets, self.biomes, self.npcs, self.bosses
+        )
         if not _CARD_CACHE_PRUNED:
             _prune_old_card_cache()
             _CARD_CACHE_PRUNED = True
@@ -2752,6 +3287,16 @@ class TerrariaQueryPlugin(Star):
             logger.error(f"加载 npcs.json 失败: {e}")
         self.npcs = {}
 
+    def _load_bosses(self) -> None:
+        try:
+            self.bosses = load_bosses_for_plugin(CATEGORIES_DIR)
+            if self.bosses:
+                logger.info(f"已加载 {len(self.bosses)} 个 Boss")
+                return
+        except Exception as e:
+            logger.error(f"加载 bosses.json 失败: {e}")
+        self.bosses = {}
+
     @filter.regex(_TERRARIA_CMD_RE, priority=10)
     async def on_terraria_command(self, event: AstrMessageEvent):
         """处理泰拉瑞亚查询/更新指令（支持无 / 前缀）。"""
@@ -2775,14 +3320,22 @@ class TerrariaQueryPlugin(Star):
     async def _handle_query(self, event: AstrMessageEvent, text: str):
         if not text:
             yield event.plain_result(
-                "用法: 泰拉查询 <物品名/群系名/NPC名>\n"
+                "用法: 泰拉查询 <物品名/群系名/Boss名/NPC名>\n"
                 "例如: 泰拉查询 天顶剑\n"
                 "      泰拉查询 森林\n"
+                "      泰拉查询 月亮领主\n"
                 "      泰拉查询 军火商"
             )
             return
 
-        if not self.items and not self.mounts and not self.pets and not self.biomes and not self.npcs:
+        if (
+            not self.items
+            and not self.mounts
+            and not self.pets
+            and not self.biomes
+            and not self.npcs
+            and not self.bosses
+        ):
             yield event.plain_result(
                 "❌ 离线数据尚未准备。\n"
                 "请在 WebUI 配置插件后发送「泰拉更新」，或从仓库拉取已包含的 data/ 目录。"
@@ -2790,14 +3343,26 @@ class TerrariaQueryPlugin(Star):
             return
 
         matches = _fuzzy_match_all(
-            text, self.items, self.mounts, self.pets, self.biomes, self.npcs
+            text,
+            self.items,
+            self.mounts,
+            self.pets,
+            self.biomes,
+            self.npcs,
+            self.bosses,
         )
         if not matches:
             yield event.plain_result(f"❌ 未找到「{text}」的相关信息。")
             return
 
         exact, partial = _split_search_matches(
-            text, self.items, self.mounts, self.pets, self.biomes, self.npcs
+            text,
+            self.items,
+            self.mounts,
+            self.pets,
+            self.biomes,
+            self.npcs,
+            self.bosses,
         )
 
         if exact:
@@ -2817,6 +3382,7 @@ class TerrariaQueryPlugin(Star):
             for source, key in matches:
                 pool = {
                     "biome": self.biomes,
+                    "boss": self.bosses,
                     "npc": self.npcs,
                     "mount": self.mounts,
                     "pet": self.pets,
@@ -2839,6 +3405,7 @@ class TerrariaQueryPlugin(Star):
     ):
         pool = {
             "biome": self.biomes,
+            "boss": self.bosses,
             "npc": self.npcs,
             "mount": self.mounts,
             "pet": self.pets,
@@ -2862,6 +3429,15 @@ class TerrariaQueryPlugin(Star):
             except Exception as e:
                 logger.error(f"生成 NPC 图片失败 ({key}): {e}")
                 yield event.plain_result(_format_npc_text(display))
+            return
+        if source == "boss":
+            display = _display_boss(item)
+            try:
+                card_path = _generate_boss_card(display)
+                yield event.image_result(card_path)
+            except Exception as e:
+                logger.error(f"生成 Boss 图片失败 ({key}): {e}")
+                yield event.plain_result(_format_boss_text(display))
             return
         display = _display_item(item)
         try:

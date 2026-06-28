@@ -146,6 +146,14 @@ def _npc_data_module():
     return npc_data
 
 
+def _boss_data_module():
+    try:
+        from . import boss_data
+    except ImportError:
+        import boss_data
+    return boss_data
+
+
 def _persist_items(items: dict[str, dict]) -> None:
     cd = _category_data_module()
     strip_english_fields(items)
@@ -2981,6 +2989,10 @@ async def update_wiki_data(
         "new_count": 0,
         "total": len(_npc_data_module().load_npcs_for_plugin(CATEGORIES_DIR)),
     }
+    boss_result = {
+        "new_count": 0,
+        "total": len(_boss_data_module().load_bosses_for_plugin(CATEGORIES_DIR)),
+    }
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -3072,6 +3084,7 @@ async def update_wiki_data(
         pet_result = await refresh_pets(session, force=force)
         biome_result = await _biome_data_module().refresh_biomes(session, force=force)
         npc_result = await _npc_data_module().refresh_npcs(session, force=force)
+        boss_result = await _boss_data_module().refresh_bosses(session, force=force)
 
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
@@ -3101,6 +3114,8 @@ async def update_wiki_data(
         "biome_total": biome_result.get("total", 0),
         "npc_new_count": npc_result.get("new_count", 0),
         "npc_total": npc_result.get("total", 0),
+        "boss_new_count": boss_result.get("new_count", 0),
+        "boss_total": boss_result.get("total", 0),
     }
 
 
@@ -3616,6 +3631,11 @@ if __name__ == "__main__":
         help="仅抓取城镇 NPC 到 categories/npcs.json",
     )
     parser.add_argument(
+        "--ingest-bosses",
+        action="store_true",
+        help="仅抓取 Boss 到 categories/bosses.json",
+    )
+    parser.add_argument(
         "--split-categories",
         action="store_true",
         help="将根目录 items/mounts/pets.json 拆分/迁移到 data/terraria_query/categories/",
@@ -3691,6 +3711,24 @@ if __name__ == "__main__":
             result = asyncio.run(_run_npcs())
             print(
                 f"NPC 抓取完成：新增 {result['new_count']} 个，"
+                f"共 {result['total']} 条目，"
+                f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.ingest_bosses:
+            async def _run_bosses() -> dict:
+                connector = aiohttp.TCPConnector(limit=10)
+                timeout = aiohttp.ClientTimeout(total=60)
+                async with aiohttp.ClientSession(
+                    connector=connector, timeout=timeout
+                ) as session:
+                    return await _boss_data_module().refresh_bosses(
+                        session, force=args.force
+                    )
+
+            result = asyncio.run(_run_bosses())
+            print(
+                f"Boss 抓取完成：新增 {result['new_count']} 个，"
                 f"共 {result['total']} 条目，"
                 f"图片 {result['images_ok']}/{result['images_total']}",
                 flush=True,

@@ -227,6 +227,10 @@ def load_npcs_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict
     return _load_json_dict(os.path.join(categories_dir, "npcs.json"))
 
 
+def load_bosses_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict]:
+    return _load_json_dict(os.path.join(categories_dir, "bosses.json"))
+
+
 def _item_lookup_titles(item: dict) -> set[str]:
     titles: set[str] = set()
     for field in ("wiki_title", "name"):

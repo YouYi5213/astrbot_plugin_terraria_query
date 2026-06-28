@@ -1,6 +1,6 @@
 # astrbot_plugin_terraria_query
 
-泰拉瑞亚 Wiki 离线查询 AstrBot 插件。发送 `泰拉查询 <名称>` 或 `泰拉 <名称>`（无需 `/` 前缀），以**中文**图片卡片展示物品属性、合成配方或生物群系介绍；仅支持**中文名称**搜索。
+泰拉瑞亚 Wiki 离线查询 AstrBot 插件。发送 `泰拉查询 <名称>` 或 `泰拉 <名称>`（无需 `/` 前缀），以**中文**图片卡片展示物品属性、合成配方、Boss 信息或生物群系介绍；仅支持**中文名称**搜索。
 
 ## 功能
 
@@ -13,6 +13,8 @@
 - **坐骑召唤物** — 独立查询（如 `泰拉 虾松露` / `泰拉 可爱猪龙鱼`）
 - **宠物召唤物** — 独立查询（如 `泰拉 蚊子琥珀` / `泰拉 恐龙宝宝`）
 - **生物群系** — 横幅图 + 描述（如 `泰拉 森林` / `泰拉 地下层` / `泰拉 腐化`）
+- **Boss** — 图像 + 分难度属性/掉落；多部位 Boss 展示部位信息（如 `泰拉 月亮领主` / `泰拉 克苏鲁之眼`）
+- **城镇 NPC** — 描述、生成条件、商店与偏好（如 `泰拉 军火商`）
 
 ## 安装
 
@@ -33,7 +35,7 @@ pip install -r requirements.txt
 
 | 指令 | 说明 |
 |------|------|
-| `泰拉查询 <名称>` / `泰拉 <名称>` | 查询物品或生物群系（中文名称搜索，中文卡片展示） |
+| `泰拉查询 <名称>` / `泰拉 <名称>` | 查询物品、Boss、NPC 或生物群系（中文名称搜索，中文卡片展示） |
 | `泰拉更新` | 从 Wiki **增量**更新（新增物品、刷新套装、回填描述等） |
 | `泰拉强制更新` | **全量重建**（管理员，耗时较长） |
 
@@ -55,6 +57,9 @@ pip install -r requirements.txt
 泰拉 森林
 泰拉 地下层
 泰拉 腐化
+泰拉 月亮领主
+泰拉 克苏鲁之眼
+泰拉 军火商
 泰拉更新
 ```
 
@@ -81,10 +86,11 @@ python prepare_data.py --strip-en
 # 从旧版根目录 JSON 迁移到 categories/（一次性）
 python prepare_data.py --split-categories --remove-legacy
 
-# 仅抓取坐骑 / 宠物 / 生物群系
+# 仅抓取坐骑 / 宠物 / 生物群系 / Boss
 python prepare_data.py --ingest-mounts
 python prepare_data.py --ingest-pets
 python prepare_data.py --ingest-biomes
+python prepare_data.py --ingest-bosses
 ```
 
 ## 数据来源

@@ -150,7 +150,13 @@
       "label": "NPC",
       "file": "npcs.json",
       "count": 29
+    },
+    {
+      "key": "bosses",
+      "label": "Boss",
+      "file": "bosses.json",
+      "count": 33
     }
   ],
-  "total": 2344
+  "total": 2377
 }

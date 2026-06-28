@@ -17,6 +17,7 @@ from prepare_data import (  # noqa: E402
     load_mount_overview_catalog,
     load_pet_overview_catalog,
     migrate_item_image_filenames,
+    parse_description_from_soup,
     parse_item_page,
     resync_set_piece_locales,
     strip_english_fields,
@@ -281,7 +282,7 @@ def test_parse_wings_source_from_overview_table():
 def test_description_missing_intro_list_detects_truncated_accessory():
     item = {
         "name": "月光护身符",
-        "description": "……\n\n狼人增益会为玩家提供如下奖励：[1]",
+        "description": "……\n\n狼人增益会为玩家提供如下奖励：",
     }
     assert _description_missing_intro_list(item)
     assert _description_needs_zh_refresh(item)
@@ -323,3 +324,28 @@ def test_parse_description_fire_gauntlet_split_list():
         "description": "烈火手套是一个困难模式配饰，在击败所有三个机械 Boss后可用。它对近战武器有以下强化：",
     }
     assert _description_missing_intro_list(item)
+
+
+def test_strip_wiki_footnote_markers_from_description():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "碎岩龟.html"
+    if not html_path.is_file():
+        return
+    parsed = parse_description_from_soup(
+        BeautifulSoup(html_path.read_text(encoding="utf-8"), "html.parser")
+    )
+    assert parsed is not None
+    assert "[1]" not in parsed["text"]
+    assert "[2]" not in parsed["text"]
+    assert "[3]" not in parsed["text"]
+
+    from prepare_data import strip_wiki_footnote_markers_from_items  # noqa: E402
+
+    items = {
+        "示例": {
+            "description": "测试描述。[1]继续。[2]",
+            "stats": [{"label": "工具提示", "value": "召唤宠物[3]"}],
+        }
+    }
+    assert strip_wiki_footnote_markers_from_items(items) == 1
+    assert items["示例"]["description"] == "测试描述。继续。"
+    assert items["示例"]["stats"][0]["value"] == "召唤宠物"

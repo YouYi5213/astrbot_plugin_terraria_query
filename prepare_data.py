@@ -169,8 +169,15 @@ async def _persist_items_async(
     )
 
 
+def _strip_wiki_footnote_markers(text: str) -> str:
+    if not text:
+        return text
+    return re.sub(r"\[\d+\]", "", text)
+
+
 def _clean_text(text: str) -> str:
     text = re.sub(r"[\u200b\u200c\u200d\ufeff]", "", text)
+    text = _strip_wiki_footnote_markers(text)
     return text.strip()
 
 
@@ -401,6 +408,8 @@ def _parse_rich_segments(root) -> list[dict]:
                 segments[-1]["text"] += "\n"
             else:
                 segments.append({"type": "text", "text": "\n"})
+            return
+        if node.name == "sup" and "reference" in classes:
             return
         if node.name == "img" and node.get("src"):
             segments.append(
@@ -1036,8 +1045,6 @@ def _parse_description_paragraph_rich(p: Tag) -> list[dict]:
             segments.append(_parse_key_element(node))
             return
         if node.name == "sup" and "reference" in classes:
-            ref_num = re.sub(r"[\[\]\s]", "", node.get_text("", strip=True))
-            append_text(f"[{ref_num}]" if ref_num else "")
             return
         if node.name == "span" and "coin" in classes:
             coin = _parse_coin_span(node)
@@ -1188,7 +1195,9 @@ def _description_missing_intro_list(item: dict) -> bool:
         if _INTRO_LIST_PROMPT_RE.search(text) or "强化" in tail or "增强" in tail:
             return True
         return False
-    if _INTRO_LIST_PROMPT_RE.search(text) and re.search(r"\[\d+\]$", tail):
+    if _INTRO_LIST_PROMPT_RE.search(text) and (
+        re.search(r"\[\d+\]$", tail) or _INTRO_LIST_PROMPT_RE.search(tail)
+    ):
         return True
     return False
 
@@ -2266,6 +2275,27 @@ def _is_pet_summon_item(item: dict) -> bool:
         if "照明宠物" in text:
             return True
     return False
+
+
+def _strip_footnotes_in_value(value):
+    if isinstance(value, str):
+        return _strip_wiki_footnote_markers(value)
+    if isinstance(value, dict):
+        return {k: _strip_footnotes_in_value(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_strip_footnotes_in_value(v) for v in value]
+    return value
+
+
+def strip_wiki_footnote_markers_from_items(items: dict[str, dict]) -> int:
+    """移除已存储描述/属性中的 Wiki 脚注标记 [1][2]…"""
+    changed = 0
+    for key, item in items.items():
+        cleaned = _strip_footnotes_in_value(item)
+        if cleaned != item:
+            items[key] = cleaned
+            changed += 1
+    return changed
 
 
 def strip_english_fields(items: dict[str, dict]) -> int:

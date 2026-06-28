@@ -1,0 +1,3489 @@
+{
+  "天使之翼": {
+    "name": "天使之翼",
+    "image": "Angel_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "1.67秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "53格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "32 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "： 羽毛 10 飞翔之魂 20 光明之魂 15\n\n光明之魂 仅在 困难模式 下掉落自 地下神圣之地 中的大部分敌怪。\n\n羽毛 掉落自 鸟妖 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "： 羽毛 10 飞翔之魂 20 光明之魂 15"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "光明之魂 仅在 困难模式 下掉落自 地下神圣之地 中的大部分敌怪。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "羽毛 掉落自 鸟妖 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "天使"
+    ],
+    "en_name": "Angel Wings",
+    "item_category": "wings"
+  },
+  "恶魔之翼": {
+    "name": "恶魔之翼",
+    "image": "Demon_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "1.67秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "53格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "32 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "： 羽毛 10 飞翔之魂 20 暗影之魂 15\n\n暗影之魂 仅在 困难模式 下掉落自 地下腐化之地 或 地下猩红之地 中的大部分敌怪。\n\n羽毛 掉落自 鸟妖 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "： 羽毛 10 飞翔之魂 20 暗影之魂 15"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "暗影之魂 仅在 困难模式 下掉落自 地下腐化之地 或 地下猩红之地 中的大部分敌怪。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "羽毛 掉落自 鸟妖 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "恶魔"
+    ],
+    "en_name": "Demon Wings",
+    "item_category": "wings"
+  },
+  "仙灵之翼": {
+    "name": "仙灵之翼",
+    "image": "Fairy_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.17秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "67格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "35 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "： 飞翔之魂 20 妖精尘 99\n\n粒子效果发出黄光。\n\n妖精尘 掉落自 妖精 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "： 飞翔之魂 20 妖精尘 99"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "粒子效果发出黄光。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "妖精尘 掉落自 妖精 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "仙灵"
+    ],
+    "en_name": "Fairy Wings",
+    "item_category": "wings"
+  },
+  "鳍翼": {
+    "name": "鳍翼",
+    "image": "Fin_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.17秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "67格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "35 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "来自 渔夫 的任务奖励\n\n在完成了第 10 个 任务 后，每个 任务 都有 1/70 几率得到，但仅限 困难模式 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "来自 渔夫 的任务奖励"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在完成了第 10 个 任务 后，每个 任务 都有 1/70 几率得到，但仅限 困难模式 。"
+        }
+      ]
+    ],
+    "en_name": "Fin Wings",
+    "item_category": "wings"
+  },
+  "冰冻之翼": {
+    "name": "冰冻之翼",
+    "image": "Frozen_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.17秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "67格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "35 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 冰雪羽\n\n在黑暗中可见，且散发出雪粒子。\n\n冰雪羽 掉落自 冰雪巨人 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 冰雪羽"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在黑暗中可见，且散发出雪粒子。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "冰雪羽 掉落自 冰雪巨人 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "冰冻"
+    ],
+    "en_name": "Frozen Wings",
+    "item_category": "wings"
+  },
+  "鸟妖之翼": {
+    "name": "鸟妖之翼",
+    "image": "Harpy_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.17秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "67格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "35 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 巨型鸟妖之羽\n\n巨型鸟妖之羽 掉落自 鸟妖 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 巨型鸟妖之羽"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "巨型鸟妖之羽 掉落自 鸟妖 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "鸟妖"
+    ],
+    "en_name": "Harpy Wings",
+    "item_category": "wings"
+  },
+  "Chippy的斗篷": {
+    "name": "Chippy的斗篷",
+    "image": "Chippy's_Cloak.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "Chippy的斗篷（停用） 飞翔之魂 20 神圣锭 12\n\nChippy的斗篷（停用） 由 骷髅王的红帽变体 掉落。\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chippy的斗篷（停用） 飞翔之魂 20 神圣锭 12"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chippy的斗篷（停用） 由 骷髅王的红帽变体 掉落。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Chippy's Cloak",
+    "item_category": "wings"
+  },
+  "Heroicis的翅膀": {
+    "name": "Heroicis的翅膀",
+    "image": "Heroicis'_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "Heroicis的翅膀（停用） 飞翔之魂 20 神圣锭 12\n\nHeroicis的翅膀（停用） 可通过将 铂金币 在 绿洲 中丢入 水 中获得。\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Heroicis的翅膀（停用） 飞翔之魂 20 神圣锭 12"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Heroicis的翅膀（停用） 可通过将 铂金币 在 绿洲 中丢入 水 中获得。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Heroicis' Wings",
+    "item_category": "wings"
+  },
+  "Red的翅膀": {
+    "name": "Red的翅膀",
+    "image": "Red's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Red's Wings",
+    "item_category": "wings"
+  },
+  "D-Town的翅膀": {
+    "name": "D-Town的翅膀",
+    "image": "D-Town's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "D-Town's Wings",
+    "item_category": "wings"
+  },
+  "Will的翅膀": {
+    "name": "Will的翅膀",
+    "image": "Will's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Will's Wings",
+    "item_category": "wings"
+  },
+  "Crowno的翅膀": {
+    "name": "Crowno的翅膀",
+    "image": "Crowno's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Crowno's Wings",
+    "item_category": "wings"
+  },
+  "Cenx的翅膀": {
+    "name": "Cenx的翅膀",
+    "image": "Cenx's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Cenx's Wings",
+    "item_category": "wings"
+  },
+  "Lazure的屏障台": {
+    "name": "Lazure的屏障台",
+    "image": "Lazure's_Barrier_Platform.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n发出微弱的紫光，且在黑暗中可见。\n\n完全无声。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "用"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "+"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "能水平悬浮。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "悬浮且未按下"
+        },
+        {
+          "type": "key",
+          "symbol": "◀",
+          "label": "左"
+        },
+        {
+          "type": "text",
+          "text": "和"
+        },
+        {
+          "type": "key",
+          "symbol": "▶",
+          "label": "右"
+        },
+        {
+          "type": "text",
+          "text": "时，以 0.5 倍的原速度消耗飞行时间。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "发出微弱的紫光，且在黑暗中可见。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "完全无声。"
+        }
+      ]
+    ],
+    "en_name": "Lazure's Barrier Platform",
+    "item_category": "wings"
+  },
+  "Jim的翅膀": {
+    "name": "Jim的翅膀",
+    "image": "Jim's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n在黑暗中可见。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在黑暗中可见。"
+        }
+      ]
+    ],
+    "en_name": "Jim's Wings",
+    "item_category": "wings"
+  },
+  "Skiphs的爪子": {
+    "name": "Skiphs的爪子",
+    "image": "Skiphs'_Paws.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "用"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "+"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "能水平悬浮。"
+        }
+      ]
+    ],
+    "en_name": "Skiphs' Paws",
+    "item_category": "wings"
+  },
+  "Loki的翅膀": {
+    "name": "Loki的翅膀",
+    "image": "Loki's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n暗红色部分在黑暗中可见。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "暗红色部分在黑暗中可见。"
+        }
+      ]
+    ],
+    "en_name": "Loki's Wings",
+    "item_category": "wings"
+  },
+  "Arkhalis的飞翼": {
+    "name": "Arkhalis的飞翼",
+    "image": "Arkhalis'_Lightwings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品\n\n粒子效果发出白光，在黑暗中可见。\n\n翅膀发出的光的颜色取决于玩家上衣的颜色。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "粒子效果发出白光，在黑暗中可见。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "翅膀发出的光的颜色取决于玩家上衣的颜色。"
+        }
+      ]
+    ],
+    "en_name": "Arkhalis' Lightwings",
+    "item_category": "wings"
+  },
+  "Leinfors的卷缠斗篷": {
+    "name": "Leinfors的卷缠斗篷",
+    "image": "Leinfors'_Prehensile_Cloak.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Leinfors' Prehensile Cloak",
+    "item_category": "wings"
+  },
+  "Ghostar的无极翼": {
+    "name": "Ghostar的无极翼",
+    "image": "Ghostar's_Infinity_Eight.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Ghostar's Infinity Eight",
+    "item_category": "wings"
+  },
+  "Safeman的毛毯斗篷": {
+    "name": "Safeman的毛毯斗篷",
+    "image": "Safeman's_Blanket_Cape.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Safeman's Blanket Cape",
+    "item_category": "wings"
+  },
+  "FoodBarbarian的褴褛龙之翼": {
+    "name": "FoodBarbarian的褴褛龙之翼",
+    "image": "FoodBarbarian's_Tattered_Dragon_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "search_terms": [
+      "FoodBarbarian的褴褛龙"
+    ],
+    "en_name": "FoodBarbarian's Tattered Dragon Wings",
+    "item_category": "wings"
+  },
+  "Grox The Great的翅膀": {
+    "name": "Grox The Great的翅膀",
+    "image": "Grox_The_Great's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Grox The Great's Wings",
+    "item_category": "wings"
+  },
+  "Luna的符文妖精翅膀": {
+    "name": "Luna的符文妖精翅膀",
+    "image": "Luna's_Runic_Pixie_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Luna's Runic Pixie Wings",
+    "item_category": "wings"
+  },
+  "Kazzymodus的翅膀": {
+    "name": "Kazzymodus的翅膀",
+    "image": "Kazzymodus'_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Kazzymodus' Wings",
+    "item_category": "wings"
+  },
+  "Chicken Bones的翅膀": {
+    "name": "Chicken Bones的翅膀",
+    "image": "Chicken_Bones'_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "77格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）\n\n开发者物品",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "困难模式 宝藏袋 （ 史莱姆皇后 的除外）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "开发者物品"
+        }
+      ]
+    ],
+    "en_name": "Chicken Bones' Wings",
+    "item_category": "wings"
+  },
+  "叶之翼": {
+    "name": "叶之翼",
+    "image": "Leaf_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.67秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "81格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "翅膀是一类配饰，让玩家能通过按住↷跳键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住↷跳键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。\n\n装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。\n\n某些类型的翅膀还能让玩家在飞行中可以通过按住▼下键悬浮在固定高度，和/或按住▲上键来加快上升速度。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "翅膀是一类配饰，让玩家能通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "某些类型的翅膀还能让玩家在飞行中可以通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "键悬浮在固定高度，和/或按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▲",
+          "label": "上"
+        },
+        {
+          "type": "text",
+          "text": "键来加快上升速度。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "叶"
+    ],
+    "en_name": "Leaf Wings",
+    "item_category": "wings"
+  },
+  "蝙蝠之翼": {
+    "name": "蝙蝠之翼",
+    "image": "Bat_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.67秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "81格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 破蝙蝠之翼\n\n破蝙蝠之翼 掉落自 日食 事件 的 吸血鬼 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 破蝙蝠之翼"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "破蝙蝠之翼 掉落自 日食 事件 的 吸血鬼 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "蝙蝠"
+    ],
+    "en_name": "Bat Wings",
+    "item_category": "wings"
+  },
+  "蜜蜂之翼": {
+    "name": "蜜蜂之翼",
+    "image": "Bee_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.67秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "81格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 褴褛蜜蜂之翼\n\n褴褛蜜蜂之翼 在打败至少一个 机械 Boss 后掉落自 苔藓黄蜂 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 褴褛蜜蜂之翼"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "褴褛蜜蜂之翼 在打败至少一个 机械 Boss 后掉落自 苔藓黄蜂 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "蜜蜂"
+    ],
+    "en_name": "Bee Wings",
+    "item_category": "wings"
+  },
+  "蝴蝶之翼": {
+    "name": "蝴蝶之翼",
+    "image": "Butterfly_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.67秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "81格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 蝴蝶尘\n\n粒子效果发出粉红光。\n\n蝴蝶尘 在打败至少一个 机械 Boss 后掉落自 蛾 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 蝴蝶尘"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "粒子效果发出粉红光。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "蝴蝶尘 在打败至少一个 机械 Boss 后掉落自 蛾 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "蝴蝶"
+    ],
+    "en_name": "Butterfly Wings",
+    "item_category": "wings"
+  },
+  "烈焰之翼": {
+    "name": "烈焰之翼",
+    "image": "Flame_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.67秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "81格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 火羽\n\n粒子效果发出橙光，在黑暗中可见，且显得半透明。\n\n火羽 掉落自 红魔鬼 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 火羽"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "粒子效果发出橙光，在黑暗中可见，且显得半透明。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "火羽 掉落自 红魔鬼 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "烈焰"
+    ],
+    "en_name": "Flame Wings",
+    "item_category": "wings"
+  },
+  "骨之翼": {
+    "name": "骨之翼",
+    "image": "Bone_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.83秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "94格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "166%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 骨之羽\n\n骨之羽 掉落自任何 装甲骷髅 变体种类。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 骨之羽"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "骨之羽 掉落自任何 装甲骷髅 变体种类。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "骨"
+    ],
+    "en_name": "Bone Wings",
+    "item_category": "wings"
+  },
+  "蛾怪之翼": {
+    "name": "蛾怪之翼",
+    "image": "Mothron_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.83秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "94格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "166%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "掉落自 蛾怪\n\n掉落率： 1/20 (5%) / 39/400 (9.75%) 。蛾怪仅会在 世纪之花 后生成。\n\n发出黄色的光，且花纹在黑暗中可见。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "掉落自 蛾怪"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "掉落率： 1/20 (5%) / 39/400 (9.75%) 。蛾怪仅会在 世纪之花 后生成。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "发出黄色的光，且花纹在黑暗中可见。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "蛾怪"
+    ],
+    "en_name": "Mothron Wings",
+    "item_category": "wings"
+  },
+  "幽灵之翼": {
+    "name": "幽灵之翼",
+    "image": "Spectre_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.83秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "94格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "166%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 幽灵锭 10\n\n取代了来自 前代主机版 和 任天堂 3DS 版 的鬼魂之翼。\n\n半透明。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 幽灵锭 10"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "取代了来自 前代主机版 和 任天堂 3DS 版 的鬼魂之翼。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "半透明。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "幽灵"
+    ],
+    "en_name": "Spectre Wings",
+    "item_category": "wings"
+  },
+  "甲虫之翼": {
+    "name": "甲虫之翼",
+    "image": "Beetle_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.83秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "94格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "166%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 甲虫外壳 8\n\n完全无声。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 甲虫外壳 8"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "完全无声。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "甲虫"
+    ],
+    "en_name": "Beetle Wings",
+    "item_category": "wings"
+  },
+  "喜庆之翼": {
+    "name": "喜庆之翼",
+    "image": "Festive_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "107格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "180%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "掉落自 常绿尖叫怪\n\n掉落率：0.74%–2.22% / 1.33%–6.67% ，取决于当前波数。 [ 5 ]\n\n灯泡在黑暗中可见。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "掉落自 常绿尖叫怪"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "掉落率：0.74%–2.22% / 1.33%–6.67% ，取决于当前波数。 [ 5 ]"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "灯泡在黑暗中可见。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "喜庆"
+    ],
+    "en_name": "Festive Wings",
+    "item_category": "wings"
+  },
+  "阴森之翼": {
+    "name": "阴森之翼",
+    "image": "Spooky_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "107格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "180%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 阴森嫩枝\n\n阴森嫩枝 掉落自 南瓜月 事件 中的 哀木 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 阴森嫩枝"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "阴森嫩枝 掉落自 南瓜月 事件 中的 哀木 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "阴森"
+    ],
+    "en_name": "Spooky Wings",
+    "item_category": "wings"
+  },
+  "褴褛仙灵之翼": {
+    "name": "褴褛仙灵之翼",
+    "image": "Tattered_Fairy_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "107格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "180%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "飞翔之魂 20 黑色仙尘\n\n粒子效果发出黄光。\n\n黑色仙尘 掉落自 南瓜月 事件 中的 南瓜王 。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "飞翔之魂 20 黑色仙尘"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "粒子效果发出黄光。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "黑色仙尘 掉落自 南瓜月 事件 中的 南瓜王 。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "褴褛仙灵"
+    ],
+    "en_name": "Tattered Fairy Wings",
+    "item_category": "wings"
+  },
+  "蒸汽朋克之翼": {
+    "name": "蒸汽朋克之翼",
+    "image": "Steampunk_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "107格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "38 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "100%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "180%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "翅膀是一类配饰，让玩家能通过按住↷跳键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住↷跳键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。\n\n装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。\n\n某些类型的翅膀还能让玩家在飞行中可以通过按住▼下键悬浮在固定高度，和/或按住▲上键来加快上升速度。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "翅膀是一类配饰，让玩家能通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "某些类型的翅膀还能让玩家在飞行中可以通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "键悬浮在固定高度，和/或按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▲",
+          "label": "上"
+        },
+        {
+          "type": "text",
+          "text": "键来加快上升速度。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "蒸汽朋克"
+    ],
+    "en_name": "Steampunk Wings",
+    "item_category": "wings"
+  },
+  "双足翼龙之翼": {
+    "name": "双足翼龙之翼",
+    "image": "Betsy's_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "119格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "36 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "掉落自 双足翼龙\n\n掉落率： 1/4 (25%)\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "掉落自 双足翼龙"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "掉落率： 1/4 (25%)"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "用"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "+"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "能水平悬浮。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "悬浮且未按下"
+        },
+        {
+          "type": "key",
+          "symbol": "◀",
+          "label": "左"
+        },
+        {
+          "type": "text",
+          "text": "和"
+        },
+        {
+          "type": "key",
+          "symbol": "▶",
+          "label": "右"
+        },
+        {
+          "type": "text",
+          "text": "时，以 0.5 倍的原速度消耗飞行时间。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "双足翼龙"
+    ],
+    "en_name": "Betsy's Wings",
+    "item_category": "wings"
+  },
+  "女皇之翼": {
+    "name": "女皇之翼",
+    "image": "Empress_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "2.5秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "128格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "41 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "200%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "275%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "掉落自 光之女皇\n\n掉落率： 1/15 (6.67%) / 1/10 (10%)\n\n用 ▲ 上 键能更快上升。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "掉落自 光之女皇"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "掉落率： 1/15 (6.67%) / 1/10 (10%)"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "用"
+        },
+        {
+          "type": "key",
+          "symbol": "▲",
+          "label": "上"
+        },
+        {
+          "type": "text",
+          "text": "键能更快上升。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "女皇"
+    ],
+    "en_name": "Empress Wings",
+    "item_category": "wings"
+  },
+  "猪龙鱼之翼": {
+    "name": "猪龙鱼之翼",
+    "image": "Fishron_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "143格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "41 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "200%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "掉落自 猪龙鱼公爵\n\n掉落率： 1/15 (6.67%) / 1/10 (10%)\n\n忽略 液体 中的移动惩罚。\n\n身后留下水泡尾迹。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "掉落自 猪龙鱼公爵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "掉落率： 1/15 (6.67%) / 1/10 (10%)"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "忽略 液体 中的移动惩罚。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "身后留下水泡尾迹。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "猪龙鱼"
+    ],
+    "en_name": "Fishron Wings",
+    "item_category": "wings"
+  },
+  "星云斗篷": {
+    "name": "星云斗篷",
+    "image": "Nebula_Mantle.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "143格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "33 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "245%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "星云碎片 14 夜明锭 10\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n在黑暗中可见。\n\n穿着全套 星云盔甲 套装时会有带着脉动效果的实心运动残影。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "星云碎片 14 夜明锭 10"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "用"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "+"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "能水平悬浮。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "悬浮且未按下"
+        },
+        {
+          "type": "key",
+          "symbol": "◀",
+          "label": "左"
+        },
+        {
+          "type": "text",
+          "text": "和"
+        },
+        {
+          "type": "key",
+          "symbol": "▶",
+          "label": "右"
+        },
+        {
+          "type": "text",
+          "text": "时，以 0.5 倍的原速度消耗飞行时间。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在黑暗中可见。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "穿着全套 星云盔甲 套装时会有带着脉动效果的实心运动残影。"
+        }
+      ]
+    ],
+    "en_name": "Nebula Mantle",
+    "item_category": "wings"
+  },
+  "星旋强化翼": {
+    "name": "星旋强化翼",
+    "image": "Vortex_Booster.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "143格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "33 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "150%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "245%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "星旋碎片 14 夜明锭 10\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n发出天蓝色的光，且推进器火焰在黑暗中可见。\n\n完全无声。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "星旋碎片 14 夜明锭 10"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "用"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "+"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "能水平悬浮。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "悬浮且未按下"
+        },
+        {
+          "type": "key",
+          "symbol": "◀",
+          "label": "左"
+        },
+        {
+          "type": "text",
+          "text": "和"
+        },
+        {
+          "type": "key",
+          "symbol": "▶",
+          "label": "右"
+        },
+        {
+          "type": "text",
+          "text": "时，以 0.5 倍的原速度消耗飞行时间。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "发出天蓝色的光，且推进器火焰在黑暗中可见。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "完全无声。"
+        }
+      ]
+    ],
+    "en_name": "Vortex Booster",
+    "item_category": "wings"
+  },
+  "日耀之翼": {
+    "name": "日耀之翼",
+    "image": "Solar_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "167格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "46 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "300%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "日耀碎片 14 夜明锭 10\n\n在黑暗中可见，且粒子效果发出橙光。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "日耀碎片 14 夜明锭 10"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在黑暗中可见，且粒子效果发出橙光。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "日耀"
+    ],
+    "en_name": "Solar Wings",
+    "item_category": "wings"
+  },
+  "星尘之翼": {
+    "name": "星尘之翼",
+    "image": "Stardust_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "飞行时间",
+        "value": "3秒",
+        "extra": ""
+      },
+      {
+        "label": "高度（格）",
+        "value": "167格",
+        "extra": ""
+      },
+      {
+        "label": "最大水平速度",
+        "value": "46 mph",
+        "extra": ""
+      },
+      {
+        "label": "水平加速度",
+        "value": "250%",
+        "extra": ""
+      },
+      {
+        "label": "垂直倍率",
+        "value": "300%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
+      }
+    ],
+    "recipe": null,
+    "page_type": "wing",
+    "from_wings_table": true,
+    "parent_page": "翅膀",
+    "description": "星尘碎片 14 夜明锭 10\n\n在黑暗中可见。\n\n穿着全套 星尘盔甲 套装时会有带着拖尾效果的透明运动残影。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "星尘碎片 14 夜明锭 10"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在黑暗中可见。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "穿着全套 星尘盔甲 套装时会有带着拖尾效果的透明运动残影。"
+        }
+      ]
+    ],
+    "search_terms": [
+      "星尘"
+    ],
+    "en_name": "Stardust Wings",
+    "item_category": "wings"
+  }
+}

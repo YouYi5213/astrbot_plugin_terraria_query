@@ -1,0 +1,126 @@
+{
+  "凝胶染料": {
+    "name": "凝胶染料",
+    "image": "Gel_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料制作材料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "凝胶染料",
+          "image": "Gel_Dye.png"
+        },
+        {
+          "name": "粉凝胶",
+          "image": "Pink_Gel.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "粉凝胶染料",
+        "image": "Pink_Gel_Dye.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Gel Dye",
+    "description": "凝胶染料是一种困难模式染料，通过将奇异植物交给染料商而得到。它作为随机奖励得到。装备后，凝胶染料会生成类似于史莱姆枪所导致的史莱姆减益的效果。",
+    "item_category": "dyes"
+  },
+  "流沙染料": {
+    "name": "流沙染料",
+    "image": "Shifting_Sands_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料制作材料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "流沙染料",
+          "image": "Shifting_Sands_Dye.png"
+        },
+        {
+          "name": "水晶碎块",
+          "image": "Crystal_Shard.png",
+          "amount": "20"
+        }
+      ],
+      "result": {
+        "name": "珍珠流沙染料",
+        "image": "Shifting_Pearlsands_Dye.png"
+      }
+    },
+    "en_name": "Shifting Sands Dye",
+    "drops": null,
+    "description": "流沙染料是种通过将奇异植物交给染料商而得到的困难模式染料。应用后，它会给物品一种类似于落沙的外观。当获得水晶碎块后，它可以用于制作珍珠流沙染料。",
+    "item_category": "dyes"
+  }
+}

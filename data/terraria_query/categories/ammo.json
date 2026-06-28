@@ -1,0 +1,2448 @@
+{
+  "沙块": {
+    "name": "沙块",
+    "image": "Sand_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "如果落在你身上，会让你窒息",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "固化机",
+      "ingredients": [
+        {
+          "name": "沙块",
+          "image": "Sand_Block.png"
+        },
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "沙岩块",
+        "image": "Sandstone_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Sand Blocks",
+    "description": "沙块是一种土壤物块，在沙漠生物群系中、海洋的海滩或底部可以大量找到，且可以在地下地层作为微型生物群系小片地找到。它也会作为射弹由蚁狮射出。沙块可以传播或被转化为邪恶生物群系和神圣之地（见下方）。\n\n沙块会受重力影响，此独特特性也被雪泥块、泥沙块、贝壳堆、破裂地牢砖、以及For the Worthy和Get fixed boi世界中的灰烬块所具有。沙块会对砸到的任何玩家或敌怪造成伤害。如果落在玩家上的沙块数量较大，玩家就会受到窒息减益，直到玩家设法逃离。沙块被用于制作一些建筑用物块，以及直接用于制作其他物品，但它也是玻璃的原材料，后者用于一套家具套装和部分其他物品。\n\n黑檀沙块、猩红沙块和珍珠沙块是沙块的生物群系变体种类，分别对应腐化、猩红、和神圣。它们在其对应生物群系中会替代普通沙块出现，无论这些生物群系是与沙漠还是海洋生物群系重叠。和任何其他腐化、猩红、或神圣块一样，在困难模式开始后，它们会开始将最多 3 图格远范围内的可用的物块（包括普通沙块）转化为其对应变体种类。这些沙块变体种类功能上和普通沙块相似，但每种变体种类能用于制作部分生物群系相关物品。它们可以被抛撒粉末、投掷水瓶、或使用绿溶液的环境改造枪重新转换成普通沙块。正在下落的沙块无法被转化。\n\n所有类型的沙块都能用作沙枪的弹药，但它们无法被储存在物品栏中的弹药栏。类似于蚁狮发射的沙球射弹，如果有可用空间，射出的沙块会变成物块被放置在地面上。",
+    "item_category": "ammo"
+  },
+  "照明弹": {
+    "name": "照明弹",
+    "image": "Flare.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "1",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "1.5",
+        "extra": "（极弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "6",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Flares",
+    "drops": null,
+    "description": "照明弹是一类弹药，仅供信号枪使用。由信号枪发射的照明弹按曲度很小的弧线运动，并且会附着在物块上（类似于粘性荧光棒），但是有更好的射弹速度和范围。它们能在水下使用，并且可以发射进水中或从水中发射出来。发射后，照明弹会发出微弱的有色闪光，持续 10 分钟。它们会附着在击中的方块上并且在水下也会工作。照明弹在发射后就不能被回收。\n\n全部类型的照明弹（诅咒照明弹除外）都会造成着火了！减益。有2/3 (66.67%)的几率此减益会持续 5 秒，1/3 (33.33%)的几率持续 10 秒。",
+    "item_category": "ammo"
+  },
+  "凝胶": {
+    "name": "凝胶",
+    "image": "Gel.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“既好吃，又易燃”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "1",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "任何木材",
+          "image": "Any_Wood.gif",
+          "amount": "10"
+        },
+        {
+          "name": "凝胶",
+          "image": "Gel.png",
+          "amount": "5"
+        }
+      ],
+      "result": {
+        "name": "办公块",
+        "image": "Office_Block.png",
+        "amount": "10"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "30px-Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "冰雪史莱姆",
+              "image": "Ice_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Bunny_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "White_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Red_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Green_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Yellow_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆之母",
+              "image": "Mother_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "夜明史莱姆",
+              "image": "Illuminant_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "小史莱姆",
+              "image": "Slimeling.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺丛林史莱姆",
+              "image": "Spiked_Jungle_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺冰雪史莱姆",
+              "image": "Spiked_Ice_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺史莱姆",
+              "image": "Spiked_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "弹力史莱姆",
+              "image": "Bouncy_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "彩虹史莱姆",
+              "image": "Rainbow_Slime.gif",
+              "quantity": "1–20",
+              "chance": "100%"
+            },
+            {
+              "name": "恶翅史莱姆",
+              "image": "37px-Corrupt_Slime.gif",
+              "quantity": "2–4",
+              "chance": "100%"
+            },
+            {
+              "name": "毒泥",
+              "image": "Toxic_Sludge.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "水晶史莱姆",
+              "image": "Crystal_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "沙史莱姆",
+              "image": "Sand_Slime.gif",
+              "quantity": "2–3",
+              "chance": "100%"
+            },
+            {
+              "name": "猩红史莱姆",
+              "image": "Crimslime.gif",
+              "quantity": "2–4",
+              "chance": "100% (电脑版、主机版、和移动版)"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1–2",
+              "chance": "100% (前代主机版、和3DS版)"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "腐化史莱姆",
+              "image": "Corrupt_Slime.gif",
+              "quantity": "2–4",
+              "chance": "100%"
+            },
+            {
+              "name": "腹足怪",
+              "image": "Spectral_Gastropod.png",
+              "quantity": "10-25",
+              "chance": "100%"
+            },
+            {
+              "name": "腹足怪",
+              "image": "Gastropod.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "雨伞史莱姆",
+              "image": "Umbrella_Slime.gif",
+              "quantity": "2-5",
+              "chance": "97.78%"
+            },
+            {
+              "name": "飞翔史莱姆",
+              "image": "Heavenly_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "30px-Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "冰雪史莱姆",
+              "image": "Ice_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Bunny_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "White_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Red_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Green_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Yellow_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆之母",
+              "image": "Mother_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "夜明史莱姆",
+              "image": "Illuminant_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "小史莱姆",
+              "image": "Slimeling.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺丛林史莱姆",
+              "image": "Spiked_Jungle_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺冰雪史莱姆",
+              "image": "Spiked_Ice_Slime.gif",
+              "quantity": "1–3",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺史莱姆",
+              "image": "Spiked_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "弹力史莱姆",
+              "image": "Bouncy_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "彩虹史莱姆",
+              "image": "Rainbow_Slime.gif",
+              "quantity": "1–20",
+              "chance": "100%"
+            },
+            {
+              "name": "恶翅史莱姆",
+              "image": "37px-Corrupt_Slime.gif",
+              "quantity": "2–4",
+              "chance": "100%"
+            },
+            {
+              "name": "毒泥",
+              "image": "Toxic_Sludge.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "水晶史莱姆",
+              "image": "Crystal_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "沙史莱姆",
+              "image": "Sand_Slime.gif",
+              "quantity": "2–3",
+              "chance": "100%"
+            },
+            {
+              "name": "猩红史莱姆",
+              "image": "Crimslime.gif",
+              "quantity": "2–4",
+              "chance": "100% (电脑版、主机版、和移动版)"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1–2",
+              "chance": "100% (前代主机版、和3DS版)"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "腐化史莱姆",
+              "image": "Corrupt_Slime.gif",
+              "quantity": "2–4",
+              "chance": "100%"
+            },
+            {
+              "name": "腹足怪",
+              "image": "Spectral_Gastropod.png",
+              "quantity": "10-25",
+              "chance": "100%"
+            },
+            {
+              "name": "腹足怪",
+              "image": "Gastropod.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "雨伞史莱姆",
+              "image": "Umbrella_Slime.gif",
+              "quantity": "2-5",
+              "chance": "97.78%"
+            },
+            {
+              "name": "飞翔史莱姆",
+              "image": "Heavenly_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "30px-Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Slimed_Zombie.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "冰雪史莱姆",
+              "image": "Ice_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Bunny_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "White_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Red_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Green_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆",
+              "image": "Yellow_Present_Slime.png",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆之母",
+              "image": "Mother_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "夜明史莱姆",
+              "image": "Illuminant_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "小史莱姆",
+              "image": "Slimeling.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺丛林史莱姆",
+              "image": "Spiked_Jungle_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺冰雪史莱姆",
+              "image": "Spiked_Ice_Slime.gif",
+              "quantity": "1–3",
+              "chance": "100%"
+            },
+            {
+              "name": "尖刺史莱姆",
+              "image": "Spiked_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "弹力史莱姆",
+              "image": "Bouncy_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "彩虹史莱姆",
+              "image": "Rainbow_Slime.gif",
+              "quantity": "1–20",
+              "chance": "100%"
+            },
+            {
+              "name": "恶翅史莱姆",
+              "image": "37px-Corrupt_Slime.gif",
+              "quantity": "2–4",
+              "chance": "100%"
+            },
+            {
+              "name": "毒泥",
+              "image": "Toxic_Sludge.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "水晶史莱姆",
+              "image": "Crystal_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "沙史莱姆",
+              "image": "Sand_Slime.gif",
+              "quantity": "2–3",
+              "chance": "100%"
+            },
+            {
+              "name": "猩红史莱姆",
+              "image": "Crimslime.gif",
+              "quantity": "2–4",
+              "chance": "100% (电脑版、主机版、和移动版)"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1–2",
+              "chance": "100% (前代主机版、和3DS版)"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "腐化史莱姆",
+              "image": "Corrupt_Slime.gif",
+              "quantity": "2–4",
+              "chance": "100%"
+            },
+            {
+              "name": "腹足怪",
+              "image": "Spectral_Gastropod.png",
+              "quantity": "10-25",
+              "chance": "100%"
+            },
+            {
+              "name": "腹足怪",
+              "image": "Gastropod.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "雨伞史莱姆",
+              "image": "Umbrella_Slime.gif",
+              "quantity": "2-5",
+              "chance": "97.78%"
+            },
+            {
+              "name": "飞翔史莱姆",
+              "image": "Heavenly_Slime.gif",
+              "quantity": "1–2",
+              "chance": "100%"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "2–5",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Gel",
+    "description": "凝胶是常见的制作材料，大多数史莱姆和史莱姆僵尸都会掉落。凝胶是不可或缺的，因为它是制作火把的材料之一，并且从开始阶段到最终场景全程都经常要用到。它还作为火焰喷射器和精灵熔枪的弹药来使用，因此可以存放在玩家的弹药栏。",
+    "item_category": "ammo"
+  },
+  "坠落之星": {
+    "name": "坠落之星",
+    "image": "Fallen_Star.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "日出后消失",
+        "extra": ""
+      },
+      {
+        "label": "最大堆叠",
+        "value": "9999 (电脑版、主机版、和移动版) / 100 (前代主机版、和3DS版)",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "5 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 50 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "坠落",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "撞击",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass_(old).png"
+        },
+        {
+          "name": "坠落之星",
+          "image": "Fallen_Star_(old).png"
+        },
+        {
+          "name": "精金锭",
+          "image": "Adamantite_Bar_(old).png"
+        }
+      ],
+      "result": {
+        "name": "丛林蜥蜴电池",
+        "image": "Lihzahrd_Power_Cell_(old).png"
+      }
+    },
+    "en_name": "Fallen Star",
+    "drops": null,
+    "description": "坠落之星是在夜晚从天空中掉落，并在黎明时 (上午 4:30) 消失的物品。它可用于制作魔力水晶，后者会将玩家的最大魔力永久提升 20。它也用于一系列制作配方中，还可作为星星炮和超级星星炮(电脑版、主机版、和移动版)的弹药使用。因此，坠落之星可存储在弹药栏中。\n\n坠落之星会在整个夜间期间随机生成，而其生成速度由两个因素决定：世界大小，和在夜晚降临时随机设置的一个倍率。见备注获取细节。\n\n坠落之星在地上会发光，使其在夜晚中容易找到。玩家无法将其放置为永久光源，但是可以搭配玻璃瓶将其制作为星星瓶。坠落之星会在白天时消失，无论它们是否是玩家扔出的，但是可以一直保存在玩家的物品栏或是收纳物品（如宝箱）中。\n\n虽然不常见，但坠落之星可以对击中的实体造成 1000 基础伤害。[1]它们无法伤害玩家，除非是在don't dig up(电脑版、主机版、和移动版)或get fixed boi(电脑版、主机版、和移动版)世界中。在这些世界中，从天而降的坠落之星不再在击中时掉落为物品，且只能通过罐子或史莱姆作为其额外掉落获得。",
+    "item_category": "ammo"
+  },
+  "尖桩发射器": {
+    "name": "尖桩发射器",
+    "image": "Stake_Launcher.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "使用弹药",
+        "value": "尖桩",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "75",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "6.5",
+        "extra": "（较强击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "14%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "12 (电脑版、主机版、和移动版) /26（普通速度） (前代主机版、和3DS版)",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "9 (未计算弹药影响)",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "紫色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#aa55ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": null,
+    "en_name": "Stake",
+    "description": "尖桩发射器是一把困难模式、世纪之花后的类连弩武器，能自动开火，将尖桩作为弹药。尖桩不受重力影响，至多穿透 9 个敌怪，至多可攻击到 10 个敌怪，且比大多数箭具有更高的射速。在电脑版电脑版、主机版主机版、和移动版移动版中，尖桩每穿过一个敌人，下一次命中时伤害降低 10%。尖桩发射器拥有 14% 的基础暴击率，高于默认的 4%。另外，它对吸血鬼造成的伤害提升 10 倍。\n\n尖桩发射器在南瓜月事件中由哀木掉落，掉落率为 2.86–20% (5–20%)，基于波次而定。[1]尖桩发射器掉落时，总会同时掉落 30 至 60 个尖桩。它们的额外的尖桩可在玩家物品栏中存在尖桩发射器时从巫医或军火商处以15 CC购买。\n\n其最佳修饰语是虚幻。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "尖桩发射器是一把困难模式、世纪之花后的类连弩武器，能自动开火，将尖桩作为弹药。尖桩不受重力影响，至多穿透 9 个敌怪，至多可攻击到 10 个敌怪，且比大多数箭具有更高的射速。在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，尖桩每穿过一个敌人，下一次命中时伤害降低 10%。尖桩发射器拥有 14% 的基础暴击率，高于默认的 4%。另外，它对吸血鬼造成的伤害提升 10 倍。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "尖桩发射器在南瓜月事件中由哀木掉落，掉落率为 2.86–20% (5–20%)，基于波次而定。[1]尖桩发射器掉落时，总会同时掉落 30 至 60 个尖桩。它们的额外的尖桩可在玩家物品栏中存在尖桩发射器时从巫医或军火商处以"
+        },
+        {
+          "type": "coin",
+          "amount": "15",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是虚幻。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "彩纸": {
+    "name": "彩纸",
+    "image": "Confetti.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "2 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "40",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 25 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "彩纸",
+          "image": "Confetti.png"
+        },
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        }
+      ],
+      "result": {
+        "name": "午夜彩纸块",
+        "image": "Midnight_Confetti_Block.png"
+      }
+    },
+    "en_name": "Confetti",
+    "drops": null,
+    "description": "彩纸是一种弹药制作材料。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "彩纸是一种弹药制作材料。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "木箭": {
+    "name": "木箭",
+    "image": "Wooden_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "5 (电脑版、主机版、和移动版) / 4 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "5 CC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "1",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "任何木材",
+          "image": "Any_Wood.gif"
+        },
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "木箭",
+        "image": "Wooden_Arrow.png",
+        "amount": "25"
+      }
+    },
+    "en_name": "Wooden Arrow",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "32px-Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "25–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "25–49",
+              "chance": "1/4 (25%) （地下）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "32px-Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "25–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "25–49",
+              "chance": "1/4 (25%) （地下）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "32px-Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "25–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "25–49",
+              "chance": "1/4 (25%) （地下）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "木箭是最基础的箭类型。它可以用作所有弓的弹药，并且是若干种更加强力的箭的制作配方的基础。木箭可以制作得到、在罐子和宝箱中找到、掉落自中箭僵尸、或从商人处以每支5 CC的价格购买。在月相3、4、7、8 期间还能从骷髅商人(电脑版、主机版、和移动版)处购买。\n\n(前代主机版、和3DS版)点燃的木箭在击中敌怪或物块后有1/3 (33.33%)几率恢复为木箭（仅当由一次射出一支箭的武器发射时）。\n\n用某些弓射出时，常规的木箭会转变为其他特殊射弹（例如熔火之怒，能将木箭转变为一种烈焰箭）。一些其他弓，比如脉冲弓(电脑版、主机版、前代主机版、和移动版)，能将任何类型的箭转变为其它们的特殊变体。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "木箭是最基础的箭类型。它可以用作所有弓的弹药，并且是若干种更加强力的箭的制作配方的基础。木箭可以制作得到、在罐子和宝箱中找到、掉落自中箭僵尸、或从商人处以每支"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。在月相3、4、7、8 期间还能从骷髅商人(电脑版、主机版、和移动版)处购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(前代主机版、和3DS版)点燃的木箭在击中敌怪或物块后有1/3 (33.33%)几率恢复为木箭（仅当由一次射出一支箭的武器发射时）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "用某些弓射出时，常规的木箭会转变为其他特殊射弹（例如熔火之怒，能将木箭转变为一种烈焰箭）。一些其他弓，比如脉冲弓(电脑版、主机版、前代主机版、和移动版)，能将任何类型的箭转变为其它们的特殊变体。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "杰克南瓜灯发射器": {
+    "name": "杰克南瓜灯发射器",
+    "image": "Jack_'O_Lantern_Launcher.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "使用弹药",
+        "value": "爆炸杰克南瓜灯",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "85 (电脑版、主机版、和移动版) / 60 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "5",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "10%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "25 (电脑版、主机版、和移动版) / 30（普通速度） (前代主机版、和3DS版)",
+        "extra": "（快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "7",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "紫色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#aa55ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "爆炸",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Explosive Jack 'O Lantern",
+    "drops": null,
+    "description": "杰克南瓜灯发射器是一把困难模式、世纪之花后的发射器，其发射的爆炸杰克南瓜灯将在实体物块间弹射，直到接触敌怪或 7 秒后爆炸。爆炸杰克南瓜灯将对敌怪造成两次伤害：一次为接触，一次为爆炸。杰克南瓜灯发射器拥有 10% 基础暴击率，而非通常的 4%。\n\n杰克南瓜灯发射器以 2.5–12.5% （6.25–12.5%）的几率（取决于波数）掉落自南瓜月事件的南瓜王。[1]杰克南瓜灯发射器掉落时，总会伴随着 25 到 50 枚爆炸杰克南瓜灯。如果玩家的物品栏中有杰克南瓜灯发射器，军火商将以15 CC每个的价格出售爆炸杰克南瓜灯。\n\n其最佳修饰语是虚幻。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "杰克南瓜灯发射器是一把困难模式、世纪之花后的发射器，其发射的爆炸杰克南瓜灯将在实体物块间弹射，直到接触敌怪或 7 秒后爆炸。爆炸杰克南瓜灯将对敌怪造成两次伤害：一次为接触，一次为爆炸。杰克南瓜灯发射器拥有 10% 基础暴击率，而非通常的 4%。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "杰克南瓜灯发射器以 2.5–12.5% （6.25–12.5%）的几率（取决于波数）掉落自南瓜月事件的南瓜王。[1]杰克南瓜灯发射器掉落时，总会伴随着 25 到 50 枚爆炸杰克南瓜灯。如果玩家的物品栏中有杰克南瓜灯发射器，军火商将以"
+        },
+        {
+          "type": "coin",
+          "amount": "15",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "每个的价格出售爆炸杰克南瓜灯。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是虚幻。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "橡实": {
+    "name": "橡实",
+    "image": "Acorn.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "种子弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "最大堆叠",
+        "value": "9999 (电脑版、主机版、和移动版) / 99 (前代主机版、和3DS版)",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "10 CC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "2",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 50 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "橡实",
+          "image": "Acorn.png"
+        },
+        {
+          "name": "琥珀",
+          "image": "Amber.png"
+        }
+      ],
+      "result": {
+        "name": "琥珀宝石果",
+        "image": "Amber_Gemcorn.png"
+      }
+    },
+    "en_name": "Acorn",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1–2",
+              "chance": "14.1764%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1–2",
+              "chance": "14.1764%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1–2",
+              "chance": "14.1764%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "橡实是一种用来种树的种子。橡实可以种植在普通的绿色草、神圣草、腐化草、猩红草、丛林草、沙、或雪上。种橡实的地方会出现一株树苗，若条件合适，最后会长成一棵树。在砍树或摇晃(电脑版、主机版、和移动版)树时会随机掉落橡实，它也可以从树妖处以10 CC的价格购买。\n\n橡实在放置后便无法回收。摧毁树苗不会产出任何物品。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "橡实是一种用来种树的种子。橡实可以种植在普通的绿色草、神圣草、腐化草、猩红草、丛林草、沙、或雪上。种橡实的地方会出现一株树苗，若条件合适，最后会长成一棵树。在砍树或摇晃(电脑版、主机版、和移动版)树时会随机掉落橡实，它也可以从树妖处以"
+        },
+        {
+          "type": "coin",
+          "amount": "10",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "橡实在放置后便无法回收。摧毁树苗不会产出任何物品。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "毒刺发射器": {
+    "name": "毒刺发射器",
+    "image": "Stynger.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "使用弹药",
+        "value": "毒刺矢",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "45 (电脑版、主机版、和移动版) / 43 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "5",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "22",
+        "extra": "（快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "18 (未计算弹药影响)",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "射出爆炸矢会对直接命中的目标造成额外伤害",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "07*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "7 GC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "爆炸",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": null,
+    "en_name": "Stynger Bolt",
+    "description": "毒刺发射器是一种困难模式、石巨人后的发射器。可以自动开火，毒刺矢是其弹药。毒刺矢会高速飞行，并会在撞击到敌怪或实体物块时爆炸，造成范围伤害。它们可以释放出 2–5 个弹片碎片，它们会向大角度的弧形区域飞行，并造成额外的小爆炸。\n\n(电脑版、主机版、和移动版)毒刺矢会在直接击中单个目标时造成双倍伤害（124 基础伤害）。\n\n毒刺发射器有(电脑版、主机版、和移动版)1/7 (14.29%)/(前代主机版、和3DS版)1/8 (12.5%)几率掉落自石巨人。毒刺发射器总会与 60 至 99 枚毒刺矢一起掉落。如果玩家的物品栏中有毒刺发射器，巫医或军火商将以每个75 CC的价格出售毒刺矢，在前代主机版前代主机版和任天堂3DS任天堂3DS版版中则在爆破专家处购买（每个10 CC）。\n\n其最佳修饰语是虚幻。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "毒刺发射器是一种困难模式、石巨人后的发射器。可以自动开火，毒刺矢是其弹药。毒刺矢会高速飞行，并会在撞击到敌怪或实体物块时爆炸，造成范围伤害。它们可以释放出 2–5 个弹片碎片，它们会向大角度的弧形区域飞行，并造成额外的小爆炸。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(电脑版、主机版、和移动版)毒刺矢会在直接击中单个目标时造成双倍伤害（124 基础伤害）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "毒刺发射器有(电脑版、主机版、和移动版)1/7 (14.29%)/(前代主机版、和3DS版)1/8 (12.5%)几率掉落自石巨人。毒刺发射器总会与 60 至 99 枚毒刺矢一起掉落。如果玩家的物品栏中有毒刺发射器，巫医或军火商将以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "75",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格出售毒刺矢，在"
+        },
+        {
+          "type": "icon",
+          "image": "Old-Gen_Console_only.png",
+          "alt": "前代主机版"
+        },
+        {
+          "type": "text",
+          "text": "前代主机版和任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版中则在爆破专家处购买（每个"
+        },
+        {
+          "type": "coin",
+          "amount": "10",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是虚幻。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "火枪子弹": {
+    "name": "火枪子弹",
+    "image": "Musket_Ball.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "7",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "7 CC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "1",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball_(old).png",
+          "amount": "70"
+        },
+        {
+          "name": "叶绿锭",
+          "image": "Chlorophyte_Bar_(old).png"
+        }
+      ],
+      "result": {
+        "name": "叶绿弹",
+        "image": "Chlorophyte_Bullet.png",
+        "amount": "70"
+      }
+    },
+    "en_name": "Musket Ball",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "30–60",
+              "chance": "0.64%0.6% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "30–60",
+              "chance": "0.64%0.6% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "30–60",
+              "chance": "0.64%0.6% （困难模式）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "火枪子弹是基本类型的子弹，用作枪的弹药。它没有任何特殊属性，用于制作各种更先进的弹药。\n\n火枪子弹可以在军火商处以每颗7 CC的价格购买，或者说 1000 发70 SC。它们也可以从暗影珠和猩红之心（随着火枪或夺命枪）、或从圣诞节期间的礼物（随着红莱德枪）中获得。\n\n无尽火枪袋(电脑版、主机版、和移动版)起到了无限数量火枪子弹的作用。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "火枪子弹是基本类型的子弹，用作枪的弹药。它没有任何特殊属性，用于制作各种更先进的弹药。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "火枪子弹可以在军火商处以每颗"
+        },
+        {
+          "type": "coin",
+          "amount": "7",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买，或者说 1000 发"
+        },
+        {
+          "type": "coin",
+          "amount": "70",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "。它们也可以从暗影珠和猩红之心（随着火枪或夺命枪）、或从圣诞节期间的礼物（随着红莱德枪）中获得。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "无尽火枪袋(电脑版、主机版、和移动版)起到了无限数量火枪子弹的作用。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "玉米糖步枪": {
+    "name": "玉米糖步枪",
+    "image": "Candy_Corn_Rifle.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "使用弹药",
+        "value": "玉米糖",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "60",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "10%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "9",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "33%几率省下弹药",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "08*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "10 GC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": null,
+    "en_name": "Candy Corn",
+    "description": "玉米糖步枪是一把困难模式世纪之花后的枪，发射玉米糖为弹药。玉米糖射弹可以穿透两个敌怪并反弹四次，在第五次碰撞或命中第三个敌怪时消失。这把枪具有很高的射速，不同于大部分枪，它的射弹受重力影响而无法在半空中停留太久，不过它们的反弹能力帮助它们延长了射程。玉米糖步枪拥有 10% 基础暴击率，而不是通常的 4%，并有1/3 (33.33%)的几率省下弹药。\n\n玉米糖步枪有 2.5–12.5%（6.25–12.5%）几率（取决于波数）由南瓜月事件中的南瓜王掉落。[1]玉米糖步枪掉落时，总会伴随着 50 到 100 颗玉米糖。如果玩家的物品栏中有玉米糖步枪，军火商将以每个5 CC的价格出售玉米糖。\n\n其最佳修饰语是虚幻。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "玉米糖步枪是一把困难模式世纪之花后的枪，发射玉米糖为弹药。玉米糖射弹可以穿透两个敌怪并反弹四次，在第五次碰撞或命中第三个敌怪时消失。这把枪具有很高的射速，不同于大部分枪，它的射弹受重力影响而无法在半空中停留太久，不过它们的反弹能力帮助它们延长了射程。玉米糖步枪拥有 10% 基础暴击率，而不是通常的 4%，并有1/3 (33.33%)的几率省下弹药。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "玉米糖步枪有 2.5–12.5%（6.25–12.5%）几率（取决于波数）由南瓜月事件中的南瓜王掉落。[1]玉米糖步枪掉落时，总会伴随着 50 到 100 颗玉米糖。如果玩家的物品栏中有玉米糖步枪，军火商将以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格出售玉米糖。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是虚幻。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "电线": {
+    "name": "电线",
+    "image": "Wire.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "机械制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "在机械装置之间传递信号用扳手来放置",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "买入",
+        "value": "5 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "1 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "铂金表",
+          "image": "Platinum_Watch.png"
+        },
+        {
+          "name": "电线",
+          "image": "Wire.png"
+        }
+      ],
+      "result": {
+        "name": "1秒计时器",
+        "image": "1_Second_Timer.png"
+      }
+    },
+    "en_name": "Wire",
+    "drops": null,
+    "description": "电线是一种独特的物品，通常用于将机械连接到起动装置（如压力板、计时器、开关、或控制杆）。电线要用扳手（或其升级物）放置，并用钢丝钳（或其升级物）回收，这两者都只能从机械师处获得。用不同颜色的扳手放置的电线也会是不同颜色的，这允许各自独立的电线线路有所交叠而不会互相干扰。\n\n电线本身可以从机械师处以每个5 SC的价格购买，但也可以从自然生成的机械中得到，它们稀疏散布在洞穴，并频繁出现在地牢和丛林神庙中，例如陷阱和挂链灯笼与开关的布置中。\n\n电线在放置时占据的是它们自身专用的放置层，因此可以和物块、墙、家具、甚植物、和液体占据同一格空间。电线也可以放置在半空中，不需要支撑。爆炸不会影响到放置的电线。\n\n默认情况下，放置的电线是不可见的，除非玩家手持机械相关的物品作为手中的工具（例如：压力板、扳手，或者甚至一组电线自身）。但是，如果玩家带着机械透镜(电脑版、主机版、和移动版)（或其升级物宏伟蓝图(电脑版、主机版、和移动版)），他们就不仅能看见电线，还能分别控制各种颜色电线的可见性。\n\n使用扳手和钢丝钳，玩家的电线放置与拆除范围大致上能达到水平与垂直各 25 格。用宏伟蓝图，玩家就能在可见屏幕上的任何地方放置或拆除电线。\n\n当电线放置在与起动装置和机械同一格空间时视为与这些物品“连接”。通常，这可以由电线和物品视觉上“接触”来判断，不过并非所有物品都会完全地占据其图格（例如某些雕像）。\n\n电线被视为扳手的“弹药”，因此能放置在玩家物品栏的弹药栏中。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "电线是一种独特的物品，通常用于将机械连接到起动装置（如压力板、计时器、开关、或控制杆）。电线要用扳手（或其升级物）放置，并用钢丝钳（或其升级物）回收，这两者都只能从机械师处获得。用不同颜色的扳手放置的电线也会是不同颜色的，这允许各自独立的电线线路有所交叠而不会互相干扰。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "电线本身可以从机械师处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买，但也可以从自然生成的机械中得到，它们稀疏散布在洞穴，并频繁出现在地牢和丛林神庙中，例如陷阱和挂链灯笼与开关的布置中。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "电线在放置时占据的是它们自身专用的放置层，因此可以和物块、墙、家具、甚植物、和液体占据同一格空间。电线也可以放置在半空中，不需要支撑。爆炸不会影响到放置的电线。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "默认情况下，放置的电线是不可见的，除非玩家手持机械相关的物品作为手中的工具（例如：压力板、扳手，或者甚至一组电线自身）。但是，如果玩家带着机械透镜(电脑版、主机版、和移动版)（或其升级物宏伟蓝图(电脑版、主机版、和移动版)），他们就不仅能看见电线，还能分别控制各种颜色电线的可见性。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "使用扳手和钢丝钳，玩家的电线放置与拆除范围大致上能达到水平与垂直各 25 格。用宏伟蓝图，玩家就能在可见屏幕上的任何地方放置或拆除电线。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当电线放置在与起动装置和机械同一格空间时视为与这些物品“连接”。通常，这可以由电线和物品视觉上“接触”来判断，不过并非所有物品都会完全地占据其图格（例如某些雕像）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "电线被视为扳手的“弹药”，因此能放置在玩家物品栏的弹药栏中。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "钉枪": {
+    "name": "钉枪",
+    "image": "Nail_Gun.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "使用弹药",
+        "value": "钉子",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "85",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "0",
+        "extra": "（无击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "08*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "10 GC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "爆炸",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": null,
+    "en_name": "Nail",
+    "description": "钉枪是一把困难模式、世纪之花后的发射器，使用钉子作为其弹药。当钉子接触到敌怪时，它会造成 15% 的伤害（17 基础伤害），并黏附在受伤害的敌怪身上，并在 1.5 秒后爆炸，造成 135% 的伤害（155 基础伤害）。[1]钉子也可以黏附在实体物块上，并以相同的方式爆炸，并且它们造成的爆炸不会伤害使用者。钉子最初不受重力影响，但在飞过大约 30 格后会像箭一样以弧线坠落。如果在PvP中使用，那么钉子并不会黏附在玩家身上，而是会正常地造成伤害（115 基础伤害）。\n\n钉枪有1/25 (4%)/49/625 (7.84%)的几率掉落自日食事件中的钉头。掉落时，钉枪总会与 100 至 200 枚钉子一同掉落。额外的钉子可在玩家物品栏中存在钉枪时从商人和军火商处以1 SC的价格购买。\n\n其最佳修饰语是恶魔，由于它没有任何击退，因此无法得到影响击退的修饰语。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "钉枪是一把困难模式、世纪之花后的发射器，使用钉子作为其弹药。当钉子接触到敌怪时，它会造成 15% 的伤害（17 基础伤害），并黏附在受伤害的敌怪身上，并在 1.5 秒后爆炸，造成 135% 的伤害（155 基础伤害）。[1]钉子也可以黏附在实体物块上，并以相同的方式爆炸，并且它们造成的爆炸不会伤害使用者。钉子最初不受重力影响，但在飞过大约 30 格后会像箭一样以弧线坠落。如果在PvP中使用，那么钉子并不会黏附在玩家身上，而是会正常地造成伤害（115 基础伤害）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "钉枪有1/25 (4%)/49/625 (7.84%)的几率掉落自日食事件中的钉头。掉落时，钉枪总会与 100 至 200 枚钉子一同掉落。额外的钉子可在玩家物品栏中存在钉枪时从商人和军火商处以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是恶魔，由于它没有任何击退，因此无法得到影响击退的修饰语。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  },
+  "雪球": {
+    "name": "雪球",
+    "image": "Snowball.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "8 (电脑版、主机版、和移动版) / 4 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "5.75 (电脑版、主机版、和移动版)4.5 (普通击退力) (前代主机版、和3DS版)",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "19",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "7",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "碰撞",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "雪块",
+          "image": "Snow_Block.png"
+        }
+      ],
+      "result": {
+        "name": "雪球",
+        "image": "Snowball.png",
+        "amount": "15"
+      }
+    },
+    "en_name": "Snowball",
+    "drops": null,
+    "description": "雪球是一种消耗性远程武器，可用雪块制作。雪球也可以用作雪球炮和(前代主机版、和3DS版)雪球发射器的弹药。",
+    "item_category": "ammo"
+  },
+  "麦芽酒": {
+    "name": "麦芽酒",
+    "image": "Ale.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "近战属性小幅提升、防御降低“干杯！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "1 SC (电脑版、主机版、和移动版)",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 20 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "酒桶",
+      "ingredients": [
+        {
+          "name": "玻璃杯",
+          "image": "Mug.png"
+        }
+      ],
+      "result": {
+        "name": "麦芽酒",
+        "image": "Ale.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Ale",
+    "description": "麦芽酒是一种药水，可以给予玩家 2 分钟的踉跄减益，提升近战伤害但会降低玩家的防御。它可以在酒桶制作，或以每个1 SC的价格从酒馆老板(电脑版、主机版、和移动版)处购买。\n\n踉跄减益有以下效果：此内容转载自踉跄。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "麦芽酒是一种药水，可以给予玩家 2 分钟的踉跄减益，提升近战伤害但会降低玩家的防御。它可以在酒桶制作，或以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格从酒馆老板(电脑版、主机版、和移动版)处购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "踉跄减益有以下效果：此内容转载自踉跄。"
+        }
+      ]
+    ],
+    "item_category": "ammo"
+  }
+}

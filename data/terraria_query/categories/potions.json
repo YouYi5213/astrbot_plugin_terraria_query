@@ -1,0 +1,6774 @@
+{
+  "丛林果汁": {
+    "name": "丛林果汁",
+    "image": "Jungle_Juice.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复生命值",
+        "value": "180",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“一种带有生命果和肉豆蔻香气的热带混合饮品”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#cc88ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "强效治疗药水",
+          "image": "Greater_Healing_Potion.png",
+          "amount": "3"
+        },
+        {
+          "name": "生命果",
+          "image": "Life_Fruit.png"
+        }
+      ],
+      "result": {
+        "name": "丛林果汁",
+        "image": "Jungle_Juice.png",
+        "amount": "3"
+      }
+    },
+    "en_name": "Jungle Juice",
+    "drops": null,
+    "description": "丛林果汁是一种困难模式的回复药水，使用后能够恢复 180生命并造成 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。\n\n它是第三级别和第四级别之间的治疗药水，优于强效治疗药水，次于超级治疗药水。",
+    "item_category": "potions"
+  },
+  "发光蘑菇": {
+    "name": "发光蘑菇",
+    "image": "Glowing_Mushroom.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "10",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "蘑菇平台",
+          "image": "Mushroom_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "发光蘑菇",
+        "image": "Glowing_Mushroom.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Glowing Mushroom",
+    "description": "发光蘑菇是一种植物、制作材料、和物块，可以在发光蘑菇生物群系的蘑菇草上找到。发光蘑菇植物会发出蓝光。\n\n发光蘑菇物品不会被放置为植物，而是会被放置为实心块。发光蘑菇物品可以通过摧毁发光蘑菇植物、砍倒巨型发光蘑菇、和摧毁蘑菇藤蔓和香蒲获得。如此做还会获得蘑菇草种子。",
+    "item_category": "potions"
+  },
+  "回忆药水": {
+    "name": "回忆药水",
+    "image": "Recall_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "30",
+        "extra": "（普通速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "将你传送回家",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "2 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 20 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png"
+        },
+        {
+          "name": "镜面鱼",
+          "image": "Specular_Fish.png"
+        },
+        {
+          "name": "太阳花",
+          "image": "Daybloom.png"
+        }
+      ],
+      "result": {
+        "name": "回忆药水",
+        "image": "Recall_Potion.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–5",
+              "chance": "2/3 (66.67%)"
+            },
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "1–2",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "2–4",
+              "chance": "2/3 (66.67%) （地下）\n1/2 (50%) （洞穴）"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–5",
+              "chance": "2/3 (66.67%)"
+            },
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "1–2",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "2–4",
+              "chance": "2/3 (66.67%) （地下）\n1/2 (50%) （洞穴）"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–5",
+              "chance": "2/3 (66.67%)"
+            },
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "1–2",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "2–4",
+              "chance": "2/3 (66.67%) （地下）\n1/2 (50%) （洞穴）"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "1",
+              "chance": "0.27%"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Recall Potion",
+    "description": "回忆药水是一种药水，使用时可以将玩家传送至生成点。它和魔镜或冰雪镜的作用相同，但使用时间比它们快很多。\n\n除了制作之外，回忆药水还可在罐子和宝箱中找到，并有小几率作为史莱姆的额外掉落出现。",
+    "item_category": "potions"
+  },
+  "弱效治疗药水": {
+    "name": "弱效治疗药水",
+    "image": "Lesser_Healing_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复生命值",
+        "value": "50",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "3 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "60",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "蘑菇",
+          "image": "Mushroom.png"
+        },
+        {
+          "name": "凝胶",
+          "image": "Gel.png",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "弱效治疗药水",
+        "image": "Lesser_Healing_Potion.png",
+        "amount": "2"
+      }
+    },
+    "en_name": "Lesser Healing Potion",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "世界吞噬怪",
+              "image": "Eater_of_Worlds.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "克苏鲁之眼",
+              "image": "Eye_of_Cthulhu_(Phase_1).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "克苏鲁之脑",
+              "image": "Brain_of_Cthulhu_(First_Phase).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆王",
+              "image": "King_Slime.gif",
+              "quantity": "5-15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%) （地下）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "世界吞噬怪",
+              "image": "Eater_of_Worlds.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "克苏鲁之眼",
+              "image": "Eye_of_Cthulhu_(Phase_1).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "克苏鲁之脑",
+              "image": "Brain_of_Cthulhu_(First_Phase).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆王",
+              "image": "King_Slime.gif",
+              "quantity": "5-15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%) （地下）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "世界吞噬怪",
+              "image": "Eater_of_Worlds.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "克苏鲁之眼",
+              "image": "Eye_of_Cthulhu_(Phase_1).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "克苏鲁之脑",
+              "image": "Brain_of_Cthulhu_(First_Phase).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆王",
+              "image": "King_Slime.gif",
+              "quantity": "5-15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%) （地下）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "弱效治疗药水是一种药水制作材料。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "弱效治疗药水是一种药水制作材料。"
+        }
+      ]
+    ],
+    "item_category": "potions"
+  },
+  "弱效魔力药水": {
+    "name": "弱效魔力药水",
+    "image": "Lesser_Mana_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复魔力值",
+        "value": "50",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "1 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "重型装配台",
+      "ingredients": [
+        {
+          "name": "弱效魔力药水",
+          "image": "Lesser_Mana_Potion.png"
+        }
+      ],
+      "result": {
+        "name": "装饰魔力药水",
+        "image": "Decorative_Mana_Potion.png"
+      }
+    },
+    "en_name": "Lesser Mana Potion",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/6 (16.67%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "弱效魔力药水是一种药水制作材料。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "弱效魔力药水是一种药水制作材料。"
+        }
+      ]
+    ],
+    "item_category": "potions"
+  },
+  "强效治疗药水": {
+    "name": "强效治疗药水",
+    "image": "Greater_Healing_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复生命值",
+        "value": "150",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png",
+          "amount": "3"
+        },
+        {
+          "name": "妖精尘",
+          "image": "Pixie_Dust.png",
+          "amount": "3"
+        },
+        {
+          "name": "水晶碎块",
+          "image": "Crystal_Shard.png"
+        }
+      ],
+      "result": {
+        "name": "强效治疗药水",
+        "image": "Greater_Healing_Potion.png",
+        "amount": "3"
+      }
+    },
+    "en_name": "Greater Healing Potion",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "世纪之花",
+              "image": "Plantera.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "光之女皇",
+              "image": "Empress_of_Light.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "双子魔眼",
+              "image": "The_Twins.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆皇后",
+              "image": "Queen_Slime.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Crimson_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Corrupt_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "拜月教邪教徒",
+              "image": "Lunatic_Cultist.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "机械骷髅王",
+              "image": "Skeletron_Prime.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "毁灭者",
+              "image": "The_Destroyer.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.png",
+              "quantity": "5-15",
+              "chance": "100%"
+            },
+            {
+              "name": "猪龙鱼公爵",
+              "image": "Duke_Fishron_(First_Form).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "石巨人",
+              "image": "Golem.png",
+              "quantity": "5-15",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "世纪之花",
+              "image": "Plantera.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "光之女皇",
+              "image": "Empress_of_Light.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "双子魔眼",
+              "image": "The_Twins.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆皇后",
+              "image": "Queen_Slime.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Crimson_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Corrupt_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "拜月教邪教徒",
+              "image": "Lunatic_Cultist.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "机械骷髅王",
+              "image": "Skeletron_Prime.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "毁灭者",
+              "image": "The_Destroyer.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.png",
+              "quantity": "5-15",
+              "chance": "100%"
+            },
+            {
+              "name": "猪龙鱼公爵",
+              "image": "Duke_Fishron_(First_Form).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "石巨人",
+              "image": "Golem.png",
+              "quantity": "5-15",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "世纪之花",
+              "image": "Plantera.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "光之女皇",
+              "image": "Empress_of_Light.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "双子魔眼",
+              "image": "The_Twins.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "史莱姆皇后",
+              "image": "Queen_Slime.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Crimson_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Corrupt_Mimic2.png",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "拜月教邪教徒",
+              "image": "Lunatic_Cultist.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "机械骷髅王",
+              "image": "Skeletron_Prime.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "毁灭者",
+              "image": "The_Destroyer.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.png",
+              "quantity": "5-15",
+              "chance": "100%"
+            },
+            {
+              "name": "猪龙鱼公爵",
+              "image": "Duke_Fishron_(First_Form).gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "石巨人",
+              "image": "Golem.png",
+              "quantity": "5-15",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "强效治疗药水是一种困难模式的回复药水，使用后能够恢复 150生命并造成 60 秒的耐药性减益。此持续时间可以通过点金石或神话护身符来缩短。\n\n强效治疗药水可以被制作，或从困难模式Boss、生物群系宝箱怪以及火星飞碟处获得。\n\n它是第三级别的治疗药水，优于弱效治疗药水和治疗药水，次于丛林果汁和超级治疗药水。",
+    "item_category": "potions"
+  },
+  "强效魔力药水": {
+    "name": "强效魔力药水",
+    "image": "Greater_Mana_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复魔力值",
+        "value": "200",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "买入",
+        "value": "5 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "强效魔力药水",
+          "image": "Greater_Mana_Potion.png",
+          "amount": "15"
+        },
+        {
+          "name": "坠落之星",
+          "image": "Fallen_Star.png"
+        },
+        {
+          "name": "水晶碎块",
+          "image": "Crystal_Shard.png",
+          "amount": "3"
+        },
+        {
+          "name": "独角兽角",
+          "image": "Unicorn_Horn.png"
+        }
+      ],
+      "result": {
+        "name": "超级魔力药水",
+        "image": "Super_Mana_Potion.png",
+        "amount": "15"
+      }
+    },
+    "en_name": "Greater Mana Potion",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Crimson_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Corrupt_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Crimson_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Corrupt_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Crimson_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱怪",
+              "image": "Corrupt_Mimic2.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "强效魔力药水是一种药水制作材料。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "强效魔力药水是一种药水制作材料。"
+        }
+      ]
+    ],
+    "item_category": "potions"
+  },
+  "恢复药水": {
+    "name": "恢复药水",
+    "image": "Restoration_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复生命值",
+        "value": "90",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "缩短药水冷却时间",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "3",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "蘑菇",
+          "image": "Mushroom.png"
+        },
+        {
+          "name": "发光蘑菇",
+          "image": "Glowing_Mushroom.png"
+        },
+        {
+          "name": "粉凝胶",
+          "image": "Pink_Gel.png"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "恢复药水",
+        "image": "Restoration_Potion.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "15–20",
+              "chance": "1/2 (50%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "15–20",
+              "chance": "1/2 (50%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "15–20",
+              "chance": "1/2 (50%)"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Restoration Potion",
+    "description": "恢复药水是一种回复药水，使用后恢复 90生命并造成 45 秒耐药性（而非一般生命恢复药水的 60 秒）。该持续时间可以通过点金石或神话护身符进一步缩短到 33.75 秒。\n\n除了制作之外，恢复药水还可在地狱中的暗影箱内找到。\n\n虽然其外观看着像，但它并非通过升级弱效恢复药水得到。",
+    "item_category": "potions"
+  },
+  "接骨木果": {
+    "name": "接骨木果",
+    "image": "Elderberry.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升“闻起来像你爸爸”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "黑醋栗",
+          "image": "Blackcurrant.png"
+        },
+        {
+          "name": "接骨木果",
+          "image": "Elderberry.png"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "暗黑奶昔",
+        "image": "Smoothie_of_Darkness.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Elderberry",
+    "description": "接骨木果是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃乌木树或乌木棕榈树时它有小几率掉落。\n\n和所有其他食物物品一样，接骨木果可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "李子": {
+    "name": "李子",
+    "image": "Plum.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Plum",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "李子是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃针叶树时它有小几率掉落。\n\n和所有其他食物物品一样，李子可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "杏": {
+    "name": "杏",
+    "image": "Apricot.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升“你会喜欢的！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Apricot",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "杏是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃森林树时它有小几率掉落。\n\n和所有其他食物物品一样，杏可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "杨桃": {
+    "name": "杨桃",
+    "image": "Star_Fruit.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性中幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "杨桃",
+          "image": "Star_Fruit.png"
+        },
+        {
+          "name": "火龙果",
+          "image": "Dragon_Fruit.png"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "七彩潘趣酒",
+        "image": "Prismatic_Punch.png"
+      }
+    },
+    "en_name": "Star Fruit",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7025%（白天）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7634%（万圣节）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7878%（夜晚）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.6285%"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5248%（万圣节）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.1598%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7025%（白天）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7634%（万圣节）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7878%（夜晚）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.6285%"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5248%（万圣节）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.1598%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7025%（白天）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7634%（万圣节）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7878%（夜晚）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.6285%"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5248%（万圣节）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.1598%（海洋）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "杨桃是一种困难模式的水果类食物物品，食用后给予很满意增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃珍珠木树或珍珠木棕榈树时，它有小几率掉落。\n\n和所有其他食物物品一样，杨桃可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "柠檬": {
+    "name": "柠檬",
+    "image": "Lemon.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升“当生活给了你柠檬……”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Lemon",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "柠檬是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃森林树时它有小几率掉落。\n\n和所有其他食物物品一样，柠檬可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "桃子": {
+    "name": "桃子",
+    "image": "Peach.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Peach",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "桃子是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃森林树时它有小几率掉落。\n\n和所有其他食物物品一样，桃子可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "棉花糖": {
+    "name": "棉花糖",
+    "image": "Marshmallow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "把它放在棍子上，然后放到篝火上烤所有属性小幅提升“你一口能吃下多少？”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "1 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "棉花糖",
+          "image": "Marshmallow.png"
+        },
+        {
+          "name": "任何木材",
+          "image": "Any_Wood.gif"
+        }
+      ],
+      "result": {
+        "name": "棒棒棉花糖",
+        "image": "Marshmallow_on_a_Stick.png"
+      }
+    },
+    "en_name": "Marshmallow",
+    "drops": null,
+    "description": "棉花糖是一种食物物品，食用后给予吃得好增益。这会持续 1 分钟，但任何时候都可以通过右键点击图标（电脑版）、通过轮转上一个/下一个增益选择图标然后按下取消增益（主机版）、或通过双击增益图标（移动版）来取消。商人在雪原生物群系中时，与其对话可以每个1 SC的价格购买棉花糖。\n\n棉花糖也是一种制作材料，用于制作棒棒棉花糖。后者可在篝火处制作成熟棉花糖，从而大幅延长增益持续时间。\n\n和所有其他食物物品一样，棉花糖可以放在盘子里：Marshmallow (on Plate).png",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "棉花糖是一种食物物品，食用后给予吃得好增益。这会持续 1 分钟，但任何时候都可以通过右键点击图标（"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "）、通过轮转上一个/下一个增益选择图标然后按下取消增益（"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "）、或通过双击增益图标（"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "）来取消。商人在雪原生物群系中时，与其对话可以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买棉花糖。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "棉花糖也是一种制作材料，用于制作棒棒棉花糖。后者可在篝火处制作成熟棉花糖，从而大幅延长增益持续时间。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "和所有其他食物物品一样，棉花糖可以放在盘子里："
+        },
+        {
+          "type": "icon",
+          "image": "Marshmallow_(on_Plate).png",
+          "alt": "Marshmallow (on Plate).png"
+        }
+      ]
+    ],
+    "item_category": "potions"
+  },
+  "椰子": {
+    "name": "椰子",
+    "image": "Coconut.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升“你是说椰子会迁徙吗？”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Coconut",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "棕榈树",
+              "image": "31px-Treetop_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "棕榈树",
+              "image": "31px-Treetop_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "棕榈树",
+              "image": "31px-Treetop_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "椰子是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n在海洋生物群系中摇棕榈树或其腐化、猩红、或神圣变体种类时有小几率掉落它。\n\n和所有其他食物物品一样，椰子可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "樱桃": {
+    "name": "樱桃",
+    "image": "Cherry.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Cherry",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "针叶树",
+              "image": "29px-Treetop_Boreal_Alt1_2.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "樱桃是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃针叶树时它有小几率掉落。\n\n和所有其他食物物品一样，樱桃可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "治疗药水": {
+    "name": "治疗药水",
+    "image": "Healing_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "恢复生命值",
+        "value": "100",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "买入",
+        "value": "10 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "2 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "弱效治疗药水",
+          "image": "Lesser_Healing_Potion.png"
+        },
+        {
+          "name": "发光蘑菇",
+          "image": "Glowing_Mushroom.png"
+        }
+      ],
+      "result": {
+        "name": "治疗药水",
+        "image": "Healing_Potion.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "冰冻匣",
+              "image": "Frozen_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "围栏匣",
+              "image": "Stockade_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "地牢匣",
+              "image": "Dungeon_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天赐匣",
+              "image": "Divine_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "污损匣",
+              "image": "Defiled_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海洋匣",
+              "image": "Ocean_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海边匣",
+              "image": "Seaside_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "独眼巨鹿",
+              "image": "Deerclops.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "猩红匣",
+              "image": "Crimson_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "神圣匣",
+              "image": "Hallowed_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "腐化匣",
+              "image": "Corrupt_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血匣",
+              "image": "Hematic_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血肉墙",
+              "image": "Wall_of_Flesh_Mouth.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "金匣",
+              "image": "Golden_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%) （洞穴）"
+            },
+            {
+              "name": "针叶木匣",
+              "image": "Boreal_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "钛金匣",
+              "image": "Titanium_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "骷髅王",
+              "image": "Skeletron_Head.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "冰冻匣",
+              "image": "Frozen_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "围栏匣",
+              "image": "Stockade_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "地牢匣",
+              "image": "Dungeon_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天赐匣",
+              "image": "Divine_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "污损匣",
+              "image": "Defiled_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海洋匣",
+              "image": "Ocean_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海边匣",
+              "image": "Seaside_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "独眼巨鹿",
+              "image": "Deerclops.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "猩红匣",
+              "image": "Crimson_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "神圣匣",
+              "image": "Hallowed_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "腐化匣",
+              "image": "Corrupt_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血匣",
+              "image": "Hematic_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血肉墙",
+              "image": "Wall_of_Flesh_Mouth.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "金匣",
+              "image": "Golden_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%) （洞穴）"
+            },
+            {
+              "name": "针叶木匣",
+              "image": "Boreal_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "钛金匣",
+              "image": "Titanium_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "骷髅王",
+              "image": "Skeletron_Head.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "冰冻匣",
+              "image": "Frozen_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "围栏匣",
+              "image": "Stockade_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "地牢匣",
+              "image": "Dungeon_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天赐匣",
+              "image": "Divine_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "污损匣",
+              "image": "Defiled_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海洋匣",
+              "image": "Ocean_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海边匣",
+              "image": "Seaside_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "独眼巨鹿",
+              "image": "Deerclops.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "猩红匣",
+              "image": "Crimson_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "神圣匣",
+              "image": "Hallowed_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "腐化匣",
+              "image": "Corrupt_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血匣",
+              "image": "Hematic_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血肉墙",
+              "image": "Wall_of_Flesh_Mouth.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "金匣",
+              "image": "Golden_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "3–5",
+              "chance": "1/2 (50%) （洞穴）"
+            },
+            {
+              "name": "针叶木匣",
+              "image": "Boreal_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "钛金匣",
+              "image": "Titanium_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "骷髅王",
+              "image": "Skeletron_Head.png",
+              "quantity": "5–15",
+              "chance": "100%"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Healing Potion",
+    "description": "治疗药水是一种困难模式之前的回复药水，使用时能恢复 100生命值并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。\n\n除了制作得到之外，治疗药水可以天然存在于困难模式激活后的罐子、和困难模式之前地狱内的罐子中。独眼巨鹿、骷髅王、和血肉墙也会掉落治疗药水。困难模式中，商人和骷髅商人亦有出售，价格为10 SC。\n\n它是第二级的治疗药水，在它之前是弱效治疗药水，之后是强效治疗药水和超级治疗药水。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "治疗药水是一种困难模式之前的回复药水，使用时能恢复 100生命值并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "除了制作得到之外，治疗药水可以天然存在于困难模式激活后的罐子、和困难模式之前地狱内的罐子中。独眼巨鹿、骷髅王、和血肉墙也会掉落治疗药水。困难模式中，商人和骷髅商人亦有出售，价格为"
+        },
+        {
+          "type": "coin",
+          "amount": "10",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它是第二级的治疗药水，在它之前是弱效治疗药水，之后是强效治疗药水和超级治疗药水。"
+        }
+      ]
+    ],
+    "item_category": "potions"
+  },
+  "火龙果": {
+    "name": "火龙果",
+    "image": "Dragon_Fruit.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性中幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "杨桃",
+          "image": "Star_Fruit.png"
+        },
+        {
+          "name": "火龙果",
+          "image": "Dragon_Fruit.png"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "七彩潘趣酒",
+        "image": "Prismatic_Punch.png"
+      }
+    },
+    "en_name": "Dragon Fruit",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7025%（白天）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7634%（万圣节）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7878%（夜晚）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.6285%"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5248%（万圣节）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.1598%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7025%（白天）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7634%（万圣节）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7878%（夜晚）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.6285%"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5248%（万圣节）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.1598%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7025%（白天）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7634%（万圣节）"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "17px-Treetop_Hallowed_1.png",
+              "quantity": "1",
+              "chance": "2.7878%（夜晚）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.6285%"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5248%（万圣节）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.1598%（海洋）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "火龙果是一种困难模式的水果类食物物品，食用后给予很满意增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃珍珠木树或珍珠木棕榈树时，它有小几率掉落。\n\n和所有其他食物物品一样，火龙果可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "瓶装水": {
+    "name": "瓶装水",
+    "image": "Bottled_Water.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "恢复生命值",
+        "value": "30",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "4 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水或水槽(电脑版、主机版、和移动版)或喷泉",
+      "ingredients": [
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "瓶装水",
+        "image": "Bottled_Water.png"
+      }
+    },
+    "en_name": "Bottled Water",
+    "drops": null,
+    "description": "瓶装水是一种困难模式之前的回复药水和制作材料。它可以在水槽处或水体处制作。瓶装水是游戏中几乎所有可制作药水的基础材料，同时也是制作药剂的必备物品。\n\n使用时，它能恢复 30生命值并造成持续 45 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。",
+    "item_category": "potions"
+  },
+  "瓶装蜂蜜": {
+    "name": "瓶装蜂蜜",
+    "image": "Bottled_Honey.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "恢复生命值",
+        "value": "80",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "短时间内提高自然恢复",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "8 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "蜂蜜",
+      "ingredients": [
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "瓶装蜂蜜",
+        "image": "Bottled_Honey.png"
+      }
+    },
+    "en_name": "Bottled Honey",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "蜂王",
+              "image": "Queen_Bee.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "蜂王",
+              "image": "Queen_Bee.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "蜂王",
+              "image": "Queen_Bee.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "瓶装蜂蜜是一种困难模式之前的回复药水和制作材料。使用后，它会恢复 80生命并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。它还会给予玩家蜂蜜增益，持续 15 秒。除了可以制作得到之外，瓶装蜂蜜也掉落自出现在地下丛林中的蜂巢内的蜂王。",
+    "item_category": "potions"
+  },
+  "石榴": {
+    "name": "石榴",
+    "image": "Pomegranate.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Pomegranate",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "2.9546%（地狱）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "2.9546%（地狱）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "2.9546%（地狱）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "石榴是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n在摇晃灰烬树时它有小几率掉落。\n\n和所有其他食物物品一样，石榴可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "红毛丹": {
+    "name": "红毛丹",
+    "image": "Rambutan.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Rambutan",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "红毛丹是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃暗影木树或暗影木棕榈树时它有小几率掉落。\n\n和所有其他食物物品一样，红毛丹可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "芒果": {
+    "name": "芒果",
+    "image": "Mango.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Mango",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3466%（白天）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3173%（万圣节）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3011%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3466%（白天）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3173%（万圣节）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3011%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3466%（白天）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3173%（万圣节）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3011%（夜晚）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "芒果是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃红木树时它有小几率掉落。\n\n和所有其他食物物品一样，芒果可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "苹果": {
+    "name": "苹果",
+    "image": "Apple.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升“一天一苹果，骷髅博士远离我！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Apple",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "苹果是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃森林树时它有小几率掉落。\n\n和所有其他食物物品一样，苹果可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "菠萝": {
+    "name": "菠萝",
+    "image": "Pineapple.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升“搭配披萨很好吃”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3466%（白天）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3173%（万圣节）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3011%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3466%（白天）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3173%（万圣节）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3011%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3466%（白天）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3173%（万圣节）"
+            },
+            {
+              "name": "红木树",
+              "image": "35px-Treetop_Jungle_1.png",
+              "quantity": "1",
+              "chance": "3.3011%（夜晚）"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Pineapple",
+    "description": "菠萝是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃红木树时它有小几率掉落。\n\n和所有其他食物物品一样，菠萝可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "葡萄": {
+    "name": "葡萄",
+    "image": "Grapes.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性中幅提升“不包括怒气。”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "03*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "40 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "葡萄",
+          "image": "Grapes.png"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "葡萄汁",
+        "image": "Grape_Juice.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "巨型飞狐",
+              "image": "Giant_Flying_Fox.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            },
+            {
+              "name": "跳跳兽",
+              "image": "Derpling.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "巨型飞狐",
+              "image": "Giant_Flying_Fox.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            },
+            {
+              "name": "跳跳兽",
+              "image": "Derpling.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "巨型飞狐",
+              "image": "Giant_Flying_Fox.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            },
+            {
+              "name": "跳跳兽",
+              "image": "Derpling.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Grapes",
+    "description": "葡萄是一种困难模式的食物物品，食用后给予很满意增益。这会持续 16 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n它有1/40 (2.5%)的几率掉落自跳跳兽和巨型飞狐。\n\n和所有其他食物物品一样，葡萄可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "葡萄柚": {
+    "name": "葡萄柚",
+    "image": "Grapefruit.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0727%（白天）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.0695%（万圣节）"
+            },
+            {
+              "name": "森林树",
+              "image": "30px-Treetop_Forest_1.png",
+              "quantity": "1",
+              "chance": "1.1066%（夜晚）"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Grapefruit",
+    "description": "葡萄柚是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃森林树时它有小几率掉落。\n\n和所有其他食物物品一样，葡萄柚可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "蘑菇": {
+    "name": "蘑菇",
+    "image": "Mushroom.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "恢复生命值",
+        "value": "15",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "2 SC50 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "任何木材",
+          "image": "Any_Wood.gif"
+        },
+        {
+          "name": "蘑菇",
+          "image": "Mushroom.png"
+        }
+      ],
+      "result": {
+        "name": "仙灵木",
+        "image": "Feywood.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Mushroom",
+    "description": "蘑菇是种困难模式之前的制作材料和治疗物品，在位于地表的草或神圣草上随机生成，通常在森林中。可以用任意工具或武器来收取此物品。\n\n蘑菇使用时能恢复 15生命值并造成持续 30 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。\n\n在The Constant世界中，如果玩家饥饿，食用蘑菇也会将饥饿度重置为 5 分钟的稍饿。",
+    "item_category": "potions"
+  },
+  "虫洞药水": {
+    "name": "虫洞药水",
+    "image": "Wormhole_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "工具提示",
+        "value": "将你传送至队友处在全屏地图上点击他们的头像",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 20 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png",
+          "amount": "3"
+        },
+        {
+          "name": "镜面鱼",
+          "image": "Specular_Fish.png"
+        },
+        {
+          "name": "闪耀根",
+          "image": "Blinkroot.png"
+        }
+      ],
+      "result": {
+        "name": "虫洞药水",
+        "image": "Wormhole_Potion.png",
+        "amount": "3"
+      }
+    },
+    "drops": null,
+    "en_name": "Wormhole Potion",
+    "description": "虫洞药水是一种药水，玩家在多人模式中使用后能直接传送至其他队友所在位置，只需在全屏地图（按切换完整地图键可进入）上选择对应玩家图标即可。它只能传送玩家至同团队队友处，并且传送会以状态讯息来宣告。如果玩家禁用了小地图则无法使用虫洞药水。\n\n除了制作之外，虫洞药水还可在罐子中找到，并有小几率作为史莱姆的额外掉落出现，但仅限于多人模式中。虫洞药水的掉落并不要求其他玩家在线，所以只需要选择多人模式并作为主机开始游戏即可。虫洞药水也可以在单人模式世界中制作。",
+    "item_category": "potions"
+  },
+  "蛋酒": {
+    "name": "蛋酒",
+    "image": "Eggnog.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复生命值",
+        "value": "80",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "1–3",
+              "chance": "8.1%7.56% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "1–3",
+              "chance": "8.1%7.56% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "1–3",
+              "chance": "8.1%7.56% （困难模式）"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Eggnog",
+    "description": "蛋酒是一种困难模式之前的回复药水，使用后能恢复 80生命值并造成持续 40 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。蛋酒由圣诞节季节性事件期间得到的礼物里开出，几率在困难模式之前为 8.101% ，在困难模式中为 7.561% 。",
+    "item_category": "potions"
+  },
+  "蜂蜜鱼": {
+    "name": "蜂蜜鱼",
+    "image": "Honeyfin.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复生命值",
+        "value": "120",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "15",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "蜂蜜鱼",
+          "image": "Honeyfin.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "海鲜大餐",
+        "image": "Seafood_Dinner.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Honeyfin",
+    "description": "蜂蜜鱼是一种困难模式之前的鱼和回复药水，使用时能恢复 120生命值并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。它也可以用于制作海鲜大餐。\n\n蜂蜜鱼仅能从蜂蜜中钓得，例如在地下丛林的蜂巢内。除了在渔夫任务期间能钓到的大黄蜂金枪鱼外，蜂蜜鱼是唯一一种能在蜂蜜中钓到的鱼。",
+    "item_category": "potions"
+  },
+  "血橙": {
+    "name": "血橙",
+    "image": "Blood_Orange.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升“吸血鬼的素食之选”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木树",
+              "image": "30px-Treetop_Crimson_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "血橙是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃暗影木树或暗影木棕榈树时它有小几率掉落。\n\n和所有其他食物物品一样，血橙可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "诡药": {
+    "name": "诡药",
+    "image": "Strange_Brew.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复生命值",
+        "value": "70–120",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "副作用可能包括：-不可预测的治疗-不确定的耐药性-短暂且莫名其妙的伤害免疫“难看且难闻”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "5 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Strange Brew",
+    "drops": null,
+    "description": "诡药是一种困难模式之前的回复药水，使用时能恢复 70–120生命，造成 40–70 秒的耐药性，并且有3/5 (60%)几率提供最多 4 秒的无敌时间。耐药性的持续时间可以通过点金石或神话护身符来缩短。\n\n诡药可在特定月相期间从骷髅商人处以每个5 SC的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "诡药是一种困难模式之前的回复药水，使用时能恢复 70–120生命，造成 40–70 秒的耐药性，并且有3/5 (60%)几率提供最多 4 秒的无敌时间。耐药性的持续时间可以通过点金石或神话护身符来缩短。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "诡药可在特定月相期间从骷髅商人处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ]
+    ],
+    "item_category": "potions"
+  },
+  "超级治疗药水": {
+    "name": "超级治疗药水",
+    "image": "Super_Healing_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "恢复生命值",
+        "value": "200",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "浅紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#cc88ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "30",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "强效治疗药水",
+          "image": "Greater_Healing_Potion.png",
+          "amount": "4"
+        },
+        {
+          "name": "星云碎片",
+          "image": "Nebula_Fragment.png"
+        },
+        {
+          "name": "日耀碎片",
+          "image": "Solar_Fragment.png"
+        },
+        {
+          "name": "星尘碎片",
+          "image": "Stardust_Fragment.png"
+        },
+        {
+          "name": "星旋碎片",
+          "image": "Vortex_Fragment.png"
+        }
+      ],
+      "result": {
+        "name": "超级治疗药水",
+        "image": "Super_Healing_Potion.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Super Healing Potion",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "月亮领主",
+              "image": "Moon_Lord's_Head.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "月亮领主",
+              "image": "Moon_Lord's_Head.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "月亮领主",
+              "image": "Moon_Lord's_Head.gif",
+              "quantity": "5–15",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "超级治疗药水是一种回复药水，使用时能恢复 200生命值并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。\n\n它的制作花费相当高昂，是游戏里最高级别的治疗药水。它也总是会掉落自月亮领主。\n\n它是第四级别及最终级别的治疗药水，优于弱效治疗药水、治疗药水、和强效治疗药水。",
+    "item_category": "potions"
+  },
+  "辣椒": {
+    "name": "辣椒",
+    "image": "Spicy_Pepper.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif",
+          "amount": "2"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "果汁",
+        "image": "Fruit_Juice.png"
+      }
+    },
+    "en_name": "Spicy Pepper",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "2.9546%（地狱）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "2.9546%（地狱）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.1101%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "3.0213%（万圣节）"
+            },
+            {
+              "name": "灰烬树",
+              "image": "35px-Treetop_Ash_1.png",
+              "quantity": "1",
+              "chance": "2.9546%（地狱）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "辣椒是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n在摇晃灰烬树时有小几率掉落它。\n\n和所有其他食物物品一样，辣椒可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "香蕉": {
+    "name": "香蕉",
+    "image": "Banana.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升“优质钾源！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "香蕉",
+          "image": "Banana.png"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        },
+        {
+          "name": "雪块",
+          "image": "Snow_Block.png"
+        }
+      ],
+      "result": {
+        "name": "冰冻香蕉代基里",
+        "image": "Frozen_Banana_Daiquiri.png"
+      }
+    },
+    "en_name": "Banana",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "棕榈树",
+              "image": "31px-Treetop_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "棕榈树",
+              "image": "31px-Treetop_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "暗影木棕榈树",
+              "image": "31px-Treetop_Crimson_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.3321%（海洋）"
+            },
+            {
+              "name": "棕榈树",
+              "image": "31px-Treetop_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            },
+            {
+              "name": "珍珠木棕榈树",
+              "image": "30px-Treetop_Hallowed_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.447%（海洋）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "香蕉是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n在海洋生物群系中摇晃棕榈树及其腐化、猩红、和神圣变种时，它有小几率掉落。\n\n和所有其他食物物品一样，香蕉可以放在盘子里：",
+    "item_category": "potions"
+  },
+  "魔力药水": {
+    "name": "魔力药水",
+    "image": "Mana_Potion.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "恢复魔力值",
+        "value": "100",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "买入",
+        "value": "2 SC50 CC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "50 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 30 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "弱效魔力药水",
+          "image": "Lesser_Mana_Potion.png"
+        },
+        {
+          "name": "发光蘑菇",
+          "image": "Glowing_Mushroom.png"
+        }
+      ],
+      "result": {
+        "name": "魔力药水",
+        "image": "Mana_Potion.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "冰冻匣",
+              "image": "Frozen_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "围栏匣",
+              "image": "Stockade_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "地牢匣",
+              "image": "Dungeon_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天赐匣",
+              "image": "Divine_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "污损匣",
+              "image": "Defiled_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海洋匣",
+              "image": "Ocean_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海边匣",
+              "image": "Seaside_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "猩红匣",
+              "image": "Crimson_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "神圣匣",
+              "image": "Hallowed_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "腐化匣",
+              "image": "Corrupt_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血匣",
+              "image": "Hematic_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金匣",
+              "image": "Golden_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "针叶木匣",
+              "image": "Boreal_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "钛金匣",
+              "image": "Titanium_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "冰冻匣",
+              "image": "Frozen_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "围栏匣",
+              "image": "Stockade_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "地牢匣",
+              "image": "Dungeon_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天赐匣",
+              "image": "Divine_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "污损匣",
+              "image": "Defiled_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海洋匣",
+              "image": "Ocean_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海边匣",
+              "image": "Seaside_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "猩红匣",
+              "image": "Crimson_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "神圣匣",
+              "image": "Hallowed_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "腐化匣",
+              "image": "Corrupt_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血匣",
+              "image": "Hematic_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金匣",
+              "image": "Golden_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "针叶木匣",
+              "image": "Boreal_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "钛金匣",
+              "image": "Titanium_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "冰冻匣",
+              "image": "Frozen_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "围栏匣",
+              "image": "Stockade_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "地牢匣",
+              "image": "Dungeon_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "天赐匣",
+              "image": "Divine_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "污损匣",
+              "image": "Defiled_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海洋匣",
+              "image": "Ocean_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "海边匣",
+              "image": "Seaside_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "猩红匣",
+              "image": "Crimson_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "神圣匣",
+              "image": "Hallowed_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "腐化匣",
+              "image": "Corrupt_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "血匣",
+              "image": "Hematic_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金匣",
+              "image": "Golden_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "针叶木匣",
+              "image": "Boreal_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "钛金匣",
+              "image": "Titanium_Crate.png",
+              "quantity": "5–20",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "5–15",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "5–17",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Mana Potion",
+    "description": "魔力药水是一种回复药水，使用时恢复 100 点魔力并造成耐魔性减益。它可以被制作，偶尔也能从除了木匣和珍珠木匣的任何宝匣中获得。困难模式中，商人亦有出售，价格为2 SC。\n\n它是第二级的魔力药水，在它之前是弱效魔力药水，在它之后是强效魔力药水和超级魔力药水。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "魔力药水是一种回复药水，使用时恢复 100 点魔力并造成耐魔性减益。它可以被制作，偶尔也能从除了木匣和珍珠木匣的任何宝匣中获得。困难模式中，商人亦有出售，价格为"
+        },
+        {
+          "type": "coin",
+          "amount": "2",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它是第二级的魔力药水，在它之前是弱效魔力药水，在它之后是强效魔力药水和超级魔力药水。"
+        }
+      ]
+    ],
+    "item_category": "potions"
+  },
+  "黑醋栗": {
+    "name": "黑醋栗",
+    "image": "Blackcurrant.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "食物药水制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "所有属性小幅提升",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "烹饪锅或大锅",
+      "ingredients": [
+        {
+          "name": "黑醋栗",
+          "image": "Blackcurrant.png"
+        },
+        {
+          "name": "接骨木果",
+          "image": "Elderberry.png"
+        },
+        {
+          "name": "玻璃瓶",
+          "image": "Bottle.png"
+        }
+      ],
+      "result": {
+        "name": "暗黑奶昔",
+        "image": "Smoothie_of_Darkness.png"
+      }
+    },
+    "en_name": "Blackcurrant",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木树",
+              "image": "30px-Treetop_Corrupt_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.5075%"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.4073%（万圣节）"
+            },
+            {
+              "name": "乌木棕榈树",
+              "image": "32px-Treetop_Corrupt_Palm_1.png",
+              "quantity": "1",
+              "chance": "3.0545%（海洋）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "黑醋栗是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃乌木树或乌木棕榈树时它有小几率掉落。\n\n和所有其他食物物品一样，黑醋栗可以放在盘子里：",
+    "item_category": "potions"
+  }
+}

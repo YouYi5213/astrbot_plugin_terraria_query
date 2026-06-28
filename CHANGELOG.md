@@ -6,6 +6,21 @@
 
 ---
 
+## [1.4.9] - 2026-06-27
+
+### 新增
+
+- 物品数据按 Wiki 24 类拆分到 `data/terraria_query/categories/`（含坐骑、宠物，共 24 个 JSON + manifest）
+- 新增 `category_data.py`；CLI：`python prepare_data.py --split-categories`（从旧版根目录 JSON 一次性迁移）
+
+### 变更
+
+- 移除根目录 `items.json` / `mounts.json` / `pets.json`；`prepare_data.py` 直接读写 `categories/`
+- 插件加载时从 `categories/` 合并物品并独立加载坐骑/宠物
+- 扩展 Wiki 分类抓取列表
+
+---
+
 ## [1.4.8] - 2026-06-27
 
 ### 优化

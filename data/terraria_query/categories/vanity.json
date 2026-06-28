@@ -1,0 +1,2352 @@
+{
+  "金冠": {
+    "name": "金冠",
+    "image": "Gold_Crown.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装制作材料",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "金锭",
+          "image": "Gold_Bar.png",
+          "amount": "5"
+        },
+        {
+          "name": "红玉",
+          "image": "Ruby.png"
+        }
+      ],
+      "result": {
+        "name": "金冠",
+        "image": "Gold_Crown.png"
+      }
+    },
+    "en_name": "Gold Crown",
+    "drops": null,
+    "description": "金冠是一种可以戴在社交头盔物品栏栏位中的可制作时装物品。它也是史莱姆王冠的制作材料之一，后者可用来生成史莱姆王。铂金冠是其代用矿石的对应物。",
+    "item_category": "vanity"
+  },
+  "铂金冠": {
+    "name": "铂金冠",
+    "image": "Platinum_Crown.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装制作材料",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "30",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "铂金锭",
+          "image": "Platinum_Bar.png",
+          "amount": "5"
+        },
+        {
+          "name": "红玉",
+          "image": "Ruby.png"
+        }
+      ],
+      "result": {
+        "name": "铂金冠",
+        "image": "Platinum_Crown.png"
+      }
+    },
+    "en_name": "Platinum Crown",
+    "drops": null,
+    "description": "铂金冠是一种可以戴在社交头盔物品栏栏位中的可制作时装物品。它也是史莱姆王冠的制作材料之一，后者可用来生成史莱姆王。\n\n金冠是其代用矿石对应物。",
+    "item_category": "vanity"
+  },
+  "长袍": {
+    "name": "长袍",
+    "image": "Robe.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装制作材料",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "4",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        }
+      ],
+      "result": {
+        "name": "长袍",
+        "image": "Robe.png"
+      }
+    },
+    "drops": null,
+    "description": "长袍是一种装备在上衣栏中的时装物品。它类似于暗黑法师和蒂姆穿的长袍。可以通过宝石对其进行扩充从而成为巫师套装的一部分。",
+    "item_category": "vanity"
+  },
+  "兔兔耳朵": {
+    "name": "兔兔耳朵",
+    "image": "Bunny_Ears.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "兔兔套装",
+    "en_name": "Bunny Ears",
+    "item_category": "vanity"
+  },
+  "兔兔尾巴": {
+    "name": "兔兔尾巴",
+    "image": "Bunny_Tail.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“这就是人们叫我桑普的原因”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "兔兔套装",
+    "en_name": "Bunny Tail",
+    "item_category": "vanity"
+  },
+  "Chicken Bones的面罩": {
+    "name": "Chicken Bones的面罩",
+    "image": "Chicken_Bones'_Visor.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Chicken Bones的套装",
+    "en_name": "Chicken Bones' Visor",
+    "item_category": "vanity"
+  },
+  "Chicken Bones的背心": {
+    "name": "Chicken Bones的背心",
+    "image": "Chicken_Bones'_Vest.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Chicken Bones的套装",
+    "en_name": "Chicken Bones' Vest",
+    "item_category": "vanity"
+  },
+  "Chicken Bones的裤子": {
+    "name": "Chicken Bones的裤子",
+    "image": "Chicken_Bones'_Pants.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Chicken Bones的套装",
+    "en_name": "Chicken Bones' Pants",
+    "item_category": "vanity"
+  },
+  "Chicken Bones的长袍": {
+    "name": "Chicken Bones的长袍",
+    "image": "Chicken_Bones'_Robe.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰时装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Chicken Bones的套装",
+    "en_name": "Chicken Bones' Robe",
+    "item_category": "vanity"
+  },
+  "Chippy的头盔": {
+    "name": "Chippy的头盔",
+    "image": "Chippy's_Helmet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充泰拉瑞亚爱好者！”“仅在战斗中佩戴”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Chippy的套装",
+    "en_name": "Chippy's Helmet",
+    "item_category": "vanity"
+  },
+  "Chippy的护胸": {
+    "name": "Chippy的护胸",
+    "image": "Chippy's_Chestplate.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充泰拉瑞亚爱好者！”“时髦又实用”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Chippy的套装",
+    "en_name": "Chippy's Chestplate",
+    "item_category": "vanity"
+  },
+  "Chippy的护胫": {
+    "name": "Chippy的护胫",
+    "image": "Chippy's_Greaves.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充泰拉瑞亚爱好者！”“是长裤，不是短裤”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Chippy的套装",
+    "en_name": "Chippy's Greaves",
+    "item_category": "vanity"
+  },
+  "Chippy的头带": {
+    "name": "Chippy的头带",
+    "image": "Chippy's_Headband.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰时装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充泰拉瑞亚爱好者！”“红帽残骸”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Chippy的套装",
+    "en_name": "Chippy's Headband",
+    "item_category": "vanity"
+  },
+  "狗耳朵": {
+    "name": "狗耳朵",
+    "image": "Dog_Ears.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "狗狗套装",
+    "en_name": "Dog Ears",
+    "item_category": "vanity"
+  },
+  "狗尾巴": {
+    "name": "狗尾巴",
+    "image": "Dog_Tail.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装配饰",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "狗狗套装",
+    "en_name": "Dog Tail",
+    "item_category": "vanity"
+  },
+  "狐狸耳朵": {
+    "name": "狐狸耳朵",
+    "image": "Fox_Ears.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "狐狸套装（动物学家）",
+    "en_name": "Fox Ears",
+    "item_category": "vanity"
+  },
+  "狐狸尾巴": {
+    "name": "狐狸尾巴",
+    "image": "Fox_Tail.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装配饰",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "狐狸套装（动物学家）",
+    "en_name": "Fox Tail",
+    "item_category": "vanity"
+  },
+  "绅士胡子": {
+    "name": "绅士胡子",
+    "image": "Gentleman's_Beard.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰时装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“这是人的面部毛发。”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "绅士长胡子",
+          "image": "Gentleman's_Long_Beard.png"
+        }
+      ],
+      "result": {
+        "name": "绅士胡子",
+        "image": "Gentleman's_Beard.png"
+      }
+    },
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "绅士套装",
+    "en_name": "Gentleman's Beard",
+    "item_category": "vanity"
+  },
+  "绅士长胡子": {
+    "name": "绅士长胡子",
+    "image": "Gentleman's_Long_Beard.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰时装制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“这是人的面部毛发。”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "绅士大胡子",
+          "image": "Gentleman's_Magnificent_Beard.png"
+        }
+      ],
+      "result": {
+        "name": "绅士长胡子",
+        "image": "Gentleman's_Long_Beard.png"
+      }
+    },
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "绅士套装",
+    "en_name": "Gentleman's Long Beard",
+    "item_category": "vanity"
+  },
+  "绅士大胡子": {
+    "name": "绅士大胡子",
+    "image": "Gentleman's_Magnificent_Beard.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰时装制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“这是人的面部毛发。”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "绅士套装",
+    "en_name": "Gentleman's Magnificent Beard",
+    "item_category": "vanity"
+  },
+  "绅士马甲": {
+    "name": "绅士马甲",
+    "image": "Gentleman's_Vest.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        }
+      ],
+      "result": {
+        "name": "绅士马甲",
+        "image": "Gentleman's_Vest.png"
+      }
+    },
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "绅士套装",
+    "en_name": "Gentleman's Vest",
+    "item_category": "vanity"
+  },
+  "绅士裤子": {
+    "name": "绅士裤子",
+    "image": "Gentleman's_Trousers.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        }
+      ],
+      "result": {
+        "name": "绅士裤子",
+        "image": "Gentleman's_Trousers.png"
+      }
+    },
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "绅士套装",
+    "en_name": "Gentleman's Trousers",
+    "item_category": "vanity"
+  },
+  "Leinfors的护发器": {
+    "name": "Leinfors的护发器",
+    "image": "Leinfors'_Hair_Protector.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”“为了保持甜美动人的风格”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Leinfors的套装",
+    "en_name": "Leinfors' Hair Protector",
+    "item_category": "vanity"
+  },
+  "Leinfors的奇异风": {
+    "name": "Leinfors的奇异风",
+    "image": "Leinfors'_Excessive_Style.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”“重获性感”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Leinfors的套装",
+    "en_name": "Leinfors' Excessive Style",
+    "item_category": "vanity"
+  },
+  "Leinfors的潮裤": {
+    "name": "Leinfors的潮裤",
+    "image": "Leinfors'_Fancypants.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”“口袋里可能有口香糖”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Leinfors的套装",
+    "en_name": "Leinfors' Fancypants",
+    "item_category": "vanity"
+  },
+  "Leinfors的奢华洗发液": {
+    "name": "Leinfors的奢华洗发液",
+    "image": "Leinfors'_Luxury_Shampoo.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰时装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”“LeinCorp出品”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Leinfors的套装",
+    "en_name": "Leinfors' Luxury Shampoo",
+    "item_category": "vanity"
+  },
+  "蜥蜴耳朵": {
+    "name": "蜥蜴耳朵",
+    "image": "Lizard_Ears.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "蜥蜴套装",
+    "en_name": "Lizard Ears",
+    "item_category": "vanity"
+  },
+  "蜥蜴尾巴": {
+    "name": "蜥蜴尾巴",
+    "image": "Lizard_Tail.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装配饰",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "蜥蜴套装",
+    "en_name": "Lizard Tail",
+    "item_category": "vanity"
+  },
+  "Luna的符文妖精兜帽": {
+    "name": "Luna的符文妖精兜帽",
+    "image": "Luna's_Runic_Pixie_Hood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Luna的套装",
+    "en_name": "Luna's Runic Pixie Hood",
+    "item_category": "vanity"
+  },
+  "Luna的符文妖精衣": {
+    "name": "Luna的符文妖精衣",
+    "image": "Luna's_Runic_Pixie_Shirt.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Luna的套装",
+    "en_name": "Luna's Runic Pixie Shirt",
+    "item_category": "vanity"
+  },
+  "Luna的符文妖精裤": {
+    "name": "Luna的符文妖精裤",
+    "image": "Luna's_Runic_Pixie_Pants.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Luna的套装",
+    "en_name": "Luna's Runic Pixie Pants",
+    "item_category": "vanity"
+  },
+  "Luna的符文妖精斗篷": {
+    "name": "Luna的符文妖精斗篷",
+    "image": "Luna's_Runic_Pixie_Cloak.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰时装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Luna的套装",
+    "en_name": "Luna's Runic Pixie Cloak",
+    "item_category": "vanity"
+  },
+  "王子制服": {
+    "name": "王子制服",
+    "image": "Prince_Uniform.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "50",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "王子套装",
+    "en_name": "Prince Uniform",
+    "item_category": "vanity"
+  },
+  "王子裤": {
+    "name": "王子裤",
+    "image": "Prince_Pants.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "50",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "王子套装",
+    "en_name": "Prince Pants",
+    "item_category": "vanity"
+  },
+  "王子披风": {
+    "name": "王子披风",
+    "image": "Prince_Cape.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装配饰",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "50",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "王子套装",
+    "en_name": "Prince Cape",
+    "item_category": "vanity"
+  },
+  "Yoraiz0r的染色护目镜": {
+    "name": "Yoraiz0r的染色护目镜",
+    "image": "Yoraiz0r's_Recolored_Goggles.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Yoraiz0r的套装",
+    "en_name": "Yoraiz0r's Recolored Goggles",
+    "item_category": "vanity"
+  },
+  "Yoraiz0r的制服": {
+    "name": "Yoraiz0r的制服",
+    "image": "Yoraiz0r's_Uniform.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Yoraiz0r的套装",
+    "en_name": "Yoraiz0r's Uniform",
+    "item_category": "vanity"
+  },
+  "Yoraiz0r的裙": {
+    "name": "Yoraiz0r的裙",
+    "image": "Yoraiz0r's_Skirt.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Yoraiz0r的套装",
+    "en_name": "Yoraiz0r's Skirt",
+    "item_category": "vanity"
+  },
+  "Yoraiz0r的怒容": {
+    "name": "Yoraiz0r的怒容",
+    "image": "Yoraiz0r's_Scowl.gif",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”看到这个你该逃跑了……",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "Yoraiz0r的套装",
+    "en_name": "Yoraiz0r's Scowl",
+    "item_category": "vanity"
+  },
+  "岩石巨人头": {
+    "name": "岩石巨人头",
+    "image": "Rock_Golem_Head.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具时装",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "岩石巨人",
+              "image": "Rock_Golem.gif",
+              "quantity": "1",
+              "chance": "33.33%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "岩石巨人",
+              "image": "Rock_Golem.gif",
+              "quantity": "1",
+              "chance": "33.33%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "岩石巨人",
+              "image": "Rock_Golem.gif",
+              "quantity": "1",
+              "chance": "33.33%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "岩石巨人头是一件有两种用途的物品，它可作为时装或家具使用。它有1/3 (33.33%)的几率掉落于岩石巨人。它可以被穿戴或放置。\n\n花种子可以种在放置的岩石巨人头中。如果空着，将会随机长出野生草植物，前提是将其放置在地表或太空中。[1]岩石巨人头中的植物无法使用常规方法修剪，比如通过在附近挥舞工具。需要使用镐、钻头、再生法杖或者是再生之斧来移除它。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "岩石巨人头是一件有两种用途的物品，它可作为时装或家具使用。它有1/3 (33.33%)的几率掉落于岩石巨人。它可以被穿戴或放置。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "花种子可以种在放置的岩石巨人头中。如果空着，将会随机长出野生草植物，前提是将其放置在地表或太空中。[1]岩石巨人头中的植物无法使用常规方法修剪，比如通过在附近挥舞工具。需要使用镐、钻头、再生法杖或者是再生之斧来移除它。"
+        }
+      ]
+    ],
+    "wiki_title": "岩石巨人头",
+    "en_name": "Rock Golem Head",
+    "item_category": "vanity"
+  },
+  "棒棒独角兽": {
+    "name": "棒棒独角兽",
+    "image": "Unicorn_on_a_Stick.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "杂项时装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“玩得开心！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "独角兽",
+              "image": "Unicorn.gif",
+              "quantity": "1",
+              "chance": "1%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "独角兽",
+              "image": "Unicorn.gif",
+              "quantity": "1",
+              "chance": "1%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "独角兽",
+              "image": "Unicorn.gif",
+              "quantity": "1",
+              "chance": "1%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "棒棒独角兽是个困难模式的小玩具物品，当选中时，它被固定在玩家面前，制造出骑着独角兽的错觉。它没有任何实际的功能，不像独角兽坐骑那样。棒棒独角兽有1/100 (1%)几率掉落自独角兽。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "棒棒独角兽是个困难模式的小玩具物品，当选中时，它被固定在玩家面前，制造出骑着独角兽的错觉。它没有任何实际的功能，不像独角兽坐骑那样。棒棒独角兽有1/100 (1%)几率掉落自独角兽。"
+        }
+      ]
+    ],
+    "wiki_title": "棒棒独角兽",
+    "en_name": "Unicorn on a Stick",
+    "item_category": "vanity"
+  },
+  "鱼缸": {
+    "name": "鱼缸",
+    "image": "Fish_Bowl.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "金金鱼",
+          "image": "Gold_Goldfish.png"
+        },
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png"
+        }
+      ],
+      "result": {
+        "name": "金鱼缸",
+        "image": "Gold_Fish_Bowl.png"
+      }
+    },
+    "description": "鱼缸、金鱼缸(电脑版、主机版、和移动版)、鳉鱼缸(电脑版、主机版、和移动版)和熔岩蛇缸(电脑版、主机版、和移动版)是一类装饰性家具物品。鱼缸和金鱼缸也可兼做可穿戴物品，并可装备于玩家的头盔栏。\n\n鱼缸放置于头盔时装栏时仅有视觉效果；但若放置于头部盔甲栏，则会像玩家在水中那样显示呼吸计，且时间足够长后玩家会溺水并死亡。呼吸辅助如芦苇呼吸管或鱼鳃药水可允许玩家正常呼吸。\n\n鱼、金鱼和鳉鱼缸为制作而来，但熔岩蛇缸则有39/200 (19.5%)的几率发现于黑曜石匣和狱石匣中。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "鱼缸、金鱼缸(电脑版、主机版、和移动版)、鳉鱼缸(电脑版、主机版、和移动版)和熔岩蛇缸(电脑版、主机版、和移动版)是一类装饰性家具物品。鱼缸和金鱼缸也可兼做可穿戴物品，并可装备于玩家的头盔栏。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "鱼缸放置于头盔时装栏时仅有视觉效果；但若放置于头部盔甲栏，则会像玩家在水中那样显示呼吸计，且时间足够长后玩家会溺水并死亡。呼吸辅助如芦苇呼吸管或鱼鳃药水可允许玩家正常呼吸。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "鱼、金鱼和鳉鱼缸为制作而来，但熔岩蛇缸则有39/200 (19.5%)的几率发现于黑曜石匣和狱石匣中。"
+        }
+      ]
+    ],
+    "wiki_title": "鱼缸",
+    "en_name": "Fish Bowls",
+    "item_category": "vanity"
+  }
+}

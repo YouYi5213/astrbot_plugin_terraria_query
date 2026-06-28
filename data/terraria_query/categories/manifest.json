@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "key": "coins",
+      "label": "钱币",
+      "file": "coins.json",
+      "count": 1
+    },
+    {
+      "key": "ores",
+      "label": "矿石",
+      "file": "ores.json",
+      "count": 22
+    },
+    {
+      "key": "bars",
+      "label": "锭",
+      "file": "bars.json",
+      "count": 24
+    },
+    {
+      "key": "gems",
+      "label": "宝石",
+      "file": "gems.json",
+      "count": 8
+    },
+    {
+      "key": "ammo",
+      "label": "弹药",
+      "file": "ammo.json",
+      "count": 16
+    },
+    {
+      "key": "paints",
+      "label": "油漆",
+      "file": "paints.json",
+      "count": 0
+    },
+    {
+      "key": "dyes",
+      "label": "染料",
+      "file": "dyes.json",
+      "count": 2
+    },
+    {
+      "key": "potions",
+      "label": "药水",
+      "file": "potions.json",
+      "count": 39
+    },
+    {
+      "key": "minions",
+      "label": "仆从",
+      "file": "minions.json",
+      "count": 24
+    },
+    {
+      "key": "tools",
+      "label": "工具",
+      "file": "tools.json",
+      "count": 162
+    },
+    {
+      "key": "weapons",
+      "label": "武器",
+      "file": "weapons.json",
+      "count": 404
+    },
+    {
+      "key": "armor",
+      "label": "盔甲",
+      "file": "armor.json",
+      "count": 318
+    },
+    {
+      "key": "accessories",
+      "label": "配饰",
+      "file": "accessories.json",
+      "count": 281
+    },
+    {
+      "key": "vanity",
+      "label": "时装物品",
+      "file": "vanity.json",
+      "count": 42
+    },
+    {
+      "key": "wings",
+      "label": "翅膀",
+      "file": "wings.json",
+      "count": 46
+    },
+    {
+      "key": "blocks",
+      "label": "物块",
+      "file": "blocks.json",
+      "count": 96
+    },
+    {
+      "key": "walls",
+      "label": "墙",
+      "file": "walls.json",
+      "count": 155
+    },
+    {
+      "key": "crafting_stations",
+      "label": "制作站",
+      "file": "crafting_stations.json",
+      "count": 42
+    },
+    {
+      "key": "furniture",
+      "label": "家具",
+      "file": "furniture.json",
+      "count": 219
+    },
+    {
+      "key": "mechanisms",
+      "label": "机械",
+      "file": "mechanisms.json",
+      "count": 1
+    },
+    {
+      "key": "statues",
+      "label": "雕像",
+      "file": "statues.json",
+      "count": 0
+    },
+    {
+      "key": "misc",
+      "label": "杂项",
+      "file": "misc.json",
+      "count": 289
+    },
+    {
+      "key": "mounts",
+      "label": "坐骑",
+      "file": "mounts.json",
+      "count": 37
+    },
+    {
+      "key": "pets",
+      "label": "宠物",
+      "file": "pets.json",
+      "count": 84
+    }
+  ],
+  "total": 2312
+}

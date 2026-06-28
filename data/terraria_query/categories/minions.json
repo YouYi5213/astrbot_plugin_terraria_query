@@ -1,0 +1,2834 @@
+{
+  "乌鸦法杖": {
+    "name": "乌鸦法杖",
+    "image": "Raven_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "55",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "28",
+        "extra": "（普通速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤乌鸦来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "紫色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#aa55ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Raven Staff",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "南瓜王",
+              "image": "Pumpking_head.gif",
+              "quantity": "1",
+              "chance": "2.5–12.5% (电脑版、主机版、和移动版)1.79–14.29% (前代主机版、和3DS版)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "南瓜王",
+              "image": "Pumpking_head.gif",
+              "quantity": "1",
+              "chance": "6.25–12.5%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "南瓜王",
+              "image": "Pumpking_head.gif",
+              "quantity": "1",
+              "chance": "6.25–12.5%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "乌鸦法杖是一个困难模式，世纪之花后的召唤武器，可召唤乌鸦仆从。它会飞向并冲刺敌怪，。乌鸦法杖掉落自南瓜月事件期间的南瓜王，掉落率为 2.5–12.5%（6.25–12.5%）具体取决于当前波数。[1]\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "刃杖": {
+    "name": "刃杖",
+    "image": "Blade_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "6",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "0",
+        "extra": "（无击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤附魔飞刀来为你战斗忽略敌人25防御“别被它们小小的个头给骗了”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "史莱姆皇后",
+              "image": "Queen_Slime.png",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（史莱姆皇后）",
+              "image": "Treasure_Bag_(Queen_Slime).png",
+              "quantity": "1",
+              "chance": "33.33% (电脑版、主机版、和移动版)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "史莱姆皇后",
+              "image": "Queen_Slime.png",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（史莱姆皇后）",
+              "image": "Treasure_Bag_(Queen_Slime).png",
+              "quantity": "1",
+              "chance": "33.33% (电脑版、主机版、和移动版)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "史莱姆皇后",
+              "image": "Queen_Slime.png",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（史莱姆皇后）",
+              "image": "Treasure_Bag_(Queen_Slime).png",
+              "quantity": "1",
+              "chance": "33.33% (电脑版、主机版、和移动版)"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Blade Staff",
+    "description": "刃杖是一个困难模式的召唤武器，可召唤附魔飞刀仆从。它会飞向敌怪并快速地反复劈砍它们。它具有 25盔甲穿透。附魔飞刀会围绕玩家头部旋转排列，若周围没有敌怪则立刻返回玩家位置。刃杖由史莱姆皇后以1/4 (25%)/1/3 (33.33%)的概率掉落。\n\n其最佳修饰语是弹道，因其不具有击退而无法获得影响击退的修饰语。但是，如果玩家的召唤伤害奖励达到了86%，其最佳修饰语将是专注；如果玩家不使用鞭，其最佳修饰语将是英勇。[1]虽然热切修饰语在游戏内被视为其最佳修饰语，但是大部分敌怪的防御不足以使额外的盔甲穿透提供足够的加成。",
+    "item_category": "minions"
+  },
+  "史莱姆法杖": {
+    "name": "史莱姆法杖",
+    "image": "Slime_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "8",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "28",
+        "extra": "（普通速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤史莱姆宝宝来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "僵尸",
+              "image": "30px-Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "冰雪史莱姆",
+              "image": "Ice_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "史莱姆之母",
+              "image": "Mother_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "史莱姆王",
+              "image": "King_Slime.gif",
+              "quantity": "1",
+              "chance": "3.33%"
+            },
+            {
+              "name": "夜明史莱姆",
+              "image": "Illuminant_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "小史莱姆",
+              "image": "Slimeling.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "尖刺丛林史莱姆",
+              "image": "Spiked_Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "尖刺冰雪史莱姆",
+              "image": "Spiked_Ice_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "尖刺史莱姆",
+              "image": "Spiked_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "弹力史莱姆",
+              "image": "Bouncy_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "毒泥",
+              "image": "Toxic_Sludge.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "水晶史莱姆",
+              "image": "Crystal_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "沙史莱姆",
+              "image": "Sand_Slime.gif",
+              "quantity": "1",
+              "chance": "0.013%"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1",
+              "chance": "1%"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "飞翔史莱姆",
+              "image": "Heavenly_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "1",
+              "chance": "0.01%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "僵尸",
+              "image": "30px-Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "冰雪史莱姆",
+              "image": "Ice_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "史莱姆之母",
+              "image": "Mother_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "史莱姆王",
+              "image": "King_Slime.gif",
+              "quantity": "1",
+              "chance": "3.33%"
+            },
+            {
+              "name": "夜明史莱姆",
+              "image": "Illuminant_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "小史莱姆",
+              "image": "Slimeling.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "尖刺丛林史莱姆",
+              "image": "Spiked_Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "尖刺冰雪史莱姆",
+              "image": "Spiked_Ice_Slime.gif",
+              "quantity": "1",
+              "chance": "0.0143%"
+            },
+            {
+              "name": "尖刺史莱姆",
+              "image": "Spiked_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "弹力史莱姆",
+              "image": "Bouncy_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "毒泥",
+              "image": "Toxic_Sludge.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "水晶史莱姆",
+              "image": "Crystal_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "沙史莱姆",
+              "image": "Sand_Slime.gif",
+              "quantity": "1",
+              "chance": "0.018%"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1",
+              "chance": "1.4%"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "飞翔史莱姆",
+              "image": "Heavenly_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "丛林史莱姆",
+              "image": "Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "僵尸",
+              "image": "30px-Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Slimed_Zombie.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "冰雪史莱姆",
+              "image": "Ice_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "史莱姆之母",
+              "image": "Mother_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "史莱姆宝宝",
+              "image": "Baby_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "史莱姆王",
+              "image": "King_Slime.gif",
+              "quantity": "1",
+              "chance": "3.33%"
+            },
+            {
+              "name": "夜明史莱姆",
+              "image": "Illuminant_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "小史莱姆",
+              "image": "Slimeling.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "尖刺丛林史莱姆",
+              "image": "Spiked_Jungle_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "尖刺冰雪史莱姆",
+              "image": "Spiked_Ice_Slime.gif",
+              "quantity": "1",
+              "chance": "0.0143%"
+            },
+            {
+              "name": "尖刺史莱姆",
+              "image": "Spiked_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "弹力史莱姆",
+              "image": "Bouncy_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "毒泥",
+              "image": "Toxic_Sludge.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "水晶史莱姆",
+              "image": "Crystal_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "沙史莱姆",
+              "image": "Sand_Slime.gif",
+              "quantity": "1",
+              "chance": "0.018%"
+            },
+            {
+              "name": "粉史莱姆",
+              "image": "Pinky.gif",
+              "quantity": "1",
+              "chance": "1.4%"
+            },
+            {
+              "name": "紫史莱姆",
+              "image": "Purple_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "红史莱姆",
+              "image": "Red_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "绿史莱姆",
+              "image": "Green_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "蓝史莱姆",
+              "image": "Blue_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "飞翔史莱姆",
+              "image": "Heavenly_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "黄史莱姆",
+              "image": "Yellow_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            },
+            {
+              "name": "黑史莱姆",
+              "image": "Black_Slime.gif",
+              "quantity": "1",
+              "chance": "0.014%"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Slime Staff",
+    "description": "史莱姆法杖是一把召唤武器，它可以召唤史莱姆宝宝仆从。它会跳向敌怪，并造成接触伤害。\n\n史莱姆法杖的掉落概率对大部分史莱姆和史莱姆僵尸为1/10000 (0.01%)/1/7000 (0.0143%)。粉史莱姆的掉落概率相对较高，为1/100 (1%)/1/70 (1.4286%)。此外，沙史莱姆的掉落概率为1/8000 (0.0125%)/1/5600 (0.0179%)，而史莱姆王具有最高的掉落概率，为1/30 (3.3333%)。不能掉落史莱姆法杖的史莱姆包括：熔岩史莱姆、地牢史莱姆、雨伞史莱姆、弹跳杰克南瓜灯、腐化史莱姆、史莱姆皇后、猩红史莱姆、腹足怪和彩虹史莱姆。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "吸血鬼青蛙法杖": {
+    "name": "吸血鬼青蛙法杖",
+    "image": "Vampire_Frog_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "11",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "5",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤吸血鬼青蛙来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Vampire Frog Staff",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "僵尸人鱼",
+              "image": "Zombie_Merman.gif",
+              "quantity": "1",
+              "chance": "12.5%"
+            },
+            {
+              "name": "游荡眼球怪鱼",
+              "image": "Wandering_Eye_Fish.gif",
+              "quantity": "1",
+              "chance": "12.5%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "僵尸人鱼",
+              "image": "Zombie_Merman.gif",
+              "quantity": "1",
+              "chance": "12.5%"
+            },
+            {
+              "name": "游荡眼球怪鱼",
+              "image": "Wandering_Eye_Fish.gif",
+              "quantity": "1",
+              "chance": "12.5%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "僵尸人鱼",
+              "image": "Zombie_Merman.gif",
+              "quantity": "1",
+              "chance": "12.5%"
+            },
+            {
+              "name": "游荡眼球怪鱼",
+              "image": "Wandering_Eye_Fish.gif",
+              "quantity": "1",
+              "chance": "12.5%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "吸血鬼青蛙法杖是一个困难模式之前的召唤武器，可召唤一只吸血鬼青蛙仆从。它会跳向敌怪并造成接触伤害。吸血鬼青蛙法杖有1/8 (12.5%)的概率由僵尸人鱼或游荡眼球怪鱼掉落。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "外星法杖": {
+    "name": "外星法杖",
+    "image": "Xeno_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "36",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤UFO来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "08*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "10 GC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Xeno Staff",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.png",
+              "quantity": "1",
+              "chance": "16.66%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.png",
+              "quantity": "1",
+              "chance": "16.66%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.png",
+              "quantity": "1",
+              "chance": "16.66%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "外星法杖是一个困难模式，石巨人后的召唤武器，可生成UFO仆从。它悬浮在敌怪上方，发射蓝色激光并立即击中目标。若敌怪在 18.75 到 50 图格范围内，它将会立即传送至其上方。外星法杖有1/6 (16.67%)的几率掉落自火星暴乱事件期间的火星飞碟。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "小雪怪法杖": {
+    "name": "小雪怪法杖",
+    "image": "Flinx_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "8",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤小雪怪来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "小雪怪皮毛",
+          "image": "Flinx_Fur.png",
+          "amount": "6"
+        },
+        {
+          "name": "金锭",
+          "image": "Gold_Bar.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "小雪怪法杖",
+        "image": "Flinx_Staff.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Flinx Staff",
+    "description": "小雪怪法杖是一个困难模式之前的召唤武器，可以召唤小雪怪仆从。它跑向敌怪，接触时会向上跳起，然后试图再次攻击目标。其快速的攻击频率使其能够在跳起后保持在慢速飞行的敌怪上方。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "小鬼法杖": {
+    "name": "小鬼法杖",
+    "image": "Imp_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "17",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤小鬼来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "54",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "小鬼火球",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "狱石锭",
+          "image": "Hellstone_Bar.png",
+          "amount": "17"
+        }
+      ],
+      "result": {
+        "name": "小鬼法杖",
+        "image": "Imp_Staff.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Imp Staff",
+    "description": "小鬼法杖是一个困难模式之前的召唤武器，可召唤飞行小鬼仆从。它徘徊在敌怪周围，发射火球，可施加 3-6 秒的着火了！减益，并可穿透 4 个敌怪。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "捣蛋猫": {
+    "name": "捣蛋猫",
+    "image": "Cattiva.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "9",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤捣蛋猫来为你战斗一个可爱的帕鲁，还能帮你挖矿右键点击来抚摸它！",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "抚摸",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": null,
+    "en_name": "Cattiva",
+    "description": "捣蛋猫是一个困难模式之前的召唤武器，可召唤捣蛋猫仆从。它会奔跑并跳向敌怪，造成接触伤害。此外，它和玩家一起挖掘，具有 41% 等效镐力[1]（约为铁镐的镐力）和 16 的挖矿速度。只要玩家在附近，即使玩家停止挖掘它也会继续挖掘。捣蛋猫还会和玩家一起砍伐同一颗或附近的树，斧力大约相当于金斧。不同于大部分召唤武器，捣蛋猫仅能被召唤一个。和其他帕鲁一样，可以用⚷打开/激活点击来抚摸它。\n\n若玩家不在墓地生物群系中，捣蛋猫在白天期间可罕见地生成在草、丛林草、雪块或冰雪块上，但它不会在世界中心四分之一的水平区域内生成（译注：从世界中心算起，向两侧各八分之一宽度）。[2]它最初生成为苦恼的捣蛋猫，附近会生成两个哥布林弓箭手。当两个哥布林弓箭手均被杀死（或消失）时，捣蛋猫会在玩家位于 6.25 格内时转变为其物品形态。[3]\n\n它是少数能被生命体分析机(电脑版、主机版、和移动版)或其升级物探测到的实体之一。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "星尘之龙法杖": {
+    "name": "星尘之龙法杖",
+    "image": "Stardust_Dragon_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "40",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤星尘之龙来为你战斗“有了一条巨龙后，谁还需要一群仆从呢？”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "远古操纵机(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "星尘碎片",
+          "image": "Stardust_Fragment.png",
+          "amount": "18"
+        }
+      ],
+      "result": {
+        "name": "星尘之龙法杖",
+        "image": "Stardust_Dragon_Staff.png"
+      }
+    },
+    "en_name": "Stardust Dragon Staff",
+    "drops": null,
+    "description": "星尘之龙法杖是一个困难模式，拜月教邪教徒后的召唤武器，可召唤星尘之龙仆从。它飞向敌怪，造成接触伤害且冲上咬住其目标。它可以穿过物块瞄准敌怪。\n\n当多次使用星尘之龙法杖时，并不会生产多个星尘之龙；而是每额外召唤一次，使已存在的星尘之龙变得更长更强（+18/+19 伤害；武器的面板伤害的 46%[1]） 首次召唤生产的星尘之龙会生成四个体节，每次额外召唤增加两个体节。\n\n其最佳修饰语是传说。但是，如果玩家的召唤伤害奖励达到了特定阈值（使用鞭时），其最佳修饰语将是无情。[2]阈值的精确值随着召唤次数而变，它们在下方的备注中列出。",
+    "item_category": "minions"
+  },
+  "星尘细胞法杖": {
+    "name": "星尘细胞法杖",
+    "image": "Stardust_Cell_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "60",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤星尘细胞来为你战斗“培养最美丽的细胞感染”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "远古操纵机(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "星尘碎片",
+          "image": "Stardust_Fragment.png",
+          "amount": "18"
+        }
+      ],
+      "result": {
+        "name": "星尘细胞法杖",
+        "image": "Stardust_Cell_Staff.png"
+      }
+    },
+    "en_name": "Stardust Cell Staff",
+    "drops": null,
+    "description": "星尘细胞法杖是一个困难模式，拜月教邪教徒后的召唤武器，可召唤星尘细胞仆从。它徘徊在敌怪周围，发射追踪的迷你细胞附着到目标上，施加 5 秒的细胞附着减益，每秒造成 20 点伤害。[1]一个目标同时最多附着 10 个迷你细胞，总计每秒 200 点伤害。星尘细胞会传送向范围外的敌怪。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "暴风雨法杖": {
+    "name": "暴风雨法杖",
+    "image": "Tempest_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "50",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤鲨鱼旋风来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "紫色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#aa55ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "迷你鲨鱼龙",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "宝藏袋（猪龙鱼公爵）",
+              "image": "Treasure_Bag_(Duke_Fishron).png",
+              "quantity": "1",
+              "chance": "16.67%"
+            },
+            {
+              "name": "猪龙鱼公爵",
+              "image": "Duke_Fishron_(First_Form).gif",
+              "quantity": "1",
+              "chance": "16.67%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "宝藏袋（猪龙鱼公爵）",
+              "image": "Treasure_Bag_(Duke_Fishron).png",
+              "quantity": "1",
+              "chance": "16.67%"
+            },
+            {
+              "name": "猪龙鱼公爵",
+              "image": "Duke_Fishron_(First_Form).gif",
+              "quantity": "1",
+              "chance": "16.67%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "宝藏袋（猪龙鱼公爵）",
+              "image": "Treasure_Bag_(Duke_Fishron).png",
+              "quantity": "1",
+              "chance": "16.67%"
+            },
+            {
+              "name": "猪龙鱼公爵",
+              "image": "Duke_Fishron_(First_Form).gif",
+              "quantity": "1",
+              "chance": "16.67%"
+            }
+          ]
+        }
+      ]
+    },
+    "en_name": "Tempest Staff",
+    "description": "暴风雨法杖是一个困难模式中的召唤武器，可召唤鲨鱼旋风仆从。它会徘徊在敌怪附近，造成接触伤害并发射迷你鲨鱼龙射弹，会在接触到敌怪或物块时产生视觉上的飞溅。暴风雨法杖有1/6 (16.67%)的概率掉落自猪龙鱼公爵。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "沙漠虎杖": {
+    "name": "沙漠虎杖",
+    "image": "Desert_Tiger_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "41",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "40 (实际)",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤白虎来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "08*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 GC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": null,
+    "en_name": "Desert Tiger Staff",
+    "description": "沙漠虎杖是一个困难模式，世纪之花后的召唤武器，可召唤沙漠虎仆从。它会跑向敌怪并造成接触伤害。每六秒[1]会对附近敌怪施展一次猛扑攻击，额外造成 50% 伤害（+20 基础伤害），[2]并且能够穿透物块到达敌怪所在处。\n\n当多次使用沙漠虎杖并不会生成多只沙漠虎；而存在的沙漠虎每多召唤都会变得更强（+16/+17 伤害，40% 的面板伤害，与猛扑的 50% 加算。[2]）且更快。召唤 1 至 3 次时，老虎会是一只幼崽，召唤 4 至 6 次后为成年虎，召唤 7 次及以上时为带装甲的成年虎。\n\n沙漠虎杖总是可在地牢的沙漠箱中找到，而沙漠箱仅可在世纪之花被打败后使用沙漠钥匙解锁。\n\n其最佳修饰语是传说。但是，如果玩家的召唤伤害奖励达到了特定阈值（使用鞭时），其最佳修饰语将是无情。[3]阈值的精确值随着召唤次数而变，它们在下方的备注中列出。",
+    "item_category": "minions"
+  },
+  "泰拉棱镜": {
+    "name": "泰拉棱镜",
+    "image": "Terraprisma.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "90",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤附魔剑来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Terraprisma",
+    "drops": null,
+    "description": "泰拉棱镜是一个困难模式的召唤武器，可召唤泰拉棱镜仆从。它会飞向敌怪，在快速的突刺后回旋或突刺攻击敌怪。泰拉棱镜在玩家身后排布成螺旋状，且会在附近无敌怪时立即返回玩家身旁。\n\n若所有对光之女皇的伤害都是在白天造成的，则光之女皇会必定掉落泰拉棱镜。\n\n其最佳修饰语是传说。但是，如果玩家的召唤伤害奖励达到了 158%（使用鞭时）或 58%（不使用鞭时），其最佳修饰语将是无情。[1]",
+    "item_category": "minions"
+  },
+  "海盗法杖": {
+    "name": "海盗法杖",
+    "image": "Pirate_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "40",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "6",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤海盗来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Pirate Staff",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "海盗弩手",
+              "image": "Pirate_Crossbower.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗水手",
+              "image": "Pirate_Deckhand.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗神射手",
+              "image": "Pirate_Deadeye.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗船长",
+              "image": "Pirate_Captain.gif",
+              "quantity": "1",
+              "chance": "0.4% (电脑版、主机版、和移动版)  0.2% (前代主机版)"
+            },
+            {
+              "name": "私船海盗",
+              "image": "Pirate_Corsair.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "荷兰飞盗船",
+              "image": "Flying_Dutchman.gif",
+              "quantity": "1",
+              "chance": "6.67%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "海盗弩手",
+              "image": "Pirate_Crossbower.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗水手",
+              "image": "Pirate_Deckhand.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗神射手",
+              "image": "Pirate_Deadeye.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗船长",
+              "image": "Pirate_Captain.gif",
+              "quantity": "1",
+              "chance": "0.4% (电脑版、主机版、和移动版)  0.2% (前代主机版)"
+            },
+            {
+              "name": "私船海盗",
+              "image": "Pirate_Corsair.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "荷兰飞盗船",
+              "image": "Flying_Dutchman.gif",
+              "quantity": "1",
+              "chance": "6.67%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "海盗弩手",
+              "image": "Pirate_Crossbower.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗水手",
+              "image": "Pirate_Deckhand.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗神射手",
+              "image": "Pirate_Deadeye.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "海盗船长",
+              "image": "Pirate_Captain.gif",
+              "quantity": "1",
+              "chance": "0.4% (电脑版、主机版、和移动版)  0.2% (前代主机版)"
+            },
+            {
+              "name": "私船海盗",
+              "image": "Pirate_Corsair.gif",
+              "quantity": "1",
+              "chance": "0.1% (电脑版、主机版、和移动版)  0.05% (前代主机版)"
+            },
+            {
+              "name": "荷兰飞盗船",
+              "image": "Flying_Dutchman.gif",
+              "quantity": "1",
+              "chance": "6.67%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "海盗法杖是一个困难模式的召唤武器，可召唤海盗仆从。它会奔跑并跳向敌怪，靠近时用剑攻击。\n\n在海盗入侵事件中，海盗法杖有1/1000 (0.1%)的概率掉落自普通海盗（除了鹦鹉），有1/250 (0.4%)的概率掉落自海盗船长，还有1/15 (6.67%)的概率掉落自荷兰飞盗船(电脑版、主机版、和移动版)。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "火绒狐": {
+    "name": "火绒狐",
+    "image": "Foxparks.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "20",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤火绒狐来为你战斗左键点击来使用火绒狐的抱抱火焰技能发射火焰！右键点击来抚摸它！",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "抚摸",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Foxparks",
+    "drops": null,
+    "description": "火绒狐是一个困难模式之前的召唤武器，可召唤火绒狐仆从。它不会造成接触伤害，而是会向敌怪奔跑并发射火球，施加 5–10 秒的着火了！减益。当手持此武器按下⚒使用/攻击时，火绒狐会传送到玩家处并被举起，使用特殊的火焰喷射攻击，不消耗任何弹药。火焰喷射攻击造成火绒狐伤害的 75%（15 基础伤害），具有 5盔甲穿透，施加 5 秒的着火了！减益，并且能够穿透 3 个目标，在第 4 次击中时消失，每次击中伤害降低 15%。不同于大部分召唤武器，火绒狐仅能被召唤一次。和其他帕鲁一样，可以用⚷打开/激活点击来抚摸它。\n\n若玩家不在墓地生物群系中，火绒狐在白天期间可罕见地生成在草、丛林草、雪块或冰雪块上，但它不会在世界中心四分之一的水平区域内生成（译注：从世界中心算起，向两侧各八分之一宽度）。[1]它首先会以苦恼的火绒狐的形态生成，且附近会伴有两个哥布林弓箭手。当这两个哥布林弓箭手均被杀死（或消失）后，火绒狐会在玩家位于其 6.25 格范围内时转变为物品形态。[2]\n\n它是少数能被生命体分析机(电脑版、主机版、和移动版)或其升级物探测到的实体之一。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "矮人法杖": {
+    "name": "矮人法杖",
+    "image": "Pygmy_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "40",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "28",
+        "extra": "（普通速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤矮人来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "07*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "7 GC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Pygmy Staff",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "世纪之花",
+              "image": "Plantera.png",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（世纪之花）",
+              "image": "Treasure_Bag_(Plantera).png",
+              "quantity": "1",
+              "chance": "50%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "世纪之花",
+              "image": "Plantera.png",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（世纪之花）",
+              "image": "Treasure_Bag_(Plantera).png",
+              "quantity": "1",
+              "chance": "50%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "世纪之花",
+              "image": "Plantera.png",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（世纪之花）",
+              "image": "Treasure_Bag_(Plantera).png",
+              "quantity": "1",
+              "chance": "50%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "矮人法杖是一个困难模式，世纪之花后的召唤武器，可召唤矮人仆从。它会向附近的敌怪投掷长矛，会施加 5–10 秒酸性毒液减益，且不能穿透敌怪或穿过物块。矮人法杖有1/4 (25%)/1/2 (50%)的几率掉落自世纪之花。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "致命球法杖": {
+    "name": "致命球法杖",
+    "image": "Deadly_Sphere_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "55",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤致命球来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "08*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "10 GC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Deadly Sphere Staff",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "致命球",
+              "image": "Deadly_Sphere.gif",
+              "quantity": "1",
+              "chance": "3.33%6.56%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "致命球",
+              "image": "Deadly_Sphere.gif",
+              "quantity": "1",
+              "chance": "3.33%6.56%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "致命球",
+              "image": "Deadly_Sphere.gif",
+              "quantity": "1",
+              "chance": "3.33%6.56%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "致命球法杖是一个困难模式，世纪之花后的召唤武器，可召唤致命球仆从。它会高速冲撞向敌怪，但不能穿过物块。每三次攻击后，它会短暂的悬停并循环切换为三个形态中的下一个，然后继续攻击。致命球法杖有1/30 (3.33%)/59/900 (6.56%)的几率由在日食期间生成的致命球掉落。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "蘑菇法杖": {
+    "name": "蘑菇法杖",
+    "image": "Mushroom_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "8",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤蘑菇君来为你战斗“蘑菇君，出击！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "02*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "30 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "Explode",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "发光蘑菇",
+          "image": "Glowing_Mushroom.png"
+        },
+        {
+          "name": "蘑菇草种子",
+          "image": "Mushroom_Grass_Seeds.png"
+        },
+        {
+          "name": "暗影鳞片",
+          "image": "Shadow_Scale.png"
+        }
+      ],
+      "result": {
+        "name": "蘑菇法杖",
+        "image": "Mushroom_Staff.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Mushroom Staff",
+    "description": "蘑菇法杖是一个困难模式之前的召唤武器，可召唤蘑菇君仆从。蘑菇君会向敌怪奔跑并跳跃，造成接触伤害。若最近的目标距离过远，蘑菇君会向它俯冲，撞击时产生红色爆炸并造成武器伤害的 133%（10 基础伤害）与 300% 的击退（6（普通击退力）基础击退），然后传送回玩家处。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "蜘蛛法杖": {
+    "name": "蜘蛛法杖",
+    "image": "Spider_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "26",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤蜘蛛来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "蜘蛛牙",
+          "image": "Spider_Fang.png",
+          "amount": "16"
+        }
+      ],
+      "result": {
+        "name": "蜘蛛法杖",
+        "image": "Spider_Staff.png"
+      }
+    },
+    "drops": null,
+    "description": "蜘蛛法杖是一个困难模式的召唤武器，可召唤蜘蛛仆从。它会跑向敌怪并抓住它们，抓住时反复造成伤害，且会施加 2-4 秒酸性毒液减益。它可以攀附在背景墙上且可以跳很高。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "血红法杖": {
+    "name": "血红法杖",
+    "image": "Sanguine_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "35",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤血红蝙蝠来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Sanguine Staff",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "恐惧鹦鹉螺",
+              "image": "Dreadnautilus.gif",
+              "quantity": "1",
+              "chance": "50%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "恐惧鹦鹉螺",
+              "image": "Dreadnautilus.gif",
+              "quantity": "1",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "恐惧鹦鹉螺",
+              "image": "Dreadnautilus.gif",
+              "quantity": "1",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "血红法杖是一把困难模式的召唤武器，可召唤血红蝙蝠仆从。它会在玩家和锁定的目标之间以椭圆形的轨迹飞行。血红蝙蝠呈半圆形分布在玩家头部周围，一旦附近无敌怪，它会立即回到玩家身旁。血红法杖有1/2 (50%)/1/1 (100%)的概率掉落自恐惧鹦鹉螺。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "阿比盖尔之花": {
+    "name": "阿比盖尔之花",
+    "image": "Abigail's_Flower.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "6",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤友好鬼魂来为你战斗“它美得摄人心魄。”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "阿比盖尔的攻击",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "阿比盖尔的叫声",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "阿比盖尔的升级",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": null,
+    "description": "阿比盖尔之花是一个困难模式之前的召唤武器，可召唤阿比盖尔仆从。她会飘向敌怪并造成接触伤害，同时会停下来发出闪光。\n\n当多次使用阿比盖尔之花时，不会生成多个阿比盖尔；相对的，已存在的阿比盖尔会随每一次额外召唤而变得更快更强。阿比盖尔有一个视觉标志来显示她被召唤的次数，她头上的花朵每次均会改变形态和颜色。在困难模式中，多次召唤的提升会更高。\n\n阿比盖尔之花可罕见地作为植物生成于墓石旁的草上，与世界的进程无关。它在The Constant和Get fixed boi秘密世界种子中生成更为频繁。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "雀杖": {
+    "name": "雀杖",
+    "image": "Finch_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "7",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤雀宝宝来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "en_name": "Finch Staff",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "生命木箱",
+              "image": "Living_Wood_Chest.png",
+              "quantity": "1",
+              "chance": "1/3 (33.33%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "生命木箱",
+              "image": "Living_Wood_Chest.png",
+              "quantity": "1",
+              "chance": "1/3 (33.33%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "生命木箱",
+              "image": "Living_Wood_Chest.png",
+              "quantity": "1",
+              "chance": "1/3 (33.33%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "雀杖是一个困难模式之前的召唤武器，可以召唤雀宝宝仆从。它会飞向敌怪并造成接触伤害。雀杖有1/3 (33.33%)的概率在生命树中的生命木箱内找到。新创建的旅行模式人物会携带雀杖。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "魔眼法杖": {
+    "name": "魔眼法杖",
+    "image": "Optic_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "24",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "36",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "30 (实际)",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤双子魔眼来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "05*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "2 GC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "迷你视网膜激光",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "黑晶状体",
+          "image": "Black_Lens.png"
+        },
+        {
+          "name": "晶状体",
+          "image": "Lens.png"
+        },
+        {
+          "name": "神圣锭",
+          "image": "Hallowed_Bar.png"
+        },
+        {
+          "name": "视域之魂",
+          "image": "Soul_of_Sight.png"
+        }
+      ],
+      "result": {
+        "name": "魔眼法杖",
+        "image": "Optic_Staff.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Optic Staff",
+    "description": "魔眼法杖是困难模式的召唤武器，可召唤微型版的双子魔眼作为仆从。这对名为小魔焰眼和小激光眼的仆从会飞向敌怪，分别以冲刺和发射激光的方式攻击敌怪。每对双子魔眼仆从仅占用一个仆从位。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  },
+  "黄蜂法杖": {
+    "name": "黄蜂法杖",
+    "image": "Hornet_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "12",
+        "extra": "(召唤)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "使用时间",
+        "value": "22",
+        "extra": "（快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤黄蜂来为你战斗",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "70",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      },
+      {
+        "label": "使用",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "黄蜂毒刺",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "蜂蜡",
+          "image": "Bee_Wax.png",
+          "amount": "14"
+        }
+      ],
+      "result": {
+        "name": "黄蜂法杖",
+        "image": "Hornet_Staff.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Hornet Staff",
+    "description": "黄蜂法杖是个困难模式之前的召唤武器，可召唤一只黄蜂仆从。它会在敌怪上方盘旋，发射毒刺，可施加 4-7 秒的中毒减益，并且不能穿透。\n\n其最佳修饰语是传说。",
+    "item_category": "minions"
+  }
+}

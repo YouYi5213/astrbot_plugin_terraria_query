@@ -1,0 +1,9417 @@
+{
+  "丛林墙（天然）": {
+    "name": "丛林墙（天然）",
+    "image": "Lichen_Stone_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "丛林草种子",
+          "image": "Jungle_Grass_Seeds.png"
+        }
+      ],
+      "result": {
+        "name": "丛林墙（天然）",
+        "image": "Jungle_Vine_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Jungle Walls",
+    "drops": null,
+    "description": "丛林墙是自然生成的背景墙，可以在地下丛林的洞穴中找到。这些自然生成的墙可以用锤破坏，但不会掉落任何东西。这些墙既不能阻止敌怪生成，也不能用于合格的房屋。\n\n在电脑版、主机版、和移动版上，这些墙可以由草种子或丛林草种子制作，可以像其他可制作的墙一样使用。",
+    "item_category": "walls"
+  },
+  "丛林蜥蜴砖墙": {
+    "name": "丛林蜥蜴砖墙",
+    "image": "Lihzahrd_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "丛林蜥蜴砖",
+          "image": "Lihzahrd_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "丛林蜥蜴砖墙",
+        "image": "Lihzahrd_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Lihzahrd Brick Wall",
+    "drops": null,
+    "description": "丛林蜥蜴砖墙是一种背景墙，它在丛林神庙中天然出现，被视为不安全的。它在被摧毁时会掉落为物品，也可以通过制作获得。当被玩家放置时，它被视为安全墙。\n\n禁戒丛林蜥蜴砖墙是一件可放置不安全的丛林蜥蜴砖墙的物品。其外观上和丛林蜥蜴砖墙相同，可通过在击败石巨人后将丛林蜥蜴砖墙丢入微光获得。",
+    "item_category": "walls"
+  },
+  "乌木墙": {
+    "name": "乌木墙",
+    "image": "Ebonwood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "乌木",
+          "image": "Ebonwood.png"
+        }
+      ],
+      "result": {
+        "name": "乌木墙",
+        "image": "Ebonwood_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ebonwood Wall",
+    "drops": null,
+    "description": "乌木墙是一种由乌木制成的墙。",
+    "item_category": "walls"
+  },
+  "书卷墙": {
+    "name": "书卷墙",
+    "image": "Librarian_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "书卷块",
+          "image": "Librarian_Block.png"
+        }
+      ],
+      "result": {
+        "name": "书卷墙",
+        "image": "Librarian_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Librarian Wall",
+    "drops": null,
+    "description": "书卷墙是一种由书卷块制作的墙。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "云墙": {
+    "name": "云墙",
+    "image": "Cloud_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "云",
+          "image": "Cloud.png"
+        }
+      ],
+      "result": {
+        "name": "云墙",
+        "image": "Cloud_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Cloud Wall",
+    "drops": null,
+    "description": "云墙是自然生成于漂浮岛上的一种背景墙。当它被摧毁时会作为物品掉落，也可以通过制作得到它。它总是被视为是安全墙。",
+    "item_category": "walls"
+  },
+  "仙人掌墙": {
+    "name": "仙人掌墙",
+    "image": "Cactus_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "仙人掌",
+          "image": "Cactus.png"
+        }
+      ],
+      "result": {
+        "name": "仙人掌墙",
+        "image": "Cactus_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Cactus Wall",
+    "drops": null,
+    "description": "仙人掌墙是由仙人掌制成的背景墙。",
+    "item_category": "walls"
+  },
+  "仙灵木墙": {
+    "name": "仙灵木墙",
+    "image": "Feywood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "仙灵木",
+          "image": "Feywood.png"
+        }
+      ],
+      "result": {
+        "name": "仙灵木墙",
+        "image": "Feywood_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Feywood Wall",
+    "drops": null,
+    "description": "仙灵木墙是种由仙灵木制作的墙。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "以太墙": {
+    "name": "以太墙",
+    "image": "Aetherium_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 200 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "以太块",
+          "image": "Aetherium_Block.png"
+        }
+      ],
+      "result": {
+        "name": "以太墙",
+        "image": "Aetherium_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Aetherium Wall",
+    "drops": null,
+    "description": "以太墙是种用以太块制作的背景墙。",
+    "item_category": "walls"
+  },
+  "以太砖墙": {
+    "name": "以太砖墙",
+    "image": "Aetherium_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 200 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "以太砖",
+          "image": "Aetherium_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "以太砖墙",
+        "image": "Aetherium_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Aetherium Brick Wall",
+    "drops": null,
+    "description": "以太砖墙是种用以太砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "光面大理石墙": {
+    "name": "光面大理石墙",
+    "image": "Smooth_Marble_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "光面大理石块",
+          "image": "Smooth_Marble_Block.png"
+        }
+      ],
+      "result": {
+        "name": "光面大理石墙",
+        "image": "Smooth_Marble_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Smooth Marble Wall",
+    "drops": null,
+    "description": "光面大理石墙是用光面大理石块制造的背景墙。",
+    "item_category": "walls"
+  },
+  "光面沙岩墙": {
+    "name": "光面沙岩墙",
+    "image": "Smooth_Sandstone_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "光面沙岩",
+          "image": "Smooth_Sandstone.png"
+        }
+      ],
+      "result": {
+        "name": "光面沙岩墙",
+        "image": "Smooth_Sandstone_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Smooth Sandstone Wall",
+    "drops": null,
+    "description": "光面沙岩墙是一种用光面沙岩块制作的背景墙。它是唯一一种不是天然生成的沙岩墙。",
+    "item_category": "walls"
+  },
+  "光面花岗岩墙": {
+    "name": "光面花岗岩墙",
+    "image": "Smooth_Granite_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "光面花岗岩块",
+          "image": "Smooth_Granite_Block.png"
+        }
+      ],
+      "result": {
+        "name": "光面花岗岩墙",
+        "image": "Smooth_Granite_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Smooth Granite Wall",
+    "drops": null,
+    "description": "光面花岗岩墙是一种墙，可以用光面花岗岩块制作。",
+    "item_category": "walls"
+  },
+  "冰雪墙": {
+    "name": "冰雪墙",
+    "image": "Ice_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "冰雪块",
+          "image": "Ice_Block.png"
+        }
+      ],
+      "result": {
+        "name": "冰雪墙",
+        "image": "Ice_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Ice Wall",
+    "description": "冰雪墙是一种背景墙，可在冰雪生物群系中自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品，且只在电脑版、主机版、和移动版中能通过制作获得。它在被玩家放置时视为安全墙。",
+    "item_category": "walls"
+  },
+  "冰雪砖墙": {
+    "name": "冰雪砖墙",
+    "image": "Ice_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "冰雪砖",
+          "image": "Ice_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "冰雪砖墙",
+        "image": "Ice_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Ice Brick Wall",
+    "description": "冰雪砖墙是一种墙，用冰雪砖制成。",
+    "item_category": "walls"
+  },
+  "冷核砖墙": {
+    "name": "冷核砖墙",
+    "image": "Cryocore_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“来自域外的禁忌建筑材料”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "冷核砖",
+          "image": "Cryocore_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "冷核砖墙",
+        "image": "Cryocore_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Cryocore Brick Wall",
+    "description": "冷核砖墙是种用冷核砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "办公墙": {
+    "name": "办公墙",
+    "image": "Office_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "办公块",
+          "image": "Office_Block.png"
+        }
+      ],
+      "result": {
+        "name": "办公墙",
+        "image": "Office_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Office Wall",
+    "description": "办公墙是一种墙。和大多数制作出的墙一样，办公墙与NPC房屋兼容，并会阻止敌怪生成。",
+    "item_category": "walls"
+  },
+  "午夜彩纸墙": {
+    "name": "午夜彩纸墙",
+    "image": "Midnight_Confetti_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "午夜彩纸块",
+          "image": "Midnight_Confetti_Block.png"
+        }
+      ],
+      "result": {
+        "name": "午夜彩纸墙",
+        "image": "Midnight_Confetti_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Midnight Confetti Wall",
+    "description": "午夜彩纸墙是一种用午夜彩纸块制成的动画背景墙。它们描绘了下落的彩纸。它是少数几种动画背景墙之一。彩纸墙是其透明的版本。",
+    "item_category": "walls"
+  },
+  "南瓜墙": {
+    "name": "南瓜墙",
+    "image": "Pumpkin_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "南瓜",
+          "image": "Pumpkin.png"
+        }
+      ],
+      "result": {
+        "name": "南瓜墙",
+        "image": "Pumpkin_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Pumpkin Wall",
+    "description": "南瓜墙是一种用南瓜制成的背景墙。",
+    "item_category": "walls"
+  },
+  "史莱姆块墙": {
+    "name": "史莱姆块墙",
+    "image": "Slime_Block_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "史莱姆块",
+          "image": "Slime_Block.png"
+        }
+      ],
+      "result": {
+        "name": "史莱姆块墙",
+        "image": "Slime_Block_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Slime Block Wall",
+    "description": "史莱姆块墙是一种用史莱姆块制成的墙。",
+    "item_category": "walls"
+  },
+  "叶绿砖墙": {
+    "name": "叶绿砖墙",
+    "image": "Chlorophyte_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "叶绿砖",
+          "image": "Chlorophyte_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "叶绿砖墙",
+        "image": "Chlorophyte_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Chlorophyte Brick Wall",
+    "drops": null,
+    "description": "叶绿砖墙是可以手工制作的墙。放置时，呈现出深绿色的宝石状图案。",
+    "item_category": "walls"
+  },
+  "呆萌气球墙": {
+    "name": "呆萌气球墙",
+    "image": "Silly_Green_Balloon_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“闻起来像薄荷，象征着欢乐” （绿）“闻起来像泡泡糖，象征着幸福” （粉）“闻起来像薰衣草，象征着热情” （紫）",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "呆萌粉气球",
+          "image": "Silly_Pink_Balloon.png"
+        }
+      ],
+      "result": {
+        "name": "呆萌气球墙",
+        "image": "Silly_Pink_Balloon_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Silly Balloon Walls",
+    "drops": null,
+    "description": "呆萌气球墙是用派对期间购买自派对女孩的呆萌气球制作的背景墙。",
+    "item_category": "walls"
+  },
+  "哥特砖墙": {
+    "name": "哥特砖墙",
+    "image": "Gothic_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "哥特砖",
+          "image": "Gothic_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "哥特砖墙",
+        "image": "Gothic_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Gothic Brick Wall",
+    "drops": null,
+    "description": "哥特砖墙是一种由哥特砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "回声墙": {
+    "name": "回声墙",
+    "image": "Echo_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "只在回声视觉下才能看到",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "50 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "回声块",
+          "image": "Echo_Block.png"
+        }
+      ],
+      "result": {
+        "name": "回声墙",
+        "image": "Echo_Wall.png"
+      }
+    },
+    "drops": null,
+    "description": "回声墙是一种背景墙，由回声块制作。它在放置时完全隐形，且无法被玩家看到，除非他们装备了幽灵护目镜或在回声腔附近。和其他墙一样，当它被放置后可以阻止敌怪生成，可用于房屋。",
+    "en_name": "Echo Wall",
+    "item_category": "walls"
+  },
+  "土墙": {
+    "name": "土墙",
+    "image": "Dirt_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "土块",
+          "image": "Dirt_Block.png"
+        }
+      ],
+      "result": {
+        "name": "土墙",
+        "image": "Dirt_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Dirt Wall",
+    "description": "土墙是自然生成于大多数山洞中以及地表下的一种背景墙，被视作不安全墙。被摧毁时，它不会作为物品掉落，只能通过制作制作。被玩家放置时，它被视作安全墙。\n\n天然土墙是一件物品，能放置不安全的土墙。它看上去和土墙一样，并可通过将土墙丢入微光(电脑版、主机版、和移动版)来获得。",
+    "item_category": "walls"
+  },
+  "土墙（天然）": {
+    "name": "土墙（天然）",
+    "image": "Layered_Dirt_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "土块",
+          "image": "Dirt_Block.png"
+        }
+      ],
+      "result": {
+        "name": "土墙（天然）",
+        "image": "Layered_Dirt_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Dirt Walls",
+    "description": "破裂土墙、剥落土墙、分层土墙、和皱曲土墙是在地下层中自然生成的几种背景墙，被视为是不安全墙。它们在被摧毁时不会掉落为物品，只能通过制作得到。被玩家放置下来时，它们被视为安全墙。",
+    "item_category": "walls"
+  },
+  "坠落之星墙": {
+    "name": "坠落之星墙",
+    "image": "Fallen_Star_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "坠落之星块",
+          "image": "Fallen_Star_Block.png"
+        }
+      ],
+      "result": {
+        "name": "坠落之星墙",
+        "image": "Fallen_Star_Wall.png"
+      }
+    },
+    "en_name": "Fallen Star Wall",
+    "drops": null,
+    "description": "坠落之星墙是种由坠落之星块制作的墙。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "复活节墙": {
+    "name": "复活节墙",
+    "image": "Easter_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "复活节块",
+          "image": "Easter_Block.png"
+        }
+      ],
+      "result": {
+        "name": "复活节墙",
+        "image": "Easter_Wall.png"
+      }
+    },
+    "en_name": "Easter Wall",
+    "drops": null,
+    "description": "复活节墙是一种由复活节块制作的墙。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "夜明砖墙": {
+    "name": "夜明砖墙",
+    "image": "Luminite_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "09*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "夜明砖",
+          "image": "Luminite_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "夜明砖墙",
+        "image": "Luminite_Brick_Wall.png"
+      }
+    },
+    "en_name": "Luminite Brick Wall",
+    "drops": null,
+    "description": "夜明砖墙是一种用夜明砖制成的背景墙。它会阻止敌怪在放置了它的图格上生成。它可以用于为 NPC 造房屋。",
+    "item_category": "walls"
+  },
+  "大理石墙": {
+    "name": "大理石墙",
+    "image": "Marble_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "大理石块",
+          "image": "Marble_Block.png"
+        }
+      ],
+      "result": {
+        "name": "大理石墙",
+        "image": "Marble_Wall.png"
+      }
+    },
+    "en_name": "Marble Wall",
+    "drops": null,
+    "description": "大理石墙是一类背景墙，可在大理石洞中自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品。它也会作为大理石洞中的地下小屋的一部分生成，此时被视为安全墙。它在被玩家放置时也被视为安全墙。",
+    "item_category": "walls"
+  },
+  "大竹墙": {
+    "name": "大竹墙",
+    "image": "Large_Bamboo_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "大竹子",
+          "image": "Large_Bamboo.png"
+        }
+      ],
+      "result": {
+        "name": "大竹墙",
+        "image": "Large_Bamboo_Wall.png"
+      }
+    },
+    "en_name": "Large Bamboo Wall",
+    "drops": null,
+    "description": "大竹墙是用大竹子制作的墙，外表看起来是用比竹墙更粗的竹茎做成的。",
+    "item_category": "walls"
+  },
+  "天熔砖墙": {
+    "name": "天熔砖墙",
+    "image": "Heavenforge_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“来自域外的禁忌建筑材料”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "09*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "天熔砖",
+          "image": "Heavenforge_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "天熔砖墙",
+        "image": "Heavenforge_Brick_Wall.png"
+      }
+    },
+    "en_name": "Heavenforge Brick Wall",
+    "drops": null,
+    "description": "天熔砖墙是用天熔砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "宇宙余烬砖墙": {
+    "name": "宇宙余烬砖墙",
+    "image": "Cosmic_Ember_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“来自域外的禁忌建筑材料”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "宇宙余烬砖",
+          "image": "Cosmic_Ember_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "宇宙余烬砖墙",
+        "image": "Cosmic_Ember_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Cosmic Ember Brick Wall",
+    "description": "宇宙余烬砖墙是种用宇宙余烬砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "宝石墙": {
+    "name": "宝石墙",
+    "image": "Amethyst_Stone_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "琥珀石块",
+          "image": "Amber_Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "物品 ID",
+        "image": "Amber_Stone_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Gemstone Walls",
+    "description": "宝石墙是天然生成的背景墙，可在宝石洞中找到。这些天然生成的墙可以被锤摧毁，但不会掉落物品。这些墙也不会阻止敌怪生成，也不能用于房屋。\n\n在电脑版、主机版、和移动版中，这些墙能够由其对应的宝石块制作而来，它们可以像其他可制作的墙一样使用。",
+    "item_category": "walls"
+  },
+  "小雪怪皮毛墙": {
+    "name": "小雪怪皮毛墙",
+    "image": "Flinx_Fur_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "小雪怪皮毛块",
+          "image": "Flinx_Fur_Block.png"
+        }
+      ],
+      "result": {
+        "name": "小雪怪皮毛墙",
+        "image": "Flinx_Fur_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Flinx Fur Wall",
+    "description": "小雪怪皮毛墙是一种由小雪怪皮毛块制作的墙。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "尖刺墙": {
+    "name": "尖刺墙",
+    "image": "Spike_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "尖刺块",
+          "image": "Spike_Block.png"
+        }
+      ],
+      "result": {
+        "name": "尖刺墙",
+        "image": "Spike_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Spike Wall",
+    "description": "尖刺墙是一种墙。和大多数制作出的墙一样，尖刺墙与NPC房屋兼容，并会阻止敌怪生成。",
+    "item_category": "walls"
+  },
+  "巨石墙": {
+    "name": "巨石墙",
+    "image": "Boulder_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "巨石块",
+          "image": "Boulder_Block.png"
+        }
+      ],
+      "result": {
+        "name": "巨石墙",
+        "image": "Boulder_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Boulder Wall",
+    "drops": null,
+    "description": "巨石墙是一种由巨石块制作的墙。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "干草墙": {
+    "name": "干草墙",
+    "image": "Hay_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "干草",
+          "image": "Hay.png"
+        }
+      ],
+      "result": {
+        "name": "干草墙",
+        "image": "Hay_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Hay Wall",
+    "drops": null,
+    "description": "干草墙是一种由干草制成的墙。",
+    "item_category": "walls"
+  },
+  "彩纸墙": {
+    "name": "彩纸墙",
+    "image": "Confetti_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "彩纸块",
+          "image": "Confetti_Block.png"
+        }
+      ],
+      "result": {
+        "name": "彩纸墙",
+        "image": "Confetti_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Confetti Wall",
+    "drops": null,
+    "description": "彩纸墙是一种由彩纸块制成的背景墙。它像是有着下落彩纸的玻璃墙。它是少数几种动画背景墙之一。午夜彩纸墙是其不透明的版本。",
+    "item_category": "walls"
+  },
+  "彩虹砖墙": {
+    "name": "彩虹砖墙",
+    "image": "Rainbow_Brick_Wall.gif",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "彩虹砖",
+          "image": "Rainbow_Brick.gif"
+        }
+      ],
+      "result": {
+        "name": "彩虹砖墙",
+        "image": "Rainbow_Brick_Wall.gif",
+        "amount": "4"
+      }
+    },
+    "en_name": "Rainbow Brick Wall",
+    "drops": null,
+    "description": "彩虹砖墙是用彩虹砖制作的困难模式背景墙。像彩虹砖一样，它们不断地改变颜色。",
+    "item_category": "walls"
+  },
+  "微光瀑布墙": {
+    "name": "微光瀑布墙",
+    "image": "Shimmerfall_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "微光瀑布块",
+          "image": "Shimmerfall_Block.png"
+        }
+      ],
+      "result": {
+        "name": "微光瀑布墙",
+        "image": "Shimmerfall_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Shimmerfall Wall",
+    "drops": null,
+    "description": "微光瀑布墙少数几种有动画的背景墙之一。 它描绘了流动的微光。",
+    "item_category": "walls"
+  },
+  "新月墙": {
+    "name": "新月墙",
+    "image": "Crescent_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "月盘块",
+          "image": "Moonplate_Block.png"
+        }
+      ],
+      "result": {
+        "name": "新月墙",
+        "image": "Crescent_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Crescent Wall",
+    "description": "新月墙是一种墙，可由月盘块制作而成，或由飞盘墙微光嬗变获得。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "日耀砖墙": {
+    "name": "日耀砖墙",
+    "image": "Solar_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "日耀砖",
+          "image": "Solar_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "日耀砖墙",
+        "image": "Solar_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Solar Brick Wall",
+    "description": "日耀砖墙是一种用日耀砖制成的背景墙。",
+    "item_category": "walls"
+  },
+  "星云砖墙": {
+    "name": "星云砖墙",
+    "image": "Nebula_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "星云砖",
+          "image": "Nebula_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "星云砖墙",
+        "image": "Nebula_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Nebula Brick Wall",
+    "drops": null,
+    "description": "星云砖墙是用星云砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "星尘砖墙": {
+    "name": "星尘砖墙",
+    "image": "Stardust_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "星尘砖",
+          "image": "Stardust_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "星尘砖墙",
+        "image": "Stardust_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Stardust Brick Wall",
+    "drops": null,
+    "description": "星尘砖墙是一种用星尘砖制成的背景墙。",
+    "item_category": "walls"
+  },
+  "星旋砖墙": {
+    "name": "星旋砖墙",
+    "image": "Vortex_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "星旋砖",
+          "image": "Vortex_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "星旋砖墙",
+        "image": "Vortex_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Vortex Brick Wall",
+    "drops": null,
+    "description": "星旋砖墙是一种用星旋砖制成的背景墙。",
+    "item_category": "walls"
+  },
+  "星星皇家砖墙": {
+    "name": "星星皇家砖墙",
+    "image": "Star_Royale_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“来自域外的禁忌建筑材料”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "星星皇家砖",
+          "image": "Star_Royale_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "星星皇家砖墙",
+        "image": "Star_Royale_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Star Royale Brick Wall",
+    "drops": null,
+    "description": "星星皇家砖墙是种用星星皇家砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "星芒砖墙": {
+    "name": "星芒砖墙",
+    "image": "Astra_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“来自域外的禁忌建筑材料”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "星芒砖",
+          "image": "Astra_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "星芒砖墙",
+        "image": "Astra_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Astra Brick Wall",
+    "drops": null,
+    "description": "星芒砖墙是种用星芒砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "晶莹宝石墙": {
+    "name": "晶莹宝石墙",
+    "image": "Amethyst_Gemspark_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "琥珀晶莹宝石块",
+          "image": "Amber_Gemspark_Block.png"
+        }
+      ],
+      "result": {
+        "name": "物品 ID",
+        "image": "Amber_Gemspark_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Gemspark Walls",
+    "drops": null,
+    "description": "晶莹宝石墙是晶莹宝石块的墙等价物，分为普通和黯淡版本。和晶莹宝石块一样，普通晶莹宝石墙会发光但对于 NPC 房屋不算有效光源。和晶莹宝石块不同的是，晶莹宝石墙并不充当机械，其普通和黯淡状态在放置之后无法切换。放置在物块后面的普通晶莹宝石墙会让此物块呈现为完全照亮的状态，类似于夜明涂料的效果。",
+    "item_category": "walls"
+  },
+  "暗影木墙": {
+    "name": "暗影木墙",
+    "image": "Shadewood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "暗影木",
+          "image": "Shadewood.png"
+        }
+      ],
+      "result": {
+        "name": "暗影木墙",
+        "image": "Shadewood_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Shadewood Wall",
+    "drops": null,
+    "description": "暗影木墙是一种由暗影木制成的墙。",
+    "item_category": "walls"
+  },
+  "暗黑天界砖墙": {
+    "name": "暗黑天界砖墙",
+    "image": "Dark_Celestial_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“来自域外的禁忌建筑材料”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "暗黑天界砖",
+          "image": "Dark_Celestial_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "暗黑天界砖墙",
+        "image": "Dark_Celestial_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "description": "暗黑天界砖墙是用暗黑天界砖制作的背景墙。",
+    "en_name": "Dark Celestial Brick Wall",
+    "item_category": "walls"
+  },
+  "月锈砖墙": {
+    "name": "月锈砖墙",
+    "image": "Lunar_Rust_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“来自域外的禁忌建筑材料”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "月锈砖",
+          "image": "Lunar_Rust_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "月锈砖墙",
+        "image": "Lunar_Rust_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Lunar Rust Brick Wall",
+    "drops": null,
+    "description": "月锈砖墙是用月锈砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "木墙": {
+    "name": "木墙",
+    "image": "Wood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "木材",
+          "image": "Wood.png"
+        }
+      ],
+      "result": {
+        "name": "木墙",
+        "image": "Wood_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Wood Wall",
+    "drops": null,
+    "description": "木墙是一种用木材制成的背景墙。和其他墙一样，当它被放置后可以阻止敌怪生成，可用于房屋。",
+    "item_category": "walls"
+  },
+  "松木墙": {
+    "name": "松木墙",
+    "image": "Pine_Wood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "松木",
+          "image": "Pine_Wood.png"
+        }
+      ],
+      "result": {
+        "name": "松木墙",
+        "image": "Pine_Wood_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Pine Wood Wall",
+    "drops": null,
+    "description": "松木墙是用松木制作的背景墙。",
+    "item_category": "walls"
+  },
+  "松树墙": {
+    "name": "松树墙",
+    "image": "Pine_Tree_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "松树块",
+          "image": "Pine_Tree_Block.png"
+        }
+      ],
+      "result": {
+        "name": "松树墙",
+        "image": "Pine_Tree_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Pine Tree Wall",
+    "drops": null,
+    "description": "松树墙是用松树块制作的背景墙。",
+    "item_category": "walls"
+  },
+  "栅栏": {
+    "name": "栅栏",
+    "image": "Wooden_Fence.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "14",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "乌木",
+          "image": "Ebonwood.png"
+        }
+      ],
+      "result": {
+        "name": "物品 ID",
+        "image": "Ebonwood_Fence.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Fences",
+    "drops": null,
+    "description": "栅栏是一种安全墙，视觉上很单薄，其中大多数都有透明的部分，可以看到背景。仅有的没有透明部分的栅栏是棕榈栅栏、红木栅栏、和暗影木栅栏。不像大多数其他安全墙，它们允许除棕榈树外的野生植物和树及其变种生长。安全的草墙、花墙、和丛林墙在功能上和栅栏完全相同。",
+    "item_category": "walls"
+  },
+  "棕榈木墙": {
+    "name": "棕榈木墙",
+    "image": "Palm_Wood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "棕榈木",
+          "image": "Palm_Wood.png"
+        }
+      ],
+      "result": {
+        "name": "棕榈木墙",
+        "image": "Palm_Wood_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Palm Wood Wall",
+    "drops": null,
+    "description": "棕榈木墙是一种用棕榈木制作的背景墙。",
+    "item_category": "walls"
+  },
+  "氖苔藓砖墙": {
+    "name": "氖苔藓砖墙",
+    "image": "Neon_Moss_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "氖苔藓砖",
+          "image": "Neon_Moss_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "氖苔藓砖墙",
+        "image": "Neon_Moss_Brick_Wall.png"
+      }
+    },
+    "drops": null,
+    "description": "氖苔藓砖墙是种砖背景墙，和其制作原料氖苔藓和氖苔藓砖一样在黑暗中会发光。",
+    "item_category": "walls"
+  },
+  "氙苔藓砖墙": {
+    "name": "氙苔藓砖墙",
+    "image": "Xenon_Moss_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "氙苔藓砖",
+          "image": "Xenon_Moss_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "氙苔藓砖墙",
+        "image": "Xenon_Moss_Brick_Wall.png"
+      }
+    },
+    "drops": null,
+    "description": "氙苔藓砖墙是种砖背景墙，和其制作原料氙苔藓和氙苔藓砖一样在黑暗中会发光。",
+    "item_category": "walls"
+  },
+  "氦苔藓砖墙": {
+    "name": "氦苔藓砖墙",
+    "image": "Helium_Moss_Brick_Wall.gif",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "氦苔藓砖",
+          "image": "Helium_Moss_Brick.gif"
+        }
+      ],
+      "result": {
+        "name": "氦苔藓砖墙",
+        "image": "Helium_Moss_Brick_Wall.gif"
+      }
+    },
+    "drops": null,
+    "description": "氦苔藓砖墙是种砖背景墙，在黑暗区域有很高的可见性，并能照亮它前面的任何前景物块，类似于降低了亮度的晶莹宝石墙。和氦苔藓砖一样，它的光芒按彩虹色谱循环。",
+    "item_category": "walls"
+  },
+  "氩苔藓砖墙": {
+    "name": "氩苔藓砖墙",
+    "image": "Argon_Moss_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "氩苔藓砖",
+          "image": "Argon_Moss_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "氩苔藓砖墙",
+        "image": "Argon_Moss_Brick_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Argon Moss Brick Wall",
+    "description": "氩苔藓砖墙是种砖背景墙，和其制作原料氩苔藓和氩苔藓砖一样在黑暗中会发光。",
+    "item_category": "walls"
+  },
+  "氪苔藓砖墙": {
+    "name": "氪苔藓砖墙",
+    "image": "Krypton_Moss_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "氪苔藓砖",
+          "image": "Krypton_Moss_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "氪苔藓砖墙",
+        "image": "Krypton_Moss_Brick_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Krypton Moss Brick Wall",
+    "description": "氪苔藓砖墙是种砖背景墙，和其制作原料氪苔藓和氪苔藓砖一样在黑暗中会发光。",
+    "item_category": "walls"
+  },
+  "水族墙": {
+    "name": "水族墙",
+    "image": "Aquarium_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "水族块",
+          "image": "Aquarium_Block.png"
+        }
+      ],
+      "result": {
+        "name": "水族墙",
+        "image": "Aquarium_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Aquarium Wall",
+    "description": "水族墙是一种由水族块制作的墙。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "水星砖墙": {
+    "name": "水星砖墙",
+    "image": "Mercury_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“来自域外的禁忌建筑材料”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "09*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "水星砖",
+          "image": "Mercury_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "水星砖墙",
+        "image": "Mercury_Brick_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Mercury Brick Wall",
+    "description": "水星砖墙是用水星砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "水晶块墙": {
+    "name": "水晶块墙",
+    "image": "Crystal_Block_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "水晶块",
+          "image": "Crystal_Block.png"
+        }
+      ],
+      "result": {
+        "name": "水晶块墙",
+        "image": "Crystal_Block_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Crystal Block Wall",
+    "description": "水晶块墙是一种可以用水晶块制作的墙。它呈紫蓝色，并且色调很深。",
+    "item_category": "walls"
+  },
+  "沙岩墙": {
+    "name": "沙岩墙",
+    "image": "Sandstone_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "沙岩块",
+          "image": "Sandstone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "沙岩墙",
+        "image": "Sandstone_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Sandstone Walls",
+    "description": "沙岩墙、黑檀沙岩墙、猩红沙岩墙、和珍珠沙岩墙是一类背景墙，会在地下沙漠中自然生成且被视为不安全墙。地下沙漠默认生成普通的沙岩墙，如果暴露在腐化、猩红和神圣下，它们可能会分别转化为对应的变体种类。转化后的沙岩墙可能会进一步将转化扩大到其他墙上。有关更多信息，请参阅生物群系蔓延。不安全的沙岩墙在被摧毁时不会掉落物品，且仅在电脑版、主机版、和移动版中能通过制作获得。它们在被玩家放置时视为安全墙。\n\n危险沙岩墙(电脑版、主机版、和移动版)是一件物品，能放置不安全的沙岩墙。它看上去和沙岩墙一样，并可通过将沙岩墙丢入微光(电脑版、主机版、和移动版)来获得。",
+    "item_category": "walls"
+  },
+  "沙岩砖墙": {
+    "name": "沙岩砖墙",
+    "image": "Sandstone_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "沙岩砖",
+          "image": "Sandstone_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "沙岩砖墙",
+        "image": "Sandstone_Brick_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Sandstone Brick Wall",
+    "description": "沙岩砖墙是自然生成于金字塔内的一种背景墙。当它被摧毁时会作为物品掉落，也可以通过制作得到它。它总是被视为是安全墙。",
+    "item_category": "walls"
+  },
+  "沙漠化石墙": {
+    "name": "沙漠化石墙",
+    "image": "Desert_Fossil_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "沙漠化石",
+          "image": "Desert_Fossil.png"
+        }
+      ],
+      "result": {
+        "name": "沙漠化石墙",
+        "image": "Desert_Fossil_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Desert Fossil Wall",
+    "description": "沙漠化石墙是一种背景墙，可以用沙漠化石制作得到。",
+    "item_category": "walls"
+  },
+  "泡泡糖块墙": {
+    "name": "泡泡糖块墙",
+    "image": "Bubblegum_Block_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "泡泡糖块",
+          "image": "Bubblegum_Block.png"
+        }
+      ],
+      "result": {
+        "name": "泡泡糖块墙",
+        "image": "Bubblegum_Block_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Bubblegum Block Wall",
+    "description": "泡泡糖块墙是用泡泡糖块制作的背景墙。",
+    "item_category": "walls"
+  },
+  "泥墙": {
+    "name": "泥墙",
+    "image": "Mud_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "泥块",
+          "image": "Mud_Block.png"
+        }
+      ],
+      "result": {
+        "name": "泥墙",
+        "image": "Mud_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Mud Wall",
+    "description": "泥墙是一种背景墙，可在丛林中自然生成，偶尔也会在地下丛林中自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品，且只在电脑版、主机版、和移动版上能通过制作获得。它在被玩家放置时视为安全墙。\n\n如果用深蓝溶液喷洒泥墙，它们会变为不安全的蘑菇墙。如果用绿溶液喷洒这些蘑菇墙，它们将恢复为不安全的泥墙或不安全的丛林墙，具体似乎是由所在地层高度决定的。",
+    "item_category": "walls"
+  },
+  "泥灰墙": {
+    "name": "泥灰墙",
+    "image": "Red_Stucco_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "灰泥灰",
+          "image": "Gray_Stucco.png"
+        }
+      ],
+      "result": {
+        "name": "泥灰墙",
+        "image": "Gray_Stucco_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Stucco Walls",
+    "description": "泥灰墙是用泥灰制作的背景墙。",
+    "item_category": "walls"
+  },
+  "泥石砖墙": {
+    "name": "泥石砖墙",
+    "image": "Mudstone_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "泥石砖",
+          "image": "Mudstone_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "泥石砖墙",
+        "image": "Mudstone_Brick_Wall.png"
+      }
+    },
+    "en_name": "Mudstone Brick Wall",
+    "drops": null,
+    "description": "泥石砖墙是自然生成于部分世界中的丛林神龛内的一种背景墙。当它被摧毁时会作为物品掉落，也可以通过制作得到它。它总是被视为是安全墙。",
+    "item_category": "walls"
+  },
+  "洞壁": {
+    "name": "洞壁",
+    "image": "Rocky_Dirt_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "洞壁",
+        "image": "Old_Stone_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Cave Walls",
+    "drops": null,
+    "description": "洞穴土墙、崎岖石墙、断裂石墙、斑驳石墙、古老石墙、岩石土墙、粗糙土墙、钟乳石墙、和破旧石墙是在地下和洞穴层中自然生成的几种背景墙，被视为是不安全墙。它们在被摧毁时不会掉落为物品，只在电脑版、主机版、和移动版中可通过制作得到。被玩家放置下来时，它们被视为安全墙。\n\n崎岖石墙、断裂石墙、斑驳石墙、和钟乳石墙在前代主机版和任天堂3DS版上不可用。",
+    "item_category": "walls"
+  },
+  "瀑布墙": {
+    "name": "瀑布墙",
+    "image": "Waterfall_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "瀑布块",
+          "image": "Waterfall_Block.png"
+        }
+      ],
+      "result": {
+        "name": "瀑布墙",
+        "image": "Waterfall_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Waterfall Wall",
+    "drops": null,
+    "description": "瀑布墙是少数几种动画背景墙之一。它描绘了流动的水。",
+    "item_category": "walls"
+  },
+  "火星管道墙": {
+    "name": "火星管道墙",
+    "image": "Martian_Conduit_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "火星管道护板",
+          "image": "Martian_Conduit_Plating.png"
+        }
+      ],
+      "result": {
+        "name": "火星管道墙",
+        "image": "Martian_Conduit_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Martian Conduit Wall",
+    "drops": null,
+    "description": "火星管道墙是一种用火星管道护板制作的背景墙。",
+    "item_category": "walls"
+  },
+  "灰砖墙": {
+    "name": "灰砖墙",
+    "image": "Gray_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "灰砖",
+          "image": "Gray_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "灰砖墙",
+        "image": "Gray_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Gray Brick Wall",
+    "drops": null,
+    "description": "灰砖墙是一种用灰砖制作的背景墙。它们只能刷成白色或黑色或棕色。",
+    "item_category": "walls"
+  },
+  "熔岩墙": {
+    "name": "熔岩墙",
+    "image": "Obsidian_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "狱石",
+          "image": "Hellstone.png"
+        }
+      ],
+      "result": {
+        "name": "熔岩墙",
+        "image": "Ember_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Lava Walls",
+    "drops": null,
+    "description": "黑曜石墙、余烬墙、灰渣墙、岩浆墙、和阴燃石墙是在洞穴层较深处中自然生成的几种背景墙，被视为是不安全墙。它们在被摧毁时不会掉落为物品，只在电脑版、主机版、和移动版中可通过制作得到。被玩家放置下来时，它们被视为安全墙。\n\nThe Ember Stone Walls, Cinder Stone Walls, Magma Stone Walls, and Smouldering Stone Walls在前代主机版和任天堂3DS版上不可用。",
+    "item_category": "walls"
+  },
+  "熔岩瀑布墙": {
+    "name": "熔岩瀑布墙",
+    "image": "Lavafall_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "熔岩瀑布块",
+          "image": "Lavafall_Block.png"
+        }
+      ],
+      "result": {
+        "name": "熔岩瀑布墙",
+        "image": "Lavafall_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Lavafall Wall",
+    "description": "熔岩瀑布墙是少数几种动画背景墙之一。它描绘了流动的熔岩，并且以和熔岩类似的方式发光。尽管它是由熔岩制成的，但它在熔岩中依然会被烧掉。",
+    "item_category": "walls"
+  },
+  "熔岩苔藓砖墙": {
+    "name": "熔岩苔藓砖墙",
+    "image": "Lava_Moss_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "熔岩苔藓砖",
+          "image": "Lava_Moss_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "熔岩苔藓砖墙",
+        "image": "Lava_Moss_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Lava Moss Brick Wall",
+    "description": "熔岩苔藓砖墙是种砖背景墙，在黑暗区域有很高的可见性，并能照亮它前面的任何前景物块，类似于降低了亮度的晶莹宝石墙。",
+    "item_category": "walls"
+  },
+  "狱石砖墙": {
+    "name": "狱石砖墙",
+    "image": "Hellstone_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "狱石砖",
+          "image": "Hellstone_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "狱石砖墙",
+        "image": "Hellstone_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Hellstone Brick Wall",
+    "description": "狱石砖墙是一类背景墙，可在地狱中的废墟建筑内自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品，且只能在电脑版、主机版、和移动版中通过制作获得。它在被玩家放置时视为安全墙。",
+    "item_category": "walls"
+  },
+  "猩红墙": {
+    "name": "猩红墙",
+    "image": "Crimson_Crust_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "猩红石块",
+          "image": "Crimstone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "猩红墙",
+        "image": "Crimson_Teeth_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Crimson Walls",
+    "description": "猩红硬皮墙、猩红疮痂墙、猩红尖牙墙、和猩红水疱墙是在地下猩红之地中自然生成的几种背景墙，被视为是不安全墙。它们在被摧毁时不会掉落为物品，只在电脑版、主机版、和移动版中可通过制作得到。被玩家放置下来时，它们被视为安全墙。",
+    "item_category": "walls"
+  },
+  "猩红石墙": {
+    "name": "猩红石墙",
+    "image": "Crimstone_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "猩红石块",
+          "image": "Crimstone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "猩红石墙",
+        "image": "Crimstone_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Crimstone Wall",
+    "description": "猩红石墙是一种背景墙，可在猩红之地中自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品，且只在电脑版、主机版、和移动版中能通过制作获得。它在被玩家放置时视为安全墙。\n\n环境改造枪/泰拉改造枪(电脑版、主机版、和移动版)（用红溶液）和血水会将石墙转化为不安全的猩红石墙。\n\n猩红石墙会将猩红之地蔓延至邻近的纯净墙。更多信息请参阅生物群系蔓延。",
+    "item_category": "walls"
+  },
+  "猩红石砖墙": {
+    "name": "猩红石砖墙",
+    "image": "Crimstone_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "猩红石砖",
+          "image": "Crimstone_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "猩红石砖墙",
+        "image": "Crimstone_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Crimstone Brick Wall",
+    "description": "猩红石砖墙是一种长得像密布血污的砖墙一样的可放置物品。",
+    "item_category": "walls"
+  },
+  "猩红矿砖墙": {
+    "name": "猩红矿砖墙",
+    "image": "Crimtane_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "猩红矿砖",
+          "image": "Crimtane_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "猩红矿砖墙",
+        "image": "Crimtane_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Crimtane Brick Wall",
+    "description": "猩红矿砖墙是一种背景墙。它发出微弱的红光。",
+    "item_category": "walls"
+  },
+  "王朝墙": {
+    "name": "王朝墙",
+    "image": "White_Dynasty_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "王朝木",
+          "image": "Dynasty_Wood.png"
+        }
+      ],
+      "result": {
+        "name": "王朝墙",
+        "image": "White_Dynasty_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Dynasty Walls",
+    "description": "白王朝墙和蓝王朝墙是由旅商所出售的王朝木制作的背景墙。",
+    "item_category": "walls"
+  },
+  "玻璃墙": {
+    "name": "玻璃墙",
+    "image": "Glass_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        }
+      ],
+      "result": {
+        "name": "玻璃墙",
+        "image": "Glass_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Glass Wall",
+    "description": "玻璃墙是一种透明的墙，可用作既能让自然光进入，同时也可以防止敌怪的生成的窗户。它们由玻璃制成，也可以在漂浮岛上的房子里自然产生。它们可以被制成花窗玻璃。",
+    "item_category": "walls"
+  },
+  "珊瑚礁墙": {
+    "name": "珊瑚礁墙",
+    "image": "Reef_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "珊瑚礁块",
+          "image": "Reef_Block.png"
+        }
+      ],
+      "result": {
+        "name": "珊瑚礁墙",
+        "image": "Reef_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Reef Wall",
+    "description": "珊瑚礁墙是种背景墙。它们是用珊瑚礁块在工作台处制作的。",
+    "item_category": "walls"
+  },
+  "珍珠木墙": {
+    "name": "珍珠木墙",
+    "image": "Pearlwood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "珍珠木",
+          "image": "Pearlwood.png"
+        }
+      ],
+      "result": {
+        "name": "珍珠木墙",
+        "image": "Pearlwood_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Pearlwood Wall",
+    "description": "珍珠木墙是一种由珍珠木制成的墙。",
+    "item_category": "walls"
+  },
+  "珍珠石墙": {
+    "name": "珍珠石墙",
+    "image": "Pearlstone_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "珍珠石块",
+          "image": "Pearlstone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "珍珠石墙",
+        "image": "Pearlstone_Wall.png"
+      }
+    },
+    "en_name": "Pearlstone Wall",
+    "drops": null,
+    "description": "珍珠石墙是一种背景墙，可在已被神圣接管的腐化/猩红裂隙中找到，且被视为不安全墙。它在被摧毁时不会掉落为物品，且只在电脑版、主机版、和移动版中能通过制作获得。它在被玩家放置时视为安全墙。\n\n环境改造枪/泰拉改造枪(电脑版、主机版、和移动版)（用蓝溶液）和圣水会将石墙转化为不安全的珍珠石墙。\n\n珍珠石墙会将神圣之地蔓延至邻近的纯净墙。更多信息请参阅生物群系蔓延。",
+    "item_category": "walls"
+  },
+  "珍珠石砖墙": {
+    "name": "珍珠石砖墙",
+    "image": "Pearlstone_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "珍珠石砖",
+          "image": "Pearlstone_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "珍珠石砖墙",
+        "image": "Pearlstone_Brick_Wall.png"
+      }
+    },
+    "en_name": "Pearlstone Brick Wall",
+    "drops": null,
+    "description": "珍珠石砖墙是一种用珍珠石砖制作的墙。和大多数其他墙一样，它们能阻止敌怪生成，可以用于 NPC房屋。",
+    "item_category": "walls"
+  },
+  "生命木墙": {
+    "name": "生命木墙",
+    "image": "Living_Wood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "木材",
+          "image": "Wood.png"
+        }
+      ],
+      "result": {
+        "name": "生命木墙",
+        "image": "Living_Wood_Wall.png"
+      }
+    },
+    "en_name": "Living Wood Wall",
+    "drops": null,
+    "description": "生命木墙是一种背景墙。它可在生命树中自然生成，且被视为不安全墙，在被摧毁时不会掉落为物品；它也可在生命红木树中自然生成，且被视为安全墙，在被摧毁时会掉落为物品。它也能通过制作获得。它在被玩家放置时视为安全墙。\n\n不安全的生命木墙只允许金鱼、蜗牛、老鼠、蠕虫、兔兔、和侏儒在其前面生成[1]。此效果在Don't dig up和Get fixed boi世界中无效。\n\n疯长的生命木墙是可放置的不安全的生命木墙物品。它在视觉上与安全的生命木墙完全相同，可通过将后者丢入微光来获得。",
+    "item_category": "walls"
+  },
+  "生命树叶墙": {
+    "name": "生命树叶墙",
+    "image": "Living_Leaf_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "木材",
+          "image": "Wood.png"
+        }
+      ],
+      "result": {
+        "name": "生命树叶墙",
+        "image": "Living_Leaf_Wall.png"
+      }
+    },
+    "en_name": "Living Leaf Wall",
+    "drops": null,
+    "description": "生命树叶墙是一种墙。就像其他玩家制作的墙一样，它可用于有效的房屋。",
+    "item_category": "walls"
+  },
+  "病变块墙": {
+    "name": "病变块墙",
+    "image": "Lesion_Block_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "病变块",
+          "image": "Lesion_Block.png"
+        }
+      ],
+      "result": {
+        "name": "病变块墙",
+        "image": "Lesion_Block_Wall.png"
+      }
+    },
+    "en_name": "Lesion Block Wall",
+    "drops": null,
+    "description": "病变块墙是一种背景墙。和大多数其他墙一样，它们能阻止敌怪生成，可以用于 NPC房屋。",
+    "item_category": "walls"
+  },
+  "石墙": {
+    "name": "石墙",
+    "image": "Stone_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "石墙",
+        "image": "Stone_Wall.png"
+      }
+    },
+    "en_name": "Stone Wall",
+    "drops": null,
+    "description": "石墙是一种用石块制成的背景墙。和其他墙一样，当它被放置后可以阻止敌怪生成，可用于房屋。",
+    "item_category": "walls"
+  },
+  "石板墙": {
+    "name": "石板墙",
+    "image": "Stone_Slab_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "石板",
+          "image": "Stone_Slab.png"
+        }
+      ],
+      "result": {
+        "name": "石板墙",
+        "image": "Stone_Slab_Wall.png"
+      }
+    },
+    "en_name": "Stone Slab Wall",
+    "drops": null,
+    "description": "石板墙是一种背景墙，可用于房屋。它呈现出石板的外观。鉴于石板的配方，制作它比制作灰砖墙更有效率。它们只能漆成白、黑或棕色。",
+    "item_category": "walls"
+  },
+  "硬化沙墙": {
+    "name": "硬化沙墙",
+    "image": "Hardened_Sand_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "硬化沙块",
+          "image": "Hardened_Sand_Block.png"
+        }
+      ],
+      "result": {
+        "name": "硬化沙墙",
+        "image": "Hardened_Sand_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Hardened Sand Walls",
+    "drops": null,
+    "description": "硬化沙墙、硬化黑檀沙墙、硬化猩红沙墙和硬化珍珠沙墙是一类背景墙，可作为不安全墙发现于地下沙漠。地下沙漠默认生成的是普通的硬化沙墙，但分别可在暴露于腐化、猩红和神圣的情况下转换为相应的版本。转化后的硬化沙墙还可以进一步扩散这种转化。参见生物群系蔓延以获取更多信息。不安全的硬化沙墙在被摧毁时不会掉落为物品，只能通过制作的方法获得。被玩家所放置的墙会被作为安全墙处理。\n\n危险硬化沙墙(电脑版、主机版、和移动版)是用于放置不安全的硬化沙墙的物品。它们在视觉上一致，可以通过将硬化沙墙扔进微光(电脑版、主机版、和移动版)的方法获得。",
+    "item_category": "walls"
+  },
+  "神圣墙": {
+    "name": "神圣墙",
+    "image": "Hallowed_Prism_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "珍珠石块",
+          "image": "Pearlstone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "神圣墙",
+        "image": "Hallowed_Prism_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Hallowed Walls",
+    "drops": null,
+    "description": "神圣棱柱墙、神圣洞穴墙、神圣碎块墙、和神圣结晶墙是在地下神圣之地中自然生成的几种背景墙，被视为是不安全墙。它们在被摧毁时不会掉落为物品，只在电脑版、主机版、和移动版中可通过制作得到。被玩家放置下来时，它们被视为安全墙。",
+    "item_category": "walls"
+  },
+  "神圣砖墙": {
+    "name": "神圣砖墙",
+    "image": "Hallowed_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "神圣砖",
+          "image": "Hallowed_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "神圣砖墙",
+        "image": "Hallowed_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Hallowed Brick Wall",
+    "drops": null,
+    "description": "神圣砖墙是一种困难模式的背景墙，由神圣砖制作而成。",
+    "item_category": "walls"
+  },
+  "禁戒墙": {
+    "name": "禁戒墙",
+    "image": "Forbidden_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "禁戒块",
+          "image": "Forbidden_Block.png"
+        }
+      ],
+      "result": {
+        "name": "禁戒墙",
+        "image": "Forbidden_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Forbidden Wall",
+    "drops": null,
+    "description": "禁戒墙是种由禁戒块制作的困难模式背景墙。",
+    "item_category": "walls"
+  },
+  "秘银砖墙": {
+    "name": "秘银砖墙",
+    "image": "Mythril_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "秘银砖",
+          "image": "Mythril_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "秘银砖墙",
+        "image": "Mythril_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Mythril Brick Wall",
+    "drops": null,
+    "description": "秘银砖墙是用秘银砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "竹墙": {
+    "name": "竹墙",
+    "image": "Bamboo_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "竹子",
+          "image": "Bamboo.png"
+        }
+      ],
+      "result": {
+        "name": "竹墙",
+        "image": "Bamboo_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Bamboo Wall",
+    "drops": null,
+    "description": "竹墙是一种墙。和大多数制作出的墙一样，竹墙与NPC房屋兼容，并会阻止敌怪生成。",
+    "item_category": "walls"
+  },
+  "精金梁墙": {
+    "name": "精金梁墙",
+    "image": "Adamantite_Beam_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "精金梁",
+          "image": "Adamantite_Beam.png"
+        }
+      ],
+      "result": {
+        "name": "精金梁墙",
+        "image": "Adamantite_Beam_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Adamantite Beam Wall",
+    "drops": null,
+    "description": "精金梁墙是一种用精金梁制作的墙。",
+    "item_category": "walls"
+  },
+  "糖棒墙": {
+    "name": "糖棒墙",
+    "image": "Candy_Cane_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "糖棒块",
+          "image": "Candy_Cane_Block.png"
+        }
+      ],
+      "result": {
+        "name": "糖棒墙",
+        "image": "Candy_Cane_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Candy Cane Walls",
+    "drops": null,
+    "description": "糖棒墙是一类由糖棒块制作而来的背景墙。它们只能在圣诞节期间获得，但在圣诞节过后依旧会保留在世界中。",
+    "item_category": "walls"
+  },
+  "红木墙": {
+    "name": "红木墙",
+    "image": "Rich_Mahogany_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "红木",
+          "image": "Rich_Mahogany.png"
+        }
+      ],
+      "result": {
+        "name": "红木墙",
+        "image": "Rich_Mahogany_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Rich Mahogany Wall",
+    "drops": null,
+    "description": "红木墙是一种背景墙，会自然生成于地下丛林内的地下小屋内，以及部分世界中的丛林神龛内。当它被摧毁时会作为物品掉落，也可以通过制作得到它。它总是被视为是安全墙。",
+    "item_category": "walls"
+  },
+  "红砖墙": {
+    "name": "红砖墙",
+    "image": "Red_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "红砖",
+          "image": "Red_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "红砖墙",
+        "image": "Red_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Red Brick Wall",
+    "drops": null,
+    "description": "红砖墙是一种用红砖制成的背景墙。它会阻止敌怪在它所放置的地方生成，如果覆盖了整个房间，则可以用于制造 NPC 房屋。它可以用任何可用的漆色粉刷，红漆除外，它不会对外观造成任何变化。",
+    "item_category": "walls"
+  },
+  "腐化墙": {
+    "name": "腐化墙",
+    "image": "Corrupt_Growth_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "黑檀石块",
+          "image": "Ebonstone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "腐化墙",
+        "image": "Corrupt_Tendril_Wall.png"
+      }
+    },
+    "en_name": "Corrupt Walls",
+    "drops": null,
+    "description": "腐化墙是自然生成的背景墙，出现在腐化中。这些自然出现的墙可以用锤摧毁，但不会掉落任何东西。这些墙也不会阻止敌怪的生成，也不能用于合格的房屋。\n\n在电脑版、主机版、和移动版上，这些墙可以用黑檀石制作，可以像其他可制作的墙一样使用。",
+    "item_category": "walls"
+  },
+  "臭臭墙": {
+    "name": "臭臭墙",
+    "image": "Poo_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "臭臭",
+          "image": "Poo.png"
+        }
+      ],
+      "result": {
+        "name": "臭臭墙",
+        "image": "Poo_Wall.png"
+      }
+    },
+    "en_name": "Poo Wall",
+    "drops": null,
+    "description": "臭臭墙是种用臭臭制作的背景墙。",
+    "item_category": "walls"
+  },
+  "花岗岩墙": {
+    "name": "花岗岩墙",
+    "image": "Granite_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "花岗岩块",
+          "image": "Granite_Block.png"
+        }
+      ],
+      "result": {
+        "name": "花岗岩墙",
+        "image": "Granite_Wall.png"
+      }
+    },
+    "en_name": "Granite Wall",
+    "drops": null,
+    "description": "花岗岩墙是一类背景墙，可在花岗岩洞中自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品。它也会作为花岗岩洞中的地下小屋的一部分生成，此时被视为安全墙。它在被玩家放置时也被视为安全墙。",
+    "item_category": "walls"
+  },
+  "苔藓墙": {
+    "name": "苔藓墙",
+    "image": "Green_Mossy_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "棕苔藓",
+          "image": "Brown_Moss.png"
+        }
+      ],
+      "result": {
+        "name": "苔藓墙",
+        "image": "Brown_Mossy_Wall.png"
+      }
+    },
+    "en_name": "Mossy Walls",
+    "drops": null,
+    "description": "绿苔藓墙、棕苔藓墙、红苔藓墙、蓝苔藓墙和紫苔藓墙是一类背景墙，它们可以自然生成在地下和洞穴地层的苔藓腔中，并被算作不安全墙。被摧毁时，它们不会作为物品掉落，并只能在电脑版、主机版、和移动版中通过制作获取。被玩家所放置的墙会被作为安全墙处理。",
+    "item_category": "walls"
+  },
+  "荧光砖墙": {
+    "name": "荧光砖墙",
+    "image": "Iridescent_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "荧光砖",
+          "image": "Iridescent_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "荧光砖墙",
+        "image": "Iridescent_Brick_Wall.png"
+      }
+    },
+    "en_name": "Iridescent Brick Wall",
+    "drops": null,
+    "description": "荧光砖墙是自然生成于部分世界中的丛林神龛内的一种背景墙。当它被摧毁时会作为物品掉落，也可以通过制作得到它。它总是被视为是安全墙。\n\n荧光砖墙反射的是照亮它的光线的颜色。",
+    "item_category": "walls"
+  },
+  "落沙墙": {
+    "name": "落沙墙",
+    "image": "Sandfall_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "你可以安全观看的落沙",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "落沙块",
+          "image": "Sandfall_Block.png"
+        }
+      ],
+      "result": {
+        "name": "落沙墙",
+        "image": "Sandfall_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Sandfall Wall",
+    "description": "落沙墙是少数几种动画背景墙之一。它描绘了下落的沙。",
+    "item_category": "walls"
+  },
+  "蓝星墙": {
+    "name": "蓝星墙",
+    "image": "Blue_Starry_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "蓝星块",
+          "image": "Blue_Starry_Block.png"
+        }
+      ],
+      "result": {
+        "name": "蓝星墙",
+        "image": "Blue_Starry_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Blue Starry Wall",
+    "description": "蓝星墙是种用蓝星块制作而成的装饰性墙。它是少数几种带有动画效果的背景墙之一。",
+    "item_category": "walls"
+  },
+  "蘑菇墙": {
+    "name": "蘑菇墙",
+    "image": "Mushroom_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "发光蘑菇",
+          "image": "Glowing_Mushroom.png"
+        }
+      ],
+      "result": {
+        "name": "蘑菇墙",
+        "image": "Mushroom_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Mushroom Wall",
+    "description": "蘑菇墙是一种背景墙，可在发光蘑菇生物群系中的地下小屋里自然生成，被视为安全墙。它在被玩家放置时也被视为安全墙。\n\n向泥墙或丛林墙喷洒深蓝溶液会产生不安全的蘑菇墙。这种墙被摧毁时不会掉落为物品。",
+    "item_category": "walls"
+  },
+  "蘑菇矿护板墙": {
+    "name": "蘑菇矿护板墙",
+    "image": "Shroomite_Plating_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "蘑菇矿护板",
+          "image": "Shroomite_Plating.png"
+        }
+      ],
+      "result": {
+        "name": "蘑菇矿护板墙",
+        "image": "Shroomite_Plating_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Shroomite Plating Wall",
+    "description": "蘑菇矿护板墙是一种用蘑菇矿护板制成的墙。",
+    "item_category": "walls"
+  },
+  "蜂巢墙": {
+    "name": "蜂巢墙",
+    "image": "Hive_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "蜂巢",
+          "image": "Hive.png"
+        }
+      ],
+      "result": {
+        "name": "蜂巢墙",
+        "image": "Hive_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Hive Wall",
+    "description": "蜂巢墙是一种背景墙，可以在蜂巢中自然生成，且被视为是不安全墙。它被摧毁时会作为一个物品掉落，也可以通过制作得到。当它被玩家放置下来时，被视为是安全墙。不像蜂巢块，它并不需要蜂巢魔棒来放置。",
+    "item_category": "walls"
+  },
+  "蜂蜜瀑布墙": {
+    "name": "蜂蜜瀑布墙",
+    "image": "Honeyfall_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "蜂蜜瀑布块",
+          "image": "Honeyfall_Block.png"
+        }
+      ],
+      "result": {
+        "name": "蜂蜜瀑布墙",
+        "image": "Honeyfall_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Honeyfall Wall",
+    "description": "蜂蜜瀑布墙是少数几种动画背景墙之一。它描绘了流动的蜂蜜。",
+    "item_category": "walls"
+  },
+  "蜘蛛墙": {
+    "name": "蜘蛛墙",
+    "image": "Spider_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "蛛网",
+          "image": "Cobweb.png"
+        }
+      ],
+      "result": {
+        "name": "蜘蛛墙",
+        "image": "Spider_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "description": "蜘蛛墙是一类背景墙，可在蜘蛛窝中自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品，且只能在电脑版、主机版、和移动版中通过制作获得。它在被玩家放置时视为安全墙。\n\n蜘蛛栖息墙(电脑版、主机版、和移动版)是一件物品，可以放置不安全的蜘蛛墙。它看上去和蜘蛛墙一样，并可通过将蜘蛛墙丢入微光(电脑版、主机版、和移动版)来获得。\n\n不安全的蜘蛛墙的前方会随时间生成蛛网，使其成为后者的可再生来源。这些蛛网在被摧毁时只有1/4 (25%)几率产生蛛网物品。",
+    "item_category": "walls"
+  },
+  "蜘蛛窝墙": {
+    "name": "蜘蛛窝墙",
+    "image": "Spider_Nest_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "蜘蛛窝块",
+          "image": "Spider_Nest_Block.png"
+        }
+      ],
+      "result": {
+        "name": "蜘蛛窝墙",
+        "image": "Spider_Nest_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "description": "蜘蛛窝墙是一种墙。如同大多数人工放置的墙体一样，蜘蛛窝墙也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "血肉块墙": {
+    "name": "血肉块墙",
+    "image": "Flesh_Block_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "血肉块",
+          "image": "Flesh_Block.png"
+        }
+      ],
+      "result": {
+        "name": "血肉块墙",
+        "image": "Flesh_Block_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Flesh Block Wall",
+    "drops": null,
+    "description": "血肉块墙是一种墙。与大多数放置的墙一样， 血肉块墙与 NPC 房屋兼容，并会阻止怪生成。",
+    "item_category": "walls"
+  },
+  "远古地牢砖墙": {
+    "name": "远古地牢砖墙",
+    "image": "Ancient_Blue_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "砖墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "远古粉砖",
+          "image": "Ancient_Pink_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "远古地牢砖墙",
+        "image": "Ancient_Pink_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ancient Dungeon Brick Walls",
+    "drops": null,
+    "description": "远古地牢砖墙是一类由相应的远古地牢砖制作而来的墙。",
+    "item_category": "walls"
+  },
+  "远古狱石砖墙": {
+    "name": "远古狱石砖墙",
+    "image": "Ancient_Hellstone_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "远古狱石砖",
+          "image": "Ancient_Hellstone_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "远古狱石砖墙",
+        "image": "Ancient_Hellstone_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ancient Hellstone Brick Wall",
+    "drops": null,
+    "description": "远古狱石砖墙是种用远古狱石砖制作的背景墙。其外观基于1.2之前的狱石砖墙的外观。",
+    "item_category": "walls"
+  },
+  "远古秘银砖墙": {
+    "name": "远古秘银砖墙",
+    "image": "Ancient_Mythril_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "远古秘银砖",
+          "image": "Ancient_Mythril_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "远古秘银砖墙",
+        "image": "Ancient_Mythril_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ancient Mythril Brick Wall",
+    "drops": null,
+    "description": "远古秘银砖墙是种用远古秘银砖制作的背景墙。其外观基于1.2之前的秘银砖墙的外观。",
+    "item_category": "walls"
+  },
+  "远古金砖墙": {
+    "name": "远古金砖墙",
+    "image": "Ancient_Gold_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "远古金砖",
+          "image": "Ancient_Gold_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "远古金砖墙",
+        "image": "Ancient_Gold_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ancient Gold Brick Wall",
+    "drops": null,
+    "description": "远古金砖墙是种用远古金砖制作的背景墙。其外观基于1.2之前的金砖墙的外观。",
+    "item_category": "walls"
+  },
+  "远古钴砖墙": {
+    "name": "远古钴砖墙",
+    "image": "Ancient_Cobalt_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "远古钴砖",
+          "image": "Ancient_Cobalt_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "远古钴砖墙",
+        "image": "Ancient_Cobalt_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ancient Cobalt Brick Wall",
+    "drops": null,
+    "description": "远古钴砖墙是种用远古钴砖制作的背景墙。其外观基于1.2之前的钴砖墙的外观。",
+    "item_category": "walls"
+  },
+  "远古铜砖墙": {
+    "name": "远古铜砖墙",
+    "image": "Ancient_Copper_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "远古铜砖",
+          "image": "Ancient_Copper_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "远古铜砖墙",
+        "image": "Ancient_Copper_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ancient Copper Brick Wall",
+    "drops": null,
+    "description": "远古铜砖墙是种用远古铜砖制作的背景墙。其外观基于1.2之前的铜砖墙的外观。",
+    "item_category": "walls"
+  },
+  "远古银砖墙": {
+    "name": "远古银砖墙",
+    "image": "Ancient_Silver_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "远古银砖",
+          "image": "Ancient_Silver_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "远古银砖墙",
+        "image": "Ancient_Silver_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ancient Silver Brick Wall",
+    "drops": null,
+    "description": "远古银砖墙是种用远古银砖制作的背景墙。其外观基于1.2之前的银砖墙的外观。",
+    "item_category": "walls"
+  },
+  "远古黑曜石砖墙": {
+    "name": "远古黑曜石砖墙",
+    "image": "Ancient_Obsidian_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "远古黑曜石砖",
+          "image": "Ancient_Obsidian_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "远古黑曜石砖墙",
+        "image": "Ancient_Obsidian_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ancient Obsidian Brick Wall",
+    "drops": null,
+    "description": "远古黑曜石砖墙是种用远古黑曜石砖制作的背景墙。其外观基于1.2之前的黑曜石砖墙的外观。",
+    "item_category": "walls"
+  },
+  "金星墙": {
+    "name": "金星墙",
+    "image": "Gold_Starry_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "金星块",
+          "image": "Gold_Starry_Block.png"
+        }
+      ],
+      "result": {
+        "name": "金星墙",
+        "image": "Gold_Starry_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Gold Starry Wall",
+    "description": "金星墙是一种可由金星块制作而成的背景墙。它是少数几种带有动画效果的背景墙之一。",
+    "item_category": "walls"
+  },
+  "金砖墙": {
+    "name": "金砖墙",
+    "image": "Gold_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "金砖",
+          "image": "Gold_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "金砖墙",
+        "image": "Gold_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Gold Brick Wall",
+    "description": "金砖墙是自然生成于部分世界中的丛林神龛内的一种背景墙。当它被摧毁时会作为物品掉落，也可以通过制作得到它。它总是被视为是安全墙。",
+    "item_category": "walls"
+  },
+  "针叶木墙": {
+    "name": "针叶木墙",
+    "image": "Boreal_Wood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "针叶木",
+          "image": "Boreal_Wood.png"
+        }
+      ],
+      "result": {
+        "name": "针叶木墙",
+        "image": "Boreal_Wood_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Boreal Wood Wall",
+    "description": "针叶木墙是一种用针叶木制作的背景墙。",
+    "item_category": "walls"
+  },
+  "钛石块墙": {
+    "name": "钛石块墙",
+    "image": "Titanstone_Block_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "钛石块",
+          "image": "Titanstone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "钛石块墙",
+        "image": "Titanstone_Block_Wall.png"
+      }
+    },
+    "drops": null,
+    "description": "钛石块墙是一种用钛石块制成的墙。",
+    "item_category": "walls"
+  },
+  "钨砖墙": {
+    "name": "钨砖墙",
+    "image": "Tungsten_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "钨砖",
+          "image": "Tungsten_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "钨砖墙",
+        "image": "Tungsten_Brick_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Tungsten Brick Wall",
+    "description": "钨砖墙是一种用钨砖制成的背景墙。和大多数墙一样，钨砖墙会阻止敌怪在放置了它的图格上生成，亦可用于为 NPC 造房屋。",
+    "item_category": "walls"
+  },
+  "钯金柱墙": {
+    "name": "钯金柱墙",
+    "image": "Palladium_Column_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "钯金柱",
+          "image": "Palladium_Column.png"
+        }
+      ],
+      "result": {
+        "name": "钯金柱墙",
+        "image": "Palladium_Column_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Palladium Column Wall",
+    "description": "钯金柱墙是一种用钯金柱制作的墙。",
+    "item_category": "walls"
+  },
+  "钴砖墙": {
+    "name": "钴砖墙",
+    "image": "Cobalt_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "钴砖",
+          "image": "Cobalt_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "钴砖墙",
+        "image": "Cobalt_Brick_Wall.png"
+      }
+    },
+    "en_name": "Cobalt Brick Wall",
+    "drops": null,
+    "description": "钴砖墙是一种用钴砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "铁砖墙": {
+    "name": "铁砖墙",
+    "image": "Iron_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "铁砖",
+          "image": "Iron_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "铁砖墙",
+        "image": "Iron_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Iron Brick Wall",
+    "drops": null,
+    "description": "铁砖墙是一种背景墙。",
+    "item_category": "walls"
+  },
+  "铂金砖墙": {
+    "name": "铂金砖墙",
+    "image": "Platinum_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "铂金砖",
+          "image": "Platinum_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "铂金砖墙",
+        "image": "Platinum_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Platinum Brick Wall",
+    "drops": null,
+    "description": "铂金砖墙是一种用铂金砖制作的背景墙。它会阻止敌怪在放置了它的图格上生成。它可以用于为 NPC 造房屋。",
+    "item_category": "walls"
+  },
+  "铅砖墙": {
+    "name": "铅砖墙",
+    "image": "Lead_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "铅砖",
+          "image": "Lead_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "铅砖墙",
+        "image": "Lead_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Lead Brick Wall",
+    "drops": null,
+    "description": "铅砖墙是一种背景墙。",
+    "item_category": "walls"
+  },
+  "铜护板墙": {
+    "name": "铜护板墙",
+    "image": "Copper_Plating_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "铜护板",
+          "image": "Copper_Plating.png"
+        }
+      ],
+      "result": {
+        "name": "铜护板墙",
+        "image": "Copper_Plating_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Copper Plating Wall",
+    "drops": null,
+    "description": "铜护板墙是种由铜护板制成的背景墙。",
+    "item_category": "walls"
+  },
+  "铜砖墙": {
+    "name": "铜砖墙",
+    "image": "Copper_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "铜砖",
+          "image": "Copper_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "铜砖墙",
+        "image": "Copper_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Copper Brick Wall",
+    "description": "铜砖墙是一种用铜砖制作的背景墙。和大多数其他墙一样，它们能阻止敌怪生成，可以用于 NPC房屋。",
+    "item_category": "walls"
+  },
+  "银砖墙": {
+    "name": "银砖墙",
+    "image": "Silver_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "银砖",
+          "image": "Silver_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "银砖墙",
+        "image": "Silver_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Silver Brick Wall",
+    "description": "银砖墙是一种用银砖制作的背景墙。在它放置的地方敌怪不会生成，可以用于 NPC 房屋。它们很像是纹理颜色更深的银砖。",
+    "item_category": "walls"
+  },
+  "锡护板墙": {
+    "name": "锡护板墙",
+    "image": "Tin_Plating_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "锡护板",
+          "image": "Tin_Plating.png"
+        }
+      ],
+      "result": {
+        "name": "锡护板墙",
+        "image": "Tin_Plating_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Tin Plating Wall",
+    "description": "锡护板墙是用锡护板制成的背景墙。由于需要锡，如果不使用提炼机，它就无法在生成有铜的世界里制作出来。",
+    "item_category": "walls"
+  },
+  "锡砖墙": {
+    "name": "锡砖墙",
+    "image": "Tin_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "锡砖",
+          "image": "Tin_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "锡砖墙",
+        "image": "Tin_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Tin Brick Wall",
+    "description": "锡砖墙是自然生成于部分世界中的丛林神龛内的一种背景墙。当它被摧毁时会作为物品掉落，也可以通过制作得到它。它总是被视为是安全墙。\n\n锡砖墙是铜砖墙在生成锡的世界中的等价物。但是，和铜砖墙不同，它具有暗淡、单调的色调，并且纹理较少。",
+    "item_category": "walls"
+  },
+  "阴森木墙": {
+    "name": "阴森木墙",
+    "image": "Spooky_Wood_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "阴森木",
+          "image": "Spooky_Wood.png"
+        }
+      ],
+      "result": {
+        "name": "阴森木墙",
+        "image": "Spooky_Wood_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "description": "阴森木墙是一种背景墙，外观上像是染成紫色的木墙。它可以用阴森木制作出来。",
+    "item_category": "walls"
+  },
+  "降雪墙": {
+    "name": "降雪墙",
+    "image": "Snowfall_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“比水晶雪球酷多了”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "降雪块",
+          "image": "Snowfall_Block.png"
+        }
+      ],
+      "result": {
+        "name": "降雪墙",
+        "image": "Snowfall_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "description": "降雪墙是少数几种动画背景墙之一。它描绘了下落的雪。",
+    "item_category": "walls"
+  },
+  "陨石砖墙": {
+    "name": "陨石砖墙",
+    "image": "Meteorite_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "陨石砖",
+          "image": "Meteorite_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "陨石砖墙",
+        "image": "Meteorite_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Meteorite Brick Wall",
+    "drops": null,
+    "description": "陨石砖墙是一种用陨石砖在工作台处制作的墙。这主要作为装饰，但可以用于 NPC房屋。就像陨石砖，陨石砖墙放置后会发出少量光线。",
+    "item_category": "walls"
+  },
+  "雪墙": {
+    "name": "雪墙",
+    "image": "Snow_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "雪块",
+          "image": "Snow_Block.png"
+        }
+      ],
+      "result": {
+        "name": "雪墙",
+        "image": "Snow_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Snow Wall",
+    "drops": null,
+    "description": "雪墙是一种背景墙，可在雪原生物群系中自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品，且只在电脑版、主机版、和移动版中能通过制作获得。它在被玩家放置时视为安全墙。",
+    "item_category": "walls"
+  },
+  "雪砖墙": {
+    "name": "雪砖墙",
+    "image": "Snow_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "雪砖",
+          "image": "Snow_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "雪砖墙",
+        "image": "Snow_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Snow Brick Wall",
+    "drops": null,
+    "description": "雪砖墙是一种用雪砖制作的背景墙。",
+    "item_category": "walls"
+  },
+  "飞盘墙": {
+    "name": "飞盘墙",
+    "image": "Disc_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "日盘块",
+          "image": "Sunplate_Block.png"
+        }
+      ],
+      "result": {
+        "name": "飞盘墙",
+        "image": "Disc_Wall.png"
+      }
+    },
+    "en_name": "Disc Wall",
+    "drops": null,
+    "description": "飞盘墙是自然生成于漂浮岛上的一种背景墙。当它被摧毁时会作为物品掉落，也可以通过制作得到它。它总是被视为是安全墙。",
+    "item_category": "walls"
+  },
+  "骨块墙": {
+    "name": "骨块墙",
+    "image": "Bone_Block_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "骨头",
+          "image": "Bone.png"
+        }
+      ],
+      "result": {
+        "name": "骨块墙",
+        "image": "Bone_Block_Wall.png"
+      }
+    },
+    "en_name": "Bone Block Wall",
+    "drops": null,
+    "description": "骨块墙是一种用骨头制作的墙。虽然其名字和骨块比较像，但它从来未曾能够被制作出，也无法用来制作。",
+    "item_category": "walls"
+  },
+  "魔矿砖墙": {
+    "name": "魔矿砖墙",
+    "image": "Demonite_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "魔矿砖",
+          "image": "Demonite_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "魔矿砖墙",
+        "image": "Demonite_Brick_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Demonite Brick Wall",
+    "description": "魔矿砖墙是一种由魔矿砖制作的墙。就如魔矿砖一般，放置状态下会发出淡淡的蓝色光芒。",
+    "item_category": "walls"
+  },
+  "鸟妖墙": {
+    "name": "鸟妖墙",
+    "image": "Harpy_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "鸟妖块",
+          "image": "Harpy_Block.png"
+        }
+      ],
+      "result": {
+        "name": "鸟妖墙",
+        "image": "Harpy_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Harpy Wall",
+    "description": "鸟妖墙是一种由鸟妖块制作的墙。如同大多数人工放置的墙体一样，它也满足NPC房屋的需求，且可防止敌怪生成。",
+    "item_category": "walls"
+  },
+  "黑曜石砖墙": {
+    "name": "黑曜石砖墙",
+    "image": "Obsidian_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "黑曜石砖",
+          "image": "Obsidian_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "黑曜石砖墙",
+        "image": "Obsidian_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "drops": null,
+    "en_name": "Obsidian Brick Wall",
+    "description": "黑曜石砖墙是一种背景墙，可在地狱中的废墟建筑内自然生成，且被视为不安全墙。它在被摧毁时会掉落为物品，也能通过制作获得。它在被玩家放置时视为安全墙。",
+    "item_category": "walls"
+  },
+  "黑檀石墙": {
+    "name": "黑檀石墙",
+    "image": "Ebonstone_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "黑檀石块",
+          "image": "Ebonstone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "黑檀石墙",
+        "image": "Ebonstone_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ebonstone Wall",
+    "drops": null,
+    "description": "黑檀石墙是一种背景墙，可在腐化之地中自然生成，且被视为不安全墙。它在被摧毁时不会掉落为物品，且只在电脑版、主机版、和移动版中能通过制作获得。它在被玩家放置时视为安全墙。\n\n环境改造枪/泰拉改造枪(电脑版、主机版、和移动版)（用紫溶液）和邪水会将石墙转化为不安全的黑檀石墙。\n\n黑檀石墙会将腐化之地蔓延至邻近的纯净墙。更多信息请参阅生物群系蔓延。",
+    "item_category": "walls"
+  },
+  "黑檀石砖墙": {
+    "name": "黑檀石砖墙",
+    "image": "Ebonstone_Brick_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "黑檀石砖",
+          "image": "Ebonstone_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "黑檀石砖墙",
+        "image": "Ebonstone_Brick_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Ebonstone Brick Wall",
+    "drops": null,
+    "description": "黑檀石砖墙是由黑檀石砖制作而成的墙。和砖一样，黑檀石砖墙不会传播腐化之地。",
+    "item_category": "walls"
+  },
+  "黯淡晶莹宝石墙": {
+    "name": "黯淡晶莹宝石墙",
+    "image": "Offline_Amethyst_Gemspark_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "琥珀晶莹宝石块",
+          "image": "Amber_Gemspark_Block.png"
+        }
+      ],
+      "result": {
+        "name": "物品 ID",
+        "image": "Offline_Amber_Gemspark_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Offline Gemspark Walls",
+    "drops": null,
+    "description": "黯淡晶莹宝石墙是一类由晶莹宝石块制作而成的制作出的墙。不像晶莹宝石块那样，它们不会发出光，并且也不是一种机械，晶莹宝石墙是它的发光版。",
+    "item_category": "walls"
+  },
+  "齿轮墙": {
+    "name": "齿轮墙",
+    "image": "Cog_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“生产力提高200%”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "齿轮",
+          "image": "Cog.png"
+        }
+      ],
+      "result": {
+        "name": "齿轮墙",
+        "image": "Cog_Wall.png",
+        "amount": "4"
+      }
+    },
+    "en_name": "Cog Wall",
+    "drops": null,
+    "description": "齿轮墙是由齿轮制成的背景墙。这种墙的动画类似于放置的齿轮。",
+    "item_category": "walls"
+  }
+}

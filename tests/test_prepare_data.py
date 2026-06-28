@@ -134,12 +134,31 @@ def test_description_needs_zh_refresh_detects_english_on_chinese_item():
     assert not _description_needs_zh_refresh(item)
 
 
-def test_items_json_is_valid():
-    items_path = ROOT / "data" / "terraria_query" / "items.json"
-    with open(items_path, encoding="utf-8") as f:
+def test_items_data_is_valid():
+    categories_dir = ROOT / "data" / "terraria_query" / "categories"
+    manifest = categories_dir / "manifest.json"
+    assert manifest.is_file(), "categories/manifest.json 不存在"
+    with open(manifest, encoding="utf-8") as f:
         data = json.load(f)
-    assert isinstance(data, dict)
-    assert len(data) > 1000
+    assert data.get("total", 0) > 1000
+
+
+def test_assign_items_to_categories_priority():
+    from category_data import assign_items_to_categories
+
+    items = {
+        "铜币": {"name": "铜币", "wiki_title": "铜币"},
+        "天顶剑": {"name": "天顶剑", "wiki_title": "天顶剑"},
+        "天使翅膀": {"name": "天使翅膀", "page_type": "wing", "from_wings_table": True},
+    }
+    title_to_keys = {
+        "铜币": frozenset({"coins", "misc"}),
+        "天顶剑": frozenset({"weapons", "misc"}),
+    }
+    buckets = assign_items_to_categories(items, title_to_keys)
+    assert "铜币" in buckets["coins"]
+    assert "天顶剑" in buckets["weapons"]
+    assert "天使翅膀" in buckets["wings"]
 
 
 def test_parse_mount_page_shrimpy_truffle():

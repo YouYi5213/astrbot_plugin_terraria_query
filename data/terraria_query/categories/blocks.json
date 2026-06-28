@@ -1,0 +1,6048 @@
+{
+  "沙岩块": {
+    "name": "沙岩块",
+    "image": "Sandstone_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "固化机",
+      "ingredients": [
+        {
+          "name": "沙块",
+          "image": "Sand_Block.png"
+        },
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "沙岩块",
+        "image": "Sandstone_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Sandstone Blocks",
+    "description": "沙岩块是一种物块，天然生成于地下沙漠生物群系中。像沙块和硬化沙块一样，它在困难模式中是会被转化的物块，具有腐化之地、猩红之地、和神圣之地的对应物：分别为黑檀沙岩、猩红沙岩和珍珠沙岩。",
+    "item_category": "blocks"
+  },
+  "糖棒块": {
+    "name": "糖棒块",
+    "image": "Candy_Cane_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "糖棒墙",
+          "image": "Candy_Cane_Wall.png",
+          "amount": "4"
+        }
+      ],
+      "result": {
+        "name": "糖棒块",
+        "image": "Candy_Cane_Block.png"
+      }
+    },
+    "en_name": "Candy Cane Block",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "20–49",
+              "chance": "16.8%15.68% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "20–49",
+              "chance": "16.8%15.68% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "20–49",
+              "chance": "16.8%15.68% （困难模式）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "糖棒块是从圣诞节事件中获得的礼物中以 20–49 的堆叠形式放置的物块，在困难模式之前中几率为 16.803％，在困难模式则为 15.683％。它们除了作为建筑材料和制作糖棒墙外毫无价值。尽管它们都是糖棒块，但它们放置在一起时并不会相互“融合”。",
+    "item_category": "blocks"
+  },
+  "硬化沙块": {
+    "name": "硬化沙块",
+    "image": "Hardened_Sand_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "固化机",
+      "ingredients": [
+        {
+          "name": "沙块",
+          "image": "Sand_Block.png"
+        },
+        {
+          "name": "土块",
+          "image": "Dirt_Block.png"
+        }
+      ],
+      "result": {
+        "name": "硬化沙块",
+        "image": "Hardened_Sand_Block.png"
+      }
+    },
+    "en_name": "Hardened Sand Blocks",
+    "drops": null,
+    "description": "硬化沙块是物块的一种，和沙岩块一起构成了地下沙漠生物群系。它看起来类似于沙块，但有不同的纹理并且颜色略有不同。不像沙，它不受重力影响。和所有基于沙的物块一样，它有腐化、猩红、和神圣对应物：分别是硬化黑檀沙、硬化猩红沙、和硬化珍珠沙。",
+    "item_category": "blocks"
+  },
+  "冰雪块": {
+    "name": "冰雪块",
+    "image": "Ice_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "冰冻平台",
+          "image": "Frozen_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "冰雪块",
+        "image": "Ice_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Ice Blocks",
+    "description": "冰雪块是一种常见的物块，它常常出现在雪原生物群系和冰雪生物群系的雪块附近。它们可以用镐或者钻头挖取。冰雪块摩擦力很低，会使得在它们上面行走的玩家在停下或变向时打滑。这种影响可以通过装备溜冰鞋或其他由它制造的配饰来减轻。\n\n冰雪块可以通过生物群系蔓延转化为三种其他类型：",
+    "item_category": "blocks"
+  },
+  "木材": {
+    "name": "木材",
+    "image": "Any_Wood.gif",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "木架",
+          "image": "Wood_Shelf.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "木材",
+        "image": "Wood.png"
+      }
+    },
+    "en_name": "Woods",
+    "drops": null,
+    "description": "木材是一类物块，通常用斧头或链锯砍倒树后获得。常规木材来自森林树、景观树、生命树、和地下或洞穴地层中的地下小屋。可以通过将橡实放置在地表以上的草或修剪过的草上来种植森林树，可以通过将樱花树苗或黄柳树苗放置在任何草上来种植景观树（但若放置在腐化或猩红草变体种类上则改为产出乌木或暗影木）。\n\n除了常规木材以外，有 11 种其他类型的木材。包含任何木材的制作配方可以使用任意类型的木材，除了王朝木、仙灵木、和松木。",
+    "item_category": "blocks"
+  },
+  "乌木": {
+    "name": "乌木",
+    "image": "Ebonwood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "乌木平台",
+          "image": "Ebonwood_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "乌木",
+        "image": "Ebonwood.png"
+      }
+    },
+    "en_name": "Ebonwood",
+    "drops": null,
+    "description": "乌木是一种木材，可以从各腐化生物群系中天然生长的乌木树和乌木棕榈树处收集。可以通过将橡实放置在地表以上的腐化草或腐化丛林草上来种植乌木树，可以通过将橡实放置在地表以上的黑檀沙块上来种植乌木棕榈树。",
+    "item_category": "blocks"
+  },
+  "书卷块": {
+    "name": "书卷块",
+    "image": "Librarian_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "书架",
+      "ingredients": [
+        {
+          "name": "任何木材",
+          "image": "Any_Wood.gif",
+          "amount": "20"
+        },
+        {
+          "name": "书",
+          "image": "Book.png"
+        }
+      ],
+      "result": {
+        "name": "书卷块",
+        "image": "Librarian_Block.png",
+        "amount": "20"
+      }
+    },
+    "en_name": "Librarian Block",
+    "drops": null,
+    "description": "书卷块是种困难模式之前的物块。其主要用途是制作书卷家具和书卷墙。",
+    "item_category": "blocks"
+  },
+  "云": {
+    "name": "云",
+    "image": "Cloud.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "防止掉落伤害 (电脑版、主机版、和移动版)",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "云平台",
+          "image": "Cloud_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "云",
+        "image": "Cloud.png"
+      }
+    },
+    "en_name": "Cloud",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "天域箱",
+              "image": "Skyware_Chest.png",
+              "quantity": "50–100",
+              "chance": "1/1 (100%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "50–100",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "50–100",
+              "chance": "1/2 (50%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "天域箱",
+              "image": "Skyware_Chest.png",
+              "quantity": "50–100",
+              "chance": "1/1 (100%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "50–100",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "50–100",
+              "chance": "1/2 (50%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "天域箱",
+              "image": "Skyware_Chest.png",
+              "quantity": "50–100",
+              "chance": "1/1 (100%)"
+            },
+            {
+              "name": "天空匣",
+              "image": "Sky_Crate.png",
+              "quantity": "50–100",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "天蓝匣",
+              "image": "Azure_Crate.png",
+              "quantity": "50–100",
+              "chance": "1/2 (50%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "云是一种物块，与雨云物块一同出现于漂浮岛下方；在电脑版、主机版、和移动版中，它们还会成组出现在天域箱、天空匣和天蓝匣中。云块显示为实心块，但是光线能穿透它们，就像它们那个位置是空的一般。在电脑版、主机版、和移动版中，落在它们上面不会造成掉落伤害。",
+    "item_category": "blocks"
+  },
+  "仙灵木": {
+    "name": "仙灵木",
+    "image": "Feywood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "仙灵木平台",
+          "image": "Feywood_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "仙灵木",
+        "image": "Feywood.png"
+      }
+    },
+    "en_name": "Feywood",
+    "drops": null,
+    "description": "仙灵木是一种木材。它可被制成仙灵木家具和仙灵木墙。",
+    "item_category": "blocks"
+  },
+  "以太块": {
+    "name": "以太块",
+    "image": "Aetherium_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 50 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "以太墙",
+          "image": "Aetherium_Wall.png",
+          "amount": "4"
+        }
+      ],
+      "result": {
+        "name": "以太块",
+        "image": "Aetherium_Block.png"
+      }
+    },
+    "en_name": "Aetherium Block",
+    "drops": null,
+    "description": "以太块是一种物块，会在微光与任何其他液体接触时生成。与冰雪块相似，以太块表面的摩擦力很低，这使得在其上行走的玩家会在停止或变向时滑行。这种效果能通过装备溜冰鞋或其升级物消除。以太块在放置时会发光。",
+    "item_category": "blocks"
+  },
+  "光面大理石块": {
+    "name": "光面大理石块",
+    "image": "Smooth_Marble_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "大理石平台",
+          "image": "Marble_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "光面大理石块",
+        "image": "Smooth_Marble_Block.png"
+      }
+    },
+    "en_name": "Smooth Marble Block",
+    "drops": null,
+    "description": "光面大理石块是大理石块的更光滑的版本。它们可以用大理石块在工作台出制作出来，并提供了全套家具套装。",
+    "item_category": "blocks"
+  },
+  "光面沙岩": {
+    "name": "光面沙岩",
+    "image": "Smooth_Sandstone.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "沙岩平台",
+          "image": "Sandstone_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "光面沙岩",
+        "image": "Smooth_Sandstone.png"
+      }
+    },
+    "en_name": "Smooth Sandstone",
+    "drops": null,
+    "description": "光面沙岩是一种用沙岩块制作的物块。它可以用于制作沙岩家具套装。",
+    "item_category": "blocks"
+  },
+  "光面花岗岩块": {
+    "name": "光面花岗岩块",
+    "image": "Smooth_Granite_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "花岗岩平台",
+          "image": "Granite_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "光面花岗岩块",
+        "image": "Smooth_Granite_Block.png"
+      }
+    },
+    "en_name": "Smooth Granite Block",
+    "drops": null,
+    "description": "光面花岗岩块是一种有着深蓝色外观的物块。此物块可以制造，也可以在花岗岩洞中的地下房屋内作为墙出现。它们可用于制作花岗岩家具套装。",
+    "item_category": "blocks"
+  },
+  "办公块": {
+    "name": "办公块",
+    "image": "Office_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "办公平台",
+          "image": "Office_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "办公块",
+        "image": "Office_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Office Block",
+    "description": "办公块是一种困难模式之前的物块。它们可被用于制作办公家具和办公墙。",
+    "item_category": "blocks"
+  },
+  "午夜彩纸块": {
+    "name": "午夜彩纸块",
+    "image": "Midnight_Confetti_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "彩纸",
+          "image": "Confetti.png"
+        },
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        }
+      ],
+      "result": {
+        "name": "午夜彩纸块",
+        "image": "Midnight_Confetti_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Midnight Confetti Block",
+    "description": "午夜彩纸块是一种会显示下落的彩纸的动画物块。它是少数几种用水晶球作为制作站的物品之一。它是彩纸块的一种暗色、不透明的版本。",
+    "item_category": "blocks"
+  },
+  "南瓜": {
+    "name": "南瓜",
+    "image": "Pumpkin.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "25",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "南瓜平台",
+          "image": "Pumpkin_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "南瓜",
+        "image": "Pumpkin.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Pumpkin",
+    "description": "南瓜是一种物块制作材料。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "南瓜是一种物块制作材料。"
+        }
+      ]
+    ],
+    "item_category": "blocks"
+  },
+  "史莱姆块": {
+    "name": "史莱姆块",
+    "image": "Slime_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "史莱姆平台",
+          "image": "Slime_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "史莱姆块",
+        "image": "Slime_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Slime Block",
+    "description": "史莱姆块是种用固化机制作出的物块。在史莱姆块上行走或落到其上会产生液滴微粒。",
+    "item_category": "blocks"
+  },
+  "呆萌气球": {
+    "name": "呆萌气球",
+    "image": "Silly_Pink_Balloon.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "1 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "呆萌粉气球墙",
+          "image": "Silly_Pink_Balloon_Wall.png",
+          "amount": "4"
+        }
+      ],
+      "result": {
+        "name": "呆萌气球",
+        "image": "Silly_Pink_Balloon.png"
+      }
+    },
+    "en_name": "Silly Balloons",
+    "drops": null,
+    "description": "呆萌气球是可在派对期间在派对女孩处购买的小玩具块，售价为每个1 SC。呆萌气球单个放置时会像泡泡和烟雾块一样，形状为圆形。同种颜色的气球一起放置时会互相连接在一起，看起来像是更大的单个气球；不同颜色的气球之间不会连接。\n\n与粉史莱姆块相似，摔落在任何气球块上都会使玩家弹跳。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "呆萌气球是可在派对期间在派对女孩处购买的小玩具块，售价为每个"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "。呆萌气球单个放置时会像泡泡和烟雾块一样，形状为圆形。同种颜色的气球一起放置时会互相连接在一起，看起来像是更大的单个气球；不同颜色的气球之间不会连接。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "与粉史莱姆块相似，摔落在任何气球块上都会使玩家弹跳。"
+        }
+      ]
+    ],
+    "item_category": "blocks"
+  },
+  "土块": {
+    "name": "土块",
+    "image": "Dirt_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "土墙",
+          "image": "Dirt_Wall.png"
+        }
+      ],
+      "result": {
+        "name": "土块",
+        "image": "Dirt_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Dirt Block",
+    "description": "土块是泰拉瑞亚中最常见的物块之一，天然出现于几乎世界各处。在 0 英尺高度以上的所有山洞都由土组成。在 0 英尺以下，地下层的山洞由大约 50% 的土组成。小片的土可在洞穴层中找到，不过这里大部分由石组成。\n\n土块上可能长有这些类型的草：普通草、腐化草、猩红草、神圣草、修剪过的草、或修剪过的神圣草。草会蔓延至相邻土块，也可以人工种植草种子来让土块长草。使用再生法杖或再生之斧能让土块上长出普通草。",
+    "item_category": "blocks"
+  },
+  "坚固化石": {
+    "name": "坚固化石",
+    "image": "Sturdy_Fossil.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "坚固化石",
+          "image": "Sturdy_Fossil.png"
+        }
+      ],
+      "result": {
+        "name": "化石头盔",
+        "image": "Fossil_Helmet.png"
+      }
+    },
+    "en_name": "Sturdy Fossil",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "墓穴爬虫",
+              "image": "Tomb_Crawler.png",
+              "quantity": "1–2",
+              "chance": "50%"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "10–16",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "10–16",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "蛇蜥怪",
+              "image": "Basilisk.gif",
+              "quantity": "1–3",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "墓穴爬虫",
+              "image": "Tomb_Crawler.png",
+              "quantity": "1–2",
+              "chance": "50%"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "10–16",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "10–16",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "蛇蜥怪",
+              "image": "Basilisk.gif",
+              "quantity": "1–3",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "墓穴爬虫",
+              "image": "Tomb_Crawler.png",
+              "quantity": "1–2",
+              "chance": "50%"
+            },
+            {
+              "name": "幻象匣",
+              "image": "Mirage_Crate.png",
+              "quantity": "10–16",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "绿洲匣",
+              "image": "Oasis_Crate.png",
+              "quantity": "10–16",
+              "chance": "1/2 (50%)"
+            },
+            {
+              "name": "蛇蜥怪",
+              "image": "Basilisk.gif",
+              "quantity": "1–3",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "坚固化石是用于制作化石盔甲、骨投刀、琥珀法杖、甲虫炸弹、和骨头标枪的制作材料。坚固化石是通过将沙漠化石放进提炼机得到的，每个沙漠化石都有 10% 几率得到坚固化石。\n\n当使用矿石探测物品时，放置的坚固化石会闪光。当使用金属探测器时，放置的坚固化石也会显示出来，即使它们并不会自然地生成。\n\n也可以从墓穴爬虫、蛇蜥怪、绿洲匣、和幻象匣中得到坚固化石。",
+    "item_category": "blocks"
+  },
+  "坠落之星块": {
+    "name": "坠落之星块",
+    "image": "Fallen_Star_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "坠落之星平台",
+          "image": "Fallen_Star_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "坠落之星块",
+        "image": "Fallen_Star_Block.png"
+      }
+    },
+    "en_name": "Fallen Star Block",
+    "drops": null,
+    "description": "坠落之星块是一种困难模式之前的物块，由坠落之星和石块制作而成。其主要用途是制作坠落之星家具和坠落之星墙。",
+    "item_category": "blocks"
+  },
+  "复活节块": {
+    "name": "复活节块",
+    "image": "Easter_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "10 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "复活节平台",
+          "image": "Easter_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "复活节块",
+        "image": "Easter_Block.png"
+      }
+    },
+    "en_name": "Easter Block",
+    "drops": null,
+    "description": "复活节块是困难模式之前在染料商处购买的物块，售价为每个50 CC。其主要用途是制作复活节家具和复活节墙。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "复活节块是困难模式之前在染料商处购买的物块，售价为每个"
+        },
+        {
+          "type": "coin",
+          "amount": "50",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "。其主要用途是制作复活节家具和复活节墙。"
+        }
+      ]
+    ],
+    "item_category": "blocks"
+  },
+  "大理石块": {
+    "name": "大理石块",
+    "image": "Marble_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "大理石墙",
+          "image": "Marble_Wall.png"
+        }
+      ],
+      "result": {
+        "name": "大理石块",
+        "image": "Marble_Block.png"
+      }
+    },
+    "en_name": "Marble Block",
+    "drops": null,
+    "description": "大理石块是一种天然物块，可在大理石洞中找到。它可以制作成光面大理石块，以制作大理石主题的家具套装。",
+    "item_category": "blocks"
+  },
+  "大竹子": {
+    "name": "大竹子",
+    "image": "Large_Bamboo.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "锯木机",
+      "ingredients": [
+        {
+          "name": "竹子",
+          "image": "Bamboo.png"
+        }
+      ],
+      "result": {
+        "name": "大竹子",
+        "image": "Large_Bamboo.png"
+      }
+    },
+    "en_name": "Large Bamboo",
+    "drops": null,
+    "description": "大竹子是用竹子制成的物块，外表看起来是一整根大竹子而非几根捆在一起的小竹竿。",
+    "item_category": "blocks"
+  },
+  "宝石块": {
+    "name": "宝石块",
+    "image": "Gemstone_Blocks.gif",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "重型装配台 和 灵雾",
+      "ingredients": [],
+      "result": {
+        "name": "宝石块",
+        "image": "Amber_Stone_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Gemstone Blocks",
+    "description": "宝石块是一种物块制作材料。",
+    "item_category": "blocks"
+  },
+  "小雪怪皮毛块": {
+    "name": "小雪怪皮毛块",
+    "image": "Flinx_Fur_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "小雪怪皮毛平台",
+          "image": "Flinx_Fur_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "小雪怪皮毛块",
+        "image": "Flinx_Fur_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Flinx Fur Block",
+    "description": "小雪怪皮毛块是种困难模式之前的物块，由小雪怪皮毛制作而成。其主要用途是制作小雪怪皮毛家具和小雪怪皮毛墙。",
+    "item_category": "blocks"
+  },
+  "尖刺": {
+    "name": "尖刺",
+    "image": "Spike.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "触碰会造成伤害",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png",
+          "amount": "5"
+        },
+        {
+          "name": "尖刺",
+          "image": "Spike.png"
+        }
+      ],
+      "result": {
+        "name": "尖刺块",
+        "image": "Spike_Block.png",
+        "amount": "5"
+      }
+    },
+    "drops": null,
+    "en_name": "Spike",
+    "description": "尖刺是一种陷阱，可以在地牢中找到。会对接触到它的玩家造成 60 伤害，不论难度。还会造成流血减益，持续 10 /20/25秒。可以用钻头、镐、或爆炸物破坏。\n\n当For the Worthy种子激活时，尖刺无法被爆炸物破坏。[1]",
+    "item_category": "blocks"
+  },
+  "尖刺块": {
+    "name": "尖刺块",
+    "image": "Spike_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "尖刺平台",
+          "image": "Spike_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "尖刺块",
+        "image": "Spike_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Spike Block",
+    "description": "尖刺块是种困难模式之前的物块，由石块和尖刺在工作台附近制作而成。其主要用途是制作尖刺家具、锋利尖刺块、和尖刺墙。",
+    "item_category": "blocks"
+  },
+  "巨石": {
+    "name": "巨石",
+    "image": "Boulder.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块机械制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "重型装配台",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png",
+          "amount": "6"
+        }
+      ],
+      "result": {
+        "name": "巨石",
+        "image": "Boulder.png"
+      }
+    },
+    "en_name": "Boulder",
+    "drops": null,
+    "description": "巨石是独特的可放置前景物体，放置时静止。当失去支持时，它们会下落并开始滚动。它们会逐渐增加速度并伤害接触到的玩家、敌怪、小动物、和NPC。巨石也会在被镐或钻头采掘时滚动，这意味着它们在被放置后就无法收回。\n\n巨石会在平面和斜坡上滚动，但会在碰到障碍物时破碎。接触时，它们对玩家造成70/ 140 /280/420伤害（对NPC、敌怪和小动物造成 70 伤害），施加 10（极强击退力）击退，[1]并可以穿过无限数量的实体。巨石会在 2.17 秒 内加速到36 mph。[2]\n\n巨石陷阱会在地下和洞穴地层自然生成，它包括顶部的一个巨石和下方作为支撑的六块（2×3）通电石块，后者通过电线与一个橙压力板相连。如果玩家走到压力板上，巨石就会落下并开始滚动。\n\n在For the Worthy和Get fixed boi世界中，巨石破碎时会释放 2–4 个迷你巨石。它们在功能上与巨石射弹完全相同，但是更小且只能造成 75% 伤害 (157[3]/210/315)。\n\n世界生成期间，有少量的巨石被设定为破碎时掉落一个友好巨石。根据世界大小世界中的所有巨石中有 2 个（小世界）、4 个（中世界）或 6 个（大世界）被选做这种巨石。[4]在No Traps世界中，这一数量会翻倍。",
+    "item_category": "blocks"
+  },
+  "巨石块": {
+    "name": "巨石块",
+    "image": "Boulder_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "巨石平台",
+          "image": "Boulder_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "巨石块",
+        "image": "Boulder_Block.png"
+      }
+    },
+    "en_name": "Boulder Block",
+    "drops": null,
+    "description": "巨石块是由巨石制作的困难模式之前的物块。其主要用途是制作巨石家具和巨石墙。",
+    "item_category": "blocks"
+  },
+  "干草": {
+    "name": "干草",
+    "image": "Hay.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "干草墙",
+          "image": "Hay_Wall.png",
+          "amount": "4"
+        }
+      ],
+      "result": {
+        "name": "干草",
+        "image": "Hay.png"
+      }
+    },
+    "en_name": "Hay",
+    "drops": null,
+    "description": "干草是一种物块，用镰刀收割自所有野生草植物。它用于制作训练假人。",
+    "item_category": "blocks"
+  },
+  "平台": {
+    "name": "平台",
+    "image": "Wood_Platform.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "最大堆叠",
+        "value": "9999 (电脑版、主机版、和移动版) / 99 (前代主机版、和3DS版)",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 200 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "丛林蜥蜴砖",
+          "image": "Lihzahrd_Brick.png"
+        }
+      ],
+      "result": {
+        "name": "物品 ID",
+        "image": "Lihzahrd_Platform.png",
+        "amount": "2"
+      }
+    },
+    "en_name": "Platforms",
+    "drops": null,
+    "description": "平台是一种特殊的物块类型，允许玩家在其所占据的空间中移动。玩家通常可以像在普通的物块上一样在平台上站立与行走，当玩家站在其上时，也可以通过按▼ 下键穿过平台向下移动。玩家也可以横向走过或跳过平台所占据的空间，仅当从上方落到其上时，平台才会被视为“实体”。",
+    "item_category": "blocks"
+  },
+  "彩纸块": {
+    "name": "彩纸块",
+    "image": "Confetti_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "彩纸",
+          "image": "Confetti.png"
+        },
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        }
+      ],
+      "result": {
+        "name": "彩纸块",
+        "image": "Confetti_Block.png"
+      }
+    },
+    "en_name": "Confetti Block",
+    "drops": null,
+    "description": "彩纸块是一种动画物块，会显示下落的彩纸。它是少数用水晶球作为制作站的物品之一。除了彩纸外，它是透明的，就像玻璃。午夜彩纸块是它的暗色、不透明的版本。",
+    "item_category": "blocks"
+  },
+  "微光瀑布块": {
+    "name": "微光瀑布块",
+    "image": "Shimmerfall_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "微光瀑布墙",
+          "image": "Shimmerfall_Wall.png",
+          "amount": "4"
+        }
+      ],
+      "result": {
+        "name": "微光瀑布块",
+        "image": "Shimmerfall_Block.png"
+      }
+    },
+    "en_name": "Shimmerfall Block",
+    "drops": null,
+    "description": "微光瀑布块是一个动态的物块，展示了流动的微光。",
+    "item_category": "blocks"
+  },
+  "日盘块": {
+    "name": "日盘块",
+    "image": "Sunplate_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "天域平台",
+          "image": "Skyware_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "日盘块",
+        "image": "Sunplate_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Sunplate Block",
+    "description": "日盘块是一种出现在漂浮岛上的物块（在电脑版、主机版、和移动版中也可以用坠落之星和石块借助天磨制作）。当四格日盘块放成方块状或更多块互相放在一起时，它们会形成类似于星光灿烂的夜空的图案。",
+    "item_category": "blocks"
+  },
+  "暗影木": {
+    "name": "暗影木",
+    "image": "Shadewood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "暗影木平台",
+          "image": "Shadewood_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "暗影木",
+        "image": "Shadewood.png"
+      }
+    },
+    "en_name": "Shadewood",
+    "drops": null,
+    "description": "暗影木是一种木材，可以从各猩红生物群系中天然生长的暗影木树和暗影木棕榈树处收集。可以通过将橡实放置在地表以上的猩红草或猩红丛林草上来种植暗影木树，可以通过将橡实放置在地表以上的猩红沙块上来种植暗影木棕榈树。",
+    "item_category": "blocks"
+  },
+  "月盘块": {
+    "name": "月盘块",
+    "image": "Moonplate_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "暮色平台",
+          "image": "Duskware_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "月盘块",
+        "image": "Moonplate_Block.png"
+      }
+    },
+    "en_name": "Moonplate Block",
+    "drops": null,
+    "description": "月盘块是困难模式之前的物块，将日盘块放入微光获得。它们主要用于制作暮色家具和新月墙。",
+    "item_category": "blocks"
+  },
+  "松木": {
+    "name": "松木",
+    "image": "Pine_Wood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "松木平台",
+          "image": "Pine_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "松木",
+        "image": "Pine_Wood.png"
+      }
+    },
+    "en_name": "Pine Wood",
+    "drops": null,
+    "description": "松木是一种用松树块制作的木材。它可被制成松木家具和松木墙。",
+    "item_category": "blocks"
+  },
+  "松树块": {
+    "name": "松树块",
+    "image": "Pine_Tree_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "松木平台",
+          "image": "Pine_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "松树块",
+        "image": "Pine_Tree_Block.png"
+      }
+    },
+    "en_name": "Pine Tree Block",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "20–49",
+              "chance": "16.8%15.68% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "20–49",
+              "chance": "16.8%15.68% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "20–49",
+              "chance": "16.8%15.68% （困难模式）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "松树块是从圣诞节季节性事件期间（(电脑版、主机版、前代主机版、和移动版)12 月 15 日 – 12月 31 日 /(3DS版)12月 1 日 – 1 月 15 日）得到的礼物中掉落的物块，一次掉落 20-49 个，掉落率在困难模式之前为 16.803%、困难模式中为 15.683% 。放置后，一块松树块看起来像是个小树苗，但随着添加更多块会变得越来越大。如果在单个物块之上又放了一块或多块，那么这一块会呈现为树干。\n\n松树块可被用于制作替代用的松木，并且它们都可被用于制作松木家具。",
+    "item_category": "blocks"
+  },
+  "松脆蜂蜜块": {
+    "name": "松脆蜂蜜块",
+    "image": "Crispy_Honey_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      },
+      {
+        "label": "形成",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "蜂蜜块",
+          "image": "Honey_Block.png"
+        }
+      ],
+      "result": {
+        "name": "松脆蜂蜜块",
+        "image": "Crispy_Honey_Block.png"
+      }
+    },
+    "en_name": "Crispy Honey Block",
+    "drops": null,
+    "description": "松脆蜂蜜块是当液体蜂蜜与熔岩接触时所形成的物块。它也可以被制作。\n\n虽然松脆蜂蜜块的稀有度是00*，但它丢进熔岩后并不会被摧毁。",
+    "item_category": "blocks"
+  },
+  "棕榈木": {
+    "name": "棕榈木",
+    "image": "Palm_Wood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "棕榈木平台",
+          "image": "Palm_Wood_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "棕榈木",
+        "image": "Palm_Wood.png"
+      }
+    },
+    "en_name": "Palm Wood",
+    "drops": null,
+    "description": "棕榈木是一种木材，可以从海洋生物群系和绿洲生物群系中天然生长的棕榈树处收集。可以通过将橡实放置在地表以上的常规沙块上来种植棕榈树。\n\n仅有长在常规沙块上的棕榈树会掉落棕榈木。长在黑檀沙块、猩红沙块、或珍珠沙块上的棕榈树会分别改为掉落乌木、暗影木、或珍珠木。",
+    "item_category": "blocks"
+  },
+  "水族块": {
+    "name": "水族块",
+    "image": "Aquarium_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "水族平台",
+          "image": "Aquarium_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "水族块",
+        "image": "Aquarium_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Aquarium Block",
+    "description": "水族块是一种物块，由玻璃在工作台和水/水槽附近制作而成。其主要用途是制作水族家具和水族墙。",
+    "item_category": "blocks"
+  },
+  "水晶块": {
+    "name": "水晶块",
+    "image": "Crystal_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "精金熔炉或钛金熔炉",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        },
+        {
+          "name": "水晶碎块",
+          "image": "Crystal_Shard.png"
+        }
+      ],
+      "result": {
+        "name": "水晶块",
+        "image": "Crystal_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Crystal Block",
+    "description": "水晶块是一种困难模式的装饰建筑块，用水晶碎块在精金熔炉或钛金熔炉处制作。 5 个一组地制作出来。它有明亮的色调，颜色从洋红色到蓝色。它可以制成水晶块墙，并且还能制成其他水晶家具。",
+    "item_category": "blocks"
+  },
+  "水母块": {
+    "name": "水母块",
+    "image": "Jellyfish_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "买入",
+        "value": "50 CC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "10 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "水母平台",
+          "image": "Jellyfish_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "水母块",
+        "image": "Jellyfish_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Jellyfish Block",
+    "description": "水母块是一种困难模式的物块，由在墓地中的海盗出售。其主要用途是制作水母家具和水母墙。",
+    "item_category": "blocks"
+  },
+  "水母墙": {
+    "name": "水母墙",
+    "image": "Jellyfish_Wall.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块墙制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 400 份",
+        "extra": ""
+      },
+      {
+        "label": "放置",
+        "value": "",
+        "extra": ""
+      },
+      {
+        "label": "破坏",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "水母块",
+          "image": "Jellyfish_Block.png"
+        }
+      ],
+      "result": {
+        "name": "水母墙",
+        "image": "Jellyfish_Wall.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Jellyfish Wall",
+    "description": "水母墙是一种困难模式的墙，由水母块制作而成。",
+    "item_category": "blocks"
+  },
+  "沙漠化石": {
+    "name": "沙漠化石",
+    "image": "Desert_Fossil.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "可被提炼",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 200 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "沙漠化石墙",
+          "image": "Desert_Fossil_Wall.png"
+        }
+      ],
+      "result": {
+        "name": "沙漠化石",
+        "image": "Desert_Fossil.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Desert Fossil",
+    "description": "沙漠化石是一种物块，可以中到大矿脉的形式在地下沙漠生物群系中发现。沙漠化石可以借由提炼机或叶绿提炼机生产坚固化石，另外亦可产生通常的提炼机掉落物。",
+    "item_category": "blocks"
+  },
+  "泡泡糖块": {
+    "name": "泡泡糖块",
+    "image": "Bubblegum_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        },
+        {
+          "name": "山铜矿",
+          "image": "Orichalcum_Ore.png"
+        }
+      ],
+      "result": {
+        "name": "泡泡糖块",
+        "image": "Bubblegum_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Bubblegum Block",
+    "description": "泡泡糖块是一种用石块和山铜矿制作的建筑材料。当放置后，它类似于涂有泡泡糖的石块。它基本上就是砖的山铜矿等价物。",
+    "item_category": "blocks"
+  },
+  "泥块": {
+    "name": "泥块",
+    "image": "Mud_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水或水槽(电脑版、主机版、和移动版)或喷泉",
+      "ingredients": [
+        {
+          "name": "土块",
+          "image": "Dirt_Block.png"
+        }
+      ],
+      "result": {
+        "name": "泥块",
+        "image": "Mud_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Mud Block",
+    "description": "泥块是一种非常常见的物块类型，构成了丛林、地下丛林、和发光蘑菇生物群系的绝大部分。泥块上的任意侧面都可能覆盖着丛林草、蘑菇草、腐化草、或猩红草，它们可以使用丛林草种子、蘑菇草种子、腐化种子、和猩红种子进行种植。只有丛林草和蘑菇草不能在土块上生成。",
+    "item_category": "blocks"
+  },
+  "泥沙块": {
+    "name": "泥沙块",
+    "image": "Silt_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "如果落在你身上，会让你窒息可被提炼",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 200 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "泥沙块",
+          "image": "Silt_Block.png"
+        },
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "灰泥灰",
+        "image": "Gray_Stucco.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Silt Block",
+    "description": "泥沙块是一种土壤物块，生成于地下和洞穴层，在较低深度出现更为频繁。泥沙会受重力影响，对坠落到的任何玩家或者敌怪造成伤害。和沙块不同，泥沙块可以阻止神圣之地、猩红之地和腐化之地蔓延。它看起来很像灰烬块，但色调更明亮。\n\n泥沙可以放入提炼机或叶绿提炼机中转化为各种各样有价值的材料，包括宝石、钱币、矿石、以及非常罕见的蚊子琥珀宠物召唤物品。",
+    "item_category": "blocks"
+  },
+  "泥灰": {
+    "name": "泥灰",
+    "image": "Red_Stucco.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "泥沙块",
+          "image": "Silt_Block.png"
+        },
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "泥灰",
+        "image": "Gray_Stucco.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Stucco",
+    "description": "泥灰物块是一类装饰性建筑材料，共有四种颜色可选。",
+    "item_category": "blocks"
+  },
+  "活火块": {
+    "name": "活火块",
+    "image": "Living_Fire_Blocks.gif",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "活火块",
+          "image": "Living_Fire_Block.png",
+          "amount": "20"
+        },
+        {
+          "name": "冰雪块",
+          "image": "Ice_Block.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "活火块",
+        "image": "Living_Frost_Fire_Block.png",
+        "amount": "20"
+      }
+    },
+    "en_name": "Living Fire Blocks",
+    "drops": null,
+    "description": "活火块是一类动态的背景家具物块，放置时就像小而具有动画效果的火焰，会发出黯淡的橙色光线。它们在接触时不会造成伤害，可以使用任意镐或钻头挖掘。活火块有1/50 (2%)的几率，在困难模式期间，掉落自任意在地狱中被杀死敌怪（包括血肉墙），每次掉落 20–50 个。[1]\n\n虽然活火块可以像普通的前景物块一样被放置，但它们实际上位于背景中（与家具类似），允许玩家直接在其前方行走。它们可以在水平方向上或竖直方向上互相连接，但是其他普通的前景物块不会与它们连上。\n\n普通的活火块共有五种其他颜色的变体，并都由普通的活火块制作而来。它们在功能上是一致的。",
+    "item_category": "blocks"
+  },
+  "瀑布块": {
+    "name": "瀑布块",
+    "image": "Waterfall_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球 和 水或水槽(电脑版、主机版、和移动版)或喷泉",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        }
+      ],
+      "result": {
+        "name": "瀑布块",
+        "image": "Waterfall_Block.png"
+      }
+    },
+    "en_name": "Waterfall Block",
+    "drops": null,
+    "description": "瀑布块是一种展示流动水的动态物块类型。",
+    "item_category": "blocks"
+  },
+  "火星管道护板": {
+    "name": "火星管道护板",
+    "image": "Martian_Conduit_Plating.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "火星平台",
+          "image": "Martian_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "火星管道护板",
+        "image": "Martian_Conduit_Plating.png"
+      }
+    },
+    "en_name": "Martian Conduit Plating",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "扰脑怪",
+              "image": "Brain_Scrambler.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "激光枪手",
+              "image": "Ray_Gunner.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星军官",
+              "image": "Martian_Officer.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星工程师",
+              "image": "Martian_Engineer.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星走妖",
+              "image": "Martian_Walker.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "灰咕噜",
+              "image": "Gray_Grunt.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "电击怪",
+              "image": "Gigazapper.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "鳞甲怪",
+              "image": "Scutlix_Gunner.png",
+              "quantity": "8-20",
+              "chance": "12.5%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "扰脑怪",
+              "image": "Brain_Scrambler.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "激光枪手",
+              "image": "Ray_Gunner.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星军官",
+              "image": "Martian_Officer.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星工程师",
+              "image": "Martian_Engineer.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星走妖",
+              "image": "Martian_Walker.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "灰咕噜",
+              "image": "Gray_Grunt.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "电击怪",
+              "image": "Gigazapper.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "鳞甲怪",
+              "image": "Scutlix_Gunner.png",
+              "quantity": "8-20",
+              "chance": "12.5%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "扰脑怪",
+              "image": "Brain_Scrambler.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "激光枪手",
+              "image": "Ray_Gunner.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星军官",
+              "image": "Martian_Officer.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星工程师",
+              "image": "Martian_Engineer.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "火星走妖",
+              "image": "Martian_Walker.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "灰咕噜",
+              "image": "Gray_Grunt.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "电击怪",
+              "image": "Gigazapper.gif",
+              "quantity": "8–20",
+              "chance": "12.5%"
+            },
+            {
+              "name": "鳞甲怪",
+              "image": "Scutlix_Gunner.png",
+              "quantity": "8-20",
+              "chance": "12.5%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "火星管道护板是一种石巨人后的物块，掉落自火星暴乱事件中的敌怪，用于制作各种太空或火星主题的家具。\n\n像阴森木一样，它只能在相应的事件中得到；它只能通过拆解其平台和墙来制作。\n\n当放置在黑暗的地方时，此物块有明显的脉动光效果。\n\n制作所有家具需要 161 个火星管道护板块。",
+    "item_category": "blocks"
+  },
+  "灰烬块": {
+    "name": "灰烬块",
+    "image": "Ash_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "地狱熔炉",
+      "ingredients": [
+        {
+          "name": "任何木材",
+          "image": "Any_Wood.gif",
+          "amount": "5"
+        }
+      ],
+      "result": {
+        "name": "灰烬块",
+        "image": "Ash_Block.png"
+      }
+    },
+    "en_name": "Ash Block",
+    "drops": null,
+    "description": "灰烬块是一种覆盖了地狱上下部分的物块，有时会包裹着狱石。它可以用于建造和让火焰花生长。\n\n(电脑版、主机版、和移动版)在地狱边缘的灰烬森林中，灰烬草自然生成于灰烬块上，灰烬树生长于灰烬草上。灰烬草种子可以种植在灰烬块上。",
+    "item_category": "blocks"
+  },
+  "灰烬木": {
+    "name": "灰烬木",
+    "image": "Ash_Wood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "灰烬木平台",
+          "image": "Ash_Wood_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "灰烬木",
+        "image": "Ash_Wood.png"
+      }
+    },
+    "en_name": "Ash Wood",
+    "drops": null,
+    "description": "灰烬木是一种木材，可以从灰烬森林中天然生长的灰烬树处收集。可以通过将橡实放置在任何高度的灰烬草上来种植灰烬树。",
+    "item_category": "blocks"
+  },
+  "熔岩瀑布块": {
+    "name": "熔岩瀑布块",
+    "image": "Lavafall_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球 和 熔岩",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        }
+      ],
+      "result": {
+        "name": "熔岩瀑布块",
+        "image": "Lavafall_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Lavafall Block",
+    "description": "熔岩瀑布块是一种展示流动熔岩的动态、发光的物块类型。它在NPC 房屋中不满足对光源的要求。",
+    "item_category": "blocks"
+  },
+  "猩红石块": {
+    "name": "猩红石块",
+    "image": "Crimstone_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "猩红硬皮墙",
+          "image": "Crimson_Crust_Wall.png",
+          "amount": "4"
+        }
+      ],
+      "result": {
+        "name": "猩红石块",
+        "image": "Crimstone_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Crimstone Block",
+    "description": "猩红石块是一种能在猩红之地中发现的物块。在困难模式之前，它主要分布于裂隙的表面。它至少需要具有 65% 镐力的镐或爆炸物来进行开采。\n\n猩红石块是猩红版本的石块。像其腐化对应物黑檀石块一样，猩红石块可以用净化粉转化为普通的石块。\n\n在困难模式中，猩红的蔓延能把普通石块转化为猩红石块。猩红石块本身也能将猩红蔓延到周围可受影响的方块。",
+    "item_category": "blocks"
+  },
+  "王朝木": {
+    "name": "王朝木",
+    "image": "Dynasty_Wood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "买入",
+        "value": "50 CC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "10 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "王朝木平台",
+          "image": "Dynasty_Wood_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "王朝木",
+        "image": "Dynasty_Wood.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Dynasty Wood",
+    "description": "王朝木是一种从旅商处购买的木材，每块50 CC。它可被制成王朝家具，后者有着早期中国建筑的风格。放置时，它会自动形成连续的框架结构。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "王朝木是一种从旅商处购买的木材，每块"
+        },
+        {
+          "type": "coin",
+          "amount": "50",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "。它可被制成王朝家具，后者有着早期中国建筑的风格。放置时，它会自动形成连续的框架结构。"
+        }
+      ]
+    ],
+    "item_category": "blocks"
+  },
+  "玻璃": {
+    "name": "玻璃",
+    "image": "Glass.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "玻璃平台",
+          "image": "Glass_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "玻璃",
+        "image": "Glass.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Glass",
+    "description": "玻璃是在熔炉处用各种沙制作而成的。玻璃可以作为物块放置，也是许多物品的生产过程中的一种材料。",
+    "item_category": "blocks"
+  },
+  "珊瑚礁块": {
+    "name": "珊瑚礁块",
+    "image": "Reef_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "01*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "珊瑚礁平台",
+          "image": "Reef_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "珊瑚礁块",
+        "image": "Reef_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Reef Block",
+    "description": "珊瑚礁块是一种装饰物块。它可以用来制作珊瑚礁家具。",
+    "item_category": "blocks"
+  },
+  "珍珠木": {
+    "name": "珍珠木",
+    "image": "Pearlwood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "珍珠木平台",
+          "image": "Pearlwood_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "珍珠木",
+        "image": "Pearlwood.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Pearlwood",
+    "description": "珍珠木是一种困难模式独有[a]的木材，可以从各神圣生物群系中天然生长的珍珠木树和珍珠木棕榈树处收集。可以通过将橡实放置在地表以上的神圣草或修剪过的神圣草上来种植珍珠木树，可以通过将橡实放置在地表以上的珍珠沙块上来种植珍珠木棕榈树。",
+    "item_category": "blocks"
+  },
+  "珍珠石块": {
+    "name": "珍珠石块",
+    "image": "Pearlstone_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "神圣棱柱墙",
+          "image": "Hallowed_Prism_Wall.png"
+        }
+      ],
+      "result": {
+        "name": "珍珠石块",
+        "image": "Pearlstone_Block.png"
+      }
+    },
+    "en_name": "Pearlstone Block",
+    "drops": null,
+    "description": "珍珠石块是一种出现在神圣之地中的困难模式物块。它需要至少梦魇镐、死亡使者镐、或爆炸物来采挖。\n\n珍珠石是神圣版的石块（类似于腐化之地中的黑檀石，或猩红之地中的猩红石）。以类似于黑檀石和猩红石的方式，珍珠石可以通过魔粉、毒粉、或环境改造枪加上绿溶液来转化为普通石块。\n\n在打败血肉墙后神圣之地生物群系的初始创生过程中，在转化路径上的石块会变为珍珠石块（参见困难模式）。珍珠石自身还会继续将神圣蔓延至三格半径内的所有石、沙、冰雪、和带草的土上。如果在地下或更深处，随着时间推移，它会长出水晶碎块。",
+    "item_category": "blocks"
+  },
+  "病变块": {
+    "name": "病变块",
+    "image": "Lesion_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "病变平台",
+          "image": "Lesion_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "病变块",
+        "image": "Lesion_Block.png"
+      }
+    },
+    "en_name": "Lesion Block",
+    "drops": null,
+    "description": "病变块是一种困难模式物块，可由两块黑檀石在绞肉机处制作而成。它们可被用于制作病变家具和病变块墙。病变块并不会传播腐化之地。 制作所有以其为原料的物品共需要155个病变块 （310个黑檀石）。",
+    "item_category": "blocks"
+  },
+  "石块": {
+    "name": "石块",
+    "image": "Stone_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "石墙",
+          "image": "Stone_Wall.png"
+        }
+      ],
+      "result": {
+        "name": "石块",
+        "image": "Stone_Block.png"
+      }
+    },
+    "en_name": "Stone Block",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "岩石巨人",
+              "image": "Rock_Golem.gif",
+              "quantity": "10–20",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "岩石巨人",
+              "image": "Rock_Golem.gif",
+              "quantity": "10–20",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "岩石巨人",
+              "image": "Rock_Golem.gif",
+              "quantity": "10–20",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "石块是一种物块，自然生成于世界绝大部分区域。它们构成了地下层和洞穴层的主体。作为制作原料，石块可用于制作熔炉和木箭，在游戏早期非常重要。\n\n在世界中激活困难模式后，附近的腐化、猩红、和神圣物块的可蔓延到石块上，将其分别变为黑檀石、猩红石、或珍珠石。黑檀石块与猩红石块可以借助净化粉恢复为普通状态，而珍珠石块则需要魔粉或毒粉。另外，它们也全部可以通过绿溶液来转回常规石块。\n\n石块生成时可能有苔藓生于其上，后者也可以去人工放置。宝石果只能种在石块上。\n\n岩石巨人和宝石树会掉落石块，这让它们成为石块的可再生来源。",
+    "item_category": "blocks"
+  },
+  "石板": {
+    "name": "石板",
+    "image": "Stone_Slab.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "重型装配台",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        }
+      ],
+      "result": {
+        "name": "石板",
+        "image": "Stone_Slab.png"
+      }
+    },
+    "en_name": "Stone Slab",
+    "drops": null,
+    "description": "石板是一种外观上与常规石头相似的物块，但更平滑，其纹理由更大的砖块组成。它极为容易制作，但需要一个在早期不容易得到的重型工作台。鉴于其配方，用石板来建造比用灰砖更有效率。",
+    "item_category": "blocks"
+  },
+  "禁戒块": {
+    "name": "禁戒块",
+    "image": "Forbidden_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "禁戒平台",
+          "image": "Forbidden_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "禁戒块",
+        "image": "Forbidden_Block.png"
+      }
+    },
+    "en_name": "Forbidden Block",
+    "drops": null,
+    "description": "禁戒块是由石块和禁戒碎片制作的困难模式物块。其主要用途是制作禁戒家具和禁戒墙。",
+    "item_category": "blocks"
+  },
+  "竹子": {
+    "name": "竹子",
+    "image": "Tree_(Bamboo).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "背景物体",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "竹平台",
+          "image": "Bamboo_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "竹子",
+        "image": "Bamboo.png"
+      }
+    },
+    "en_name": "Bamboo stalk",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "20–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "20–50",
+              "chance": "1/3 (33.33%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "20–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "20–50",
+              "chance": "1/3 (33.33%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "丛林匣",
+              "image": "Jungle_Crate.png",
+              "quantity": "20–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "荆棘匣",
+              "image": "Bramble_Crate.png",
+              "quantity": "20–50",
+              "chance": "1/3 (33.33%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "竹子是一种可放置的物块，可通过使用镐或钻头采伐自然生长在丛林生物群系中的竹子的方式获取。它也可以在丛林匣和荆棘匣中找到。竹子可以用于制作相应主题的家具、物块、和墙。\n\n竹子生长在地表以上浸没于较浅的水或微光（多于 1 格深，但不多于 5 格深[1]）中的丛林草上。类似于大多数植物，它们不能在墙（包括玻璃墙和栅栏）前方生长。但与大多数其他植物不同的是，竹子可以随时间不断长大，并且长大需要的时间很长。",
+    "item_category": "blocks"
+  },
+  "粘土块": {
+    "name": "粘土块",
+    "image": "Clay_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "氖苔藓",
+          "image": "Neon_Moss.png"
+        },
+        {
+          "name": "粘土块",
+          "image": "Clay_Block.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "氖苔藓砖",
+        "image": "Neon_Moss_Brick.png",
+        "amount": "10"
+      }
+    },
+    "en_name": "Clay Block",
+    "drops": null,
+    "description": "粘土是一种主要用作制作材料的物块。它主要出现在地表高度（ 0 海拔以上）的区域，在地下上部也有，但更为罕见。因此，只要在地表探索寻找土中不同颜色的版块，即可找到最大的粘土矿床。",
+    "item_category": "blocks"
+  },
+  "精金梁": {
+    "name": "精金梁",
+    "image": "Adamantite_Beam.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png",
+          "amount": "5"
+        },
+        {
+          "name": "精金矿",
+          "image": "Adamantite_Ore.png"
+        }
+      ],
+      "result": {
+        "name": "精金梁",
+        "image": "Adamantite_Beam.png",
+        "amount": "5"
+      }
+    },
+    "en_name": "Adamantite Beam",
+    "drops": null,
+    "description": "精金梁是一种用石块和精金矿制作的建筑材料。它基本上就是精金矿版本的砖。",
+    "item_category": "blocks"
+  },
+  "红木": {
+    "name": "红木",
+    "image": "Rich_Mahogany.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "红木平台",
+          "image": "Rich_Mahogany_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "红木",
+        "image": "Rich_Mahogany.png"
+      }
+    },
+    "en_name": "Rich Mahogany",
+    "drops": null,
+    "description": "红木是一种木材，可以从丛林和地下丛林中天然生长的红木树处收集，或来自生命红木树、地下丛林中的地下小屋、和丛林神龛。红木树可以在地表以上的丛林草上天然生长，也可以通过将橡实放置在地表以上的丛林草上来种植。",
+    "item_category": "blocks"
+  },
+  "臭臭": {
+    "name": "臭臭",
+    "image": "Poo.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "可被提炼",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+      "ingredients": [
+        {
+          "name": "臭臭",
+          "image": "Poo.png"
+        },
+        {
+          "name": "骨头",
+          "image": "Bone.png"
+        },
+        {
+          "name": "灰烬块",
+          "image": "Ash_Block.png"
+        }
+      ],
+      "result": {
+        "name": "肥料",
+        "image": "Fertilizer.png"
+      }
+    },
+    "en_name": "Poo",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Jungle_Mimic2.png",
+              "quantity": "1",
+              "chance": "33%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Jungle_Mimic2.png",
+              "quantity": "1",
+              "chance": "33%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Jungle_Mimic2.png",
+              "quantity": "1",
+              "chance": "33%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "臭臭是一种装饰性物块，可在任意等级的吃得好生效期间，通过坐在马桶上获得。产出臭臭会取消食物增益，所掉落的物块数量会随着增益类型及其剩余持续时间改变。一次可获得的最高臭臭数量为 141 个，来自增益剩余时间为 47 分钟的金美味。\n\n放置后，苍蝇视觉效果会持续在其周围逐渐出现和消失。苍蝇的数量会根据区域内的臭臭块的数量改变。此外，臭臭会对所有站在其上的玩家造成 3 秒的恶臭。在踩上臭臭时也会产生吧唧声。落在臭臭上不会造成掉落伤害。\n\n臭臭也可以在truck stop世界中自然生成，或者在Celebrationmk10世界中由丛林宝箱怪掉落。\n\n臭臭可以放入提炼机或叶绿提炼机中转化为土块、草种子、丛林草种子和蘑菇草种子",
+    "item_category": "blocks"
+  },
+  "花岗岩块": {
+    "name": "花岗岩块",
+    "image": "Granite_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      },
+      {
+        "label": "Broken",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "花岗岩墙",
+          "image": "Granite_Wall.png"
+        }
+      ],
+      "result": {
+        "name": "花岗岩块",
+        "image": "Granite_Block.png"
+      }
+    },
+    "en_name": "Granite Block",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "花岗岩巨人",
+              "image": "Granite_Golem.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "花岗精",
+              "image": "Granite_Elemental.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "花岗岩巨人",
+              "image": "Granite_Golem.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "花岗精",
+              "image": "Granite_Elemental.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "花岗岩巨人",
+              "image": "Granite_Golem.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "花岗精",
+              "image": "Granite_Elemental.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "花岗岩块是一种能在地下花岗岩洞中找到的物块。除了以放置的形式被发现外，花岗岩块还会掉落自花岗精和花岗岩巨人。",
+    "item_category": "blocks"
+  },
+  "苔藓": {
+    "name": "苔藓",
+    "image": "Green_Moss.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 25 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "棕苔藓墙",
+          "image": "Brown_Mossy_Wall.png"
+        }
+      ],
+      "result": {
+        "name": "苔藓",
+        "image": "Brown_Moss.png"
+      }
+    },
+    "en_name": "Moss",
+    "drops": null,
+    "description": "苔藓是一种长在石块上的类草植物。它有 11 种不同的变体种类。苔藓石相比于干净的石头需要多敲一下才能打破。如果其所在的石块转化成黑檀石、猩红石、或珍珠石，则苔藓就会被摧毁。\n\n苔藓萌发的绒毛可像野生草植物一样收割。使用漆铲或幽灵漆铲收集苔藓绒毛，它们有1/9 (11.11%)几率会作为可种植物品掉落。[1]收集的苔藓可以放置在石块和灰砖上，或用于制作苔藓墙。\n\n总共有 5 种常规苔藓：绿苔藓、棕苔藓、红苔藓、蓝苔藓、和紫苔藓。对于给定地图，地图的每个三分之一部分中会出现一种常规苔藓（每个世界会有三种变体种类）。它们可随机出现在洞穴地面或者拥有相应苔藓墙的苔藓腔内。\n\n发光苔藓是特殊的苔藓变体种类，会发出明亮的光。这包括熔岩苔藓、氪苔藓、氙苔藓、氩苔藓、氖苔藓、和氦苔藓。熔岩苔藓可以在洞穴的熔岩地层中成片找到。氪苔藓、氙苔藓、氩苔藓、和氖苔藓会在发光苔藓生物群系生长，比任何其他苔藓区域更大，每个世界中仅会包含这些类型中的一种。最多会有两个（小世界）/ 三个（中世界）/ 四个（大世界）发光苔藓生物群系生成在洞穴层中，大多都在熔岩层以上，但不会在世界的水平中心附近。氦苔藓不会天然生成，而可通过将其他发光苔藓丢入微光的方式获得。\n\n在世界中没有天然生成的苔藓可以通过将任何发光苔藓放入提炼机（产生常规苔藓）或叶绿提炼机（产生所有变体种类的苔藓）的方式获得。",
+    "item_category": "blocks"
+  },
+  "落沙块": {
+    "name": "落沙块",
+    "image": "Sandfall_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "你可以安全观看的落沙",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "1 CC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        },
+        {
+          "name": "沙块",
+          "image": "Sand_Block.png"
+        }
+      ],
+      "result": {
+        "name": "落沙块",
+        "image": "Sandfall_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Sandfall Block",
+    "description": "落沙块是一种动画物块。它是少数以水晶球为制作站的物品之一。",
+    "item_category": "blocks"
+  },
+  "蓝星块": {
+    "name": "蓝星块",
+    "image": "Blue_Starry_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        },
+        {
+          "name": "坠落之星",
+          "image": "Fallen_Star.png"
+        }
+      ],
+      "result": {
+        "name": "蓝星块",
+        "image": "Blue_Starry_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Blue Starry Block",
+    "description": "蓝星块是一种带动画的装饰性物块，在黑色背景上闪烁着蓝色的星光。它是金星块的蓝色主题变体。",
+    "item_category": "blocks"
+  },
+  "蘑菇矿护板": {
+    "name": "蘑菇矿护板",
+    "image": "Shroomite_Plating.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        },
+        {
+          "name": "蘑菇矿锭",
+          "image": "Shroomite_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "蘑菇矿护板",
+        "image": "Shroomite_Plating.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Shroomite Plating",
+    "description": "蘑菇矿护板是用石块和蘑菇矿锭制作而成的建筑材料。放置状态下，它会发出少量光，但对于房屋而言并不计为光源。它基本上就是蘑菇矿版的砖。",
+    "item_category": "blocks"
+  },
+  "蛛网": {
+    "name": "蛛网",
+    "image": "Cobweb.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 50 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "装饰蛛网",
+          "image": "Decorative_Cobweb.png"
+        }
+      ],
+      "result": {
+        "name": "蛛网",
+        "image": "Cobweb.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Cobweb",
+    "description": "蛛网是一种制作材料，用于制作丝绸和其他物品。蛛网也可以放置。它们会接住落到上面的玩家并重置掉落伤害。它们会在玩家卡在其中之后短时间内破裂，但也可以用任意武器或武器或挥舞的工具收取，就像植物那样。\n\n蛛网通常出现在地下区域，沿着墙或天花板的边缘，一簇有 5 个或更多，当被打破时一定会掉落蛛网物品。它们也会在蜘蛛窝中大量出现，在那它们会随着时间推移而重新长出；但是，此处的蛛网在被打破时只有1/4 (25%)几率掉落。在专家模式(电脑版、主机版、和移动版)中，黑隐士和丛林蜘蛛得到了种特殊的喷吐攻击，会对玩家造成被网住减益；在Don't dig up(电脑版、主机版、和移动版)和Get fixed boi(电脑版、主机版、和移动版)特殊世界种子中，喷吐攻击会在以射弹消失处为中心的 13×13 格矩形区域内随机放下蛛网。",
+    "item_category": "blocks"
+  },
+  "蜂蜜块": {
+    "name": "蜂蜜块",
+    "image": "Honey_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      },
+      {
+        "label": "Formed",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "蜂蜜平台",
+          "image": "Honey_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "蜂蜜块",
+        "image": "Honey_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Honey Block",
+    "description": "蜂蜜块是一种物块，当水和蜂蜜触碰时生成。放置后，它会减慢任何走上去的玩家的移动速度。竖直接触时，玩家将会缓慢地滑下去（当没有携带攀爬爪或鞋钉时）。它会将玩家的跳跃高度大幅度降低至 1 格。当携带闪亮红气球时可以跳 3 格。NPC、小动物、和敌怪不会受到这样的效果。",
+    "item_category": "blocks"
+  },
+  "蜂蜜瀑布块": {
+    "name": "蜂蜜瀑布块",
+    "image": "Honeyfall_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球 和 蜂蜜",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        }
+      ],
+      "result": {
+        "name": "蜂蜜瀑布块",
+        "image": "Honeyfall_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Honeyfall Block",
+    "description": "蜂蜜瀑布块是一种像瀑布块和熔岩瀑布块那样运作的物块，具有流动蜂蜜的动态纹理。",
+    "item_category": "blocks"
+  },
+  "蜘蛛窝块": {
+    "name": "蜘蛛窝块",
+    "image": "Spider_Nest_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "蜘蛛平台",
+          "image": "Spider_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "蜘蛛窝块",
+        "image": "Spider_Nest_Block.png"
+      }
+    },
+    "drops": null,
+    "description": "蜘蛛窝块是用一颗蜘蛛牙和 10 个蛛网在工作台处制作的困难模式物块。它们用于制作蜘蛛家具和蜘蛛窝墙。\n\n制作全部物品需要 153 个蜘蛛窝块。",
+    "item_category": "blocks"
+  },
+  "血肉块": {
+    "name": "血肉块",
+    "image": "Flesh_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "血肉平台",
+          "image": "Flesh_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "血肉块",
+        "image": "Flesh_Block.png"
+      }
+    },
+    "en_name": "Flesh Block",
+    "drops": null,
+    "description": "血肉块是用两个猩红石在绞肉机处制作的困难模式物块。它们用于制作血肉家具和血肉块墙。放置后，能看到物块中的眼睛和肠子都鼓出来了。血肉块不会传播猩红之地。\n\n制作所有物品需要 153 个血肉块（306 个猩红石）。",
+    "item_category": "blocks"
+  },
+  "装饰蛛网": {
+    "name": "装饰蛛网",
+    "image": "Decorative_Cobweb.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "既没有粘性，也不会被武器破坏“仅供展示！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 50 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "蛛网",
+          "image": "Cobweb.png"
+        }
+      ],
+      "result": {
+        "name": "装饰蛛网",
+        "image": "Decorative_Cobweb.png"
+      }
+    },
+    "en_name": "Decorative Cobweb",
+    "drops": null,
+    "description": "装饰蛛网是一种建筑材料，与蛛网在视觉上完全相同，但不会被武器、射弹或实体接触摧毁。此外，接触的实体不会被减慢速度。",
+    "item_category": "blocks"
+  },
+  "金星块": {
+    "name": "金星块",
+    "image": "Gold_Starry_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png",
+          "amount": "10"
+        },
+        {
+          "name": "坠落之星",
+          "image": "Fallen_Star.png"
+        }
+      ],
+      "result": {
+        "name": "金星块",
+        "image": "Gold_Starry_Block.png",
+        "amount": "10"
+      }
+    },
+    "drops": null,
+    "en_name": "Gold Starry Block",
+    "description": "金星块是一种带动画的装饰性物块。放置时，在黑色背景的映衬下似乎流转着金色的星光。它是蓝星块的金色主题变体。",
+    "item_category": "blocks"
+  },
+  "针叶木": {
+    "name": "针叶木",
+    "image": "Boreal_Wood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "针叶木平台",
+          "image": "Boreal_Wood_Platform.png"
+        }
+      ],
+      "result": {
+        "name": "针叶木",
+        "image": "Boreal_Wood.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Boreal Wood",
+    "description": "针叶木是一种木材，可以从雪原生物群系中天然生长的针叶树处收集，或来自冰雪生物群系中的地下小屋。可以通过将橡实放置在地表以上的雪块上来种植针叶树。",
+    "item_category": "blocks"
+  },
+  "钯金柱": {
+    "name": "钯金柱",
+    "image": "Palladium_Column.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png"
+        },
+        {
+          "name": "钯金矿",
+          "image": "Palladium_Ore.png"
+        }
+      ],
+      "result": {
+        "name": "钯金柱",
+        "image": "Palladium_Column.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Palladium Column",
+    "description": "钯金柱是一种用石块和钯金矿制作的建筑材料。它基本上相当于钯金矿版本的砖。",
+    "item_category": "blocks"
+  },
+  "铜护板": {
+    "name": "铜护板",
+    "image": "Copper_Plating.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "重型装配台",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png",
+          "amount": "5"
+        },
+        {
+          "name": "铜矿",
+          "image": "Copper_Ore.png"
+        }
+      ],
+      "result": {
+        "name": "铜护板",
+        "image": "Copper_Plating.png",
+        "amount": "5"
+      }
+    },
+    "en_name": "Copper Plating",
+    "drops": null,
+    "description": "铜护板是种在重型工作台处制作的砖。其代用矿石版本是锡护板。",
+    "item_category": "blocks"
+  },
+  "锋利尖刺块": {
+    "name": "锋利尖刺块",
+    "image": "Sharp_Spike_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "触碰会造成伤害",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "尖刺块",
+          "image": "Spike_Block.png"
+        }
+      ],
+      "result": {
+        "name": "锋利尖刺块",
+        "image": "Sharp_Spike_Block.png"
+      }
+    },
+    "drops": null,
+    "en_name": "Sharp Spike Block",
+    "description": "锋利尖刺块是一种困难模式之前的物块，由尖刺块制作而成。接触时，它会对玩家造成 70 伤害并施加持续 10–20 /20–40/25–50秒的流血减益。[1]",
+    "item_category": "blocks"
+  },
+  "锡护板": {
+    "name": "锡护板",
+    "image": "Tin_Plating.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "重型装配台",
+      "ingredients": [
+        {
+          "name": "石块",
+          "image": "Stone_Block.png",
+          "amount": "5"
+        },
+        {
+          "name": "锡矿",
+          "image": "Tin_Ore.png"
+        }
+      ],
+      "result": {
+        "name": "锡护板",
+        "image": "Tin_Plating.png",
+        "amount": "5"
+      }
+    },
+    "drops": null,
+    "en_name": "Tin Plating",
+    "description": "锡护板是一种在重型工作台制作的砖。它是铜护板的等价物。",
+    "item_category": "blocks"
+  },
+  "阴森木": {
+    "name": "阴森木",
+    "image": "Spooky_Wood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "阴森木平台",
+          "image": "Spooky_Wood_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "阴森木",
+        "image": "Spooky_Wood.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "哀木",
+              "image": "Mourning_Wood.gif",
+              "quantity": "15–30",
+              "chance": "100%"
+            },
+            {
+              "name": "树精",
+              "image": "Splinterling.gif",
+              "quantity": "1-4",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "哀木",
+              "image": "Mourning_Wood.gif",
+              "quantity": "25–40",
+              "chance": "100%"
+            },
+            {
+              "name": "树精",
+              "image": "Splinterling.gif",
+              "quantity": "1-4",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "哀木",
+              "image": "Mourning_Wood.gif",
+              "quantity": "30–50",
+              "chance": "100%"
+            },
+            {
+              "name": "树精",
+              "image": "Splinterling.gif",
+              "quantity": "1-4",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "阴森木是一种木材，掉落自南瓜月事件期间的树精和哀木。它用于制作万圣节主题的家具和阴森盔甲。",
+    "item_category": "blocks"
+  },
+  "降雪块": {
+    "name": "降雪块",
+    "image": "Snowfall_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“比水晶雪球酷多了”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        },
+        {
+          "name": "雪块",
+          "image": "Snow_Block.png"
+        }
+      ],
+      "result": {
+        "name": "降雪块",
+        "image": "Snowfall_Block.png"
+      }
+    },
+    "drops": null,
+    "description": "降雪块是一种动画物块。它是少数以水晶球为制作站的物品之一。",
+    "item_category": "blocks"
+  },
+  "雪块": {
+    "name": "雪块",
+    "image": "Snow_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "雪平台",
+          "image": "Snow_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "雪块",
+        "image": "Snow_Block.png"
+      }
+    },
+    "en_name": "Snow Block",
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "巴拉雪人",
+              "image": "Snow_Balla.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "戳刺先生",
+              "image": "Mister_Stabby.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "雪人暴徒",
+              "image": "Snowman_Gangsta.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "巴拉雪人",
+              "image": "Snow_Balla.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "戳刺先生",
+              "image": "Mister_Stabby.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "雪人暴徒",
+              "image": "Snowman_Gangsta.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "巴拉雪人",
+              "image": "Snow_Balla.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            },
+            {
+              "name": "戳刺先生",
+              "image": "Mister_Stabby.gif",
+              "quantity": "5-10",
+              "chance": "100%"
+            },
+            {
+              "name": "雪人暴徒",
+              "image": "Snowman_Gangsta.gif",
+              "quantity": "5–10",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "雪块是在雪原生物群系自然生成的物块。放置在地表地层的雪块，无论是自然生成还是玩家放置的，都会产生降雪效果。当然，这只是视觉效果，其不会拥有任何功能性。雪块不能被神圣之地或邪恶生物群系侵染。任何雪块都不会溶化成水，也不会由水和冰雪块产生。\n\n雪块也会从困难模式雪人军团的任意敌怪身上掉落，并且当巴拉雪人扔出雪球时，会有更多雪块产生。",
+    "item_category": "blocks"
+  },
+  "飞镖陷阱": {
+    "name": "飞镖陷阱",
+    "image": "Dart_Trap.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块机械制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "✔️",
+        "extra": "(1 格宽 × 1 格高)"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "接收到信号时激活",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "00*",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "20 SC",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      },
+      {
+        "label": "发射飞镖",
+        "value": "",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "飞镖陷阱",
+          "image": "Dart_Trap.png"
+        },
+        {
+          "name": "蜘蛛牙",
+          "image": "Spider_Fang.png"
+        }
+      ],
+      "result": {
+        "name": "毒液飞镖陷阱",
+        "image": "Venom_Dart_Trap.png"
+      }
+    },
+    "en_name": "Dart Trap",
+    "drops": null,
+    "description": "飞镖陷阱是一种自然生成在洞穴地层和地牢的陷阱。当被电线触发时，它会发射一支飞镖，并且不消耗任何弹药。它的两次发射之间有着(电脑版、主机版、和移动版)3.3 秒 /(前代主机版、和3DS版)3 秒的冷却。飞镖造成 40 /80/120伤害[1]并且对玩家导致 10 /20/25秒的中毒（对NPC、敌怪、和小动物造成 20 伤害和 10 秒中毒）。[2]\n\n(电脑版、主机版、和移动版)飞镖陷阱被锤击后会旋转 90°。",
+    "item_category": "blocks"
+  },
+  "黑檀石块": {
+    "name": "黑檀石块",
+    "image": "Ebonstone_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "腐化赘生墙",
+          "image": "Corrupt_Growth_Wall.png",
+          "amount": "4"
+        }
+      ],
+      "result": {
+        "name": "黑檀石块",
+        "image": "Ebonstone_Block.png"
+      }
+    },
+    "en_name": "Ebonstone Block",
+    "drops": null,
+    "description": "黑檀石是一种出现在腐化之地中的物块。在困难模式之前，它在裂隙的内壁上最为显眼。它至少需要梦魇镐或用爆炸物才能采挖（可以用净化粉将黑檀石转变为可以用任意镐采挖的普通石来绕开这一点）。死亡草可以在其上生长。\n\n黑檀石是腐化版本的石（类似于猩红之地中的猩红石、或神圣之地中的珍珠石）。与猩红石一样，黑檀石可以通过净化粉或使用绿溶液的环境改造枪转化为普通石。\n\n在困难模式中，腐化的蔓延会将普通石块转化为黑檀石。黑檀石自身也会将腐化蔓延到附近易受影响的物块。",
+    "item_category": "blocks"
+  },
+  "齿轮": {
+    "name": "齿轮",
+    "image": "Cog.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "物块制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "灰色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#b8b8b8"
+      },
+      {
+        "label": "买入",
+        "value": "7 SC",
+        "extra": ""
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "cc",
+            "amount": "40",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "蒸汽朋克平台",
+          "image": "Steampunk_Platform.png",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "齿轮",
+        "image": "Cog.png"
+      }
+    },
+    "en_name": "Cog",
+    "drops": null,
+    "description": "齿轮是困难模式制作材料和可放置的物块，可从蒸汽朋克人处以每个7 SC的价格购买。它们用于制作高速子弹、液体感应器和蒸汽朋克家具套装。\n\n当将齿轮放置在一起时会显示动画机械。角、线和交汇处永远不会有动画效果，但成组齿轮的内部和左边缘总是会有动画效果，而其他边缘有时有2/3 (66.67%)几率有动画效果。\n\n制作全部蒸汽朋克家具需要 159（电脑版）/ 153（前代主机版移动版）/ 33（任天堂3DS版）个齿轮。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "齿轮是困难模式制作材料和可放置的物块，可从蒸汽朋克人处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "7",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。它们用于制作高速子弹、液体感应器和蒸汽朋克家具套装。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当将齿轮放置在一起时会显示动画机械。角、线和交汇处永远不会有动画效果，但成组齿轮的内部和左边缘总是会有动画效果，而其他边缘有时有2/3 (66.67%)几率有动画效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "制作全部蒸汽朋克家具需要 159（"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "）/ 153（"
+        },
+        {
+          "type": "icon",
+          "image": "Old-Gen_Console_only.png",
+          "alt": "前代主机版"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "）/ 33（"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "）个齿轮。"
+        }
+      ]
+    ],
+    "item_category": "blocks"
+  },
+  "泡泡": {
+    "name": "泡泡",
+    "image": "Bubble.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具物块",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "阻止液体通过",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "40",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "泡泡是一种动画背景家具物块，有与液体相关的特殊行为，后者会如同泡泡是实心块一样与之互动。当泡泡被放置在一起时，它们会相互连接，构成更大的泡泡或更加复杂的结构。\n\n泡泡可在困难模式中于派对女孩处以每个2 SC的价格购买。\n\n格栅(电脑版、主机版、和移动版)作用与泡泡相反，行为上是实心块，但允许液体通过。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "泡泡是一种动画背景家具物块，有与液体相关的特殊行为，后者会如同泡泡是实心块一样与之互动。当泡泡被放置在一起时，它们会相互连接，构成更大的泡泡或更加复杂的结构。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "泡泡可在困难模式中于派对女孩处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "2",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "格栅(电脑版、主机版、和移动版)作用与泡泡相反，行为上是实心块，但允许液体通过。"
+        }
+      ]
+    ],
+    "wiki_title": "泡泡",
+    "en_name": "Bubble",
+    "item_category": "blocks"
+  },
+  "烟雾块": {
+    "name": "烟雾块",
+    "image": "Smoke_Block.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具物块",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 100 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "烟雾块是动画背景家具物块，在困难模式中可从派对女孩处以1 SC购买。当放置在一起时，它们会以一种最左侧和最右侧的物块在视觉上只占据半个格的方式连接在一起。例如，如果玩家要制作 3×3 排列的烟雾块，则烟雾的最左边整列和最右边整列看起来会减半，从而使外观显得更加纤细。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "烟雾块是动画背景家具物块，在困难模式中可从派对女孩处以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "购买。当放置在一起时，它们会以一种最左侧和最右侧的物块在视觉上只占据半个格的方式连接在一起。例如，如果玩家要制作 3×3 排列的烟雾块，则烟雾的最左边整列和最右边整列看起来会减半，从而使外观显得更加纤细。"
+        }
+      ]
+    ],
+    "wiki_title": "烟雾块",
+    "en_name": "Smoke Block",
+    "item_category": "blocks"
+  }
+}

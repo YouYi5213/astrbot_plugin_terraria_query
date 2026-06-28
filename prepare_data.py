@@ -33,8 +33,8 @@ API_URL_EN = "https://terraria.wiki.gg/api.php"
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(_PLUGIN_DIR, "data", "terraria_query")
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
-ITEMS_JSON = os.path.join(DATA_DIR, "items.json")
-MOUNTS_JSON = os.path.join(DATA_DIR, "mounts.json")
+CATEGORIES_DIR = os.path.join(DATA_DIR, "categories")
+MOUNTS_JSON = os.path.join(CATEGORIES_DIR, "mounts.json")
 MOUNT_CATEGORY = "Category:坐骑召唤物品"
 MOUNT_OVERVIEW_PAGE = "坐骑"
 # Wiki 合并页/非物品栏条目，不应出现在 mounts.json
@@ -42,7 +42,7 @@ MOUNT_CATALOG_EXCLUDE = frozenset(
     {"马鞍", "轮滑鞋", "矿车", "矿车轨道", "挖掘鼹鼠矿车"}
 )
 
-PETS_JSON = os.path.join(DATA_DIR, "pets.json")
+PETS_JSON = os.path.join(CATEGORIES_DIR, "pets.json")
 PET_OVERVIEW_PAGE = "宠物"
 PET_TABLE_IDS = (
     "table-Pets",
@@ -71,19 +71,32 @@ except ImportError:
         return "en" if api_url == API_URL_EN else "zh"
 
 CATEGORIES = [
+    "Category:工具物品",
+    "Category:武器物品",
+    "Category:弹药物品",
+    "Category:盔甲物品",
+    "Category:盔甲套装",
+    "Category:家具物品",
+    "Category:制作站物品",
+    "Category:钱币",
+    "Category:矿石物品",
+    "Category:锭物品",
+    "Category:配饰物品",
+    "Category:物块物品",
+    "Category:墙物品",
+    "Category:油漆",
+    "Category:宝石物品",
+    "Category:时装物品",
+    "Category:染料物品",
+    "Category:药水物品",
+    "Category:机械物品",
+    "Category:仆从召唤物品",
+    "Category:其他物品",
     "Category:近战武器",
     "Category:远程武器",
     "Category:魔法武器",
     "Category:召唤武器",
-    "Category:武器物品",
-    "Category:工具物品",
     "Category:制作材料物品",
-    "Category:盔甲物品",
-    "Category:盔甲套装",
-    "Category:配饰物品",
-    "Category:治疗物品",
-    "Category:家具物品",
-    "Category:其他物品",
 ]
 
 # Wiki 上的物品类型总览页（非单个物品，有独立 infobox + 导语）
@@ -105,6 +118,29 @@ HEADERS = {
 }
 
 logger = logging.getLogger(__name__)
+
+
+def _persist_items(items: dict[str, dict]) -> None:
+    from category_data import persist_items_to_categories
+
+    os.makedirs(CATEGORIES_DIR, exist_ok=True)
+    persist_items_to_categories(items, categories_dir=CATEGORIES_DIR)
+
+
+async def _persist_items_async(
+    session: aiohttp.ClientSession, items: dict[str, dict]
+) -> None:
+    from category_data import build_title_category_map, persist_items_to_categories
+
+    os.makedirs(CATEGORIES_DIR, exist_ok=True)
+    title_to_keys = await build_title_category_map(session)
+    persist_items_to_categories(
+        items,
+        categories_dir=CATEGORIES_DIR,
+        title_to_keys=title_to_keys,
+        mounts=_load_existing_mounts(),
+        pets=_load_existing_pets(),
+    )
 
 
 def _clean_text(text: str) -> str:
@@ -2131,8 +2167,7 @@ async def backfill_drops(
         found += sum(1 for ok in results if ok)
         done = batch_start + len(batch)
         logger.info(f"掉落来源回填进度 {done}/{len(pending)}，发现 {found} 个")
-        with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-            json.dump(items, f, ensure_ascii=False, indent=2)
+        _persist_items(items)
 
     return found, image_urls
 
@@ -2211,8 +2246,7 @@ async def backfill_descriptions(
         found += sum(1 for ok in results if ok)
         done = batch_start + len(batch)
         logger.info(f"描述回填进度 {done}/{len(pending)}，发现 {found} 个")
-        with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-            json.dump(items, f, ensure_ascii=False, indent=2)
+        _persist_items(items)
 
     return found
 
@@ -2617,19 +2651,14 @@ async def refresh_overview_pages(
                     for fn, url in image_urls.items()
                 ]
             )
-        with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-            json.dump(items, f, ensure_ascii=False, indent=2)
+        _persist_items(items)
     return updated
 
 
 def _load_existing_items() -> dict[str, dict]:
-    if not os.path.exists(ITEMS_JSON):
-        return {}
-    try:
-        with open(ITEMS_JSON, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (json.JSONDecodeError, OSError):
-        return {}
+    from category_data import load_items_for_plugin
+
+    return load_items_for_plugin(CATEGORIES_DIR)
 
 
 def _load_existing_mounts() -> dict[str, dict]:
@@ -2792,12 +2821,10 @@ async def update_wiki_data(
         mount_result = await refresh_mounts(session, force=force)
         pet_result = await refresh_pets(session, force=force)
 
-    strip_count = strip_en_locale_data(items)
-    image_migrate_count = migrate_item_image_filenames(items)
-    piece_sync_count = resync_set_piece_locales(items)
-
-    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
+        strip_count = strip_en_locale_data(items)
+        image_migrate_count = migrate_item_image_filenames(items)
+        piece_sync_count = resync_set_piece_locales(items)
+        await _persist_items_async(session, items)
 
     return {
         "ok": True,
@@ -2914,6 +2941,7 @@ async def refresh_mounts(
 ) -> dict:
     """更新 mounts.json（以坐骑总览页物品栏为准，共 37 种召唤物）。"""
     os.makedirs(IMAGES_DIR, exist_ok=True)
+    os.makedirs(CATEGORIES_DIR, exist_ok=True)
     mounts: dict[str, dict] = {} if force else _load_existing_mounts()
     before = len(mounts)
 
@@ -3030,6 +3058,7 @@ async def refresh_pets(
 ) -> dict:
     """更新 pets.json（以宠物总览页物品栏为准）。"""
     os.makedirs(IMAGES_DIR, exist_ok=True)
+    os.makedirs(CATEGORIES_DIR, exist_ok=True)
     pets: dict[str, dict] = {} if force else _load_existing_pets()
     before = len(pets)
 
@@ -3151,8 +3180,7 @@ async def ingest_new_categories(
     migrate_item_image_filenames(items)
     strip_en_locale_data(items)
     piece_sync_count = resync_set_piece_locales(items)
-    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
+    _persist_items(items)
 
     return {
         "before": before,
@@ -3174,8 +3202,7 @@ async def maintain_local_data() -> dict:
         "total": len(items),
         "sets_refreshed": 0,
     }
-    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
+    _persist_items(items)
     return result
 
 
@@ -3189,8 +3216,7 @@ async def refresh_sets_only() -> dict:
         sets_refreshed = await refresh_armor_sets(session, items)
     piece_sync_count = resync_set_piece_locales(items)
     strip_en_locale_data(items)
-    with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
+    _persist_items(items)
     return {
         "sets_refreshed": sets_refreshed,
         "piece_sync_count": piece_sync_count,
@@ -3230,7 +3256,7 @@ async def main(
         f"描述 {result['desc_backfill_count']} 个",
         flush=True,
     )
-    print(f"已保存到 {ITEMS_JSON}", flush=True)
+    print(f"已保存到 {CATEGORIES_DIR}", flush=True)
 
 
 if __name__ == "__main__":
@@ -3276,7 +3302,17 @@ if __name__ == "__main__":
     parser.add_argument(
         "--ingest-pets",
         action="store_true",
-        help="仅抓取宠物召唤物到 pets.json",
+        help="仅抓取宠物召唤物到 categories/pets.json",
+    )
+    parser.add_argument(
+        "--split-categories",
+        action="store_true",
+        help="将根目录 items/mounts/pets.json 拆分/迁移到 data/terraria_query/categories/",
+    )
+    parser.add_argument(
+        "--remove-legacy",
+        action="store_true",
+        help="与 --split-categories 联用：迁移后删除根目录 items/mounts/pets.json",
     )
     args = parser.parse_args()
     try:
@@ -3320,6 +3356,16 @@ if __name__ == "__main__":
                 f"图片 {result['images_ok']}/{result['images_total']}",
                 flush=True,
             )
+        elif args.split_categories:
+            from category_data import format_split_report, migrate_to_categories_dir
+
+            result = asyncio.run(
+                migrate_to_categories_dir(remove_legacy=args.remove_legacy)
+            )
+            print(format_split_report(result), flush=True)
+            print(f"已写入 {result['categories_dir']}", flush=True)
+            if args.remove_legacy:
+                print("已删除根目录 items/mounts/pets.json", flush=True)
         elif args.resync_pieces:
             result = asyncio.run(maintain_local_data())
             print(
@@ -3337,8 +3383,7 @@ if __name__ == "__main__":
         elif args.strip_en:
             items = _load_existing_items()
             count = strip_en_locale_data(items)
-            with open(ITEMS_JSON, "w", encoding="utf-8") as f:
-                json.dump(items, f, ensure_ascii=False, indent=2)
+            _persist_items(items)
             print(f"已清理 {count} 个 en 数据块，共 {len(items)} 条目", flush=True)
         else:
             asyncio.run(

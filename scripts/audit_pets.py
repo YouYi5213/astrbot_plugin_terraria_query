@@ -9,9 +9,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from prepare_data import load_pet_overview_catalog  # noqa: E402
+from category_data import load_items_for_plugin  # noqa: E402
 
-PETS_JSON = ROOT / "data" / "terraria_query" / "pets.json"
-ITEMS_JSON = ROOT / "data" / "terraria_query" / "items.json"
+PETS_JSON = ROOT / "data" / "terraria_query" / "categories" / "pets.json"
+CATEGORIES_DIR = ROOT / "data" / "terraria_query" / "categories"
 
 
 def searchable_names(item: dict, key: str) -> set[str]:
@@ -34,7 +35,7 @@ def main() -> int:
         return 1
 
     pets_data = json.loads(PETS_JSON.read_text(encoding="utf-8"))
-    items_data = json.loads(ITEMS_JSON.read_text(encoding="utf-8")) if ITEMS_JSON.is_file() else {}
+    items_data = load_items_for_plugin(str(CATEGORIES_DIR))
 
     print(f"Wiki catalog items: {len(wiki_items)}")
     print(f"pets.json entries: {len(pets_data)}")

@@ -20,6 +20,11 @@ from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.star import Context, Star
 from astrbot.api import AstrBotConfig, logger
 
+from .category_data import (
+    load_items_for_plugin,
+    load_mounts_for_plugin,
+    load_pets_for_plugin,
+)
 from .prepare_data import (
     COIN_SPECS,
     RARITY_LABELS,
@@ -172,15 +177,15 @@ def _resolve_data_dir() -> str:
         os.path.join(os.getcwd(), "data", "terraria_query"),
     ]
     for d in candidates:
-        if os.path.exists(os.path.join(d, "items.json")):
+        if os.path.isdir(os.path.join(d, "categories")):
             return d
     return candidates[0]
 
 
 DATA_DIR = _resolve_data_dir()
-ITEMS_JSON = os.path.join(DATA_DIR, "items.json")
-MOUNTS_JSON = os.path.join(DATA_DIR, "mounts.json")
-PETS_JSON = os.path.join(DATA_DIR, "pets.json")
+CATEGORIES_DIR = os.path.join(DATA_DIR, "categories")
+MOUNTS_JSON = os.path.join(CATEGORIES_DIR, "mounts.json")
+PETS_JSON = os.path.join(CATEGORIES_DIR, "pets.json")
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
 CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
@@ -2015,44 +2020,36 @@ class TerrariaQueryPlugin(Star):
             _clear_card_cache()
 
     def _load_items(self) -> None:
-        if not os.path.exists(ITEMS_JSON):
-            logger.warning(
-                f"未找到离线数据 {ITEMS_JSON}，请先运行 prepare_data.py 准备数据"
-            )
-            return
         try:
-            with open(ITEMS_JSON, "r", encoding="utf-8") as f:
-                self.items = json.load(f)
-            logger.info(f"泰拉瑞亚查询插件已加载，共 {len(self.items)} 个物品")
-        except (json.JSONDecodeError, OSError) as e:
-            logger.error(f"加载 items.json 失败: {e}")
-            self.items = {}
+            self.items = load_items_for_plugin(CATEGORIES_DIR)
+            if self.items:
+                logger.info(
+                    f"泰拉瑞亚查询插件已加载（categories/），共 {len(self.items)} 个物品"
+                )
+                return
+        except Exception as e:
+            logger.error(f"加载物品数据失败: {e}")
+        self.items = {}
 
     def _load_mounts(self) -> None:
-        if not os.path.exists(MOUNTS_JSON):
-            logger.info(f"未找到坐骑数据 {MOUNTS_JSON}，坐骑查询不可用")
-            self.mounts = {}
-            return
         try:
-            with open(MOUNTS_JSON, "r", encoding="utf-8") as f:
-                self.mounts = json.load(f)
-            logger.info(f"已加载 {len(self.mounts)} 个坐骑召唤物")
-        except (json.JSONDecodeError, OSError) as e:
+            self.mounts = load_mounts_for_plugin(CATEGORIES_DIR)
+            if self.mounts:
+                logger.info(f"已加载 {len(self.mounts)} 个坐骑召唤物")
+                return
+        except Exception as e:
             logger.error(f"加载 mounts.json 失败: {e}")
-            self.mounts = {}
+        self.mounts = {}
 
     def _load_pets(self) -> None:
-        if not os.path.exists(PETS_JSON):
-            logger.info(f"未找到宠物数据 {PETS_JSON}，宠物查询不可用")
-            self.pets = {}
-            return
         try:
-            with open(PETS_JSON, "r", encoding="utf-8") as f:
-                self.pets = json.load(f)
-            logger.info(f"已加载 {len(self.pets)} 个宠物召唤物")
-        except (json.JSONDecodeError, OSError) as e:
+            self.pets = load_pets_for_plugin(CATEGORIES_DIR)
+            if self.pets:
+                logger.info(f"已加载 {len(self.pets)} 个宠物召唤物")
+                return
+        except Exception as e:
             logger.error(f"加载 pets.json 失败: {e}")
-            self.pets = {}
+        self.pets = {}
 
     @filter.regex(_TERRARIA_CMD_RE, priority=10)
     async def on_terraria_command(self, event: AstrMessageEvent):

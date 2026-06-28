@@ -8,9 +8,12 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 WIKI_PAGE = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "坐骑.html"
-MOUNTS_JSON = ROOT / "data" / "terraria_query" / "mounts.json"
-ITEMS_JSON = ROOT / "data" / "terraria_query" / "items.json"
+MOUNTS_JSON = ROOT / "data" / "terraria_query" / "categories" / "mounts.json"
+CATEGORIES_DIR = ROOT / "data" / "terraria_query" / "categories"
+
+from category_data import load_items_for_plugin  # noqa: E402
 
 
 def _cell_item_name(td) -> str:
@@ -49,7 +52,7 @@ def main() -> int:
 
     wiki_items = sorted({item for _, item in pairs})
     mounts_data = json.loads(MOUNTS_JSON.read_text(encoding="utf-8"))
-    items_data = json.loads(ITEMS_JSON.read_text(encoding="utf-8"))
+    items_data = load_items_for_plugin(str(CATEGORIES_DIR))
 
     print(f"Wiki table rows: {len(pairs)}, unique items: {len(wiki_items)}")
     print(f"mounts.json entries: {len(mounts_data)}")

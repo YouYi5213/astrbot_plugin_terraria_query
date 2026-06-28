@@ -120,23 +120,29 @@ HEADERS = {
 logger = logging.getLogger(__name__)
 
 
-def _persist_items(items: dict[str, dict]) -> None:
-    from category_data import persist_items_to_categories
+def _category_data_module():
+    try:
+        from . import category_data
+    except ImportError:
+        import category_data
+    return category_data
 
+
+def _persist_items(items: dict[str, dict]) -> None:
+    cd = _category_data_module()
     strip_english_fields(items)
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
-    persist_items_to_categories(items, categories_dir=CATEGORIES_DIR)
+    cd.persist_items_to_categories(items, categories_dir=CATEGORIES_DIR)
 
 
 async def _persist_items_async(
     session: aiohttp.ClientSession, items: dict[str, dict]
 ) -> None:
-    from category_data import build_title_category_map, persist_items_to_categories
-
+    cd = _category_data_module()
     strip_english_fields(items)
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
-    title_to_keys = await build_title_category_map(session)
-    persist_items_to_categories(
+    title_to_keys = await cd.build_title_category_map(session)
+    cd.persist_items_to_categories(
         items,
         categories_dir=CATEGORIES_DIR,
         title_to_keys=title_to_keys,
@@ -2579,9 +2585,7 @@ async def refresh_overview_pages(
 
 
 def _load_existing_items() -> dict[str, dict]:
-    from category_data import load_items_for_plugin
-
-    return load_items_for_plugin(CATEGORIES_DIR)
+    return _category_data_module().load_items_for_plugin(CATEGORIES_DIR)
 
 
 def _load_existing_mounts() -> dict[str, dict]:
@@ -3272,12 +3276,11 @@ if __name__ == "__main__":
                 flush=True,
             )
         elif args.split_categories:
-            from category_data import format_split_report, migrate_to_categories_dir
-
+            cd = _category_data_module()
             result = asyncio.run(
-                migrate_to_categories_dir(remove_legacy=args.remove_legacy)
+                cd.migrate_to_categories_dir(remove_legacy=args.remove_legacy)
             )
-            print(format_split_report(result), flush=True)
+            print(cd.format_split_report(result), flush=True)
             print(f"已写入 {result['categories_dir']}", flush=True)
             if args.remove_legacy:
                 print("已删除根目录 items/mounts/pets.json", flush=True)

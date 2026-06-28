@@ -10,7 +10,10 @@ from typing import Any
 
 import aiohttp
 
-from prepare_data import fetch_category_members
+try:
+    from .prepare_data import fetch_category_members
+except ImportError:
+    from prepare_data import fetch_category_members
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(_PLUGIN_DIR, "data", "terraria_query")

@@ -73,9 +73,8 @@ def main() -> int:
     print()
 
     def searchable_names(item: dict, key: str) -> set[str]:
-        names = {key, item.get("name", ""), item.get("wiki_title", ""), item.get("en_name", "")}
+        names = {key, item.get("name", ""), item.get("wiki_title", "")}
         names.update(item.get("search_terms") or [])
-        names.update(item.get("aliases") or [])
         buff = item.get("buff") or {}
         mount = item.get("mount") or {}
         names.add(buff.get("name", ""))

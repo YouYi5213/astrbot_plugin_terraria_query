@@ -51,7 +51,6 @@
         "image": "Adamantite_Forge.png"
       }
     },
-    "en_name": "Hellforge",
     "drops": {
       "modes": [
         {
@@ -162,7 +161,6 @@
       }
     },
     "drops": null,
-    "en_name": "Mug",
     "description": "玻璃杯是用玻璃制成的杯子。它可用于制作麦芽酒。它可以放置在平坦的家具物品上，作为放置的瓶子制作站使用。",
     "item_category": "crafting_stations"
   },
@@ -228,7 +226,6 @@
         "image": "Decay_Chamber.png"
       }
     },
-    "en_name": "Decay Chamber",
     "drops": null,
     "description": "腐变室是种用于将病变块制作为病变主题（腐化）家具的困难模式制作站。它可以10 GC的价格从蒸汽朋克人处购买，但仅限于腐化之地世界。它也可以用其猩红对应物血肉克隆台制作而成。\n\n病变块需要于绞肉机处制作，因此若缺失了其，腐变室就会毫无用处。",
     "description_rich": [
@@ -329,7 +326,6 @@
         "image": "Flesh_Cloning_Vat.png"
       }
     },
-    "en_name": "Flesh Cloning Vat",
     "drops": null,
     "description": "血肉克隆台是个用来以血肉块制作血肉家具（猩红主题家具）的困难模式制作站。血肉克隆台可从蒸汽朋克人处以10 GC购买，但仅限于生成有猩红之地的世界内才有卖。它也可以用其腐化对应物腐变室制作而成。\n\n血肉块是用绞肉机制作的，因此如果没有它那么血肉克隆台就没啥用了。",
     "description_rich": [
@@ -441,7 +437,6 @@
       ]
     ],
     "wiki_title": "Adamantite Forge",
-    "en_name": "Adamantite Forge",
     "item_category": "crafting_stations"
   },
   "书架": {
@@ -529,7 +524,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Bookcase",
-    "en_name": "Bookcases",
     "item_category": "crafting_stations"
   },
   "椅子": {
@@ -620,7 +614,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Chair",
-    "en_name": "Chairs",
     "item_category": "crafting_stations"
   },
   "桌子": {
@@ -703,7 +696,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Table",
-    "en_name": "Tables",
     "item_category": "crafting_stations"
   },
   "工作台": {
@@ -791,7 +783,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Work Bench",
-    "en_name": "Work Benches",
     "item_category": "crafting_stations"
   },
   "重型装配台": {
@@ -873,7 +864,6 @@
       ]
     ],
     "wiki_title": "Heavy Work Bench",
-    "en_name": "Heavy Assembler",
     "item_category": "crafting_stations"
   },
   "铁砧": {
@@ -968,7 +958,6 @@
       ]
     ],
     "wiki_title": "Iron Anvil",
-    "en_name": "Iron Anvil",
     "item_category": "crafting_stations"
   },
   "水槽": {
@@ -1060,7 +1049,6 @@
       ]
     ],
     "wiki_title": "Nebula Sink",
-    "en_name": "Sinks",
     "item_category": "crafting_stations"
   },
   "丛林蜥蜴熔炉": {
@@ -1124,7 +1112,6 @@
       ]
     ],
     "wiki_title": "丛林蜥蜴熔炉",
-    "en_name": "Lihzahrd Furnace",
     "item_category": "crafting_stations"
   },
   "冰雪机": {
@@ -1276,7 +1263,6 @@
       ]
     ],
     "wiki_title": "冰雪机",
-    "en_name": "Ice Machine",
     "item_category": "crafting_stations"
   },
   "秘银砧": {
@@ -1353,7 +1339,6 @@
       ]
     ],
     "wiki_title": "困难模式的砧",
-    "en_name": "Mythril Anvil",
     "item_category": "crafting_stations"
   },
   "固化机": {
@@ -1475,7 +1460,6 @@
       ]
     ],
     "wiki_title": "固化机",
-    "en_name": "Solidifier",
     "item_category": "crafting_stations"
   },
   "天磨": {
@@ -1588,7 +1572,6 @@
       ]
     ],
     "wiki_title": "天磨",
-    "en_name": "Sky Mill",
     "item_category": "crafting_stations"
   },
   "工匠作坊": {
@@ -1709,7 +1692,6 @@
       ]
     ],
     "wiki_title": "工匠作坊",
-    "en_name": "Tinkerer's Workshop",
     "item_category": "crafting_stations"
   },
   "搅拌机": {
@@ -1839,7 +1821,6 @@
       ]
     ],
     "wiki_title": "搅拌机",
-    "en_name": "Blend-O-Matic",
     "item_category": "crafting_stations"
   },
   "杯子": {
@@ -1926,7 +1907,6 @@
       ]
     ],
     "wiki_title": "杯子",
-    "en_name": "Cups",
     "item_category": "crafting_stations"
   },
   "染缸": {
@@ -2011,7 +1991,6 @@
       ]
     ],
     "wiki_title": "染缸",
-    "en_name": "Dye Vat",
     "item_category": "crafting_stations"
   },
   "水晶球": {
@@ -2116,7 +2095,6 @@
       ]
     ],
     "wiki_title": "水晶球",
-    "en_name": "Crystal Ball",
     "item_category": "crafting_stations"
   },
   "灌注站": {
@@ -2206,7 +2184,6 @@
       ]
     ],
     "wiki_title": "灌注站",
-    "en_name": "Imbuing Station",
     "item_category": "crafting_stations"
   },
   "炼药桌": {
@@ -2276,7 +2253,6 @@
       ]
     ],
     "wiki_title": "炼药桌",
-    "en_name": "Alchemy Table",
     "item_category": "crafting_stations"
   },
   "炼金瓶": {
@@ -2400,7 +2376,6 @@
       ]
     ],
     "wiki_title": "炼金瓶",
-    "en_name": "Alchemy Flask",
     "item_category": "crafting_stations"
   },
   "烹饪锅": {
@@ -2492,7 +2467,6 @@
       ]
     ],
     "wiki_title": "烹饪锅",
-    "en_name": "Cooking Pot",
     "item_category": "crafting_stations"
   },
   "熔炉": {
@@ -2597,7 +2571,6 @@
       ]
     ],
     "wiki_title": "熔炉",
-    "en_name": "Furnace",
     "item_category": "crafting_stations"
   },
   "放置的瓶子": {
@@ -2648,7 +2621,6 @@
       ]
     ],
     "wiki_title": "玻璃瓶（制作站）",
-    "en_name": "Placed Bottle",
     "item_category": "crafting_stations"
   },
   "玻璃窑": {
@@ -2762,7 +2734,6 @@
       ]
     ],
     "wiki_title": "玻璃窑",
-    "en_name": "Glass Kiln",
     "item_category": "crafting_stations"
   },
   "生命木织机": {
@@ -2838,7 +2809,6 @@
       ]
     ],
     "wiki_title": "生命木织机",
-    "en_name": "Living Loom",
     "item_category": "crafting_stations"
   },
   "砧": {
@@ -2868,7 +2838,6 @@
       ]
     ],
     "wiki_title": "砧",
-    "en_name": "Anvil",
     "item_category": "crafting_stations"
   },
   "粉花瓶": {
@@ -2940,7 +2909,6 @@
       ]
     ],
     "wiki_title": "粉花瓶",
-    "en_name": "Pink Vase",
     "item_category": "crafting_stations"
   },
   "织布机": {
@@ -3017,7 +2985,6 @@
       ]
     ],
     "wiki_title": "织布机",
-    "en_name": "Loom",
     "item_category": "crafting_stations"
   },
   "绞肉机": {
@@ -3307,7 +3274,6 @@
       ]
     ],
     "wiki_title": "绞肉机",
-    "en_name": "Meat Grinder",
     "item_category": "crafting_stations"
   },
   "自动锤炼机": {
@@ -3392,7 +3358,6 @@
       ]
     ],
     "wiki_title": "自动锤炼机",
-    "en_name": "Autohammer",
     "item_category": "crafting_stations"
   },
   "茶壶": {
@@ -3469,7 +3434,6 @@
       ]
     ],
     "wiki_title": "茶壶",
-    "en_name": "Teapot",
     "item_category": "crafting_stations"
   },
   "蒸汽朋克锅炉": {
@@ -3554,7 +3518,6 @@
       ]
     ],
     "wiki_title": "蒸汽朋克锅炉",
-    "en_name": "Steampunk Boiler",
     "item_category": "crafting_stations"
   },
   "蜂蜜分配机": {
@@ -3706,7 +3669,6 @@
       ]
     ],
     "wiki_title": "蜂蜜分配机",
-    "en_name": "Honey Dispenser",
     "item_category": "crafting_stations"
   },
   "远古操纵机": {
@@ -3810,7 +3772,6 @@
       ]
     ],
     "wiki_title": "远古操纵机",
-    "en_name": "Ancient Manipulator",
     "item_category": "crafting_stations"
   },
   "酒桶": {
@@ -3892,7 +3853,6 @@
       ]
     ],
     "wiki_title": "酒桶",
-    "en_name": "Keg",
     "item_category": "crafting_stations"
   },
   "锯木机": {
@@ -3978,7 +3938,6 @@
       ]
     ],
     "wiki_title": "锯木机",
-    "en_name": "Sawmill",
     "item_category": "crafting_stations"
   },
   "骨头焊机": {
@@ -4081,7 +4040,6 @@
       ]
     ],
     "wiki_title": "骨头焊机",
-    "en_name": "Bone Welder",
     "item_category": "crafting_stations"
   }
 }

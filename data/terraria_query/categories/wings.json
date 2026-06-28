@@ -69,7 +69,6 @@
     "search_terms": [
       "天使"
     ],
-    "en_name": "Angel Wings",
     "item_category": "wings"
   },
   "恶魔之翼": {
@@ -142,7 +141,6 @@
     "search_terms": [
       "恶魔"
     ],
-    "en_name": "Demon Wings",
     "item_category": "wings"
   },
   "仙灵之翼": {
@@ -215,7 +213,6 @@
     "search_terms": [
       "仙灵"
     ],
-    "en_name": "Fairy Wings",
     "item_category": "wings"
   },
   "鳍翼": {
@@ -279,7 +276,6 @@
         }
       ]
     ],
-    "en_name": "Fin Wings",
     "item_category": "wings"
   },
   "冰冻之翼": {
@@ -352,7 +348,6 @@
     "search_terms": [
       "冰冻"
     ],
-    "en_name": "Frozen Wings",
     "item_category": "wings"
   },
   "鸟妖之翼": {
@@ -419,7 +414,6 @@
     "search_terms": [
       "鸟妖"
     ],
-    "en_name": "Harpy Wings",
     "item_category": "wings"
   },
   "Chippy的斗篷": {
@@ -489,7 +483,6 @@
         }
       ]
     ],
-    "en_name": "Chippy's Cloak",
     "item_category": "wings"
   },
   "Heroicis的翅膀": {
@@ -559,7 +552,6 @@
         }
       ]
     ],
-    "en_name": "Heroicis' Wings",
     "item_category": "wings"
   },
   "Red的翅膀": {
@@ -623,7 +615,6 @@
         }
       ]
     ],
-    "en_name": "Red's Wings",
     "item_category": "wings"
   },
   "D-Town的翅膀": {
@@ -687,7 +678,6 @@
         }
       ]
     ],
-    "en_name": "D-Town's Wings",
     "item_category": "wings"
   },
   "Will的翅膀": {
@@ -751,7 +741,6 @@
         }
       ]
     ],
-    "en_name": "Will's Wings",
     "item_category": "wings"
   },
   "Crowno的翅膀": {
@@ -815,7 +804,6 @@
         }
       ]
     ],
-    "en_name": "Crowno's Wings",
     "item_category": "wings"
   },
   "Cenx的翅膀": {
@@ -879,7 +867,6 @@
         }
       ]
     ],
-    "en_name": "Cenx's Wings",
     "item_category": "wings"
   },
   "Lazure的屏障台": {
@@ -1003,7 +990,6 @@
         }
       ]
     ],
-    "en_name": "Lazure's Barrier Platform",
     "item_category": "wings"
   },
   "Jim的翅膀": {
@@ -1073,7 +1059,6 @@
         }
       ]
     ],
-    "en_name": "Jim's Wings",
     "item_category": "wings"
   },
   "Skiphs的爪子": {
@@ -1161,7 +1146,6 @@
         }
       ]
     ],
-    "en_name": "Skiphs' Paws",
     "item_category": "wings"
   },
   "Loki的翅膀": {
@@ -1231,7 +1215,6 @@
         }
       ]
     ],
-    "en_name": "Loki's Wings",
     "item_category": "wings"
   },
   "Arkhalis的飞翼": {
@@ -1307,7 +1290,6 @@
         }
       ]
     ],
-    "en_name": "Arkhalis' Lightwings",
     "item_category": "wings"
   },
   "Leinfors的卷缠斗篷": {
@@ -1371,7 +1353,6 @@
         }
       ]
     ],
-    "en_name": "Leinfors' Prehensile Cloak",
     "item_category": "wings"
   },
   "Ghostar的无极翼": {
@@ -1435,7 +1416,6 @@
         }
       ]
     ],
-    "en_name": "Ghostar's Infinity Eight",
     "item_category": "wings"
   },
   "Safeman的毛毯斗篷": {
@@ -1499,7 +1479,6 @@
         }
       ]
     ],
-    "en_name": "Safeman's Blanket Cape",
     "item_category": "wings"
   },
   "FoodBarbarian的褴褛龙之翼": {
@@ -1566,7 +1545,6 @@
     "search_terms": [
       "FoodBarbarian的褴褛龙"
     ],
-    "en_name": "FoodBarbarian's Tattered Dragon Wings",
     "item_category": "wings"
   },
   "Grox The Great的翅膀": {
@@ -1630,7 +1608,6 @@
         }
       ]
     ],
-    "en_name": "Grox The Great's Wings",
     "item_category": "wings"
   },
   "Luna的符文妖精翅膀": {
@@ -1694,7 +1671,6 @@
         }
       ]
     ],
-    "en_name": "Luna's Runic Pixie Wings",
     "item_category": "wings"
   },
   "Kazzymodus的翅膀": {
@@ -1758,7 +1734,6 @@
         }
       ]
     ],
-    "en_name": "Kazzymodus' Wings",
     "item_category": "wings"
   },
   "Chicken Bones的翅膀": {
@@ -1822,7 +1797,6 @@
         }
       ]
     ],
-    "en_name": "Chicken Bones' Wings",
     "item_category": "wings"
   },
   "叶之翼": {
@@ -1931,7 +1905,6 @@
     "search_terms": [
       "叶"
     ],
-    "en_name": "Leaf Wings",
     "item_category": "wings"
   },
   "蝙蝠之翼": {
@@ -1998,7 +1971,6 @@
     "search_terms": [
       "蝙蝠"
     ],
-    "en_name": "Bat Wings",
     "item_category": "wings"
   },
   "蜜蜂之翼": {
@@ -2065,7 +2037,6 @@
     "search_terms": [
       "蜜蜂"
     ],
-    "en_name": "Bee Wings",
     "item_category": "wings"
   },
   "蝴蝶之翼": {
@@ -2138,7 +2109,6 @@
     "search_terms": [
       "蝴蝶"
     ],
-    "en_name": "Butterfly Wings",
     "item_category": "wings"
   },
   "烈焰之翼": {
@@ -2211,7 +2181,6 @@
     "search_terms": [
       "烈焰"
     ],
-    "en_name": "Flame Wings",
     "item_category": "wings"
   },
   "骨之翼": {
@@ -2278,7 +2247,6 @@
     "search_terms": [
       "骨"
     ],
-    "en_name": "Bone Wings",
     "item_category": "wings"
   },
   "蛾怪之翼": {
@@ -2351,7 +2319,6 @@
     "search_terms": [
       "蛾怪"
     ],
-    "en_name": "Mothron Wings",
     "item_category": "wings"
   },
   "幽灵之翼": {
@@ -2424,7 +2391,6 @@
     "search_terms": [
       "幽灵"
     ],
-    "en_name": "Spectre Wings",
     "item_category": "wings"
   },
   "甲虫之翼": {
@@ -2491,7 +2457,6 @@
     "search_terms": [
       "甲虫"
     ],
-    "en_name": "Beetle Wings",
     "item_category": "wings"
   },
   "喜庆之翼": {
@@ -2564,7 +2529,6 @@
     "search_terms": [
       "喜庆"
     ],
-    "en_name": "Festive Wings",
     "item_category": "wings"
   },
   "阴森之翼": {
@@ -2631,7 +2595,6 @@
     "search_terms": [
       "阴森"
     ],
-    "en_name": "Spooky Wings",
     "item_category": "wings"
   },
   "褴褛仙灵之翼": {
@@ -2704,7 +2667,6 @@
     "search_terms": [
       "褴褛仙灵"
     ],
-    "en_name": "Tattered Fairy Wings",
     "item_category": "wings"
   },
   "蒸汽朋克之翼": {
@@ -2813,7 +2775,6 @@
     "search_terms": [
       "蒸汽朋克"
     ],
-    "en_name": "Steampunk Wings",
     "item_category": "wings"
   },
   "双足翼龙之翼": {
@@ -2934,7 +2895,6 @@
     "search_terms": [
       "双足翼龙"
     ],
-    "en_name": "Betsy's Wings",
     "item_category": "wings"
   },
   "女皇之翼": {
@@ -3016,7 +2976,6 @@
     "search_terms": [
       "女皇"
     ],
-    "en_name": "Empress Wings",
     "item_category": "wings"
   },
   "猪龙鱼之翼": {
@@ -3095,7 +3054,6 @@
     "search_terms": [
       "猪龙鱼"
     ],
-    "en_name": "Fishron Wings",
     "item_category": "wings"
   },
   "星云斗篷": {
@@ -3219,7 +3177,6 @@
         }
       ]
     ],
-    "en_name": "Nebula Mantle",
     "item_category": "wings"
   },
   "星旋强化翼": {
@@ -3343,7 +3300,6 @@
         }
       ]
     ],
-    "en_name": "Vortex Booster",
     "item_category": "wings"
   },
   "日耀之翼": {
@@ -3410,7 +3366,6 @@
     "search_terms": [
       "日耀"
     ],
-    "en_name": "Solar Wings",
     "item_category": "wings"
   },
   "星尘之翼": {
@@ -3483,7 +3438,6 @@
     "search_terms": [
       "星尘"
     ],
-    "en_name": "Stardust Wings",
     "item_category": "wings"
   }
 }

@@ -83,7 +83,6 @@
         "amount": "3"
       }
     },
-    "en_name": "Jungle Juice",
     "drops": null,
     "description": "丛林果汁是一种困难模式的回复药水，使用后能够恢复 180生命并造成 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。\n\n它是第三级别和第四级别之间的治疗药水，优于强效治疗药水，次于超级治疗药水。",
     "item_category": "potions"
@@ -148,7 +147,6 @@
       }
     },
     "drops": null,
-    "en_name": "Glowing Mushroom",
     "description": "发光蘑菇是一种植物、制作材料、和物块，可以在发光蘑菇生物群系的蘑菇草上找到。发光蘑菇植物会发出蓝光。\n\n发光蘑菇物品不会被放置为植物，而是会被放置为实心块。发光蘑菇物品可以通过摧毁发光蘑菇植物、砍倒巨型发光蘑菇、和摧毁蘑菇藤蔓和香蒲获得。如此做还会获得蘑菇草种子。",
     "item_category": "potions"
   },
@@ -456,7 +454,6 @@
         }
       ]
     },
-    "en_name": "Recall Potion",
     "description": "回忆药水是一种药水，使用时可以将玩家传送至生成点。它和魔镜或冰雪镜的作用相同，但使用时间比它们快很多。\n\n除了制作之外，回忆药水还可在罐子和宝箱中找到，并有小几率作为史莱姆的额外掉落出现。",
     "item_category": "potions"
   },
@@ -544,7 +541,6 @@
         "amount": "2"
       }
     },
-    "en_name": "Lesser Healing Potion",
     "drops": {
       "modes": [
         {
@@ -795,7 +791,6 @@
         "image": "Decorative_Mana_Potion.png"
       }
     },
-    "en_name": "Lesser Mana Potion",
     "drops": {
       "modes": [
         {
@@ -944,7 +939,6 @@
         "amount": "3"
       }
     },
-    "en_name": "Greater Healing Potion",
     "drops": {
       "modes": [
         {
@@ -1292,7 +1286,6 @@
         "amount": "15"
       }
     },
-    "en_name": "Greater Mana Potion",
     "drops": {
       "modes": [
         {
@@ -1505,7 +1498,6 @@
         }
       ]
     },
-    "en_name": "Restoration Potion",
     "description": "恢复药水是一种回复药水，使用后恢复 90生命并造成 45 秒耐药性（而非一般生命恢复药水的 60 秒）。该持续时间可以通过点金石或神话护身符进一步缩短到 33.75 秒。\n\n除了制作之外，恢复药水还可在地狱中的暗影箱内找到。\n\n虽然其外观看着像，但它并非通过升级弱效恢复药水得到。",
     "item_category": "potions"
   },
@@ -1697,7 +1689,6 @@
         }
       ]
     },
-    "en_name": "Elderberry",
     "description": "接骨木果是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃乌木树或乌木棕榈树时它有小几率掉落。\n\n和所有其他食物物品一样，接骨木果可以放在盘子里：",
     "item_category": "potions"
   },
@@ -1774,7 +1765,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Plum",
     "drops": {
       "modes": [
         {
@@ -1909,7 +1899,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Apricot",
     "drops": {
       "modes": [
         {
@@ -2065,7 +2054,6 @@
         "image": "Prismatic_Punch.png"
       }
     },
-    "en_name": "Star Fruit",
     "drops": {
       "modes": [
         {
@@ -2272,7 +2260,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Lemon",
     "drops": {
       "modes": [
         {
@@ -2425,7 +2412,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Peach",
     "drops": {
       "modes": [
         {
@@ -2582,7 +2568,6 @@
         "image": "Marshmallow_on_a_Stick.png"
       }
     },
-    "en_name": "Marshmallow",
     "drops": null,
     "description": "棉花糖是一种食物物品，食用后给予吃得好增益。这会持续 1 分钟，但任何时候都可以通过右键点击图标（电脑版）、通过轮转上一个/下一个增益选择图标然后按下取消增益（主机版）、或通过双击增益图标（移动版）来取消。商人在雪原生物群系中时，与其对话可以每个1 SC的价格购买棉花糖。\n\n棉花糖也是一种制作材料，用于制作棒棒棉花糖。后者可在篝火处制作成熟棉花糖，从而大幅延长增益持续时间。\n\n和所有其他食物物品一样，棉花糖可以放在盘子里：Marshmallow (on Plate).png",
     "description_rich": [
@@ -2721,7 +2706,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Coconut",
     "drops": {
       "modes": [
         {
@@ -2892,7 +2876,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Cherry",
     "drops": {
       "modes": [
         {
@@ -3547,7 +3530,6 @@
         }
       ]
     },
-    "en_name": "Healing Potion",
     "description": "治疗药水是一种困难模式之前的回复药水，使用时能恢复 100生命值并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。\n\n除了制作得到之外，治疗药水可以天然存在于困难模式激活后的罐子、和困难模式之前地狱内的罐子中。独眼巨鹿、骷髅王、和血肉墙也会掉落治疗药水。困难模式中，商人和骷髅商人亦有出售，价格为10 SC。\n\n它是第二级的治疗药水，在它之前是弱效治疗药水，之后是强效治疗药水和超级治疗药水。",
     "description_rich": [
       [
@@ -3656,7 +3638,6 @@
         "image": "Prismatic_Punch.png"
       }
     },
-    "en_name": "Dragon Fruit",
     "drops": {
       "modes": [
         {
@@ -3848,7 +3829,6 @@
         "image": "Bottled_Water.png"
       }
     },
-    "en_name": "Bottled Water",
     "drops": null,
     "description": "瓶装水是一种困难模式之前的回复药水和制作材料。它可以在水槽处或水体处制作。瓶装水是游戏中几乎所有可制作药水的基础材料，同时也是制作药剂的必备物品。\n\n使用时，它能恢复 30生命值并造成持续 45 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。",
     "item_category": "potions"
@@ -3916,7 +3896,6 @@
         "image": "Bottled_Honey.png"
       }
     },
-    "en_name": "Bottled Honey",
     "drops": {
       "modes": [
         {
@@ -4022,7 +4001,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Pomegranate",
     "drops": {
       "modes": [
         {
@@ -4175,7 +4153,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Rambutan",
     "drops": {
       "modes": [
         {
@@ -4353,7 +4330,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Mango",
     "drops": {
       "modes": [
         {
@@ -4495,7 +4471,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Apple",
     "drops": {
       "modes": [
         {
@@ -4713,7 +4688,6 @@
         }
       ]
     },
-    "en_name": "Pineapple",
     "description": "菠萝是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃红木树时它有小几率掉落。\n\n和所有其他食物物品一样，菠萝可以放在盘子里：",
     "item_category": "potions"
   },
@@ -4837,7 +4811,6 @@
         }
       ]
     },
-    "en_name": "Grapes",
     "description": "葡萄是一种困难模式的食物物品，食用后给予很满意增益。这会持续 16 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n它有1/40 (2.5%)的几率掉落自跳跳兽和巨型飞狐。\n\n和所有其他食物物品一样，葡萄可以放在盘子里：",
     "item_category": "potions"
   },
@@ -4979,7 +4952,6 @@
         }
       ]
     },
-    "en_name": "Grapefruit",
     "description": "葡萄柚是一种水果类食物物品，食用后给予吃得好增益。这会持续 5 分钟，但任何时候都可以通过右键点击图标（）、通过轮转上一个/下一个增益选择图标然后按下取消增益（）、或通过双击增益图标（）来取消。\n\n摇晃森林树时它有小几率掉落。\n\n和所有其他食物物品一样，葡萄柚可以放在盘子里：",
     "item_category": "potions"
   },
@@ -5046,7 +5018,6 @@
       }
     },
     "drops": null,
-    "en_name": "Mushroom",
     "description": "蘑菇是种困难模式之前的制作材料和治疗物品，在位于地表的草或神圣草上随机生成，通常在森林中。可以用任意工具或武器来收取此物品。\n\n蘑菇使用时能恢复 15生命值并造成持续 30 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。\n\n在The Constant世界中，如果玩家饥饿，食用蘑菇也会将饥饿度重置为 5 分钟的稍饿。",
     "item_category": "potions"
   },
@@ -5124,7 +5095,6 @@
       }
     },
     "drops": null,
-    "en_name": "Wormhole Potion",
     "description": "虫洞药水是一种药水，玩家在多人模式中使用后能直接传送至其他队友所在位置，只需在全屏地图（按切换完整地图键可进入）上选择对应玩家图标即可。它只能传送玩家至同团队队友处，并且传送会以状态讯息来宣告。如果玩家禁用了小地图则无法使用虫洞药水。\n\n除了制作之外，虫洞药水还可在罐子中找到，并有小几率作为史莱姆的额外掉落出现，但仅限于多人模式中。虫洞药水的掉落并不要求其他玩家在线，所以只需要选择多人模式并作为主机开始游戏即可。虫洞药水也可以在单人模式世界中制作。",
     "item_category": "potions"
   },
@@ -5224,7 +5194,6 @@
         }
       ]
     },
-    "en_name": "Eggnog",
     "description": "蛋酒是一种困难模式之前的回复药水，使用后能恢复 80生命值并造成持续 40 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。蛋酒由圣诞节季节性事件期间得到的礼物里开出，几率在困难模式之前为 8.101% ，在困难模式中为 7.561% 。",
     "item_category": "potions"
   },
@@ -5298,7 +5267,6 @@
       }
     },
     "drops": null,
-    "en_name": "Honeyfin",
     "description": "蜂蜜鱼是一种困难模式之前的鱼和回复药水，使用时能恢复 120生命值并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。它也可以用于制作海鲜大餐。\n\n蜂蜜鱼仅能从蜂蜜中钓得，例如在地下丛林的蜂巢内。除了在渔夫任务期间能钓到的大黄蜂金枪鱼外，蜂蜜鱼是唯一一种能在蜂蜜中钓到的鱼。",
     "item_category": "potions"
   },
@@ -5556,7 +5524,6 @@
       }
     ],
     "recipe": null,
-    "en_name": "Strange Brew",
     "drops": null,
     "description": "诡药是一种困难模式之前的回复药水，使用时能恢复 70–120生命，造成 40–70 秒的耐药性，并且有3/5 (60%)几率提供最多 4 秒的无敌时间。耐药性的持续时间可以通过点金石或神话护身符来缩短。\n\n诡药可在特定月相期间从骷髅商人处以每个5 SC的价格购买。",
     "description_rich": [
@@ -5670,7 +5637,6 @@
         "amount": "4"
       }
     },
-    "en_name": "Super Healing Potion",
     "drops": {
       "modes": [
         {
@@ -5787,7 +5753,6 @@
         "image": "Fruit_Juice.png"
       }
     },
-    "en_name": "Spicy Pepper",
     "drops": {
       "modes": [
         {
@@ -5933,7 +5898,6 @@
         "image": "Frozen_Banana_Daiquiri.png"
       }
     },
-    "en_name": "Banana",
     "drops": {
       "modes": [
         {
@@ -6552,7 +6516,6 @@
         }
       ]
     },
-    "en_name": "Mana Potion",
     "description": "魔力药水是一种回复药水，使用时恢复 100 点魔力并造成耐魔性减益。它可以被制作，偶尔也能从除了木匣和珍珠木匣的任何宝匣中获得。困难模式中，商人亦有出售，价格为2 SC。\n\n它是第二级的魔力药水，在它之前是弱效魔力药水，在它之后是强效魔力药水和超级魔力药水。",
     "description_rich": [
       [
@@ -6655,7 +6618,6 @@
         "image": "Smoothie_of_Darkness.png"
       }
     },
-    "en_name": "Blackcurrant",
     "drops": {
       "modes": [
         {

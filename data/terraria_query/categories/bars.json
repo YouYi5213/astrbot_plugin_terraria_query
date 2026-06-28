@@ -63,7 +63,6 @@
         "image": "Chlorophyte_Bar.png"
       }
     },
-    "en_name": "Chlorophyte Bar",
     "drops": null,
     "description": "叶绿锭是一种困难模式、机械 Boss后的锭。",
     "item_category": "bars"
@@ -121,7 +120,6 @@
         "image": "Luminite_Bar.png"
       }
     },
-    "en_name": "Luminite Bar",
     "drops": null,
     "description": "夜明锭是一种困难模式、月亮领主后的锭。\n\n制作与一种月亮碎片有关的所有物品（即盔甲、翅膀、镐、和锤斧）除了 85 块月亮碎片外还需要 68 块夜明锭（204 个夜明矿）。这需要打败月亮领主 4 /3-4次。",
     "item_category": "bars"
@@ -423,7 +421,6 @@
         }
       ]
     },
-    "en_name": "Orichalcum Bar",
     "description": "山铜锭是一种困难模式的锭。它们为制作困难模式的砧所必需，后者用于制作大多数困难模式装备。\n\n其代用矿石对应物是秘银锭。",
     "item_category": "bars"
   },
@@ -491,7 +488,6 @@
         "amount": "2"
       }
     },
-    "en_name": "Spectre Bar",
     "drops": null,
     "description": "幽灵锭是一种困难模式、世纪之花后的锭。",
     "item_category": "bars"
@@ -565,7 +561,6 @@
       }
     },
     "drops": null,
-    "en_name": "Hellstone Bar",
     "description": "狱石锭是种困难模式之前的锭。",
     "item_category": "bars"
   },
@@ -629,7 +624,6 @@
       }
     },
     "drops": null,
-    "en_name": "Crimtane Bar",
     "description": "猩红矿锭是种困难模式之前的锭。\n\n它是腐化之地的魔矿锭的猩红对应物。",
     "item_category": "bars"
   },
@@ -701,7 +695,6 @@
         "image": "Chippy's_Cloak.png"
       }
     },
-    "en_name": "Hallowed Bar",
     "drops": {
       "modes": [
         {
@@ -894,7 +887,6 @@
         "image": "Mythril_Bar.png"
       }
     },
-    "en_name": "Mythril Bar",
     "drops": {
       "modes": [
         {
@@ -1231,7 +1223,6 @@
         "image": "Adamantite_Bar.png"
       }
     },
-    "en_name": "Adamantite Bar",
     "drops": {
       "modes": [
         {
@@ -1544,7 +1535,6 @@
       }
     },
     "drops": null,
-    "en_name": "Shroomite Bar",
     "description": "蘑菇矿锭是一种困难模式、世纪之花后的锭。",
     "item_category": "bars"
   },
@@ -2014,7 +2004,6 @@
         }
       ]
     },
-    "en_name": "Gold Bar",
     "description": "金锭是种困难模式之前的锭。\n\n其代用矿石对应物是铂金锭。",
     "item_category": "bars"
   },
@@ -2286,7 +2275,6 @@
         }
       ]
     },
-    "en_name": "Titanium Bar",
     "description": "钛金锭是一种困难模式的锭。\n\n其代用矿石对应物是精金锭。",
     "item_category": "bars"
   },
@@ -2774,7 +2762,6 @@
         }
       ]
     },
-    "en_name": "Tungsten Bar",
     "description": "钨锭是种困难模式之前的锭。\n\n其代用矿石对应物是银锭。",
     "item_category": "bars"
   },
@@ -2826,7 +2813,6 @@
         "image": "Palladium_Bar.png"
       }
     },
-    "en_name": "Palladium Bar",
     "drops": {
       "modes": [
         {
@@ -3127,7 +3113,6 @@
         "image": "Cobalt_Bar.png"
       }
     },
-    "en_name": "Cobalt Bar",
     "drops": {
       "modes": [
         {
@@ -3464,7 +3449,6 @@
         "image": "Iron_Bar.png"
       }
     },
-    "en_name": "Iron Bar",
     "drops": {
       "modes": [
         {
@@ -3981,7 +3965,6 @@
         "image": "Platinum_Bar.png"
       }
     },
-    "en_name": "Platinum Bar",
     "drops": {
       "modes": [
         {
@@ -4467,7 +4450,6 @@
         "image": "Lead_Bar.png"
       }
     },
-    "en_name": "Lead Bar",
     "drops": {
       "modes": [
         {
@@ -5101,7 +5083,6 @@
         }
       ]
     },
-    "en_name": "Copper Bar",
     "description": "铜锭是种困难模式之前的锭。\n\n其代用矿石对应物是锡锭。\n\n除了旅行模式，新建人物总是会以铜短剑、铜镐、和铜斧开局，无论世界中出现的是铜还是锡。",
     "item_category": "bars"
   },
@@ -5600,7 +5581,6 @@
         }
       ]
     },
-    "en_name": "Silver Bar",
     "description": "银锭是种困难模式之前的锭。\n\n其代用矿石对应物是钨锭。",
     "item_category": "bars"
   },
@@ -5669,7 +5649,6 @@
       }
     },
     "drops": null,
-    "en_name": "Tin Bar",
     "description": "锡锭是种困难模式之前的锭。\n\n其代用矿石对应物是铜锭。\n\n除了旅行模式，新建人物总是会以铜短剑、铜镐、和铜斧开局，无论世界中出现的是铜还是锡。",
     "item_category": "bars"
   },
@@ -5718,7 +5697,6 @@
       }
     },
     "drops": null,
-    "en_name": "Bars",
     "description": "锭是一类制作材料，一般用采挖来的矿石在熔炉处制作而来。大多数矿石相关的物品在制作时都需要先把原矿制作成锭。\n\n目前有 23 种不同的锭。其中大部分要想获得只需要有相应的矿石作为制作材料。狱石锭、幽灵锭、和蘑菇矿锭是例外，它们需要另外的辅助材料。神圣锭不是制作而来的，而是由机械 Boss掉落。一些锭也能从宝匣中随机获得。所有有对应物的锭都可使用叶绿提炼机进行转化。",
     "item_category": "bars"
   },
@@ -5786,7 +5764,6 @@
         "image": "Meteorite_Bar.png"
       }
     },
-    "en_name": "Meteorite Bar",
     "drops": {
       "modes": [
         {
@@ -5884,7 +5861,6 @@
       }
     },
     "drops": null,
-    "en_name": "Demonite Bar",
     "description": "魔矿锭是种困难模式之前的锭。\n\n它是猩红之地的猩红矿锭的腐化对应物。",
     "item_category": "bars"
   }

@@ -101,7 +101,7 @@ CATEGORIES = [
 
 # Wiki 上的物品类型总览页（非单个物品，有独立 infobox + 导语）
 OVERVIEW_PAGES: dict[str, dict] = {
-    "翅膀": {"aliases": ["Wings"]},
+    "翅膀": {},
 }
 
 OVERVIEW_PAGE_TITLES = frozenset(OVERVIEW_PAGES)
@@ -123,6 +123,7 @@ logger = logging.getLogger(__name__)
 def _persist_items(items: dict[str, dict]) -> None:
     from category_data import persist_items_to_categories
 
+    strip_english_fields(items)
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
     persist_items_to_categories(items, categories_dir=CATEGORIES_DIR)
 
@@ -132,6 +133,7 @@ async def _persist_items_async(
 ) -> None:
     from category_data import build_title_category_map, persist_items_to_categories
 
+    strip_english_fields(items)
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
     title_to_keys = await build_title_category_map(session)
     persist_items_to_categories(
@@ -803,12 +805,8 @@ def _iter_zh_wiki_titles(item: dict, key: str) -> list[str]:
 
 
 def _iter_wiki_titles(item: dict, key: str) -> list[str]:
-    """按优先级返回可用于抓取 Wiki 的标题候选"""
-    titles = _iter_zh_wiki_titles(item, key)
-    en_name = item.get("en_name") or (item.get("en") or {}).get("name")
-    if en_name and en_name not in titles:
-        titles.append(en_name)
-    return titles
+    """按优先级返回可用于抓取 Wiki 的标题候选（仅中文）。"""
+    return _iter_zh_wiki_titles(item, key)
 
 
 def _item_tooltip(item: dict) -> str:
@@ -1378,9 +1376,6 @@ def _merge_set_pieces(items: dict[str, dict], set_name: str, set_item: dict) -> 
             "from_armor_set": True,
             "parent_set": set_name,
         }
-        en_name = _guess_en_title_from_image(piece)
-        if en_name:
-            entry["en_name"] = en_name
         items[pname] = entry
         added += 1
     return added
@@ -1391,7 +1386,7 @@ def _merge_armor_set_pieces(items: dict[str, dict], set_name: str, set_item: dic
 
 
 def resync_set_piece_locales(items: dict[str, dict]) -> int:
-    """从套装父条目同步部件条目（中文数据 + 图片推断 en_name）。"""
+    """从套装父条目同步部件条目。"""
     updated = 0
     for key, item in list(items.items()):
         if item.get("page_type") not in ("armor_set", "vanity_set") and not _is_set_item(item):
@@ -1477,7 +1472,6 @@ async def refresh_armor_sets(
             continue
         parsed["wiki_title"] = title
         items[key] = parsed
-        await attach_en_name(session, parsed, title)
         updated += 1
         _merge_set_pieces(items, key, parsed)
         image_urls.update(_collect_image_urls(parsed))
@@ -2048,81 +2042,26 @@ def _is_pet_summon_item(item: dict) -> bool:
     return False
 
 
-async def attach_en_name(
-    session: aiohttp.ClientSession,
-    item: dict,
-    zh_title: str,
-) -> bool:
-    """仅抓取英文 Wiki 标题供搜索别名，不存储完整 en 数据块。"""
-    if item.get("en_name"):
-        return False
-
-    en_title = await fetch_en_langlink(session, zh_title)
-    if not en_title:
-        en_title = _guess_en_title_from_image(item)
-    if not en_title:
-        return False
-
-    item["en_name"] = en_title
-    return True
-
-
-def strip_en_locale_data(items: dict[str, dict]) -> int:
-    """移除 item.en 大块数据，保留 en_name 供英文搜索。"""
+def strip_english_fields(items: dict[str, dict]) -> int:
+    """移除 en / en_name / aliases 等英文字段。"""
     stripped = 0
     for item in items.values():
-        en = item.pop("en", None)
-        if en and isinstance(en, dict) and not item.get("en_name"):
-            name = en.get("name")
-            if name:
-                item["en_name"] = name
-        if en:
-            stripped += 1
+        touched = False
+        for field in ("en", "en_name", "aliases"):
+            if field in item:
+                item.pop(field, None)
+                touched = True
         for piece in item.get("set_pieces") or []:
-            if isinstance(piece, dict):
-                piece.pop("en", None)
+            if not isinstance(piece, dict):
+                continue
+            for field in ("en", "en_name", "aliases"):
+                piece.pop(field, None)
+        if touched:
+            stripped += 1
     return stripped
 
 
-async def fetch_en_langlink(session: aiohttp.ClientSession, zh_title: str) -> str | None:
-    params = {
-        "action": "query",
-        "titles": zh_title,
-        "prop": "langlinks",
-        "lllang": "en",
-        "format": "json",
-        "redirects": "1",
-    }
-    try:
-        async with session.get(
-            API_URL, params=params, headers=HEADERS, timeout=aiohttp.ClientTimeout(total=20)
-        ) as resp:
-            resp.raise_for_status()
-            data = await resp.json()
-    except (aiohttp.ClientError, asyncio.TimeoutError):
-        return None
-
-    pages = data.get("query", {}).get("pages", {})
-    for page in pages.values():
-        if page.get("missing"):
-            continue
-        for link in page.get("langlinks", []):
-            if link.get("lang") == "en":
-                title = _clean_text(link.get("*", ""))
-                if title:
-                    return title
-    return None
-
-
-def _guess_en_title_from_image(item: dict) -> str | None:
-    image = item.get("image", "")
-    if not image:
-        return None
-    stem = os.path.splitext(image)[0]
-    if not stem:
-        return None
-    return stem.replace("_", " ")
-
+# 兼容旧调用名
 
 async def backfill_drops(
     session: aiohttp.ClientSession,
@@ -2400,13 +2339,10 @@ def _collect_image_urls(item: dict) -> dict[str, str]:
 
 
 def _apply_overview_page_meta(item: dict, wiki_title: str) -> None:
-    meta = OVERVIEW_PAGES.get(wiki_title) or OVERVIEW_PAGES.get(item.get("name", ""))
-    if not meta:
+    if wiki_title not in OVERVIEW_PAGES and item.get("name", "") not in OVERVIEW_PAGES:
         return
     item["page_type"] = "overview"
     item["recipe"] = None
-    aliases = list(meta.get("aliases") or [])
-    item["aliases"] = aliases
     if wiki_title:
         item["wiki_title"] = wiki_title
 
@@ -2579,13 +2515,6 @@ def parse_wings_from_soup(soup: BeautifulSoup, *, locale: str = "zh") -> dict[st
     return wings
 
 
-def _apply_wing_en_names(wings: dict[str, dict]) -> None:
-    for wing in wings.values():
-        en_name = _guess_en_title_from_image(wing)
-        if en_name:
-            wing["en_name"] = en_name
-
-
 def _merge_parsed_wings(items: dict[str, dict], wings: dict[str, dict]) -> int:
     added = 0
     for name, wing in wings.items():
@@ -2603,8 +2532,6 @@ def _existing_wiki_titles(items: dict[str, dict]) -> set[str]:
         wt = item.get("wiki_title")
         if wt:
             titles.add(wt)
-        for alias in item.get("aliases") or []:
-            titles.add(alias)
     return titles
 
 
@@ -2627,14 +2554,10 @@ async def refresh_overview_pages(
         name = item["name"]
         item["wiki_title"] = title
         _apply_overview_page_meta(item, title)
-        await attach_en_name(session, item, title)
-        if meta.get("aliases"):
-            item["aliases"] = list(meta["aliases"])
         items[name] = item
         updated += 1
 
         zh_wings = parse_wings_from_soup(soup)
-        _apply_wing_en_names(zh_wings)
         wing_added = _merge_parsed_wings(items, zh_wings)
         updated += wing_added
         for wing in zh_wings.values():
@@ -2720,7 +2643,6 @@ async def update_wiki_data(
     new_count = 0
     images_total = 0
     images_ok = 0
-    en_name_count = 0
     drops_backfill_count = 0
     desc_backfill_count = 0
     overview_count = 0
@@ -2771,8 +2693,6 @@ async def update_wiki_data(
                 _apply_overview_page_meta(item, title)
                 _apply_search_aliases(item)
                 items[name] = item
-                if await attach_en_name(session, item, title):
-                    en_name_count += 1
                 if _is_set_item(item):
                     _merge_set_pieces(items, name, item)
                 image_urls.update(_collect_image_urls(item))
@@ -2821,7 +2741,7 @@ async def update_wiki_data(
         mount_result = await refresh_mounts(session, force=force)
         pet_result = await refresh_pets(session, force=force)
 
-        strip_count = strip_en_locale_data(items)
+        strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
         piece_sync_count = resync_set_piece_locales(items)
         await _persist_items_async(session, items)
@@ -2835,7 +2755,6 @@ async def update_wiki_data(
         "pages_scanned": pages_scanned,
         "images_total": images_total,
         "images_ok": images_ok,
-        "en_name_count": en_name_count,
         "en_stripped_count": strip_count,
         "drops_backfill_count": drops_backfill_count,
         "desc_backfill_count": desc_backfill_count,
@@ -2905,7 +2824,6 @@ async def ingest_mount_titles(
         if catalog_entry:
             _apply_mount_catalog_search(item, catalog_entry)
         mounts[name] = item
-        await attach_en_name(session, item, title)
         image_urls.update(_collect_image_urls(item))
         new_count += 1
         if i % 10 == 0 or i == len(pending):
@@ -2926,7 +2844,7 @@ async def ingest_mount_titles(
         )
         images_ok = sum(1 for r in results if r)
 
-    strip_en_locale_data(mounts)
+    strip_english_fields(mounts)
     migrate_item_image_filenames(mounts)
     pruned = _prune_mounts_to_catalog(mounts)
     mounts.clear()
@@ -3022,7 +2940,6 @@ async def ingest_pet_titles(
         if catalog_entry:
             _apply_pet_catalog_search(item, catalog_entry)
         pets[name] = item
-        await attach_en_name(session, item, wiki_page)
         image_urls.update(_collect_image_urls(item))
         new_count += 1
         if i % 15 == 0 or i == len(pending):
@@ -3043,7 +2960,7 @@ async def ingest_pet_titles(
         )
         images_ok = sum(1 for r in results if r)
 
-    strip_en_locale_data(pets)
+    strip_english_fields(pets)
     migrate_item_image_filenames(pets)
     pruned = _prune_pets_to_catalog(pets)
     pets.clear()
@@ -3117,7 +3034,6 @@ async def ingest_wiki_titles(
         _apply_overview_page_meta(item, title)
         _apply_search_aliases(item)
         items[name] = item
-        await attach_en_name(session, item, title)
         if _is_set_item(item):
             _merge_set_pieces(items, name, item)
         image_urls.update(_collect_image_urls(item))
@@ -3178,7 +3094,7 @@ async def ingest_new_categories(
         )
 
     migrate_item_image_filenames(items)
-    strip_en_locale_data(items)
+    strip_english_fields(items)
     piece_sync_count = resync_set_piece_locales(items)
     _persist_items(items)
 
@@ -3198,7 +3114,7 @@ async def maintain_local_data() -> dict:
     result = {
         "image_migrate_count": migrate_item_image_filenames(items),
         "piece_sync_count": resync_set_piece_locales(items),
-        "en_stripped_count": strip_en_locale_data(items),
+        "en_stripped_count": strip_english_fields(items),
         "total": len(items),
         "sets_refreshed": 0,
     }
@@ -3215,7 +3131,7 @@ async def refresh_sets_only() -> dict:
     async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
         sets_refreshed = await refresh_armor_sets(session, items)
     piece_sync_count = resync_set_piece_locales(items)
-    strip_en_locale_data(items)
+    strip_english_fields(items)
     _persist_items(items)
     return {
         "sets_refreshed": sets_refreshed,
@@ -3250,8 +3166,7 @@ async def main(
         f"更新完成：新增 {result['new_count']} 个，"
         f"共 {result['total']} 个物品，"
         f"新图片 {result['images_ok']}/{result['images_total']}，"
-        f"英文名 {result.get('en_name_count', 0)} 个，"
-        f"清理 en 块 {result.get('en_stripped_count', 0)} 个，"
+        f"清理英文字段 {result.get('en_stripped_count', 0)} 个，"
         f"掉落来源 {result['drops_backfill_count']} 个，"
         f"描述 {result['desc_backfill_count']} 个",
         flush=True,
@@ -3287,7 +3202,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--strip-en",
         action="store_true",
-        help="仅移除 items.json 中的 en 数据块（保留 en_name）",
+        help="移除 categories 数据中的 en / en_name / aliases 字段",
     )
     parser.add_argument(
         "--ingest-categories",
@@ -3382,7 +3297,7 @@ if __name__ == "__main__":
             )
         elif args.strip_en:
             items = _load_existing_items()
-            count = strip_en_locale_data(items)
+            count = strip_english_fields(items)
             _persist_items(items)
             print(f"已清理 {count} 个 en 数据块，共 {len(items)} 条目", flush=True)
         else:

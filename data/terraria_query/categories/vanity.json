@@ -56,7 +56,6 @@
         "image": "Gold_Crown.png"
       }
     },
-    "en_name": "Gold Crown",
     "drops": null,
     "description": "金冠是一种可以戴在社交头盔物品栏栏位中的可制作时装物品。它也是史莱姆王冠的制作材料之一，后者可用来生成史莱姆王。铂金冠是其代用矿石的对应物。",
     "item_category": "vanity"
@@ -118,7 +117,6 @@
         "image": "Platinum_Crown.png"
       }
     },
-    "en_name": "Platinum Crown",
     "drops": null,
     "description": "铂金冠是一种可以戴在社交头盔物品栏栏位中的可制作时装物品。它也是史莱姆王冠的制作材料之一，后者可用来生成史莱姆王。\n\n金冠是其代用矿石对应物。",
     "item_category": "vanity"
@@ -235,7 +233,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "兔兔套装",
-    "en_name": "Bunny Ears",
     "item_category": "vanity"
   },
   "兔兔尾巴": {
@@ -293,7 +290,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "兔兔套装",
-    "en_name": "Bunny Tail",
     "item_category": "vanity"
   },
   "Chicken Bones的面罩": {
@@ -344,7 +340,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chicken Bones的套装",
-    "en_name": "Chicken Bones' Visor",
     "item_category": "vanity"
   },
   "Chicken Bones的背心": {
@@ -395,7 +390,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chicken Bones的套装",
-    "en_name": "Chicken Bones' Vest",
     "item_category": "vanity"
   },
   "Chicken Bones的裤子": {
@@ -446,7 +440,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chicken Bones的套装",
-    "en_name": "Chicken Bones' Pants",
     "item_category": "vanity"
   },
   "Chicken Bones的长袍": {
@@ -492,7 +485,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chicken Bones的套装",
-    "en_name": "Chicken Bones' Robe",
     "item_category": "vanity"
   },
   "Chippy的头盔": {
@@ -543,7 +535,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chippy的套装",
-    "en_name": "Chippy's Helmet",
     "item_category": "vanity"
   },
   "Chippy的护胸": {
@@ -594,7 +585,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chippy的套装",
-    "en_name": "Chippy's Chestplate",
     "item_category": "vanity"
   },
   "Chippy的护胫": {
@@ -645,7 +635,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chippy的套装",
-    "en_name": "Chippy's Greaves",
     "item_category": "vanity"
   },
   "Chippy的头带": {
@@ -691,7 +680,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chippy的套装",
-    "en_name": "Chippy's Headband",
     "item_category": "vanity"
   },
   "狗耳朵": {
@@ -749,7 +737,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "狗狗套装",
-    "en_name": "Dog Ears",
     "item_category": "vanity"
   },
   "狗尾巴": {
@@ -802,7 +789,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "狗狗套装",
-    "en_name": "Dog Tail",
     "item_category": "vanity"
   },
   "狐狸耳朵": {
@@ -860,7 +846,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "狐狸套装（动物学家）",
-    "en_name": "Fox Ears",
     "item_category": "vanity"
   },
   "狐狸尾巴": {
@@ -913,7 +898,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "狐狸套装（动物学家）",
-    "en_name": "Fox Tail",
     "item_category": "vanity"
   },
   "绅士胡子": {
@@ -983,7 +967,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "en_name": "Gentleman's Beard",
     "item_category": "vanity"
   },
   "绅士长胡子": {
@@ -1041,7 +1024,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "en_name": "Gentleman's Long Beard",
     "item_category": "vanity"
   },
   "绅士大胡子": {
@@ -1087,7 +1069,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "en_name": "Gentleman's Magnificent Beard",
     "item_category": "vanity"
   },
   "绅士马甲": {
@@ -1146,7 +1127,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "en_name": "Gentleman's Vest",
     "item_category": "vanity"
   },
   "绅士裤子": {
@@ -1205,7 +1185,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "en_name": "Gentleman's Trousers",
     "item_category": "vanity"
   },
   "Leinfors的护发器": {
@@ -1256,7 +1235,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Leinfors的套装",
-    "en_name": "Leinfors' Hair Protector",
     "item_category": "vanity"
   },
   "Leinfors的奇异风": {
@@ -1307,7 +1285,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Leinfors的套装",
-    "en_name": "Leinfors' Excessive Style",
     "item_category": "vanity"
   },
   "Leinfors的潮裤": {
@@ -1358,7 +1335,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Leinfors的套装",
-    "en_name": "Leinfors' Fancypants",
     "item_category": "vanity"
   },
   "Leinfors的奢华洗发液": {
@@ -1404,7 +1380,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Leinfors的套装",
-    "en_name": "Leinfors' Luxury Shampoo",
     "item_category": "vanity"
   },
   "蜥蜴耳朵": {
@@ -1462,7 +1437,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "蜥蜴套装",
-    "en_name": "Lizard Ears",
     "item_category": "vanity"
   },
   "蜥蜴尾巴": {
@@ -1515,7 +1489,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "蜥蜴套装",
-    "en_name": "Lizard Tail",
     "item_category": "vanity"
   },
   "Luna的符文妖精兜帽": {
@@ -1566,7 +1539,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Luna的套装",
-    "en_name": "Luna's Runic Pixie Hood",
     "item_category": "vanity"
   },
   "Luna的符文妖精衣": {
@@ -1617,7 +1589,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Luna的套装",
-    "en_name": "Luna's Runic Pixie Shirt",
     "item_category": "vanity"
   },
   "Luna的符文妖精裤": {
@@ -1668,7 +1639,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Luna的套装",
-    "en_name": "Luna's Runic Pixie Pants",
     "item_category": "vanity"
   },
   "Luna的符文妖精斗篷": {
@@ -1714,7 +1684,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Luna的套装",
-    "en_name": "Luna's Runic Pixie Cloak",
     "item_category": "vanity"
   },
   "王子制服": {
@@ -1772,7 +1741,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "王子套装",
-    "en_name": "Prince Uniform",
     "item_category": "vanity"
   },
   "王子裤": {
@@ -1830,7 +1798,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "王子套装",
-    "en_name": "Prince Pants",
     "item_category": "vanity"
   },
   "王子披风": {
@@ -1883,7 +1850,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "王子套装",
-    "en_name": "Prince Cape",
     "item_category": "vanity"
   },
   "Yoraiz0r的染色护目镜": {
@@ -1934,7 +1900,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Yoraiz0r的套装",
-    "en_name": "Yoraiz0r's Recolored Goggles",
     "item_category": "vanity"
   },
   "Yoraiz0r的制服": {
@@ -1985,7 +1950,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Yoraiz0r的套装",
-    "en_name": "Yoraiz0r's Uniform",
     "item_category": "vanity"
   },
   "Yoraiz0r的裙": {
@@ -2036,7 +2000,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Yoraiz0r的套装",
-    "en_name": "Yoraiz0r's Skirt",
     "item_category": "vanity"
   },
   "Yoraiz0r的怒容": {
@@ -2082,7 +2045,6 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Yoraiz0r的套装",
-    "en_name": "Yoraiz0r's Scowl",
     "item_category": "vanity"
   },
   "岩石巨人头": {
@@ -2180,7 +2142,6 @@
       ]
     ],
     "wiki_title": "岩石巨人头",
-    "en_name": "Rock Golem Head",
     "item_category": "vanity"
   },
   "棒棒独角兽": {
@@ -2278,7 +2239,6 @@
       ]
     ],
     "wiki_title": "棒棒独角兽",
-    "en_name": "Unicorn on a Stick",
     "item_category": "vanity"
   },
   "鱼缸": {
@@ -2346,7 +2306,6 @@
       ]
     ],
     "wiki_title": "鱼缸",
-    "en_name": "Fish Bowls",
     "item_category": "vanity"
   }
 }

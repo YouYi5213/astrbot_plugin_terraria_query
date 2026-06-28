@@ -57,7 +57,6 @@
       }
     },
     "drops": null,
-    "en_name": "Chests",
     "description": "宝箱是一种家具收纳制作材料。",
     "description_rich": [
       [
@@ -142,7 +141,6 @@
       }
     },
     "drops": null,
-    "en_name": "Pressure Plates",
     "description": "压力板是一类起动机械，在玩家踩上去可以触发电线所连接的机关。压力板的颜色决定了可以触发它的角色。\n\n压力板可以从机械师处购买，或者从地图中获取，在创建世界时，红、棕、灰、丛林蜥蜴（(电脑版、主机版、和移动版)和橙）压力板会在地图中随机生成，作为陷阱的触发器。压力板部分隐藏在物块的顶部，因此可能难以发现。自然产生的压力板的颜色取决于它在下部块的颜色。应谨慎对待它们，因为它们一般都被连接到陷阱。\n\n机械师销售所有种类的压力板，除了丛林蜥蜴压力板和测重压力板：前者颜色比较特殊，是棕色和丛林蜥蜴砖的混色，而后者需要手动制造。\n\n青绿压力垫板是一种特殊的压力板，对触碰到它的射弹或宠物反应。与常规的压力板不同，青绿压力垫板可以被放置在地板上、天花板上、侧壁上、或平台上。",
     "item_category": "furniture"
   },
@@ -210,7 +208,6 @@
         "image": "Lihzahrd_Chest.png"
       }
     },
-    "en_name": "Lihzahrd Chest",
     "drops": null,
     "description": "丛林蜥蜴箱是出现在丛林神庙中的宝箱。每个丛林蜥蜴箱中都会包含一个丛林蜥蜴电池，并可能包含一件丛林蜥蜴熔炉、一些日耀碑牌碎片、并有时会有一块日耀碑牌。它们也会包含其他典型的金箱拾取物。",
     "item_category": "furniture"
@@ -289,7 +286,6 @@
         "image": "Lihzahrd_Bookcase.png"
       }
     },
-    "en_name": "Book",
     "drops": {
       "modes": [
         {
@@ -433,7 +429,6 @@
       }
     },
     "drops": null,
-    "en_name": "Frozen Chest",
     "description": "冰冻箱是一种宝箱类收纳物品，只在冰雪生物群系中发现。其生成频率与其他生物群系中的宝箱相同。",
     "item_category": "furniture"
   },
@@ -499,7 +494,6 @@
         "image": "Hanging_Daybloom.png"
       }
     },
-    "en_name": "Hanging Pot",
     "drops": {
       "modes": [
         {
@@ -622,7 +616,6 @@
         "image": "Silly_Tied_Bundle_of_Balloons.png"
       }
     },
-    "en_name": "Silly Tied Balloons",
     "drops": null,
     "description": "呆萌丝带气球是动画小玩具家具物品，在派对期间可从派对女孩处以每个10 SC的价格购买。",
     "description_rich": [
@@ -696,7 +689,6 @@
         "image": "Marble_Chest.png"
       }
     },
-    "en_name": "Marble Chest",
     "drops": null,
     "description": "大理石箱是一种宝箱类收纳物品，只在大理石洞里面的地下小屋发现。就像花岗岩箱和红木箱一样，大理石箱与金箱里面的拾取物完全相同。",
     "item_category": "furniture"
@@ -753,7 +745,6 @@
         "image": "Skyware_Chest.png"
       }
     },
-    "en_name": "Skyware Chest",
     "drops": null,
     "description": "天域箱是一种收纳物品，只出现在漂浮岛上。",
     "item_category": "furniture"
@@ -811,7 +802,6 @@
         "image": "Sky_Blue_Dye_(old).png"
       }
     },
-    "en_name": "Sky Blue Flower",
     "drops": null,
     "description": "天蓝花朵是一种植物。它可在除了地狱以外的任何地层中的丛林草上生长，或在位于地表以上浸没在至少 2 格任何液体中的沙块上生长。[1]与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作天蓝染料。",
     "item_category": "furniture"
@@ -933,7 +923,6 @@
         }
       ]
     },
-    "en_name": "Mini Volcano",
     "description": "小火山是带有动画的装饰性家具物品，它的动画可通过电路控制开关。它有19/100 (19%)的几率在打开黑曜石匣以及狱石匣时获得。",
     "item_category": "furniture"
   },
@@ -1000,7 +989,6 @@
         "image": "Trapped_Ivy_Chest.png"
       }
     },
-    "en_name": "Ivy Chest",
     "drops": null,
     "description": "常春藤箱是一种宝箱类收纳物品，仅可发现于地下丛林处的丛林神龛和生命红木树中。",
     "item_category": "furniture"
@@ -1190,7 +1178,6 @@
         }
       ]
     },
-    "en_name": "Extractinator",
     "description": "提炼机或泥沙提炼机[1]是一种将泥沙块、雪泥块与沙漠化石转换为更有价值的物品（例如矿石，钱币，和宝石）的物品。在没有平台版本中，它也可以将发光苔藓交换为所有类型的普通苔藓，以及将钓鱼垃圾转换为低级鱼饵。\n\n要使用提炼机，首先需要将它放置在世界中。在此之后，需要在提炼机 3×3 的区域内使用合适的物块（使用⚒使用/攻击键）。按住自动选择键，并点击提炼机时，会自动地将玩家物品栏中可提炼的物品自动消耗掉，而无需手动把它们挑选出来。\n\n它可以通过多种途径获得：在冰冻箱中，它有4.9%的概率生成；在地下和洞穴地层的金箱中，它有5%到6.67%的概率生成；打开木匣时有1.86%的概率掉落。地下沙漠(电脑版、主机版、和移动版)中的地下小屋也有概率包含一个提炼机作为随机装饰的一部分。\n\n使用提炼机是获取蚊子琥珀的唯一途径；同时，使用提炼机与开启宝匣也是获取世界中困难模式之前同等级替代矿物（如锡和铜、铁和铅等）仅有的可靠途径。这是在游戏早期是获取矿石和钱币的不错方式。",
     "item_category": "furniture"
   },
@@ -1258,7 +1245,6 @@
       }
     },
     "drops": null,
-    "en_name": "Shadow Chest",
     "description": "暗影箱是一种仅可被发现于地狱的收纳物品，通常在废墟建筑的顶部或内部，其中含有稀有物品。\n\n所有暗影箱最初都是锁住的，打开时需要一个暗影钥匙。钥匙在使用时不会被消耗掉。每一个暗影箱包括一个03*稀有度的高价值物品，也包括其他地下中的标准拾取物。\n\n与其他自然生成的宝箱一样，在被清空后，暗影箱可以被镐或钻头破坏，并可被拾取以及在其他地方放置。",
     "item_category": "furniture"
   },
@@ -1332,7 +1318,6 @@
     },
     "drops": null,
     "description": "暗影蜡烛是一种家具物品，可以放置或手持来将区域内城镇的降低敌怪生成的好处无效化。放置时，它会给附近的玩家暗影蜡烛减益。此减益会被施加给位于以暗影蜡烛为中心 170 格 × 125 格[1]的矩形区域内的所有玩家。手持暗影蜡烛并不会导致减益图标显示出来，但依然会产生完全相同的效果。要“手持”蜡烛，它必须在玩家的热键栏内并被选中；仅仅将其放置在物品栏中时不会有效果。\n\n对暗影蜡烛按下⚷打开/激活会将其熄灭。熄灭的暗影蜡烛不会激活暗影蜡烛减益。",
-    "en_name": "Shadow Candle",
     "item_category": "furniture"
   },
   "标牌": {
@@ -1382,7 +1367,6 @@
         "image": "Sign.png"
       }
     },
-    "en_name": "Sign",
     "drops": null,
     "description": "标牌是一种可以储存玩家所写信息的装饰家具。标牌必须被放置，然后使用⚷打开/激活按钮才能编辑或显示信息。标牌可被放置在物块上方、侧方或悬挂于下方，还能被悬挂于墙上。每个标牌上的信息最多 10 行，每行 48 个字符，总计最多 480 个字符。标牌可用于装饰，标注区域、冒险信息，等等。\n\n每个世界中最多可以有 32000 个写有信息的标牌。[1]如果超过了 32000 个，则只能编辑前 32000 个交互的标牌；其余的使用⚷打开/激活无法打开菜单（直到前 32000 个标牌中的一个被移除）。",
     "item_category": "furniture"
@@ -1450,7 +1434,6 @@
         "image": "Barrel.png"
       }
     },
-    "en_name": "Barrel",
     "drops": null,
     "description": "桶是一种收纳物品，类似于宝箱，有着 40 个栏位供存储物品。其制作配方所需的金属只有宝箱所需的一半，但要有锯木机而非工作台。除此之外，区别就纯粹只是在于美学上。\n\n桶只在空着时才能用镐或钻头取下。",
     "item_category": "furniture"
@@ -1518,7 +1501,6 @@
         "image": "Lime_Dye_(old).png"
       }
     },
-    "en_name": "Lime Kelp",
     "drops": null,
     "description": "橙绿海藻是一种植物和染料材料。它可在位于地下和洞穴地层中且浸没于至少 2 格深的任何液体中的任何图格上生长。[1]与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作橙绿染料。",
     "item_category": "furniture"
@@ -1586,7 +1568,6 @@
         "image": "Orange_Dye_(old).png"
       }
     },
-    "en_name": "Orange Bloodroot",
     "drops": null,
     "description": "橙血根草是一种植物。它可在位于地下和洞穴地层中的土块下方生长。[1]与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作橙染料。",
     "item_category": "furniture"
@@ -1644,7 +1625,6 @@
       }
     },
     "drops": null,
-    "en_name": "Water Chest",
     "description": "水中箱是一种宝箱，会出现在大于 250 格的水塘中。它们在海洋中最常见，但也罕见出现在任何水体中，包括地下和洞穴层湖泊、地表湖、甚至漂浮湖。除了包含基于所处位置生成的常见宝箱拾取物，其中还会有只能在水中箱中找到的特殊物品，如下所示。",
     "item_category": "furniture"
   },
@@ -1744,7 +1724,6 @@
         }
       ]
     },
-    "en_name": "Crystal Shard",
     "description": "水晶碎块是一种常见的困难模式制作材料，可在地下神圣之地中找到。它们可以天然在下列物块的左侧、右侧、和底部生长：珍珠石块、粉冰雪块、珍珠沙块、硬化珍珠沙块、和珍珠沙岩块。[1]由于它们能持续地生长，可以建造农场来刷取它们（详见指南:刷资源 § 水晶碎块）。与魔矿和猩红矿类似，水晶碎块会发出微弱的光。它们不会传播神圣之地。\n\n当水晶碎块将要长出时，它有1/50 (2%)几率被明胶水晶(电脑版、主机版、和移动版)替代。\n\n水晶碎块有1/2 (50%)几率从天赐匣(电脑版、主机版、和移动版)中获得，数量为 4–10 个。\n\n水晶碎块能被放置在几乎所有位置（包括墙上、地面上、天花板上），但它们的亮度通常不足以取代其他光源，放置它们也没有任何功能性的效果。尽管水晶碎块只能自然生成在与神圣之地有关的图格上，将它们收集后便可将其放置在任何地方。\n\n制作所有物品（包括一种颜色的晶光刃，且不包括消耗品和家具）总计需要 90 个水晶碎块。制作每种武器和每种颜色的晶光刃则总计需要 240 个水晶碎块。",
     "item_category": "furniture"
   },
@@ -1801,7 +1780,6 @@
       }
     },
     "drops": null,
-    "en_name": "Sandstone Chest",
     "description": "沙岩箱是一种能在地下沙漠找到的收纳物品。它们通常可以在地下小屋中发现，但也可能较少见地自己生成。沙岩箱也可以被制作。",
     "item_category": "furniture"
   },
@@ -1901,7 +1879,6 @@
         }
       ]
     },
-    "en_name": "Desert Spirit Lamp",
     "description": "沙漠幽魂灯是一种装饰家具物品和制作材料。它必须放置在平台或其他平坦表面物品上。它有1/40 (2.5%)几率掉落自腐化或猩红地下沙漠中会碰到的沙漠幽魂。",
     "item_category": "furniture"
   },
@@ -1957,7 +1934,6 @@
         "amount": "25"
       }
     },
-    "en_name": "Torches",
     "drops": null,
     "description": "火把是一种家具物品，可在放置、手持、或（通过丢下键）掉落时发光，而且在游戏的各个阶段都很关键，是主要的光源。火把可永久地发光，而且不会熄灭。普通火把可以随机在宝箱和罐子中发现、可作为史莱姆的额外掉落掉落、或从商人或骷髅商人处以每个50 CC的价格购买。\n\n火把可以放置在大部分的物块两侧或是上方，也可以放置在墙上、树上和木梁的两侧，还可以被放置在任意种类的平台上。被放置的火把可以通过⚷打开/激活键或使用任意镐或钻头来进行回收。若火把所附着的物块被破坏，则火把会附着在其他相邻的物块或墙上。若火把周围的所有物块（左侧、右侧、下方）都被移除，且火把的后方没有墙，它会像所有其他物品一样掉落。\n\n火把也是一种机械，可通过电线来控制开关。\n\n在地表地层以下的任意生物群系中密集地放置至少 101 个火把会开始火把神迷你事件。完成事件会奖励火把神的恩宠，它允许玩家自动将普通火把转化为其生物群系变体种类之一。",
     "description_rich": [
@@ -2064,7 +2040,6 @@
       }
     },
     "drops": null,
-    "en_name": "Bottle",
     "description": "玻璃瓶是大多数药水的制作材料。像粉花瓶,玻璃杯, 和其他各种的杯子一样，将其放置(在\"平面物体\"或平台上)可以使它充当放置的瓶子的作用，玩家可以在其中制作药水。当玩家拿着玻璃瓶靠近水或蜂蜜时也可以将玻璃瓶“装满”，制成瓶装水或瓶装蜂蜜。\n\n玻璃瓶可以用玻璃制作或者在宝箱中找到。",
     "item_category": "furniture"
   },
@@ -2130,7 +2105,6 @@
       }
     },
     "drops": null,
-    "en_name": "Coral",
     "description": "珊瑚是一种制作材料，可在世界尽头处的海洋生物群系中发现。它们会在位于水下、世界左右边缘的 380 格内、且深度高于(电脑版、主机版、和移动版)−20 英尺 /(前代主机版、和3DS版)0 英尺的沙块上自然生长，但需要 7 图格范围内有不多于 5 个珊瑚（(电脑版、主机版、和移动版)或贝壳）。珊瑚可通过镐/钻头挖掘、挖掘下方的沙或在其上方放置物块的方式收获。\n\n珊瑚放置后会有随机的外观。在收获珊瑚后，它们可以被放置在任何物块上。\n\n(电脑版、主机版、和移动版)珊瑚可在水浅于 5 格的沙块上生成，只是速度较慢。生成速率和雨、风和沙块上方最多 14 图格的空余空间有关。[1]\n\n(前代主机版、和3DS版)珊瑚仅生成于水下至少 5 图格处，雨和风不影响其生成速率。",
     "item_category": "furniture"
   },
@@ -2186,7 +2160,6 @@
         "image": "Living_Wood_Chest.png"
       }
     },
-    "en_name": "Living Wood Chest",
     "drops": null,
     "description": "生命木箱是一种宝箱类收纳物品，可以在空心生命树内部的房间中发现。它也可以使用生命木织机制作，后者有时会发现于生命木箱旁边。",
     "item_category": "furniture"
@@ -2243,7 +2216,6 @@
         "image": "Trapped_Jungle_Chest.png"
       }
     },
-    "en_name": "Biome Chests",
     "drops": null,
     "description": "生物群系宝箱是困难模式宝箱，可在地牢中找到。除其他杂项物品外，每个宝箱还包含一种特定的稀有而强力的武器。虽然在创建世界时就放置了生物群系宝箱，但它们最初是被锁定的，只能用对应的生物群系钥匙打开，而后者只能在困难模式中得到。\n\n在一个特定的世界中只会产生五个生物群系宝箱（每种生物群系一个）。每个都代表着在当前世界中发现的生物群系。虽然总共有六种类型的生物群系宝箱，但一个世界仅会包含一个邪恶生物群系宝箱——猩红或腐化变种之一，具体取决于该世界包含哪个生物群系。\n\n要打开生物群系宝箱，需要进行以下步骤：",
     "item_category": "furniture"
@@ -2305,7 +2277,6 @@
         "image": "Minecart_Track.png"
       }
     },
-    "en_name": "Minecart Track",
     "drops": null,
     "description": "矿车轨道是一种可放置的家具类物块，可以长距离快速运输。当其彼此相邻放置时，会形成连续的轨道，而当对角放置时，会形成斜面。虽然不能在轨道上行走，但是能用钩爪抓住。\n\n当玩家附近有轨道时，按下快速坐骑或对准任一轨道⚷打开/激活将会令玩家坐在生成的矿车中。在矿车中，玩家可以使用▶ 右和◀ 左来加速，减速或掉头。矿车也可以通过↷跳“跳跃”。\n\n如果想下矿车（使矿车消失），玩家可以使用钩爪，按快速坐骑，或取消矿车增益(右键，选择图标并在取消之，双击图标，从增益界面取消)。当玩家离开矿车轨道并落地后，矿车也会在玩家试图移动时消失。\n\n乘坐矿车时可以正常使用武器和工具。",
     "item_category": "furniture"
@@ -2369,7 +2340,6 @@
         "image": "Dynasty_Bowl.png"
       }
     },
-    "en_name": "Bowls",
     "drops": null,
     "description": "碗是一种装饰性家具，它们可以被放置。与盘子不同的是，食物无法被放置于碗中。仅粘土碗能被用于制作。",
     "item_category": "furniture"
@@ -2438,7 +2408,6 @@
         "image": "Rich_Mahogany_Chest.png"
       }
     },
-    "en_name": "Rich Mahogany Chest",
     "drops": null,
     "description": "红木箱是一种宝箱类收纳物品，只在丛林与地下丛林里的地下小屋发现。就像大理石箱和花岗岩箱一样，红木箱与金箱里面的拾取物完全相同。",
     "item_category": "furniture"
@@ -2507,7 +2476,6 @@
         "amount": "2"
       }
     },
-    "en_name": "Green Mushroom",
     "drops": null,
     "description": "绿蘑菇是一种蘑菇。它可在位于地下和洞穴地层中的土块、石块、泥块、或常规丛林草上生长。[1]与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作绿染料。",
     "item_category": "furniture"
@@ -2564,7 +2532,6 @@
         "image": "Granite_Chest.png"
       }
     },
-    "en_name": "Granite Chest",
     "drops": null,
     "description": "花岗岩箱是一种宝箱类收纳物品，只在花岗岩洞里面的地下小屋发现。就像大理石箱和红木箱一样，花岗岩箱与金箱里面的拾取物完全相同。",
     "item_category": "furniture"
@@ -2623,7 +2590,6 @@
       }
     },
     "drops": null,
-    "en_name": "Blue Berries",
     "description": "蓝浆果是一种植物和染料材料。放置的蓝浆果有着蓝莓丛的外观。它可在地表以上的常规草或丛林草上生长。[1]与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作蓝染料。",
     "description_rich": [
       [
@@ -2688,7 +2654,6 @@
       }
     },
     "drops": null,
-    "en_name": "Mushroom Chest",
     "description": "蘑菇箱是一种宝箱，可以在发光蘑菇生物群系的地下小屋中发现。",
     "item_category": "furniture"
   },
@@ -2756,7 +2721,6 @@
       }
     },
     "drops": null,
-    "en_name": "Web Covered Chest",
     "description": "蛛丝箱出现在蜘蛛窝，但很稀有。它们总是会包含蛛丝吊索，另外还有常见或不常见物品（也会出现在金箱中），取决于所在高度：地下或洞穴。",
     "item_category": "furniture"
   },
@@ -2830,7 +2794,6 @@
       }
     },
     "drops": null,
-    "en_name": "Bee Hive",
     "description": "蜂巢是随着时间推移在丛林和地下丛林的丛林草天花板下生成的天然陷阱。当蜂巢被击中时，它会坠落到地面上，在撞击时破碎并释放出 2–5 只蜜蜂。若蜂巢落入液体中，破裂时将不会释放蜜蜂，而是掉落 2-5 个蜂巢（物块）。[1]它可以手工制作并放置。",
     "item_category": "furniture"
   },
@@ -2900,7 +2863,6 @@
         "amount": "15"
       }
     },
-    "en_name": "Seashells",
     "drops": null,
     "description": "贝壳是一类装饰物品，可被发现于海洋生物群系中。它们可在生物群系中的沙块上生成，既可以在沙滩上也可在水下生成。它们被放置出来时会呈现为三种变体之一。\n\n贝壳可在沙滩上和水下重新生成，只要 8 图格内有不多于 3 个珊瑚或贝壳。生成速率和雨、风、和沙块上最多 14 图格的空余空间有关。当贝壳生成时，有 79.4% 几率生成普通贝壳或海星，9.8% 几率生成旋螺壳，8.8% 几率生成香螺壳，2% 几率生成涡螺壳。",
     "item_category": "furniture"
@@ -2969,7 +2931,6 @@
       }
     },
     "drops": null,
-    "en_name": "Gold Chest",
     "description": "金箱是一种自然生成的宝箱，里面装着各种战利品。每个金箱包含一件稀有物品，以及一些钱币和其他更常见的物品。金箱可以在地下和洞穴层的地下小屋中，以及金字塔中找到。",
     "item_category": "furniture"
   },
@@ -3026,7 +2987,6 @@
         "image": "Teal_Dye.png"
       }
     },
-    "en_name": "Teal Mushroom",
     "drops": null,
     "description": "青绿蘑菇是一种蘑菇。它可在位于地下和洞穴地层中的土块、石块、泥块、或常规丛林草上生长。[1]与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作青绿染料。",
     "item_category": "furniture"
@@ -3096,7 +3056,6 @@
       }
     },
     "drops": null,
-    "en_name": "Yellow Marigold",
     "description": "黄万寿菊是一种植物。它可在地表以上的常规草和神圣草上生长。[1]与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作黄染料。",
     "item_category": "furniture"
   },
@@ -3181,7 +3140,6 @@
       ]
     ],
     "wiki_title": "1 Second Timer",
-    "en_name": "Timers",
     "item_category": "furniture"
   },
   "灯笼": {
@@ -3274,7 +3232,6 @@
       ]
     ],
     "wiki_title": "Alchemy Lantern",
-    "en_name": "Lanterns",
     "item_category": "furniture"
   },
   "雕像": {
@@ -3339,7 +3296,6 @@
       ]
     ],
     "wiki_title": "Angel Statue",
-    "en_name": "Statues",
     "item_category": "furniture"
   },
   "旗帜": {
@@ -3423,7 +3379,6 @@
       ]
     ],
     "wiki_title": "Ankh Banner",
-    "en_name": "Banners",
     "item_category": "furniture"
   },
   "绘画作品": {
@@ -3471,7 +3426,6 @@
       ]
     ],
     "wiki_title": "Blood Moon Rising",
-    "en_name": "Paintings",
     "item_category": "furniture"
   },
   "床": {
@@ -3605,7 +3559,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Bed",
-    "en_name": "Beds",
     "item_category": "furniture"
   },
   "蜡烛": {
@@ -3701,7 +3654,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Candle",
-    "en_name": "Candles",
     "item_category": "furniture"
   },
   "门": {
@@ -3836,7 +3788,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Door",
-    "en_name": "Doors",
     "item_category": "furniture"
   },
   "梳妆台": {
@@ -3919,7 +3870,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Dresser",
-    "en_name": "Dressers",
     "item_category": "furniture"
   },
   "花瓶": {
@@ -3978,7 +3928,6 @@
       ]
     ],
     "wiki_title": "Blue Dungeon Vase",
-    "en_name": "Vases",
     "item_category": "furniture"
   },
   "三角旗": {
@@ -4046,7 +3995,6 @@
       ]
     ],
     "wiki_title": "Blue Pin Flag",
-    "en_name": "Pin Flags",
     "item_category": "furniture"
   },
   "浴缸": {
@@ -4124,7 +4072,6 @@
       ]
     ],
     "wiki_title": "Bone Bathtub",
-    "en_name": "Bathtubs",
     "item_category": "furniture"
   },
   "烛台": {
@@ -4221,7 +4168,6 @@
       ]
     ],
     "wiki_title": "Bone Candelabra",
-    "en_name": "Candelabra",
     "item_category": "furniture"
   },
   "吊灯": {
@@ -4318,7 +4264,6 @@
       ]
     ],
     "wiki_title": "Bone Chandelier",
-    "en_name": "Chandeliers",
     "item_category": "furniture"
   },
   "钢琴": {
@@ -4414,7 +4359,6 @@
       ]
     ],
     "wiki_title": "Boreal Wood Piano",
-    "en_name": "Pianos",
     "item_category": "furniture"
   },
   "Chippy的沙发": {
@@ -4518,7 +4462,6 @@
       ]
     ],
     "wiki_title": "Chippy的沙发",
-    "en_name": "Chippy's Couch",
     "item_category": "furniture"
   },
   "落地大摆钟": {
@@ -4629,7 +4572,6 @@
       ]
     ],
     "wiki_title": "Nebula Clock",
-    "en_name": "Grandfather Clock",
     "item_category": "furniture"
   },
   "灯": {
@@ -4722,7 +4664,6 @@
       ]
     ],
     "wiki_title": "Nebula Lamp",
-    "en_name": "Lamps",
     "item_category": "furniture"
   },
   "沙发": {
@@ -4825,7 +4766,6 @@
       ]
     ],
     "wiki_title": "Nebula Sofa",
-    "en_name": "Sofas",
     "item_category": "furniture"
   },
   "马桶": {
@@ -4919,7 +4859,6 @@
       ]
     ],
     "wiki_title": "Nebula Toilet",
-    "en_name": "Toilets",
     "item_category": "furniture"
   },
   "TNT桶": {
@@ -4999,7 +4938,6 @@
       ]
     ],
     "wiki_title": "TNT桶",
-    "en_name": "TNT Barrel",
     "item_category": "furniture"
   },
   "七彩草蛉罐": {
@@ -5068,7 +5006,6 @@
       ]
     ],
     "wiki_title": "七彩草蛉罐",
-    "en_name": "Prismatic Lacewing Jar",
     "item_category": "furniture"
   },
   "丛林匣": {
@@ -5179,7 +5116,6 @@
       ]
     ],
     "wiki_title": "丛林匣",
-    "en_name": "Jungle Crate",
     "item_category": "furniture"
   },
   "丛林蜥蜴祭坛": {
@@ -5244,7 +5180,6 @@
       ]
     ],
     "wiki_title": "丛林蜥蜴祭坛",
-    "en_name": "Lihzahrd Altar",
     "item_category": "furniture"
   },
   "人体模型": {
@@ -5414,7 +5349,6 @@
       ]
     ],
     "wiki_title": "人体模型",
-    "en_name": "Mannequin",
     "item_category": "furniture"
   },
   "仙灵罐": {
@@ -5477,7 +5411,6 @@
       ]
     ],
     "wiki_title": "仙灵罐",
-    "en_name": "Fairy jars",
     "item_category": "furniture"
   },
   "传送机": {
@@ -5578,7 +5511,6 @@
       ]
     ],
     "wiki_title": "传送机",
-    "en_name": "Teleporter",
     "item_category": "furniture"
   },
   "传送枪站": {
@@ -5705,7 +5637,6 @@
       ]
     ],
     "wiki_title": "传送枪站",
-    "en_name": "Portal Gun Station",
     "item_category": "furniture"
   },
   "保险箱": {
@@ -5796,7 +5727,6 @@
       ]
     ],
     "wiki_title": "保险箱",
-    "en_name": "Safe",
     "item_category": "furniture"
   },
   "修复的生命水晶": {
@@ -5872,7 +5802,6 @@
       ]
     ],
     "wiki_title": "修复的生命水晶",
-    "en_name": "Repaired Life Crystal",
     "item_category": "furniture"
   },
   "修复的魔力水晶": {
@@ -5943,7 +5872,6 @@
       ]
     ],
     "wiki_title": "修复的魔力水晶",
-    "en_name": "Repaired Mana Crystal",
     "item_category": "furniture"
   },
   "像素盒": {
@@ -6034,7 +5962,6 @@
       ]
     ],
     "wiki_title": "像素盒",
-    "en_name": "Pixel Box",
     "item_category": "furniture"
   },
   "冬青树": {
@@ -6133,7 +6060,6 @@
       ]
     ],
     "wiki_title": "冬青树",
-    "en_name": "Holly",
     "item_category": "furniture"
   },
   "冰冻匣": {
@@ -6217,7 +6143,6 @@
       ]
     ],
     "wiki_title": "冰冻匣",
-    "en_name": "Frozen Crate",
     "item_category": "furniture"
   },
   "分线盒": {
@@ -6302,7 +6227,6 @@
       ]
     ],
     "wiki_title": "分线盒",
-    "en_name": "Junction Box",
     "item_category": "furniture"
   },
   "利器站": {
@@ -6440,7 +6364,6 @@
       ]
     ],
     "wiki_title": "利器站",
-    "en_name": "Sharpening Station",
     "item_category": "furniture"
   },
   "虎皮": {
@@ -6520,7 +6443,6 @@
       ]
     ],
     "wiki_title": "动物皮",
-    "en_name": "Tiger Skin",
     "item_category": "furniture"
   },
   "压力板轨道": {
@@ -6605,7 +6527,6 @@
       ]
     ],
     "wiki_title": "压力板轨道",
-    "en_name": "Pressure Plate Track",
     "item_category": "furniture"
   },
   "叶绿提炼机": {
@@ -6691,7 +6612,6 @@
       ]
     ],
     "wiki_title": "叶绿提炼机",
-    "en_name": "Chlorophyte Extractinator",
     "item_category": "furniture"
   },
   "吊挂火盆": {
@@ -6767,7 +6687,6 @@
       ]
     ],
     "wiki_title": "吊挂火盆",
-    "en_name": "Hanging Brazier",
     "item_category": "furniture"
   },
   "吊挂草药": {
@@ -6842,7 +6761,6 @@
       ]
     ],
     "wiki_title": "吊挂草药",
-    "en_name": "Hanging herbs",
     "item_category": "furniture"
   },
   "吊挂骷髅": {
@@ -6889,7 +6807,6 @@
       ]
     ],
     "wiki_title": "吊挂骷髅",
-    "en_name": "Hanging Skeleton",
     "item_category": "furniture"
   },
   "向日葵": {
@@ -6981,7 +6898,6 @@
       ]
     ],
     "wiki_title": "向日葵",
-    "en_name": "Sunflower",
     "item_category": "furniture"
   },
   "呆萌丝带派对气球束": {
@@ -7065,7 +6981,6 @@
       ]
     ],
     "wiki_title": "呆萌丝带派对气球束",
-    "en_name": "Silly Tied Bundle of Balloons",
     "item_category": "furniture"
   },
   "呆萌气球机": {
@@ -7156,7 +7071,6 @@
       ]
     ],
     "wiki_title": "呆萌气球机",
-    "en_name": "Silly Balloon Machine",
     "item_category": "furniture"
   },
   "和平蜡烛": {
@@ -7264,7 +7178,6 @@
       ]
     ],
     "wiki_title": "和平蜡烛",
-    "en_name": "Peace Candle",
     "item_category": "furniture"
   },
   "喷泉": {
@@ -7376,7 +7289,6 @@
       ]
     ],
     "wiki_title": "喷泉",
-    "en_name": "Water fountains",
     "item_category": "furniture"
   },
   "团队平台": {
@@ -7472,7 +7384,6 @@
       ]
     ],
     "wiki_title": "团队平台",
-    "en_name": "Team Platforms",
     "item_category": "furniture"
   },
   "围栏匣": {
@@ -7556,7 +7467,6 @@
       ]
     ],
     "wiki_title": "围栏匣",
-    "en_name": "Stockade Crate",
     "item_category": "furniture"
   },
   "圣物": {
@@ -7616,7 +7526,6 @@
       ]
     ],
     "wiki_title": "圣物",
-    "en_name": "Relics",
     "item_category": "furniture"
   },
   "圣诞树": {
@@ -7696,7 +7605,6 @@
       ]
     ],
     "wiki_title": "圣诞树",
-    "en_name": "Christmas Tree",
     "item_category": "furniture"
   },
   "圣诞树装饰": {
@@ -7786,7 +7694,6 @@
       ]
     ],
     "wiki_title": "圣诞树装饰",
-    "en_name": "Christmas Tree decorations",
     "item_category": "furniture"
   },
   "圣诞灯": {
@@ -7867,7 +7774,6 @@
       ]
     ],
     "wiki_title": "圣诞灯",
-    "en_name": "Christmas lights",
     "item_category": "furniture"
   },
   "地下墓穴": {
@@ -7919,7 +7825,6 @@
       ]
     ],
     "wiki_title": "地下墓穴",
-    "en_name": "Catacomb",
     "item_category": "furniture"
   },
   "地牢匣": {
@@ -8030,7 +7935,6 @@
       ]
     ],
     "wiki_title": "地牢匣",
-    "en_name": "Dungeon Crate",
     "item_category": "furniture"
   },
   "垃圾桶": {
@@ -8102,7 +8006,6 @@
       ]
     ],
     "wiki_title": "垃圾桶",
-    "en_name": "Trash Can",
     "item_category": "furniture"
   },
   "墓石": {
@@ -8191,7 +8094,6 @@
       ]
     ],
     "wiki_title": "墓石",
-    "en_name": "Tombstones",
     "item_category": "furniture"
   },
   "墙锚": {
@@ -8250,7 +8152,6 @@
       ]
     ],
     "wiki_title": "墙锚",
-    "en_name": "Wall Anchor",
     "item_category": "furniture"
   },
   "增速轨道": {
@@ -8340,7 +8241,6 @@
       ]
     ],
     "wiki_title": "增速轨道",
-    "en_name": "Booster Track",
     "item_category": "furniture"
   },
   "壁挂骷髅": {
@@ -8387,7 +8287,6 @@
       ]
     ],
     "wiki_title": "壁挂骷髅",
-    "en_name": "Wall Skeleton",
     "item_category": "furniture"
   },
   "壁炉": {
@@ -8463,7 +8362,6 @@
       ]
     ],
     "wiki_title": "壁炉",
-    "en_name": "Fireplace",
     "item_category": "furniture"
   },
   "复制暗影珠": {
@@ -8545,7 +8443,6 @@
       ]
     ],
     "wiki_title": "复制暗影珠",
-    "en_name": "Replica Shadow Orb",
     "item_category": "furniture"
   },
   "复制猩红之心": {
@@ -8627,7 +8524,6 @@
       ]
     ],
     "wiki_title": "复制猩红之心",
-    "en_name": "Replica Crimson Heart",
     "item_category": "furniture"
   },
   "大火山": {
@@ -8699,7 +8595,6 @@
       ]
     ],
     "wiki_title": "大火山",
-    "en_name": "Large Volcano",
     "item_category": "furniture"
   },
   "天空匣": {
@@ -8810,7 +8705,6 @@
       ]
     ],
     "wiki_title": "天空匣",
-    "en_name": "Sky Crate",
     "item_category": "furniture"
   },
   "天蓝匣": {
@@ -8921,7 +8815,6 @@
       ]
     ],
     "wiki_title": "天蓝匣",
-    "en_name": "Azure Crate",
     "item_category": "furniture"
   },
   "天赐匣": {
@@ -9005,7 +8898,6 @@
       ]
     ],
     "wiki_title": "天赐匣",
-    "en_name": "Divine Crate",
     "item_category": "furniture"
   },
   "奇异植物": {
@@ -9075,7 +8967,6 @@
       ]
     ],
     "wiki_title": "奇异植物",
-    "en_name": "Strange Plants",
     "item_category": "furniture"
   },
   "女性人体模型": {
@@ -9227,7 +9118,6 @@
       ]
     ],
     "wiki_title": "女性人体模型",
-    "en_name": "Womannequin",
     "item_category": "furniture"
   },
   "宝匣": {
@@ -9344,7 +9234,6 @@
       ]
     ],
     "wiki_title": "宝匣",
-    "en_name": "Crates",
     "item_category": "furniture"
   },
   "宝石锁": {
@@ -9422,7 +9311,6 @@
       ]
     ],
     "wiki_title": "宝石锁",
-    "en_name": "Gem Locks",
     "item_category": "furniture"
   },
   "宝藏地图": {
@@ -9486,7 +9374,6 @@
       ]
     ],
     "wiki_title": "宝藏地图",
-    "en_name": "Treasure Map",
     "item_category": "furniture"
   },
   "巴斯特雕像": {
@@ -9632,7 +9519,6 @@
       ]
     ],
     "wiki_title": "巴斯特雕像",
-    "en_name": "Bast Statue",
     "item_category": "furniture"
   },
   "帽架": {
@@ -9712,7 +9598,6 @@
       ]
     ],
     "wiki_title": "帽架",
-    "en_name": "Hat Rack",
     "item_category": "furniture"
   },
   "幻象匣": {
@@ -9796,7 +9681,6 @@
       ]
     ],
     "wiki_title": "幻象匣",
-    "en_name": "Mirage Crate",
     "item_category": "furniture"
   },
   "广播盒": {
@@ -9870,7 +9754,6 @@
       ]
     ],
     "wiki_title": "广播盒",
-    "en_name": "Announcement Box",
     "item_category": "furniture"
   },
   "开关": {
@@ -9967,7 +9850,6 @@
       ]
     ],
     "wiki_title": "开关",
-    "en_name": "Switch",
     "item_category": "furniture"
   },
   "引爆器": {
@@ -10049,7 +9931,6 @@
       ]
     ],
     "wiki_title": "引爆器",
-    "en_name": "Detonator",
     "item_category": "furniture"
   },
   "弹药箱": {
@@ -10241,7 +10122,6 @@
       ]
     ],
     "wiki_title": "弹药箱",
-    "en_name": "Ammo Box",
     "item_category": "furniture"
   },
   "彩纸炮": {
@@ -10308,7 +10188,6 @@
     ],
     "recipe": null,
     "wiki_title": "彩纸炮",
-    "en_name": "Confetti Cannon",
     "description": "彩纸炮是一件困难模式下的小玩具类机械物品，它会发射彩纸。它只会产生视觉上的效果，不会对玩家或敌怪造成伤害。当海盗在场时，它可以于派对女孩处以25 GC的价格购买。\n\n其运作方式和大炮与兔兔炮类似：它必须先被放置，然后在热键栏中选择彩纸并按下⚒使用/攻击才能使用，还可以通过在其左侧或右侧按下⚷打开/激活键来瞄准。它也可以相似地被连接电线：取决于电线连接的位置，它会开火或者转向激活电线的那一侧。",
     "description_rich": [
       [
@@ -10417,7 +10296,6 @@
     ],
     "recipe": null,
     "wiki_title": "彩线灯泡",
-    "en_name": "Wire Bulb",
     "description": "彩线灯泡是一种有多种颜色的光源。它可从机械师处以5 GC购买。每个角都能通过电线点亮。各种颜色的电线会点亮不同的角。因为有四种电线颜色，因此有四个有着不同颜色的角。彩线灯泡可以放置在半空中，无需支撑。",
     "description_rich": [
       [
@@ -10511,7 +10389,6 @@
       ]
     ],
     "wiki_title": "感应器",
-    "en_name": "Sensors",
     "item_category": "furniture"
   },
   "战争桌": {
@@ -10713,7 +10590,6 @@
       ]
     ],
     "wiki_title": "战争桌",
-    "en_name": "War Table",
     "item_category": "furniture"
   },
   "战争桌旗": {
@@ -10830,7 +10706,6 @@
       ]
     ],
     "wiki_title": "战争桌旗",
-    "en_name": "War Table Banner",
     "item_category": "furniture"
   },
   "护卫熔炉": {
@@ -10915,7 +10790,6 @@
       ]
     ],
     "wiki_title": "护卫熔炉",
-    "en_name": "Defender's Forge",
     "item_category": "furniture"
   },
   "控制杆": {
@@ -11021,7 +10895,6 @@
       ]
     ],
     "wiki_title": "控制杆",
-    "en_name": "Lever",
     "item_category": "furniture"
   },
   "提基火把": {
@@ -11106,7 +10979,6 @@
       ]
     ],
     "wiki_title": "提基火把",
-    "en_name": "Tiki Torch",
     "item_category": "furniture"
   },
   "救生圈": {
@@ -11165,7 +11037,6 @@
       ]
     ],
     "wiki_title": "救生圈",
-    "en_name": "Life Preserver",
     "item_category": "furniture"
   },
   "施法桌": {
@@ -11303,7 +11174,6 @@
       ]
     ],
     "wiki_title": "施法桌",
-    "en_name": "Bewitching Table",
     "item_category": "furniture"
   },
   "星星瓶": {
@@ -11467,7 +11337,6 @@
       ]
     ],
     "wiki_title": "星星瓶",
-    "en_name": "Star in a Bottle",
     "item_category": "furniture"
   },
   "晶塔": {
@@ -11554,7 +11423,6 @@
       ]
     ],
     "wiki_title": "晶塔",
-    "en_name": "Pylons",
     "item_category": "furniture"
   },
   "木匣": {
@@ -11665,7 +11533,6 @@
       ]
     ],
     "wiki_title": "木匣",
-    "en_name": "Wooden Crate",
     "item_category": "furniture"
   },
   "杰克南瓜灯": {
@@ -11734,7 +11601,6 @@
       ]
     ],
     "wiki_title": "杰克南瓜灯",
-    "en_name": "Jack 'O Lantern",
     "item_category": "furniture"
   },
   "架子": {
@@ -11806,7 +11672,6 @@
       ]
     ],
     "wiki_title": "架子",
-    "en_name": "Racks",
     "item_category": "furniture"
   },
   "武器架": {
@@ -11903,7 +11768,6 @@
       ]
     ],
     "wiki_title": "武器架",
-    "en_name": "Weapon Rack",
     "item_category": "furniture"
   },
   "死人宝箱": {
@@ -11979,7 +11843,6 @@
       ]
     ],
     "wiki_title": "死人宝箱",
-    "en_name": "Dead Man's Chest",
     "item_category": "furniture"
   },
   "水母罐": {
@@ -12042,7 +11905,6 @@
       ]
     ],
     "wiki_title": "水母罐",
-    "en_name": "Jellyfish jars",
     "item_category": "furniture"
   },
   "水蜡烛": {
@@ -12145,7 +12007,6 @@
       ]
     ],
     "wiki_title": "水蜡烛",
-    "en_name": "Water Candle",
     "item_category": "furniture"
   },
   "永恒水晶座": {
@@ -12230,7 +12091,6 @@
       ]
     ],
     "wiki_title": "永恒水晶座",
-    "en_name": "Eternia Crystal Stand",
     "item_category": "furniture"
   },
   "污损匣": {
@@ -12314,7 +12174,6 @@
       ]
     ],
     "wiki_title": "污损匣",
-    "en_name": "Defiled Crate",
     "item_category": "furniture"
   },
   "泡泡机": {
@@ -12411,7 +12270,6 @@
       ]
     ],
     "wiki_title": "泡泡机",
-    "en_name": "Bubble Machine",
     "item_category": "furniture"
   },
   "入水泵": {
@@ -12487,7 +12345,6 @@
       ]
     ],
     "wiki_title": "泵",
-    "en_name": "Inlet Pump",
     "item_category": "furniture"
   },
   "活板门": {
@@ -12581,7 +12438,6 @@
       ]
     ],
     "wiki_title": "活板门",
-    "en_name": "Trap Door",
     "item_category": "furniture"
   },
   "派对中心": {
@@ -12675,7 +12531,6 @@
       ]
     ],
     "wiki_title": "派对中心",
-    "en_name": "Party Center",
     "item_category": "furniture"
   },
   "派对礼物": {
@@ -12760,7 +12615,6 @@
       ]
     ],
     "wiki_title": "派对礼物",
-    "en_name": "Party Present",
     "item_category": "furniture"
   },
   "海洋匣": {
@@ -12844,7 +12698,6 @@
       ]
     ],
     "wiki_title": "海洋匣",
-    "en_name": "Ocean Crate",
     "item_category": "furniture"
   },
   "海草花盆": {
@@ -12908,7 +12761,6 @@
       ]
     ],
     "wiki_title": "海草花盆",
-    "en_name": "Seaweed Planter",
     "item_category": "furniture"
   },
   "海边匣": {
@@ -12992,7 +12844,6 @@
       ]
     ],
     "wiki_title": "海边匣",
-    "en_name": "Seaside Crate",
     "item_category": "furniture"
   },
   "灯柱": {
@@ -13073,7 +12924,6 @@
       ]
     ],
     "wiki_title": "灯柱",
-    "en_name": "Lamp Post",
     "item_category": "furniture"
   },
   "炸药": {
@@ -13189,7 +13039,6 @@
       ]
     ],
     "wiki_title": "炸药",
-    "en_name": "Explosives",
     "item_category": "furniture"
   },
   "烟囱": {
@@ -13255,7 +13104,6 @@
       ]
     ],
     "wiki_title": "烟囱",
-    "en_name": "Chimney",
     "item_category": "furniture"
   },
   "烟花喷泉": {
@@ -13335,7 +13183,6 @@
       ]
     ],
     "wiki_title": "烟花喷泉",
-    "en_name": "Firework Fountain",
     "item_category": "furniture"
   },
   "烟花盒": {
@@ -13415,7 +13262,6 @@
       ]
     ],
     "wiki_title": "烟花盒",
-    "en_name": "Fireworks Box",
     "item_category": "furniture"
   },
   "热喷泉": {
@@ -13491,7 +13337,6 @@
       ]
     ],
     "wiki_title": "热喷泉",
-    "en_name": "Geyser",
     "item_category": "furniture"
   },
   "熔岩灯": {
@@ -13571,7 +13416,6 @@
       ]
     ],
     "wiki_title": "熔岩灯",
-    "en_name": "Lava Lamp",
     "item_category": "furniture"
   },
   "物品框": {
@@ -13654,7 +13498,6 @@
       ]
     ],
     "wiki_title": "物品框",
-    "en_name": "Item Frame",
     "item_category": "furniture"
   },
   "物品瓶": {
@@ -13783,7 +13626,6 @@
       ]
     ],
     "wiki_title": "物品瓶",
-    "en_name": "Item Flask",
     "item_category": "furniture"
   },
   "狱石匣": {
@@ -13867,7 +13709,6 @@
       ]
     ],
     "wiki_title": "狱石匣",
-    "en_name": "Hellstone Crate",
     "item_category": "furniture"
   },
   "猩红匣": {
@@ -13978,7 +13819,6 @@
       ]
     ],
     "wiki_title": "猩红匣",
-    "en_name": "Crimson Crate",
     "item_category": "furniture"
   },
   "猪猪存钱罐": {
@@ -14069,7 +13909,6 @@
       ]
     ],
     "wiki_title": "猪猪存钱罐",
-    "en_name": "Piggy Bank",
     "item_category": "furniture"
   },
   "猪龙彩罐": {
@@ -14154,7 +13993,6 @@
       ]
     ],
     "wiki_title": "猪龙彩罐",
-    "en_name": "Pigronata",
     "item_category": "furniture"
   },
   "王座": {
@@ -14237,7 +14075,6 @@
       ]
     ],
     "wiki_title": "王座",
-    "en_name": "Throne",
     "item_category": "furniture"
   },
   "珍珠木匣": {
@@ -14348,7 +14185,6 @@
       ]
     ],
     "wiki_title": "珍珠木匣",
-    "en_name": "Pearlwood Crate",
     "item_category": "furniture"
   },
   "生命水晶巨石": {
@@ -14434,7 +14270,6 @@
       ]
     ],
     "wiki_title": "生命水晶巨石",
-    "en_name": "Life Crystal Boulder",
     "item_category": "furniture"
   },
   "盆栽树": {
@@ -14514,7 +14349,6 @@
       ]
     ],
     "wiki_title": "盆栽树",
-    "en_name": "Potted Trees",
     "item_category": "furniture"
   },
   "盆栽水晶植物": {
@@ -14594,7 +14428,6 @@
       ]
     ],
     "wiki_title": "盆栽水晶植物",
-    "en_name": "Potted Crystal Plants",
     "item_category": "furniture"
   },
   "盆栽熔岩植物": {
@@ -14659,7 +14492,6 @@
       ]
     ],
     "wiki_title": "盆栽熔岩植物",
-    "en_name": "Potted Lava Plants",
     "item_category": "furniture"
   },
   "盘子": {
@@ -14751,7 +14583,6 @@
       ]
     ],
     "wiki_title": "盘子",
-    "en_name": "Plate",
     "item_category": "furniture"
   },
   "破旧木标牌": {
@@ -14811,7 +14642,6 @@
       ]
     ],
     "wiki_title": "破旧木标牌",
-    "en_name": "Tattered Wood Sign",
     "item_category": "furniture"
   },
   "礼物": {
@@ -14931,7 +14761,6 @@
       ]
     ],
     "wiki_title": "礼物",
-    "en_name": "Present",
     "item_category": "furniture"
   },
   "神圣匣": {
@@ -15048,7 +14877,6 @@
       ]
     ],
     "wiki_title": "神圣匣",
-    "en_name": "Hallowed Crate",
     "item_category": "furniture"
   },
   "种植盆": {
@@ -15154,7 +14982,6 @@
       ]
     ],
     "wiki_title": "种植盆",
-    "en_name": "Planter Boxes",
     "item_category": "furniture"
   },
   "秘银匣": {
@@ -15238,7 +15065,6 @@
       ]
     ],
     "wiki_title": "秘银匣",
-    "en_name": "Mythril Crate",
     "item_category": "furniture"
   },
   "笼子": {
@@ -15410,7 +15236,6 @@
       ]
     ],
     "wiki_title": "笼子",
-    "en_name": "Cages",
     "item_category": "furniture"
   },
   "等离子灯": {
@@ -15481,7 +15306,6 @@
       ]
     ],
     "wiki_title": "等离子灯",
-    "en_name": "Plasma Lamp",
     "item_category": "furniture"
   },
   "箭头标牌": {
@@ -15581,7 +15405,6 @@
       ]
     ],
     "wiki_title": "箭头标牌",
-    "en_name": "Arrow Sign",
     "item_category": "furniture"
   },
   "篝火": {
@@ -15672,7 +15495,6 @@
       ]
     ],
     "wiki_title": "篝火",
-    "en_name": "Campfire",
     "item_category": "furniture"
   },
   "粘土盆": {
@@ -15749,7 +15571,6 @@
       ]
     ],
     "wiki_title": "粘土盆",
-    "en_name": "Clay Pot",
     "item_category": "furniture"
   },
   "精致餐具": {
@@ -15829,7 +15650,6 @@
       ]
     ],
     "wiki_title": "精致餐具",
-    "en_name": "Fancy Dishes",
     "item_category": "furniture"
   },
   "红心灯笼": {
@@ -15954,7 +15774,6 @@
       ]
     ],
     "wiki_title": "红心灯笼",
-    "en_name": "Heart Lantern",
     "item_category": "furniture"
   },
   "纪念章": {
@@ -16018,7 +15837,6 @@
       ]
     ],
     "wiki_title": "纪念章",
-    "en_name": "Trophies",
     "item_category": "furniture"
   },
   "绿洲匣": {
@@ -16102,7 +15920,6 @@
       ]
     ],
     "wiki_title": "绿洲匣",
-    "en_name": "Oasis Crate",
     "item_category": "furniture"
   },
   "罗盘针": {
@@ -16167,7 +15984,6 @@
       ]
     ],
     "wiki_title": "罗盘针",
-    "en_name": "Compass Rose",
     "item_category": "furniture"
   },
   "腐化匣": {
@@ -16278,7 +16094,6 @@
       ]
     ],
     "wiki_title": "腐化匣",
-    "en_name": "Corrupt Crate",
     "item_category": "furniture"
   },
   "臭虫拦截器": {
@@ -16360,7 +16175,6 @@
       ]
     ],
     "wiki_title": "臭虫拦截器",
-    "en_name": "Stinkbug Blocker",
     "item_category": "furniture"
   },
   "舵轮": {
@@ -16419,7 +16233,6 @@
       ]
     ],
     "wiki_title": "舵轮",
-    "en_name": "Ship's Wheel",
     "item_category": "furniture"
   },
   "船舶瓶": {
@@ -16478,7 +16291,6 @@
       ]
     ],
     "wiki_title": "船舶瓶",
-    "en_name": "Ship in a Bottle",
     "item_category": "furniture"
   },
   "花园侏儒": {
@@ -16548,7 +16360,6 @@
       ]
     ],
     "wiki_title": "花园侏儒",
-    "en_name": "Garden Gnome",
     "item_category": "furniture"
   },
   "荆棘匣": {
@@ -16632,7 +16443,6 @@
       ]
     ],
     "wiki_title": "荆棘匣",
-    "en_name": "Bramble Crate",
     "item_category": "furniture"
   },
   "草坪火烈鸟": {
@@ -16717,7 +16527,6 @@
       ]
     ],
     "wiki_title": "草坪火烈鸟",
-    "en_name": "Lawn Flamingo",
     "item_category": "furniture"
   },
   "虚空保险库": {
@@ -16810,7 +16619,6 @@
       ]
     ],
     "wiki_title": "虚空保险库",
-    "en_name": "Void Vault",
     "item_category": "furniture"
   },
   "蛋糕块": {
@@ -16927,7 +16735,6 @@
       ]
     ],
     "wiki_title": "蛋糕块",
-    "en_name": "Slice of Cake",
     "item_category": "furniture"
   },
   "蜻蜓罐": {
@@ -16990,7 +16797,6 @@
       ]
     ],
     "wiki_title": "蜻蜓罐",
-    "en_name": "Dragonfly jars",
     "item_category": "furniture"
   },
   "蝴蝶罐": {
@@ -17053,7 +16859,6 @@
       ]
     ],
     "wiki_title": "蝴蝶罐",
-    "en_name": "Butterfly jars",
     "item_category": "furniture"
   },
   "血匣": {
@@ -17137,7 +16942,6 @@
       ]
     ],
     "wiki_title": "血匣",
-    "en_name": "Hematic Crate",
     "item_category": "furniture"
   },
   "装饰治疗药水": {
@@ -17217,7 +17021,6 @@
       ]
     ],
     "wiki_title": "装饰治疗药水",
-    "en_name": "Decorative Healing Potion",
     "item_category": "furniture"
   },
   "装饰魔力药水": {
@@ -17297,7 +17100,6 @@
       ]
     ],
     "wiki_title": "装饰魔力药水",
-    "en_name": "Decorative Mana Potion",
     "item_category": "furniture"
   },
   "训练假人": {
@@ -17380,7 +17182,6 @@
       ]
     ],
     "wiki_title": "训练假人",
-    "en_name": "Target Dummy",
     "item_category": "furniture"
   },
   "迪斯科球": {
@@ -17469,7 +17270,6 @@
       ]
     ],
     "wiki_title": "迪斯科球",
-    "en_name": "Disco Ball",
     "item_category": "furniture"
   },
   "造雾机": {
@@ -17545,7 +17345,6 @@
       ]
     ],
     "wiki_title": "造雾机",
-    "en_name": "Fog Machine",
     "item_category": "furniture"
   },
   "逻辑门": {
@@ -17631,7 +17430,6 @@
       ]
     ],
     "wiki_title": "逻辑门",
-    "en_name": "Logic Gates",
     "item_category": "furniture"
   },
   "逻辑门灯": {
@@ -17678,7 +17476,6 @@
       ]
     ],
     "wiki_title": "逻辑门灯",
-    "en_name": "Logic Gate Lamps",
     "item_category": "furniture"
   },
   "金匣": {
@@ -17789,7 +17586,6 @@
       ]
     ],
     "wiki_title": "金匣",
-    "en_name": "Golden Crate",
     "item_category": "furniture"
   },
   "针叶木匣": {
@@ -17900,7 +17696,6 @@
       ]
     ],
     "wiki_title": "针叶木匣",
-    "en_name": "Boreal Crate",
     "item_category": "furniture"
   },
   "钛金匣": {
@@ -17984,7 +17779,6 @@
       ]
     ],
     "wiki_title": "钛金匣",
-    "en_name": "Titanium Crate",
     "item_category": "furniture"
   },
   "铁匣": {
@@ -18095,7 +17889,6 @@
       ]
     ],
     "wiki_title": "铁匣",
-    "en_name": "Iron Crate",
     "item_category": "furniture"
   },
   "长椅": {
@@ -18167,7 +17960,6 @@
       ]
     ],
     "wiki_title": "长椅",
-    "en_name": "Benches",
     "item_category": "furniture"
   },
   "附魔日晷": {
@@ -18333,7 +18125,6 @@
       ]
     ],
     "wiki_title": "附魔日晷",
-    "en_name": "Enchanted Sundial",
     "item_category": "furniture"
   },
   "附魔月晷": {
@@ -18412,7 +18203,6 @@
       ]
     ],
     "wiki_title": "附魔月晷",
-    "en_name": "Enchanted Moondial",
     "item_category": "furniture"
   },
   "陷阱箱": {
@@ -18489,7 +18279,6 @@
       ]
     ],
     "wiki_title": "陷阱箱",
-    "en_name": "Trapped Chests",
     "item_category": "furniture"
   },
   "风向标": {
@@ -18561,7 +18350,6 @@
       ]
     ],
     "wiki_title": "风向标",
-    "en_name": "Weather Vane",
     "item_category": "furniture"
   },
   "风车": {
@@ -18641,7 +18429,6 @@
       ]
     ],
     "wiki_title": "风车",
-    "en_name": "Pin Wheel",
     "item_category": "furniture"
   },
   "饰带": {
@@ -18727,7 +18514,6 @@
       ]
     ],
     "wiki_title": "饰带",
-    "en_name": "Streamers",
     "item_category": "furniture"
   },
   "骷髅头灯笼": {
@@ -18803,7 +18589,6 @@
       ]
     ],
     "wiki_title": "骷髅头灯笼",
-    "en_name": "Skull Lantern",
     "item_category": "furniture"
   },
   "高尔夫奖杯": {
@@ -18883,7 +18668,6 @@
       ]
     ],
     "wiki_title": "高尔夫奖杯",
-    "en_name": "Golf trophies",
     "item_category": "furniture"
   },
   "高尔夫球座": {
@@ -18983,7 +18767,6 @@
       ]
     ],
     "wiki_title": "高尔夫球座",
-    "en_name": "Golf Tee",
     "item_category": "furniture"
   },
   "高门": {
@@ -19068,7 +18851,6 @@
       ]
     ],
     "wiki_title": "高门",
-    "en_name": "Tall Gate",
     "item_category": "furniture"
   },
   "黑曜石匣": {
@@ -19152,7 +18934,6 @@
       ]
     ],
     "wiki_title": "黑曜石匣",
-    "en_name": "Obsidian Crate",
     "item_category": "furniture"
   }
 }

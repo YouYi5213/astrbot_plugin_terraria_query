@@ -18,6 +18,7 @@
 - 移除根目录 `items.json` / `mounts.json` / `pets.json`；`prepare_data.py` 直接读写 `categories/`
 - 插件加载时从 `categories/` 合并物品并独立加载坐骑/宠物
 - 扩展 Wiki 分类抓取列表
+- **移除英文名称查询**：删除 `en_name` / `aliases` 字段及英文名搜索逻辑，仅支持中文名称查询
 
 ---
 

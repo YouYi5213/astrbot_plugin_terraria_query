@@ -1179,10 +1179,6 @@ _CARD_UI = {
 }
 
 
-def _item_en_name(item: dict) -> str:
-    return item.get("en_name") or ""
-
-
 def _item_zh_search_names(key: str, item: dict) -> set[str]:
     names = {key, item.get("name", ""), item.get("wiki_title", "")}
     names.update(item.get("search_terms") or [])
@@ -1198,13 +1194,7 @@ def _item_zh_search_names(key: str, item: dict) -> set[str]:
     return {n for n in names if n}
 
 
-def _item_en_search_names(item: dict) -> set[str]:
-    names = {_item_en_name(item)}
-    names.update(item.get("aliases") or [])
-    return {n for n in names if n}
-
-
-_SEARCH_INDEX: list[tuple[str, str, frozenset[str], tuple[str, ...]]] | None = None
+_SEARCH_INDEX: list[tuple[str, str, frozenset[str]]] | None = None
 _SEARCH_INDEX_SIG: tuple | None = None
 
 
@@ -1230,7 +1220,7 @@ def rebuild_search_index(
 ) -> None:
     """预构建搜索索引，避免每次查询重复计算别名集合。"""
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
-    entries: list[tuple[str, str, frozenset[str], tuple[str, ...]]] = []
+    entries: list[tuple[str, str, frozenset[str]]] = []
     for pool_name, pool in (
         ("mount", mounts),
         ("pet", pets),
@@ -1238,19 +1228,17 @@ def rebuild_search_index(
     ):
         for key, item in pool.items():
             zh_names = frozenset(_item_zh_search_names(key, item))
-            en_names = tuple(_item_en_search_names(item))
-            entries.append((pool_name, key, zh_names, en_names))
+            entries.append((pool_name, key, zh_names))
     _SEARCH_INDEX = entries
     _SEARCH_INDEX_SIG = _search_index_signature(items, mounts, pets)
 
 
 def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
-    """中英文名称均可匹配，结果统一为中文物品键。"""
+    """中文名称模糊匹配。"""
     query = query.strip()
     if not query:
         return []
 
-    query_lower = query.lower()
     found: dict[str, int] = {}
 
     for key, item in items.items():
@@ -1259,13 +1247,6 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
                 found[key] = min(found.get(key, 999), 0)
             elif query in zh_name:
                 found[key] = min(found.get(key, 999), len(zh_name))
-
-        for en_name in _item_en_search_names(item):
-            en_lower = en_name.lower()
-            if query_lower == en_lower:
-                found[key] = min(found.get(key, 999), 0)
-            elif query_lower in en_lower:
-                found[key] = min(found.get(key, 999), len(en_name))
 
     ranked = sorted(found.items(), key=lambda x: (x[1], x[0]))
     if any(rank == 0 for _, rank in ranked):
@@ -1282,10 +1263,9 @@ def _rank_pool_from_index(query: str, pool_name: str) -> list[str]:
     if not query:
         return []
 
-    query_lower = query.lower()
     found: dict[str, int] = {}
 
-    for p_name, key, zh_names, en_names in _SEARCH_INDEX:
+    for p_name, key, zh_names in _SEARCH_INDEX:
         if p_name != pool_name:
             continue
         for zh_name in zh_names:
@@ -1293,12 +1273,6 @@ def _rank_pool_from_index(query: str, pool_name: str) -> list[str]:
                 found[key] = min(found.get(key, 999), 0)
             elif query in zh_name:
                 found[key] = min(found.get(key, 999), len(zh_name))
-        for en_name in en_names:
-            en_lower = en_name.lower()
-            if query_lower == en_lower:
-                found[key] = min(found.get(key, 999), 0)
-            elif query_lower in en_lower:
-                found[key] = min(found.get(key, 999), len(en_name))
 
     ranked = sorted(found.items(), key=lambda x: (x[1], x[0]))
     if any(rank == 0 for _, rank in ranked):
@@ -1355,11 +1329,7 @@ def _display_item(item: dict) -> dict:
 
 
 def _match_list_label(key: str, item: dict, query: str) -> str:
-    label = item.get("name", key)
-    en = _item_en_name(item)
-    if en and en.lower() in query.lower() and label != en:
-        return f"{label}（{en}）"
-    return label
+    return item.get("name", key)
 
 
 def _format_stat_plain(stat: dict, locale: str) -> str:

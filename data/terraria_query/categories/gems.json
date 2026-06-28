@@ -68,7 +68,6 @@
       }
     },
     "drops": null,
-    "en_name": "Gems",
     "description": "宝石是一种宝贵的制作材料，出现在地下层和洞穴层。它们以下列形式出现：",
     "item_category": "gems"
   },
@@ -120,7 +119,6 @@
         "image": "Large_Amber.png"
       }
     },
-    "en_name": "Amber",
     "drops": {
       "modes": [
         {
@@ -249,7 +247,6 @@
         "amount": "50"
       }
     },
-    "en_name": "Amethyst",
     "drops": {
       "modes": [
         {
@@ -378,7 +375,6 @@
         "amount": "50"
       }
     },
-    "en_name": "Ruby",
     "drops": {
       "modes": [
         {
@@ -502,7 +498,6 @@
         "amount": "50"
       }
     },
-    "en_name": "Emerald",
     "drops": {
       "modes": [
         {
@@ -654,7 +649,6 @@
         }
       ]
     },
-    "en_name": "Sapphire",
     "description": "蓝玉是一种宝石制作材料。",
     "item_category": "gems"
   },
@@ -717,7 +711,6 @@
         "image": "Large_Diamond.png"
       }
     },
-    "en_name": "Diamond",
     "drops": {
       "modes": [
         {
@@ -886,7 +879,6 @@
         }
       ]
     },
-    "en_name": "Topaz",
     "description": "黄玉是一种可以在世界的地下和洞穴地层找到的宝石。可以通过挖掘特殊的、有着可以看到的镶嵌着黄色宝石的物块来获取黄玉。将泥沙、雪泥或沙漠化石放入提炼机也可以精炼出黄玉。偶尔，可以在它自己的宝石洞迷你生物群系中找到大量黄玉，或者在包含任何其他宝石（除了琥珀）的宝石洞中也能找到黄玉。黄玉是价值第二低的宝石，可以制作沙枪这种远程武器和其他宝石制作物品的对应物。\n\n它们可在墓地生物群系里的重型工作台上制作回它们的镶嵌形式，且可通过砍伐黄玉宝石树获得。它们还有2/7 (28.57%)的几率掉落自晶洞。\n\n和所有其他宝石一样，黄玉可以放置在物块上。",
     "item_category": "gems"
   }

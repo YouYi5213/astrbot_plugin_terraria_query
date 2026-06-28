@@ -16,9 +16,8 @@ CATEGORIES_DIR = ROOT / "data" / "terraria_query" / "categories"
 
 
 def searchable_names(item: dict, key: str) -> set[str]:
-    names = {key, item.get("name", ""), item.get("wiki_title", ""), item.get("en_name", "")}
+    names = {key, item.get("name", ""), item.get("wiki_title", "")}
     names.update(item.get("search_terms") or [])
-    names.update(item.get("aliases") or [])
     buff = item.get("buff") or {}
     pet = item.get("pet") or {}
     names.add(buff.get("name", ""))

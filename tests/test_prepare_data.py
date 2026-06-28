@@ -18,7 +18,7 @@ from prepare_data import (  # noqa: E402
     migrate_item_image_filenames,
     parse_item_page,
     resync_set_piece_locales,
-    strip_en_locale_data,
+    strip_english_fields,
 )
 from bs4 import BeautifulSoup  # noqa: E402
 
@@ -37,7 +37,7 @@ def test_is_set_item_detects_armor_and_vanity():
     assert not _is_set_item({"stats": [{"label": "类型", "value": "武器"}]})
 
 
-def test_merge_set_pieces_uses_image_for_en_name():
+def test_merge_set_pieces_creates_armor_piece():
     items: dict = {}
     set_item = {
         "set_pieces": [
@@ -46,8 +46,8 @@ def test_merge_set_pieces_uses_image_for_en_name():
     }
     count = _merge_set_pieces(items, "钛金盔甲", set_item)
     assert count == 1
-    assert items["钛金面具"]["en_name"] == "Titanium Mask"
-    assert "en" not in items["钛金面具"]
+    assert items["钛金面具"]["name"] == "钛金面具"
+    assert "en_name" not in items["钛金面具"]
 
 
 def test_resync_set_piece_locales():
@@ -61,19 +61,23 @@ def test_resync_set_piece_locales():
     }
     updated = resync_set_piece_locales(items)
     assert updated == 1
-    assert items["寒霜头盔"]["en_name"] == "Frost Helmet"
+    assert items["寒霜头盔"]["name"] == "寒霜头盔"
+    assert "en_name" not in items["寒霜头盔"]
 
 
-def test_strip_en_locale_data_keeps_en_name():
+def test_strip_english_fields():
     items = {
         "环境改造枪": {
             "name": "环境改造枪",
             "en": {"name": "Clentaminator", "stats": []},
+            "en_name": "Clentaminator",
+            "aliases": ["Wings"],
         }
     }
-    assert strip_en_locale_data(items) == 1
-    assert items["环境改造枪"]["en_name"] == "Clentaminator"
+    assert strip_english_fields(items) == 1
     assert "en" not in items["环境改造枪"]
+    assert "en_name" not in items["环境改造枪"]
+    assert "aliases" not in items["环境改造枪"]
 
 
 def test_migrate_item_image_filenames():

@@ -181,6 +181,19 @@ def test_fuzzy_match_exact_biome_beats_partial_items():
     assert main._fuzzy_match_all("沙漠", items, {}, {}, biomes) == [("biome", "沙漠")]
 
 
+def test_fuzzy_match_list_when_over_card_limit():
+    assert main._FUZZY_MATCH_CARD_MAX == 2
+    items = {
+        "测试甲": {"name": "测试甲", "stats": []},
+        "测试乙": {"name": "测试乙", "stats": []},
+        "测试丙": {"name": "测试丙", "stats": []},
+    }
+    exact, partial = main._split_search_matches("测试", items, {}, {}, {})
+    assert not exact
+    assert len(partial) == 3
+    assert len(partial) > main._FUZZY_MATCH_CARD_MAX
+
+
 def test_format_partial_item_hints():
     items = {
         "沙漠化石": {"name": "沙漠化石", "stats": []},

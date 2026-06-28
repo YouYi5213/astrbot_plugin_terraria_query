@@ -1306,6 +1306,7 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
 
 _POOL_SEARCH_ORDER = ("biome", "npc", "mount", "pet", "item")
 _POOL_PRIORITY = {name: idx for idx, name in enumerate(_POOL_SEARCH_ORDER)}
+_FUZZY_MATCH_CARD_MAX = 2
 
 
 def _rank_pool_from_index(query: str, pool_name: str) -> list[str]:
@@ -2714,7 +2715,7 @@ class TerrariaQueryPlugin(Star):
                 )
             return
 
-        if len(matches) > 3:
+        if len(matches) > _FUZZY_MATCH_CARD_MAX:
             lines = [f"找到 {len(matches)} 个匹配结果，请输入更精确的名称后重新查询：", ""]
             for source, key in matches:
                 pool = {

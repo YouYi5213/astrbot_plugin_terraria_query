@@ -24,6 +24,7 @@ from .category_data import (
     load_biomes_for_plugin,
     load_bosses_for_plugin,
     load_events_for_plugin,
+    load_treasure_bags_for_plugin,
     load_items_for_plugin,
     load_mounts_for_plugin,
     load_npcs_for_plugin,
@@ -197,7 +198,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
-CARD_VERSION = "v45"
+CARD_VERSION = "v46"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -244,6 +245,17 @@ BOSS_MODE_HEADER_COLORS = {
     "master": (255, 186, 186),
 }
 BOSS_DROP_ICON_SLOT = (24, 24)
+TB_BAG_ICON_SLOT = (36, 36)
+TB_DROP_ICON_SLOT = (28, 28)
+TB_COL_CHANCE = 300
+TB_COL_QTY = 440
+TB_EXPERT_ROW_FILL = (105, 100, 92, 220)
+TB_CARD_BG = (38, 30, 24, 255)
+TB_HEADER_BG = (52, 42, 34, 255)
+TB_ID_BG = (68, 58, 48, 255)
+TB_TABLE_ROW_MIN = 36
+TB_TITLE_AREA = 88
+TB_TABLE_HEADER = 8
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -1290,6 +1302,10 @@ _CARD_UI = {
     "page_content": "▎内容",
     "page_content_col_category": "分类",
     "page_content_col_items": "内容",
+    "tb_col_item": "物品",
+    "tb_col_chance": "几率",
+    "tb_col_qty": "数量",
+    "tb_item_id": "内部物品 ID",
 }
 
 
@@ -1332,6 +1348,15 @@ def _boss_zh_search_names(key: str, boss: dict) -> set[str]:
     return {n for n in names if n}
 
 
+def _treasure_bag_zh_search_names(key: str, bag: dict) -> set[str]:
+    names = set(bag.get("search_terms") or [])
+    name = bag.get("name") or key
+    if name:
+        names.add(f"{name}宝藏袋")
+        names.add(f"宝藏袋（{name}）")
+    return {n for n in names if n}
+
+
 _SEARCH_INDEX: list[tuple[str, str, frozenset[str]]] | None = None
 _SEARCH_INDEX_SIG: tuple | None = None
 
@@ -1344,6 +1369,7 @@ def _search_index_signature(
     events: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
+    treasure_bags: dict[str, dict] | None = None,
 ) -> tuple:
     if biomes is None:
         biomes = {}
@@ -1353,6 +1379,8 @@ def _search_index_signature(
         npcs = {}
     if bosses is None:
         bosses = {}
+    if treasure_bags is None:
+        treasure_bags = {}
     return (
         len(items),
         len(mounts),
@@ -1361,6 +1389,7 @@ def _search_index_signature(
         len(events),
         len(npcs),
         len(bosses),
+        len(treasure_bags),
         tuple(sorted(items.keys())),
         tuple(sorted(mounts.keys())),
         tuple(sorted(pets.keys())),
@@ -1368,6 +1397,7 @@ def _search_index_signature(
         tuple(sorted(events.keys())),
         tuple(sorted(npcs.keys())),
         tuple(sorted(bosses.keys())),
+        tuple(sorted(treasure_bags.keys())),
     )
 
 
@@ -1379,6 +1409,7 @@ def rebuild_search_index(
     events: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
+    treasure_bags: dict[str, dict] | None = None,
 ) -> None:
     """预构建搜索索引，避免每次查询重复计算别名集合。"""
     if biomes is None:
@@ -1389,12 +1420,15 @@ def rebuild_search_index(
         npcs = {}
     if bosses is None:
         bosses = {}
+    if treasure_bags is None:
+        treasure_bags = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
     entries: list[tuple[str, str, frozenset[str]]] = []
     for pool_name, pool, name_fn in (
         ("biome", biomes, _biome_zh_search_names),
         ("event", events, _event_zh_search_names),
         ("boss", bosses, _boss_zh_search_names),
+        ("treasure_bag", treasure_bags, _treasure_bag_zh_search_names),
         ("npc", npcs, _npc_zh_search_names),
         ("mount", mounts, _item_zh_search_names),
         ("pet", pets, _item_zh_search_names),
@@ -1405,7 +1439,7 @@ def rebuild_search_index(
             entries.append((pool_name, key, zh_names))
     _SEARCH_INDEX = entries
     _SEARCH_INDEX_SIG = _search_index_signature(
-        items, mounts, pets, biomes, events, npcs, bosses
+        items, mounts, pets, biomes, events, npcs, bosses, treasure_bags
     )
 
 
@@ -1430,7 +1464,16 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
     return [key for key, _ in ranked]
 
 
-_POOL_SEARCH_ORDER = ("biome", "event", "boss", "npc", "mount", "pet", "item")
+_POOL_SEARCH_ORDER = (
+    "biome",
+    "event",
+    "boss",
+    "treasure_bag",
+    "npc",
+    "mount",
+    "pet",
+    "item",
+)
 _POOL_PRIORITY = {name: idx for idx, name in enumerate(_POOL_SEARCH_ORDER)}
 _FUZZY_MATCH_CARD_MAX = 2
 
@@ -1498,6 +1541,7 @@ def _split_search_matches(
     events: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
+    treasure_bags: dict[str, dict] | None = None,
 ) -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
     """拆分为精确匹配与模糊匹配（均按相关度排序）。"""
     if pets is None:
@@ -1510,10 +1554,16 @@ def _split_search_matches(
         npcs = {}
     if bosses is None:
         bosses = {}
+    if treasure_bags is None:
+        treasure_bags = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
-    sig = _search_index_signature(items, mounts, pets, biomes, events, npcs, bosses)
+    sig = _search_index_signature(
+        items, mounts, pets, biomes, events, npcs, bosses, treasure_bags
+    )
     if _SEARCH_INDEX is None or _SEARCH_INDEX_SIG != sig:
-        rebuild_search_index(items, mounts, pets, biomes, events, npcs, bosses)
+        rebuild_search_index(
+            items, mounts, pets, biomes, events, npcs, bosses, treasure_bags
+        )
 
     exact: list[tuple[str, str]] = []
     partial: list[tuple[str, str]] = []
@@ -1546,10 +1596,19 @@ def _fuzzy_match_all(
     events: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
+    treasure_bags: dict[str, dict] | None = None,
 ) -> list[tuple[str, str]]:
-    """返回 (来源, 键) 列表，来源为 biome、event、boss、npc、item、mount 或 pet。"""
+    """返回 (来源, 键) 列表，来源为 biome、event、boss、treasure_bag、npc、item、mount 或 pet。"""
     exact, partial = _split_search_matches(
-        query, items, mounts, pets, biomes, events, npcs, bosses
+        query,
+        items,
+        mounts,
+        pets,
+        biomes,
+        events,
+        npcs,
+        bosses,
+        treasure_bags,
     )
     if exact:
         return exact
@@ -3925,6 +3984,265 @@ def _format_boss_text(data: dict) -> str:
     return "\n".join(lines).strip()
 
 
+def _display_treasure_bag(bag: dict) -> dict:
+    return {
+        "name": bag.get("name", ""),
+        "image": bag.get("image", ""),
+        "item_id": bag.get("item_id", ""),
+        "drops": bag.get("drops") or [],
+        "page_type": "treasure_bag",
+    }
+
+
+def _format_treasure_bag_list(bags: dict[str, dict]) -> str:
+    lines = ["泰拉瑞亚 宝藏袋", ""]
+    for key in sorted(bags.keys()):
+        bag = bags[key]
+        display = bag.get("name") or key
+        item_id = (bag.get("item_id") or "").strip()
+        suffix = f"（ID: {item_id}）" if item_id else ""
+        lines.append(f"· {display}宝藏袋{suffix}")
+    lines.extend(["", "查询示例: 泰拉 史莱姆王宝藏袋"])
+    return "\n".join(lines)
+
+
+def _format_treasure_bag_text(data: dict) -> str:
+    ui = _CARD_UI
+    lines = [f"{data.get('name', '')}宝藏袋", ""]
+    item_id = (data.get("item_id") or "").strip()
+    if item_id:
+        lines.append(f"{ui['tb_item_id']}: {item_id}")
+        lines.append("")
+    lines.append(f"{ui['tb_col_item']}\t{ui['tb_col_chance']}\t{ui['tb_col_qty']}")
+    for drop in data.get("drops") or []:
+        label = drop.get("label") or drop.get("name") or ""
+        chance = drop.get("chance", "")
+        coins = drop.get("quantity_coins") or []
+        if coins:
+            qty = _format_boss_money_text(coins)
+        else:
+            qty = drop.get("quantity", "")
+        prefix = "★ " if drop.get("expert_exclusive") else ""
+        lines.append(f"{prefix}{label}\t{chance}\t{qty}")
+    return "\n".join(lines).strip()
+
+
+def _tb_col_item_x() -> int:
+    return CARD_PADDING + 10
+
+
+def _tb_col_item_w() -> int:
+    return TB_COL_CHANCE - _tb_col_item_x() - 12
+
+
+def _tb_col_chance_w() -> int:
+    return TB_COL_QTY - TB_COL_CHANCE - 10
+
+
+def _tb_col_qty_w() -> int:
+    return CARD_WIDTH - CARD_PADDING - TB_COL_QTY
+
+
+def _calc_tb_qty_height(draw, entry: dict, font) -> int:
+    coins = entry.get("quantity_coins") or []
+    if coins:
+        return max(TB_DROP_ICON_SLOT[1], _calc_boss_money_row_height(draw, coins, font))
+    qty = entry.get("quantity", "")
+    if not qty:
+        return TB_DROP_ICON_SLOT[1]
+    return max(
+        TB_DROP_ICON_SLOT[1],
+        _calc_wrapped_text_height(draw, qty, font, _tb_col_qty_w()),
+    )
+
+
+def _calc_tb_drop_row_height(draw, entry: dict, font) -> int:
+    label = entry.get("label") or entry.get("name") or ""
+    text_w = _tb_col_item_w() - TB_DROP_ICON_SLOT[0] - 8
+    name_h = _calc_wrapped_text_height(draw, label, font, text_w)
+    chance = entry.get("chance", "")
+    chance_h = (
+        _calc_wrapped_text_height(draw, chance, font, _tb_col_chance_w())
+        if chance
+        else 0
+    )
+    qty_h = _calc_tb_qty_height(draw, entry, font)
+    return max(TB_TABLE_ROW_MIN, name_h + 8, chance_h + 8, qty_h + 8)
+
+
+def _calc_treasure_bag_drops_area(measure, drops: list[dict], font) -> int:
+    if not drops:
+        return 0
+    area = TB_TABLE_HEADER + DROP_TABLE_HEADER + 6
+    for entry in drops:
+        area += _calc_tb_drop_row_height(measure, entry, font)
+    return area
+
+
+def _draw_tb_qty_column(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    x: int,
+    y: int,
+    entry: dict,
+    font,
+) -> None:
+    coins = entry.get("quantity_coins") or []
+    if coins:
+        cx = x
+        for coin in coins:
+            amount = str(coin.get("amount", ""))
+            if amount:
+                draw.text((cx, y + 4), amount, fill=COLORS["value"], font=font)
+                cx += _text_width(draw, amount, font) + 2
+            coin_img = _load_coin_icon(coin.get("type", ""))
+            if coin_img:
+                card.paste(coin_img, (cx, y + 5), coin_img)
+                cx += _COIN_ICON_SIZE[0] + 4
+        return
+    qty = entry.get("quantity", "")
+    if qty:
+        _draw_drop_field_lines(
+            draw, qty, x, y + 4, _tb_col_qty_w(), font, COLORS["value"]
+        )
+
+
+def _draw_treasure_bag_drops_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    drops: list[dict],
+    font_small,
+    ui: dict,
+) -> int:
+    table_left = CARD_PADDING
+    table_right = CARD_WIDTH - CARD_PADDING
+    header_y = y
+
+    draw.rectangle(
+        [table_left, header_y, table_right, header_y + DROP_TABLE_HEADER],
+        fill=TB_HEADER_BG,
+    )
+    draw.text(
+        (_tb_col_item_x(), header_y + 4),
+        ui["tb_col_item"],
+        fill=COLORS["label"],
+        font=font_small,
+    )
+    draw.text(
+        (TB_COL_CHANCE, header_y + 4),
+        ui["tb_col_chance"],
+        fill=COLORS["label"],
+        font=font_small,
+    )
+    draw.text(
+        (TB_COL_QTY, header_y + 4),
+        ui["tb_col_qty"],
+        fill=COLORS["label"],
+        font=font_small,
+    )
+    y += DROP_TABLE_HEADER
+
+    for entry in drops:
+        row_h = _calc_tb_drop_row_height(draw, entry, font_small)
+        if entry.get("expert_exclusive"):
+            draw.rectangle(
+                [table_left, y, table_right, y + row_h],
+                fill=TB_EXPERT_ROW_FILL,
+            )
+        else:
+            draw.line(
+                [table_left, y + row_h - 1, table_right, y + row_h - 1],
+                fill=(70, 58, 48, 255),
+                width=1,
+            )
+
+        icon_x = _tb_col_item_x() + 4
+        drop_img = _load_item_image(entry.get("image", ""), TB_DROP_ICON_SLOT)
+        text_x = icon_x + TB_DROP_ICON_SLOT[0] + 6
+        if drop_img:
+            _paste_in_slot(card, drop_img, icon_x, y + 4, TB_DROP_ICON_SLOT[0], row_h - 8)
+        label = entry.get("label") or entry.get("name") or ""
+        _draw_drop_field_lines(
+            draw, label, text_x, y + 6, _tb_col_item_w() - TB_DROP_ICON_SLOT[0] - 10, font_small, COLORS["accent"]
+        )
+        chance = entry.get("chance", "")
+        if chance:
+            _draw_drop_field_lines(
+                draw,
+                chance,
+                TB_COL_CHANCE,
+                y + 6,
+                _tb_col_chance_w(),
+                font_small,
+                COLORS["value"],
+            )
+        _draw_tb_qty_column(draw, card, TB_COL_QTY, y, entry, font_small)
+        y += row_h
+    return y
+
+
+def _generate_treasure_bag_card(data: dict) -> str:
+    _ensure_dirs()
+    ui = _CARD_UI
+    locale = "zh"
+    card_title = f"{data.get('name', '')}宝藏袋"
+    output_path = _card_output_path(card_title, locale, kind="treasure_bag")
+    if os.path.isfile(output_path):
+        return output_path
+
+    font_title = _try_get_font(24)
+    font_small = _try_get_font(14)
+    font_id = _try_get_font(13)
+    measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
+
+    bag_img = _load_item_image(data.get("image", ""), TB_BAG_ICON_SLOT)
+    icon_w = bag_img.width if bag_img else TB_BAG_ICON_SLOT[0]
+    title_x = CARD_PADDING + 16 + icon_w + 12
+    item_id = (data.get("item_id") or "").strip()
+    id_text = f"{ui['tb_item_id']}: {item_id}" if item_id else ""
+    id_h = _font_line_height(font_id) + 8 if id_text else 0
+    title_h = max(TB_BAG_ICON_SLOT[1], _font_line_height(font_title)) + id_h + 16
+
+    drops = data.get("drops") or []
+    drops_area = _calc_treasure_bag_drops_area(measure, drops, font_small)
+    total_height = CARD_PADDING * 2 + title_h + TB_TABLE_HEADER + drops_area + 12
+
+    card = Image.new("RGBA", (CARD_WIDTH, total_height), TB_CARD_BG)
+    draw = ImageDraw.Draw(card)
+
+    header_bottom = CARD_PADDING + title_h
+    draw.rectangle(
+        [CARD_PADDING, CARD_PADDING, CARD_WIDTH - CARD_PADDING, header_bottom],
+        fill=TB_HEADER_BG,
+    )
+    icon_y = CARD_PADDING + (title_h - (bag_img.height if bag_img else TB_BAG_ICON_SLOT[1])) // 2
+    if bag_img:
+        card.paste(bag_img, (CARD_PADDING + 16, icon_y), bag_img)
+    draw.text(
+        (title_x, CARD_PADDING + 12),
+        data.get("name", ui["unknown"]),
+        fill=COLORS["accent"],
+        font=font_title,
+    )
+    if id_text:
+        id_y = CARD_PADDING + 12 + _font_line_height(font_title) + 6
+        id_w = _text_width(draw, id_text, font_id) + 16
+        draw.rounded_rectangle(
+            [title_x, id_y, title_x + id_w, id_y + _font_line_height(font_id) + 8],
+            radius=4,
+            fill=TB_ID_BG,
+        )
+        draw.text((title_x + 8, id_y + 4), id_text, fill=COLORS["value"], font=font_id)
+
+    y = header_bottom + TB_TABLE_HEADER
+    if drops:
+        y = _draw_treasure_bag_drops_section(draw, card, y, drops, font_small, ui)
+
+    card.convert("RGB").save(output_path, "PNG")
+    return output_path
+
+
 def _generate_boss_card(data: dict) -> str:
     _ensure_dirs()
     ui = _CARD_UI
@@ -4076,6 +4394,10 @@ def _format_update_result(result: dict, force: bool = False) -> str:
     boss_total = result.get("boss_total", 0)
     if boss_new or boss_total:
         extra_lines += f"\nBoss：{boss_total} 个（本次 +{boss_new}）"
+    tb_new = result.get("treasure_bag_new_count", 0)
+    tb_total = result.get("treasure_bag_total", 0)
+    if tb_new or tb_total:
+        extra_lines += f"\n宝藏袋：{tb_total} 个（本次 +{tb_new}）"
     content_img_ok = result.get("content_images_ok", 0)
     content_img_total = result.get("content_images_total", 0)
     if content_img_total:
@@ -4114,6 +4436,7 @@ class TerrariaQueryPlugin(Star):
         self.events: dict[str, dict] = {}
         self.npcs: dict[str, dict] = {}
         self.bosses: dict[str, dict] = {}
+        self.treasure_bags: dict[str, dict] = {}
         self._load_data()
 
         self._cron_task: asyncio.Task | None = None
@@ -4190,6 +4513,7 @@ class TerrariaQueryPlugin(Star):
         self._load_events()
         self._load_npcs()
         self._load_bosses()
+        self._load_treasure_bags()
         rebuild_search_index(
             self.items,
             self.mounts,
@@ -4198,6 +4522,7 @@ class TerrariaQueryPlugin(Star):
             self.events,
             self.npcs,
             self.bosses,
+            self.treasure_bags,
         )
         if not _CARD_CACHE_PRUNED:
             _prune_old_card_cache()
@@ -4277,6 +4602,16 @@ class TerrariaQueryPlugin(Star):
             logger.error(f"加载 bosses.json 失败: {e}")
         self.bosses = {}
 
+    def _load_treasure_bags(self) -> None:
+        try:
+            self.treasure_bags = load_treasure_bags_for_plugin(CATEGORIES_DIR)
+            if self.treasure_bags:
+                logger.info(f"已加载 {len(self.treasure_bags)} 个宝藏袋")
+                return
+        except Exception as e:
+            logger.error(f"加载 treasure_bags.json 失败: {e}")
+        self.treasure_bags = {}
+
     @filter.regex(_TERRARIA_CMD_RE, priority=10)
     async def on_terraria_command(self, event: AstrMessageEvent):
         """处理泰拉瑞亚查询/更新指令（支持无 / 前缀）。"""
@@ -4300,12 +4635,14 @@ class TerrariaQueryPlugin(Star):
     async def _handle_query(self, event: AstrMessageEvent, text: str):
         if not text:
             yield event.plain_result(
-                "用法: 泰拉查询 <物品名/群系名/事件名/Boss名/NPC名>\n"
+                "用法: 泰拉查询 <物品名/群系名/事件名/Boss名/宝藏袋/NPC名>\n"
                 "例如: 泰拉查询 天顶剑\n"
                 "      泰拉查询 森林\n"
                 "      泰拉查询 血月\n"
                 "      泰拉查询 血月内容\n"
                 "      泰拉查询 月亮领主\n"
+                "      泰拉查询 史莱姆王宝藏袋\n"
+                "      泰拉查询 宝藏袋\n"
                 "      泰拉查询 军火商\n"
                 "\n"
                 "群系/事件加「内容」后缀可单独查看内容表，例如: 泰拉 森林内容"
@@ -4320,6 +4657,7 @@ class TerrariaQueryPlugin(Star):
             and not self.events
             and not self.npcs
             and not self.bosses
+            and not self.treasure_bags
         ):
             yield event.plain_result(
                 "❌ 离线数据尚未准备。\n"
@@ -4328,6 +4666,13 @@ class TerrariaQueryPlugin(Star):
             return
 
         search_text, page_content = _split_page_content_query(text)
+
+        if search_text == "宝藏袋":
+            if not self.treasure_bags:
+                yield event.plain_result("❌ 宝藏袋数据尚未准备。")
+                return
+            yield event.plain_result(_format_treasure_bag_list(self.treasure_bags))
+            return
 
         matches = _fuzzy_match_all(
             search_text,
@@ -4338,6 +4683,7 @@ class TerrariaQueryPlugin(Star):
             self.events,
             self.npcs,
             self.bosses,
+            self.treasure_bags,
         )
         if not matches:
             yield event.plain_result(f"❌ 未找到「{search_text}」的相关信息。")
@@ -4352,6 +4698,7 @@ class TerrariaQueryPlugin(Star):
             self.events,
             self.npcs,
             self.bosses,
+            self.treasure_bags,
         )
 
         if exact:
@@ -4375,6 +4722,7 @@ class TerrariaQueryPlugin(Star):
                     "biome": self.biomes,
                     "event": self.events,
                     "boss": self.bosses,
+                    "treasure_bag": self.treasure_bags,
                     "npc": self.npcs,
                     "mount": self.mounts,
                     "pet": self.pets,
@@ -4406,6 +4754,7 @@ class TerrariaQueryPlugin(Star):
             "biome": self.biomes,
             "event": self.events,
             "boss": self.bosses,
+            "treasure_bag": self.treasure_bags,
             "npc": self.npcs,
             "mount": self.mounts,
             "pet": self.pets,
@@ -4459,6 +4808,15 @@ class TerrariaQueryPlugin(Star):
             except Exception as e:
                 logger.error(f"生成 Boss 图片失败 ({key}): {e}")
                 yield event.plain_result(_format_boss_text(display))
+            return
+        if source == "treasure_bag":
+            display = _display_treasure_bag(item)
+            try:
+                card_path = _generate_treasure_bag_card(display)
+                yield event.image_result(card_path)
+            except Exception as e:
+                logger.error(f"生成宝藏袋图片失败 ({key}): {e}")
+                yield event.plain_result(_format_treasure_bag_text(display))
             return
         display = _display_item(item)
         try:

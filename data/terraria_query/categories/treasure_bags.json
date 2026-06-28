@@ -1,0 +1,1582 @@
+{
+  "史莱姆王": {
+    "name": "史莱姆王",
+    "wiki_title": "史莱姆王",
+    "page_type": "treasure_bag",
+    "anchor_id": "King_Slime",
+    "image": "Treasure_Bag_(King_Slime).png",
+    "item_id": "3318",
+    "drops": [
+      {
+        "name": "皇家凝胶",
+        "label": "皇家凝胶",
+        "image": "Royal_Gel.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "史莱姆王面具",
+        "label": "史莱姆王面具",
+        "image": "King_Slime_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "粘鞍",
+        "label": "粘鞍",
+        "image": "Slimy_Saddle.png",
+        "chance": "50%",
+        "quantity": "1"
+      },
+      {
+        "name": "忍者兜帽",
+        "label": "忍者兜帽",
+        "image": "Ninja_Hood.png",
+        "chance": "66%",
+        "quantity": "1"
+      },
+      {
+        "name": "忍者衣",
+        "label": "忍者衣",
+        "image": "Ninja_Shirt.png",
+        "chance": "66%",
+        "quantity": "1"
+      },
+      {
+        "name": "忍者裤",
+        "label": "忍者裤",
+        "image": "Ninja_Pants.png",
+        "chance": "66%",
+        "quantity": "1"
+      },
+      {
+        "name": "史莱姆枪",
+        "label": "史莱姆枪",
+        "image": "Slime_Gun.png",
+        "chance": "50%",
+        "quantity": "1"
+      },
+      {
+        "name": "史莱姆钩",
+        "label": "史莱姆钩",
+        "image": "Slime_Hook.png",
+        "chance": "50%",
+        "quantity": "1"
+      },
+      {
+        "name": "固化机",
+        "label": "固化机",
+        "image": "Solidifier.png",
+        "chance": "100%",
+        "quantity": "1"
+      },
+      {
+        "name": "史莱姆法杖",
+        "label": "史莱姆法杖",
+        "image": "Slime_Staff.png",
+        "chance": "3.33%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "2 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "2"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "史莱姆王宝藏袋",
+      "宝藏袋（史莱姆王）"
+    ]
+  },
+  "克苏鲁之眼": {
+    "name": "克苏鲁之眼",
+    "wiki_title": "克苏鲁之眼",
+    "page_type": "treasure_bag",
+    "anchor_id": "Eye_of_Cthulhu",
+    "image": "Treasure_Bag_(Eye_of_Cthulhu).png",
+    "item_id": "3319",
+    "drops": [
+      {
+        "name": "克苏鲁护盾",
+        "label": "克苏鲁护盾",
+        "image": "Shield_of_Cthulhu.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "克苏鲁之眼面具",
+        "label": "克苏鲁之眼面具",
+        "image": "Eye_of_Cthulhu_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "双筒望远镜",
+        "label": "双筒望远镜",
+        "image": "Binoculars.png",
+        "chance": "3.3%",
+        "quantity": "1"
+      },
+      {
+        "name": "猩红矿",
+        "label": "猩红矿（猩红世界）",
+        "image": "Crimtane_Ore.png",
+        "chance": "100%",
+        "quantity": "30–90"
+      },
+      {
+        "name": "猩红种子",
+        "label": "猩红种子（猩红世界）",
+        "image": "Crimson_Seeds.png",
+        "chance": "100%",
+        "quantity": "1–3"
+      },
+      {
+        "name": "魔矿",
+        "label": "魔矿（腐化世界）",
+        "image": "Demonite_Ore.png",
+        "chance": "100%",
+        "quantity": "30–90"
+      },
+      {
+        "name": "腐化种子",
+        "label": "腐化种子（腐化世界）",
+        "image": "Corrupt_Seeds.png",
+        "chance": "100%",
+        "quantity": "1–3"
+      },
+      {
+        "name": "邪箭",
+        "label": "邪箭",
+        "image": "Unholy_Arrow.png",
+        "chance": "100%",
+        "quantity": "20–50"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "7 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "7"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "克苏鲁之眼宝藏袋",
+      "宝藏袋（克苏鲁之眼）"
+    ]
+  },
+  "世界吞噬怪": {
+    "name": "世界吞噬怪",
+    "wiki_title": "世界吞噬怪",
+    "page_type": "treasure_bag",
+    "anchor_id": "Eater_of_Worlds",
+    "image": "Treasure_Bag_(Eater_of_Worlds).png",
+    "item_id": "3320",
+    "drops": [
+      {
+        "name": "蠕虫围巾",
+        "label": "蠕虫围巾",
+        "image": "Worm_Scarf.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "世界吞噬怪面具",
+        "label": "世界吞噬怪面具",
+        "image": "Eater_of_Worlds_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "魔矿",
+        "label": "魔矿",
+        "image": "Demonite_Ore.png",
+        "chance": "100%",
+        "quantity": "80–110 /110–135"
+      },
+      {
+        "name": "暗影鳞片",
+        "label": "暗影鳞片",
+        "image": "Shadow_Scale.png",
+        "chance": "100%",
+        "quantity": "20–40 /30–50"
+      },
+      {
+        "name": "吞噬怪骨头",
+        "label": "吞噬怪骨头",
+        "image": "Eater's_Bone.png",
+        "chance": "5%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "20 SC",
+        "quantity_coins": [
+          {
+            "type": "sc",
+            "amount": "20"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "世界吞噬怪宝藏袋",
+      "宝藏袋（世界吞噬怪）"
+    ]
+  },
+  "克苏鲁之脑": {
+    "name": "克苏鲁之脑",
+    "wiki_title": "克苏鲁之脑",
+    "page_type": "treasure_bag",
+    "anchor_id": "Brain_of_Cthulhu",
+    "image": "Treasure_Bag_(Brain_of_Cthulhu).png",
+    "item_id": "3321",
+    "drops": [
+      {
+        "name": "混乱之脑",
+        "label": "混乱之脑",
+        "image": "Brain_of_Confusion.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "克苏鲁之脑面具",
+        "label": "克苏鲁之脑面具",
+        "image": "Brain_of_Cthulhu_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "猩红矿",
+        "label": "猩红矿",
+        "image": "Crimtane_Ore.png",
+        "chance": "100%",
+        "quantity": "80–110 /110–135"
+      },
+      {
+        "name": "组织样本",
+        "label": "组织样本",
+        "image": "Tissue_Sample.png",
+        "chance": "100%",
+        "quantity": "20–40 /30–50"
+      },
+      {
+        "name": "骨头拨浪鼓",
+        "label": "骨头拨浪鼓",
+        "image": "Bone_Rattle.png",
+        "chance": "5%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "12 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "12"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "克苏鲁之脑宝藏袋",
+      "宝藏袋（克苏鲁之脑）"
+    ]
+  },
+  "蜂王": {
+    "name": "蜂王",
+    "wiki_title": "蜂王",
+    "page_type": "treasure_bag",
+    "anchor_id": "Queen_Bee",
+    "image": "Treasure_Bag_(Queen_Bee).png",
+    "item_id": "3322",
+    "drops": [
+      {
+        "name": "蜂巢背包",
+        "label": "蜂巢背包",
+        "image": "Hive_Pack.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "蜂王面具",
+        "label": "蜂王面具",
+        "image": "Queen_Bee_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "蜜蜂枪",
+        "label": "蜜蜂枪",
+        "image": "Bee_Gun.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "养蜂人",
+        "label": "养蜂人",
+        "image": "Bee_Keeper.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "蜂膝弓",
+        "label": "蜂膝弓",
+        "image": "The_Bee's_Knees.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "蜂窝",
+        "label": "蜂窝",
+        "image": "Honey_Comb.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "花蜜",
+        "label": "花蜜",
+        "image": "Nectar.png",
+        "chance": "11%",
+        "quantity": "1"
+      },
+      {
+        "name": "涂蜜护目镜",
+        "label": "涂蜜护目镜",
+        "image": "Honeyed_Goggles.png",
+        "chance": "11%",
+        "quantity": "1"
+      },
+      {
+        "name": "蜂巢魔棒",
+        "label": "蜂巢魔棒",
+        "image": "Hive_Wand.png",
+        "chance": "100%",
+        "quantity": "1"
+      },
+      {
+        "name": "蜜蜂帽",
+        "label": "蜜蜂帽",
+        "image": "Bee_Hat.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "蜜蜂衣",
+        "label": "蜜蜂衣",
+        "image": "Bee_Shirt.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "蜜蜂裤",
+        "label": "蜜蜂裤",
+        "image": "Bee_Pants.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "蜜蜂手榴弹",
+        "label": "蜜蜂手榴弹",
+        "image": "Beenade.png",
+        "chance": "100%",
+        "quantity": "10–29"
+      },
+      {
+        "name": "蜂蜡",
+        "label": "蜂蜡",
+        "image": "Bee_Wax.png",
+        "chance": "100%",
+        "quantity": "17–29"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "12 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "12"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（蜂王）",
+      "蜂王宝藏袋"
+    ]
+  },
+  "独眼巨鹿": {
+    "name": "独眼巨鹿",
+    "wiki_title": "独眼巨鹿",
+    "page_type": "treasure_bag",
+    "anchor_id": "Deerclops",
+    "image": "Treasure_Bag_(Deerclops).png",
+    "item_id": "5111",
+    "drops": [
+      {
+        "name": "骸骨头盔",
+        "label": "骸骨头盔",
+        "image": "Bone_Helm.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "独眼巨鹿面具",
+        "label": "独眼巨鹿面具",
+        "image": "Deerclops_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "眼骨",
+        "label": "眼骨",
+        "image": "Eye_Bone.png",
+        "chance": "33.33%",
+        "quantity": "1"
+      },
+      {
+        "name": "眼球伞",
+        "label": "眼球伞",
+        "image": "Eyebrella.png",
+        "chance": "33.33%",
+        "quantity": "1"
+      },
+      {
+        "name": "收音机",
+        "label": "收音机",
+        "image": "Radio_Thing.png",
+        "chance": "33.33%",
+        "quantity": "1"
+      },
+      {
+        "name": "Dizzy的稀有壁虎帽",
+        "label": "Dizzy的稀有壁虎帽",
+        "image": "Dizzy's_Rare_Gecko_Chester.png",
+        "chance": "7.14%",
+        "quantity": "1"
+      },
+      {
+        "name": "气喇叭",
+        "label": "气喇叭",
+        "image": "Pew-matic_Horn.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "天候棒",
+        "label": "天候棒",
+        "image": "Weather_Pain.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "眼球激光塔",
+        "label": "眼球激光塔",
+        "image": "Houndius_Shootius.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "露西斧",
+        "label": "露西斧",
+        "image": "Lucy_the_Axe.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "12 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "12"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（独眼巨鹿）",
+      "独眼巨鹿宝藏袋",
+      "鹿角怪",
+      "鹿角怪宝藏袋"
+    ]
+  },
+  "骷髅王": {
+    "name": "骷髅王",
+    "wiki_title": "骷髅王",
+    "page_type": "treasure_bag",
+    "anchor_id": "Skeletron",
+    "image": "Treasure_Bag_(Skeletron).png",
+    "item_id": "3323",
+    "drops": [
+      {
+        "name": "骨头手套",
+        "label": "骨头手套",
+        "image": "Bone_Glove.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "骷髅王面具",
+        "label": "骷髅王面具",
+        "image": "Skeletron_Mask.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "骷髅王之手",
+        "label": "骷髅王之手",
+        "image": "Skeletron_Hand.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "骷髅头法书",
+        "label": "骷髅头法书",
+        "image": "Book_of_Skulls.png",
+        "chance": "33%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "12 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "12"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（骷髅王）",
+      "骷髅王宝藏袋"
+    ]
+  },
+  "血肉墙": {
+    "name": "血肉墙",
+    "wiki_title": "血肉墙",
+    "page_type": "treasure_bag",
+    "anchor_id": "Wall_of_Flesh",
+    "image": "Treasure_Bag_(Wall_of_Flesh).png",
+    "item_id": "3324",
+    "drops": [
+      {
+        "name": "恶魔之心",
+        "label": "恶魔之心（当尚未使用恶魔之心时）",
+        "image": "Demon_Heart.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "血肉墙面具",
+        "label": "血肉墙面具",
+        "image": "Wall_of_Flesh_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "神锤",
+        "label": "神锤",
+        "image": "Pwnhammer.png",
+        "chance": "100%",
+        "quantity": "1"
+      },
+      {
+        "name": "召唤师徽章",
+        "label": "召唤师徽章",
+        "image": "Summoner_Emblem.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "巫士徽章",
+        "label": "巫士徽章",
+        "image": "Sorcerer_Emblem.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "战士徽章",
+        "label": "战士徽章",
+        "image": "Warrior_Emblem.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "游侠徽章",
+        "label": "游侠徽章",
+        "image": "Ranger_Emblem.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "激光步枪",
+        "label": "激光步枪",
+        "image": "Laser_Rifle.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "毁灭刃",
+        "label": "毁灭刃",
+        "image": "Breaker_Blade.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "发条式突击步枪",
+        "label": "发条式突击步枪",
+        "image": "Clockwork_Assault_Rifle.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "鞭炮",
+        "label": "鞭炮",
+        "image": "Firecracker.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "20 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "20"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（血肉墙）",
+      "血肉墙宝藏袋"
+    ]
+  },
+  "史莱姆皇后": {
+    "name": "史莱姆皇后",
+    "wiki_title": "史莱姆皇后",
+    "page_type": "treasure_bag",
+    "anchor_id": "Queen_Slime",
+    "image": "Treasure_Bag_(Queen_Slime).png",
+    "item_id": "4957",
+    "drops": [
+      {
+        "name": "挥发明胶",
+        "label": "挥发明胶",
+        "image": "Volatile_Gelatin.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "闪耀史莱姆气球",
+        "label": "闪耀史莱姆气球",
+        "image": "Sparkle_Slime_Balloon.png",
+        "chance": "100%",
+        "quantity": "25–74"
+      },
+      {
+        "name": "史莱姆皇后面具",
+        "label": "史莱姆皇后面具",
+        "image": "Queen_Slime_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "明胶女式鞍",
+        "label": "明胶女式鞍",
+        "image": "Gelatinous_Pillion.png",
+        "chance": "50%",
+        "quantity": "1"
+      },
+      {
+        "name": "失谐钩爪",
+        "label": "失谐钩爪",
+        "image": "Hook_of_Dissonance.png",
+        "chance": "50%",
+        "quantity": "1"
+      },
+      {
+        "name": "刃杖",
+        "label": "刃杖",
+        "image": "Blade_Staff.png",
+        "chance": "33.33%",
+        "quantity": "1"
+      },
+      {
+        "name": "水晶刺客兜帽",
+        "label": "水晶刺客兜帽",
+        "image": "Crystal_Assassin_Hood.png",
+        "chance": "67%",
+        "quantity": "1"
+      },
+      {
+        "name": "水晶刺客上衣",
+        "label": "水晶刺客上衣",
+        "image": "Crystal_Assassin_Shirt.png",
+        "chance": "67%",
+        "quantity": "1"
+      },
+      {
+        "name": "水晶刺客裤",
+        "label": "水晶刺客裤",
+        "image": "Crystal_Assassin_Pants.png",
+        "chance": "67%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "15 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "15"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "史莱姆皇后宝藏袋",
+      "宝藏袋（史莱姆皇后）"
+    ]
+  },
+  "双子魔眼": {
+    "name": "双子魔眼",
+    "wiki_title": "双子魔眼",
+    "page_type": "treasure_bag",
+    "anchor_id": "The_Twins",
+    "image": "Treasure_Bag_(The_Twins).png",
+    "item_id": "3326",
+    "drops": [
+      {
+        "name": "机械车轮片",
+        "label": "机械车轮片",
+        "image": "Mechanical_Wheel_Piece.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "双子魔眼面具",
+        "label": "双子魔眼面具",
+        "image": "Twin_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "视域之魂",
+        "label": "视域之魂",
+        "image": "Soul_of_Sight.png",
+        "chance": "100%",
+        "quantity": "25–40"
+      },
+      {
+        "name": "神圣锭",
+        "label": "神圣锭",
+        "image": "Hallowed_Bar.png",
+        "chance": "100%",
+        "quantity": "20–35"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "30 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "30"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "双子魔眼宝藏袋",
+      "宝藏袋（双子魔眼）"
+    ]
+  },
+  "毁灭者": {
+    "name": "毁灭者",
+    "wiki_title": "毁灭者",
+    "page_type": "treasure_bag",
+    "anchor_id": "The_Destroyer",
+    "image": "Treasure_Bag_(The_Destroyer).png",
+    "item_id": "3325",
+    "drops": [
+      {
+        "name": "机械车体片",
+        "label": "机械车体片",
+        "image": "Mechanical_Wagon_Piece.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "毁灭者面具",
+        "label": "毁灭者面具",
+        "image": "Destroyer_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "力量之魂",
+        "label": "力量之魂",
+        "image": "Soul_of_Might.png",
+        "chance": "100%",
+        "quantity": "25–40"
+      },
+      {
+        "name": "神圣锭",
+        "label": "神圣锭",
+        "image": "Hallowed_Bar.png",
+        "chance": "100%",
+        "quantity": "20–35"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "30 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "30"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（毁灭者）",
+      "毁灭者宝藏袋"
+    ]
+  },
+  "机械骷髅王": {
+    "name": "机械骷髅王",
+    "wiki_title": "机械骷髅王",
+    "page_type": "treasure_bag",
+    "anchor_id": "Skeletron_Prime",
+    "image": "Treasure_Bag_(Skeletron_Prime).png",
+    "item_id": "3327",
+    "drops": [
+      {
+        "name": "机械电池片",
+        "label": "机械电池片",
+        "image": "Mechanical_Battery_Piece.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "机械骷髅王面具",
+        "label": "机械骷髅王面具",
+        "image": "Skeletron_Prime_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "恐惧之魂",
+        "label": "恐惧之魂",
+        "image": "Soul_of_Fright.png",
+        "chance": "100%",
+        "quantity": "25–40"
+      },
+      {
+        "name": "神圣锭",
+        "label": "神圣锭",
+        "image": "Hallowed_Bar.png",
+        "chance": "100%",
+        "quantity": "20–35"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "30 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "30"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（机械骷髅王）",
+      "机械骷髅王宝藏袋"
+    ]
+  },
+  "世纪之花": {
+    "name": "世纪之花",
+    "wiki_title": "世纪之花",
+    "page_type": "treasure_bag",
+    "anchor_id": "Plantera",
+    "image": "Treasure_Bag_(Plantera).png",
+    "item_id": "3328",
+    "drops": [
+      {
+        "name": "孢子囊",
+        "label": "孢子囊",
+        "image": "Spore_Sac.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "世纪之花面具",
+        "label": "世纪之花面具",
+        "image": "Plantera_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "神庙钥匙",
+        "label": "神庙钥匙",
+        "image": "Temple_Key.png",
+        "chance": "100%",
+        "quantity": "1"
+      },
+      {
+        "name": "幼苗",
+        "label": "幼苗",
+        "image": "Seedling.png",
+        "chance": "6.67%",
+        "quantity": "1"
+      },
+      {
+        "name": "吉他斧",
+        "label": "吉他斧",
+        "image": "The_Axe.png",
+        "chance": "5%",
+        "quantity": "1"
+      },
+      {
+        "name": "矮人法杖",
+        "label": "矮人法杖",
+        "image": "Pygmy_Staff.png",
+        "chance": "50%",
+        "quantity": "1"
+      },
+      {
+        "name": "刺钩",
+        "label": "刺钩",
+        "image": "Thorn_Hook.png",
+        "chance": "10%",
+        "quantity": "1"
+      },
+      {
+        "name": "榴弹发射器",
+        "label": "榴弹发射器",
+        "image": "Grenade_Launcher.png",
+        "chance": "12.5%",
+        "quantity": "150–149"
+      },
+      {
+        "name": "维纳斯万能枪",
+        "label": "维纳斯万能枪",
+        "image": "Venus_Magnum.png",
+        "chance": "12.5%",
+        "quantity": "1"
+      },
+      {
+        "name": "爆裂藤蔓",
+        "label": "爆裂藤蔓",
+        "image": "Nettle_Burst.png",
+        "chance": "12.5%",
+        "quantity": "1"
+      },
+      {
+        "name": "吹叶机",
+        "label": "吹叶机",
+        "image": "Leaf_Blower.png",
+        "chance": "12.5%",
+        "quantity": "1"
+      },
+      {
+        "name": "种子弯刀",
+        "label": "种子弯刀",
+        "image": "Seedler.png",
+        "chance": "12.5%",
+        "quantity": "1"
+      },
+      {
+        "name": "花之力",
+        "label": "花之力",
+        "image": "Flower_Pow.png",
+        "chance": "12.5%",
+        "quantity": "1"
+      },
+      {
+        "name": "胡蜂枪",
+        "label": "胡蜂枪",
+        "image": "Wasp_Gun.png",
+        "chance": "12.5%",
+        "quantity": "1"
+      },
+      {
+        "name": "花儿的粗暴展示",
+        "label": "花儿的粗暴展示",
+        "image": "Vulgar_Display_of_Flower.png",
+        "chance": "12.5%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "37 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "37"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "世纪之花宝藏袋",
+      "宝藏袋（世纪之花）"
+    ]
+  },
+  "石巨人": {
+    "name": "石巨人",
+    "wiki_title": "石巨人",
+    "page_type": "treasure_bag",
+    "anchor_id": "Golem",
+    "image": "Treasure_Bag_(Golem).png",
+    "item_id": "3329",
+    "drops": [
+      {
+        "name": "闪亮石",
+        "label": "闪亮石",
+        "image": "Shiny_Stone.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "石巨人面具",
+        "label": "石巨人面具",
+        "image": "Golem_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "锯刃镐",
+        "label": "锯刃镐",
+        "image": "Picksaw.png",
+        "chance": "33.33%",
+        "quantity": "1"
+      },
+      {
+        "name": "毒刺发射器",
+        "label": "毒刺发射器",
+        "image": "Stynger.png",
+        "chance": "14.29%",
+        "quantity": "160–99"
+      },
+      {
+        "name": "疯狂飞斧",
+        "label": "疯狂飞斧",
+        "image": "Possessed_Hatchet.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "太阳石",
+        "label": "太阳石",
+        "image": "Sun_Stone.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "石巨人之眼",
+        "label": "石巨人之眼",
+        "image": "Eye_of_the_Golem.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "高温射线枪",
+        "label": "高温射线枪",
+        "image": "Heat_Ray.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "大地法杖",
+        "label": "大地法杖",
+        "image": "Staff_of_Earth.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "石巨人之拳",
+        "label": "石巨人之拳",
+        "image": "Golem_Fist.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "甲虫外壳",
+        "label": "甲虫外壳",
+        "image": "Beetle_Husk.png",
+        "chance": "100%",
+        "quantity": "18–23"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "37 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "37"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（石巨人）",
+      "石巨人宝藏袋"
+    ]
+  },
+  "猪龙鱼公爵": {
+    "name": "猪龙鱼公爵",
+    "wiki_title": "猪龙鱼公爵",
+    "page_type": "treasure_bag",
+    "anchor_id": "Duke_Fishron",
+    "image": "Treasure_Bag_(Duke_Fishron).png",
+    "item_id": "3330",
+    "drops": [
+      {
+        "name": "虾松露",
+        "label": "虾松露",
+        "image": "Shrimpy_Truffle.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "猪龙鱼公爵面具",
+        "label": "猪龙鱼公爵面具",
+        "image": "Duke_Fishron_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "猪龙鱼之翼",
+        "label": "猪龙鱼之翼",
+        "image": "Fishron_Wings.png",
+        "chance": "10%",
+        "quantity": "1"
+      },
+      {
+        "name": "电鳗",
+        "label": "电鳗",
+        "image": "Electric_Eel.png",
+        "chance": "16.67%",
+        "quantity": "1"
+      },
+      {
+        "name": "猪鲨链球",
+        "label": "猪鲨链球",
+        "image": "Flairon.png",
+        "chance": "16.67%",
+        "quantity": "1"
+      },
+      {
+        "name": "海啸",
+        "label": "海啸",
+        "image": "Tsunami.png",
+        "chance": "16.67%",
+        "quantity": "1"
+      },
+      {
+        "name": "利刃台风",
+        "label": "利刃台风",
+        "image": "Razorblade_Typhoon.png",
+        "chance": "16.67%",
+        "quantity": "1"
+      },
+      {
+        "name": "暴风雨法杖",
+        "label": "暴风雨法杖",
+        "image": "Tempest_Staff.png",
+        "chance": "16.67%",
+        "quantity": "1"
+      },
+      {
+        "name": "泡泡枪",
+        "label": "泡泡枪",
+        "image": "Bubble_Gun.png",
+        "chance": "16.67%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "62 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "62"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（猪龙鱼公爵）",
+      "猪鲨",
+      "猪鲨宝藏袋",
+      "猪龙鱼公爵宝藏袋"
+    ]
+  },
+  "光之女皇": {
+    "name": "光之女皇",
+    "wiki_title": "光之女皇",
+    "page_type": "treasure_bag",
+    "anchor_id": "Empress_of_Light",
+    "image": "Treasure_Bag_(Empress_of_Light).png",
+    "item_id": "4782",
+    "drops": [
+      {
+        "name": "翱翔徽章",
+        "label": "翱翔徽章",
+        "image": "Soaring_Insignia.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "光之女皇面具",
+        "label": "光之女皇面具",
+        "image": "Empress_of_Light_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "女皇之翼",
+        "label": "女皇之翼",
+        "image": "Empress_Wings.png",
+        "chance": "10%",
+        "quantity": "1"
+      },
+      {
+        "name": "星星吉他",
+        "label": "星星吉他",
+        "image": "Stellar_Tune.png",
+        "chance": "5%",
+        "quantity": "1"
+      },
+      {
+        "name": "七彩染料",
+        "label": "七彩染料",
+        "image": "Prismatic_Dye.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "彩虹光标",
+        "label": "彩虹光标",
+        "image": "Rainbow_Cursor.png",
+        "chance": "5%",
+        "quantity": "1"
+      },
+      {
+        "name": "星光",
+        "label": "星光",
+        "image": "Starlight.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "夜光",
+        "label": "夜光",
+        "image": "Nightglow.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "日暮",
+        "label": "日暮",
+        "image": "Eventide.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "万花筒",
+        "label": "万花筒",
+        "image": "Kaleidoscope.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "62 GC",
+        "quantity_coins": [
+          {
+            "type": "gc",
+            "amount": "62"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "光之女皇宝藏袋",
+      "宝藏袋（光之女皇）"
+    ]
+  },
+  "双足翼龙": {
+    "name": "双足翼龙",
+    "wiki_title": "双足翼龙",
+    "page_type": "treasure_bag",
+    "anchor_id": "Betsy",
+    "image": "Treasure_Bag_(Betsy).png",
+    "item_id": "3860",
+    "drops": [
+      {
+        "name": "双足翼龙面具",
+        "label": "双足翼龙面具",
+        "image": "Betsy_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "空中祸害",
+        "label": "空中祸害",
+        "image": "Aerial_Bane.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "飞龙",
+        "label": "飞龙",
+        "image": "Flying_Dragon.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "双足翼龙怒气",
+        "label": "双足翼龙怒气",
+        "image": "Betsy's_Wrath.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "天龙之怒",
+        "label": "天龙之怒",
+        "image": "Sky_Dragon's_Fury.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "双足翼龙之翼",
+        "label": "双足翼龙之翼",
+        "image": "Betsy's_Wings.png",
+        "chance": "25%",
+        "quantity": "1"
+      },
+      {
+        "name": "护卫奖章",
+        "label": "护卫奖章",
+        "image": "Defender_Medal.png",
+        "chance": "100%",
+        "quantity": "30–49"
+      }
+    ],
+    "search_terms": [
+      "双足翼龙宝藏袋",
+      "宝藏袋（双足翼龙）"
+    ]
+  },
+  "月亮领主": {
+    "name": "月亮领主",
+    "wiki_title": "月亮领主",
+    "page_type": "treasure_bag",
+    "anchor_id": "Moon_Lord",
+    "image": "Treasure_Bag_(Moon_Lord).png",
+    "item_id": "3332",
+    "drops": [
+      {
+        "name": "重力球",
+        "label": "重力球",
+        "image": "Gravity_Globe.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "可疑触手",
+        "label": "可疑触手",
+        "image": "Suspicious_Looking_Tentacle.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "天界星盘",
+        "label": "天界星盘",
+        "image": "Celestial_Starboard.png",
+        "chance": "100%",
+        "quantity": "1",
+        "expert_exclusive": true
+      },
+      {
+        "name": "月亮领主面具",
+        "label": "月亮领主面具",
+        "image": "Moon_Lord_Mask.png",
+        "chance": "14.29%",
+        "quantity": "1"
+      },
+      {
+        "name": "夜明矿",
+        "label": "夜明矿",
+        "image": "Luminite.png",
+        "chance": "100%",
+        "quantity": "90–110"
+      },
+      {
+        "name": "彩虹猫矿车",
+        "label": "彩虹猫矿车",
+        "image": "Meowmere_Minecart.png",
+        "chance": "10%",
+        "quantity": "1"
+      },
+      {
+        "name": "传送枪",
+        "label": "传送枪（当物品栏中没有传送枪时）",
+        "image": "Portal_Gun.png",
+        "chance": "100%",
+        "quantity": "1"
+      },
+      {
+        "name": "彩虹猫之刃",
+        "label": "彩虹猫之刃",
+        "image": "Meowmere.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "泰拉悠悠球",
+        "label": "泰拉悠悠球",
+        "image": "Terrarian.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "狂星之怒",
+        "label": "狂星之怒",
+        "image": "Star_Wrath.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "太空海豚机枪",
+        "label": "太空海豚机枪",
+        "image": "S.D.M.G..png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "喜庆弹射器Mk2",
+        "label": "喜庆弹射器Mk2",
+        "image": "Celebration_Mk2.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "终极棱镜",
+        "label": "终极棱镜",
+        "image": "Last_Prism.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "月耀",
+        "label": "月耀",
+        "image": "Lunar_Flare.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "七彩水晶法杖",
+        "label": "七彩水晶法杖",
+        "image": "Rainbow_Crystal_Staff.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "月亮传送门法杖",
+        "label": "月亮传送门法杖",
+        "image": "Lunar_Portal_Staff.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "支配之鞭",
+        "label": "支配之鞭",
+        "image": "Possession.png",
+        "chance": "20%",
+        "quantity": "1"
+      },
+      {
+        "name": "钱币",
+        "label": "钱币",
+        "chance": "100%",
+        "quantity": "2 PC",
+        "quantity_coins": [
+          {
+            "type": "pc",
+            "amount": "2"
+          }
+        ]
+      }
+    ],
+    "search_terms": [
+      "宝藏袋（月亮领主）",
+      "月亮领主宝藏袋",
+      "月总",
+      "月总宝藏袋"
+    ]
+  }
+}

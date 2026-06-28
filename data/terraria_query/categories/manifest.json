@@ -168,7 +168,13 @@
       "label": "生物群系",
       "file": "biomes.json",
       "count": 21
+    },
+    {
+      "key": "treasure_bags",
+      "label": "宝藏袋",
+      "file": "treasure_bags.json",
+      "count": 18
     }
   ],
-  "total": 2414
+  "total": 2432
 }

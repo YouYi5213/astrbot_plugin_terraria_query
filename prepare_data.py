@@ -154,6 +154,14 @@ def _page_section_data_module():
     return page_section_data
 
 
+def _treasure_bag_data_module():
+    try:
+        from . import treasure_bag_data
+    except ImportError:
+        import treasure_bag_data
+    return treasure_bag_data
+
+
 def _npc_data_module():
     try:
         from . import npc_data
@@ -3013,6 +3021,12 @@ async def update_wiki_data(
         "new_count": 0,
         "total": len(_boss_data_module().load_bosses_for_plugin(CATEGORIES_DIR)),
     }
+    treasure_bag_result = {
+        "new_count": 0,
+        "total": len(
+            _treasure_bag_data_module().load_treasure_bags_for_plugin(CATEGORIES_DIR)
+        ),
+    }
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -3106,6 +3120,9 @@ async def update_wiki_data(
         event_result = await _event_data_module().refresh_events(session, force=force)
         npc_result = await _npc_data_module().refresh_npcs(session, force=force)
         boss_result = await _boss_data_module().refresh_bosses(session, force=force)
+        treasure_bag_result = await _treasure_bag_data_module().refresh_treasure_bags(
+            session, force=force
+        )
         content_img_result = await _page_section_data_module().backfill_page_content_images(
             session
         )
@@ -3143,6 +3160,8 @@ async def update_wiki_data(
         "npc_total": npc_result.get("total", 0),
         "boss_new_count": boss_result.get("new_count", 0),
         "boss_total": boss_result.get("total", 0),
+        "treasure_bag_new_count": treasure_bag_result.get("new_count", 0),
+        "treasure_bag_total": treasure_bag_result.get("total", 0),
         "content_images_ok": content_img_result.get("images_ok", 0),
         "content_images_total": content_img_result.get("images_total", 0),
         "boss_images_ok": boss_img_result.get("images_ok", 0),
@@ -3610,7 +3629,8 @@ async def main(
             f"群系 {result.get('biome_total', 0)}（+{result.get('biome_new_count', 0)}），"
             f"事件 {result.get('event_total', 0)}（+{result.get('event_new_count', 0)}），"
             f"NPC {result.get('npc_total', 0)}（+{result.get('npc_new_count', 0)}），"
-            f"Boss {result.get('boss_total', 0)}（+{result.get('boss_new_count', 0)}）",
+            f"Boss {result.get('boss_total', 0)}（+{result.get('boss_new_count', 0)}），"
+            f"宝藏袋 {result.get('treasure_bag_total', 0)}（+{result.get('treasure_bag_new_count', 0)}）",
             flush=True,
         )
     ci_ok = result.get("content_images_ok", 0)

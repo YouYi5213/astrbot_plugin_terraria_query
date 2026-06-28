@@ -29,6 +29,7 @@ MOUNTS_FILE = "mounts.json"
 PETS_FILE = "pets.json"
 BIOMES_FILE = "biomes.json"
 EVENTS_FILE = "events.json"
+TREASURE_BAGS_FILE = "treasure_bags.json"
 
 # Wiki 多分类重叠时的分配优先级
 CATEGORY_PRIORITY: tuple[str, ...] = (
@@ -234,6 +235,10 @@ def load_npcs_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict
 
 def load_bosses_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict]:
     return _load_json_dict(os.path.join(categories_dir, "bosses.json"))
+
+
+def load_treasure_bags_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict]:
+    return _load_json_dict(os.path.join(categories_dir, TREASURE_BAGS_FILE))
 
 
 def _item_lookup_titles(item: dict) -> set[str]:

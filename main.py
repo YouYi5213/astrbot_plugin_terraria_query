@@ -196,7 +196,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
-CARD_VERSION = "v41"
+CARD_VERSION = "v42"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -230,9 +230,9 @@ BOSS_MINI_MODE_BOX_PAD = 6
 BOSS_MINI_MODE_BOX_GAP = 4
 BOSS_MODE_LABELS = ("normal", "expert", "master")
 BOSS_MODE_BOX_STYLES = {
-    "normal": {"fill": (40, 40, 48, 255), "outline": (75, 75, 88)},
-    "expert": {"fill": (255, 202, 103, 72), "outline": (255, 202, 103)},
-    "master": {"fill": (255, 186, 186, 72), "outline": (255, 186, 186)},
+    "normal": {"fill": (40, 40, 48, 255), "outline": (75, 75, 88), "width": 1},
+    "expert": {"fill": (40, 40, 48, 255), "outline": (255, 202, 103), "width": 2},
+    "master": {"fill": (40, 40, 48, 255), "outline": (255, 186, 186), "width": 2},
 }
 BOSS_MODE_HEADER_COLORS = {
     "normal": (255, 215, 0),
@@ -2790,7 +2790,7 @@ def _draw_boss_mode_column_boxes(
             radius=6,
             fill=style["fill"],
             outline=style["outline"],
-            width=1,
+            width=style.get("width", 1),
         )
 
 
@@ -2930,17 +2930,14 @@ def _calc_boss_debuff_area(
     mode_rows = _boss_debuff_mode_rows(debuff)
     if mode_rows:
         cols = _boss_mode_column_layout(card_width)
-        columns = _boss_mode_column_tuples(cols)
         pad = _boss_mode_box_pad()
-        box_top = y
         content_h = 24
         for row in mode_rows:
             stat = {"label": ui[row["label_key"]], "modes": row["modes"]}
             content_h += _calc_boss_stat_row_height(
                 measure, stat, font_small, font_small, cols[0]["col_w"]
             )
-        box_h = content_h + pad * 2
-        area += box_h + 8
+        area += content_h + pad * 2 + 8
     return area + 12
 
 

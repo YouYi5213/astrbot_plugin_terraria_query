@@ -144,7 +144,13 @@
       "label": "宠物",
       "file": "pets.json",
       "count": 84
+    },
+    {
+      "key": "npcs",
+      "label": "NPC",
+      "file": "npcs.json",
+      "count": 29
     }
   ],
-  "total": 2312
+  "total": 2341
 }

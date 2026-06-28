@@ -223,6 +223,10 @@ def load_biomes_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, di
     return _load_json_dict(os.path.join(categories_dir, BIOMES_FILE))
 
 
+def load_npcs_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict]:
+    return _load_json_dict(os.path.join(categories_dir, "npcs.json"))
+
+
 def _item_lookup_titles(item: dict) -> set[str]:
     titles: set[str] = set()
     for field in ("wiki_title", "name"):

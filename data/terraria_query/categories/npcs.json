@@ -1,0 +1,4688 @@
+{
+  "向导": {
+    "name": "向导",
+    "wiki_title": "向导",
+    "page_type": "npc",
+    "image": "Guide_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "提供提示和关于如何得到其他 NPC 的大致指引。 提供包含展示给他的物品的所有制作配方。",
+    "spawn": "向导 通常是玩家见到的第一个 NPC 。他会在世界创建时在玩家附近生成。他提供主要针对新玩家的提示，并可以显示所有用到给他看的物品的 制作配方 （包括所需的 制作站 ）。\n不同于绝大多数其他 NPC，向导于世界创建时即生成，在有可用的 房屋 之前。不过他还是会搬进第一座建好的房屋。如果他被杀掉，就需要先建好合适的房屋之后他才会重生，但无需其他条件。",
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "森林"
+        ],
+        "neighbors": [
+          "公主",
+          "服装商",
+          "动物学家"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "海洋"
+        ],
+        "neighbors": [
+          "蒸汽朋克人"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "油漆工"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，向导会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Guide_(Shimmered).png"
+  },
+  "商人": {
+    "name": "商人",
+    "wiki_title": "商人",
+    "page_type": "npc",
+    "image": "Merchant_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售基本的工具和供给。",
+    "spawn": "商人 是个商贩 NPC ，一旦以下条件全部满足就会出现\n有一间空的 房屋 。\n所有玩家的 物品栏 中有超过 50 SC 。存放在 宝箱 或是诸如 猪猪存钱罐 等 便携式收纳 中的钱币不算入此要求。",
+    "shop": [
+      {
+        "name": "挖矿头盔",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "猪猪存钱罐",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "铁砧",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "虫网",
+        "price": "25 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "铜镐",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "铜斧",
+        "price": "4 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "火把",
+        "price": "50 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "弱效治疗药水",
+        "price": "3 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "治疗药水",
+        "price": "10 银币",
+        "availability": "(电脑版、主机版、和移动版) 在困难模式"
+      },
+      {
+        "name": "弱效魔力药水",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "魔力药水",
+        "price": "2 银50 铜币",
+        "availability": "(电脑版、主机版、和移动版) 在困难模式"
+      },
+      {
+        "name": "木箭",
+        "price": "5 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "手里剑",
+        "price": "15 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绳",
+        "price": "10 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "棉花糖",
+        "price": "1 银币",
+        "availability": "当在 雪原生物群系 中与其说话时。"
+      },
+      {
+        "name": "熔炉",
+        "price": "3 银币",
+        "availability": "当在 丛林 中与其对话时。 (电脑版、主机版、和移动版)"
+      },
+      {
+        "name": "风车",
+        "price": "20 银币",
+        "availability": "在 大风天 时。"
+      },
+      {
+        "name": "投刀",
+        "price": "50 铜币",
+        "availability": "在 血月 期间。"
+      },
+      {
+        "name": "荧光棒",
+        "price": "10 铜币",
+        "availability": "在夜晚期间。"
+      },
+      {
+        "name": "利器站",
+        "price": "10 金币",
+        "availability": "在 困难模式 中 (电脑版、主机版、和移动版) 。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      },
+      {
+        "name": "保险箱",
+        "price": "20 金币",
+        "availability": "当 骷髅王 已被打败时。"
+      },
+      {
+        "name": "迪斯科球",
+        "price": "1 金币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "照明弹",
+        "price": "7 铜币",
+        "availability": "当玩家的物品栏中带有 信号枪 时。"
+      },
+      {
+        "name": "蓝照明弹",
+        "price": "7 铜币",
+        "availability": "当玩家的物品栏中带有 信号枪 时。"
+      },
+      {
+        "name": "镰刀",
+        "price": "60 银币",
+        "availability": "一直有货。 (电脑版、主机版、和移动版) 在 万圣节 期间。 (前代主机版、和3DS版)"
+      },
+      {
+        "name": "金尘",
+        "price": "17 银币",
+        "availability": "当 血肉墙 已被打败时。"
+      },
+      {
+        "name": "鼓组",
+        "price": "10 金币",
+        "availability": "当打败了 世界吞噬怪 、 克苏鲁之脑 、 骷髅王 、或 血肉墙 之后。"
+      },
+      {
+        "name": "鼓槌",
+        "price": "50 银币",
+        "availability": "当打败了 世界吞噬怪 、 克苏鲁之脑 、 骷髅王 、或 血肉墙 之后。"
+      },
+      {
+        "name": "钉子",
+        "price": "1 银币",
+        "availability": "当玩家拥有 钉枪 (电脑版、主机版、和移动版) 时。"
+      },
+      {
+        "name": "情人节戒指",
+        "price": "1 金币",
+        "availability": "情人节 期间。"
+      },
+      {
+        "name": "Wiesnbräu啤酒",
+        "price": "9 银95 铜币",
+        "availability": "十月啤酒节 期间。"
+      },
+      {
+        "name": "火鸡羽毛",
+        "price": "10 金币",
+        "availability": "感恩节 期间。"
+      },
+      {
+        "name": "心箭",
+        "price": "50 铜币",
+        "availability": "情人节 期间。"
+      },
+      {
+        "name": "节日大礼帽",
+        "price": "1 金币",
+        "availability": "圣诞节 期间。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "森林"
+        ],
+        "neighbors": [
+          "公主",
+          "高尔夫球手",
+          "护士"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "沙漠"
+        ],
+        "neighbors": [
+          "税收官"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "渔夫"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，商人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Merchant_(Shimmered).png"
+  },
+  "护士": {
+    "name": "护士",
+    "wiki_title": "护士",
+    "page_type": "npc",
+    "image": "Nurse_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "治疗玩家及取消 减益 来换取 钱币 。",
+    "spawn": "护士 是一个 NPC ，一旦以下条件全部满足她就会入住\n有一间空闲的 房屋 。\n玩家的永久最大 生命 大于 100。\n存在 商人 。",
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "军火商"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "神圣之地"
+        ],
+        "neighbors": [
+          "公主",
+          "巫师"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "雪原生物群系"
+        ],
+        "neighbors": [
+          "派对女孩",
+          "树妖"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "动物学家"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，护士会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Nurse_(Shimmered).png"
+  },
+  "爆破专家": {
+    "name": "爆破专家",
+    "wiki_title": "爆破专家",
+    "page_type": "npc",
+    "image": "Demolitionist_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售 爆炸物 。",
+    "spawn": "爆破专家 是个商贩 NPC ，一旦满足以下条件就会出现\n有一间空 房屋 。\n玩家的 物品栏 中有 爆炸物 （存放在诸如 宝箱 等 收纳物品 中，或是诸如 猪猪存钱罐 等 便携式收纳 中的物品不算）。\n存在 商人 。",
+    "shop": [
+      {
+        "name": "手榴弹",
+        "price": "75 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "炸弹",
+        "price": "3 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "雷管",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "狱炎箭",
+        "price": "1 银币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "地雷",
+        "price": "5 金币",
+        "availability": "打败 世纪之花 和 海盗入侵 后。 打败世纪之花之前，在 夜晚 。"
+      },
+      {
+        "name": "爆炸粉",
+        "price": "12 银币",
+        "availability": "在困难模式中。"
+      },
+      {
+        "name": "毒刺矢",
+        "price": "10 铜币",
+        "availability": "(前代主机版、和3DS版) 一旦 石巨人 被打败。"
+      },
+      {
+        "name": "罗马焰火筒",
+        "price": "5 金币",
+        "availability": "圣诞节 期间。"
+      },
+      {
+        "name": "冻结炸弹",
+        "price": "10 银币",
+        "availability": "在 史莱姆王 或 克苏鲁之眼 被击败后的 夜晚 。"
+      },
+      {
+        "name": "干炸弹",
+        "price": "25 银币",
+        "availability": "当玩家物品栏中有干炸弹时。"
+      },
+      {
+        "name": "湿炸弹",
+        "price": "25 银币",
+        "availability": "当玩家物品栏中有湿炸弹时。"
+      },
+      {
+        "name": "熔岩炸弹",
+        "price": "25 银币",
+        "availability": "当玩家物品栏中有熔岩炸弹时。"
+      },
+      {
+        "name": "蜂蜜炸弹",
+        "price": "25 银币",
+        "availability": "当玩家物品栏中有蜂蜜炸弹时。"
+      },
+      {
+        "name": "便携式窑炉",
+        "price": "25 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "笋生-石出",
+        "price": "25 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "酒馆老板"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "地下",
+          "洞穴",
+          "地狱"
+        ],
+        "neighbors": [
+          "公主",
+          "机械师"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "海洋"
+        ],
+        "neighbors": [
+          "哥布林工匠",
+          "军火商"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，爆破专家会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Demolitionist_(Shimmered).png"
+  },
+  "染料商": {
+    "name": "染料商",
+    "wiki_title": "染料商",
+    "page_type": "npc",
+    "image": "Dye_Trader_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售 染缸 制作站 。用稀有染料来交换 奇异植物 。",
+    "spawn": "染料商 是个出售 染缸 和其他与 染料 有关的物品的 NPC 。一旦以下条件全部满足他就会搬进来\n有一间空 房屋 。\n(电脑版、主机版、和移动版) 玩家的物品栏中有染料、染料材料、或 奇异植物 ，并且世界中至少有四名其他城镇 NPC。注意 老人 、 旅商 、和 城镇宠物 计入此数量中，但 骷髅商人 并不。\n(前代主机版) 玩家的物品栏中有染料或染料材料。",
+    "shop": [
+      {
+        "name": "染缸",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "银染料",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "团队染料",
+        "price": "1 金币",
+        "availability": "在 多人模式 服务器中。"
+      },
+      {
+        "name": "染料商长袍",
+        "price": "3 金币",
+        "availability": "万圣节 期间。"
+      },
+      {
+        "name": "染料商头巾",
+        "price": "3 金币",
+        "availability": "万圣节 期间。"
+      },
+      {
+        "name": "暗影染料",
+        "price": "3 金 75 银币",
+        "availability": "在 满月 期间。"
+      },
+      {
+        "name": "阴暗染料",
+        "price": "3 金 75 银币",
+        "availability": "在 满月 期间。"
+      },
+      {
+        "name": "棕染料",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "灰雾染料",
+        "price": "7 金 50 银币",
+        "availability": "在 墓地 中时。"
+      },
+      {
+        "name": "大屠杀染料",
+        "price": "7 金 50 银币",
+        "availability": "血月 期间。"
+      },
+      {
+        "name": "复活节块",
+        "price": "50 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "沙漠"
+        ],
+        "neighbors": [
+          "公主",
+          "军火商",
+          "油漆工"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "森林"
+        ],
+        "neighbors": [
+          "蒸汽朋克人"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "海盗"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，染料商会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Dye_Trader_(Shimmered).png"
+  },
+  "渔夫": {
+    "name": "渔夫",
+    "wiki_title": "渔夫",
+    "page_type": "npc",
+    "image": "Angler_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "给出 钓鱼 任务并在玩家完成后给出奖励。",
+    "spawn": "在第一次遇到渔夫时，他会是 沉睡渔夫 ，随机生成在 海洋 生物群系（很少见地会出现在地狱）的沙滩或 水 面上。当如下条件满足时他会搬进来\n有一间空 房屋 。\n玩家已经与其互动过并已将其叫醒（ ⚷ 打开/激活 ）。",
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "海洋"
+        ],
+        "neighbors": [
+          "公主",
+          "派对女孩",
+          "爆破专家",
+          "税收官"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "沙漠"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "酒馆老板"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，渔夫会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Angler_(Shimmered).png"
+  },
+  "动物学家": {
+    "name": "动物学家",
+    "wiki_title": "动物学家",
+    "page_type": "npc",
+    "image": "Zoologist_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售 时装物品 、 坐骑 、 宠物 、和 小动物 主题物品。",
+    "spawn": "动物学家 是个商贩 NPC ，出售的动物相关的物品和时装。在满足以下条件后她会入住\n有一间空 房屋 。\n怪物图鉴 至少填充了 10%（55 个条目）。",
+    "shop": [
+      {
+        "name": "小动物友谊指南",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "松鼠钩",
+        "price": "2 金币",
+        "availability": "当怪物图鉴已填充至少 10%（55 个条目）。"
+      },
+      {
+        "name": "辉夜姬",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "狼人",
+        "price": "1 金币",
+        "availability": "在满月 期间的夜晚。"
+      },
+      {
+        "name": "皮鞭",
+        "price": "10 金币",
+        "availability": "当怪物图鉴已填充至少 3%（17 个条目）。"
+      },
+      {
+        "name": "贝壳哨",
+        "price": "20 金币",
+        "availability": "当怪物图鉴已填充至少 25%（137 个条目）。"
+      },
+      {
+        "name": "小动物香波",
+        "price": "10 金币",
+        "availability": "当怪物图鉴已填充至少 30%（164 个条目）。"
+      },
+      {
+        "name": "狗耳朵",
+        "price": "3 金币",
+        "availability": "以下月相期间："
+      },
+      {
+        "name": "狗尾巴",
+        "price": "3 金币",
+        "availability": "以下月相期间："
+      },
+      {
+        "name": "狐狸耳朵",
+        "price": "3 金币",
+        "availability": "以下月相期间："
+      },
+      {
+        "name": "狐狸尾巴",
+        "price": "3 金币",
+        "availability": "以下月相期间："
+      },
+      {
+        "name": "蜥蜴耳朵",
+        "price": "3 金币",
+        "availability": "以下月相期间："
+      },
+      {
+        "name": "蜥蜴尾巴",
+        "price": "3 金币",
+        "availability": "以下月相期间："
+      },
+      {
+        "name": "兔兔耳朵",
+        "price": "3 金币",
+        "availability": "以下月相期间："
+      },
+      {
+        "name": "兔兔尾巴",
+        "price": "3 金币",
+        "availability": "以下月相期间："
+      },
+      {
+        "name": "满月尖叫玩具",
+        "price": "30 金币",
+        "availability": "在 困难模式 血月 期间"
+      },
+      {
+        "name": "泥芽",
+        "price": "50 金币",
+        "availability": "打败 世纪之花 后"
+      },
+      {
+        "name": "猫咪许可证",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "狗狗许可证",
+        "price": "5 金币",
+        "availability": "当怪物图鉴已填充至少 25%（137 个条目）。"
+      },
+      {
+        "name": "兔兔许可证",
+        "price": "5 金币",
+        "availability": "当怪物图鉴已填充至少 45%（246 个条目）。"
+      },
+      {
+        "name": "锦鲤风筝",
+        "price": "2 金币",
+        "availability": "怪物图鉴已填充至少 10%（55 个条目）。"
+      },
+      {
+        "name": "千足蜈蚣风筝",
+        "price": "2 金币",
+        "availability": "打败 日耀柱 后"
+      },
+      {
+        "name": "万能晶塔",
+        "price": "1 铂金币",
+        "availability": "怪物图鉴已完全填满（546 个条目）。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      },
+      {
+        "name": "蒙尘牛皮鞍",
+        "price": "25 金币",
+        "availability": "怪物图鉴已填充至少 30%（164 个条目）。"
+      },
+      {
+        "name": "皇家鎏金鞍",
+        "price": "25 金币",
+        "availability": "怪物图鉴已填充至少 30%（164 个条目）。"
+      },
+      {
+        "name": "黑铆钉鞍",
+        "price": "25 金币",
+        "availability": "怪物图鉴已填充至少 30%（164 个条目）。"
+      },
+      {
+        "name": "樱花树苗",
+        "price": "1 金币",
+        "availability": "怪物图鉴已填充至少30%（164 个条目）。"
+      },
+      {
+        "name": "黄柳树苗",
+        "price": "1 金币",
+        "availability": "怪物图鉴已填充至少 30% (164 个条目)。"
+      },
+      {
+        "name": "兔子头盔",
+        "price": "15 金币",
+        "availability": "怪物图鉴已填充至少 40%（219 个条目）。"
+      },
+      {
+        "name": "骑枪",
+        "price": "6 金币",
+        "availability": "在 困难模式 中且怪物图鉴已填充至少 30%（219 个条目）。"
+      },
+      {
+        "name": "仙灵荧光棒",
+        "price": "75 铜币",
+        "availability": "一旦玩家在 怪物图鉴 中填上了全部三个 仙灵"
+      },
+      {
+        "name": "世界球",
+        "price": "3 金币",
+        "availability": "怪物图鉴已填充至少 50% (273 个条目)。"
+      },
+      {
+        "name": "月亮球",
+        "price": "3 金币",
+        "availability": "当怪物图鉴已填充至少 50%（273 个条目）。"
+      },
+      {
+        "name": "树球",
+        "price": "3 金币",
+        "availability": "怪物图鉴已填充至少 50%（273 个条目）。"
+      },
+      {
+        "name": "闪电胡萝卜",
+        "price": "50 金币",
+        "availability": "怪物图鉴已填充至少 50%（273 个条目）。"
+      },
+      {
+        "name": "挖掘鼹鼠矿车",
+        "price": "50 金币",
+        "availability": "当怪物图鉴已填充至少 25%（137 个条目）。"
+      },
+      {
+        "name": "保险丝球",
+        "price": "50 金币",
+        "availability": "怪物图鉴已填充至少 70%（383 个条目）。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "巫医"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "森林"
+        ],
+        "neighbors": [
+          "公主",
+          "高尔夫球手"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "沙漠"
+        ],
+        "neighbors": [
+          "渔夫"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "军火商"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，动物学家会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Zoologist_(Shimmered).png"
+  },
+  "树妖": {
+    "name": "树妖",
+    "wiki_title": "树妖",
+    "page_type": "npc",
+    "image": "Dryad_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售自然/ 腐化 / 猩红 物品，并能报告世界中腐化/猩红和 神圣 的百分比。",
+    "spawn": "树妖 是个商贩 NPC ，一旦以下条件全部满足就会出现\n有一间空 房屋 。\n克苏鲁之眼 、 世界吞噬怪 、 克苏鲁之脑 、 骷髅王 、或 天兔 (3DS版) （其中的一个）已被打败。",
+    "shop": [
+      {
+        "name": "净化粉",
+        "price": "75 铜币",
+        "availability": "当不在 血月 期间，且不在 Don't dig up (电脑版、主机版、和移动版) 或 Get fixed boi (电脑版、主机版、和移动版) 世界中。"
+      },
+      {
+        "name": "魔粉",
+        "price": "1 银币",
+        "availability": "腐化 世界的 血月 期间，且不在 Don't dig up (电脑版、主机版、和移动版) 或 Get fixed boi (电脑版、主机版、和移动版) 世界中。"
+      },
+      {
+        "name": "毒粉",
+        "price": "1 银币",
+        "availability": "猩红 世界的 血月 期间，且不在 Don't dig up (电脑版、主机版、和移动版) 或 Get fixed boi (电脑版、主机版、和移动版) 世界中。"
+      },
+      {
+        "name": "草种子",
+        "price": "20 铜币",
+        "availability": "当不在 血月 期间时。"
+      },
+      {
+        "name": "灰烬草种子",
+        "price": "1 银50 铜币",
+        "availability": "在 地狱 中时。"
+      },
+      {
+        "name": "腐化种子",
+        "price": "5 银币",
+        "availability": "在腐化世界的 血月 期间， 或在 困难模式 猩红世界中在 墓地 (电脑版、主机版、和移动版) 内。"
+      },
+      {
+        "name": "猩红种子",
+        "price": "5 银币",
+        "availability": "在猩红世界的 血月 期间， 或在 困难模式 腐化世界中在 墓地 (电脑版、主机版、和移动版) 内。"
+      },
+      {
+        "name": "向日葵",
+        "price": "50 银币",
+        "availability": "当不在 血月 期间时。"
+      },
+      {
+        "name": "橡实",
+        "price": "10 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "土魔杖",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "南瓜子",
+        "price": "2 银50 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "草墙",
+        "price": "10 铜币",
+        "availability": "当不在 血月 期间时。"
+      },
+      {
+        "name": "腐化草墙",
+        "price": "2 银50 铜币",
+        "availability": "(电脑版、主机版、和移动版) 在腐化世界的 血月 期间。"
+      },
+      {
+        "name": "猩红草墙",
+        "price": "2 银50 铜币",
+        "availability": "(电脑版、主机版、和移动版) 在猩红世界的 血月 期间。"
+      },
+      {
+        "name": "花墙",
+        "price": "10 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "丛林墙",
+        "price": "10 铜币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "神圣种子",
+        "price": "20 银币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "神圣草墙",
+        "price": "2 银50 铜币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "蘑菇草种子",
+        "price": "1 银50 铜币",
+        "availability": "在 发光蘑菇生物群系 中时。"
+      },
+      {
+        "name": "树妖遮体服",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "树妖腰布",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "太阳花种植盆",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "月光草种植盆",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "闪耀根种植盆",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "死亡草种植盆",
+        "price": "1 银币",
+        "availability": "在 腐化 世界中一直有售"
+      },
+      {
+        "name": "死亡草种植盆",
+        "price": "1 银币",
+        "availability": "在 猩红 世界中一直有售"
+      },
+      {
+        "name": "水叶草种植盆",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "寒颤棘种植盆",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "火焰花种植盆",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "环境保护指南",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "白花种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "黄花种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "红花种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "粉花种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "洋红花种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蓝紫花种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蓝花种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "野花种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "高茎草种子",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "盆栽森林雪松",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 1 和 2"
+      },
+      {
+        "name": "盆栽丛林雪松",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 1 和 2"
+      },
+      {
+        "name": "盆栽神圣雪松",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 1 和 2"
+      },
+      {
+        "name": "盆栽森林树",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 3 和 4"
+      },
+      {
+        "name": "盆栽丛林树",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 3 和 4"
+      },
+      {
+        "name": "盆栽神圣树",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 3 和 4"
+      },
+      {
+        "name": "盆栽森林棕榈",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 5 和 6"
+      },
+      {
+        "name": "盆栽丛林棕榈",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 5 和 6"
+      },
+      {
+        "name": "盆栽神圣棕榈",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 5 和 6"
+      },
+      {
+        "name": "盆栽森林竹",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 7 和 8"
+      },
+      {
+        "name": "盆栽丛林竹",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 7 和 8"
+      },
+      {
+        "name": "盆栽神圣竹",
+        "price": "3 金币",
+        "availability": "困难模式 ， 月相 7 和 8"
+      },
+      {
+        "name": "闪耀翅膀",
+        "price": "40 金币",
+        "availability": "在 困难模式 中、 血月 期间。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "丛林"
+        ],
+        "neighbors": [
+          "公主",
+          "巫医",
+          "松露人"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "沙漠"
+        ],
+        "neighbors": [
+          "渔夫"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "高尔夫球手"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，树妖会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Dryad_(Shimmered).png"
+  },
+  "油漆工": {
+    "name": "油漆工",
+    "wiki_title": "油漆工",
+    "page_type": "npc",
+    "image": "Painter_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售 油漆 、绘画作品工具、和 绘画作品 。",
+    "spawn": "油漆工 是个 NPC 商贩，出售 油漆 (电脑版、主机版、前代主机版、和移动版) 和 油漆工具 ，还有 绘画作品 和 壁纸 。一旦满足以下条件他就会入住\n有一间空闲的 房屋 。\n世界中至少有 8 名其他城镇 NPC。注意 老人 、 旅商 、和 城镇宠物 计入此数量中，但 骷髅商人 并不计入。",
+    "shop": [
+      {
+        "name": "漆刷",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "涂漆滚刷",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "漆铲",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "红漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "橙漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "黄漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "橙绿漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绿漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "青绿漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "青漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "天蓝漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蓝漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "紫漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蓝紫漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "粉漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "黑漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "灰漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "白漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "棕漆",
+        "price": "25 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "暗影漆",
+        "price": "50 铜币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "反色漆",
+        "price": "75 铜币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "夜明涂料",
+        "price": "2 银币",
+        "availability": "在 墓地 中时。"
+      },
+      {
+        "name": "回声涂料",
+        "price": "2 银币",
+        "availability": "击败 世纪之花 后，在 墓地 中时。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "树妖"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "丛林"
+        ],
+        "neighbors": [
+          "公主",
+          "派对女孩"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "森林"
+        ],
+        "neighbors": [
+          "机器侠",
+          "松露人"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，油漆工会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Painter_(Shimmered).png"
+  },
+  "高尔夫球手": {
+    "name": "高尔夫球手",
+    "wiki_title": "高尔夫球手",
+    "page_type": "npc",
+    "image": "Golfer_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售 高尔夫球杆 、 高尔夫球 和其他 高尔夫 物品。",
+    "spawn": "高尔夫球手 是一个 NPC 商贩，出售和 高尔夫 相关的物品。随着玩家打高尔夫的次数增多，会解锁更多物品，包括 高尔夫球杆 、 高尔夫奖杯 、和 绘画作品 。他初始生成于 地下沙漠 中，保持静止，与在此状态下的他对话会“解救”他。如果静止的高尔夫球手被杀死，他之后仍能重生；如果高尔夫球手 NPC 被杀死，只要有空余 房屋 ，他会在一段时间后再次入住。",
+    "shop": [
+      {
+        "name": "破旧高尔夫球杆（铁杆）",
+        "price": "10 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "破旧高尔夫球杆（木杆）",
+        "price": "10 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "破旧高尔夫球杆（挖起杆）",
+        "price": "10 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "破旧高尔夫球杆（推杆）",
+        "price": "10 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "白三角旗",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "红三角旗",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绿三角旗",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蓝三角旗",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "黄三角旗",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "紫三角旗",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "高尔夫球座",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "高尔夫球",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "高尔夫口哨",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "高尔夫球洞",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "箭头标牌",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "彩色箭头标牌",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "乡村俱乐部帽",
+        "price": "2 金 50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "乡村俱乐部帽舌",
+        "price": "2 金 50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "乡村俱乐部背心",
+        "price": "2 金 50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "乡村俱乐部长裤",
+        "price": "2 金 50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "割草机",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "高尔夫球车钥匙",
+        "price": "50 金币",
+        "availability": "高尔夫分数超过 2000、 骷髅王 被打败后"
+      },
+      {
+        "name": "起伏的果岭",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 2000、在以下月相期间："
+      },
+      {
+        "name": "静物球习作",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 2000、在以下月相期间："
+      },
+      {
+        "name": "球来了！",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 2000、在以下月相期间："
+      },
+      {
+        "name": "映像的二重性",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 2000、在以下月相期间："
+      },
+      {
+        "name": "高尔夫球杆（铁杆）",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 500"
+      },
+      {
+        "name": "高尔夫球杆（木杆）",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 500"
+      },
+      {
+        "name": "高尔夫球杆（挖起杆）",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 500"
+      },
+      {
+        "name": "高尔夫球杆（推杆）",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 500"
+      },
+      {
+        "name": "高尔夫箱",
+        "price": "3 金币",
+        "availability": "高尔夫分数超过 500"
+      },
+      {
+        "name": "高尔夫铜奖杯",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 500"
+      },
+      {
+        "name": "精致高尔夫球杆（铁杆）",
+        "price": "10 金币",
+        "availability": "高尔夫分数超过 1000"
+      },
+      {
+        "name": "精致高尔夫球杆（木杆）",
+        "price": "10 金币",
+        "availability": "高尔夫分数超过 1000"
+      },
+      {
+        "name": "精致高尔夫球杆（挖起杆）",
+        "price": "10 金币",
+        "availability": "高尔夫分数超过 1000"
+      },
+      {
+        "name": "精致高尔夫球杆（推杆）",
+        "price": "10 金币",
+        "availability": "高尔夫分数超过 1000"
+      },
+      {
+        "name": "高尔夫银奖杯",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 1000"
+      },
+      {
+        "name": "高级高尔夫球杆（铁杆）",
+        "price": "25 金币",
+        "availability": "高尔夫分数超过 2000"
+      },
+      {
+        "name": "高级高尔夫球杆（木杆）",
+        "price": "25 金币",
+        "availability": "高尔夫分数超过 2000"
+      },
+      {
+        "name": "高级高尔夫球杆（挖起杆）",
+        "price": "25 金币",
+        "availability": "高尔夫分数超过 2000"
+      },
+      {
+        "name": "高级高尔夫球杆（推杆）",
+        "price": "25 金币",
+        "availability": "高尔夫分数超过 2000"
+      },
+      {
+        "name": "高尔夫金奖杯",
+        "price": "1 金币",
+        "availability": "高尔夫分数超过 2000"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "渔夫"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "森林"
+        ],
+        "neighbors": [
+          "公主",
+          "油漆工",
+          "动物学家"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "地下",
+          "洞穴",
+          "地狱"
+        ],
+        "neighbors": [
+          "海盗"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "商人"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，高尔夫球手会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Golfer_(Shimmered).png"
+  },
+  "军火商": {
+    "name": "军火商",
+    "wiki_title": "军火商",
+    "page_type": "npc",
+    "image": "Arms_Dealer_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售 枪 、 子弹 、和其他 弹药 。",
+    "spawn": "军火商 是个一旦以下条件全部满足就会出现的 NPC \n有一间空 房屋 。\n玩家在其物品栏中至少有一个 子弹 或发射子弹的 枪 （存放在诸如 宝箱 等 收纳物品 中，或是诸如 猪猪存钱罐 等 便携式收纳 中的枪不算） 。",
+    "shop": [
+      {
+        "name": "火枪子弹",
+        "price": "7 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "银子弹",
+        "price": "15 铜币",
+        "availability": "在 血月 期间，或 困难模式 中一直有售。 （在有 银矿 （ (前代主机版、和3DS版) 和有 钨矿 的世界中）。）"
+      },
+      {
+        "name": "钨子弹",
+        "price": "18 铜币",
+        "availability": "在 血月 期间，或 困难模式 中一直有售。 （在有 钨矿 的世界中。）"
+      },
+      {
+        "name": "邪箭",
+        "price": "40 铜币",
+        "availability": "在打败 世界吞噬怪 或 克苏鲁之脑 之后的夜晚期间。 （或 困难模式 中一直有售。）"
+      },
+      {
+        "name": "燧发枪",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "迷你鲨",
+        "price": "35 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "非法枪械部件",
+        "price": "20 金币",
+        "availability": "在夜晚。"
+      },
+      {
+        "name": "弹药箱",
+        "price": "10 金币",
+        "availability": "(电脑版、主机版、和移动版) 在困难模式。"
+      },
+      {
+        "name": "霰弹枪",
+        "price": "25 金币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "空心子弹",
+        "price": "5 铜币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "毒刺矢",
+        "price": "75 铜币",
+        "availability": "当玩家拥有 毒刺发射器 时。"
+      },
+      {
+        "name": "尖桩",
+        "price": "15 铜币",
+        "availability": "当玩家拥有 尖桩发射器 时。"
+      },
+      {
+        "name": "钉子",
+        "price": "1 银币",
+        "availability": "当玩家拥有 钉枪 时。"
+      },
+      {
+        "name": "玉米糖",
+        "price": "5 铜币",
+        "availability": "当玩家拥有 玉米糖步枪 时。"
+      },
+      {
+        "name": "爆炸杰克南瓜灯",
+        "price": "15 铜币",
+        "availability": "当玩家拥有 杰克南瓜灯发射器 时。"
+      },
+      {
+        "name": "护士帽",
+        "price": "3 金币",
+        "availability": "万圣节 期间。"
+      },
+      {
+        "name": "护士衣",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "护士裤",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "四管霰弹枪",
+        "price": "35 金币",
+        "availability": "击败 骷髅王 后，在 墓地 生物群系中。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "护士"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "沙漠"
+        ],
+        "neighbors": [
+          "公主",
+          "蒸汽朋克人"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "雪原生物群系"
+        ],
+        "neighbors": [
+          "高尔夫球手"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "爆破专家"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，军火商会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Arms_Dealer_(Shimmered).png"
+  },
+  "酒馆老板": {
+    "name": "酒馆老板",
+    "wiki_title": "酒馆老板",
+    "page_type": "npc",
+    "image": "Tavernkeep_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售能帮助与 撒旦军队 战斗的召唤物品，其中绝大部分只能用 护卫奖章 购买。",
+    "spawn": "酒馆老板 是个独特的商贩 NPC ，其大多数物品只接受 护卫奖章 作为货币，而非 钱币 。他只在玩家打败 世界吞噬怪 或 克苏鲁之脑 之后才能见到。一旦此条件满足，他会作为 昏迷男子 生成在世界的任何 地层 ，和处于此状态的他对话会使其醒来。如果昏迷男子被杀死，他之后仍能重生；如果酒馆老板 NPC 被杀死，只要有空余 房屋 ，他会在一段时间后再次入住。",
+    "shop": [
+      {
+        "name": "麦芽酒",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "永恒水晶",
+        "price": "25 银币",
+        "availability": "打败任意 机械 Boss 之前。"
+      },
+      {
+        "name": "永恒水晶",
+        "price": "1 金币",
+        "availability": "打败了至少一个 机械 Boss 后且又尚未打败 石巨人 。"
+      },
+      {
+        "name": "永恒水晶",
+        "price": "4 金币",
+        "availability": "打败 石巨人 后。"
+      },
+      {
+        "name": "永恒水晶座",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "护卫熔炉",
+        "price": "500000* 50",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "爆炸烈焰魔杖",
+        "price": "50000* 5",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "爆炸烈焰手杖",
+        "price": "150000* 15",
+        "availability": "打败至少一个 机械 Boss 之后。"
+      },
+      {
+        "name": "爆炸烈焰法杖",
+        "price": "600000* 60",
+        "availability": "打败 石巨人 后。"
+      },
+      {
+        "name": "弩车魔杖",
+        "price": "50000* 5",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "弩车手杖",
+        "price": "150000* 15",
+        "availability": "打败至少一个 机械 Boss 之后。"
+      },
+      {
+        "name": "弩车法杖",
+        "price": "600000* 60",
+        "availability": "打败 石巨人 后。"
+      },
+      {
+        "name": "爆炸陷阱魔杖",
+        "price": "50000* 5",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "爆炸陷阱手杖",
+        "price": "150000* 15",
+        "availability": "打败至少一个 机械 Boss 之后。"
+      },
+      {
+        "name": "爆炸陷阱法杖",
+        "price": "600000* 60",
+        "availability": "打败 石巨人 后。"
+      },
+      {
+        "name": "闪电光环魔杖",
+        "price": "50000* 5",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "闪电光环手杖",
+        "price": "150000* 15",
+        "availability": "打败至少一个 机械 Boss 之后。"
+      },
+      {
+        "name": "闪电光环法杖",
+        "price": "600000* 60",
+        "availability": "打败 石巨人 后。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "爆破专家"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "神圣之地"
+        ],
+        "neighbors": [
+          "公主",
+          "哥布林工匠"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "雪原生物群系"
+        ],
+        "neighbors": [
+          "向导"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "染料商"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，酒馆老板会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Tavernkeep_(Shimmered).png"
+  },
+  "发型师": {
+    "name": "发型师",
+    "wiki_title": "发型师",
+    "page_type": "npc",
+    "image": "Stylist_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "能改变玩家的 发型 并出售 染发剂 。",
+    "spawn": "发型师 是一个 NPC 商贩，能够改变玩家的 发型 和头发颜色。她也出售各种能为玩家的头发加上动态效果的 染发剂 。一旦以下条件满足她就会入住\n有一间空闲的 房屋 。\n解救了在 洞穴 地层 的 蜘蛛窝 中随机生成的 被网住的发型师 。对此状态下的发型师按下 ⚷ 打开/激活 交互可以解救她。如果被网住的发型师被杀死，她之后仍会重生；如果发型师 NPC 被杀死，只要有空余 房屋 ，她会在一段时间后再次入住。",
+    "shop": [
+      {
+        "name": "绅士胡子",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "染发剂清除剂",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "深度染发剂",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "生命染发剂",
+        "price": "5 金币",
+        "availability": "如果玩家最大生命值至少有 400。"
+      },
+      {
+        "name": "魔力染发剂",
+        "price": "5 金币",
+        "availability": "如果玩家最大魔力值至少有 200。"
+      },
+      {
+        "name": "钱币染发剂",
+        "price": "10 金币",
+        "availability": "如果玩家物品栏中有至少 1 PC 。"
+      },
+      {
+        "name": "时间染发剂",
+        "price": "5 金币",
+        "availability": "在 月相 2、4、6、和 8 的夜晚和随后的白天区间： 。"
+      },
+      {
+        "name": "团队染发剂",
+        "price": "5 金币",
+        "availability": "多人模式 中，当玩家在队伍中时。"
+      },
+      {
+        "name": "派对染发剂",
+        "price": "7 金 50 银币",
+        "availability": "当世界中有 派对女孩 时。"
+      },
+      {
+        "name": "生物群系染发剂",
+        "price": "5 金币",
+        "availability": "当世界处于 困难模式 时。"
+      },
+      {
+        "name": "速度染发剂",
+        "price": "5 金币",
+        "availability": "当世界处于 困难模式 且有任一 机械 Boss 已被打败。"
+      },
+      {
+        "name": "彩虹染发剂",
+        "price": "15 金币",
+        "availability": "当世界处于 困难模式 且全部三个 机械 Boss 都已被打败。"
+      },
+      {
+        "name": "火星染发剂",
+        "price": "30 金币",
+        "availability": "火星暴乱 后。"
+      },
+      {
+        "name": "暮光染发剂",
+        "price": "30 金币",
+        "availability": "火星暴乱 后。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "染料商"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "海洋"
+        ],
+        "neighbors": [
+          "公主",
+          "海盗"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "雪原生物群系"
+        ],
+        "neighbors": [
+          "酒馆老板"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "哥布林工匠"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，发型师会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Stylist_(Shimmered).png"
+  },
+  "哥布林工匠": {
+    "name": "哥布林工匠",
+    "wiki_title": "哥布林工匠",
+    "page_type": "npc",
+    "image": "Goblin_Tinkerer_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售一些诸如 工匠作坊 之类的物品，并能 重铸 物品。",
+    "spawn": "哥布林工匠 是个出售多种独特物品并提供 重铸 功能的 NPC 。在击败 哥布林军队 之后能得到他，他会随机生成在 洞穴 层的开放区域中。一开始，他以静止的 受缚哥布林 状态出现，在此状态下与他谈话会将其释放。如果受缚哥布林被击杀，他在之后依然会重新生成；如果哥布林工匠 NPC 被击杀，只要有空余的 房屋 ，他就会在一段时间后再次入住。",
+    "shop": [
+      {
+        "name": "火箭靴",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "标尺",
+        "price": "10 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "工匠作坊",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "抓钩",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "工具腰带",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "尖球",
+        "price": "80 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "堆石器",
+        "price": "25 金币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "机械师"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "地下",
+          "洞穴",
+          "地狱"
+        ],
+        "neighbors": [
+          "公主",
+          "染料商"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "丛林"
+        ],
+        "neighbors": [
+          "服装商"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "发型师"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，哥布林工匠会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Goblin_Tinkerer_(Shimmered).png"
+  },
+  "巫医": {
+    "name": "巫医",
+    "wiki_title": "巫医",
+    "page_type": "npc",
+    "image": "Witch_Doctor_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售 吹箭筒 、 灌注站 、 召唤 装备、 喷泉 和 叶之翼 。",
+    "spawn": "巫医 是一个 NPC 商贩，一旦以下条件全部满足他就会入住\n有一间空闲的 房屋 。\n蜂王 已被打败。",
+    "shop": [
+      {
+        "name": "灌注站",
+        "price": "7 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "吹箭筒",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "毒刺矢",
+        "price": "75 铜币",
+        "availability": "当玩家有 毒刺发射器 时。"
+      },
+      {
+        "name": "尖桩",
+        "price": "15 铜币",
+        "availability": "当玩家有 尖桩发射器 时。"
+      },
+      {
+        "name": "大锅",
+        "price": "1 金 50 银币",
+        "availability": "万圣节 期间。"
+      },
+      {
+        "name": "提基图腾",
+        "price": "2 铂金币",
+        "availability": "困难模式 下，在 丛林 生物群系中与其说话。"
+      },
+      {
+        "name": "叶之翼",
+        "price": "1 铂金 50 金币",
+        "availability": "困难模式 下，打败 世纪之花 后， 夜晚 时在 丛林 生物群系中与其说话。"
+      },
+      {
+        "name": "小瓶毒液",
+        "price": "15 银币",
+        "availability": "打败 世纪之花 后。"
+      },
+      {
+        "name": "提基面具",
+        "price": "50 金币",
+        "availability": "打败 世纪之花 后。"
+      },
+      {
+        "name": "提基衣",
+        "price": "50 金币",
+        "availability": "打败 世纪之花 后。"
+      },
+      {
+        "name": "提基裤",
+        "price": "50 金币",
+        "availability": "打败 世纪之花 后。"
+      },
+      {
+        "name": "矮人项链",
+        "price": "20 金币",
+        "availability": "仅限 夜晚 。"
+      },
+      {
+        "name": "大力士甲虫",
+        "price": "40 金币",
+        "availability": "打败 世纪之花 后，在 丛林 生物群系中与其说话。"
+      },
+      {
+        "name": "纯净喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "沙漠喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "丛林喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "冰雪喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "腐化喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "猩红喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "神圣喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "血水喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "洞穴喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绿洲喷泉",
+        "price": "4 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "施法桌",
+        "price": "10 金币",
+        "availability": "如果存在 巫师 。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "丛林"
+        ],
+        "neighbors": [
+          "公主",
+          "树妖",
+          "向导"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "神圣之地"
+        ],
+        "neighbors": [
+          "护士"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "松露人"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，巫医会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Witch_Doctor_(Shimmered).png"
+  },
+  "服装商": {
+    "name": "服装商",
+    "wiki_title": "服装商",
+    "page_type": "npc",
+    "image": "Clothier_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售一些 时装物品 ，包括 便装套装 。",
+    "spawn": "服装商 是个主要出售 时装物品 的 NPC 商贩，一旦满足以下条件就会生成\n有一间空 房屋 。\n骷髅王 已被打败。",
+    "shop": [
+      {
+        "name": "黑线",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "粉线",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "r/Terraria",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "夏日草帽",
+        "price": "1 金币",
+        "availability": "在 白天 ，在 墓地 外。"
+      },
+      {
+        "name": "管道工衣",
+        "price": "25 金币",
+        "availability": "在 满月 （ ）期间。"
+      },
+      {
+        "name": "管道工背带裤",
+        "price": "25 金币",
+        "availability": "在 满月 （ ）期间。"
+      },
+      {
+        "name": "白西装衣",
+        "price": "25 金币",
+        "availability": "在 满月 的夜晚（ ）期间。"
+      },
+      {
+        "name": "白西装裤",
+        "price": "25 金币",
+        "availability": "在 满月 的夜晚（ ）期间。"
+      },
+      {
+        "name": "博士衣",
+        "price": "20 金币",
+        "availability": "在 亏凸月 （ ）期间。"
+      },
+      {
+        "name": "博士裤",
+        "price": "20 金币",
+        "availability": "在 亏凸月 （ ）期间。"
+      },
+      {
+        "name": "便装衣",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "便装裤",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "便装假发",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "小丑帽",
+        "price": "2 金币",
+        "availability": "如果已打败 小丑 。"
+      },
+      {
+        "name": "小丑衣",
+        "price": "1 金币",
+        "availability": "如果已打败 小丑 。"
+      },
+      {
+        "name": "小丑裤",
+        "price": "1 金币",
+        "availability": "如果已打败 小丑 。"
+      },
+      {
+        "name": "丑角面具",
+        "price": "2 金币",
+        "availability": "在 血月 期间。"
+      },
+      {
+        "name": "堕落西装衣",
+        "price": "25 金币",
+        "availability": "在 血月 期间。"
+      },
+      {
+        "name": "堕落西装裤",
+        "price": "25 金币",
+        "availability": "在 血月 期间。"
+      },
+      {
+        "name": "日耀邪教徒兜帽",
+        "price": "10 金币",
+        "availability": "白天，如果已打败 拜月教邪教徒 。"
+      },
+      {
+        "name": "日耀邪教徒长袍",
+        "price": "10 金币",
+        "availability": "白天，如果已打败 拜月教邪教徒 。"
+      },
+      {
+        "name": "月亮邪教徒兜帽",
+        "price": "10 金币",
+        "availability": "夜晚，如果已打败 拜月教邪教徒 。"
+      },
+      {
+        "name": "月亮邪教徒长袍",
+        "price": "10 金币",
+        "availability": "夜晚，如果已打败 拜月教邪教徒 。"
+      },
+      {
+        "name": "税收官帽",
+        "price": "3 金币",
+        "availability": "若 税收官 在场。"
+      },
+      {
+        "name": "税收官衣服",
+        "price": "3 金币",
+        "availability": "若 税收官 在场。"
+      },
+      {
+        "name": "税收官裤",
+        "price": "3 金币",
+        "availability": "若 税收官 在场。"
+      },
+      {
+        "name": "掘墓者帽",
+        "price": "10 金币",
+        "availability": "如果在 墓地 中与其交谈。"
+      },
+      {
+        "name": "掘墓者外套",
+        "price": "10 金币",
+        "availability": "如果在 墓地 中与其交谈。"
+      },
+      {
+        "name": "葬礼帽",
+        "price": "10 金币",
+        "availability": "如果在 墓地 中与其交谈。"
+      },
+      {
+        "name": "葬礼外套",
+        "price": "10 金币",
+        "availability": "如果在 墓地 中与其交谈。"
+      },
+      {
+        "name": "葬礼裤",
+        "price": "10 金币",
+        "availability": "如果在 墓地 中与其交谈。"
+      },
+      {
+        "name": "悲剧雨伞",
+        "price": "10 金币",
+        "availability": "如果在 墓地 中与其交谈。"
+      },
+      {
+        "name": "维多利亚哥特帽",
+        "price": "10 金币",
+        "availability": "如果在 墓地 中与其交谈。"
+      },
+      {
+        "name": "维多利亚哥特裙",
+        "price": "10 金币",
+        "availability": "如果在 墓地 中与其交谈。"
+      },
+      {
+        "name": "小便帽",
+        "price": "1 金币",
+        "availability": "如果在 雪原生物群系 中与其交谈。"
+      },
+      {
+        "name": "盖伊·福克斯面具",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "苏格兰便帽",
+        "price": "2 金 50 银币",
+        "availability": "在 困难模式 中， 下弦月 （ ）期间。"
+      },
+      {
+        "name": "蓝毕业帽",
+        "price": "10 金币",
+        "availability": "在 困难模式 中， 残月 （ ）期间。"
+      },
+      {
+        "name": "蓝毕业礼服",
+        "price": "10 金币",
+        "availability": "在 困难模式 中， 残月 （ ）期间。"
+      },
+      {
+        "name": "头冠",
+        "price": "25 金币",
+        "availability": "在 困难模式 ，中 新月 ( )期间。"
+      },
+      {
+        "name": "公主裙（服装商）",
+        "price": "10 金币",
+        "availability": "在 困难模式 中， 新月 （ ）期间。"
+      },
+      {
+        "name": "褐红毕业帽",
+        "price": "10 金币",
+        "availability": "在 困难模式 中， 娥眉月 （ ）期间。"
+      },
+      {
+        "name": "褐红毕业礼服",
+        "price": "10 金币",
+        "availability": "在 困难模式 中， 娥眉月 （ ）期间。"
+      },
+      {
+        "name": "牛仔帽",
+        "price": "5 金币",
+        "availability": "在 困难模式 中， 上弦月 （ ）期间。"
+      },
+      {
+        "name": "牛仔夹克",
+        "price": "5 金币",
+        "availability": "在 困难模式 中， 上弦月 （ ）期间。"
+      },
+      {
+        "name": "牛仔裤",
+        "price": "5 金币",
+        "availability": "在 困难模式 中， 上弦月 （ ）期间。"
+      },
+      {
+        "name": "黑毕业帽",
+        "price": "10 金币",
+        "availability": "在 困难模式 中， 盈凸月 （ ）期间。"
+      },
+      {
+        "name": "黑毕业礼服",
+        "price": "10 金币",
+        "availability": "在 困难模式 中， 盈凸月 （ ）期间。"
+      },
+      {
+        "name": "巴拉帽",
+        "price": "1 金币",
+        "availability": "如果已打败 雪人军团 。"
+      },
+      {
+        "name": "黑帮帽",
+        "price": "1 金币",
+        "availability": "如果已打败 雪人军团 。"
+      },
+      {
+        "name": "服装商夹克",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "服装商裤",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "派对气球束",
+        "price": "2 金币",
+        "availability": "派对 期间。"
+      },
+      {
+        "name": "气球兔兔",
+        "price": "2 金币",
+        "availability": "派对 期间。"
+      },
+      {
+        "name": "呆萌向日葵花瓣头盔",
+        "price": "3 金币",
+        "availability": "派对 期间。"
+      },
+      {
+        "name": "呆萌向日葵上衣",
+        "price": "3 金币",
+        "availability": "派对 期间。"
+      },
+      {
+        "name": "呆萌向日葵裤装",
+        "price": "3 金币",
+        "availability": "派对 期间。"
+      },
+      {
+        "name": "猎人斗篷",
+        "price": "15 金币",
+        "availability": "玩家累计 高尔夫 得分达到 2000 或以上。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 且接近另一个NPC时。"
+      },
+      {
+        "name": "老手杖",
+        "price": "1 铂金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "George的帽子",
+        "price": "1 金币",
+        "availability": "血月 期间，男性人物。"
+      },
+      {
+        "name": "George的西装上衣",
+        "price": "25 金币",
+        "availability": "血月 期间，男性人物。"
+      },
+      {
+        "name": "George的裤子",
+        "price": "25 金币",
+        "availability": "血月 期间，男性人物。"
+      },
+      {
+        "name": "绝妙丝带",
+        "price": "1 金币",
+        "availability": "血月 期间，女性人物。"
+      },
+      {
+        "name": "绝妙礼服",
+        "price": "25 金币",
+        "availability": "血月 期间，女性人物。"
+      },
+      {
+        "name": "绝妙拖鞋",
+        "price": "25 金币",
+        "availability": "血月 期间，女性人物。"
+      },
+      {
+        "name": "啤酒节假发",
+        "price": "80 银币",
+        "availability": "十月啤酒节 期间。"
+      },
+      {
+        "name": "旦多尔女衫",
+        "price": "1 金币",
+        "availability": "十月啤酒节 期间。"
+      },
+      {
+        "name": "旦多尔裙",
+        "price": "1 金币",
+        "availability": "十月啤酒节 期间。"
+      },
+      {
+        "name": "登山帽",
+        "price": "80 银币",
+        "availability": "十月啤酒节 期间。"
+      },
+      {
+        "name": "皮背心",
+        "price": "1 金币",
+        "availability": "十月啤酒节 期间。"
+      },
+      {
+        "name": "皮裤",
+        "price": "1 金币",
+        "availability": "十月啤酒节 期间。"
+      },
+      {
+        "name": "节日大礼帽",
+        "price": "1 金币",
+        "availability": "圣诞节 期间。"
+      },
+      {
+        "name": "多乐头部",
+        "price": "10 金币",
+        "availability": "血月 期间。"
+      },
+      {
+        "name": "多乐身体",
+        "price": "25 金币",
+        "availability": "血月 期间。"
+      },
+      {
+        "name": "多乐腿部",
+        "price": "25 金币",
+        "availability": "血月 期间。"
+      },
+      {
+        "name": "粉白美头部",
+        "price": "10 金币",
+        "availability": "血月 期间。"
+      },
+      {
+        "name": "粉白美身体",
+        "price": "25 金币",
+        "availability": "血月 期间。"
+      },
+      {
+        "name": "粉白美腿部",
+        "price": "25 金币",
+        "availability": "血月 期间。"
+      },
+      {
+        "name": "希炼衣",
+        "price": "25 金币",
+        "availability": "满月 （ ）期间。"
+      },
+      {
+        "name": "希炼裤",
+        "price": "25 金币",
+        "availability": "满月 （ ）期间。"
+      },
+      {
+        "name": "r/Terraria 2023",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "松露人"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "地下",
+          "洞穴",
+          "地狱"
+        ],
+        "neighbors": [
+          "公主",
+          "税收官"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "神圣之地"
+        ],
+        "neighbors": [
+          "护士"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "机械师"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，服装商会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Clothier_(Shimmered).png"
+  },
+  "机械师": {
+    "name": "机械师",
+    "wiki_title": "机械师",
+    "page_type": "npc",
+    "image": "Mechanic_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售 扳手 、 电线 、和其他 机械 相关物品。",
+    "spawn": "机械师 是个 NPC ，出售各种 机械 ，还有 钢丝钳 和 扳手 ，让玩家能够建设和激活连接电路的设备，比如 陷阱 和 小动物引擎 。在击败 骷髅王 后，可以在 地牢 中 洞穴 地层及更深处找到她，她会作为静止的 受缚机械师 随机生成。在这一状态下与她对话会将其释放。如果受缚机械师被杀死，她之后仍能重生；如果机械师 NPC 被杀死，只要有空余 房屋 ，她会在一段时间后再次入住。",
+    "shop": [
+      {
+        "name": "红扳手",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蓝扳手",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绿扳手",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "黄扳手",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "钢丝钳",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "电线",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "控制杆",
+        "price": "30 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "开关",
+        "price": "20 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "红压力板",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绿压力板",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "灰压力板",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "棕压力板",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蓝压力板",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "黄压力板",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "橙压力板",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "青绿压力垫板",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "增速轨道",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "致动器",
+        "price": "10 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "传送机",
+        "price": "2 金 50 银币",
+        "availability": "一直有售。 (电脑版、主机版、和移动版)"
+      },
+      {
+        "name": "分线盒",
+        "price": "2 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "机械标尺",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "机械透镜",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "工程头盔",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "彩线灯泡",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "机械师钓竿",
+        "price": "20 金币",
+        "availability": "在下列 月相 期间： ，当 渔夫 在场时。"
+      },
+      {
+        "name": "1秒计时器",
+        "price": "1 金币",
+        "availability": "一直有售。 (电脑版、主机版、和移动版) (3DS版)"
+      },
+      {
+        "name": "3秒计时器",
+        "price": "1 金币",
+        "availability": "一直有售。 (电脑版、主机版、和移动版) (3DS版)"
+      },
+      {
+        "name": "5秒计时器",
+        "price": "1 金币",
+        "availability": "一直有售。 (电脑版、主机版、和移动版) (3DS版)"
+      },
+      {
+        "name": "1/2秒计时器",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "1/4秒计时器",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "像素盒",
+        "price": "2 银币",
+        "availability": "一直有售。 (电脑版、主机版、和移动版)"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "哥布林工匠"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "雪原生物群系"
+        ],
+        "neighbors": [
+          "公主",
+          "机器侠"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "地下",
+          "洞穴",
+          "地狱"
+        ],
+        "neighbors": [
+          "军火商"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "服装商"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，机械师会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Mechanic_(Shimmered).png"
+  },
+  "派对女孩": {
+    "name": "派对女孩",
+    "wiki_title": "派对女孩",
+    "page_type": "npc",
+    "image": "Party_Girl_(portrait).png",
+    "phase": "pre_hardmode",
+    "description": "出售创造多彩视觉效果的小玩具物品。",
+    "spawn": "和大多数其他城镇 NPC 不同，在下方条件满足时，派对女孩每隔两分钟仅有 1/40 (2.5%) 几率随机生成，在这期间她受到通常的 NPC 生成速度限制。换言之，平均来说她生成所需的时间比常规 NPC 多 40 倍。前述条件为\n有一间空 房屋 。\n(电脑版、主机版、和移动版) 20 / 12 / (前代主机版) 8 名其他城镇 NPC。注意 老人 、 旅商 、和 城镇宠物 (电脑版、主机版、和移动版) 计入此数量中，但 骷髅商人 (电脑版、主机版、和移动版) 并不。",
+    "shop": [
+      {
+        "name": "彩纸枪",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "彩纸",
+        "price": "2 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "烟雾弹",
+        "price": "20 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "泡泡机",
+        "price": "4 金币",
+        "availability": "(电脑版、主机版、和移动版) 白天 / (前代主机版、和3DS版) 一直有售。"
+      },
+      {
+        "name": "造雾机",
+        "price": "4 金币",
+        "availability": "夜间。"
+      },
+      {
+        "name": "泡泡魔棒",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "沙滩球",
+        "price": "20 铜币",
+        "availability": "一直有售。 (电脑版、主机版、和移动版)"
+      },
+      {
+        "name": "熔岩灯",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "等离子灯",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "烟花盒",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "烟花喷泉",
+        "price": "3 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "派对矿车",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "光谱风筝",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蹦蹦跷",
+        "price": "25 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      },
+      {
+        "name": "红火箭",
+        "price": "15 银币",
+        "availability": "在 困难模式 开始之后。"
+      },
+      {
+        "name": "绿火箭",
+        "price": "15 银币",
+        "availability": "在 困难模式 开始之后。"
+      },
+      {
+        "name": "蓝火箭",
+        "price": "15 银币",
+        "availability": "在 困难模式 开始之后。"
+      },
+      {
+        "name": "黄火箭",
+        "price": "15 银币",
+        "availability": "在 困难模式 开始之后。"
+      },
+      {
+        "name": "快乐手榴弹",
+        "price": "2 银50 铜币",
+        "availability": "如果玩家物品栏中有 快乐手榴弹 。"
+      },
+      {
+        "name": "彩纸炮",
+        "price": "25 金币",
+        "availability": "海盗 在场时。"
+      },
+      {
+        "name": "泡泡",
+        "price": "2 银币",
+        "availability": "困难模式 启动以后。"
+      },
+      {
+        "name": "烟雾块",
+        "price": "1 银币",
+        "availability": "在 困难模式 启动后。"
+      },
+      {
+        "name": "派对中心",
+        "price": "20 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "派对帽",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "呆萌气球机",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "派对礼物",
+        "price": "20 银币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "猪龙彩罐",
+        "price": "1 金币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "蓝饰带",
+        "price": "50 铜币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "绿饰带",
+        "price": "50 铜币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "粉饰带",
+        "price": "50 铜币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "呆萌紫气球",
+        "price": "1 银币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "呆萌绿气球",
+        "price": "1 银币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "呆萌粉气球",
+        "price": "1 银币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "呆萌丝带气球（绿）",
+        "price": "10 银币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "呆萌丝带气球（紫）",
+        "price": "10 银币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "呆萌丝带气球（粉）",
+        "price": "10 银币",
+        "availability": "派对进行中时。"
+      },
+      {
+        "name": "喜庆弹射器",
+        "price": "80 金币",
+        "availability": "石巨人 被打败后。 (电脑版、主机版、和移动版)"
+      },
+      {
+        "name": "放飞鸽子",
+        "price": "1 银币",
+        "availability": "在 墓地 中时。"
+      },
+      {
+        "name": "放飞灯笼",
+        "price": "1 银币",
+        "availability": "灯笼夜 期间。"
+      },
+      {
+        "name": "橄榄球",
+        "price": "20 铜币",
+        "availability": "玩家累计 高尔夫分数 得分达到至少 500。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "巫师",
+          "动物学家"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "神圣之地"
+        ],
+        "neighbors": [
+          "公主",
+          "发型师"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "地下",
+          "洞穴",
+          "地狱"
+        ],
+        "neighbors": [
+          "商人"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "税收官"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，派对女孩会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Party_Girl_(Shimmered).png"
+  },
+  "巫师": {
+    "name": "巫师困难模式独有",
+    "wiki_title": "巫师",
+    "page_type": "npc",
+    "image": "Wizard_(portrait).png",
+    "phase": "hardmode",
+    "description": "出售 魔法 相关物品。",
+    "spawn": "巫师 是个 困难模式 NPC 商贩，出售 魔法 相关物品。一旦 血肉墙 被打败，他就会偶尔在 洞穴 地层或更深处作为 受缚巫师 生成，与此状态下的他对话会将其释放。如果受缚巫师被杀死，他之后仍会重生；如果巫师 NPC 被杀死，只要有空余 房屋 ，他会在一段时间后再次入住。\n(电脑版、主机版、和移动版) 当 敌怪 出现在他附近时，巫师会向他们投掷类似于 火之花 那样的火球，同时释放出一个华丽的魔法阵，造成 18 / 27 / 31 伤害。",
+    "shop": [
+      {
+        "name": "水晶球",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "冰雪魔杖",
+        "price": "50 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "强效魔力药水",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "铃铛",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "竖琴",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "魔法书",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "书",
+        "price": "15 银币",
+        "availability": "仅限 电脑版 、 主机版 、和 移动版 。"
+      },
+      {
+        "name": "八音盒",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "空滴管",
+        "price": "1 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "致命牌组",
+        "price": "20 金币",
+        "availability": "血月 期间。"
+      },
+      {
+        "name": "巫师之帽",
+        "price": "3 金币",
+        "availability": "万圣节 期间。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "高尔夫球手"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "神圣之地"
+        ],
+        "neighbors": [
+          "公主",
+          "商人"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "海洋"
+        ],
+        "neighbors": [
+          "巫医"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "机器侠"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，巫师会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Wizard_(Shimmered).png"
+  },
+  "税收官": {
+    "name": "税收官困难模式独有",
+    "wiki_title": "税收官",
+    "page_type": "npc",
+    "image": "Tax_Collector_(portrait).png",
+    "phase": "hardmode",
+    "description": "向其他 NPC 收税。能从每个 NPC 身上赚到 50 CC ，玩家可以收取这笔钱。",
+    "spawn": "在 地狱 中用 净化粉 转化 痛苦亡魂 。 新建 Remix 世界时会取代向导作为起始 NPC。 Zenith 世界的起始 NPC 之一，初始名为“Andrew”。",
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "商人"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "雪原生物群系"
+        ],
+        "neighbors": [
+          "公主",
+          "派对女孩"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "神圣之地"
+        ],
+        "neighbors": [
+          "爆破专家",
+          "机械师"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "圣诞老人"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，税收官会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Tax_Collector_(Shimmered).png"
+  },
+  "松露人": {
+    "name": "松露人困难模式独有",
+    "wiki_title": "松露人",
+    "page_type": "npc",
+    "image": "Truffle_(portrait).png",
+    "phase": "hardmode",
+    "description": "出售 自动锤炼机 、 蘑菇长矛 、和其他蘑菇主题的物品。",
+    "spawn": "如果松露人生成到地表发光蘑菇生物群系中的空闲房屋内，他就会被视为已解锁，且能被重新分配到任意高度的房屋中（只要该房屋位于发光蘑菇生物群系内）。将无家可归的松露人移动到合适的房屋中 不算作 解锁他；此种情况下，他仅能被重新分配到位于地表发光蘑菇生物群系内的房屋中。",
+    "shop": [
+      {
+        "name": "蘑菇帽",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "奇异发光蘑菇",
+        "price": "45 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "我的儿子",
+        "price": "1 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "深蓝溶液",
+        "price": "15 银币",
+        "availability": "一直有货。 在激活 Remix 的世界中不可用（Remix 和 Celebration Mk 10 激活，而未激活 For the Worthy 的世界除外）。"
+      },
+      {
+        "name": "蘑菇长矛",
+        "price": "70 金币",
+        "availability": "任何 机械 Boss 被打败后。"
+      },
+      {
+        "name": "蘑菇锤",
+        "price": "40 金币",
+        "availability": "任何 机械 Boss 被打败后。"
+      },
+      {
+        "name": "自动锤炼机",
+        "price": "1 铂金币",
+        "availability": "世纪之花 被打败后。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 中且在另一个 NPC 附近。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "向导"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "发光蘑菇生物群系"
+        ],
+        "neighbors": [
+          "公主",
+          "树妖"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "服装商"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "巫医"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，松露人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Truffle_(Shimmered).png"
+  },
+  "海盗": {
+    "name": "海盗困难模式独有",
+    "wiki_title": "海盗",
+    "page_type": "npc",
+    "image": "Pirate_(portrait).png",
+    "phase": "hardmode",
+    "description": "出售 大炮 和其他海盗主题物品。",
+    "spawn": "海盗 是一个 困难模式 NPC 商贩，他的外观和来自 海盗入侵 的 海盗船长 敌怪 几乎完全一样。一旦以下条件全部满足他就会入住\n有一间空闲的 房屋 。\n至少完成了一次 海盗入侵 事件 。",
+    "shop": [
+      {
+        "name": "大炮",
+        "price": "25 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "炮弹",
+        "price": "2 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "海盗帽",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "海盗衣",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "海盗裤",
+        "price": "5 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "船帆",
+        "price": "50 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "鹦鹉饼干",
+        "price": "3 铂金 75 金币",
+        "availability": "当在 海洋 生物群系中与其交谈时。"
+      },
+      {
+        "name": "兔兔炮",
+        "price": "50 金币",
+        "availability": "派对女孩 在场、世界处于 困难模式 中且已有 机械 Boss 被打败。"
+      },
+      {
+        "name": "爆炸兔",
+        "price": "35 银币",
+        "availability": "派对女孩在场、世界处于困难模式中且已有机械 Boss被打败。 (前代主机版、和3DS版)"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "渔夫"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "海洋"
+        ],
+        "neighbors": [
+          "公主",
+          "酒馆老板"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "地下",
+          "洞穴",
+          "地狱"
+        ],
+        "neighbors": [
+          "发型师"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "向导"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，海盗会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Pirate_(Shimmered).png"
+  },
+  "蒸汽朋克人": {
+    "name": "蒸汽朋克人困难模式独有",
+    "wiki_title": "蒸汽朋克人",
+    "page_type": "npc",
+    "image": "Steampunker_(portrait).png",
+    "phase": "hardmode",
+    "description": "出售 环境改造枪 、 喷气背包 、和其他物品。",
+    "spawn": "蒸汽朋克人 是个 困难模式 NPC 商贩。一旦玩家打败至少一个 机械 Boss ，并有一间空房屋，她就会出现。",
+    "shop": [
+      {
+        "name": "传送机",
+        "price": "2 金 50 银币",
+        "availability": "(前代主机版、和3DS版) 一直有售。"
+      },
+      {
+        "name": "环境改造枪",
+        "price": "2 铂金币",
+        "availability": "当不在 don't dig up (电脑版、主机版、和移动版) 或 Get fixed boi (电脑版、主机版、和移动版) 世界中时。"
+      },
+      {
+        "name": "蒸汽朋克帽",
+        "price": "1 金 50 银币",
+        "availability": "在 月相 1–4 期间："
+      },
+      {
+        "name": "蒸汽朋克衣",
+        "price": "1 金 50 银币",
+        "availability": "在 月相 1–4 期间："
+      },
+      {
+        "name": "蒸汽朋克裤",
+        "price": "1 金 50 银币",
+        "availability": "在 月相 1–4 期间："
+      },
+      {
+        "name": "喷气背包",
+        "price": "40 金币",
+        "availability": "困难模式 ，在月相 5–8 期间："
+      },
+      {
+        "name": "固化机",
+        "price": "10 金币",
+        "availability": "(前代主机版、和3DS版) 在 白天 。"
+      },
+      {
+        "name": "搅拌机",
+        "price": "10 金币",
+        "availability": "(电脑版、主机版、和移动版) 一直有售，或在 For the Worthy 或 Get fixed boi 世界中仅在 困难模式 。 (前代主机版、和3DS版) 在 夜晚 。"
+      },
+      {
+        "name": "血肉克隆台",
+        "price": "10 金币",
+        "availability": "在 猩红 世界中。"
+      },
+      {
+        "name": "腐变室",
+        "price": "10 金币",
+        "availability": "在 腐化 世界中。"
+      },
+      {
+        "name": "冰雪机",
+        "price": "10 金币",
+        "availability": "(电脑版、主机版、和移动版) 当在 冰雪生物群系 中与其交谈时。"
+      },
+      {
+        "name": "天磨",
+        "price": "10 金币",
+        "availability": "(电脑版、主机版、和移动版) 当在 太空 中与其交谈时。"
+      },
+      {
+        "name": "蜂蜜分配机",
+        "price": "10 金币",
+        "availability": "(电脑版、主机版、和移动版) 当在 丛林 中与其交谈时。"
+      },
+      {
+        "name": "骨头焊机",
+        "price": "10 金币",
+        "availability": "(电脑版、主机版、和移动版) 当在 墓地 中与其交谈时。"
+      },
+      {
+        "name": "生命木织机",
+        "price": "2 银币",
+        "availability": "(电脑版、主机版、和移动版) 如果玩家物品栏中有 生命木魔棒 。"
+      },
+      {
+        "name": "蒸汽朋克锅炉",
+        "price": "10 金币",
+        "availability": "如果 克苏鲁之眼 、 世界吞噬怪 / 克苏鲁之脑 和 骷髅王 已被打败。"
+      },
+      {
+        "name": "紫溶液",
+        "price": "15 银币",
+        "availability": "在腐化世界中， 血月 或 日食 期间，且不在 don't dig up (电脑版、主机版、和移动版) 或 Get fixed boi (电脑版、主机版、和移动版) 世界中。"
+      },
+      {
+        "name": "红溶液",
+        "price": "15 银币",
+        "availability": "在猩红世界中， 血月 或 日食 期间，且不在 don't dig up (电脑版、主机版、和移动版) 或 Get fixed boi (电脑版、主机版、和移动版) 世界中。"
+      },
+      {
+        "name": "蓝溶液",
+        "price": "15 银币",
+        "availability": "在 神圣 或 地下神圣之地 与其交谈，且不在 don't dig up (电脑版、主机版、和移动版) 或 Get fixed boi (电脑版、主机版、和移动版) 世界中。（没有发生血月或日食。）"
+      },
+      {
+        "name": "绿溶液",
+        "price": "15 银币",
+        "availability": "在任何其他生物群系中与其交谈，且不在 don't dig up (电脑版、主机版、和移动版) 或 Get fixed boi (电脑版、主机版、和移动版) 世界中。（没有发生血月或日食。）"
+      },
+      {
+        "name": "黄溶液",
+        "price": "15 银币",
+        "availability": "在击败 月亮领主 后，且不在 Don't dig up 或 Get fixed boi 世界中。"
+      },
+      {
+        "name": "白溶液",
+        "price": "15 银币",
+        "availability": "在击败 月亮领主 后，且不在 Don't dig up 或 Get fixed boi 世界中。"
+      },
+      {
+        "name": "棕溶液",
+        "price": "15 银币",
+        "availability": "在击败 月亮领主 后，且不在 Don't dig up 或 Get fixed boi 世界中。"
+      },
+      {
+        "name": "齿轮",
+        "price": "7 银币",
+        "availability": "在 困难模式 期间"
+      },
+      {
+        "name": "蒸汽朋克矿车",
+        "price": "10 金币",
+        "availability": "在 困难模式 期间"
+      },
+      {
+        "name": "蒸汽朋克护目镜",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "蒸汽朋克之翼",
+        "price": "3 铂金币",
+        "availability": "打败 石巨人 后。"
+      },
+      {
+        "name": "逻辑门",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "逻辑门灯（关）",
+        "price": "10 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "逻辑门灯（开）",
+        "price": "10 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "逻辑门灯（故障）",
+        "price": "2 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "静止钩",
+        "price": "50 金币",
+        "availability": "在 困难模式 期间。"
+      },
+      {
+        "name": "传送带",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "机器侠"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "沙漠"
+        ],
+        "neighbors": [
+          "公主",
+          "油漆工"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "丛林"
+        ],
+        "neighbors": [
+          "派对女孩",
+          "巫师",
+          "树妖"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，蒸汽朋克人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Steampunker_(Shimmered).png"
+  },
+  "机器侠": {
+    "name": "机器侠困难模式独有",
+    "wiki_title": "机器侠",
+    "page_type": "npc",
+    "image": "Cyborg_(portrait).png",
+    "phase": "hardmode",
+    "description": "出售 感应雷发射器 、 火箭 和 纳米机器人 。",
+    "spawn": "机器侠 是个 困难模式 NPC 商贩，一旦当前世界中 世纪之花 被打败过至少一次且有空 房屋 可用时他就会出现。他出售一些“高科技”物品，其中最吸引目光的是 发射器 武器使用的 火箭 弹药。",
+    "shop": [
+      {
+        "name": "火箭一型",
+        "price": "50 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "火箭二型",
+        "price": "2 银50 铜币",
+        "availability": "在 血月 期间。"
+      },
+      {
+        "name": "火箭三型",
+        "price": "1 银币",
+        "availability": "在 夜晚 或在 日食 期间。"
+      },
+      {
+        "name": "火箭四型",
+        "price": "5 银币",
+        "availability": "在 日食 期间。"
+      },
+      {
+        "name": "干火箭",
+        "price": "50 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "感应雷发射器",
+        "price": "35 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "纳米机器人",
+        "price": "15 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "集束火箭一型",
+        "price": "7 银50 铜币",
+        "availability": "在打败了 火星暴乱 事件后就一直有售。"
+      },
+      {
+        "name": "集束火箭二型",
+        "price": "15 银币",
+        "availability": "在打败了火星暴乱事件后，血月或日食期间。"
+      },
+      {
+        "name": "机器侠头盔",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "机器侠衣",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "机器侠裤",
+        "price": "3 金币",
+        "availability": "在 万圣节 期间。"
+      },
+      {
+        "name": "高科技墨镜",
+        "price": "5 金币",
+        "availability": "在打败了 火星暴乱 事件后就一直有售。"
+      },
+      {
+        "name": "夜视头盔",
+        "price": "5 金币",
+        "availability": "在打败了 火星暴乱 事件后就一直有售。"
+      },
+      {
+        "name": "传送枪站",
+        "price": "10 金币",
+        "availability": "当玩家的物品栏中有 传送枪 或 传送枪站 时。"
+      },
+      {
+        "name": "回声块",
+        "price": "10 银币",
+        "availability": "当在 墓地 中与其交谈时。"
+      },
+      {
+        "name": "幽灵护目镜",
+        "price": "10 金币",
+        "availability": "当在 墓地 中与其交谈时。"
+      },
+      {
+        "name": "四轴竞速无人机",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "FPV飞行眼镜",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "雪原生物群系"
+        ],
+        "neighbors": [
+          "公主",
+          "发型师",
+          "海盗",
+          "蒸汽朋克人"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "丛林"
+        ],
+        "neighbors": [
+          "动物学家"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "巫师"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，机器侠会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Cyborg_(Shimmered).png"
+  },
+  "圣诞老人": {
+    "name": "圣诞老人",
+    "wiki_title": "圣诞老人",
+    "page_type": "npc",
+    "image": "Santa_Claus_(portrait).png",
+    "phase": "hardmode",
+    "description": "出售若干独特的 圣诞节 主题时装和小玩具物品。",
+    "spawn": "雪人军团 已被击败且现在是 圣诞节 。",
+    "shop": [
+      {
+        "name": "圣诞帽",
+        "price": "15 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "圣诞衣",
+        "price": "15 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "圣诞裤",
+        "price": "15 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "圣诞树",
+        "price": "25 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "红灯",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绿灯",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蓝灯",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "星星顶饰1",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "星星顶饰2",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "星星顶饰3",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "505顶饰",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "蝴蝶结顶饰",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "白花环",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "白红花环",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "红花环",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "红绿花环",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绿花环",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绿白花环",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "五彩灯泡",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "红灯泡",
+        "price": "5 银币",
+        "availability": "一直有售。"
+      }
+    ],
+    "preferences": [
+      {
+        "level": "喜爱",
+        "biomes": [
+          "雪原生物群系"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "喜欢",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "公主"
+        ]
+      },
+      {
+        "level": "反感",
+        "biomes": [
+          "无"
+        ],
+        "neighbors": [
+          "无"
+        ]
+      },
+      {
+        "level": "讨厌",
+        "biomes": [
+          "沙漠"
+        ],
+        "neighbors": [
+          "税收官"
+        ]
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，圣诞老人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Santa_Claus_(Shimmered).png"
+  },
+  "公主": {
+    "name": "公主",
+    "wiki_title": "公主",
+    "page_type": "npc",
+    "image": "Princess_(portrait).png",
+    "phase": "hardmode",
+    "description": "出售若干时装和家具物品。",
+    "spawn": "公主 是个商贩 NPC ，一旦满足以下条件就会生成\n有一间空 房屋 。\n所有其他城镇 NPC（不包括 圣诞老人 或 城镇宠物 ）都已在场，这意味着她只能在打败 世纪之花 后才能生成，因为那时候 机器侠 NPC 才会入住。",
+    "shop": [
+      {
+        "name": "皇家头冠",
+        "price": "50 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "皇家女衫",
+        "price": "50 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "皇家礼服裙",
+        "price": "50 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "皇家权杖",
+        "price": "1 铂金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "水晶鞋",
+        "price": "1 铂金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "王子制服",
+        "price": "50 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "王子裤",
+        "price": "50 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "王子披风",
+        "price": "50 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "盆栽水晶蕨",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "盆栽水晶螺旋",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "盆栽水晶泪滴",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "盆栽水晶树",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "公主64",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "少女画像",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "神圣之地的黑暗面",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "公主风",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "可疑闪光",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "泰拉刃纪事",
+        "price": "10 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "伯尼的钮扣",
+        "price": "25 金币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "皇家浪漫",
+        "price": "10 金币",
+        "availability": "当 史莱姆王 和 史莱姆皇后 都被击败后。"
+      },
+      {
+        "name": "八音盒（旅程结束）",
+        "price": "10 金币",
+        "availability": "月亮领主 已被打败且世界是在 困难模式 中。"
+      },
+      {
+        "name": "史莱姆法杖",
+        "price": "10 金币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中。"
+      },
+      {
+        "name": "红心灯笼",
+        "price": "7 金 50 银币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中。"
+      },
+      {
+        "name": "派对药剂",
+        "price": "15 银币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中。"
+      },
+      {
+        "name": "沙暴瓶",
+        "price": "5 金币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中，在 沙漠 内与其交谈。"
+      },
+      {
+        "name": "泰拉魔刃",
+        "price": "25 金币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中， 血月 期间。"
+      },
+      {
+        "name": "海盗法杖",
+        "price": "5 金币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中， 困难模式 中， 海盗入侵 已被打败，且在以下 月相 期间： 。"
+      },
+      {
+        "name": "优惠卡",
+        "price": "5 金币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中， 困难模式 中， 海盗入侵 已被打败，且在以下 月相 期间： 。"
+      },
+      {
+        "name": "幸运币",
+        "price": "5 金币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中， 困难模式 中， 海盗入侵 已被打败，且在以下 月相 期间： 。"
+      },
+      {
+        "name": "钱币枪",
+        "price": "30 金币",
+        "availability": "在 Celebrationmk10 (电脑版、主机版、和移动版) 世界中， 困难模式 中， 海盗入侵 已被打败，且在以下 月相 期间： 。"
+      },
+      {
+        "name": "任何晶塔",
+        "price": "10 金币",
+        "availability": "当在特定 生物群系 时。"
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，公主会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Princess_(Shimmered).png"
+  },
+  "旅商": {
+    "name": "旅商",
+    "wiki_title": "旅商",
+    "page_type": "npc",
+    "image": "Traveling_Merchant_(portrait).png",
+    "phase": "other",
+    "description": "停留到夜晚为止，且每次都出售随机选择的独特物品。",
+    "spawn": "想要满足旅商的生成条件，需要已经有至少 2 个其他NPC已经到达。 向导 可为其中之一，但不计算 老人 和 骷髅商人 。 他不会在 日食 ， 哥布林军队 ， 雪人军团 ， 海盗入侵 或 火星暴乱 期间生成。 他不需要有自己的 房屋 就能生成，而是生成在其他 NPC（包括 城镇宠物 ）附近，整天围着他们转悠。\n一旦满足条件，他将在上午 4:30 和下午 12:00 之间随机生成。他于当天的下午 6:00 离开，但这只会在他离开屏幕的情况下发生。如果世界中已经没有任何玩家（包括死亡状态的），他也将立即消失。",
+    "shop": [
+      {
+        "name": "舒适窗户",
+        "price": "1 金币"
+      },
+      {
+        "name": "蓝虎Yuuma",
+        "price": "50 银币"
+      },
+      {
+        "name": "异域英雄",
+        "price": "2 金 50 银币"
+      },
+      {
+        "name": "Israpony的阳光",
+        "price": "50 银币"
+      },
+      {
+        "name": "不要吃魔菇！",
+        "price": "50 银币"
+      },
+      {
+        "name": "秒差距伙伴",
+        "price": "50 银币"
+      },
+      {
+        "name": "奶酪比萨海报",
+        "price": "50 银币"
+      },
+      {
+        "name": "二元性",
+        "price": "50 银币"
+      },
+      {
+        "name": "本尼·沃霍尔",
+        "price": "50 银币"
+      },
+      {
+        "name": "Kargoh的召唤",
+        "price": "50 银币"
+      },
+      {
+        "name": "秒表",
+        "price": "5 金币"
+      },
+      {
+        "name": "生命体分析机",
+        "price": "5 金币"
+      },
+      {
+        "name": "每秒伤害计数器",
+        "price": "5 金币"
+      },
+      {
+        "name": "草坪火烈鸟",
+        "price": "5 金币"
+      },
+      {
+        "name": "粉团队块",
+        "price": "1 银币",
+        "availability": "一次只会出售 单色团队块"
+      },
+      {
+        "name": "粉团队平台",
+        "price": "1 银币",
+        "availability": "出售 粉团队块 时 总是有售"
+      },
+      {
+        "name": "黄团队块",
+        "price": "1 银币",
+        "availability": "一次只会出售 单色团队块"
+      },
+      {
+        "name": "黄团队平台",
+        "price": "1 银币",
+        "availability": "出售 黄团队块 时 总是有售"
+      },
+      {
+        "name": "绿团队块",
+        "price": "1 银币",
+        "availability": "一次只会出售 单色团队块"
+      },
+      {
+        "name": "绿团队平台",
+        "price": "1 银币",
+        "availability": "出售 绿团队块 时 总是有售"
+      },
+      {
+        "name": "蓝团队块",
+        "price": "1 银币",
+        "availability": "一次只会出售 单色团队块"
+      },
+      {
+        "name": "蓝团队平台",
+        "price": "1 银币",
+        "availability": "出售 蓝团队块 时 总是有售"
+      },
+      {
+        "name": "红团队块",
+        "price": "1 银币",
+        "availability": "一次只会出售 单色团队块"
+      },
+      {
+        "name": "红团队平台",
+        "price": "1 银币",
+        "availability": "出售 红团队块 时 总是有售"
+      },
+      {
+        "name": "白团队块",
+        "price": "1 银币",
+        "availability": "一次只会出售 单色团队块"
+      },
+      {
+        "name": "白团队平台",
+        "price": "1 银币",
+        "availability": "出售 白团队块 时 总是有售"
+      },
+      {
+        "name": "王朝木",
+        "price": "50 铜币"
+      },
+      {
+        "name": "红王朝瓦",
+        "price": "50 铜币",
+        "availability": "出售 王朝木 时 总是有售"
+      },
+      {
+        "name": "蓝王朝瓦",
+        "price": "50 铜币",
+        "availability": "出售 王朝木 时 总是有售"
+      },
+      {
+        "name": "精致餐具",
+        "price": "20 银币"
+      },
+      {
+        "name": "圣餐杯",
+        "price": "50 银币"
+      },
+      {
+        "name": "斑马皮",
+        "price": "1 金币"
+      },
+      {
+        "name": "豹皮",
+        "price": "1 金币"
+      },
+      {
+        "name": "虎皮",
+        "price": "1 金币"
+      },
+      {
+        "name": "清酒",
+        "price": "5 银币"
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，旅商会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Traveling_Merchant_(Shimmered).png"
+  },
+  "老人": {
+    "name": "老人",
+    "wiki_title": "老人",
+    "page_type": "npc",
+    "image": "Old_Man_(portrait).png",
+    "phase": "other",
+    "description": "在 地牢 入口处会碰到。与其交谈会召唤 骷髅王 ，但仅限夜间。一旦骷髅王被击败，老人就会以 服装商 的身份搬到城镇里。",
+    "spawn": "老人 是个 NPC ，其主要功能是召唤 骷髅王 。他出现在 地牢 的入口处。若在 夜晚 与其对话，老人会给玩家一个叫“ 诅咒 ”的选项，此选项会召唤骷髅王。若在白天与其对话，老人会告诉玩家晚上再来。他还会把 300 永久最大 生命 （15 颗心）或更低，或者 10 防御 或更低的玩家判断为太弱，但依然会允许他们召唤召唤骷髅王。\n在没打败骷髅王时也可以进入地牢，但在其中前进至低于地表水平面（低于零 深度 ）时会生成 地牢守卫 ，它极有可能一照面就干掉玩家。（ 参见 指南:地牢守卫攻略 ）。",
+    "shimmer": "当浸没在 微光 中后，老人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Old_Man_(Shimmered).png"
+  },
+  "骷髅商人": {
+    "name": "骷髅商人",
+    "wiki_title": "骷髅商人",
+    "page_type": "npc",
+    "image": "Skeleton_Merchant_(portrait).png",
+    "phase": "other",
+    "description": "基于月相出售 平衡锤 、 洞穴探险荧光棒 、 魔法灯笼 、 悠悠球手套 和一些其他物品，有一些物品比如 拍拍手 只能从他这里得到。",
+    "spawn": "骷髅商人 是个商贩 NPC ，随机生成在 洞穴 地层 中。\n尽管敌怪不会在他附近生成，但他并非城镇 NPC，离开屏幕会消失。",
+    "shop": [
+      {
+        "name": "木回旋镖",
+        "price": "1 金币",
+        "availability": "(电脑版、主机版、和移动版) 在满月 期间"
+      },
+      {
+        "name": "伞",
+        "price": "1 金币",
+        "availability": "(电脑版、主机版、和移动版) 在亏凸月 期间"
+      },
+      {
+        "name": "火花魔棒",
+        "price": "1 金币",
+        "availability": "(电脑版、主机版、和移动版) 在普通世界的下弦月 期间"
+      },
+      {
+        "name": "魔法飞刀",
+        "price": "50 银币",
+        "availability": "(电脑版、主机版、和移动版) 在 don't dig up 世界的下弦月 期间"
+      },
+      {
+        "name": "梯凳",
+        "price": "2 金 50 银币",
+        "availability": "在残月 期间"
+      },
+      {
+        "name": "鞋带束头",
+        "price": "2 金 50 银币",
+        "availability": "(电脑版、主机版、和移动版) 在新月 期间"
+      },
+      {
+        "name": "攀爬爪",
+        "price": "2 金 50 银币",
+        "availability": "(电脑版、主机版、和移动版) 在娥眉月 期间"
+      },
+      {
+        "name": "植物纤维绳索宝典",
+        "price": "2 金 50 银币",
+        "availability": "(电脑版、主机版、和移动版) 在上弦月 期间"
+      },
+      {
+        "name": "雷达",
+        "price": "2 金 50 银币",
+        "availability": "(电脑版、主机版、和移动版) 在盈凸月 期间"
+      },
+      {
+        "name": "诡药",
+        "price": "5 银币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "弱效治疗药水",
+        "price": "3 银币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "治疗药水",
+        "price": "10 银币",
+        "availability": "(电脑版、主机版、和移动版) 在困难模式下，下列月相期间："
+      },
+      {
+        "name": "洞穴探险荧光棒",
+        "price": "1 银50 铜币",
+        "availability": "在夜晚，或者满月 期间的全天"
+      },
+      {
+        "name": "洞穴探险照明弹",
+        "price": "1 银50 铜币",
+        "availability": "当玩家物品栏中有 信号枪 ，在夜晚，或满月 期间的全天"
+      },
+      {
+        "name": "荧光棒",
+        "price": "10 铜币",
+        "availability": "在以下月相期间的白天："
+      },
+      {
+        "name": "骨头火把",
+        "price": "1 银币",
+        "availability": "在游戏内每一分钟（现实世界中的每一秒）的前半段。"
+      },
+      {
+        "name": "火把",
+        "price": "50 铜币",
+        "availability": "在游戏内每一分钟（现实世界中的每一秒）的后半段。"
+      },
+      {
+        "name": "骨箭",
+        "price": "15 铜币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "木箭",
+        "price": "5 铜币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "蓝平衡锤",
+        "price": "5 金币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "红平衡锤",
+        "price": "5 金币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "紫平衡锤",
+        "price": "5 金币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "绿平衡锤",
+        "price": "5 金币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "经典轮滑鞋",
+        "price": "10 金币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "绿轮滑鞋",
+        "price": "10 金币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "派对轮滑鞋",
+        "price": "10 金币",
+        "availability": "在以下月相期间："
+      },
+      {
+        "name": "炸弹",
+        "price": "3 银币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "绳",
+        "price": "10 铜币",
+        "availability": "一直有售。"
+      },
+      {
+        "name": "渐变球",
+        "price": "20 金币",
+        "availability": "在 困难模式 中，以下月相期间："
+      },
+      {
+        "name": "好胜球",
+        "price": "20 金币",
+        "availability": "在 困难模式 中，以下月相期间："
+      },
+      {
+        "name": "悠悠球手套",
+        "price": "50 金币",
+        "availability": "在 困难模式 中。"
+      },
+      {
+        "name": "拍拍手",
+        "price": "25 金币",
+        "availability": "在 困难模式 中， 血月 期间。"
+      },
+      {
+        "name": "魔法绳",
+        "price": "1 铂金币",
+        "availability": "(电脑版、主机版、和移动版) 在 困难模式 中，击败任一 机械 Boss 后。"
+      },
+      {
+        "name": "魔法灯笼",
+        "price": "10 金币",
+        "availability": "在满月 期间的夜晚"
+      },
+      {
+        "name": "工匠面包",
+        "price": "10 金币",
+        "availability": "若玩家未使用过工匠面包，在下列月相期间："
+      }
+    ],
+    "shimmer": "当浸没在 微光 中后，骷髅商人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
+    "shimmer_image": "Skeleton_Merchant_(Shimmered).png"
+  }
+}

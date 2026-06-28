@@ -24,6 +24,7 @@ from .category_data import (
     load_biomes_for_plugin,
     load_items_for_plugin,
     load_mounts_for_plugin,
+    load_npcs_for_plugin,
     load_pets_for_plugin,
 )
 from .prepare_data import (
@@ -209,6 +210,8 @@ BUFF_ICON_SLOT = (32, 32)
 MOUNT_PREVIEW_SLOT = (80, 72)
 PET_PREVIEW_SLOT = (80, 72)
 BIOME_BANNER_MAX_SIZE = (CARD_WIDTH - CARD_PADDING * 2, 140)
+NPC_PORTRAIT_MAX_SIZE = (100, 100)
+NPC_SHIMMER_MAX_SIZE = (80, 80)
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -1178,6 +1181,10 @@ _CARD_UI = {
     "unknown": "未知物品",
     "recipe_title": "📜 合成配方",
     "set_pieces": "▎套装部件",
+    "npc_spawn": "▎生成条件",
+    "npc_shop": "▎出售物品",
+    "npc_preferences": "▎生活偏好",
+    "npc_shimmer": "▎微光形态",
 }
 
 
@@ -1202,6 +1209,12 @@ def _biome_zh_search_names(key: str, biome: dict) -> set[str]:
     return {n for n in names if n}
 
 
+def _npc_zh_search_names(key: str, npc: dict) -> set[str]:
+    names = {key, npc.get("name", ""), npc.get("wiki_title", "")}
+    names.update(npc.get("search_terms") or [])
+    return {n for n in names if n}
+
+
 _SEARCH_INDEX: list[tuple[str, str, frozenset[str]]] | None = None
 _SEARCH_INDEX_SIG: tuple | None = None
 
@@ -1211,18 +1224,23 @@ def _search_index_signature(
     mounts: dict[str, dict],
     pets: dict[str, dict],
     biomes: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
 ) -> tuple:
     if biomes is None:
         biomes = {}
+    if npcs is None:
+        npcs = {}
     return (
         len(items),
         len(mounts),
         len(pets),
         len(biomes),
+        len(npcs),
         tuple(sorted(items.keys())),
         tuple(sorted(mounts.keys())),
         tuple(sorted(pets.keys())),
         tuple(sorted(biomes.keys())),
+        tuple(sorted(npcs.keys())),
     )
 
 
@@ -1231,14 +1249,18 @@ def rebuild_search_index(
     mounts: dict[str, dict],
     pets: dict[str, dict],
     biomes: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
 ) -> None:
     """预构建搜索索引，避免每次查询重复计算别名集合。"""
     if biomes is None:
         biomes = {}
+    if npcs is None:
+        npcs = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
     entries: list[tuple[str, str, frozenset[str]]] = []
     for pool_name, pool, name_fn in (
         ("biome", biomes, _biome_zh_search_names),
+        ("npc", npcs, _npc_zh_search_names),
         ("mount", mounts, _item_zh_search_names),
         ("pet", pets, _item_zh_search_names),
         ("item", items, _item_zh_search_names),
@@ -1247,7 +1269,7 @@ def rebuild_search_index(
             zh_names = frozenset(name_fn(key, item))
             entries.append((pool_name, key, zh_names))
     _SEARCH_INDEX = entries
-    _SEARCH_INDEX_SIG = _search_index_signature(items, mounts, pets, biomes)
+    _SEARCH_INDEX_SIG = _search_index_signature(items, mounts, pets, biomes, npcs)
 
 
 def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
@@ -1271,7 +1293,7 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
     return [key for key, _ in ranked]
 
 
-_POOL_SEARCH_ORDER = ("biome", "mount", "pet", "item")
+_POOL_SEARCH_ORDER = ("biome", "npc", "mount", "pet", "item")
 _POOL_PRIORITY = {name: idx for idx, name in enumerate(_POOL_SEARCH_ORDER)}
 
 
@@ -1335,16 +1357,19 @@ def _split_search_matches(
     mounts: dict[str, dict],
     pets: dict[str, dict] | None = None,
     biomes: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
 ) -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
     """拆分为精确匹配与模糊匹配（均按相关度排序）。"""
     if pets is None:
         pets = {}
     if biomes is None:
         biomes = {}
+    if npcs is None:
+        npcs = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
-    sig = _search_index_signature(items, mounts, pets, biomes)
+    sig = _search_index_signature(items, mounts, pets, biomes, npcs)
     if _SEARCH_INDEX is None or _SEARCH_INDEX_SIG != sig:
-        rebuild_search_index(items, mounts, pets, biomes)
+        rebuild_search_index(items, mounts, pets, biomes, npcs)
 
     exact: list[tuple[str, str]] = []
     partial: list[tuple[str, str]] = []
@@ -1374,9 +1399,12 @@ def _fuzzy_match_all(
     mounts: dict[str, dict],
     pets: dict[str, dict] | None = None,
     biomes: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
 ) -> list[tuple[str, str]]:
-    """返回 (来源, 键) 列表，来源为 biome、item、mount 或 pet。"""
-    exact, partial = _split_search_matches(query, items, mounts, pets, biomes)
+    """返回 (来源, 键) 列表，来源为 biome、npc、item、mount 或 pet。"""
+    exact, partial = _split_search_matches(
+        query, items, mounts, pets, biomes, npcs
+    )
     if exact:
         return exact
     return partial
@@ -2009,6 +2037,194 @@ def _generate_biome_card(data: dict) -> str:
     return output_path
 
 
+def _npc_preference_lines(preferences: list[dict]) -> list[str]:
+    lines: list[str] = []
+    for row in preferences:
+        parts = [row.get("level", "")]
+        biomes = row.get("biomes") or []
+        neighbors = row.get("neighbors") or []
+        if biomes:
+            parts.append("生物群系：" + "、".join(biomes))
+        if neighbors:
+            parts.append("邻居：" + "、".join(neighbors))
+        lines.append(" · ".join(p for p in parts if p))
+    return lines
+
+
+def _npc_shop_lines(shop: list[dict]) -> list[str]:
+    lines: list[str] = []
+    for entry in shop:
+        parts = [entry.get("name", "")]
+        if entry.get("price"):
+            parts.append(entry["price"])
+        if entry.get("availability"):
+            parts.append(entry["availability"])
+        line = " · ".join(p for p in parts if p)
+        if line:
+            lines.append(line)
+    return lines
+
+
+def _npc_spawn_lines(spawn: str) -> list[str]:
+    lines: list[str] = []
+    for block in spawn.split("\n"):
+        block = block.strip()
+        if block:
+            lines.append(block)
+    return lines
+
+
+def _calc_labeled_text_block(
+    measure,
+    lines: list[str],
+    font,
+    *,
+    include_header: bool = True,
+) -> int:
+    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
+    area = (30 if include_header else 0) + 10
+    for line in lines:
+        wrapped = _wrap_text_lines(measure, line, font, max_w)
+        area += max(1, len(wrapped)) * DESC_LINE_HEIGHT + 4
+    return area
+
+
+def _draw_labeled_text_block(
+    draw,
+    y: int,
+    header: str,
+    lines: list[str],
+    font_header,
+    font_body,
+) -> int:
+    draw.text((CARD_PADDING + 10, y), header, fill=COLORS["accent"], font=font_header)
+    y += 30
+    x = CARD_PADDING + 20
+    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
+    for line in lines:
+        for wrapped in _wrap_text_lines(draw, line, font_body, max_w):
+            draw.text((x, y), wrapped, fill=COLORS["value"], font=font_body)
+            y += DESC_LINE_HEIGHT
+        y += 4
+    return y + 6
+
+
+def _display_npc(npc: dict) -> dict:
+    return {
+        "name": npc.get("name", ""),
+        "image": npc.get("image", ""),
+        "description": npc.get("description"),
+        "spawn": npc.get("spawn"),
+        "shop": npc.get("shop"),
+        "preferences": npc.get("preferences"),
+        "shimmer": npc.get("shimmer"),
+        "shimmer_image": npc.get("shimmer_image"),
+        "page_type": "npc",
+    }
+
+
+def _format_npc_text(data: dict) -> str:
+    ui = _CARD_UI
+    lines = [data.get("name", ""), ""]
+    if data.get("description"):
+        lines.extend([ui["description"].lstrip("▎"), data["description"], ""])
+    if data.get("spawn"):
+        lines.extend([ui["npc_spawn"].lstrip("▎"), data["spawn"], ""])
+    if data.get("shop"):
+        lines.append(ui["npc_shop"].lstrip("▎"))
+        lines.extend(_npc_shop_lines(data["shop"]))
+        lines.append("")
+    if data.get("preferences"):
+        lines.append(ui["npc_preferences"].lstrip("▎"))
+        lines.extend(_npc_preference_lines(data["preferences"]))
+        lines.append("")
+    if data.get("shimmer"):
+        lines.extend([ui["npc_shimmer"].lstrip("▎"), data["shimmer"]])
+    return "\n".join(lines).strip()
+
+
+def _generate_npc_card(data: dict) -> str:
+    _ensure_dirs()
+    ui = _CARD_UI
+    locale = "zh"
+    output_path = _card_output_path(data.get("name", ""), locale)
+    if os.path.isfile(output_path):
+        return output_path
+
+    font_title = _try_get_font(26)
+    font_header = _try_get_font(20)
+    font_small = _try_get_font(16)
+
+    measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
+    title_area = 52
+    portrait_img = _load_item_image(data.get("image", ""), NPC_PORTRAIT_MAX_SIZE)
+    portrait_area = portrait_img.height + 16 if portrait_img else 0
+
+    desc_lines = [data["description"]] if data.get("description") else []
+    spawn_lines = _npc_spawn_lines(data.get("spawn", ""))
+    shop_lines = _npc_shop_lines(data.get("shop") or [])
+    pref_lines = _npc_preference_lines(data.get("preferences") or [])
+    shimmer_lines = [data["shimmer"]] if data.get("shimmer") else []
+    shimmer_img = (
+        _load_item_image(data.get("shimmer_image", ""), NPC_SHIMMER_MAX_SIZE)
+        if data.get("shimmer_image")
+        else None
+    )
+    shimmer_img_area = shimmer_img.height + 12 if shimmer_img else 0
+
+    body_area = 0
+    if desc_lines:
+        body_area += _calc_labeled_text_block(measure, desc_lines, font_small)
+    if spawn_lines:
+        body_area += _calc_labeled_text_block(measure, spawn_lines, font_small)
+    if shop_lines:
+        body_area += _calc_labeled_text_block(measure, shop_lines, font_small)
+    if pref_lines:
+        body_area += _calc_labeled_text_block(measure, pref_lines, font_small)
+    if shimmer_lines:
+        body_area += _calc_labeled_text_block(measure, shimmer_lines, font_small)
+        body_area += shimmer_img_area
+
+    total_height = CARD_PADDING * 2 + title_area + portrait_area + body_area + 10
+    card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
+    draw = ImageDraw.Draw(card)
+
+    draw.rounded_rectangle(
+        [CARD_PADDING, CARD_PADDING, CARD_WIDTH - CARD_PADDING, CARD_PADDING + title_area],
+        radius=8,
+        fill=COLORS["header_bg"],
+    )
+    draw.text(
+        (CARD_PADDING + 15, CARD_PADDING + 10),
+        data.get("name", ui["unknown"]),
+        fill=COLORS["title"],
+        font=font_title,
+    )
+
+    y = CARD_PADDING + title_area + 12
+    if portrait_img:
+        px = CARD_PADDING + max(0, (CARD_WIDTH - CARD_PADDING * 2 - portrait_img.width) // 2)
+        card.paste(portrait_img, (px, y), portrait_img)
+        y += portrait_img.height + 16
+
+    if desc_lines:
+        y = _draw_labeled_text_block(draw, y, ui["description"], desc_lines, font_header, font_small)
+    if spawn_lines:
+        y = _draw_labeled_text_block(draw, y, ui["npc_spawn"], spawn_lines, font_header, font_small)
+    if shop_lines:
+        y = _draw_labeled_text_block(draw, y, ui["npc_shop"], shop_lines, font_header, font_small)
+    if pref_lines:
+        y = _draw_labeled_text_block(draw, y, ui["npc_preferences"], pref_lines, font_header, font_small)
+    if shimmer_lines:
+        y = _draw_labeled_text_block(draw, y, ui["npc_shimmer"], shimmer_lines, font_header, font_small)
+        if shimmer_img:
+            sx = CARD_PADDING + 20
+            card.paste(shimmer_img, (sx, y), shimmer_img)
+
+    card.convert("RGB").save(output_path, "PNG")
+    return output_path
+
+
 def _format_update_result(result: dict, force: bool = False) -> str:
     drops_count = result.get("drops_backfill_count", 0)
     desc_count = result.get("desc_backfill_count", 0)
@@ -2034,6 +2250,10 @@ def _format_update_result(result: dict, force: bool = False) -> str:
     biome_total = result.get("biome_total", 0)
     if biome_new or biome_total:
         extra_lines += f"\n生物群系：{biome_total} 个（本次 +{biome_new}）"
+    npc_new = result.get("npc_new_count", 0)
+    npc_total = result.get("npc_total", 0)
+    if npc_new or npc_total:
+        extra_lines += f"\n城镇 NPC：{npc_total} 个（本次 +{npc_new}）"
     if result.get("new_count", 0) == 0 and not extra_lines:
         return (
             f"✅ Wiki 数据已是最新\n"
@@ -2065,6 +2285,7 @@ class TerrariaQueryPlugin(Star):
         self.mounts: dict[str, dict] = {}
         self.pets: dict[str, dict] = {}
         self.biomes: dict[str, dict] = {}
+        self.npcs: dict[str, dict] = {}
         self._load_data()
 
         self._cron_task: asyncio.Task | None = None
@@ -2138,7 +2359,8 @@ class TerrariaQueryPlugin(Star):
         self._load_mounts()
         self._load_pets()
         self._load_biomes()
-        rebuild_search_index(self.items, self.mounts, self.pets, self.biomes)
+        self._load_npcs()
+        rebuild_search_index(self.items, self.mounts, self.pets, self.biomes, self.npcs)
         if not _CARD_CACHE_PRUNED:
             _prune_old_card_cache()
             _CARD_CACHE_PRUNED = True
@@ -2187,6 +2409,16 @@ class TerrariaQueryPlugin(Star):
             logger.error(f"加载 biomes.json 失败: {e}")
         self.biomes = {}
 
+    def _load_npcs(self) -> None:
+        try:
+            self.npcs = load_npcs_for_plugin(CATEGORIES_DIR)
+            if self.npcs:
+                logger.info(f"已加载 {len(self.npcs)} 个城镇 NPC")
+                return
+        except Exception as e:
+            logger.error(f"加载 npcs.json 失败: {e}")
+        self.npcs = {}
+
     @filter.regex(_TERRARIA_CMD_RE, priority=10)
     async def on_terraria_command(self, event: AstrMessageEvent):
         """处理泰拉瑞亚查询/更新指令（支持无 / 前缀）。"""
@@ -2210,13 +2442,14 @@ class TerrariaQueryPlugin(Star):
     async def _handle_query(self, event: AstrMessageEvent, text: str):
         if not text:
             yield event.plain_result(
-                "用法: 泰拉查询 <物品名/群系名>\n"
+                "用法: 泰拉查询 <物品名/群系名/NPC名>\n"
                 "例如: 泰拉查询 天顶剑\n"
-                "      泰拉查询 森林"
+                "      泰拉查询 森林\n"
+                "      泰拉查询 军火商"
             )
             return
 
-        if not self.items and not self.mounts and not self.pets and not self.biomes:
+        if not self.items and not self.mounts and not self.pets and not self.biomes and not self.npcs:
             yield event.plain_result(
                 "❌ 离线数据尚未准备。\n"
                 "请在 WebUI 配置插件后发送「泰拉更新」，或从仓库拉取已包含的 data/ 目录。"
@@ -2224,14 +2457,14 @@ class TerrariaQueryPlugin(Star):
             return
 
         matches = _fuzzy_match_all(
-            text, self.items, self.mounts, self.pets, self.biomes
+            text, self.items, self.mounts, self.pets, self.biomes, self.npcs
         )
         if not matches:
             yield event.plain_result(f"❌ 未找到「{text}」的相关信息。")
             return
 
         exact, partial = _split_search_matches(
-            text, self.items, self.mounts, self.pets, self.biomes
+            text, self.items, self.mounts, self.pets, self.biomes, self.npcs
         )
 
         if exact:
@@ -2251,6 +2484,7 @@ class TerrariaQueryPlugin(Star):
             for source, key in matches:
                 pool = {
                     "biome": self.biomes,
+                    "npc": self.npcs,
                     "mount": self.mounts,
                     "pet": self.pets,
                     "item": self.items,
@@ -2272,6 +2506,7 @@ class TerrariaQueryPlugin(Star):
     ):
         pool = {
             "biome": self.biomes,
+            "npc": self.npcs,
             "mount": self.mounts,
             "pet": self.pets,
             "item": self.items,
@@ -2285,6 +2520,15 @@ class TerrariaQueryPlugin(Star):
             except Exception as e:
                 logger.error(f"生成群系图片失败 ({key}): {e}")
                 yield event.plain_result(_format_biome_text(display))
+            return
+        if source == "npc":
+            display = _display_npc(item)
+            try:
+                card_path = _generate_npc_card(display)
+                yield event.image_result(card_path)
+            except Exception as e:
+                logger.error(f"生成 NPC 图片失败 ({key}): {e}")
+                yield event.plain_result(_format_npc_text(display))
             return
         display = _display_item(item)
         try:

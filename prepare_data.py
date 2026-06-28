@@ -136,6 +136,14 @@ def _biome_data_module():
     return biome_data
 
 
+def _npc_data_module():
+    try:
+        from . import npc_data
+    except ImportError:
+        import npc_data
+    return npc_data
+
+
 def _persist_items(items: dict[str, dict]) -> None:
     cd = _category_data_module()
     strip_english_fields(items)
@@ -2676,6 +2684,10 @@ async def update_wiki_data(
         "new_count": 0,
         "total": len(_biome_data_module().load_biomes_for_plugin(CATEGORIES_DIR)),
     }
+    npc_result = {
+        "new_count": 0,
+        "total": len(_npc_data_module().load_npcs_for_plugin(CATEGORIES_DIR)),
+    }
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -2766,6 +2778,7 @@ async def update_wiki_data(
         mount_result = await refresh_mounts(session, force=force)
         pet_result = await refresh_pets(session, force=force)
         biome_result = await _biome_data_module().refresh_biomes(session, force=force)
+        npc_result = await _npc_data_module().refresh_npcs(session, force=force)
 
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
@@ -2793,6 +2806,8 @@ async def update_wiki_data(
         "pet_total": pet_result.get("total", 0),
         "biome_new_count": biome_result.get("new_count", 0),
         "biome_total": biome_result.get("total", 0),
+        "npc_new_count": npc_result.get("new_count", 0),
+        "npc_total": npc_result.get("total", 0),
     }
 
 
@@ -3253,6 +3268,11 @@ if __name__ == "__main__":
         help="仅抓取生物群系到 categories/biomes.json",
     )
     parser.add_argument(
+        "--ingest-npcs",
+        action="store_true",
+        help="仅抓取城镇 NPC 到 categories/npcs.json",
+    )
+    parser.add_argument(
         "--split-categories",
         action="store_true",
         help="将根目录 items/mounts/pets.json 拆分/迁移到 data/terraria_query/categories/",
@@ -3310,6 +3330,24 @@ if __name__ == "__main__":
             result = asyncio.run(_run_biomes())
             print(
                 f"生物群系抓取完成：新增 {result['new_count']} 个，"
+                f"共 {result['total']} 条目，"
+                f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.ingest_npcs:
+            async def _run_npcs() -> dict:
+                connector = aiohttp.TCPConnector(limit=10)
+                timeout = aiohttp.ClientTimeout(total=60)
+                async with aiohttp.ClientSession(
+                    connector=connector, timeout=timeout
+                ) as session:
+                    return await _npc_data_module().refresh_npcs(
+                        session, force=args.force
+                    )
+
+            result = asyncio.run(_run_npcs())
+            print(
+                f"NPC 抓取完成：新增 {result['new_count']} 个，"
                 f"共 {result['total']} 条目，"
                 f"图片 {result['images_ok']}/{result['images_total']}",
                 flush=True,

@@ -108,13 +108,14 @@ pytest tests/ -q
 
 ## 更新失败排查（GitHub 镜像站）
 
-若 WebUI 更新报错 `400 Bad Request`，且日志中出现 `gh-proxy.com/.../zipball/...`，说明镜像站不支持 GitHub API 的 zipball 链接。
+若 WebUI 更新报错 `400 Bad Request`，且日志中出现 `gh-proxy.com/.../zipball/...`，说明当前镜像站不支持 GitHub API 的 zipball 链接。
 
 **任选其一：**
 
 1. **临时关闭镜像** — AstrBot WebUI → 插件 → 关闭 GitHub 镜像站，再点更新
 2. **手动安装** — 从 [Releases](https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases) 下载 `astrbot_plugin_terraria_query-x.y.z.zip`，解压覆盖到 `data/plugins/astrbot_plugin_terraria_query/`
-3. **v1.5.1 起** — 插件 `metadata.yaml` 已改为 `repo: .../tree/main`，启用镜像站时走 `github.com/.../archive/` 下载，一般可正常更新
+
+**说明：** `metadata.yaml` 的 `repo` 应写仓库根地址（与 [twrpg 查询插件](https://github.com/YouYi5213/astrbot_plugin_twrpg_query) 相同），AstrBot 会按 **最新 Release 标签** 下载（如 `zipball/v1.6.8`）。若写成 `.../tree/main`，则会改为下载整份 `main` 分支 zip，包体更大、通常更慢。
 
 ## 要求
 

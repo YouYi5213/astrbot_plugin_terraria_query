@@ -164,6 +164,34 @@ def test_fuzzy_match_all_includes_biomes():
     assert matches_layer == [("biome", "地下")]
 
 
+def test_fuzzy_match_exact_biome_beats_partial_items():
+    items = {
+        "沙漠化石": {"name": "沙漠化石", "stats": []},
+        "沙漠虎杖": {"name": "沙漠虎杖", "stats": []},
+        "沙漠化石墙": {"name": "沙漠化石墙", "stats": []},
+    }
+    biomes = {"沙漠": {"name": "沙漠", "wiki_title": "沙漠", "page_type": "biome"}}
+    exact, partial = main._split_search_matches("沙漠", items, {}, {}, biomes)
+    assert exact == [("biome", "沙漠")]
+    assert [k for p, k in partial if p == "item"] == [
+        "沙漠化石",
+        "沙漠虎杖",
+        "沙漠化石墙",
+    ]
+    assert main._fuzzy_match_all("沙漠", items, {}, {}, biomes) == [("biome", "沙漠")]
+
+
+def test_format_partial_item_hints():
+    items = {
+        "沙漠化石": {"name": "沙漠化石", "stats": []},
+        "沙漠虎杖": {"name": "沙漠虎杖", "stats": []},
+    }
+    text = main._format_partial_item_hints("沙漠", ["沙漠化石", "沙漠虎杖"], items)
+    assert "以下物品名称也包含「沙漠」" in text
+    assert "沙漠化石" in text
+    assert "沙漠虎杖" in text
+
+
 def test_generate_item_card_uses_disk_cache(tmp_path, monkeypatch):
     cards_dir = tmp_path / "cards"
     cards_dir.mkdir()

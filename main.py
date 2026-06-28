@@ -1271,6 +1271,10 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
     return [key for key, _ in ranked]
 
 
+_POOL_SEARCH_ORDER = ("biome", "mount", "pet", "item")
+_POOL_PRIORITY = {name: idx for idx, name in enumerate(_POOL_SEARCH_ORDER)}
+
+
 def _rank_pool_from_index(query: str, pool_name: str) -> list[str]:
     global _SEARCH_INDEX
     if not _SEARCH_INDEX:
@@ -1297,14 +1301,42 @@ def _rank_pool_from_index(query: str, pool_name: str) -> list[str]:
     return [key for key, _ in ranked]
 
 
-def _fuzzy_match_all(
+def _collect_ranked_matches(query: str) -> list[tuple[str, str, int]]:
+    """跨池排名：(来源, 键, 匹配度)。0 为精确匹配，越大越模糊。"""
+    global _SEARCH_INDEX
+    if not _SEARCH_INDEX:
+        return []
+
+    query = query.strip()
+    if not query:
+        return []
+
+    found: dict[tuple[str, str], int] = {}
+    for p_name, key, zh_names in _SEARCH_INDEX:
+        for zh_name in zh_names:
+            if query == zh_name:
+                rank = 0
+            elif query in zh_name:
+                rank = len(zh_name)
+            else:
+                continue
+            slot = (p_name, key)
+            found[slot] = min(found.get(slot, 999), rank)
+
+    return sorted(
+        ((p, k, r) for (p, k), r in found.items()),
+        key=lambda x: (x[2], _POOL_PRIORITY.get(x[0], 99), x[1]),
+    )
+
+
+def _split_search_matches(
     query: str,
     items: dict[str, dict],
     mounts: dict[str, dict],
     pets: dict[str, dict] | None = None,
     biomes: dict[str, dict] | None = None,
-) -> list[tuple[str, str]]:
-    """返回 (来源, 键) 列表，来源为 biome、item、mount 或 pet。"""
+) -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
+    """拆分为精确匹配与模糊匹配（均按相关度排序）。"""
     if pets is None:
         pets = {}
     if biomes is None:
@@ -1314,23 +1346,47 @@ def _fuzzy_match_all(
     if _SEARCH_INDEX is None or _SEARCH_INDEX_SIG != sig:
         rebuild_search_index(items, mounts, pets, biomes)
 
-    biome_keys = _rank_pool_from_index(query, "biome")
-    mount_keys = _rank_pool_from_index(query, "mount")
-    pet_keys = _rank_pool_from_index(query, "pet")
-    item_keys = _rank_pool_from_index(query, "item")
-    seen: set[str] = set()
-    results: list[tuple[str, str]] = []
-    for pool_name, keys in (
-        ("biome", biome_keys),
-        ("mount", mount_keys),
-        ("pet", pet_keys),
-        ("item", item_keys),
-    ):
-        for key in keys:
-            if key not in seen:
-                results.append((pool_name, key))
-                seen.add(key)
-    return results
+    exact: list[tuple[str, str]] = []
+    partial: list[tuple[str, str]] = []
+    seen_exact: set[str] = set()
+    seen_partial: set[str] = set()
+
+    for pool_name, key, rank in _collect_ranked_matches(query):
+        if rank == 0:
+            if key not in seen_exact:
+                exact.append((pool_name, key))
+                seen_exact.add(key)
+        elif key not in seen_partial:
+            partial.append((pool_name, key))
+            seen_partial.add(key)
+
+    exact.sort(key=lambda x: (_POOL_PRIORITY.get(x[0], 99), x[1]))
+    return exact, partial
+
+
+def _rank_all_from_index(query: str) -> list[tuple[str, str, int]]:
+    return _collect_ranked_matches(query)
+
+
+def _fuzzy_match_all(
+    query: str,
+    items: dict[str, dict],
+    mounts: dict[str, dict],
+    pets: dict[str, dict] | None = None,
+    biomes: dict[str, dict] | None = None,
+) -> list[tuple[str, str]]:
+    """返回 (来源, 键) 列表，来源为 biome、item、mount 或 pet。"""
+    exact, partial = _split_search_matches(query, items, mounts, pets, biomes)
+    if exact:
+        return exact
+    return partial
+
+
+def _format_partial_item_hints(query: str, partial_items: list[str], items: dict) -> str:
+    lines = [f"以下物品名称也包含「{query}」：", ""]
+    for key in partial_items:
+        lines.append(f"· {items[key].get('name', key)}")
+    return "\n".join(lines)
 
 
 def _display_item(item: dict) -> dict:
@@ -2174,6 +2230,22 @@ class TerrariaQueryPlugin(Star):
             yield event.plain_result(f"❌ 未找到「{text}」的相关信息。")
             return
 
+        exact, partial = _split_search_matches(
+            text, self.items, self.mounts, self.pets, self.biomes
+        )
+
+        if exact:
+            source, key = exact[0]
+            async for result in self._yield_match_card(event, source, key):
+                yield result
+
+            partial_items = [k for pool, k in partial if pool == "item"]
+            if partial_items:
+                yield event.plain_result(
+                    _format_partial_item_hints(text, partial_items, self.items)
+                )
+            return
+
         if len(matches) > 3:
             lines = [f"找到 {len(matches)} 个匹配结果，请输入更精确的名称后重新查询：", ""]
             for source, key in matches:
@@ -2192,29 +2264,35 @@ class TerrariaQueryPlugin(Star):
             yield event.plain_result(f"找到 {len(matches)} 个匹配结果：")
 
         for source, key in matches:
-            pool = {
-                "biome": self.biomes,
-                "mount": self.mounts,
-                "pet": self.pets,
-                "item": self.items,
-            }[source]
-            item = pool[key]
-            if source == "biome":
-                display = _display_biome(item)
-                try:
-                    card_path = _generate_biome_card(display)
-                    yield event.image_result(card_path)
-                except Exception as e:
-                    logger.error(f"生成群系图片失败 ({key}): {e}")
-                    yield event.plain_result(_format_biome_text(display))
-                continue
-            display = _display_item(item)
+            async for result in self._yield_match_card(event, source, key):
+                yield result
+
+    async def _yield_match_card(
+        self, event: AstrMessageEvent, source: str, key: str
+    ):
+        pool = {
+            "biome": self.biomes,
+            "mount": self.mounts,
+            "pet": self.pets,
+            "item": self.items,
+        }[source]
+        item = pool[key]
+        if source == "biome":
+            display = _display_biome(item)
             try:
-                card_path = _generate_item_card(display)
+                card_path = _generate_biome_card(display)
                 yield event.image_result(card_path)
             except Exception as e:
-                logger.error(f"生成图片失败 ({key}): {e}")
-                yield event.plain_result(_format_text_result(display))
+                logger.error(f"生成群系图片失败 ({key}): {e}")
+                yield event.plain_result(_format_biome_text(display))
+            return
+        display = _display_item(item)
+        try:
+            card_path = _generate_item_card(display)
+            yield event.image_result(card_path)
+        except Exception as e:
+            logger.error(f"生成图片失败 ({key}): {e}")
+            yield event.plain_result(_format_text_result(display))
 
     async def _handle_update(self, event: AstrMessageEvent, force: bool = False):
         if not self._can_update(event):

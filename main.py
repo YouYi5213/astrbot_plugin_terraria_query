@@ -196,7 +196,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
-CARD_VERSION = "v42"
+CARD_VERSION = "v43"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -2689,7 +2689,7 @@ def _calc_boss_stat_row_height(
 ) -> int:
     row_h = 0
     for mode in BOSS_MODE_LABELS:
-        value = _boss_stat_mode_value(stat, mode)
+        value = _boss_stat_display_value(stat, mode)
         if not value:
             continue
         h = _calc_wrapped_text_height(
@@ -2713,7 +2713,7 @@ def _draw_boss_stat_row(
     row_bottom = row_start
     for mode, x, col_w in columns:
         idx = BOSS_MODE_LABELS.index(mode)
-        value = _boss_stat_mode_value(stat, mode)
+        value = _boss_stat_display_value(stat, mode)
         if not value:
             continue
         cy = col_bottoms[idx]
@@ -2837,6 +2837,40 @@ def _calc_boss_mode_drops_col_heights(
 def _boss_stat_mode_value(stat: dict, mode: str) -> str:
     modes = stat.get("modes") or {}
     return (modes.get(mode) or modes.get("normal") or "").strip()
+
+
+def _is_paren_note_line(line: str) -> bool:
+    s = line.strip()
+    return (s.startswith("（") and "）" in s) or (s.startswith("(") and ")" in s)
+
+
+def _compact_boss_stat_multiline(value: str, label: str = "") -> str:
+    """合并「数值 + 下一行括号说明」并可选加条目符号，减轻窄列换行。"""
+    if not value or "\n" not in value:
+        return value
+    lines = [ln.strip() for ln in value.split("\n") if ln.strip()]
+    if len(lines) <= 1:
+        return value.strip()
+
+    merged: list[str] = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if i + 1 < len(lines) and _is_paren_note_line(lines[i + 1]):
+            merged.append(f"{line} {lines[i + 1]}")
+            i += 2
+        else:
+            merged.append(line)
+            i += 1
+
+    if label == "伤害" or len(merged) >= 3:
+        return "\n".join(f"· {item}" for item in merged)
+    return "\n".join(merged)
+
+
+def _boss_stat_display_value(stat: dict, mode: str) -> str:
+    raw = _boss_stat_mode_value(stat, mode)
+    return _compact_boss_stat_multiline(raw, stat.get("label", ""))
 
 
 def _calc_boss_mode_stats_area(
@@ -3297,6 +3331,8 @@ def _calc_boss_part_content_height(
     font_value,
     content_w: int,
     content_x: int = 0,
+    *,
+    mini: bool = True,
 ) -> int:
     h = 0
     title_lines = _wrap_text_lines(measure, part.get("name", ""), font_title, content_w - 8)
@@ -3304,8 +3340,8 @@ def _calc_boss_part_content_height(
     h += BOSS_PART_SPRITE_MAX_SIZE[1] + 8
     stats = part.get("stats") or []
     if stats:
-        cols = _boss_mode_column_layout(content_x=content_x, content_w=content_w, mini=True)
-        pad = _boss_mode_box_pad(mini=True)
+        cols = _boss_mode_column_layout(content_x=content_x, content_w=content_w, mini=mini)
+        pad = _boss_mode_box_pad(mini=mini)
         stats_h = _calc_boss_mode_stats_content_height(
             measure, stats, cols, font_label, font_value
         )
@@ -3327,6 +3363,8 @@ def _draw_boss_part_content(
     font_value,
     ui: dict,
     content_w: int,
+    *,
+    mini: bool = True,
 ) -> int:
     py = y
     for line in _wrap_text_lines(draw, part.get("name", ""), font_title, content_w - 8):
@@ -3341,9 +3379,9 @@ def _draw_boss_part_content(
     stats = part.get("stats") or []
     if stats:
         mode_labels = _boss_mode_ui_labels(ui)
-        cols = _boss_mode_column_layout(content_x=x, content_w=content_w, mini=True)
+        cols = _boss_mode_column_layout(content_x=x, content_w=content_w, mini=mini)
         columns = _boss_mode_column_tuples(cols)
-        pad = _boss_mode_box_pad(mini=True)
+        pad = _boss_mode_box_pad(mini=mini)
         box_top = py
         content_h = _calc_boss_mode_stats_content_height(
             draw, stats, cols, font_label, font_value
@@ -3382,20 +3420,32 @@ def _calc_boss_parts_area(
 ) -> int:
     if not parts:
         return 0
-    boxed = len(parts) > 1
-    gap = BOSS_PART_BOX_GAP if boxed else 10
-    part_w = (card_width - CARD_PADDING * 2 - 20 - gap * (len(parts) - 1)) // len(parts)
-    content_w = part_w - BOSS_PART_BOX_PAD * 2 if boxed else part_w
     area = 34
-    max_h = 0
-    for part in parts:
-        h = _calc_boss_part_content_height(
-            measure, part, font_title, font_label, font_value, content_w, 0
-        )
-        if boxed:
-            h += BOSS_PART_BOX_PAD * 2
-        max_h = max(max_h, h)
-    return area + max_h + 12
+    if len(parts) > 1:
+        part_w = card_width - CARD_PADDING * 2 - 20
+        content_w = part_w - BOSS_PART_BOX_PAD * 2
+        for idx, part in enumerate(parts):
+            h = _calc_boss_part_content_height(
+                measure,
+                part,
+                font_title,
+                font_label,
+                font_value,
+                content_w,
+                0,
+                mini=False,
+            )
+            area += h + BOSS_PART_BOX_PAD * 2
+            if idx < len(parts) - 1:
+                area += BOSS_PART_BOX_GAP
+        return area + 12
+
+    part_w = card_width - CARD_PADDING * 2 - 20
+    content_w = part_w
+    h = _calc_boss_part_content_height(
+        measure, parts[0], font_title, font_label, font_value, content_w, 0, mini=True
+    )
+    return area + h + 12
 
 
 def _draw_boss_parts_section(
@@ -3414,45 +3464,66 @@ def _draw_boss_parts_section(
         return y
     draw.text((CARD_PADDING + 10, y), ui["boss_parts"], fill=COLORS["accent"], font=font_header)
     y += 30
-    boxed = len(parts) > 1
-    gap = BOSS_PART_BOX_GAP if boxed else 10
-    part_w = (card_width - CARD_PADDING * 2 - 20 - gap * (len(parts) - 1)) // len(parts)
-    content_w = part_w - BOSS_PART_BOX_PAD * 2 if boxed else part_w
-    box_pad = BOSS_PART_BOX_PAD if boxed else 0
 
-    content_heights = [
-        _calc_boss_part_content_height(
-            draw, part, font_title, font_label, font_value, content_w, 0
-        )
-        for part in parts
-    ]
-    row_h = max(content_heights) + box_pad * 2
-    row_bottom = y + row_h
-
-    for idx, part in enumerate(parts):
-        px = CARD_PADDING + 10 + idx * (part_w + gap)
-        if boxed:
+    if len(parts) > 1:
+        part_w = card_width - CARD_PADDING * 2 - 20
+        content_w = part_w - BOSS_PART_BOX_PAD * 2
+        box_pad = BOSS_PART_BOX_PAD
+        for part in parts:
+            content_h = _calc_boss_part_content_height(
+                draw,
+                part,
+                font_title,
+                font_label,
+                font_value,
+                content_w,
+                0,
+                mini=False,
+            )
+            box_h = content_h + box_pad * 2
+            px = CARD_PADDING + 10
             draw.rounded_rectangle(
-                [px, y, px + part_w, y + row_h],
+                [px, y, px + part_w, y + box_h],
                 radius=6,
                 fill=COLORS["part_box_bg"],
                 outline=COLORS["part_box_border"],
                 width=1,
             )
-        _draw_boss_part_content(
-            draw,
-            card,
-            px + box_pad,
-            y + box_pad,
-            part,
-            font_title,
-            font_label,
-            font_value,
-            ui,
-            content_w,
-        )
+            _draw_boss_part_content(
+                draw,
+                card,
+                px + box_pad,
+                y + box_pad,
+                part,
+                font_title,
+                font_label,
+                font_value,
+                ui,
+                content_w,
+                mini=False,
+            )
+            y += box_h + BOSS_PART_BOX_GAP
+        return y - BOSS_PART_BOX_GAP + 8
 
-    return row_bottom + 8
+    part_w = card_width - CARD_PADDING * 2 - 20
+    content_w = part_w
+    content_h = _calc_boss_part_content_height(
+        draw, parts[0], font_title, font_label, font_value, content_w, 0, mini=True
+    )
+    _draw_boss_part_content(
+        draw,
+        card,
+        CARD_PADDING + 10,
+        y,
+        parts[0],
+        font_title,
+        font_label,
+        font_value,
+        ui,
+        content_w,
+        mini=True,
+    )
+    return y + content_h + 8
 
 
 def _calc_boss_text_block_area(

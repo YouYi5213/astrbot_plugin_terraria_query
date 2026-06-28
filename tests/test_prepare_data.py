@@ -248,6 +248,9 @@ def test_pet_overview_catalog_has_items():
     assert catalog["蚊子琥珀"]["pet_display"] == "恐龙宝宝"
     assert catalog["鱼"]["wiki_page"] == "鱼（物品）"
     assert catalog["暗影珠"]["wiki_page"] == "暗影珠（物品）"
+    assert "碎岩龟" in catalog
+    assert catalog["碎岩龟"]["pet_display"] == "碎岩龟"
+    assert "Digtoise" in catalog["碎岩龟"]["pet_image"]
 
 
 def test_parse_wings_source_from_overview_table():

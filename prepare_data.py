@@ -51,6 +51,8 @@ PET_TABLE_IDS = (
     "table-Master-Mode-Light-Pets",
 )
 PET_CATEGORY = "Category:宠物召唤物品"
+# 联动页等未列入「宠物」总览表的宠物召唤物
+PET_SUPPLEMENT_OVERVIEW_PAGES = ("联动物品",)
 
 _WIKI_MIRROR_DIR = os.path.normpath(
     os.environ.get(
@@ -1959,6 +1961,109 @@ def _prune_mounts_to_catalog(mounts: dict[str, dict]) -> dict[str, dict]:
 
 
 _PET_CATALOG_CACHE: dict[str, dict] | None = None
+_PET_SUPPLEMENTAL_CACHE: dict[str, dict] | None = None
+
+
+def _wiki_mirror_page_path(title: str) -> str | None:
+    path = os.path.join(_WIKI_MIRROR_DIR, "wiki", "zh", "pages", f"{title}.html")
+    return path if os.path.isfile(path) else None
+
+
+def _wiki_titles_in_element(root: Tag) -> list[str]:
+    titles: list[str] = []
+    seen: set[str] = set()
+    for a in root.select('a[href^="/zh/wiki/"]'):
+        href = a.get("href", "")
+        match = re.match(r"/zh/wiki/([^?#]+)", href)
+        if not match:
+            continue
+        title = unquote(match.group(1))
+        if title.startswith(("Category:", "File:")) or title in seen:
+            continue
+        seen.add(title)
+        titles.append(title)
+    return titles
+
+
+def _crossover_pet_candidate_titles() -> list[str]:
+    """联动物品页中「宠物」段落与帕鲁章节的 Wiki 链接。"""
+    titles: list[str] = []
+    seen: set[str] = set()
+    for page_name in PET_SUPPLEMENT_OVERVIEW_PAGES:
+        path = _wiki_mirror_page_path(page_name)
+        if not path:
+            continue
+        with open(path, encoding="utf-8") as f:
+            soup = BeautifulSoup(f.read(), "lxml")
+        for p in soup.select("p"):
+            if "宠物" not in p.get_text():
+                continue
+            ul = p.find_next_sibling("ul")
+            if not ul:
+                continue
+            for title in _wiki_titles_in_element(ul):
+                if title not in seen:
+                    seen.add(title)
+                    titles.append(title)
+        pal_heading = soup.select_one("#幻兽帕鲁")
+        if pal_heading:
+            h2 = pal_heading.find_parent("h2")
+            if h2:
+                ul = h2.find_next_sibling("ul")
+                if ul:
+                    for title in _wiki_titles_in_element(ul):
+                        if title not in seen:
+                            seen.add(title)
+                            titles.append(title)
+    return titles
+
+
+def _qualifies_as_supplemental_pet(item: dict) -> bool:
+    if item.get("page_type") == "mount":
+        return False
+    if _is_pet_summon_item(item):
+        return True
+    desc = item.get("description") or ""
+    if "宠物物品" in desc or "宠物召唤物品" in desc:
+        return True
+    pet = item.get("pet") or {}
+    buff = item.get("buff") or {}
+    if pet and buff and "帕鲁" in desc:
+        return True
+    return False
+
+
+def _load_supplemental_pet_catalog() -> dict[str, dict]:
+    """总览表未收录、但 Wiki 明确为宠物的联动等内容。"""
+    global _PET_SUPPLEMENTAL_CACHE
+    if _PET_SUPPLEMENTAL_CACHE is not None:
+        return _PET_SUPPLEMENTAL_CACHE
+
+    catalog: dict[str, dict] = {}
+    existing = _PET_CATALOG_CACHE or {}
+    for title in _crossover_pet_candidate_titles():
+        page_path = _wiki_mirror_page_path(title)
+        if not page_path:
+            continue
+        with open(page_path, encoding="utf-8") as f:
+            item = parse_item_page(f.read(), title)
+        if not item or not _qualifies_as_supplemental_pet(item):
+            continue
+        item_name = item.get("name") or title
+        if item_name in existing:
+            continue
+        pet = item.get("pet") or {}
+        buff = item.get("buff") or {}
+        pet_image = buff.get("image") or pet.get("image") or ""
+        catalog[item_name] = {
+            "pet_display": pet.get("name") or buff.get("name") or item_name,
+            "pet_image": pet_image,
+            "light_pet": False,
+            "wiki_page": title,
+        }
+
+    _PET_SUPPLEMENTAL_CACHE = catalog
+    return catalog
 
 
 def _pet_overview_html_path() -> str | None:
@@ -2013,6 +2118,10 @@ def load_pet_overview_catalog() -> dict[str, dict]:
             }
 
     _PET_CATALOG_CACHE = catalog
+    for item_name, meta in _load_supplemental_pet_catalog().items():
+        if item_name not in catalog:
+            catalog[item_name] = meta
+
     return catalog
 
 

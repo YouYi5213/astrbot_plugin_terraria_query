@@ -144,7 +144,13 @@
       "label": "宠物",
       "file": "pets.json",
       "count": 84
+    },
+    {
+      "key": "biomes",
+      "label": "生物群系",
+      "file": "biomes.json",
+      "count": 21
     }
   ],
-  "total": 2312
+  "total": 2333
 }

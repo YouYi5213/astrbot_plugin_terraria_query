@@ -128,6 +128,14 @@ def _category_data_module():
     return category_data
 
 
+def _biome_data_module():
+    try:
+        from . import biome_data
+    except ImportError:
+        import biome_data
+    return biome_data
+
+
 def _persist_items(items: dict[str, dict]) -> None:
     cd = _category_data_module()
     strip_english_fields(items)
@@ -2655,6 +2663,10 @@ async def update_wiki_data(
     strip_count = 0
     mount_result = {"new_count": 0, "total": len(_load_existing_mounts())}
     pet_result = {"new_count": 0, "total": len(_load_existing_pets())}
+    biome_result = {
+        "new_count": 0,
+        "total": len(_biome_data_module().load_biomes_for_plugin(CATEGORIES_DIR)),
+    }
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -2744,6 +2756,7 @@ async def update_wiki_data(
 
         mount_result = await refresh_mounts(session, force=force)
         pet_result = await refresh_pets(session, force=force)
+        biome_result = await _biome_data_module().refresh_biomes(session, force=force)
 
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
@@ -2769,6 +2782,8 @@ async def update_wiki_data(
         "mount_total": mount_result.get("total", 0),
         "pet_new_count": pet_result.get("new_count", 0),
         "pet_total": pet_result.get("total", 0),
+        "biome_new_count": biome_result.get("new_count", 0),
+        "biome_total": biome_result.get("total", 0),
     }
 
 
@@ -3224,6 +3239,11 @@ if __name__ == "__main__":
         help="仅抓取宠物召唤物到 categories/pets.json",
     )
     parser.add_argument(
+        "--ingest-biomes",
+        action="store_true",
+        help="仅抓取生物群系到 categories/biomes.json",
+    )
+    parser.add_argument(
         "--split-categories",
         action="store_true",
         help="将根目录 items/mounts/pets.json 拆分/迁移到 data/terraria_query/categories/",
@@ -3263,6 +3283,24 @@ if __name__ == "__main__":
             result = asyncio.run(_run_pets())
             print(
                 f"宠物抓取完成：新增 {result['new_count']} 个，"
+                f"共 {result['total']} 条目，"
+                f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.ingest_biomes:
+            async def _run_biomes() -> dict:
+                connector = aiohttp.TCPConnector(limit=10)
+                timeout = aiohttp.ClientTimeout(total=60)
+                async with aiohttp.ClientSession(
+                    connector=connector, timeout=timeout
+                ) as session:
+                    return await _biome_data_module().refresh_biomes(
+                        session, force=args.force
+                    )
+
+            result = asyncio.run(_run_biomes())
+            print(
+                f"生物群系抓取完成：新增 {result['new_count']} 个，"
                 f"共 {result['total']} 条目，"
                 f"图片 {result['images_ok']}/{result['images_total']}",
                 flush=True,

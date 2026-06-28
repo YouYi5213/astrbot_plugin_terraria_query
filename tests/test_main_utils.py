@@ -140,6 +140,30 @@ def test_fuzzy_match_all_includes_pets():
     assert matches_pet == [("pet", "蚊子琥珀")]
 
 
+def test_fuzzy_match_all_includes_biomes():
+    items = {"天顶剑": {"name": "天顶剑", "stats": []}}
+    mounts: dict = {}
+    pets: dict = {}
+    biomes = {
+        "森林": {
+            "name": "森林",
+            "wiki_title": "森林",
+            "page_type": "biome",
+            "search_terms": [],
+        },
+        "地下": {
+            "name": "地下",
+            "wiki_title": "地下",
+            "page_type": "biome",
+            "search_terms": ["地下层"],
+        },
+    }
+    matches = main._fuzzy_match_all("森林", items, mounts, pets, biomes)
+    assert matches == [("biome", "森林")]
+    matches_layer = main._fuzzy_match_all("地下层", items, mounts, pets, biomes)
+    assert matches_layer == [("biome", "地下")]
+
+
 def test_generate_item_card_uses_disk_cache(tmp_path, monkeypatch):
     cards_dir = tmp_path / "cards"
     cards_dir.mkdir()

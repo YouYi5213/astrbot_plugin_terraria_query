@@ -21,6 +21,7 @@ from astrbot.api.star import Context, Star
 from astrbot.api import AstrBotConfig, logger
 
 from .category_data import (
+    load_biomes_for_plugin,
     load_items_for_plugin,
     load_mounts_for_plugin,
     load_pets_for_plugin,
@@ -191,7 +192,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 
 CARD_WIDTH = 600
 CARD_PADDING = 20
-CARD_VERSION = "v27"
+CARD_VERSION = "v28"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -207,6 +208,7 @@ ING_ICON_SLOT = (28, 28)
 BUFF_ICON_SLOT = (32, 32)
 MOUNT_PREVIEW_SLOT = (80, 72)
 PET_PREVIEW_SLOT = (80, 72)
+BIOME_BANNER_MAX_SIZE = (CARD_WIDTH - CARD_PADDING * 2, 140)
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -1194,6 +1196,12 @@ def _item_zh_search_names(key: str, item: dict) -> set[str]:
     return {n for n in names if n}
 
 
+def _biome_zh_search_names(key: str, biome: dict) -> set[str]:
+    names = {key, biome.get("name", ""), biome.get("wiki_title", "")}
+    names.update(biome.get("search_terms") or [])
+    return {n for n in names if n}
+
+
 _SEARCH_INDEX: list[tuple[str, str, frozenset[str]]] | None = None
 _SEARCH_INDEX_SIG: tuple | None = None
 
@@ -1202,14 +1210,19 @@ def _search_index_signature(
     items: dict[str, dict],
     mounts: dict[str, dict],
     pets: dict[str, dict],
+    biomes: dict[str, dict] | None = None,
 ) -> tuple:
+    if biomes is None:
+        biomes = {}
     return (
         len(items),
         len(mounts),
         len(pets),
+        len(biomes),
         tuple(sorted(items.keys())),
         tuple(sorted(mounts.keys())),
         tuple(sorted(pets.keys())),
+        tuple(sorted(biomes.keys())),
     )
 
 
@@ -1217,20 +1230,24 @@ def rebuild_search_index(
     items: dict[str, dict],
     mounts: dict[str, dict],
     pets: dict[str, dict],
+    biomes: dict[str, dict] | None = None,
 ) -> None:
     """预构建搜索索引，避免每次查询重复计算别名集合。"""
+    if biomes is None:
+        biomes = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
     entries: list[tuple[str, str, frozenset[str]]] = []
-    for pool_name, pool in (
-        ("mount", mounts),
-        ("pet", pets),
-        ("item", items),
+    for pool_name, pool, name_fn in (
+        ("biome", biomes, _biome_zh_search_names),
+        ("mount", mounts, _item_zh_search_names),
+        ("pet", pets, _item_zh_search_names),
+        ("item", items, _item_zh_search_names),
     ):
         for key, item in pool.items():
-            zh_names = frozenset(_item_zh_search_names(key, item))
+            zh_names = frozenset(name_fn(key, item))
             entries.append((pool_name, key, zh_names))
     _SEARCH_INDEX = entries
-    _SEARCH_INDEX_SIG = _search_index_signature(items, mounts, pets)
+    _SEARCH_INDEX_SIG = _search_index_signature(items, mounts, pets, biomes)
 
 
 def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
@@ -1285,21 +1302,26 @@ def _fuzzy_match_all(
     items: dict[str, dict],
     mounts: dict[str, dict],
     pets: dict[str, dict] | None = None,
+    biomes: dict[str, dict] | None = None,
 ) -> list[tuple[str, str]]:
-    """返回 (来源, 键) 列表，来源为 item、mount 或 pet。"""
+    """返回 (来源, 键) 列表，来源为 biome、item、mount 或 pet。"""
     if pets is None:
         pets = {}
+    if biomes is None:
+        biomes = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
-    sig = _search_index_signature(items, mounts, pets)
+    sig = _search_index_signature(items, mounts, pets, biomes)
     if _SEARCH_INDEX is None or _SEARCH_INDEX_SIG != sig:
-        rebuild_search_index(items, mounts, pets)
+        rebuild_search_index(items, mounts, pets, biomes)
 
+    biome_keys = _rank_pool_from_index(query, "biome")
     mount_keys = _rank_pool_from_index(query, "mount")
     pet_keys = _rank_pool_from_index(query, "pet")
     item_keys = _rank_pool_from_index(query, "item")
     seen: set[str] = set()
     results: list[tuple[str, str]] = []
     for pool_name, keys in (
+        ("biome", biome_keys),
         ("mount", mount_keys),
         ("pet", pet_keys),
         ("item", item_keys),
@@ -1859,6 +1881,78 @@ def _generate_item_card(data: dict) -> str:
     return output_path
 
 
+def _display_biome(biome: dict) -> dict:
+    return {
+        "name": biome.get("name", ""),
+        "image": biome.get("image", ""),
+        "description": biome.get("description"),
+        "description_rich": biome.get("description_rich"),
+        "page_type": "biome",
+    }
+
+
+def _format_biome_text(data: dict) -> str:
+    lines = [data.get("name", ""), ""]
+    desc = (data.get("description") or "").strip()
+    if desc:
+        lines.append(desc)
+    return "\n".join(lines)
+
+
+def _generate_biome_card(data: dict) -> str:
+    _ensure_dirs()
+    ui = _CARD_UI
+    locale = "zh"
+    output_path = _card_output_path(data.get("name", ""), locale)
+    if os.path.isfile(output_path):
+        return output_path
+
+    font_title = _try_get_font(26)
+    font_header = _try_get_font(20)
+    font_small = _try_get_font(16)
+    description_rich = _resolve_description_rich(data)
+
+    measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
+    title_area = 52
+    banner_img = _load_item_image(data.get("image", ""), BIOME_BANNER_MAX_SIZE)
+    banner_h = banner_img.height if banner_img else 0
+    banner_area = banner_h + 16 if banner_h else 0
+
+    desc_area = 0
+    if description_rich:
+        desc_area = _calc_description_area(measure, description_rich, font_small) + 10
+
+    total_height = CARD_PADDING * 2 + title_area + banner_area + desc_area
+    card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
+    draw = ImageDraw.Draw(card)
+
+    draw.rounded_rectangle(
+        [CARD_PADDING, CARD_PADDING, CARD_WIDTH - CARD_PADDING, CARD_PADDING + title_area],
+        radius=8,
+        fill=COLORS["header_bg"],
+    )
+    draw.text(
+        (CARD_PADDING + 15, CARD_PADDING + 10),
+        data.get("name", ui["unknown"]),
+        fill=COLORS["title"],
+        font=font_title,
+    )
+
+    y = CARD_PADDING + title_area + 12
+    if banner_img:
+        banner_x = CARD_PADDING + max(0, (BIOME_BANNER_MAX_SIZE[0] - banner_img.width) // 2)
+        card.paste(banner_img, (banner_x, y), banner_img)
+        y += banner_img.height + 16
+
+    if description_rich:
+        y = _draw_description_section(
+            draw, card, y, description_rich, font_header, font_small, ui
+        )
+
+    card.convert("RGB").save(output_path, "PNG")
+    return output_path
+
+
 def _format_update_result(result: dict, force: bool = False) -> str:
     drops_count = result.get("drops_backfill_count", 0)
     desc_count = result.get("desc_backfill_count", 0)
@@ -1880,6 +1974,10 @@ def _format_update_result(result: dict, force: bool = False) -> str:
     pet_total = result.get("pet_total", 0)
     if pet_new or pet_total:
         extra_lines += f"\n宠物召唤物：{pet_total} 个（本次 +{pet_new}）"
+    biome_new = result.get("biome_new_count", 0)
+    biome_total = result.get("biome_total", 0)
+    if biome_new or biome_total:
+        extra_lines += f"\n生物群系：{biome_total} 个（本次 +{biome_new}）"
     if result.get("new_count", 0) == 0 and not extra_lines:
         return (
             f"✅ Wiki 数据已是最新\n"
@@ -1910,6 +2008,7 @@ class TerrariaQueryPlugin(Star):
         self.items: dict[str, dict] = {}
         self.mounts: dict[str, dict] = {}
         self.pets: dict[str, dict] = {}
+        self.biomes: dict[str, dict] = {}
         self._load_data()
 
         self._cron_task: asyncio.Task | None = None
@@ -1982,7 +2081,8 @@ class TerrariaQueryPlugin(Star):
         self._load_items()
         self._load_mounts()
         self._load_pets()
-        rebuild_search_index(self.items, self.mounts, self.pets)
+        self._load_biomes()
+        rebuild_search_index(self.items, self.mounts, self.pets, self.biomes)
         if not _CARD_CACHE_PRUNED:
             _prune_old_card_cache()
             _CARD_CACHE_PRUNED = True
@@ -2021,6 +2121,16 @@ class TerrariaQueryPlugin(Star):
             logger.error(f"加载 pets.json 失败: {e}")
         self.pets = {}
 
+    def _load_biomes(self) -> None:
+        try:
+            self.biomes = load_biomes_for_plugin(CATEGORIES_DIR)
+            if self.biomes:
+                logger.info(f"已加载 {len(self.biomes)} 个生物群系")
+                return
+        except Exception as e:
+            logger.error(f"加载 biomes.json 失败: {e}")
+        self.biomes = {}
+
     @filter.regex(_TERRARIA_CMD_RE, priority=10)
     async def on_terraria_command(self, event: AstrMessageEvent):
         """处理泰拉瑞亚查询/更新指令（支持无 / 前缀）。"""
@@ -2044,20 +2154,22 @@ class TerrariaQueryPlugin(Star):
     async def _handle_query(self, event: AstrMessageEvent, text: str):
         if not text:
             yield event.plain_result(
-                "用法: 泰拉查询 <物品名>\n"
+                "用法: 泰拉查询 <物品名/群系名>\n"
                 "例如: 泰拉查询 天顶剑\n"
-                "      泰拉查询 Zenith"
+                "      泰拉查询 森林"
             )
             return
 
-        if not self.items and not self.mounts and not self.pets:
+        if not self.items and not self.mounts and not self.pets and not self.biomes:
             yield event.plain_result(
                 "❌ 离线数据尚未准备。\n"
                 "请在 WebUI 配置插件后发送「泰拉更新」，或从仓库拉取已包含的 data/ 目录。"
             )
             return
 
-        matches = _fuzzy_match_all(text, self.items, self.mounts, self.pets)
+        matches = _fuzzy_match_all(
+            text, self.items, self.mounts, self.pets, self.biomes
+        )
         if not matches:
             yield event.plain_result(f"❌ 未找到「{text}」的相关信息。")
             return
@@ -2066,6 +2178,7 @@ class TerrariaQueryPlugin(Star):
             lines = [f"找到 {len(matches)} 个匹配结果，请输入更精确的名称后重新查询：", ""]
             for source, key in matches:
                 pool = {
+                    "biome": self.biomes,
                     "mount": self.mounts,
                     "pet": self.pets,
                     "item": self.items,
@@ -2080,11 +2193,21 @@ class TerrariaQueryPlugin(Star):
 
         for source, key in matches:
             pool = {
+                "biome": self.biomes,
                 "mount": self.mounts,
                 "pet": self.pets,
                 "item": self.items,
             }[source]
             item = pool[key]
+            if source == "biome":
+                display = _display_biome(item)
+                try:
+                    card_path = _generate_biome_card(display)
+                    yield event.image_result(card_path)
+                except Exception as e:
+                    logger.error(f"生成群系图片失败 ({key}): {e}")
+                    yield event.plain_result(_format_biome_text(display))
+                continue
             display = _display_item(item)
             try:
                 card_path = _generate_item_card(display)

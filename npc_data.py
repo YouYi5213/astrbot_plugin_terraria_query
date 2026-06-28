@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup, Tag
 
 try:
     from .prepare_data import (
+        COIN_SPECS,
         IMAGES_DIR,
         _WIKI_MIRROR_DIR,
         _clean_text,
@@ -23,6 +24,7 @@ try:
     )
 except ImportError:
     from prepare_data import (
+        COIN_SPECS,
         IMAGES_DIR,
         _WIKI_MIRROR_DIR,
         _clean_text,
@@ -83,6 +85,17 @@ def _portrait_from_link(a: Tag | None) -> str:
     return ""
 
 
+def _image_from_tag(img: Tag | None) -> str:
+    if img and img.get("src"):
+        return _filename_from_url(_image_url_from_src(img["src"]))
+    return ""
+
+
+def _parse_sprite_from_td(td: Tag) -> str:
+    img = td.select_one("span.i img") or td.select_one("img")
+    return _image_from_tag(img)
+
+
 def _parse_overview_row(tr: Tag) -> dict[str, str] | None:
     tds = tr.find_all("td", recursive=False)
     if len(tds) < 5:
@@ -93,10 +106,12 @@ def _parse_overview_row(tr: Tag) -> dict[str, str] | None:
     wiki_title = _clean_text(name_a.get("title", ""))
     if not wiki_title:
         return None
+    sprite = _parse_sprite_from_td(tds[1])
     portrait = _portrait_from_link(tds[0].select_one("a.image") or tds[0].select_one("a"))
     return {
         "wiki_title": wiki_title,
         "label": wiki_title,
+        "sprite": sprite,
         "portrait": portrait,
         "description": _cell_text(tds[3]),
         "spawn_overview": _cell_text(tds[4]),
@@ -176,19 +191,56 @@ def _find_section_h2(soup: BeautifulSoup, section_prefix: str) -> Tag | None:
     return None
 
 
-def _parse_npc_portrait(infobox: Tag) -> str:
-    for box in infobox.select("div.imageother"):
-        a = box.select_one('a[href*="portrait"]')
-        if a:
-            fn = _portrait_from_link(a)
-            if fn:
-                return fn
+def _parse_npc_sprite(infobox: Tag) -> str:
+    """NPC 立绘（infobox 内站立 sprite，非对话肖像）。"""
     img = infobox.select_one('div.section.images span[title*="电脑"] img')
     if not img:
         img = infobox.select_one("div.section.images img")
-    if img and img.get("src"):
-        return _filename_from_url(_image_url_from_src(img["src"]))
-    return ""
+    return _image_from_tag(img)
+
+
+def _parse_shop_coins(td: Tag) -> list[dict[str, str]]:
+    coins: list[dict[str, str]] = []
+    for coin_span in td.select("span.coin"):
+        for cls in COIN_SPECS:
+            amt_el = coin_span.select_one(f"span.{cls}")
+            if not amt_el:
+                continue
+            match = re.search(r"(\d+)", _clean_text(amt_el.get_text()))
+            if match:
+                coins.append({"type": cls, "amount": match.group(1)})
+            break
+    return coins
+
+
+def _parse_item_icon_cell(td: Tag) -> str:
+    img = td.select_one("span.i img")
+    fn = _image_from_tag(img)
+    if fn:
+        return fn
+    a = td.select_one("span.i a[href*='File:'], span.i a[href*='/wiki/File:']")
+    return _portrait_from_link(a) if a else ""
+
+
+def _parse_dotlist_entries(td: Tag) -> list[dict[str, str]]:
+    if td.select_one(".na"):
+        return [{"name": "无"}]
+    entries: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for span in td.select("span.i"):
+        a = span.select_one("a[title]")
+        if not a:
+            continue
+        name = _clean_text(a.get("title", ""))
+        if not name or name in seen:
+            continue
+        seen.add(name)
+        entry: dict[str, str] = {"name": name}
+        fn = _image_from_tag(span.select_one("img"))
+        if fn:
+            entry["image"] = fn
+        entries.append(entry)
+    return entries
 
 
 def _parse_npc_spawn_detail(soup: BeautifulSoup) -> str:
@@ -266,8 +318,12 @@ def _parse_npc_shop(soup: BeautifulSoup) -> list[dict[str, str]] | None:
             continue
         entry: dict[str, str] = {
             "name": name,
+            "image": _parse_item_icon_cell(tds[0]),
             "price": _parse_coin_price(tds[1]),
         }
+        coins = _parse_shop_coins(tds[1])
+        if coins:
+            entry["coins"] = coins
         if len(tds) > 2:
             availability = _cell_text(tds[2])
             if availability:
@@ -277,16 +333,7 @@ def _parse_npc_shop(soup: BeautifulSoup) -> list[dict[str, str]] | None:
 
 
 def _dotlist_names(td: Tag) -> list[str]:
-    if td.select_one(".na"):
-        return []
-    names: list[str] = []
-    seen: set[str] = set()
-    for a in td.select("span.i a[title]"):
-        title = _clean_text(a.get("title", ""))
-        if title and title not in seen:
-            seen.add(title)
-            names.append(title)
-    return names
+    return [e["name"] for e in _parse_dotlist_entries(td)]
 
 
 def _parse_npc_preferences(soup: BeautifulSoup) -> list[dict[str, Any]] | None:
@@ -304,12 +351,12 @@ def _parse_npc_preferences(soup: BeautifulSoup) -> list[dict[str, Any]] | None:
             continue
         level = _clean_text(th.get_text())
         tds = tr.find_all("td", recursive=False)
-        biomes = _dotlist_names(tds[0]) if tds else []
-        neighbors = _dotlist_names(tds[1]) if len(tds) > 1 else []
+        biomes = _parse_dotlist_entries(tds[0]) if tds else []
+        neighbors = _parse_dotlist_entries(tds[1]) if len(tds) > 1 else []
         if not biomes and tds and tds[0].select_one(".na"):
-            biomes = ["无"]
+            biomes = [{"name": "无"}]
         if not neighbors and len(tds) > 1 and tds[1].select_one(".na"):
-            neighbors = ["无"]
+            neighbors = [{"name": "无"}]
         rows.append({"level": level, "biomes": biomes, "neighbors": neighbors})
     return rows or None
 
@@ -349,7 +396,7 @@ def parse_npc_page_html(
 
     catalog_entry = catalog_entry or {}
     name = _clean_text(infobox.select_one("div.title").get_text()) if infobox.select_one("div.title") else wiki_title
-    portrait = _parse_npc_portrait(infobox) or catalog_entry.get("portrait", "")
+    sprite = _parse_npc_sprite(infobox) or catalog_entry.get("sprite", "") or catalog_entry.get("portrait", "")
 
     description = catalog_entry.get("description") or ""
     spawn = _parse_npc_spawn_detail(soup) or catalog_entry.get("spawn_overview", "")
@@ -357,14 +404,14 @@ def parse_npc_page_html(
     preferences = _parse_npc_preferences(soup)
     shimmer, shimmer_image = _parse_npc_shimmer(soup)
 
-    if not portrait and not description and not spawn:
+    if not sprite and not description and not spawn:
         return None
 
     item: dict[str, Any] = {
         "name": name or wiki_title,
         "wiki_title": wiki_title,
         "page_type": "npc",
-        "image": portrait,
+        "image": sprite,
     }
     if catalog_entry.get("phase"):
         item["phase"] = catalog_entry["phase"]
@@ -431,11 +478,23 @@ def load_npcs_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict
 
 def _collect_npc_image_urls(npcs: dict[str, dict]) -> dict[str, str]:
     urls: dict[str, str] = {}
+
+    def add(fn: str | None) -> None:
+        if fn:
+            urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+
     for npc in npcs.values():
         for field in ("image", "shimmer_image"):
-            fn = npc.get(field)
-            if fn:
-                urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+            add(npc.get(field))
+        for shop_item in npc.get("shop") or []:
+            add(shop_item.get("image"))
+        for pref in npc.get("preferences") or []:
+            for entry in pref.get("biomes") or []:
+                if isinstance(entry, dict):
+                    add(entry.get("image"))
+            for entry in pref.get("neighbors") or []:
+                if isinstance(entry, dict):
+                    add(entry.get("image"))
     return urls
 
 

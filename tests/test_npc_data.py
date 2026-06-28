@@ -26,12 +26,16 @@ def test_parse_arms_dealer_npc():
     assert parsed is not None
     assert parsed["name"] == "军火商"
     assert parsed["page_type"] == "npc"
-    assert "portrait" in parsed["image"].lower() or parsed["image"].endswith(".png")
+    assert parsed["image"] == "Arms_Dealer.png"
+    assert "portrait" not in parsed["image"].lower()
     assert "枪" in parsed["description"]
     assert "房屋" in parsed["spawn"]
     assert parsed.get("shop")
-    assert any(item["name"] == "火枪子弹" for item in parsed["shop"])
+    musket = next(item for item in parsed["shop"] if item["name"] == "火枪子弹")
+    assert musket.get("image") == "Musket_Ball.png"
+    assert musket.get("coins")
     assert parsed.get("preferences")
+    assert isinstance(parsed["preferences"][0]["neighbors"][0], dict)
     assert parsed.get("shimmer")
     assert parsed.get("shimmer_image")
 

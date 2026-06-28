@@ -210,8 +210,13 @@ BUFF_ICON_SLOT = (32, 32)
 MOUNT_PREVIEW_SLOT = (80, 72)
 PET_PREVIEW_SLOT = (80, 72)
 BIOME_BANNER_MAX_SIZE = (CARD_WIDTH - CARD_PADDING * 2, 140)
-NPC_PORTRAIT_MAX_SIZE = (100, 100)
-NPC_SHIMMER_MAX_SIZE = (80, 80)
+NPC_SPRITE_MAX_SIZE = (56, 72)
+NPC_SHOP_ICON_SLOT = (36, 36)
+NPC_PREF_ICON_SLOT = (24, 24)
+NPC_TABLE_ROW_MIN = 36
+NPC_COL_PRICE = 220
+NPC_COL_AVAIL = 330
+NPC_SHIMMER_MAX_SIZE = (56, 72)
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -264,9 +269,10 @@ def _clear_card_cache(keep_version: str = CARD_VERSION) -> None:
                 pass
 
 
-def _card_output_path(name: str, locale: str = "zh") -> str:
+def _card_output_path(name: str, locale: str = "zh", *, kind: str | None = None) -> str:
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", name or "unknown")
-    return os.path.join(CARDS_DIR, f"card_{CARD_VERSION}_{locale}_{safe_name}")
+    kind_part = f"_{kind}" if kind else ""
+    return os.path.join(CARDS_DIR, f"card_{CARD_VERSION}_{locale}{kind_part}_{safe_name}")
 
 
 def _image_path(filename: str) -> str:
@@ -1185,6 +1191,11 @@ _CARD_UI = {
     "npc_shop": "▎出售物品",
     "npc_preferences": "▎生活偏好",
     "npc_shimmer": "▎微光形态",
+    "npc_shop_col_item": "物品",
+    "npc_shop_col_price": "花费",
+    "npc_shop_col_avail": "何时有售",
+    "npc_pref_col_biome": "生物群系",
+    "npc_pref_col_neighbor": "邻居",
 }
 
 
@@ -2037,6 +2048,230 @@ def _generate_biome_card(data: dict) -> str:
     return output_path
 
 
+def _draw_table_hline(draw: ImageDraw.ImageDraw, y: int) -> None:
+    draw.line(
+        [(CARD_PADDING + 10, y), (CARD_WIDTH - CARD_PADDING - 10, y)],
+        fill=COLORS["separator"],
+        width=1,
+    )
+
+
+def _npc_entry_label(entry: dict | str) -> str:
+    if isinstance(entry, dict):
+        return entry.get("name", "")
+    return str(entry)
+
+
+def _npc_pref_entry_lines(entries: list) -> str:
+    return "、".join(_npc_entry_label(e) for e in entries if _npc_entry_label(e))
+
+
+def _draw_npc_icon_entries(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    x: int,
+    y: int,
+    max_w: int,
+    entries: list,
+    font,
+) -> int:
+    if not entries:
+        return 0
+    cx = x
+    cy = y
+    line_h = max(NPC_PREF_ICON_SLOT[1], STAT_LINE_HEIGHT)
+    for entry in entries:
+        label = _npc_entry_label(entry)
+        if not label:
+            continue
+        image = entry.get("image", "") if isinstance(entry, dict) else ""
+        icon_w = NPC_PREF_ICON_SLOT[0] + 4 if image else 0
+        text_w = _text_width(draw, label, font)
+        block_w = icon_w + text_w + 10
+        if cx + block_w > x + max_w and cx > x:
+            cx = x
+            cy += line_h + 4
+        if image:
+            img = _load_item_image(image, NPC_PREF_ICON_SLOT)
+            if img:
+                _paste_in_slot(card, img, cx, cy, NPC_PREF_ICON_SLOT[0], line_h)
+            cx += icon_w
+        draw.text((cx, cy + 2), label, fill=COLORS["value"], font=font)
+        cx += text_w + 10
+    return max(line_h, cy + line_h - y)
+
+
+def _calc_npc_icon_entries_height(
+    draw: ImageDraw.ImageDraw,
+    max_w: int,
+    entries: list,
+    font,
+) -> int:
+    if not entries:
+        return STAT_LINE_HEIGHT
+    cx = 0
+    cy = 0
+    line_h = max(NPC_PREF_ICON_SLOT[1], STAT_LINE_HEIGHT)
+    row_count = 1
+    for entry in entries:
+        label = _npc_entry_label(entry)
+        if not label:
+            continue
+        image = entry.get("image", "") if isinstance(entry, dict) else ""
+        icon_w = NPC_PREF_ICON_SLOT[0] + 4 if image else 0
+        text_w = _text_width(draw, label, font)
+        block_w = icon_w + text_w + 10
+        if cx + block_w > max_w and cx > 0:
+            cx = 0
+            cy += line_h + 4
+            row_count += 1
+        cx += block_w
+    return row_count * line_h + max(0, row_count - 1) * 4
+
+
+def _draw_npc_shop_price(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    x: int,
+    y: int,
+    entry: dict,
+    font,
+) -> None:
+    coins = entry.get("coins") or []
+    if coins:
+        cx = x
+        for coin in coins:
+            amount = str(coin.get("amount", ""))
+            if amount:
+                draw.text((cx, y), amount, fill=COLORS["value"], font=font)
+                cx += _text_width(draw, amount, font) + 2
+            coin_img = _load_coin_icon(coin.get("type", ""))
+            if coin_img:
+                card.paste(coin_img, (cx, y + 1), coin_img)
+                cx += _COIN_ICON_SIZE[0] + 4
+        return
+    price = entry.get("price", "")
+    if price:
+        draw.text((x, y), price, fill=COLORS["value"], font=font)
+
+
+def _calc_npc_shop_row_height(draw: ImageDraw.ImageDraw, entry: dict, font) -> int:
+    avail_w = CARD_WIDTH - CARD_PADDING - NPC_COL_AVAIL
+    avail_lines = _wrap_text_lines(draw, entry.get("availability", ""), font, avail_w)
+    return max(NPC_TABLE_ROW_MIN, max(len(avail_lines), 1) * STAT_LINE_HEIGHT + 8)
+
+
+def _calc_npc_shop_section_area(
+    measure: ImageDraw.ImageDraw,
+    shop: list[dict],
+    font_small,
+) -> int:
+    area = 30 + DROP_TABLE_HEADER + 6
+    for entry in shop:
+        area += _calc_npc_shop_row_height(measure, entry, font_small) + 2
+    return area + 10
+
+
+def _draw_npc_shop_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    shop: list[dict],
+    font_header,
+    font_small,
+    ui: dict,
+) -> int:
+    col_item = CARD_PADDING + 16
+    draw.text((CARD_PADDING + 10, y), ui["npc_shop"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    draw.text((col_item, y), ui["npc_shop_col_item"], fill=COLORS["label"], font=font_small)
+    draw.text((NPC_COL_PRICE, y), ui["npc_shop_col_price"], fill=COLORS["label"], font=font_small)
+    draw.text((NPC_COL_AVAIL, y), ui["npc_shop_col_avail"], fill=COLORS["label"], font=font_small)
+    y += DROP_TABLE_HEADER
+    _draw_table_hline(draw, y)
+    y += 4
+
+    for entry in shop:
+        row_h = _calc_npc_shop_row_height(draw, entry, font_small)
+        img = _load_item_image(entry.get("image", ""), NPC_SHOP_ICON_SLOT)
+        if img:
+            _paste_in_slot(card, img, col_item, y, NPC_SHOP_ICON_SLOT[0], row_h)
+        text_x = col_item + NPC_SHOP_ICON_SLOT[0] + 6
+        draw.text((text_x, y + 4), entry.get("name", ""), fill=COLORS["text"], font=font_small)
+        _draw_npc_shop_price(draw, card, NPC_COL_PRICE, y + 4, entry, font_small)
+        avail_w = CARD_WIDTH - CARD_PADDING - NPC_COL_AVAIL
+        for i, line in enumerate(_wrap_text_lines(draw, entry.get("availability", ""), font_small, avail_w)):
+            draw.text((NPC_COL_AVAIL, y + 4 + i * STAT_LINE_HEIGHT), line, fill=COLORS["value"], font=font_small)
+        y += row_h
+        _draw_table_hline(draw, y)
+        y += 2
+    return y + 6
+
+
+def _calc_npc_pref_row_height(
+    draw: ImageDraw.ImageDraw,
+    row: dict,
+    font,
+) -> int:
+    col_level = CARD_PADDING + 16
+    col_biome = col_level + 52
+    col_neighbor = 280
+    biome_w = col_neighbor - col_biome - 8
+    neighbor_w = CARD_WIDTH - CARD_PADDING - col_neighbor
+    biome_h = _calc_npc_icon_entries_height(draw, biome_w, row.get("biomes") or [], font)
+    neighbor_h = _calc_npc_icon_entries_height(draw, neighbor_w, row.get("neighbors") or [], font)
+    return max(NPC_TABLE_ROW_MIN, biome_h, neighbor_h) + 8
+
+
+def _calc_npc_pref_section_area(
+    measure: ImageDraw.ImageDraw,
+    preferences: list[dict],
+    font_small,
+) -> int:
+    area = 30 + DROP_TABLE_HEADER + 6
+    for row in preferences:
+        area += _calc_npc_pref_row_height(measure, row, font_small) + 2
+    return area + 10
+
+
+def _draw_npc_pref_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    preferences: list[dict],
+    font_header,
+    font_small,
+    ui: dict,
+) -> int:
+    col_level = CARD_PADDING + 16
+    col_biome = col_level + 52
+    col_neighbor = 280
+    biome_w = col_neighbor - col_biome - 8
+    neighbor_w = CARD_WIDTH - CARD_PADDING - col_neighbor
+
+    draw.text((CARD_PADDING + 10, y), ui["npc_preferences"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    draw.text((col_biome, y), ui["npc_pref_col_biome"], fill=COLORS["label"], font=font_small)
+    draw.text((col_neighbor, y), ui["npc_pref_col_neighbor"], fill=COLORS["label"], font=font_small)
+    y += DROP_TABLE_HEADER
+    _draw_table_hline(draw, y)
+    y += 4
+
+    for row in preferences:
+        row_h = _calc_npc_pref_row_height(draw, row, font_small)
+        draw.text((col_level, y + 4), row.get("level", ""), fill=COLORS["text"], font=font_small)
+        _draw_npc_icon_entries(
+            draw, card, col_biome, y + 4, biome_w, row.get("biomes") or [], font_small
+        )
+        _draw_npc_icon_entries(
+            draw, card, col_neighbor, y + 4, neighbor_w, row.get("neighbors") or [], font_small
+        )
+        y += row_h
+        _draw_table_hline(draw, y)
+        y += 2
+    return y + 6
+
+
 def _npc_preference_lines(preferences: list[dict]) -> list[str]:
     lines: list[str] = []
     for row in preferences:
@@ -2044,9 +2279,9 @@ def _npc_preference_lines(preferences: list[dict]) -> list[str]:
         biomes = row.get("biomes") or []
         neighbors = row.get("neighbors") or []
         if biomes:
-            parts.append("生物群系：" + "、".join(biomes))
+            parts.append("生物群系：" + _npc_pref_entry_lines(biomes))
         if neighbors:
-            parts.append("邻居：" + "、".join(neighbors))
+            parts.append("邻居：" + _npc_pref_entry_lines(neighbors))
         lines.append(" · ".join(p for p in parts if p))
     return lines
 
@@ -2147,7 +2382,7 @@ def _generate_npc_card(data: dict) -> str:
     _ensure_dirs()
     ui = _CARD_UI
     locale = "zh"
-    output_path = _card_output_path(data.get("name", ""), locale)
+    output_path = _card_output_path(data.get("name", ""), locale, kind="npc")
     if os.path.isfile(output_path):
         return output_path
 
@@ -2157,13 +2392,13 @@ def _generate_npc_card(data: dict) -> str:
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
     title_area = 52
-    portrait_img = _load_item_image(data.get("image", ""), NPC_PORTRAIT_MAX_SIZE)
-    portrait_area = portrait_img.height + 16 if portrait_img else 0
+    sprite_img = _load_item_image(data.get("image", ""), NPC_SPRITE_MAX_SIZE)
+    sprite_area = sprite_img.height + 16 if sprite_img else 0
 
     desc_lines = [data["description"]] if data.get("description") else []
     spawn_lines = _npc_spawn_lines(data.get("spawn", ""))
-    shop_lines = _npc_shop_lines(data.get("shop") or [])
-    pref_lines = _npc_preference_lines(data.get("preferences") or [])
+    shop = data.get("shop") or []
+    preferences = data.get("preferences") or []
     shimmer_lines = [data["shimmer"]] if data.get("shimmer") else []
     shimmer_img = (
         _load_item_image(data.get("shimmer_image", ""), NPC_SHIMMER_MAX_SIZE)
@@ -2177,15 +2412,15 @@ def _generate_npc_card(data: dict) -> str:
         body_area += _calc_labeled_text_block(measure, desc_lines, font_small)
     if spawn_lines:
         body_area += _calc_labeled_text_block(measure, spawn_lines, font_small)
-    if shop_lines:
-        body_area += _calc_labeled_text_block(measure, shop_lines, font_small)
-    if pref_lines:
-        body_area += _calc_labeled_text_block(measure, pref_lines, font_small)
+    if shop:
+        body_area += _calc_npc_shop_section_area(measure, shop, font_small)
+    if preferences:
+        body_area += _calc_npc_pref_section_area(measure, preferences, font_small)
     if shimmer_lines:
         body_area += _calc_labeled_text_block(measure, shimmer_lines, font_small)
         body_area += shimmer_img_area
 
-    total_height = CARD_PADDING * 2 + title_area + portrait_area + body_area + 10
+    total_height = CARD_PADDING * 2 + title_area + sprite_area + body_area + 10
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
 
@@ -2202,19 +2437,19 @@ def _generate_npc_card(data: dict) -> str:
     )
 
     y = CARD_PADDING + title_area + 12
-    if portrait_img:
-        px = CARD_PADDING + max(0, (CARD_WIDTH - CARD_PADDING * 2 - portrait_img.width) // 2)
-        card.paste(portrait_img, (px, y), portrait_img)
-        y += portrait_img.height + 16
+    if sprite_img:
+        px = CARD_PADDING + max(0, (CARD_WIDTH - CARD_PADDING * 2 - sprite_img.width) // 2)
+        card.paste(sprite_img, (px, y), sprite_img)
+        y += sprite_img.height + 16
 
     if desc_lines:
         y = _draw_labeled_text_block(draw, y, ui["description"], desc_lines, font_header, font_small)
     if spawn_lines:
         y = _draw_labeled_text_block(draw, y, ui["npc_spawn"], spawn_lines, font_header, font_small)
-    if shop_lines:
-        y = _draw_labeled_text_block(draw, y, ui["npc_shop"], shop_lines, font_header, font_small)
-    if pref_lines:
-        y = _draw_labeled_text_block(draw, y, ui["npc_preferences"], pref_lines, font_header, font_small)
+    if shop:
+        y = _draw_npc_shop_section(draw, card, y, shop, font_header, font_small, ui)
+    if preferences:
+        y = _draw_npc_pref_section(draw, card, y, preferences, font_header, font_small, ui)
     if shimmer_lines:
         y = _draw_labeled_text_block(draw, y, ui["npc_shimmer"], shimmer_lines, font_header, font_small)
         if shimmer_img:

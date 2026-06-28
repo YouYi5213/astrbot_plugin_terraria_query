@@ -10,8 +10,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -20,17 +21,14 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
         "value": "需要 100 份",
-        "extra": ""
-      },
-      {
-        "label": "拾取",
-        "value": "",
         "extra": ""
       }
     ],

@@ -26,10 +26,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -78,8 +78,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -93,13 +94,27 @@
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "卖出",
-        "value": "1 GC20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -146,10 +161,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -446,10 +461,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -519,10 +534,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -586,10 +601,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -649,10 +664,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -850,10 +865,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -1186,10 +1201,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -1493,8 +1508,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1503,13 +1519,22 @@
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -1549,8 +1574,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1559,13 +1585,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "12 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "12",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2018,8 +2053,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2028,13 +2064,22 @@
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
-        "value": "68 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "68",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2289,8 +2334,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2299,13 +2345,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "9 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "9",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2776,8 +2831,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2786,13 +2842,22 @@
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
-        "value": "27 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "27",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -3076,10 +3141,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -3412,10 +3477,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -3928,10 +3993,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -4408,10 +4473,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -4929,10 +4994,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -5108,10 +5173,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -5606,10 +5671,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -5727,10 +5792,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -5818,8 +5883,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -5833,13 +5899,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "30 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "30",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",

@@ -9,36 +9,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "1.67秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "53格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "32 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -81,36 +59,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "1.67秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "53格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "32 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -153,36 +109,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.17秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "67格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "35 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -225,36 +159,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.17秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "67格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "35 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "浅红色",
-        "extra": "",
-        "sortkey": "04*",
-        "color": "#ff7777"
       }
     ],
     "recipe": null,
@@ -288,36 +200,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.17秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "67格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "35 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -360,36 +250,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.17秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "67格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "35 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -426,36 +294,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -495,36 +341,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -564,36 +388,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -627,36 +429,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -690,36 +470,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -753,36 +511,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -816,36 +552,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -879,36 +593,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1002,36 +694,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1071,36 +741,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1158,36 +806,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1227,36 +853,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1302,36 +906,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1365,36 +947,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1428,36 +988,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1491,36 +1029,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1557,36 +1073,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1620,36 +1114,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1683,36 +1155,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1746,36 +1196,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "77格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -1809,36 +1237,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.67秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "81格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -1917,36 +1323,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.67秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "81格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -1983,36 +1367,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.67秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "81格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -2049,36 +1411,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.67秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "81格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -2121,36 +1461,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.67秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "81格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -2193,36 +1511,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.83秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "94格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "166%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -2259,36 +1555,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.83秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "94格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "166%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "黄色",
-        "extra": "",
-        "sortkey": "08*",
-        "color": "#ffff66"
       }
     ],
     "recipe": null,
@@ -2331,36 +1605,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.83秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "94格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "166%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "黄色",
-        "extra": "",
-        "sortkey": "08*",
-        "color": "#ffff66"
       }
     ],
     "recipe": null,
@@ -2403,36 +1655,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.83秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "94格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "166%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "淡紫色",
-        "extra": "",
-        "sortkey": "07*",
-        "color": "#dd66ff"
       }
     ],
     "recipe": null,
@@ -2469,36 +1699,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "107格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "180%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "粉红色",
-        "extra": "",
-        "sortkey": "05*",
-        "color": "#ff88bb"
       }
     ],
     "recipe": null,
@@ -2541,36 +1749,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "107格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "180%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "淡紫色",
-        "extra": "",
-        "sortkey": "07*",
-        "color": "#dd66ff"
       }
     ],
     "recipe": null,
@@ -2607,36 +1793,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "107格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "180%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "淡紫色",
-        "extra": "",
-        "sortkey": "07*",
-        "color": "#dd66ff"
       }
     ],
     "recipe": null,
@@ -2679,36 +1843,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "107格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "38 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "100%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "180%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "黄色",
-        "extra": "",
-        "sortkey": "08*",
-        "color": "#ffff66"
       }
     ],
     "recipe": null,
@@ -2787,36 +1929,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "119格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "36 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "250%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "250%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "黄色",
-        "extra": "",
-        "sortkey": "08*",
-        "color": "#ffff66"
       }
     ],
     "recipe": null,
@@ -2907,36 +2027,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "2.5秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "128格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "41 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "200%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "275%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "渐变色",
-        "extra": "",
-        "sortkey": "09*",
-        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -2988,36 +2086,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "143格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "41 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "200%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "250%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "黄色",
-        "extra": "",
-        "sortkey": "08*",
-        "color": "#ffff66"
       }
     ],
     "recipe": null,
@@ -3066,36 +2142,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "143格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "33 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "245%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "红色",
-        "extra": "",
-        "sortkey": "10*",
-        "color": "#ff5050"
       }
     ],
     "recipe": null,
@@ -3189,36 +2243,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "143格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "33 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "150%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "245%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "红色",
-        "extra": "",
-        "sortkey": "10*",
-        "color": "#ff5050"
       }
     ],
     "recipe": null,
@@ -3312,36 +2344,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "167格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "46 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "250%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "300%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "红色",
-        "extra": "",
-        "sortkey": "10*",
-        "color": "#ff5050"
       }
     ],
     "recipe": null,
@@ -3378,36 +2388,14 @@
         "extra": ""
       },
       {
-        "label": "飞行时间",
-        "value": "3秒",
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
         "extra": ""
       },
       {
-        "label": "高度（格）",
-        "value": "167格",
+        "label": "研究",
+        "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "最大水平速度",
-        "value": "46 mph",
-        "extra": ""
-      },
-      {
-        "label": "水平加速度",
-        "value": "250%",
-        "extra": ""
-      },
-      {
-        "label": "垂直倍率",
-        "value": "300%",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "红色",
-        "extra": "",
-        "sortkey": "10*",
-        "color": "#ff5050"
       }
     ],
     "recipe": null,

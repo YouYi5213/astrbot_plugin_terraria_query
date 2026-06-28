@@ -387,7 +387,10 @@ def _parse_rich_segments(root) -> list[dict]:
         if not isinstance(node, Tag):
             return
         if node.name == "br":
-            append_text("\n")
+            if segments and segments[-1]["type"] == "text":
+                segments[-1]["text"] += "\n"
+            else:
+                segments.append({"type": "text", "text": "\n"})
             return
         if node.name == "img" and node.get("src"):
             segments.append(
@@ -425,7 +428,7 @@ def _segments_plain_text(segments: list[dict]) -> str:
     parts: list[str] = []
     for seg in segments:
         if seg["type"] == "text":
-            parts.append(seg["text"].replace("\n", " "))
+            parts.append(seg["text"])
         elif seg["type"] == "icon":
             alt = seg.get("alt") or seg.get("image", "")
             if alt:
@@ -465,13 +468,19 @@ def _parse_generic_stat(td, label: str) -> dict:
         extra_el.extract()
 
     segments = _parse_rich_segments(td_copy)
-    if any(seg.get("type") == "icon" for seg in segments):
-        return {
-            "label": label,
-            "value": _segments_plain_text(segments),
-            "extra": extra,
-            "segments": segments,
-        }
+    if segments:
+        has_icons = any(seg.get("type") == "icon" for seg in segments)
+        has_multiline = any(
+            seg.get("type") == "text" and "\n" in seg.get("text", "")
+            for seg in segments
+        )
+        if has_icons or has_multiline:
+            return {
+                "label": label,
+                "value": _segments_plain_text(segments),
+                "extra": extra,
+                "segments": segments,
+            }
 
     value = _clean_text(td_copy.get_text())
     if extra:

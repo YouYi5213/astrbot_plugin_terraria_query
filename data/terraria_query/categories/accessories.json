@@ -10,8 +10,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -171,8 +172,10 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "研究",
@@ -217,15 +220,22 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "买入",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -300,27 +310,38 @@
       },
       {
         "label": "稀有度",
-        "value": "02*",
-        "extra": ""
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
       },
       {
         "label": "买入",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -417,10 +438,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1107,10 +1128,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "研究",
@@ -1330,20 +1351,33 @@
       },
       {
         "label": "工具提示",
-        "value": "允许佩戴者通过远程机载摄像头观看“矮胖猪龙鱼遥控系统”",
-        "extra": ""
+        "value": "允许佩戴者通过远程机载摄像头观看\n“矮胖猪龙鱼遥控系统”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "允许佩戴者通过远程机载摄像头观看\n“矮胖猪龙鱼遥控系统”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -2571,15 +2605,22 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -2596,11 +2637,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "录音",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2941,10 +2977,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -3231,15 +3267,21 @@
       },
       {
         "label": "工具提示",
-        "value": "“非常适合冒充开发者！”可飞行和缓慢坠落无论此配饰对你产生什么作用都不是Bug！",
-        "extra": ""
+        "value": "“非常适合冒充开发者！”\n可飞行和缓慢坠落\n无论此配饰对你产生什么作用都不是Bug！",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "“非常适合冒充开发者！”\n可飞行和缓慢坠落\n无论此配饰对你产生什么作用都不是Bug！"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "淡紫色",
+        "value": "渐变色",
         "extra": "",
         "sortkey": "09*",
-        "color": "#dd66ff"
+        "color": "#88ff88"
       },
       {
         "label": "卖出",
@@ -3280,10 +3322,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -3433,10 +3475,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -3477,10 +3519,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -3550,10 +3592,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -3570,11 +3612,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3651,15 +3688,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者二连跳增加跳跃高度",
-        "extra": ""
+        "value": "可让持有者二连跳\n增加跳跃高度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者二连跳\n增加跳跃高度"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -3676,11 +3719,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3721,10 +3759,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -3741,11 +3779,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3781,15 +3814,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行穿戴者可飞速奔跑你走过的草地上会长出花朵",
-        "extra": ""
+        "value": "可飞行\n穿戴者可飞速奔跑\n你走过的草地上会长出花朵",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行\n穿戴者可飞速奔跑\n你走过的草地上会长出花朵"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -3806,16 +3845,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3861,10 +3890,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -3881,11 +3910,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3967,10 +3991,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -4156,10 +4180,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -4215,15 +4239,21 @@
       },
       {
         "label": "工具提示",
-        "value": "哨兵数量上限增加1召唤伤害提高10%",
-        "extra": ""
+        "value": "哨兵数量上限增加1\n召唤伤害提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "哨兵数量上限增加1\n召唤伤害提高10%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -4316,15 +4346,21 @@
       },
       {
         "label": "工具提示",
-        "value": "扩大枪的视野范围（右键点击可拉远视野）远程伤害和远程暴击率各提高10%敌人不太可能以你为目标“发现敌人”",
-        "extra": ""
+        "value": "扩大枪的视野范围（右键点击可拉远视野）\n远程伤害和远程暴击率各提高10%\n敌人不太可能以你为目标\n“发现敌人”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "扩大枪的视野范围（右键点击可拉远视野）\n远程伤害和远程暴击率各提高10%\n敌人不太可能以你为目标\n“发现敌人”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -4381,15 +4417,22 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -4471,15 +4514,27 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "2 GC50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -4552,12 +4607,18 @@
       },
       {
         "label": "工具提示",
-        "value": "允许玩家猛冲向敌人双击一个方向",
-        "extra": ""
+        "value": "允许玩家猛冲向敌人\n双击一个方向",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "允许玩家猛冲向敌人\n双击一个方向"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -4623,15 +4684,21 @@
       },
       {
         "label": "工具提示",
-        "value": "显示位置报时",
-        "extra": ""
+        "value": "显示位置\n报时",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "显示位置\n报时"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -4692,10 +4759,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -4756,10 +4823,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -4816,15 +4883,21 @@
       },
       {
         "label": "工具提示",
-        "value": "对击退免疫生命值低于50%时，在所有者周围放置可减少25%伤害的护罩当生命值高于25%时，吸收团队中其他玩家所受伤害的25%",
-        "extra": ""
+        "value": "对击退免疫\n生命值低于50%时，在所有者周围放置可减少25%伤害的护罩\n当生命值高于25%时，吸收团队中其他玩家所受伤害的25%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "对击退免疫\n生命值低于50%时，在所有者周围放置可减少25%伤害的护罩\n当生命值高于25%时，吸收团队中其他玩家所受伤害的25%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -4881,10 +4954,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -4980,15 +5053,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可猛冲双击一个方向",
-        "extra": ""
+        "value": "可猛冲\n双击一个方向",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可猛冲\n双击一个方向"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -5083,15 +5162,21 @@
       },
       {
         "label": "工具提示",
-        "value": "挖矿速度提高25%提高物块和墙的放置速度物块放置范围和工具范围扩大3格物品的拾取范围扩大自动给放置的物体上漆或涂料按住向上键可以够到更高的地方",
-        "extra": ""
+        "value": "挖矿速度提高25%\n提高物块和墙的放置速度\n物块放置范围和工具范围扩大3格\n物品的拾取范围扩大\n自动给放置的物体上漆或涂料\n按住向上键可以够到更高的地方",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "挖矿速度提高25%\n提高物块和墙的放置速度\n物块放置范围和工具范围扩大3格\n物品的拾取范围扩大\n自动给放置的物体上漆或涂料\n按住向上键可以够到更高的地方"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -5151,20 +5236,33 @@
       },
       {
         "label": "工具提示",
-        "value": "物块放置范围和工具范围扩大3格 (电脑版、主机版、和移动版)增加触及范围(前代主机版)",
-        "extra": ""
+        "value": "物块放置范围和工具范围扩大3格(电脑版、主机版、和移动版)\n增加触及范围(前代主机版)",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "物块放置范围和工具范围扩大3格(电脑版、主机版、和移动版)\n增加触及范围(前代主机版)"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -5241,15 +5339,21 @@
       },
       {
         "label": "工具提示",
-        "value": "给予游泳能力并大大延长水下呼吸时间提供额外冰面行动力发出非常微弱的光芒，这种光芒在水下会变得更醒目",
-        "extra": ""
+        "value": "给予游泳能力并大大延长水下呼吸时间\n提供额外冰面行动力\n发出非常微弱的光芒，这种光芒在水下会变得更醒目",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "给予游泳能力并大大延长水下呼吸时间\n提供额外冰面行动力\n发出非常微弱的光芒，这种光芒在水下会变得更醒目"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -5306,15 +5410,21 @@
       },
       {
         "label": "工具提示",
-        "value": "对击退和火块免疫对大部分减益免疫",
-        "extra": ""
+        "value": "对击退和火块免疫\n对大部分减益免疫",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "对击退和火块免疫\n对大部分减益免疫"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -5371,10 +5481,10 @@
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -5443,10 +5553,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -5547,10 +5657,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -5567,11 +5677,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5653,10 +5758,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -5713,10 +5818,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -5773,10 +5878,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -5901,10 +6006,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -5989,10 +6094,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -6009,11 +6114,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6095,10 +6195,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -6154,20 +6254,33 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行和缓慢坠落按住向上键可以更快上升！",
-        "extra": ""
+        "value": "可飞行和缓慢坠落\n按住向上键可以更快上升！",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行和缓慢坠落\n按住向上键可以更快上升！"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "买入",
-        "value": "40 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "40",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -6184,11 +6297,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6275,15 +6383,22 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -6360,8 +6475,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 3 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -6375,13 +6491,22 @@
       },
       {
         "label": "稀有度",
-        "value": "09*",
-        "extra": ""
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6430,18 +6555,33 @@
       },
       {
         "label": "工具提示",
-        "value": "当生命值高于25%时，吸收团队中其他玩家所受伤害的25%对击退免疫",
-        "extra": ""
+        "value": "当生命值高于25%时，吸收团队中其他玩家所受伤害的25%\n对击退免疫",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "当生命值高于25%时，吸收团队中其他玩家所受伤害的25%\n对击退免疫"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "6 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6525,13 +6665,22 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "6 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6579,23 +6728,45 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤伤害提高15%提高仆从的击退",
-        "extra": ""
+        "value": "召唤伤害提高15%\n提高仆从的击退",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤伤害提高15%\n提高仆从的击退"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "买入",
-        "value": "40 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "40",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "8 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6657,13 +6828,22 @@
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
-        "value": "54 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "54",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6703,18 +6883,34 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "买入",
-        "value": "40 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "40",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "8 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6766,13 +6962,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6816,18 +7021,38 @@
       },
       {
         "label": "工具提示",
-        "value": "扩大魔力星的拾取范围魔法伤害提高15%",
-        "extra": ""
+        "value": "扩大魔力星的拾取范围\n魔法伤害提高15%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "扩大魔力星的拾取范围\n魔法伤害提高15%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "3 GC20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6867,18 +7092,38 @@
       },
       {
         "label": "工具提示",
-        "value": "扩大魔力星的拾取范围受到伤害时会恢复魔力最大魔力增加20",
-        "extra": ""
+        "value": "扩大魔力星的拾取范围\n受到伤害时会恢复魔力\n最大魔力增加20",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "扩大魔力星的拾取范围\n受到伤害时会恢复魔力\n最大魔力增加20"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "3 GC20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6918,27 +7163,37 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行和缓慢坠落按向下键可开关悬停状态按向上键可停用悬停按住向上键可以更快上升！“你懂得越多”",
-        "extra": ""
+        "value": "可飞行和缓慢坠落\n按向下键可开关悬停状态\n按向上键可停用悬停\n按住向上键可以更快上升！\n“你懂得越多”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行和缓慢坠落\n按向下键可开关悬停状态\n按向上键可停用悬停\n按住向上键可以更快上升！\n“你懂得越多”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "12*",
-        "extra": ""
+        "value": "彩虹",
+        "extra": "",
+        "sortkey": "12*",
+        "color": "#88ff88"
       },
       {
         "label": "卖出",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6985,18 +7240,33 @@
       },
       {
         "label": "工具提示",
-        "value": "小幅提高伤害、近战速度、暴击率、生命再生、防御、挖矿速度和仆从击退",
-        "extra": ""
+        "value": "小幅提高伤害、近战速度、暴击率、\n生命再生、防御、挖矿速度和仆从击退",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "小幅提高伤害、近战速度、暴击率、\n生命再生、防御、挖矿速度和仆从击退"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
-        "value": "8 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -7041,18 +7311,34 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "买入",
-        "value": "15 GC (前代主机版)",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -7226,18 +7512,33 @@
       },
       {
         "label": "工具提示",
-        "value": "在晚上将持有者变成狼人，入水时将持有者变成人鱼小幅提高伤害、近战速度、暴击率、生命再生、防御、挖矿速度和仆从击退",
-        "extra": ""
+        "value": "在晚上将持有者变成狼人，入水时将持有者变成人鱼\n小幅提高伤害、近战速度、暴击率、\n生命再生、防御、挖矿速度和仆从击退",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "在晚上将持有者变成狼人，入水时将持有者变成人鱼\n小幅提高伤害、近战速度、暴击率、\n生命再生、防御、挖矿速度和仆从击退"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "14 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "14",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -7277,18 +7578,33 @@
       },
       {
         "label": "工具提示",
-        "value": "白天时，小幅提高伤害、近战速度、暴击率、生命再生、防御、挖矿速度和仆从击退",
-        "extra": ""
+        "value": "白天时，小幅提高伤害、近战速度、暴击率、\n生命再生、防御、挖矿速度和仆从击退",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "白天时，小幅提高伤害、近战速度、暴击率、\n生命再生、防御、挖矿速度和仆从击退"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
-        "value": "6 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -7385,18 +7701,33 @@
       },
       {
         "label": "工具提示",
-        "value": "魔力消耗降低8%需要时自动使用魔力药水敌人不太可能以你为目标",
-        "extra": ""
+        "value": "魔力消耗降低8%\n需要时自动使用魔力药水\n敌人不太可能以你为目标",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "魔力消耗降低8%\n需要时自动使用魔力药水\n敌人不太可能以你为目标"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -7436,15 +7767,21 @@
       },
       {
         "label": "工具提示",
-        "value": "哨兵数量上限增加1召唤伤害提高10%",
-        "extra": ""
+        "value": "哨兵数量上限增加1\n召唤伤害提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "哨兵数量上限增加1\n召唤伤害提高10%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -7537,10 +7874,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -7638,7 +7975,7 @@
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -7704,15 +8041,21 @@
       },
       {
         "label": "工具提示",
-        "value": "哨兵数量上限增加1召唤伤害提高10%",
-        "extra": ""
+        "value": "哨兵数量上限增加1\n召唤伤害提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "哨兵数量上限增加1\n召唤伤害提高10%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -7810,10 +8153,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -7935,15 +8278,22 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -8012,10 +8362,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -8032,11 +8382,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8118,10 +8463,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -8238,15 +8583,21 @@
       },
       {
         "label": "工具提示",
-        "value": "7秒内对熔岩免疫对火块免疫",
-        "extra": ""
+        "value": "7秒内对熔岩免疫\n对火块免疫",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "7秒内对熔岩免疫\n对火块免疫"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -8308,10 +8659,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -8391,15 +8742,22 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -8457,10 +8815,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8580,15 +8938,21 @@
       },
       {
         "label": "工具提示",
-        "value": "击中敌人有时会掉落额外的钱币“我捡到一枚钱币！今天真幸运！”",
-        "extra": ""
+        "value": "击中敌人有时会掉落额外的钱币\n“我捡到一枚钱币！今天真幸运！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "击中敌人有时会掉落额外的钱币\n“我捡到一枚钱币！今天真幸运！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -8769,15 +9133,21 @@
       },
       {
         "label": "工具提示",
-        "value": "消除掉落伤害“据说能带来好运，驱除邪灵”",
-        "extra": ""
+        "value": "消除掉落伤害\n“据说能带来好运，驱除邪灵”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "消除掉落伤害\n“据说能带来好运，驱除邪灵”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -8834,15 +9204,22 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -8901,15 +9278,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行穿戴者可飞速奔跑",
-        "extra": ""
+        "value": "可飞行\n穿戴者可飞速奔跑",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行\n穿戴者可飞速奔跑"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8926,16 +9309,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8971,15 +9344,21 @@
       },
       {
         "label": "工具提示",
-        "value": "提高物块和墙的放置速度物块放置范围和工具范围扩大3格自动给放置的物体上漆或涂料",
-        "extra": ""
+        "value": "提高物块和墙的放置速度\n物块放置范围和工具范围扩大3格\n自动给放置的物体上漆或涂料",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提高物块和墙的放置速度\n物块放置范围和工具范围扩大3格\n自动给放置的物体上漆或涂料"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -9044,10 +9423,10 @@
       },
       {
         "label": "稀有度",
-        "value": "淡紫色",
+        "value": "渐变色",
         "extra": "",
         "sortkey": "09*",
-        "color": "#dd66ff"
+        "color": "#88ff88"
       }
     ],
     "recipe": null,
@@ -9066,15 +9445,21 @@
       },
       {
         "label": "工具提示",
-        "value": "提高近战击退近战速度提高12%让近战武器能自动挥舞加大近战武器的尺寸",
-        "extra": ""
+        "value": "提高近战击退\n近战速度提高12%\n让近战武器能自动挥舞\n加大近战武器的尺寸",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提高近战击退\n近战速度提高12%\n让近战武器能自动挥舞\n加大近战武器的尺寸"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -9131,10 +9516,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -9227,15 +9612,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可爬墙和猛冲有机会闪避攻击",
-        "extra": ""
+        "value": "可爬墙和猛冲\n有机会闪避攻击",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可爬墙和猛冲\n有机会闪避攻击"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -9296,10 +9687,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -9431,10 +9822,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -9571,15 +9962,22 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "买入",
-        "value": "50 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "50",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -9665,10 +10063,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -9720,15 +10118,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行和缓慢坠落按向下键可开关悬停状态按向上键可停用悬停",
-        "extra": ""
+        "value": "可飞行和缓慢坠落\n按向下键可开关悬停状态\n按向上键可停用悬停",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行和缓慢坠落\n按向下键可开关悬停状态\n按向上键可停用悬停"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -9787,10 +10191,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -9915,10 +10319,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -10068,7 +10472,7 @@
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -10139,10 +10543,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -10198,20 +10602,38 @@
       },
       {
         "label": "工具提示",
-        "value": "可沿墙滑下结合鞋钉使用时能力还会有所提升",
-        "extra": ""
+        "value": "可沿墙滑下\n结合鞋钉使用时能力还会有所提升",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可沿墙滑下\n结合鞋钉使用时能力还会有所提升"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -10389,10 +10811,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -10409,16 +10831,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10516,10 +10928,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -10536,11 +10948,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10674,10 +11081,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -10814,10 +11221,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -10913,10 +11320,10 @@
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -10973,10 +11380,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -11051,15 +11458,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者二连跳增加跳跃高度",
-        "extra": ""
+        "value": "可让持有者二连跳\n增加跳跃高度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者二连跳\n增加跳跃高度"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -11076,11 +11489,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11121,10 +11529,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -11141,11 +11549,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11274,15 +11677,21 @@
       },
       {
         "label": "工具提示",
-        "value": "夜晚时，小幅提高伤害、近战速度、暴击率、生命再生、防御、挖矿速度和仆从击退",
-        "extra": ""
+        "value": "夜晚时，小幅提高伤害、近战速度、暴击率、\n生命再生、防御、挖矿速度和仆从击退",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "夜晚时，小幅提高伤害、近战速度、暴击率、\n生命再生、防御、挖矿速度和仆从击退"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -11401,10 +11810,10 @@
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -11461,10 +11870,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -11560,10 +11969,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -11674,15 +12083,21 @@
       },
       {
         "label": "工具提示",
-        "value": "提高近战击退近战伤害和近战速度各提高12%让近战武器能自动挥舞加大近战武器的尺寸",
-        "extra": ""
+        "value": "提高近战击退\n近战伤害和近战速度各提高12%\n让近战武器能自动挥舞\n加大近战武器的尺寸",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提高近战击退\n近战伤害和近战速度各提高12%\n让近战武器能自动挥舞\n加大近战武器的尺寸"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -11739,15 +12154,22 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -11854,15 +12276,22 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -11945,10 +12374,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -12102,15 +12531,27 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -12250,15 +12691,27 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -12413,15 +12866,21 @@
       },
       {
         "label": "工具提示",
-        "value": "扩大枪的视野范围右键点击可拉远视野",
-        "extra": ""
+        "value": "扩大枪的视野范围\n右键点击可拉远视野",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "扩大枪的视野范围\n右键点击可拉远视野"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -12512,15 +12971,21 @@
       },
       {
         "label": "工具提示",
-        "value": "哨兵数量上限增加1召唤伤害提高10%",
-        "extra": ""
+        "value": "哨兵数量上限增加1\n召唤伤害提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "哨兵数量上限增加1\n召唤伤害提高10%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -12613,15 +13078,21 @@
       },
       {
         "label": "工具提示",
-        "value": "仆从数量上限增加1召唤伤害提高10%",
-        "extra": ""
+        "value": "仆从数量上限增加1\n召唤伤害提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "仆从数量上限增加1\n召唤伤害提高10%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -12712,15 +13183,21 @@
       },
       {
         "label": "工具提示",
-        "value": "伤害提高10%暴击率提高8%",
-        "extra": ""
+        "value": "伤害提高10%\n暴击率提高8%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "伤害提高10%\n暴击率提高8%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -12777,15 +13254,22 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -12864,18 +13348,33 @@
       },
       {
         "label": "工具提示",
-        "value": "盔甲穿透增加5受到伤害后释放蜜蜂并将使用者浸入蜂蜜中",
-        "extra": ""
+        "value": "盔甲穿透增加5\n受到伤害后释放蜜蜂并将使用者浸入蜂蜜中",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "盔甲穿透增加5\n受到伤害后释放蜜蜂并将使用者浸入蜂蜜中"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -12915,18 +13414,34 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "40 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -12973,27 +13488,37 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者四连跳增加跳跃高度",
-        "extra": ""
+        "value": "可让持有者四连跳\n增加跳跃高度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者四连跳\n增加跳跃高度"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "每次附加跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13038,13 +13563,27 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "2 GC50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -13094,27 +13633,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "玩家死亡",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13196,13 +13734,22 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "4 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "4",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -13317,18 +13864,34 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "买入",
-        "value": "1 PC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "pc",
+            "amount": "1",
+            "image": "Platinum_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "20 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -13375,18 +13938,33 @@
       },
       {
         "label": "工具提示",
-        "value": "给予游泳能力并大大延长水下呼吸时间发出非常微弱的光芒，这种光芒在水下会变得更醒目",
-        "extra": ""
+        "value": "给予游泳能力并大大延长水下呼吸时间\n发出非常微弱的光芒，这种光芒在水下会变得更醒目",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "给予游泳能力并大大延长水下呼吸时间\n发出非常微弱的光芒，这种光芒在水下会变得更醒目"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -13426,18 +14004,33 @@
       },
       {
         "label": "工具提示",
-        "value": "发出非常微弱的光芒，这种光芒在水下会变得更醒目 (电脑版、主机版、和移动版)提供水下照明(前代主机版、和3DS版)",
-        "extra": ""
+        "value": "发出非常微弱的光芒，这种光芒在水下会变得更醒目(电脑版、主机版、和移动版)\n提供水下照明(前代主机版、和3DS版)",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "发出非常微弱的光芒，这种光芒在水下会变得更醒目(电脑版、主机版、和移动版)\n提供水下照明(前代主机版、和3DS版)"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "02*",
-        "extra": ""
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -13552,27 +14145,37 @@
       },
       {
         "label": "工具提示",
-        "value": "穿戴者可飞速奔跑提高跳跃速度，并可自动跳跃提高掉落抗性",
-        "extra": ""
+        "value": "穿戴者可飞速奔跑\n提高跳跃速度，并可自动跳跃\n提高掉落抗性",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "穿戴者可飞速奔跑\n提高跳跃速度，并可自动跳跃\n提高掉落抗性"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13608,27 +14211,37 @@
       },
       {
         "label": "工具提示",
-        "value": "穿戴者可飞速奔跑，在沙地上还能跑得更快“无节律行走就不会引来蠕虫”",
-        "extra": ""
+        "value": "穿戴者可飞速奔跑，在沙地上还能跑得更快\n“无节律行走就不会引来蠕虫”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "穿戴者可飞速奔跑，在沙地上还能跑得更快\n“无节律行走就不会引来蠕虫”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13739,27 +14352,37 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者做出强化的二连跳增加跳跃高度",
-        "extra": ""
+        "value": "可让持有者做出强化的二连跳\n增加跳跃高度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者做出强化的二连跳\n增加跳跃高度"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13800,22 +14423,26 @@
       },
       {
         "label": "稀有度",
-        "value": "02*",
-        "extra": ""
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13926,18 +14553,33 @@
       },
       {
         "label": "工具提示",
-        "value": "提高近战击退加大近战武器的尺寸",
-        "extra": ""
+        "value": "提高近战击退\n加大近战武器的尺寸",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提高近战击退\n加大近战武器的尺寸"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -14016,15 +14658,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行、飞速奔跑，并提供额外冰面行动力移动速度提高8%可让人在水、蜂蜜和熔岩上行走对火块免疫并在7秒内对熔岩免疫减少因触碰熔岩而受到的伤害",
-        "extra": ""
+        "value": "可飞行、飞速奔跑，并提供额外冰面行动力\n移动速度提高8%\n可让人在水、蜂蜜和熔岩上行走\n对火块免疫并在7秒内对熔岩免疫\n减少因触碰熔岩而受到的伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行、飞速奔跑，并提供额外冰面行动力\n移动速度提高8%\n可让人在水、蜂蜜和熔岩上行走\n对火块免疫并在7秒内对熔岩免疫\n减少因触碰熔岩而受到的伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -14041,16 +14689,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14086,15 +14724,22 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -14158,10 +14803,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -14277,10 +14922,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -14297,11 +14942,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14435,10 +15075,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -14539,10 +15179,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -14763,12 +15403,18 @@
       },
       {
         "label": "工具提示",
-        "value": "有机会制造幻象并闪避攻击闪避后暂时提高暴击率和仆从伤害被击中后可能使附近敌人陷入困惑",
-        "extra": ""
+        "value": "有机会制造幻象并闪避攻击\n闪避后暂时提高暴击率和仆从伤害\n被击中后可能使附近敌人陷入困惑",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "有机会制造幻象并闪避攻击\n闪避后暂时提高暴击率和仆从伤害\n被击中后可能使附近敌人陷入困惑"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -14839,10 +15485,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -14903,10 +15549,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -14967,10 +15613,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -15031,10 +15677,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -15154,15 +15800,21 @@
       },
       {
         "label": "工具提示",
-        "value": "提供额外冰面行动力落到冰上时冰不会碎",
-        "extra": ""
+        "value": "提供额外冰面行动力\n落到冰上时冰不会碎",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提供额外冰面行动力\n落到冰上时冰不会碎"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -15307,15 +15959,21 @@
       },
       {
         "label": "工具提示",
-        "value": "给予游泳能力大大延长水下呼吸时间",
-        "extra": ""
+        "value": "给予游泳能力\n大大延长水下呼吸时间",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "给予游泳能力\n大大延长水下呼吸时间"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -15367,15 +16025,21 @@
       },
       {
         "label": "工具提示",
-        "value": "箭的伤害提高10%，箭的速度大大提高20%几率不消耗箭敌人不太可能以你为目标",
-        "extra": ""
+        "value": "箭的伤害提高10%，箭的速度大大提高\n20%几率不消耗箭\n敌人不太可能以你为目标",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "箭的伤害提高10%，箭的速度大大提高\n20%几率不消耗箭\n敌人不太可能以你为目标"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -15432,15 +16096,22 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -15457,11 +16128,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -15545,10 +16211,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -15565,11 +16231,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -15646,15 +16307,21 @@
       },
       {
         "label": "工具提示",
-        "value": "对微光相位化免疫当淹没在微光中时按住向下键可以相位化",
-        "extra": ""
+        "value": "对微光相位化免疫\n当淹没在微光中时按住向下键可以相位化",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "对微光相位化免疫\n当淹没在微光中时按住向下键可以相位化"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -15695,10 +16362,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -15789,15 +16456,21 @@
       },
       {
         "label": "工具提示",
-        "value": "提高近战击退，近战攻击造成火焰伤害近战伤害和近战速度各提高12%让近战武器能自动挥舞加大近战武器的尺寸",
-        "extra": ""
+        "value": "提高近战击退，近战攻击造成火焰伤害\n近战伤害和近战速度各提高12%\n让近战武器能自动挥舞\n加大近战武器的尺寸",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提高近战击退，近战攻击造成火焰伤害\n近战伤害和近战速度各提高12%\n让近战武器能自动挥舞\n加大近战武器的尺寸"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -15849,15 +16522,21 @@
       },
       {
         "label": "工具提示",
-        "value": "在身后留下一道火焰痕迹“脚再也不冷了”",
-        "extra": ""
+        "value": "在身后留下一道火焰痕迹\n“脚再也不冷了”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "在身后留下一道火焰痕迹\n“脚再也不冷了”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -15971,10 +16650,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -16101,15 +16780,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可让人在水、蜂蜜和熔岩上行走对火块免疫并在7秒内对熔岩免疫减少因触碰熔岩而受到的伤害",
-        "extra": ""
+        "value": "可让人在水、蜂蜜和熔岩上行走\n对火块免疫并在7秒内对熔岩免疫\n减少因触碰熔岩而受到的伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让人在水、蜂蜜和熔岩上行走\n对火块免疫并在7秒内对熔岩免疫\n减少因触碰熔岩而受到的伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -16165,15 +16850,21 @@
       },
       {
         "label": "工具提示",
-        "value": "7秒内对熔岩免疫对火块免疫",
-        "extra": ""
+        "value": "7秒内对熔岩免疫\n对火块免疫",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "7秒内对熔岩免疫\n对火块免疫"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -16230,15 +16921,21 @@
       },
       {
         "label": "工具提示",
-        "value": "箭的伤害提高10%，箭的速度大大提高20%几率不消耗箭点燃木箭，火光熊熊“在恐惧中颤抖吧！”",
-        "extra": ""
+        "value": "箭的伤害提高10%，箭的速度大大提高\n20%几率不消耗箭\n点燃木箭，火光熊熊\n“在恐惧中颤抖吧！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "箭的伤害提高10%，箭的速度大大提高\n20%几率不消耗箭\n点燃木箭，火光熊熊\n“在恐惧中颤抖吧！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -16295,15 +16992,21 @@
       },
       {
         "label": "工具提示",
-        "value": "7秒内对熔岩免疫对火块免疫减少因触碰熔岩而受到的伤害",
-        "extra": ""
+        "value": "7秒内对熔岩免疫\n对火块免疫\n减少因触碰熔岩而受到的伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "7秒内对熔岩免疫\n对火块免疫\n减少因触碰熔岩而受到的伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -16365,10 +17068,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -16385,16 +17088,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "玩家死亡",
-        "value": "",
         "extra": ""
       }
     ],
@@ -16476,10 +17169,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -16606,15 +17299,21 @@
       },
       {
         "label": "工具提示",
-        "value": "按住向下键跳跃即可向下猛击猛击地面会对附近的敌人造成伤害“像古代的英雄一样猛击地面”",
-        "extra": ""
+        "value": "按住向下键跳跃即可向下猛击\n猛击地面会对附近的敌人造成伤害\n“像古代的英雄一样猛击地面”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "按住向下键跳跃即可向下猛击\n猛击地面会对附近的敌人造成伤害\n“像古代的英雄一样猛击地面”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -16717,15 +17416,21 @@
       },
       {
         "label": "工具提示",
-        "value": "提高近战击退近战速度提高12%让近战武器能自动挥舞加大近战武器的尺寸敌人更有可能以你为目标",
-        "extra": ""
+        "value": "提高近战击退\n近战速度提高12%\n让近战武器能自动挥舞\n加大近战武器的尺寸\n敌人更有可能以你为目标",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提高近战击退\n近战速度提高12%\n让近战武器能自动挥舞\n加大近战武器的尺寸\n敌人更有可能以你为目标"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -16787,10 +17492,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -16807,11 +17512,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -16906,15 +17606,21 @@
       },
       {
         "label": "工具提示",
-        "value": "扩大枪的视野范围（右键点击可拉远视野）远程伤害和暴击率各提高10%",
-        "extra": ""
+        "value": "扩大枪的视野范围（右键点击可拉远视野）\n远程伤害和暴击率各提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "扩大枪的视野范围（右键点击可拉远视野）\n远程伤害和暴击率各提高10%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -16966,15 +17672,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行穿戴者可飞速奔跑在身后留下一道火焰痕迹",
-        "extra": ""
+        "value": "可飞行\n穿戴者可飞速奔跑\n在身后留下一道火焰痕迹",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行\n穿戴者可飞速奔跑\n在身后留下一道火焰痕迹"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -17026,15 +17738,22 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "买入",
-        "value": "15 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -17087,15 +17806,21 @@
       },
       {
         "label": "工具提示",
-        "value": "近战速度提高12%让近战武器能自动挥舞",
-        "extra": ""
+        "value": "近战速度提高12%\n让近战武器能自动挥舞",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "近战速度提高12%\n让近战武器能自动挥舞"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -17227,10 +17952,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -17292,10 +18017,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -17312,11 +18037,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -17393,18 +18113,33 @@
       },
       {
         "label": "工具提示",
-        "value": "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中增加跳跃高度，消除掉落伤害",
-        "extra": ""
+        "value": "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中\n增加跳跃高度，消除掉落伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中\n增加跳跃高度，消除掉落伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -17449,13 +18184,22 @@
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
-        "value": "2 GC (电脑版、主机版、和移动版) / 4 GC (前代主机版、和3DS版)",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -17500,18 +18244,34 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -17578,18 +18338,33 @@
       },
       {
         "label": "工具提示",
-        "value": "仆从数量上限增加1召唤伤害提高15%、提高仆从的击退",
-        "extra": ""
+        "value": "仆从数量上限增加1\n召唤伤害提高15%、提高仆从的击退",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "仆从数量上限增加1\n召唤伤害提高15%、提高仆从的击退"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -17629,13 +18404,22 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -17680,13 +18464,22 @@
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -17810,22 +18603,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
         "extra": ""
       }
     ],
@@ -17954,27 +18751,37 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者二连跳增加跳跃高度、消除掉落伤害",
-        "extra": ""
+        "value": "可让持有者二连跳\n增加跳跃高度、消除掉落伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者二连跳\n增加跳跃高度、消除掉落伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -18015,13 +18822,22 @@
       },
       {
         "label": "稀有度",
-        "value": "12*",
-        "extra": ""
+        "value": "彩虹",
+        "extra": "",
+        "sortkey": "12*",
+        "color": "#88ff88"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -18072,18 +18888,34 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "买入",
-        "value": "1 PC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "pc",
+            "amount": "1",
+            "image": "Platinum_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "20 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -18135,13 +18967,22 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -18243,13 +19084,22 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -18294,18 +19144,34 @@
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "买入",
-        "value": "20 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "4 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "4",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -18351,13 +19217,22 @@
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -18459,18 +19334,34 @@
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -18535,15 +19426,21 @@
       },
       {
         "label": "工具提示",
-        "value": "魔力消耗降低8%需要时自动使用魔力药水扩大魔力星的拾取范围",
-        "extra": ""
+        "value": "魔力消耗降低8%\n需要时自动使用魔力药水\n扩大魔力星的拾取范围",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "魔力消耗降低8%\n需要时自动使用魔力药水\n扩大魔力星的拾取范围"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -18600,10 +19497,10 @@
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -18660,15 +19557,22 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -18741,15 +19645,21 @@
       },
       {
         "label": "工具提示",
-        "value": "增加悠悠球射程和持续时间在用悠悠球击中敌人后投掷平衡锤",
-        "extra": ""
+        "value": "增加悠悠球射程和持续时间\n在用悠悠球击中敌人后投掷平衡锤",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "增加悠悠球射程和持续时间\n在用悠悠球击中敌人后投掷平衡锤"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -18806,15 +19716,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者二连跳增加跳跃高度、消除掉落伤害",
-        "extra": ""
+        "value": "可让持有者二连跳\n增加跳跃高度、消除掉落伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者二连跳\n增加跳跃高度、消除掉落伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -18831,11 +19747,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -18876,10 +19787,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -19011,10 +19922,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -19123,15 +20034,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者二连跳增加跳跃高度、消除掉落伤害",
-        "extra": ""
+        "value": "可让持有者二连跳\n增加跳跃高度、消除掉落伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者二连跳\n增加跳跃高度、消除掉落伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -19148,11 +20065,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -19193,10 +20105,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -19213,11 +20125,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -19297,10 +20204,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -19521,12 +20428,18 @@
       },
       {
         "label": "工具提示",
-        "value": "给予无限翅膀飞行时间和无限火箭靴飞行时间提高飞行和跳跃机动性",
-        "extra": ""
+        "value": "给予无限翅膀飞行时间和无限火箭靴飞行时间\n提高飞行和跳跃机动性",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "给予无限翅膀飞行时间和无限火箭靴飞行时间\n提高飞行和跳跃机动性"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -19602,10 +20515,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -19622,16 +20535,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "玩家死亡",
-        "value": "",
         "extra": ""
       }
     ],
@@ -19656,10 +20559,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -19786,18 +20689,33 @@
       },
       {
         "label": "工具提示",
-        "value": "敌人不太可能以你为目标伤害和暴击率各提高5%",
-        "extra": ""
+        "value": "敌人不太可能以你为目标\n伤害和暴击率各提高5%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "敌人不太可能以你为目标\n伤害和暴击率各提高5%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "06*",
-        "extra": ""
+        "value": "浅紫色",
+        "extra": "",
+        "sortkey": "06*",
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
-        "value": "8 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -19881,18 +20799,34 @@
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -19957,27 +20891,37 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者二连跳增加跳跃高度",
-        "extra": ""
+        "value": "可让持有者二连跳\n增加跳跃高度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者二连跳\n增加跳跃高度"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -20018,13 +20962,22 @@
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
-        "value": "6 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -20144,18 +21097,33 @@
       },
       {
         "label": "工具提示",
-        "value": "对击退免疫当生命值高于25%时，吸收团队中其他玩家所受伤害的25%敌人更有可能以你为目标",
-        "extra": ""
+        "value": "对击退免疫\n当生命值高于25%时，吸收团队中其他玩家所受伤害的25%\n敌人更有可能以你为目标",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "对击退免疫\n当生命值高于25%时，吸收团队中其他玩家所受伤害的25%\n敌人更有可能以你为目标"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -20200,13 +21168,22 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -20251,13 +21228,22 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -20434,27 +21420,37 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者二连跳增加跳跃高度、消除掉落伤害",
-        "extra": ""
+        "value": "可让持有者二连跳\n增加跳跃高度、消除掉落伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者二连跳\n增加跳跃高度、消除掉落伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -20490,15 +21486,21 @@
       },
       {
         "label": "工具提示",
-        "value": "提高跳跃速度并可自动跳跃提高掉落抗性",
-        "extra": ""
+        "value": "提高跳跃速度并可自动跳跃\n提高掉落抗性",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提高跳跃速度并可自动跳跃\n提高掉落抗性"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -20555,7 +21557,7 @@
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -20626,10 +21628,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -20738,15 +21740,21 @@
       },
       {
         "label": "工具提示",
-        "value": "增加跳跃高度受到伤害后释放蜜蜂并将使用者浸入蜂蜜中",
-        "extra": ""
+        "value": "增加跳跃高度\n受到伤害后释放蜜蜂并将使用者浸入蜂蜜中",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "增加跳跃高度\n受到伤害后释放蜜蜂并将使用者浸入蜂蜜中"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -20803,10 +21811,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -20863,7 +21871,7 @@
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -20939,10 +21947,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -21038,10 +22046,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -21099,10 +22107,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -21193,15 +22201,21 @@
       },
       {
         "label": "工具提示",
-        "value": "不移动时连续使用某些物品物品栏打开时不起作用",
-        "extra": ""
+        "value": "不移动时连续使用某些物品\n物品栏打开时不起作用",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "不移动时连续使用某些物品\n物品栏打开时不起作用"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -21281,10 +22295,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -21372,15 +22386,21 @@
       },
       {
         "label": "工具提示",
-        "value": "扩大钱币拾取范围击中敌人有时会掉落额外钱币商店价格降低20%",
-        "extra": ""
+        "value": "扩大钱币拾取范围\n击中敌人有时会掉落额外钱币\n商店价格降低20%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "扩大钱币拾取范围\n击中敌人有时会掉落额外钱币\n商店价格降低20%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "粉红色",
+        "value": "浅紫色",
         "extra": "",
         "sortkey": "06*",
-        "color": "#ff88bb"
+        "color": "#cc88ff"
       },
       {
         "label": "卖出",
@@ -21437,10 +22457,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -21457,11 +22477,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
         "extra": ""
       }
     ],
@@ -21497,15 +22512,21 @@
       },
       {
         "label": "工具提示",
-        "value": "挖矿速度提高25%“古老的问题需要古老的解决方案”",
-        "extra": ""
+        "value": "挖矿速度提高25%\n“古老的问题需要古老的解决方案”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "挖矿速度提高25%\n“古老的问题需要古老的解决方案”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -21645,10 +22666,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -21811,12 +22832,18 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者反转重力按向上键可改变重力",
-        "extra": ""
+        "value": "可让持有者反转重力\n按向上键可改变重力",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者反转重力\n按向上键可改变重力"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -21836,11 +22863,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "切换重力",
-        "value": "",
         "extra": ""
       }
     ],
@@ -21892,10 +22914,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -22013,10 +23035,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -22202,13 +23224,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -22253,13 +23284,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -22308,13 +23348,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "15 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "15",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -22354,18 +23403,33 @@
       },
       {
         "label": "工具提示",
-        "value": "扩大钱币拾取范围击中敌人有时会掉落额外的钱币",
-        "extra": ""
+        "value": "扩大钱币拾取范围\n击中敌人有时会掉落额外的钱币",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "扩大钱币拾取范围\n击中敌人有时会掉落额外的钱币"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -22415,13 +23479,27 @@
       },
       {
         "label": "稀有度",
-        "value": "02*",
-        "extra": ""
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
-        "value": "1 GC75 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -22518,15 +23596,22 @@
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "买入",
-        "value": "2 PC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "pc",
+            "amount": "2",
+            "image": "Platinum_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -22590,10 +23675,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -22651,10 +23736,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -22712,10 +23797,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -22773,10 +23858,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -22834,10 +23919,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -22970,7 +24055,7 @@
       },
       {
         "label": "稀有度",
-        "value": "渐变色",
+        "value": "彩虹",
         "extra": "",
         "sortkey": "12*",
         "color": "#88ff88"
@@ -23041,10 +24126,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -23176,15 +24261,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行、可飞速奔跑移动速度提高8%",
-        "extra": ""
+        "value": "可飞行、可飞速奔跑\n移动速度提高8%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行、可飞速奔跑\n移动速度提高8%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -23201,16 +24292,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -23250,15 +24331,21 @@
       },
       {
         "label": "工具提示",
-        "value": "钓鱼线永远不会断，降低鱼饵消耗几率，渔力增加10可在熔岩中钓鱼",
-        "extra": ""
+        "value": "钓鱼线永远不会断，降低鱼饵消耗几率，渔力增加10\n可在熔岩中钓鱼",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "钓鱼线永远不会断，降低鱼饵消耗几率，渔力增加10\n可在熔岩中钓鱼"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -23315,10 +24402,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -23437,10 +24524,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -23457,11 +24544,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -23543,10 +24625,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -23563,11 +24645,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -23667,15 +24744,27 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -23829,15 +24918,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可飞行、飞速奔跑、并提供额外冰面行动力移动速度提高8%",
-        "extra": ""
+        "value": "可飞行、飞速奔跑、并提供额外冰面行动力\n移动速度提高8%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可飞行、飞速奔跑、并提供额外冰面行动力\n移动速度提高8%"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -23854,16 +24949,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "奔跑",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "飞行",
-        "value": "",
         "extra": ""
       }
     ],
@@ -23899,18 +24984,33 @@
       },
       {
         "label": "工具提示",
-        "value": "给予游泳能力提高跳跃速度，并可自动跳跃提高掉落抗性",
-        "extra": ""
+        "value": "给予游泳能力\n提高跳跃速度，并可自动跳跃\n提高掉落抗性",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "给予游泳能力\n提高跳跃速度，并可自动跳跃\n提高掉落抗性"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -23950,18 +25050,33 @@
       },
       {
         "label": "工具提示",
-        "value": "给予游泳能力可爬墙提高跳跃速度，并可自动跳跃提高掉落抗性“身为绿皮生物可太难了”",
-        "extra": ""
+        "value": "给予游泳能力\n可爬墙\n提高跳跃速度，并可自动跳跃\n提高掉落抗性\n“身为绿皮生物可太难了”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "给予游泳能力\n可爬墙\n提高跳跃速度，并可自动跳跃\n提高掉落抗性\n“身为绿皮生物可太难了”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24001,18 +25116,33 @@
       },
       {
         "label": "工具提示",
-        "value": "可爬墙提高跳跃速度，并可自动跳跃提高掉落抗性",
-        "extra": ""
+        "value": "可爬墙\n提高跳跃速度，并可自动跳跃\n提高掉落抗性",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可爬墙\n提高跳跃速度，并可自动跳跃\n提高掉落抗性"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24062,22 +25192,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -24159,18 +25293,39 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24306,18 +25461,33 @@
       },
       {
         "label": "工具提示",
-        "value": "可沿墙滑下结合攀爬爪使用时能力还会有所提升",
-        "extra": ""
+        "value": "可沿墙滑下\n结合攀爬爪使用时能力还会有所提升",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可沿墙滑下\n结合攀爬爪使用时能力还会有所提升"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24419,13 +25589,22 @@
       },
       {
         "label": "稀有度",
-        "value": "02*",
-        "extra": ""
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24488,18 +25667,33 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者四连跳增加跳跃高度，消除掉落伤害",
-        "extra": ""
+        "value": "可让持有者四连跳\n增加跳跃高度，消除掉落伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者四连跳\n增加跳跃高度，消除掉落伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "4 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "4",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24549,13 +25743,22 @@
       },
       {
         "label": "稀有度",
-        "value": "12*",
-        "extra": ""
+        "value": "彩虹",
+        "extra": "",
+        "sortkey": "12*",
+        "color": "#88ff88"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24606,18 +25809,33 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤暗影之手来攻击敌人“看到它我就头疼。”",
-        "extra": ""
+        "value": "召唤暗影之手来攻击敌人\n“看到它我就头疼。”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤暗影之手来攻击敌人\n“看到它我就头疼。”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "12*",
-        "extra": ""
+        "value": "彩虹",
+        "extra": "",
+        "sortkey": "12*",
+        "color": "#88ff88"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24668,18 +25886,33 @@
       },
       {
         "label": "工具提示",
-        "value": "提高移动速度和加速度穿戴时可提供照明“我黑暗生命中的一道短暂曙光。”",
-        "extra": ""
+        "value": "提高移动速度和加速度\n穿戴时可提供照明\n“我黑暗生命中的一道短暂曙光。”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "提高移动速度和加速度\n穿戴时可提供照明\n“我黑暗生命中的一道短暂曙光。”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24719,18 +25952,33 @@
       },
       {
         "label": "工具提示",
-        "value": "最大魔力增加20提高魔力再生速度",
-        "extra": ""
+        "value": "最大魔力增加20\n提高魔力再生速度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "最大魔力增加20\n提高魔力再生速度"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24826,18 +26074,33 @@
       },
       {
         "label": "工具提示",
-        "value": "魔力消耗降低8%需要时自动使用魔力药水受到伤害后会使星星坠落收集星星会恢复魔力",
-        "extra": ""
+        "value": "魔力消耗降低8%\n需要时自动使用魔力药水\n受到伤害后会使星星坠落\n收集星星会恢复魔力",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "魔力消耗降低8%\n需要时自动使用魔力药水\n受到伤害后会使星星坠落\n收集星星会恢复魔力"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24877,18 +26140,33 @@
       },
       {
         "label": "工具提示",
-        "value": "魔力消耗降低8%需要时自动使用魔力药水",
-        "extra": ""
+        "value": "魔力消耗降低8%\n需要时自动使用魔力药水",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "魔力消耗降低8%\n需要时自动使用魔力药水"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24933,13 +26211,22 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "30 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -24979,18 +26266,33 @@
       },
       {
         "label": "工具提示",
-        "value": "最大魔力增加20受到伤害时会恢复魔力",
-        "extra": ""
+        "value": "最大魔力增加20\n受到伤害时会恢复魔力",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "最大魔力增加20\n受到伤害时会恢复魔力"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "02*",
-        "extra": ""
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -25030,18 +26332,33 @@
       },
       {
         "label": "工具提示",
-        "value": "箭的伤害提高10%并大大提高箭的速度20%几率不消耗箭",
-        "extra": ""
+        "value": "箭的伤害提高10%并大大提高箭的速度\n20%几率不消耗箭",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "箭的伤害提高10%并大大提高箭的速度\n20%几率不消耗箭"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -25125,18 +26442,34 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "买入",
-        "value": "1 PC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "pc",
+            "amount": "1",
+            "image": "Platinum_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "20 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -25198,13 +26531,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -25301,27 +26643,37 @@
       },
       {
         "label": "工具提示",
-        "value": "增加跳跃高度可让持有者二连跳",
-        "extra": ""
+        "value": "增加跳跃高度\n可让持有者二连跳",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "增加跳跃高度\n可让持有者二连跳"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "3 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -25367,10 +26719,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -25387,11 +26739,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "玩家受伤",
-        "value": "",
         "extra": ""
       }
     ],
@@ -25468,15 +26815,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可让持有者做出强化的二连跳增加跳跃高度并消除掉落伤害",
-        "extra": ""
+        "value": "可让持有者做出强化的二连跳\n增加跳跃高度并消除掉落伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让持有者做出强化的二连跳\n增加跳跃高度并消除掉落伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -25493,11 +26846,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "二连跳",
-        "value": "",
         "extra": ""
       }
     ],
@@ -25538,15 +26886,21 @@
       },
       {
         "label": "工具提示",
-        "value": "对击退免疫对火块免疫",
-        "extra": ""
+        "value": "对击退免疫\n对火块免疫",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "对击退免疫\n对火块免疫"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -25598,15 +26952,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可让人在水和蜂蜜上行走对火块免疫",
-        "extra": ""
+        "value": "可让人在水和蜂蜜上行走\n对火块免疫",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可让人在水和蜂蜜上行走\n对火块免疫"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -25663,10 +27023,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -25761,15 +27121,21 @@
       },
       {
         "label": "工具提示",
-        "value": "消除掉落伤害对火块免疫",
-        "extra": ""
+        "value": "消除掉落伤害\n对火块免疫",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "消除掉落伤害\n对火块免疫"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -25836,10 +27202,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -25888,15 +27254,21 @@
       },
       {
         "label": "工具提示",
-        "value": "对火块免疫减少因触碰熔岩而受到的伤害",
-        "extra": ""
+        "value": "对火块免疫\n减少因触碰熔岩而受到的伤害",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "对火块免疫\n减少因触碰熔岩而受到的伤害"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -25953,10 +27325,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",

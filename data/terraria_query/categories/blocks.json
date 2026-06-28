@@ -10,8 +10,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -20,8 +21,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -72,10 +75,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -151,8 +154,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -161,8 +165,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -213,10 +219,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -264,10 +270,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -315,10 +321,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -366,10 +372,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -427,10 +433,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -553,10 +559,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -604,10 +610,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "研究",
@@ -655,10 +661,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -706,10 +712,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -757,10 +763,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -808,10 +814,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -859,10 +865,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -913,10 +919,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -984,10 +990,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1035,15 +1041,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "1 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -1115,8 +1128,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1125,8 +1139,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1162,8 +1178,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1172,8 +1189,10 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "研究",
@@ -1302,8 +1321,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1312,8 +1332,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1349,8 +1371,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1359,13 +1382,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "10 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "10",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -1418,8 +1450,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1428,8 +1461,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1465,8 +1500,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1475,13 +1511,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "20 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -1528,10 +1573,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -1585,10 +1630,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1641,10 +1686,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1697,10 +1742,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1748,10 +1793,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1799,10 +1844,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1850,10 +1895,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1906,10 +1951,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1957,10 +2002,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2011,10 +2056,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2062,10 +2107,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2113,10 +2158,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2164,10 +2209,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2215,10 +2260,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2266,10 +2311,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2356,19 +2401,14 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
         "value": "需要 100 份",
-        "extra": ""
-      },
-      {
-        "label": "形成",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2411,10 +2451,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2451,8 +2491,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2461,8 +2502,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2498,8 +2541,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2508,8 +2552,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2549,8 +2595,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2559,18 +2606,34 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "50 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "50",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "10 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "10",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2606,8 +2669,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2616,22 +2680,14 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
         "value": "需要 400 份",
-        "extra": ""
-      },
-      {
-        "label": "放置",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "破坏",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2663,8 +2719,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2678,8 +2735,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2715,8 +2774,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2725,8 +2785,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2766,8 +2828,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2776,8 +2839,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2813,8 +2878,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2823,13 +2889,21 @@
       },
       {
         "label": "工具提示",
-        "value": "如果落在你身上，会让你窒息可被提炼",
-        "extra": ""
+        "value": "如果落在你身上，会让你窒息\n可被提炼",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "如果落在你身上，会让你窒息\n可被提炼"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2869,8 +2943,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2879,8 +2954,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2931,10 +3008,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2988,10 +3065,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3038,10 +3115,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3254,10 +3331,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3305,10 +3382,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3356,10 +3433,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3406,10 +3483,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3446,8 +3523,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3456,18 +3534,34 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "50 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "50",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "10 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "10",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -3520,8 +3614,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3530,8 +3625,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3567,8 +3664,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3577,13 +3675,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -3619,8 +3726,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3629,8 +3737,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3666,8 +3776,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3676,8 +3787,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3713,8 +3826,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3723,8 +3837,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3760,8 +3876,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3770,8 +3887,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3846,8 +3965,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3856,8 +3976,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -3904,10 +4026,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4040,10 +4162,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4096,10 +4218,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4152,10 +4274,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4192,8 +4314,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4207,8 +4330,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4291,8 +4416,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4301,17 +4427,14 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
         "value": "需要 100 份",
-        "extra": ""
-      },
-      {
-        "label": "Broken",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4400,8 +4523,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4410,8 +4534,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4447,8 +4573,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4462,13 +4589,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "1 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "1",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -4508,8 +4644,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4518,8 +4655,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4559,8 +4698,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4569,8 +4709,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4621,10 +4763,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4671,19 +4813,14 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
         "value": "需要 100 份",
-        "extra": ""
-      },
-      {
-        "label": "Formed",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4727,10 +4864,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4777,10 +4914,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4828,10 +4965,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4879,15 +5016,21 @@
       },
       {
         "label": "工具提示",
-        "value": "既没有粘性，也不会被武器破坏“仅供展示！”",
-        "extra": ""
+        "value": "既没有粘性，也不会被武器破坏\n“仅供展示！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "既没有粘性，也不会被武器破坏\n“仅供展示！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4934,10 +5077,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -4979,8 +5122,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4989,8 +5133,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5026,8 +5172,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -5036,8 +5183,10 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5088,10 +5237,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5149,10 +5298,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5199,10 +5348,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5255,10 +5404,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5368,10 +5517,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5422,10 +5571,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5537,8 +5686,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -5552,22 +5702,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "发射飞镖",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5614,10 +5768,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -5665,15 +5819,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "7 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "7",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",

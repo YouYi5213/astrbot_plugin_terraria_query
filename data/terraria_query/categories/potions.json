@@ -31,10 +31,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -56,11 +56,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -109,10 +104,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -161,8 +156,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -176,22 +172,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "2 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 20 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -484,15 +484,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "3 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "3",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -509,11 +516,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -745,15 +747,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "1 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -770,11 +779,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -887,10 +891,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -907,11 +911,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1225,15 +1224,22 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "买入",
-        "value": "5 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "5",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -1250,11 +1256,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1405,10 +1406,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1425,11 +1426,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1523,15 +1519,21 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性小幅提升“闻起来像你爸爸”",
-        "extra": ""
+        "value": "所有属性小幅提升\n“闻起来像你爸爸”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性小幅提升\n“闻起来像你爸爸”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1548,11 +1550,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1719,10 +1716,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1739,11 +1736,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1848,15 +1840,21 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性小幅提升“你会喜欢的！”",
-        "extra": ""
+        "value": "所有属性小幅提升\n“你会喜欢的！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性小幅提升\n“你会喜欢的！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1873,11 +1871,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2005,10 +1998,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -2025,11 +2018,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2209,15 +2197,21 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性小幅提升“当生活给了你柠檬……”",
-        "extra": ""
+        "value": "所有属性小幅提升\n“当生活给了你柠檬……”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性小幅提升\n“当生活给了你柠檬……”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -2234,11 +2228,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2366,10 +2355,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -2386,11 +2375,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2513,20 +2497,33 @@
       },
       {
         "label": "工具提示",
-        "value": "把它放在棍子上，然后放到篝火上烤所有属性小幅提升“你一口能吃下多少？”",
-        "extra": ""
+        "value": "把它放在棍子上，然后放到篝火上烤\n所有属性小幅提升\n“你一口能吃下多少？”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "把它放在棍子上，然后放到篝火上烤\n所有属性小幅提升\n“你一口能吃下多少？”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "1 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -2543,11 +2540,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2655,15 +2647,21 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性小幅提升“你是说椰子会迁徙吗？”",
-        "extra": ""
+        "value": "所有属性小幅提升\n“你是说椰子会迁徙吗？”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性小幅提升\n“你是说椰子会迁徙吗？”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -2680,11 +2678,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2830,10 +2823,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -2850,11 +2843,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2948,8 +2936,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "恢复生命值",
@@ -2963,27 +2952,38 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "10 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "2 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3589,10 +3589,10 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -3609,11 +3609,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3782,8 +3777,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "恢复生命值",
@@ -3797,22 +3793,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "4 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "4",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3844,8 +3844,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "恢复生命值",
@@ -3864,22 +3865,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "8 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3950,8 +3955,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3965,22 +3971,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4107,10 +4117,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -4127,11 +4137,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4279,8 +4284,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4294,22 +4300,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4420,8 +4430,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4430,27 +4441,37 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性小幅提升“一天一苹果，骷髅博士远离我！”",
-        "extra": ""
+        "value": "所有属性小幅提升\n“一天一苹果，骷髅博士远离我！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性小幅提升\n“一天一苹果，骷髅博士远离我！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4561,8 +4582,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4571,27 +4593,37 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性小幅提升“搭配披萨很好吃”",
-        "extra": ""
+        "value": "所有属性小幅提升\n“搭配披萨很好吃”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性小幅提升\n“搭配披萨很好吃”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4702,8 +4734,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4712,27 +4745,37 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性中幅提升“不包括怒气。”",
-        "extra": ""
+        "value": "所有属性中幅提升\n“不包括怒气。”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性中幅提升\n“不包括怒气。”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
-        "value": "40 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4825,8 +4868,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -4840,22 +4884,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4966,8 +5014,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "恢复生命值",
@@ -4981,22 +5030,31 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "2 SC50 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "cc",
+            "amount": "50",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5038,15 +5096,21 @@
       },
       {
         "label": "工具提示",
-        "value": "将你传送至队友处在全屏地图上点击他们的头像",
-        "extra": ""
+        "value": "将你传送至队友处\n在全屏地图上点击他们的头像",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "将你传送至队友处\n在全屏地图上点击他们的头像"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -5063,11 +5127,6 @@
       {
         "label": "研究",
         "value": "需要 20 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5125,10 +5184,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -5145,11 +5204,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5224,10 +5278,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -5244,11 +5298,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5292,15 +5341,21 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性小幅提升“吸血鬼的素食之选”",
-        "extra": ""
+        "value": "所有属性小幅提升\n“吸血鬼的素食之选”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性小幅提升\n“吸血鬼的素食之选”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -5317,11 +5372,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5485,20 +5535,33 @@
       },
       {
         "label": "工具提示",
-        "value": "副作用可能包括：-不可预测的治疗-不确定的耐药性-短暂且莫名其妙的伤害免疫“难看且难闻”",
-        "extra": ""
+        "value": "副作用可能包括：\n-不可预测的治疗\n-不确定的耐药性\n-短暂且莫名其妙的伤害免疫\n“难看且难闻”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "副作用可能包括：\n-不可预测的治疗\n-不确定的耐药性\n-短暂且莫名其妙的伤害免疫\n“难看且难闻”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "5 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "5",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -5515,11 +5578,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5578,10 +5636,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -5598,11 +5656,6 @@
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5707,10 +5760,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -5727,11 +5780,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5843,8 +5891,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -5853,27 +5902,37 @@
       },
       {
         "label": "工具提示",
-        "value": "所有属性小幅提升“优质钾源！”",
-        "extra": ""
+        "value": "所有属性小幅提升\n“优质钾源！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "所有属性小幅提升\n“优质钾源！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6006,8 +6065,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "恢复魔力值",
@@ -6021,27 +6081,43 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 SC50 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "cc",
+            "amount": "50",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "50 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "50",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 30 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6569,10 +6645,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -6589,11 +6665,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],

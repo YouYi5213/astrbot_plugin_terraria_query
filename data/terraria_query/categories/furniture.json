@@ -21,15 +21,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "3 GC（高尔夫箱）",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -90,20 +97,33 @@
       },
       {
         "label": "工具提示",
-        "value": "踩踏时发出信号（红色、绿色）当玩家踩上时发出信号（灰色、棕色、蓝色、蜥蜴）除玩家外的其他东西踩上时发出信号（黄色）玩家踩上时发出信号并损坏（橙色）玩家踩上或离开时发出信号（测重）",
-        "extra": ""
+        "value": "踩踏时发出信号（红色、绿色）\n当玩家踩上时发出信号（灰色、棕色、蓝色、蜥蜴）\n除玩家外的其他东西踩上时发出信号（黄色）\n玩家踩上时发出信号并损坏（橙色）\n玩家踩上或离开时发出信号（测重）",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "踩踏时发出信号（红色、绿色）\n当玩家踩上时发出信号（灰色、棕色、蓝色、蜥蜴）\n除玩家外的其他东西踩上时发出信号（黄色）\n玩家踩上时发出信号并损坏（橙色）\n玩家踩上或离开时发出信号（测重）"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -166,10 +186,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -234,20 +254,33 @@
       },
       {
         "label": "工具提示",
-        "value": "按向上键/向下键来循环切换不同的放置样式“上面写着奇怪的符号”",
-        "extra": ""
+        "value": "按向上键/向下键来循环切换不同的放置样式\n“上面写着奇怪的符号”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "按向上键/向下键来循环切换不同的放置样式\n“上面写着奇怪的符号”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "15 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "15",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -386,10 +419,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -454,10 +487,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -572,15 +605,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "10 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -648,8 +688,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -658,13 +699,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "1 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -704,8 +754,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -714,13 +765,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "10 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -760,8 +820,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -775,13 +836,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -828,10 +898,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -948,10 +1018,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -1015,15 +1085,21 @@
       },
       {
         "label": "工具提示",
-        "value": "将物品放入提炼机中可将其变成更有用的东西接收到信号时会处理相邻箱子中的物品",
-        "extra": ""
+        "value": "将物品放入提炼机中可将其变成更有用的东西\n接收到信号时会处理相邻箱子中的物品",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "将物品放入提炼机中可将其变成更有用的东西\n接收到信号时会处理相邻箱子中的物品"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -1040,11 +1116,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1203,10 +1274,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -1275,10 +1346,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1342,10 +1413,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -1393,10 +1464,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -1465,10 +1536,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1532,10 +1603,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1583,8 +1654,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1593,13 +1665,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "1 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -1639,8 +1720,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1649,13 +1731,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "16 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "16",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -1738,8 +1829,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1748,13 +1840,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "1 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -1794,8 +1895,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -1804,13 +1906,22 @@
       },
       {
         "label": "稀有度",
-        "value": "03*",
-        "extra": ""
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
-        "value": "50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -1909,10 +2020,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       }
     ],
     "recipe": {
@@ -2002,8 +2113,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2012,13 +2124,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "4 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "4",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2054,8 +2175,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2069,13 +2191,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "2 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2119,8 +2250,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2129,13 +2261,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "10 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2175,8 +2316,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2185,13 +2327,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "5 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "5",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2236,8 +2387,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2246,13 +2398,21 @@
       },
       {
         "label": "工具提示",
-        "value": "锤击轨道尾片可改变缓冲方式锤击或用信号激活交叉点可改变方向",
-        "extra": ""
+        "value": "锤击轨道尾片可改变缓冲方式\n锤击或用信号激活交叉点可改变方向",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "锤击轨道尾片可改变缓冲方式\n锤击或用信号激活交叉点可改变方向"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "研究",
@@ -2303,10 +2463,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -2366,10 +2526,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -2439,10 +2599,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -2491,8 +2651,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2501,13 +2662,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "1 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2547,8 +2717,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2562,13 +2733,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2612,8 +2792,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(2 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2622,13 +2803,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "1 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -2679,10 +2869,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -2746,10 +2936,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -2766,16 +2956,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "被打破",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "碰撞",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2824,20 +3004,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
-      },
-      {
-        "label": "放置",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "破坏",
-        "value": "",
-        "extra": ""
+        "color": "#ffffff"
       }
     ],
     "recipe": {
@@ -2889,10 +3059,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -2945,8 +3115,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -2960,13 +3131,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -3018,10 +3198,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -3704,16 +3884,6 @@
         "label": "研究",
         "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "打开d",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "关闭",
-        "value": "",
-        "extra": ""
       }
     ],
     "recipe": {
@@ -4383,8 +4553,14 @@
       },
       {
         "label": "工具提示",
-        "value": "你~~好~~，泰拉瑞亚爱好者！“非常适合像主播那般休息！”",
-        "extra": ""
+        "value": "你~~好~~，泰拉瑞亚爱好者！\n“非常适合像主播那般休息！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "你~~好~~，泰拉瑞亚爱好者！\n“非常适合像主播那般休息！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -4790,8 +4966,14 @@
       },
       {
         "label": "工具提示",
-        "value": "“你有多绝望？” （仙人掌马桶）“当真？你拿断裂英雄剑做这玩意？” （泰拉马桶）",
-        "extra": ""
+        "value": "“你有多绝望？”（仙人掌马桶）\n“当真？你拿断裂英雄剑做这玩意？”（泰拉马桶）",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "“你有多绝望？”（仙人掌马桶）\n“当真？你拿断裂英雄剑做这玩意？”（泰拉马桶）"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -4896,11 +5078,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "爆炸",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5030,7 +5207,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -5058,7 +5235,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -5478,11 +5655,6 @@
         "label": "研究",
         "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "传送",
-        "value": "",
-        "extra": ""
       }
     ],
     "recipe": null,
@@ -5661,8 +5833,14 @@
       },
       {
         "label": "工具提示",
-        "value": "可用于存放你的物品只有你能取用存放的物品存放的钱币可在商店中使用",
-        "extra": ""
+        "value": "可用于存放你的物品\n只有你能取用存放的物品\n存放的钱币可在商店中使用",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可用于存放你的物品\n只有你能取用存放的物品\n存放的钱币可在商店中使用"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -5896,8 +6074,14 @@
       },
       {
         "label": "工具提示",
-        "value": "分离电线路径用同时在交叉方向上出现的信号来开关灯",
-        "extra": ""
+        "value": "分离电线路径\n用同时在交叉方向上出现的信号来开关灯",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "分离电线路径\n用同时在交叉方向上出现的信号来开关灯"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -6167,8 +6351,14 @@
       },
       {
         "label": "工具提示",
-        "value": "分离电线路径锤击可改变方向",
-        "extra": ""
+        "value": "分离电线路径\n锤击可改变方向",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "分离电线路径\n锤击可改变方向"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -6251,8 +6441,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置后即可使用近战武器具有盔甲穿透",
-        "extra": ""
+        "value": "放置后即可使用\n近战武器具有盔甲穿透",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置后即可使用\n近战武器具有盔甲穿透"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -6288,11 +6484,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6472,8 +6663,14 @@
       },
       {
         "label": "工具提示",
-        "value": "当矿车经过时发出信号不能在斜坡上使用",
-        "extra": ""
+        "value": "当矿车经过时发出信号\n不能在斜坡上使用",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "当矿车经过时发出信号\n不能在斜坡上使用"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -6551,8 +6748,14 @@
       },
       {
         "label": "工具提示",
-        "value": "将物品放入提炼机中可将其变成更有用的东西将受污染的物块放入提炼机可净化之放入其他物品可能会产生有趣的效果接收到信号时会处理相邻箱子中的物品",
-        "extra": ""
+        "value": "将物品放入提炼机中可将其变成更有用的东西\n将受污染的物块放入提炼机可净化之\n放入其他物品可能会产生有趣的效果\n接收到信号时会处理相邻箱子中的物品",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "将物品放入提炼机中可将其变成更有用的东西\n将受污染的物块放入提炼机可净化之\n放入其他物品可能会产生有趣的效果\n接收到信号时会处理相邻箱子中的物品"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -6576,11 +6779,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -7849,7 +8047,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -7877,7 +8075,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -8619,7 +8817,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -8647,7 +8845,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -8729,7 +8927,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -8757,7 +8955,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -9142,7 +9340,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]按 L2 可打开[PlayStation]) /按 LT 可打开[Xbox One])/[任天堂Switch])按 ZL 可打开 /[移动版]双击可打开",
+        "value": "[电脑版]右键点击打开/[主机版]按 L2 可打开[PlayStation]) /\n按 LT 可打开[Xbox One])/[任天堂Switch])按 ZL 可打开 /[移动版]双击可打开",
         "extra": "",
         "segments": [
           {
@@ -9170,7 +9368,7 @@
           },
           {
             "type": "text",
-            "text": ") /按 LT 可打开"
+            "text": ") /\n按 LT 可打开"
           },
           {
             "type": "icon",
@@ -9874,8 +10072,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置状态下右键点击可以发出信号“开膛破肚……血肉模糊！”",
-        "extra": ""
+        "value": "放置状态下右键点击可以发出信号\n“开膛破肚……血肉模糊！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置状态下右键点击可以发出信号\n“开膛破肚……血肉模糊！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -9955,8 +10159,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置后即可使用20%几率省下弹药",
-        "extra": ""
+        "value": "放置后即可使用\n20%几率省下弹药",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置后即可使用\n20%几率省下弹药"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -9992,11 +10202,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10146,8 +10351,14 @@
       },
       {
         "label": "工具提示",
-        "value": "右键点击调整弹道用火把或电路信号发射",
-        "extra": ""
+        "value": "右键点击调整弹道\n用火把或电路信号发射",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "右键点击调整弹道\n用火把或电路信号发射"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -10413,8 +10624,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置后即可使用哨兵数量上限增加1 (电脑版、主机版、和移动版)",
-        "extra": ""
+        "value": "放置后即可使用\n哨兵数量上限增加1(电脑版、主机版、和移动版)",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置后即可使用\n哨兵数量上限增加1(电脑版、主机版、和移动版)"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -10438,11 +10655,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10730,8 +10942,14 @@
       },
       {
         "label": "工具提示",
-        "value": "可用于存放你的物品只有你能取用存放的物品存放的钱币可在商店中使用",
-        "extra": ""
+        "value": "可用于存放你的物品\n只有你能取用存放的物品\n存放的钱币可在商店中使用",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可用于存放你的物品\n只有你能取用存放的物品\n存放的钱币可在商店中使用"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -11061,8 +11279,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置后即可使用仆从数量上限增加1",
-        "extra": ""
+        "value": "放置后即可使用\n仆从数量上限增加1",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置后即可使用\n仆从数量上限增加1"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -11098,11 +11322,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11356,8 +11575,14 @@
       },
       {
         "label": "工具提示",
-        "value": "附近有2个城镇居民时可以传送至另一个晶塔只能放置在匹配的生物群系中且每种类型只能放置一个",
-        "extra": ""
+        "value": "附近有2个城镇居民时可以传送至另一个晶塔\n只能放置在匹配的生物群系中且每种类型只能放置一个",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "附近有2个城镇居民时可以传送至另一个晶塔\n只能放置在匹配的生物群系中且每种类型只能放置一个"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -11398,11 +11623,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "传送",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11447,7 +11667,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -11475,7 +11695,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -12031,8 +12251,14 @@
       },
       {
         "label": "工具提示",
-        "value": "托住永恒水晶在放着永恒水晶时与其交互可召唤埃特尼亚传送门与水晶交互可跳过进攻波次之间的附加时间",
-        "extra": ""
+        "value": "托住永恒水晶\n在放着永恒水晶时与其交互可召唤埃特尼亚传送门\n与水晶交互可跳过进攻波次之间的附加时间",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "托住永恒水晶\n在放着永恒水晶时与其交互可召唤埃特尼亚传送门\n与水晶交互可跳过进攻波次之间的附加时间"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -12378,11 +12604,6 @@
         "label": "研究",
         "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
       }
     ],
     "recipe": {
@@ -12555,8 +12776,14 @@
       },
       {
         "label": "工具提示",
-        "value": "按向上键/向下键来循环切换不同的放置样式“想知道里面有什么？”",
-        "extra": ""
+        "value": "按向上键/向下键来循环切换不同的放置样式\n“想知道里面有什么？”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "按向上键/向下键来循环切换不同的放置样式\n“想知道里面有什么？”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -12973,11 +13200,6 @@
       {
         "label": "研究",
         "value": "需要 5 份",
-        "extra": ""
-      },
-      {
-        "label": "爆炸",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13522,8 +13744,14 @@
       },
       {
         "label": "工具提示",
-        "value": "右键点击将物品放入物品瓶中按向上键/向下键来循环切换不同的放置样式“将你最珍贵的财产保存在粘稠液体中”",
-        "extra": ""
+        "value": "右键点击将物品放入物品瓶中\n按向上键/向下键来循环切换不同的放置样式\n“将你最珍贵的财产保存在粘稠液体中”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "右键点击将物品放入物品瓶中\n按向上键/向下键来循环切换不同的放置样式\n“将你最珍贵的财产保存在粘稠液体中”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -13733,7 +13961,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -13761,7 +13989,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -13843,8 +14071,14 @@
       },
       {
         "label": "工具提示",
-        "value": "可用于存放你的物品只有你能取用存放的物品存放的钱币可在商店中使用",
-        "extra": ""
+        "value": "可用于存放你的物品\n只有你能取用存放的物品\n存放的钱币可在商店中使用",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可用于存放你的物品\n只有你能取用存放的物品\n存放的钱币可在商店中使用"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -13933,8 +14167,14 @@
       },
       {
         "label": "工具提示",
-        "value": "打出狂欢派对！可能会有惊喜！",
-        "extra": ""
+        "value": "打出狂欢派对！\n可能会有惊喜！",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "打出狂欢派对！\n可能会有惊喜！"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -14099,7 +14339,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -14127,7 +14367,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -14666,7 +14906,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开按向上键/向下键来循环切换不同的放置样式[Xbox]按 LT 打开[PlayStation]按 R1 打开[任天堂Switch]按 ZL 打开[移动版]双击打开",
+        "value": "[电脑版]右键点击打开\n按向上键/向下键来循环切换不同的放置样式[Xbox]按 LT 打开[PlayStation]按 R1 打开[任天堂Switch]按 ZL 打开[移动版]双击打开",
         "extra": "",
         "segments": [
           {
@@ -14676,7 +14916,7 @@
           },
           {
             "type": "text",
-            "text": "右键点击打开按向上键/向下键来循环切换不同的放置样式"
+            "text": "右键点击打开\n按向上键/向下键来循环切换不同的放置样式"
           },
           {
             "type": "icon",
@@ -14785,7 +15025,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -14813,7 +15053,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -16008,7 +16248,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -16036,7 +16276,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -16118,8 +16358,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置在家中时，可防止城镇居民搬进来“闻起来像香菜”",
-        "extra": ""
+        "value": "放置在家中时，可防止城镇居民搬进来\n“闻起来像香菜”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置在家中时，可防止城镇居民搬进来\n“闻起来像香菜”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -16315,8 +16561,14 @@
       },
       {
         "label": "工具提示",
-        "value": "按向上键/向下键来循环切换不同的放置样式“据说能带来好运，驱除邪灵”",
-        "extra": ""
+        "value": "按向上键/向下键来循环切换不同的放置样式\n“据说能带来好运，驱除邪灵”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "按向上键/向下键来循环切换不同的放置样式\n“据说能带来好运，驱除邪灵”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -16551,8 +16803,14 @@
       },
       {
         "label": "工具提示",
-        "value": "可用于存放你的物品只有你能取用存放的物品存放的钱币可在商店中使用将包含由虚空袋拾取的物品",
-        "extra": ""
+        "value": "可用于存放你的物品\n只有你能取用存放的物品\n存放的钱币可在商店中使用\n将包含由虚空袋拾取的物品",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可用于存放你的物品\n只有你能取用存放的物品\n存放的钱币可在商店中使用\n将包含由虚空袋拾取的物品"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -16643,8 +16901,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置后即可使用“抹你脸上。抹别人脸上。管它呢。”",
-        "extra": ""
+        "value": "放置后即可使用\n“抹你脸上。抹别人脸上。管它呢。”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置后即可使用\n“抹你脸上。抹别人脸上。管它呢。”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -16668,11 +16932,6 @@
       {
         "label": "研究",
         "value": "需要 3 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -17500,7 +17759,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -17528,7 +17787,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -17610,7 +17869,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -17638,7 +17897,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -17803,7 +18062,7 @@
       },
       {
         "label": "工具提示",
-        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /LT 来打开[Xbox One]) /[移动版]双击来打开",
+        "value": "[电脑版]右键点击打开/[主机版]L2 来打开[PlayStation]) /\nLT 来打开[Xbox One]) /[移动版]双击来打开",
         "extra": "",
         "segments": [
           {
@@ -17831,7 +18090,7 @@
           },
           {
             "type": "text",
-            "text": ") /LT 来打开"
+            "text": ") /\nLT 来打开"
           },
           {
             "type": "icon",
@@ -17984,8 +18243,14 @@
       },
       {
         "label": "工具提示",
-        "value": "每周可将时间快速推进至黎明一次特定天界事件后可立即再次使用",
-        "extra": ""
+        "value": "每周可将时间快速推进至黎明一次\n特定天界事件后可立即再次使用",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "每周可将时间快速推进至黎明一次\n特定天界事件后可立即再次使用"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -18009,11 +18274,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -18149,8 +18409,14 @@
       },
       {
         "label": "工具提示",
-        "value": "每周可将时间快速推进至黄昏一次特定天界事件后可立即再次使用",
-        "extra": ""
+        "value": "每周可将时间快速推进至黄昏一次\n特定天界事件后可立即再次使用",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "每周可将时间快速推进至黄昏一次\n特定天界事件后可立即再次使用"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -18799,11 +19065,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],

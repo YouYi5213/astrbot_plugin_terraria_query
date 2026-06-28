@@ -74,10 +74,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       }
     ],
     "recipe": {
@@ -109,8 +109,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -119,13 +120,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "40 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "40",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -196,22 +206,26 @@
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "卖出",
-        "value": "7 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "7",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -277,22 +291,26 @@
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "卖出",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -358,22 +376,26 @@
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "卖出",
-        "value": "7 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "7",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -414,8 +436,14 @@
       },
       {
         "label": "击退",
-        "value": "6 (电脑版、主机版、和移动版) /5 (普通击退力) (前代主机版、和3DS版)",
-        "extra": ""
+        "value": "6(电脑版、主机版、和移动版)/\n5(普通击退力)(前代主机版、和3DS版)",
+        "extra": "（普通击退力）",
+        "segments": [
+          {
+            "type": "text",
+            "text": "6(电脑版、主机版、和移动版)/\n5(普通击退力)(前代主机版、和3DS版)"
+          }
+        ]
       },
       {
         "label": "暴击率",
@@ -434,15 +462,21 @@
       },
       {
         "label": "工具提示",
-        "value": "手持时可提高在水中的移动能力按住向上键可以减缓下降速度",
-        "extra": ""
+        "value": "手持时可提高在水中的移动能力\n按住向上键可以减缓下降速度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "手持时可提高在水中的移动能力\n按住向上键可以减缓下降速度"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -459,11 +493,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -583,10 +612,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -603,11 +632,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -655,10 +679,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -742,8 +766,14 @@
       },
       {
         "label": "使用时间",
-        "value": "25 (电脑版、主机版、和移动版) / 23（快速度） (前代主机版、和3DS版)",
-        "extra": ""
+        "value": "25(电脑版、主机版、和移动版)/\n23（快速度）(前代主机版、和3DS版)",
+        "extra": "（快速度）",
+        "segments": [
+          {
+            "type": "text",
+            "text": "25(电脑版、主机版、和移动版)/\n23（快速度）(前代主机版、和3DS版)"
+          }
+        ]
       },
       {
         "label": "工具速度",
@@ -752,10 +782,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -772,11 +802,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -834,15 +859,22 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -859,11 +891,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -981,15 +1008,21 @@
       },
       {
         "label": "工具提示",
-        "value": "创建一对可穿越的传送门。用左键点击和右键点击放置传送门。提高动量和掉落速度。“快进快出。”",
-        "extra": ""
+        "value": "创建一对可穿越的传送门。\n用左键点击和右键点击放置传送门。\n提高动量和掉落速度。\n“快进快出。”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "创建一对可穿越的传送门。\n用左键点击和右键点击放置传送门。\n提高动量和掉落速度。\n“快进快出。”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -1006,16 +1039,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "传送",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1090,8 +1113,14 @@
       },
       {
         "label": "工具提示",
-        "value": "与材料结合使用，放置匹配的装饰罐子按向上键/向下键来循环切换不同的放置样式“便携式罐子机是不是可以简称为便罐？”",
-        "extra": ""
+        "value": "与材料结合使用，放置匹配的装饰罐子\n按向上键/向下键来循环切换不同的放置样式\n“便携式罐子机是不是可以简称为便罐？”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "与材料结合使用，放置匹配的装饰罐子\n按向上键/向下键来循环切换不同的放置样式\n“便携式罐子机是不是可以简称为便罐？”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -1102,8 +1131,15 @@
       },
       {
         "label": "买入",
-        "value": "25 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -1211,10 +1247,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1231,11 +1267,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1286,15 +1317,21 @@
       },
       {
         "label": "工具提示",
-        "value": "让泥土上长出草用它进行采集可提高炼金植物的采集量砍树时会顺便种下橡实",
-        "extra": ""
+        "value": "让泥土上长出草\n用它进行采集可提高炼金植物的采集量\n砍树时会顺便种下橡实",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "让泥土上长出草\n用它进行采集可提高炼金植物的采集量\n砍树时会顺便种下橡实"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -1316,11 +1353,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1386,15 +1418,21 @@
       },
       {
         "label": "工具提示",
-        "value": "让泥土上长出草用它进行采集可提高炼金植物的采集量",
-        "extra": ""
+        "value": "让泥土上长出草\n用它进行采集可提高炼金植物的采集量",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "让泥土上长出草\n用它进行采集可提高炼金植物的采集量"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -1411,11 +1449,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1571,15 +1604,22 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "买入",
-        "value": "50 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "50",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -1596,21 +1636,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "放置冰雪块",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "清除冰雪块",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1673,20 +1698,33 @@
       },
       {
         "label": "工具提示",
-        "value": "修剪纯净草和神圣草修剪过的草能降低敌人的生成几率",
-        "extra": ""
+        "value": "修剪纯净草和神圣草\n修剪过的草能降低敌人的生成几率",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "修剪纯净草和神圣草\n修剪过的草能降低敌人的生成几率"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -1703,11 +1741,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1769,10 +1802,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1789,11 +1822,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1836,10 +1864,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -1902,10 +1930,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -2008,10 +2036,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -2028,11 +2056,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2101,10 +2124,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -2126,11 +2149,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2345,10 +2363,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -2370,11 +2388,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2437,10 +2450,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -2462,11 +2475,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2529,10 +2537,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -2554,11 +2562,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2621,10 +2624,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -2646,11 +2649,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2713,10 +2711,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -2738,11 +2736,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2805,10 +2798,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -2830,11 +2823,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2897,10 +2885,10 @@
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -2917,11 +2905,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3038,15 +3021,21 @@
       },
       {
         "label": "工具提示",
-        "value": "放在物品栏中时能防止你伤害小动物放在物品栏中时能防止你意外破坏环境右键点击停用其效果",
-        "extra": ""
+        "value": "放在物品栏中时能防止你伤害小动物\n放在物品栏中时能防止你意外破坏环境\n右键点击停用其效果",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放在物品栏中时能防止你伤害小动物\n放在物品栏中时能防止你意外破坏环境\n右键点击停用其效果"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -3129,11 +3118,6 @@
         "label": "研究",
         "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
       }
     ],
     "recipe": null,
@@ -3177,10 +3161,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -3197,11 +3181,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3239,8 +3218,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -3249,23 +3229,45 @@
       },
       {
         "label": "工具提示",
-        "value": "与材料配合使用可放置匹配的碎石右键点击切换放置大小按向上键/向下键来循环切换不同的放置样式“不是打桩机，也不是定位机：它是堆石器”",
-        "extra": ""
+        "value": "与材料配合使用可放置匹配的碎石\n右键点击切换放置大小\n按向上键/向下键来循环切换不同的放置样式\n“不是打桩机，也不是定位机：它是堆石器”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "与材料配合使用可放置匹配的碎石\n右键点击切换放置大小\n按向上键/向下键来循环切换不同的放置样式\n“不是打桩机，也不是定位机：它是堆石器”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "买入",
-        "value": "25 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -3375,18 +3377,22 @@
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "卖出",
-        "value": "6 GC",
-        "extra": ""
-      },
-      {
-        "label": "使用",
         "value": "",
-        "extra": ""
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          }
+        ]
       }
     ],
     "recipe": null,
@@ -3440,18 +3446,22 @@
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "卖出",
-        "value": "6 GC",
-        "extra": ""
-      },
-      {
-        "label": "使用",
         "value": "",
-        "extra": ""
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          }
+        ]
       }
     ],
     "recipe": null,
@@ -3500,18 +3510,22 @@
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "卖出",
-        "value": "8 GC",
-        "extra": ""
-      },
-      {
-        "label": "使用",
         "value": "",
-        "extra": ""
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          }
+        ]
       }
     ],
     "recipe": null,
@@ -3545,32 +3559,37 @@
       },
       {
         "label": "工具提示",
-        "value": "将你传送到钩爪的位置按抓钩发射抓钩",
-        "extra": ""
+        "value": "将你传送到钩爪的位置\n按抓钩发射抓钩",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "将你传送到钩爪的位置\n按抓钩发射抓钩"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "传送",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3657,15 +3676,21 @@
       },
       {
         "label": "工具提示",
-        "value": "完全掌控电路布线！手持时右键点击来编辑布线设置",
-        "extra": ""
+        "value": "完全掌控电路布线！\n手持时右键点击来编辑布线设置",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "完全掌控电路布线！\n手持时右键点击来编辑布线设置"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
@@ -3682,11 +3707,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -3775,20 +3795,33 @@
       },
       {
         "label": "工具提示",
-        "value": "放在物品栏中时能防止你伤害小动物右键点击停用其效果",
-        "extra": ""
+        "value": "放在物品栏中时能防止你伤害小动物\n右键点击停用其效果",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放在物品栏中时能防止你伤害小动物\n右键点击停用其效果"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -3912,10 +3945,10 @@
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -3932,11 +3965,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4020,10 +4048,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -4045,11 +4073,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4122,10 +4145,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -4147,11 +4170,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4219,10 +4237,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -4244,11 +4262,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4311,10 +4324,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -4336,11 +4349,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4398,10 +4406,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -4423,11 +4431,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4452,15 +4455,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可演奏的乐器“死人毛衣乐队的东西”",
-        "extra": ""
+        "value": "可演奏的乐器\n“死人毛衣乐队的东西”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可演奏的乐器\n“死人毛衣乐队的东西”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -4477,11 +4486,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4506,10 +4510,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       }
     ],
     "recipe": null,
@@ -4538,15 +4542,21 @@
       },
       {
         "label": "工具提示",
-        "value": "与油漆一起用于给墙涂色也可以涂覆涂料",
-        "extra": ""
+        "value": "与油漆一起用于给墙涂色\n也可以涂覆涂料",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "与油漆一起用于给墙涂色\n也可以涂覆涂料"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -4610,15 +4620,21 @@
       },
       {
         "label": "工具提示",
-        "value": "与油漆一起用于给物块涂色也可以涂覆涂料",
-        "extra": ""
+        "value": "与油漆一起用于给物块涂色\n也可以涂覆涂料",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "与油漆一起用于给物块涂色\n也可以涂覆涂料"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -4682,15 +4698,21 @@
       },
       {
         "label": "工具提示",
-        "value": "用于去除油漆或涂料有时可以收集苔藓",
-        "extra": ""
+        "value": "用于去除油漆或涂料\n有时可以收集苔藓",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "用于去除油漆或涂料\n有时可以收集苔藓"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -4774,10 +4796,10 @@
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -4799,11 +4821,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4866,10 +4883,10 @@
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -4891,11 +4908,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -4933,15 +4945,21 @@
       },
       {
         "label": "工具提示",
-        "value": "仔细听，你会听到尖叫声“注意脚下”",
-        "extra": ""
+        "value": "仔细听，你会听到尖叫声\n“注意脚下”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "仔细听，你会听到尖叫声\n“注意脚下”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -4958,16 +4976,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "传送",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5032,15 +5040,22 @@
       },
       {
         "label": "稀有度",
-        "value": "蓝色",
+        "value": "绿色",
         "extra": "",
         "sortkey": "02*",
-        "color": "#5a9cff"
+        "color": "#55dd55"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -5057,11 +5072,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5124,15 +5134,21 @@
       },
       {
         "label": "工具提示",
-        "value": "显示所有信息可随意回家",
-        "extra": ""
+        "value": "显示所有信息\n可随意回家",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "显示所有信息\n可随意回家"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -5149,11 +5165,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5199,15 +5210,22 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -5337,15 +5355,21 @@
       },
       {
         "label": "工具提示",
-        "value": "挖掘区域要比镐大只能挖掘软图格“明白了吗？”",
-        "extra": ""
+        "value": "挖掘区域要比镐大\n只能挖掘软图格\n“明白了吗？”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "挖掘区域要比镐大\n只能挖掘软图格\n“明白了吗？”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -5362,11 +5386,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5429,10 +5448,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -5454,11 +5473,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5513,10 +5527,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -5538,11 +5552,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5602,10 +5611,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -5627,11 +5636,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5701,10 +5705,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -5721,11 +5725,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5783,10 +5782,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -5803,11 +5802,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5845,8 +5839,14 @@
       },
       {
         "label": "工具提示",
-        "value": "“想要月亮？勾住它然后拉下来！”按抓钩发射抓钩",
-        "extra": ""
+        "value": "“想要月亮？勾住它然后拉下来！”\n按抓钩发射抓钩",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "“想要月亮？勾住它然后拉下来！”\n按抓钩发射抓钩"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -5870,11 +5870,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -5952,10 +5947,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -5972,11 +5967,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6014,20 +6004,33 @@
       },
       {
         "label": "工具提示",
-        "value": "像真正的松鼠一样抓住树！“藏身于树，化身为树”按抓钩发射抓钩",
-        "extra": ""
+        "value": "像真正的松鼠一样抓住树！\n“藏身于树，化身为树”\n按抓钩发射抓钩",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "像真正的松鼠一样抓住树！\n“藏身于树，化身为树”\n按抓钩发射抓钩"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -6044,11 +6047,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6115,10 +6113,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -6135,11 +6133,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6202,10 +6195,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -6222,11 +6215,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6284,10 +6272,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -6304,11 +6292,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6397,10 +6380,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -6417,11 +6400,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6459,8 +6437,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(3 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -6469,18 +6448,33 @@
       },
       {
         "label": "工具提示",
-        "value": "使用沙块放置沙堡按向上键/向下键来循环切换不同的放置样式",
-        "extra": ""
+        "value": "使用沙块放置沙堡\n按向上键/向下键来循环切换不同的放置样式",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "使用沙块放置沙堡\n按向上键/向下键来循环切换不同的放置样式"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -6599,8 +6593,14 @@
       },
       {
         "label": "工具提示",
-        "value": "喷射时生成和摧毁生物群系使用彩色溶液33%几率省下弹药",
-        "extra": ""
+        "value": "喷射时生成和摧毁生物群系\n使用彩色溶液\n33%几率省下弹药",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "喷射时生成和摧毁生物群系\n使用彩色溶液\n33%几率省下弹药"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -6624,11 +6624,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6673,10 +6668,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -6693,11 +6688,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6735,20 +6725,33 @@
       },
       {
         "label": "工具提示",
-        "value": "与油漆一起用于给墙涂色也可以涂覆涂料",
-        "extra": ""
+        "value": "与油漆一起用于给墙涂色\n也可以涂覆涂料",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "与油漆一起用于给墙涂色\n也可以涂覆涂料"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -6812,12 +6815,12 @@
       },
       {
         "label": "工具提示",
-        "value": "将你传送至光标所在位置导致混沌状态[电脑版]将你传送至光标所在处[移动版]",
+        "value": "将你传送至光标所在位置\n导致混沌状态[电脑版]\n将你传送至光标所在处[移动版]",
         "extra": "",
         "segments": [
           {
             "type": "text",
-            "text": "将你传送至光标所在位置导致混沌状态"
+            "text": "将你传送至光标所在位置\n导致混沌状态"
           },
           {
             "type": "icon",
@@ -6826,7 +6829,7 @@
           },
           {
             "type": "text",
-            "text": "将你传送至光标所在处"
+            "text": "\n将你传送至光标所在处"
           },
           {
             "type": "icon",
@@ -6837,10 +6840,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -6857,11 +6860,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -6925,20 +6923,33 @@
       },
       {
         "label": "工具提示",
-        "value": "与油漆一起用于给物块涂色也可以涂覆涂料",
-        "extra": ""
+        "value": "与油漆一起用于给物块涂色\n也可以涂覆涂料",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "与油漆一起用于给物块涂色\n也可以涂覆涂料"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -7002,20 +7013,33 @@
       },
       {
         "label": "工具提示",
-        "value": "用于去除油漆或涂料有时可以收集苔藓",
-        "extra": ""
+        "value": "用于去除油漆或涂料\n有时可以收集苔藓",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "用于去除油漆或涂料\n有时可以收集苔藓"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -7115,10 +7139,10 @@
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -7135,11 +7159,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -7349,10 +7368,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -7369,11 +7388,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -7431,10 +7445,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -7451,11 +7465,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -7513,10 +7522,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -7533,11 +7542,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -7570,23 +7574,45 @@
       },
       {
         "label": "工具提示",
-        "value": "放在物品栏中时能防止你意外破坏环境右键点击停用其效果",
-        "extra": ""
+        "value": "放在物品栏中时能防止你意外破坏环境\n右键点击停用其效果",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放在物品栏中时能防止你意外破坏环境\n右键点击停用其效果"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -7678,32 +7704,49 @@
       },
       {
         "label": "工具提示",
-        "value": "喷射时生成和摧毁生物群系使用彩色溶液",
-        "extra": ""
+        "value": "喷射时生成和摧毁生物群系\n使用彩色溶液",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "喷射时生成和摧毁生物群系\n使用彩色溶液"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "买入",
-        "value": "2 PC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "pc",
+            "amount": "2",
+            "image": "Platinum_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "40 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "40",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -7810,22 +7853,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "10 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "10",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -7887,10 +7934,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -7907,11 +7954,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8013,10 +8055,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8038,11 +8080,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8115,10 +8152,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8140,11 +8177,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8212,10 +8244,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8237,11 +8269,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8304,10 +8331,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8329,11 +8356,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8382,8 +8404,14 @@
       },
       {
         "label": "工具提示",
-        "value": "与材料结合使用，放置匹配的钟乳石和石笋按向上键/向下键来循环切换不同的放置样式“我忘记了哪个长在天棚上，哪个长在地上”",
-        "extra": ""
+        "value": "与材料结合使用，放置匹配的钟乳石和石笋\n按向上键/向下键来循环切换不同的放置样式\n“我忘记了哪个长在天棚上，哪个长在地上”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "与材料结合使用，放置匹配的钟乳石和石笋\n按向上键/向下键来循环切换不同的放置样式\n“我忘记了哪个长在天棚上，哪个长在地上”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -8394,8 +8422,15 @@
       },
       {
         "label": "买入",
-        "value": "25 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -8412,11 +8447,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8517,10 +8547,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8542,11 +8572,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8614,10 +8639,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8639,11 +8664,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8711,10 +8731,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8736,11 +8756,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8798,10 +8813,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -8823,11 +8838,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8890,10 +8900,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -8910,11 +8920,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -8998,10 +9003,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -9018,11 +9023,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -9071,10 +9071,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -9091,11 +9091,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -9205,13 +9200,22 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "40 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -9280,22 +9284,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -9420,22 +9428,26 @@
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "4 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "4",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -9497,27 +9509,38 @@
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "买入",
-        "value": "40 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "40",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "8 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -9570,15 +9593,27 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "25 SC (电脑版、主机版、和移动版) / 1 GC (前代主机版、和3DS版)",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "25",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -9595,11 +9630,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -9698,10 +9728,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -9723,11 +9753,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -9811,10 +9836,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -9831,11 +9856,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -9898,10 +9918,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -9918,11 +9938,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10004,15 +10019,21 @@
       },
       {
         "label": "工具提示",
-        "value": "显示所有信息右键点击切换目的地“仔细听，你会听到一些关于你汽车保修的事情”",
-        "extra": ""
+        "value": "显示所有信息\n右键点击切换目的地\n“仔细听，你会听到一些关于你汽车保修的事情”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "显示所有信息\n右键点击切换目的地\n“仔细听，你会听到一些关于你汽车保修的事情”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -10029,26 +10050,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "传送（海洋）",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "传送（地狱）",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "切换位置",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10088,15 +10089,21 @@
       },
       {
         "label": "工具提示",
-        "value": "锁定状态下阻止物品拾取右键点击解锁“你负重过多”",
-        "extra": ""
+        "value": "锁定状态下阻止物品拾取\n右键点击解锁\n“你负重过多”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "锁定状态下阻止物品拾取\n右键点击解锁\n“你负重过多”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -10196,10 +10203,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -10216,11 +10223,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10263,27 +10265,37 @@
       },
       {
         "label": "工具提示",
-        "value": "用于捕捉小动物和鱼饵也能捕捉熔岩小动物！",
-        "extra": ""
+        "value": "用于捕捉小动物和鱼饵\n也能捕捉熔岩小动物！",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "用于捕捉小动物和鱼饵\n也能捕捉熔岩小动物！"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "5 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10336,22 +10348,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "16 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "16",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10417,22 +10433,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "20 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10493,22 +10513,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "10 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "10",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10546,11 +10570,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10595,22 +10614,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "2 GC52 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "52",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10677,22 +10705,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "2 GC52 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "52",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10759,22 +10796,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "2 GC52 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "52",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10831,22 +10877,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "2 GC52 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "52",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -10893,18 +10948,34 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "买入",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "40 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -10981,22 +11052,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "12 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "12",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11057,22 +11132,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "12 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "12",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11138,22 +11217,26 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "15 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "15",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11214,22 +11297,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "1 GC44 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "44",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11301,22 +11393,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "1 GC44 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "44",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11383,22 +11484,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "1 GC44 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "44",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11460,22 +11570,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "1 GC44 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "44",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11532,22 +11651,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "1 GC8 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "8",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11619,22 +11747,31 @@
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
-        "value": "1 GC8 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "8",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11701,10 +11838,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -11726,11 +11863,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11793,10 +11925,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -11818,11 +11950,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11880,10 +12007,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -11905,11 +12032,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -11972,10 +12094,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -11997,11 +12119,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12064,10 +12181,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -12084,11 +12201,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12151,10 +12263,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -12171,11 +12283,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12238,10 +12345,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -12258,11 +12365,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12330,10 +12432,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -12350,11 +12452,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12417,10 +12514,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -12442,11 +12539,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12509,10 +12601,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -12534,11 +12626,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12601,10 +12688,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -12621,11 +12708,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12693,15 +12775,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "4 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "4",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -12718,11 +12807,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12813,10 +12897,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -12833,11 +12917,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -12905,15 +12984,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "5 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "5",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -12930,11 +13016,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13032,10 +13113,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -13052,11 +13133,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13119,10 +13195,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -13139,11 +13215,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13206,10 +13277,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -13226,11 +13297,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13293,10 +13359,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -13318,11 +13384,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13385,10 +13446,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -13410,11 +13471,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13477,10 +13533,10 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
@@ -13502,11 +13558,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13579,10 +13630,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅紫色",
+        "value": "淡紫色",
         "extra": "",
         "sortkey": "07*",
-        "color": "#cc88ff"
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
@@ -13604,11 +13655,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13720,10 +13766,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -13745,11 +13791,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13799,10 +13840,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -13824,11 +13865,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13898,15 +13934,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "60 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "60",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -13923,11 +13966,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -13981,15 +14019,21 @@
       },
       {
         "label": "工具提示",
-        "value": "用于捕捉小动物和鱼饵也能捕捉熔岩小动物！“应对炽热险境的利器”",
-        "extra": ""
+        "value": "用于捕捉小动物和鱼饵\n也能捕捉熔岩小动物！\n“应对炽热险境的利器”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "用于捕捉小动物和鱼饵\n也能捕捉熔岩小动物！\n“应对炽热险境的利器”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -14006,11 +14050,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14052,15 +14091,21 @@
       },
       {
         "label": "工具提示",
-        "value": "可演奏的乐器“这些小过门很劲爆”",
-        "extra": ""
+        "value": "可演奏的乐器\n“这些小过门很劲爆”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可演奏的乐器\n“这些小过门很劲爆”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -14077,11 +14122,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14170,27 +14210,31 @@
       },
       {
         "label": "稀有度",
-        "value": "02*",
-        "extra": ""
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
-        "value": "1 GC50 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "说话",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14277,27 +14321,38 @@
       },
       {
         "label": "稀有度",
-        "value": "10*",
-        "extra": ""
+        "value": "红色",
+        "extra": "",
+        "sortkey": "10*",
+        "color": "#ff5050"
       },
       {
         "label": "买入",
-        "value": "50 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "50",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14370,22 +14425,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "30 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "30",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14449,32 +14508,49 @@
       },
       {
         "label": "工具提示",
-        "value": "将最后一次击出的高尔夫球恢复到之前的位置罚一杆",
-        "extra": ""
+        "value": "将最后一次击出的高尔夫球恢复到之前的位置\n罚一杆",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "将最后一次击出的高尔夫球恢复到之前的位置\n罚一杆"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "04*",
-        "extra": ""
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14523,11 +14599,6 @@
         "label": "研究",
         "value": "需要 1 份",
         "extra": ""
-      },
-      {
-        "label": "挥杆",
-        "value": "",
-        "extra": ""
       }
     ],
     "recipe": null,
@@ -14556,22 +14627,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14711,22 +14786,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "30 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "30",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -14772,22 +14851,26 @@
       },
       {
         "label": "稀有度",
-        "value": "01*",
-        "extra": ""
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
-        "value": "1 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],

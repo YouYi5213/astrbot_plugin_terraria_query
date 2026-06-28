@@ -10,10 +10,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -71,10 +71,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",

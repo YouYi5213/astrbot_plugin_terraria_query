@@ -10,8 +10,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(3 格宽 × 2 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -20,13 +21,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "6 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "6",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -123,8 +133,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(1 格宽 × 1 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -133,13 +144,22 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "卖出",
-        "value": "4 CC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "4",
+            "image": "Copper_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -175,8 +195,9 @@
       },
       {
         "label": "可放置",
-        "value": "✔️",
-        "extra": "(3 格宽 × 3 格高)"
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -190,18 +211,34 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -280,15 +317,22 @@
       },
       {
         "label": "稀有度",
-        "value": "灰色",
+        "value": "白色",
         "extra": "",
         "sortkey": "00*",
-        "color": "#b8b8b8"
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
@@ -2015,8 +2059,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置后即可使用魔法能力提高",
-        "extra": ""
+        "value": "放置后即可使用\n魔法能力提高",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置后即可使用\n魔法能力提高"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -2052,11 +2102,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2277,8 +2322,14 @@
       },
       {
         "label": "工具提示",
-        "value": "放置后即可使用新增益持续更长时间“来自远方的神秘瓶子”",
-        "extra": ""
+        "value": "放置后即可使用\n新增益持续更长时间\n“来自远方的神秘瓶子”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "放置后即可使用\n新增益持续更长时间\n“来自远方的神秘瓶子”"
+          }
+        ]
       },
       {
         "label": "稀有度",

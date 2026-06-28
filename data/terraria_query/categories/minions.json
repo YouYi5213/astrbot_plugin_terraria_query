@@ -35,10 +35,10 @@
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -55,11 +55,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -138,15 +133,21 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤附魔飞刀来为你战斗忽略敌人25防御“别被它们小小的个头给骗了”",
-        "extra": ""
+        "value": "召唤附魔飞刀来为你战斗\n忽略敌人25防御\n“别被它们小小的个头给骗了”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤附魔飞刀来为你战斗\n忽略敌人25防御\n“别被它们小小的个头给骗了”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -163,11 +164,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -269,10 +265,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -289,11 +285,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -827,10 +818,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -847,11 +838,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -953,22 +939,26 @@
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1052,10 +1042,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -1072,11 +1062,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1139,10 +1124,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -1159,16 +1144,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "小鬼火球",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1221,15 +1196,21 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤捣蛋猫来为你战斗一个可爱的帕鲁，还能帮你挖矿右键点击来抚摸它！",
-        "extra": ""
+        "value": "召唤捣蛋猫来为你战斗\n一个可爱的帕鲁，还能帮你挖矿\n右键点击来抚摸它！",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤捣蛋猫来为你战斗\n一个可爱的帕鲁，还能帮你挖矿\n右键点击来抚摸它！"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -1246,11 +1227,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "抚摸",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1290,8 +1266,14 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤星尘之龙来为你战斗“有了一条巨龙后，谁还需要一群仆从呢？”",
-        "extra": ""
+        "value": "召唤星尘之龙来为你战斗\n“有了一条巨龙后，谁还需要一群仆从呢？”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤星尘之龙来为你战斗\n“有了一条巨龙后，谁还需要一群仆从呢？”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -1315,11 +1297,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1372,8 +1349,14 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤星尘细胞来为你战斗“培养最美丽的细胞感染”",
-        "extra": ""
+        "value": "召唤星尘细胞来为你战斗\n“培养最美丽的细胞感染”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤星尘细胞来为你战斗\n“培养最美丽的细胞感染”"
+          }
+        ]
       },
       {
         "label": "稀有度",
@@ -1397,11 +1380,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1459,10 +1437,10 @@
       },
       {
         "label": "稀有度",
-        "value": "紫色",
+        "value": "黄色",
         "extra": "",
         "sortkey": "08*",
-        "color": "#aa55ff"
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
@@ -1479,16 +1457,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "迷你鲨鱼龙",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1590,22 +1558,26 @@
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "20 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1650,10 +1622,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -1670,11 +1642,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1719,10 +1686,10 @@
       },
       {
         "label": "稀有度",
-        "value": "浅红色",
+        "value": "粉红色",
         "extra": "",
         "sortkey": "05*",
-        "color": "#ff7777"
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
@@ -1739,11 +1706,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1912,15 +1874,21 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤火绒狐来为你战斗左键点击来使用火绒狐的抱抱火焰技能发射火焰！右键点击来抚摸它！",
-        "extra": ""
+        "value": "召唤火绒狐来为你战斗\n左键点击来使用火绒狐的抱抱火焰技能发射火焰！\n右键点击来抚摸它！",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤火绒狐来为你战斗\n左键点击来使用火绒狐的抱抱火焰技能发射火焰！\n右键点击来抚摸它！"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -1937,11 +1905,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "抚摸",
-        "value": "",
         "extra": ""
       }
     ],
@@ -1986,22 +1949,26 @@
       },
       {
         "label": "稀有度",
-        "value": "07*",
-        "extra": ""
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
         "label": "卖出",
-        "value": "7 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "7",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2103,22 +2070,26 @@
       },
       {
         "label": "稀有度",
-        "value": "08*",
-        "extra": ""
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "08*",
+        "color": "#ffff66"
       },
       {
         "label": "卖出",
-        "value": "10 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2197,32 +2168,37 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤蘑菇君来为你战斗“蘑菇君，出击！”",
-        "extra": ""
+        "value": "召唤蘑菇君来为你战斗\n“蘑菇君，出击！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤蘑菇君来为你战斗\n“蘑菇君，出击！”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "02*",
-        "extra": ""
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
       },
       {
         "label": "卖出",
-        "value": "30 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "30",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "Explode",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2287,10 +2263,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -2307,11 +2283,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2369,10 +2340,10 @@
       },
       {
         "label": "稀有度",
-        "value": "橙色",
+        "value": "浅红色",
         "extra": "",
         "sortkey": "04*",
-        "color": "#ffaa44"
+        "color": "#ff7777"
       },
       {
         "label": "卖出",
@@ -2389,11 +2360,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2472,15 +2438,21 @@
       },
       {
         "label": "工具提示",
-        "value": "召唤友好鬼魂来为你战斗“它美得摄人心魄。”",
-        "extra": ""
+        "value": "召唤友好鬼魂来为你战斗\n“它美得摄人心魄。”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤友好鬼魂来为你战斗\n“它美得摄人心魄。”"
+          }
+        ]
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -2497,26 +2469,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "阿比盖尔的攻击",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "阿比盖尔的叫声",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "阿比盖尔的升级",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2561,10 +2513,10 @@
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "蓝色",
         "extra": "",
         "sortkey": "01*",
-        "color": "#ffffff"
+        "color": "#5a9cff"
       },
       {
         "label": "卖出",
@@ -2581,11 +2533,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2669,27 +2616,26 @@
       },
       {
         "label": "稀有度",
-        "value": "05*",
-        "extra": ""
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
       },
       {
         "label": "卖出",
-        "value": "2 GC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "迷你视网膜激光",
-        "value": "",
         "extra": ""
       }
     ],
@@ -2758,10 +2704,10 @@
       },
       {
         "label": "稀有度",
-        "value": "绿色",
+        "value": "橙色",
         "extra": "",
         "sortkey": "03*",
-        "color": "#55dd55"
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -2778,16 +2724,6 @@
       {
         "label": "研究",
         "value": "需要 1 份",
-        "extra": ""
-      },
-      {
-        "label": "使用",
-        "value": "",
-        "extra": ""
-      },
-      {
-        "label": "黄蜂毒刺",
-        "value": "",
         "extra": ""
       }
     ],

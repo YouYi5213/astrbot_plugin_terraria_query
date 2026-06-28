@@ -165,6 +165,22 @@ def test_assign_items_to_categories_priority():
     assert "天使翅膀" in buckets["wings"]
 
 
+def test_parse_frozen_shield_multiline_tooltip():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "冰冻护盾.html"
+    if not html_path.is_file():
+        return
+    item = parse_item_page(html_path.read_text(encoding="utf-8"), "冰冻护盾")
+    assert item is not None
+    tooltip = next(s for s in item["stats"] if s["label"] == "工具提示")
+    assert "\n" in tooltip["value"]
+    assert tooltip["value"].splitlines() == [
+        "对击退免疫",
+        "生命值低于50%时，在所有者周围放置可减少25%伤害的护罩",
+        "当生命值高于25%时，吸收团队中其他玩家所受伤害的25%",
+    ]
+    assert tooltip.get("segments")
+
+
 def test_parse_mount_page_shrimpy_truffle():
     html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "虾松露.html"
     if not html_path.is_file():

@@ -15,8 +15,9 @@
       },
       {
         "label": "可消耗",
-        "value": "✔️",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
       },
       {
         "label": "使用时间",
@@ -30,18 +31,34 @@
       },
       {
         "label": "稀有度",
-        "value": "00*",
-        "extra": ""
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
       },
       {
         "label": "买入",
-        "value": "10 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "卖出",
-        "value": "2 SC",
-        "extra": ""
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",

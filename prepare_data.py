@@ -930,6 +930,34 @@ def _is_intro_table(table: Tag) -> bool:
     return False
 
 
+def _is_skippable_intro_table(table: Tag) -> bool:
+    """导语区内嵌的小表格（如减益持续时间），不应截断后续列表。"""
+    if _is_intro_table(table):
+        return True
+    classes = set(table.get("class") or [])
+    if "float-right" in classes or "floatleft" in classes:
+        return True
+    if "terraria" in classes and table.select_one("caption"):
+        if not table.select_one("td.ingredients, td.result, td.station"):
+            return True
+    return False
+
+
+def _append_description_list(
+    paragraphs: list[str],
+    rich_paragraphs: list[list[dict]],
+    text: str,
+    rich: list[dict],
+) -> None:
+    """追加列表块；若上一段已是列表则合并（应对列表被表格打断的情况）。"""
+    if paragraphs and paragraphs[-1].startswith("· "):
+        paragraphs[-1] = f"{paragraphs[-1]}\n{text}"
+        rich_paragraphs[-1].extend([{"type": "text", "text": "\n"}, *rich])
+        return
+    paragraphs.append(text)
+    rich_paragraphs.append(rich)
+
+
 def _should_skip_intro_div(div: Tag) -> str:
     """返回 skip（继续扫描）或 stop（结束导语区）"""
     classes = set(div.get("class") or [])
@@ -1133,22 +1161,32 @@ def _parse_description_list_block(list_el: Tag) -> tuple[str, list[dict]] | None
 
 
 _INTRO_LIST_PROMPT_RE = re.compile(
-    r"(如下|以下).{0,24}(奖励|加成|效果|增强|方法|来自)|"
-    r"提供以下(效果|加成|增强)|会在以下方面|可以用以下"
+    r"(如下|以下).{0,24}(奖励|加成|效果|增强|方法|来自|强化)|"
+    r"提供以下(效果|加成|增强)|会在以下方面|可以用以下|有以下强化"
+)
+
+
+_SET_PIECE_INTRO_RE = re.compile(
+    r"装备全(套|部).*(盔甲|铠甲|护具|套装).*(提供以下(效果|加成)|提供如下(效果|加成)?)|"
+    r"全套.*提供以下奖励"
 )
 
 
 def _description_missing_intro_list(item: dict) -> bool:
-    """描述以「如下效果：」等引导句结尾，但缺少后续列表内容。"""
+    """描述以引导句或冒号结尾，但缺少后续列表内容。"""
     text = (item.get("description") or "").strip()
-    if not text or not _INTRO_LIST_PROMPT_RE.search(text):
+    if not text:
         return False
-    tail = text.split("\n\n")[-1]
     if re.search(r"\n· ", text) or re.search(r"\n\d+\. ", text):
         return False
+    tail = text.split("\n\n")[-1]
+    if _SET_PIECE_INTRO_RE.search(tail):
+        return False
     if tail.endswith("：") or tail.endswith(":"):
-        return True
-    if re.search(r"\[(\d+)\]$", tail):
+        if _INTRO_LIST_PROMPT_RE.search(text) or "强化" in tail or "增强" in tail:
+            return True
+        return False
+    if _INTRO_LIST_PROMPT_RE.search(text) and re.search(r"\[\d+\]$", tail):
         return True
     return False
 
@@ -1169,7 +1207,7 @@ def parse_description_from_soup(soup: BeautifulSoup) -> dict | None:
         if not isinstance(child, Tag):
             continue
         if child.name == "table":
-            if _is_intro_table(child):
+            if _is_skippable_intro_table(child):
                 continue
             break
         if child.name == "div":
@@ -1190,8 +1228,7 @@ def parse_description_from_soup(soup: BeautifulSoup) -> dict | None:
             parsed_list = _parse_description_list_block(child)
             if parsed_list:
                 text, rich = parsed_list
-                paragraphs.append(text)
-                rich_paragraphs.append(rich)
+                _append_description_list(paragraphs, rich_paragraphs, text, rich)
             continue
         if child.name in stop_tags:
             break
@@ -3280,6 +3317,56 @@ async def maintain_local_data() -> dict:
     }
     _persist_items(items)
     return result
+
+
+def _resolve_local_wiki_html(wiki_root: str, item: dict, key: str):
+    from pathlib import Path
+
+    for sub in ("zh/pages", "pages", "zh"):
+        base = Path(wiki_root) / sub
+        if not base.is_dir():
+            continue
+        for title in _iter_wiki_titles(item, key):
+            path = base / f"{title}.html"
+            if path.is_file():
+                return path
+    return None
+
+
+def _description_should_refresh(item: dict, parsed: dict | None) -> bool:
+    if not parsed:
+        return False
+    new_text = (parsed.get("text") or "").strip()
+    old_text = (item.get("description") or "").strip()
+    if not new_text or new_text == old_text:
+        return False
+    if _description_missing_intro_list(item):
+        return True
+    return len(new_text) > len(old_text)
+
+
+def refresh_descriptions_from_local_wiki(
+    items: dict[str, dict],
+    *,
+    wiki_root: str,
+) -> tuple[int, list[str]]:
+    """用本地 Wiki HTML 批量刷新物品描述（更长或补全截断列表）。"""
+    updated_keys: list[str] = []
+    for key, item in items.items():
+        if item.get("from_wings_table"):
+            continue
+        path = _resolve_local_wiki_html(wiki_root, item, key)
+        if not path:
+            continue
+        parsed = parse_description_from_soup(
+            BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
+        )
+        if not _description_should_refresh(item, parsed):
+            continue
+        if _apply_description_to_item(item, parsed):
+            items[key] = item
+            updated_keys.append(key)
+    return len(updated_keys), updated_keys
 
 
 async def refresh_sets_only() -> dict:

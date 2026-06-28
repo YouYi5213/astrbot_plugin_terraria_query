@@ -233,7 +233,25 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "兔兔套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "兔兔套装是一套时装套装，由兔兔尾巴和兔兔耳朵组成。它可以在上弦月或盈凸月期间在动物学家处以6 GC（全套）的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "兔兔套装是一套时装套装，由兔兔尾巴和兔兔耳朵组成。它可以在上弦月或盈凸月期间在动物学家处以"
+        },
+        {
+          "type": "coin",
+          "amount": "6",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ]
+    ]
   },
   "兔兔尾巴": {
     "name": "兔兔尾巴",
@@ -290,7 +308,25 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "兔兔套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "兔兔套装是一套时装套装，由兔兔尾巴和兔兔耳朵组成。它可以在上弦月或盈凸月期间在动物学家处以6 GC（全套）的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "兔兔套装是一套时装套装，由兔兔尾巴和兔兔耳朵组成。它可以在上弦月或盈凸月期间在动物学家处以"
+        },
+        {
+          "type": "coin",
+          "amount": "6",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ]
+    ]
   },
   "Chicken Bones的面罩": {
     "name": "Chicken Bones的面罩",
@@ -340,7 +376,43 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chicken Bones的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Chicken Bones的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Re-Logic程序员兼tModLoader开发团队成员Chicken Bones制作的时装套装。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nChicken Bones的套装还包括以下的非时装物品，它们也会随着时装物品一起获得：\n\n· Chicken Bones的翅膀Chicken Bones的翅膀",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chicken Bones的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Re-Logic程序员兼tModLoader开发团队成员Chicken Bones制作的时装套装。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chicken Bones的套装还包括以下的非时装物品，它们也会随着时装物品一起获得："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Chicken_Bones'_Wings.png",
+          "alt": "Chicken Bones的翅膀"
+        },
+        {
+          "type": "text",
+          "text": "Chicken Bones的翅膀"
+        }
+      ]
+    ]
   },
   "Chicken Bones的背心": {
     "name": "Chicken Bones的背心",
@@ -390,7 +462,43 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chicken Bones的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Chicken Bones的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Re-Logic程序员兼tModLoader开发团队成员Chicken Bones制作的时装套装。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nChicken Bones的套装还包括以下的非时装物品，它们也会随着时装物品一起获得：\n\n· Chicken Bones的翅膀Chicken Bones的翅膀",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chicken Bones的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Re-Logic程序员兼tModLoader开发团队成员Chicken Bones制作的时装套装。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chicken Bones的套装还包括以下的非时装物品，它们也会随着时装物品一起获得："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Chicken_Bones'_Wings.png",
+          "alt": "Chicken Bones的翅膀"
+        },
+        {
+          "type": "text",
+          "text": "Chicken Bones的翅膀"
+        }
+      ]
+    ]
   },
   "Chicken Bones的裤子": {
     "name": "Chicken Bones的裤子",
@@ -440,7 +548,43 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chicken Bones的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Chicken Bones的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Re-Logic程序员兼tModLoader开发团队成员Chicken Bones制作的时装套装。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nChicken Bones的套装还包括以下的非时装物品，它们也会随着时装物品一起获得：\n\n· Chicken Bones的翅膀Chicken Bones的翅膀",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chicken Bones的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Re-Logic程序员兼tModLoader开发团队成员Chicken Bones制作的时装套装。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chicken Bones的套装还包括以下的非时装物品，它们也会随着时装物品一起获得："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Chicken_Bones'_Wings.png",
+          "alt": "Chicken Bones的翅膀"
+        },
+        {
+          "type": "text",
+          "text": "Chicken Bones的翅膀"
+        }
+      ]
+    ]
   },
   "Chicken Bones的长袍": {
     "name": "Chicken Bones的长袍",
@@ -485,7 +629,43 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chicken Bones的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Chicken Bones的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Re-Logic程序员兼tModLoader开发团队成员Chicken Bones制作的时装套装。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nChicken Bones的套装还包括以下的非时装物品，它们也会随着时装物品一起获得：\n\n· Chicken Bones的翅膀Chicken Bones的翅膀",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chicken Bones的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Re-Logic程序员兼tModLoader开发团队成员Chicken Bones制作的时装套装。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chicken Bones的套装还包括以下的非时装物品，它们也会随着时装物品一起获得："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Chicken_Bones'_Wings.png",
+          "alt": "Chicken Bones的翅膀"
+        },
+        {
+          "type": "text",
+          "text": "Chicken Bones的翅膀"
+        }
+      ]
+    ]
   },
   "Chippy的头盔": {
     "name": "Chippy的头盔",
@@ -541,7 +721,46 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chippy的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Chippy的套装是一套由Chippy的头盔、Chippy的护胸、Chippy的护胫、Chippy的头带组成的时装物品。它总是会由骷髅王的红帽变体种类掉落。\n\nChippy的套装还包括以下的非时装物品，它们也会随着时装物品一起获得：\n\n· Chippy的斗篷（停用）Chippy的斗篷（停用），可以被合成为Chippy的斗篷Chippy的斗篷",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chippy的套装是一套由Chippy的头盔、Chippy的护胸、Chippy的护胫、Chippy的头带组成的时装物品。它总是会由骷髅王的红帽变体种类掉落。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chippy的套装还包括以下的非时装物品，它们也会随着时装物品一起获得："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Chippy's_Cloak_(Inactive).png",
+          "alt": "Chippy的斗篷（停用）"
+        },
+        {
+          "type": "text",
+          "text": "Chippy的斗篷（停用），可以被合成为"
+        },
+        {
+          "type": "icon",
+          "image": "Chippy's_Cloak.png",
+          "alt": "Chippy的斗篷"
+        },
+        {
+          "type": "text",
+          "text": "Chippy的斗篷"
+        }
+      ]
+    ]
   },
   "Chippy的护胸": {
     "name": "Chippy的护胸",
@@ -597,7 +816,46 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chippy的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Chippy的套装是一套由Chippy的头盔、Chippy的护胸、Chippy的护胫、Chippy的头带组成的时装物品。它总是会由骷髅王的红帽变体种类掉落。\n\nChippy的套装还包括以下的非时装物品，它们也会随着时装物品一起获得：\n\n· Chippy的斗篷（停用）Chippy的斗篷（停用），可以被合成为Chippy的斗篷Chippy的斗篷",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chippy的套装是一套由Chippy的头盔、Chippy的护胸、Chippy的护胫、Chippy的头带组成的时装物品。它总是会由骷髅王的红帽变体种类掉落。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chippy的套装还包括以下的非时装物品，它们也会随着时装物品一起获得："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Chippy's_Cloak_(Inactive).png",
+          "alt": "Chippy的斗篷（停用）"
+        },
+        {
+          "type": "text",
+          "text": "Chippy的斗篷（停用），可以被合成为"
+        },
+        {
+          "type": "icon",
+          "image": "Chippy's_Cloak.png",
+          "alt": "Chippy的斗篷"
+        },
+        {
+          "type": "text",
+          "text": "Chippy的斗篷"
+        }
+      ]
+    ]
   },
   "Chippy的护胫": {
     "name": "Chippy的护胫",
@@ -653,7 +911,46 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chippy的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Chippy的套装是一套由Chippy的头盔、Chippy的护胸、Chippy的护胫、Chippy的头带组成的时装物品。它总是会由骷髅王的红帽变体种类掉落。\n\nChippy的套装还包括以下的非时装物品，它们也会随着时装物品一起获得：\n\n· Chippy的斗篷（停用）Chippy的斗篷（停用），可以被合成为Chippy的斗篷Chippy的斗篷",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chippy的套装是一套由Chippy的头盔、Chippy的护胸、Chippy的护胫、Chippy的头带组成的时装物品。它总是会由骷髅王的红帽变体种类掉落。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chippy的套装还包括以下的非时装物品，它们也会随着时装物品一起获得："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Chippy's_Cloak_(Inactive).png",
+          "alt": "Chippy的斗篷（停用）"
+        },
+        {
+          "type": "text",
+          "text": "Chippy的斗篷（停用），可以被合成为"
+        },
+        {
+          "type": "icon",
+          "image": "Chippy's_Cloak.png",
+          "alt": "Chippy的斗篷"
+        },
+        {
+          "type": "text",
+          "text": "Chippy的斗篷"
+        }
+      ]
+    ]
   },
   "Chippy的头带": {
     "name": "Chippy的头带",
@@ -704,7 +1001,46 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Chippy的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Chippy的套装是一套由Chippy的头盔、Chippy的护胸、Chippy的护胫、Chippy的头带组成的时装物品。它总是会由骷髅王的红帽变体种类掉落。\n\nChippy的套装还包括以下的非时装物品，它们也会随着时装物品一起获得：\n\n· Chippy的斗篷（停用）Chippy的斗篷（停用），可以被合成为Chippy的斗篷Chippy的斗篷",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Chippy的套装是一套由Chippy的头盔、Chippy的护胸、Chippy的护胫、Chippy的头带组成的时装物品。它总是会由骷髅王的红帽变体种类掉落。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Chippy的套装还包括以下的非时装物品，它们也会随着时装物品一起获得："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Chippy's_Cloak_(Inactive).png",
+          "alt": "Chippy的斗篷（停用）"
+        },
+        {
+          "type": "text",
+          "text": "Chippy的斗篷（停用），可以被合成为"
+        },
+        {
+          "type": "icon",
+          "image": "Chippy's_Cloak.png",
+          "alt": "Chippy的斗篷"
+        },
+        {
+          "type": "text",
+          "text": "Chippy的斗篷"
+        }
+      ]
+    ]
   },
   "狗耳朵": {
     "name": "狗耳朵",
@@ -761,7 +1097,25 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "狗狗套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "狗狗套装是一套时装套装，由狗尾巴和狗耳朵组成。可以在满月或亏凸月期间，于动物学家处以6 GC（全套）的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "狗狗套装是一套时装套装，由狗尾巴和狗耳朵组成。可以在满月或亏凸月期间，于动物学家处以"
+        },
+        {
+          "type": "coin",
+          "amount": "6",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ]
+    ]
   },
   "狗尾巴": {
     "name": "狗尾巴",
@@ -813,7 +1167,25 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "狗狗套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "狗狗套装是一套时装套装，由狗尾巴和狗耳朵组成。可以在满月或亏凸月期间，于动物学家处以6 GC（全套）的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "狗狗套装是一套时装套装，由狗尾巴和狗耳朵组成。可以在满月或亏凸月期间，于动物学家处以"
+        },
+        {
+          "type": "coin",
+          "amount": "6",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ]
+    ]
   },
   "狐狸耳朵": {
     "name": "狐狸耳朵",
@@ -870,7 +1242,25 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "狐狸套装（动物学家）",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "狐狸套装是一套时装套装，由狐狸尾巴和狐狸耳朵组成。它可在下弦月或残月期间从动物学家处以6 GC（全套）的价格购得。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "狐狸套装是一套时装套装，由狐狸尾巴和狐狸耳朵组成。它可在下弦月或残月期间从动物学家处以"
+        },
+        {
+          "type": "coin",
+          "amount": "6",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购得。"
+        }
+      ]
+    ]
   },
   "狐狸尾巴": {
     "name": "狐狸尾巴",
@@ -922,7 +1312,25 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "狐狸套装（动物学家）",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "狐狸套装是一套时装套装，由狐狸尾巴和狐狸耳朵组成。它可在下弦月或残月期间从动物学家处以6 GC（全套）的价格购得。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "狐狸套装是一套时装套装，由狐狸尾巴和狐狸耳朵组成。它可在下弦月或残月期间从动物学家处以"
+        },
+        {
+          "type": "coin",
+          "amount": "6",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购得。"
+        }
+      ]
+    ]
   },
   "绅士胡子": {
     "name": "绅士胡子",
@@ -991,7 +1399,31 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以5 GC的价格购买。\n\n装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。"
+        }
+      ]
+    ]
   },
   "绅士长胡子": {
     "name": "绅士长胡子",
@@ -1048,7 +1480,31 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以5 GC的价格购买。\n\n装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。"
+        }
+      ]
+    ]
   },
   "绅士大胡子": {
     "name": "绅士大胡子",
@@ -1093,7 +1549,31 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以5 GC的价格购买。\n\n装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。"
+        }
+      ]
+    ]
   },
   "绅士马甲": {
     "name": "绅士马甲",
@@ -1151,7 +1631,31 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以5 GC的价格购买。\n\n装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。"
+        }
+      ]
+    ]
   },
   "绅士裤子": {
     "name": "绅士裤子",
@@ -1209,7 +1713,31 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绅士套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以5 GC的价格购买。\n\n装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "绅士套装是一套时装物品，由绅士胡子、绅士长胡子、绅士大胡子、绅士马甲、和绅士裤子组成。绅士马甲和绅士裤子可以制作，而绅士胡子可以在发型师处以"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备于配饰栏时，绅士胡子会随时间自然生长。在装备胡须 12 分钟后，此物品每秒有1/9 (11.11%)的几率生长。[1][2]此生长不受时间加速的影响，在胡须装备于时装栏时也不会生长。绅士胡子还会根据玩家的发色改变颜色。长的绅士胡子可以被制作回短的版本。"
+        }
+      ]
+    ]
   },
   "Leinfors的护发器": {
     "name": "Leinfors的护发器",
@@ -1265,7 +1793,54 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Leinfors的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Leinfors的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Leinfors所做的时装套装，Leinfors 是Re-Logic的前生产助理。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nLeinfors的奢华洗发液Leinfors的奢华洗发液配饰会给人物头发加上闪光效果。\n\nLeinfors 的装备还包括一件非时装物品，会和衣服套装一并掉落：\n\n· Leinfors的卷缠斗篷Leinfors的卷缠斗篷",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Leinfors的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Leinfors所做的时装套装，Leinfors 是Re-Logic的前生产助理。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "icon",
+          "image": "Leinfors'_Luxury_Shampoo.png",
+          "alt": "Leinfors的奢华洗发液"
+        },
+        {
+          "type": "text",
+          "text": "Leinfors的奢华洗发液配饰会给人物头发加上闪光效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Leinfors 的装备还包括一件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Leinfors'_Prehensile_Cloak.png",
+          "alt": "Leinfors的卷缠斗篷"
+        },
+        {
+          "type": "text",
+          "text": "Leinfors的卷缠斗篷"
+        }
+      ]
+    ]
   },
   "Leinfors的奇异风": {
     "name": "Leinfors的奇异风",
@@ -1321,7 +1896,54 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Leinfors的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Leinfors的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Leinfors所做的时装套装，Leinfors 是Re-Logic的前生产助理。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nLeinfors的奢华洗发液Leinfors的奢华洗发液配饰会给人物头发加上闪光效果。\n\nLeinfors 的装备还包括一件非时装物品，会和衣服套装一并掉落：\n\n· Leinfors的卷缠斗篷Leinfors的卷缠斗篷",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Leinfors的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Leinfors所做的时装套装，Leinfors 是Re-Logic的前生产助理。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "icon",
+          "image": "Leinfors'_Luxury_Shampoo.png",
+          "alt": "Leinfors的奢华洗发液"
+        },
+        {
+          "type": "text",
+          "text": "Leinfors的奢华洗发液配饰会给人物头发加上闪光效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Leinfors 的装备还包括一件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Leinfors'_Prehensile_Cloak.png",
+          "alt": "Leinfors的卷缠斗篷"
+        },
+        {
+          "type": "text",
+          "text": "Leinfors的卷缠斗篷"
+        }
+      ]
+    ]
   },
   "Leinfors的潮裤": {
     "name": "Leinfors的潮裤",
@@ -1377,7 +1999,54 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Leinfors的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Leinfors的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Leinfors所做的时装套装，Leinfors 是Re-Logic的前生产助理。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nLeinfors的奢华洗发液Leinfors的奢华洗发液配饰会给人物头发加上闪光效果。\n\nLeinfors 的装备还包括一件非时装物品，会和衣服套装一并掉落：\n\n· Leinfors的卷缠斗篷Leinfors的卷缠斗篷",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Leinfors的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Leinfors所做的时装套装，Leinfors 是Re-Logic的前生产助理。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "icon",
+          "image": "Leinfors'_Luxury_Shampoo.png",
+          "alt": "Leinfors的奢华洗发液"
+        },
+        {
+          "type": "text",
+          "text": "Leinfors的奢华洗发液配饰会给人物头发加上闪光效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Leinfors 的装备还包括一件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Leinfors'_Prehensile_Cloak.png",
+          "alt": "Leinfors的卷缠斗篷"
+        },
+        {
+          "type": "text",
+          "text": "Leinfors的卷缠斗篷"
+        }
+      ]
+    ]
   },
   "Leinfors的奢华洗发液": {
     "name": "Leinfors的奢华洗发液",
@@ -1428,7 +2097,54 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Leinfors的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Leinfors的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Leinfors所做的时装套装，Leinfors 是Re-Logic的前生产助理。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nLeinfors的奢华洗发液Leinfors的奢华洗发液配饰会给人物头发加上闪光效果。\n\nLeinfors 的装备还包括一件非时装物品，会和衣服套装一并掉落：\n\n· Leinfors的卷缠斗篷Leinfors的卷缠斗篷",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Leinfors的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为Leinfors所做的时装套装，Leinfors 是Re-Logic的前生产助理。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "icon",
+          "image": "Leinfors'_Luxury_Shampoo.png",
+          "alt": "Leinfors的奢华洗发液"
+        },
+        {
+          "type": "text",
+          "text": "Leinfors的奢华洗发液配饰会给人物头发加上闪光效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Leinfors 的装备还包括一件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Leinfors'_Prehensile_Cloak.png",
+          "alt": "Leinfors的卷缠斗篷"
+        },
+        {
+          "type": "text",
+          "text": "Leinfors的卷缠斗篷"
+        }
+      ]
+    ]
   },
   "蜥蜴耳朵": {
     "name": "蜥蜴耳朵",
@@ -1485,7 +2201,25 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "蜥蜴套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "蜥蜴套装是一套时装套装，由蜥蜴尾巴和蜥蜴耳朵组成。可以在新月或娥眉月期间，于动物学家处以6 GC（全套）的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "蜥蜴套装是一套时装套装，由蜥蜴尾巴和蜥蜴耳朵组成。可以在新月或娥眉月期间，于动物学家处以"
+        },
+        {
+          "type": "coin",
+          "amount": "6",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ]
+    ]
   },
   "蜥蜴尾巴": {
     "name": "蜥蜴尾巴",
@@ -1537,7 +2271,25 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "蜥蜴套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "蜥蜴套装是一套时装套装，由蜥蜴尾巴和蜥蜴耳朵组成。可以在新月或娥眉月期间，于动物学家处以6 GC（全套）的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "蜥蜴套装是一套时装套装，由蜥蜴尾巴和蜥蜴耳朵组成。可以在新月或娥眉月期间，于动物学家处以"
+        },
+        {
+          "type": "coin",
+          "amount": "6",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ]
+    ]
   },
   "Luna的符文妖精兜帽": {
     "name": "Luna的符文妖精兜帽",
@@ -1587,7 +2339,43 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Luna的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Luna的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为 Luna (\"Runic Pixels\") 所做的时装套装，Luna 是Re-Logic负责“图像”的人员之一。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nLuna的装备还包括一件非时装物品，会和衣服套装一并掉落：\n\n· Luna的符文妖精翅膀Luna的符文妖精翅膀",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Luna的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为 Luna (\"Runic Pixels\") 所做的时装套装，Luna 是Re-Logic负责“图像”的人员之一。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Luna的装备还包括一件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Luna's_Runic_Pixie_Wings.png",
+          "alt": "Luna的符文妖精翅膀"
+        },
+        {
+          "type": "text",
+          "text": "Luna的符文妖精翅膀"
+        }
+      ]
+    ]
   },
   "Luna的符文妖精衣": {
     "name": "Luna的符文妖精衣",
@@ -1637,7 +2425,43 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Luna的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Luna的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为 Luna (\"Runic Pixels\") 所做的时装套装，Luna 是Re-Logic负责“图像”的人员之一。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nLuna的装备还包括一件非时装物品，会和衣服套装一并掉落：\n\n· Luna的符文妖精翅膀Luna的符文妖精翅膀",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Luna的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为 Luna (\"Runic Pixels\") 所做的时装套装，Luna 是Re-Logic负责“图像”的人员之一。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Luna的装备还包括一件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Luna's_Runic_Pixie_Wings.png",
+          "alt": "Luna的符文妖精翅膀"
+        },
+        {
+          "type": "text",
+          "text": "Luna的符文妖精翅膀"
+        }
+      ]
+    ]
   },
   "Luna的符文妖精裤": {
     "name": "Luna的符文妖精裤",
@@ -1687,7 +2511,43 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Luna的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Luna的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为 Luna (\"Runic Pixels\") 所做的时装套装，Luna 是Re-Logic负责“图像”的人员之一。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nLuna的装备还包括一件非时装物品，会和衣服套装一并掉落：\n\n· Luna的符文妖精翅膀Luna的符文妖精翅膀",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Luna的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为 Luna (\"Runic Pixels\") 所做的时装套装，Luna 是Re-Logic负责“图像”的人员之一。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Luna的装备还包括一件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Luna's_Runic_Pixie_Wings.png",
+          "alt": "Luna的符文妖精翅膀"
+        },
+        {
+          "type": "text",
+          "text": "Luna的符文妖精翅膀"
+        }
+      ]
+    ]
   },
   "Luna的符文妖精斗篷": {
     "name": "Luna的符文妖精斗篷",
@@ -1732,7 +2592,43 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Luna的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Luna的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为 Luna (\"Runic Pixels\") 所做的时装套装，Luna 是Re-Logic负责“图像”的人员之一。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\nLuna的装备还包括一件非时装物品，会和衣服套装一并掉落：\n\n· Luna的符文妖精翅膀Luna的符文妖精翅膀",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Luna的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为 Luna (\"Runic Pixels\") 所做的时装套装，Luna 是Re-Logic负责“图像”的人员之一。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Luna的装备还包括一件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Luna's_Runic_Pixie_Wings.png",
+          "alt": "Luna的符文妖精翅膀"
+        },
+        {
+          "type": "text",
+          "text": "Luna的符文妖精翅膀"
+        }
+      ]
+    ]
   },
   "王子制服": {
     "name": "王子制服",
@@ -1789,7 +2685,31 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "王子套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "王子套装是由王子制服、王子披风、和王子裤组成的困难模式时装套装。它可从公主处以1 PC（全套）的价格购买。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "王子套装是由王子制服、王子披风、和王子裤组成的困难模式时装套装。它可从公主处以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "pc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ]
   },
   "王子裤": {
     "name": "王子裤",
@@ -1846,7 +2766,31 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "王子套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "王子套装是由王子制服、王子披风、和王子裤组成的困难模式时装套装。它可从公主处以1 PC（全套）的价格购买。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "王子套装是由王子制服、王子披风、和王子裤组成的困难模式时装套装。它可从公主处以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "pc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ]
   },
   "王子披风": {
     "name": "王子披风",
@@ -1898,7 +2842,31 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "王子套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "王子套装是由王子制服、王子披风、和王子裤组成的困难模式时装套装。它可从公主处以1 PC（全套）的价格购买。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "王子套装是由王子制服、王子披风、和王子裤组成的困难模式时装套装。它可从公主处以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "pc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ]
   },
   "Yoraiz0r的染色护目镜": {
     "name": "Yoraiz0r的染色护目镜",
@@ -1948,7 +2916,37 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Yoraiz0r的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Yoraiz0r的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为开发泰拉瑞亚的程序员之一Yoraiz0r所做的时装套装。Yoraiz0r的怒容会在人物的眼部增加阴影效果。\n\nYoraiz0r 的装备还包括这件非时装物品，会和衣服套装一并掉落：\n\n· Yoraiz0r的魔法Yoraiz0r的魔法(电脑版、主机版、和移动版)",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Yoraiz0r的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为开发泰拉瑞亚的程序员之一Yoraiz0r所做的时装套装。Yoraiz0r的怒容会在人物的眼部增加阴影效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Yoraiz0r 的装备还包括这件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Yoraiz0r's_Spell.gif",
+          "alt": "Yoraiz0r的魔法"
+        },
+        {
+          "type": "text",
+          "text": "Yoraiz0r的魔法(电脑版、主机版、和移动版)"
+        }
+      ]
+    ]
   },
   "Yoraiz0r的制服": {
     "name": "Yoraiz0r的制服",
@@ -1998,7 +2996,37 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Yoraiz0r的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Yoraiz0r的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为开发泰拉瑞亚的程序员之一Yoraiz0r所做的时装套装。Yoraiz0r的怒容会在人物的眼部增加阴影效果。\n\nYoraiz0r 的装备还包括这件非时装物品，会和衣服套装一并掉落：\n\n· Yoraiz0r的魔法Yoraiz0r的魔法(电脑版、主机版、和移动版)",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Yoraiz0r的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为开发泰拉瑞亚的程序员之一Yoraiz0r所做的时装套装。Yoraiz0r的怒容会在人物的眼部增加阴影效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Yoraiz0r 的装备还包括这件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Yoraiz0r's_Spell.gif",
+          "alt": "Yoraiz0r的魔法"
+        },
+        {
+          "type": "text",
+          "text": "Yoraiz0r的魔法(电脑版、主机版、和移动版)"
+        }
+      ]
+    ]
   },
   "Yoraiz0r的裙": {
     "name": "Yoraiz0r的裙",
@@ -2048,7 +3076,37 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Yoraiz0r的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Yoraiz0r的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为开发泰拉瑞亚的程序员之一Yoraiz0r所做的时装套装。Yoraiz0r的怒容会在人物的眼部增加阴影效果。\n\nYoraiz0r 的装备还包括这件非时装物品，会和衣服套装一并掉落：\n\n· Yoraiz0r的魔法Yoraiz0r的魔法(电脑版、主机版、和移动版)",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Yoraiz0r的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为开发泰拉瑞亚的程序员之一Yoraiz0r所做的时装套装。Yoraiz0r的怒容会在人物的眼部增加阴影效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Yoraiz0r 的装备还包括这件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Yoraiz0r's_Spell.gif",
+          "alt": "Yoraiz0r的魔法"
+        },
+        {
+          "type": "text",
+          "text": "Yoraiz0r的魔法(电脑版、主机版、和移动版)"
+        }
+      ]
+    ]
   },
   "Yoraiz0r的怒容": {
     "name": "Yoraiz0r的怒容",
@@ -2099,7 +3157,37 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "Yoraiz0r的套装",
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "description": "Yoraiz0r的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为开发泰拉瑞亚的程序员之一Yoraiz0r所做的时装套装。Yoraiz0r的怒容会在人物的眼部增加阴影效果。\n\nYoraiz0r 的装备还包括这件非时装物品，会和衣服套装一并掉落：\n\n· Yoraiz0r的魔法Yoraiz0r的魔法(电脑版、主机版、和移动版)",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Yoraiz0r的套装是一套属于开发者物品的时装套装，它有 5% 的几率从困难模式Boss的宝藏袋中获得（史莱姆皇后除外）。它是为开发泰拉瑞亚的程序员之一Yoraiz0r所做的时装套装。Yoraiz0r的怒容会在人物的眼部增加阴影效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Yoraiz0r 的装备还包括这件非时装物品，会和衣服套装一并掉落："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "icon",
+          "image": "Yoraiz0r's_Spell.gif",
+          "alt": "Yoraiz0r的魔法"
+        },
+        {
+          "type": "text",
+          "text": "Yoraiz0r的魔法(电脑版、主机版、和移动版)"
+        }
+      ]
+    ]
   },
   "岩石巨人头": {
     "name": "岩石巨人头",

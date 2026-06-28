@@ -298,3 +298,25 @@ def test_parse_description_includes_intro_effect_list():
     assert "生命再生" in parsed["text"]
     assert "· +2%" in parsed["text"]
     assert len(parsed["rich"]) >= 3
+
+
+def test_parse_description_fire_gauntlet_split_list():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "烈火手套.html"
+    if not html_path.is_file():
+        return
+    from prepare_data import parse_description_from_soup  # noqa: E402
+
+    parsed = parse_description_from_soup(
+        BeautifulSoup(html_path.read_text(encoding="utf-8"), "html.parser")
+    )
+    assert parsed is not None
+    assert "有以下强化" in parsed["text"]
+    assert "狱炎" in parsed["text"]
+    assert "自动挥舞" in parsed["text"]
+    assert parsed["text"].count("· ") >= 7
+
+    item = {
+        "name": "烈火手套",
+        "description": "烈火手套是一个困难模式配饰，在击败所有三个机械 Boss后可用。它对近战武器有以下强化：",
+    }
+    assert _description_missing_intro_list(item)

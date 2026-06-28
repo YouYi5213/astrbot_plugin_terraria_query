@@ -106,6 +106,24 @@ def test_boss_stat_values_not_duplicated():
     assert "95625 95625" not in core_hp["modes"]["master"]
 
 
+def test_parse_moon_lord_boss_description():
+    parsed = parse_boss_page_file("月亮领主")
+    description = parsed.get("description") or ""
+    assert "月亮末日" in description
+    assert "困难模式" in description
+    assert "拜月教邪教徒" in description
+    rich = parsed.get("description_rich") or []
+    assert rich
+    flavor = rich[0]
+    assert any(seg.get("type") == "icon" for seg in flavor)
+    assert any(
+        "月亮末日" in (seg.get("text") or "")
+        for seg in flavor
+        if seg.get("type") == "text"
+    )
+    assert len(rich) >= 2
+
+
 def test_parse_moon_lord_boss_money():
     parsed = parse_boss_page_file("月亮领主")
     money = (parsed.get("drops") or {}).get("money") or {}

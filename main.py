@@ -196,7 +196,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
-CARD_VERSION = "v38"
+CARD_VERSION = "v41"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -224,7 +224,21 @@ BOSS_SPRITE_MAX_SIZE = (240, 180)
 BOSS_PART_SPRITE_MAX_SIZE = (120, 100)
 BOSS_PART_BOX_PAD = 8
 BOSS_PART_BOX_GAP = 10
+BOSS_MODE_BOX_PAD = 8
+BOSS_MODE_BOX_GAP = 10
+BOSS_MINI_MODE_BOX_PAD = 6
+BOSS_MINI_MODE_BOX_GAP = 4
 BOSS_MODE_LABELS = ("normal", "expert", "master")
+BOSS_MODE_BOX_STYLES = {
+    "normal": {"fill": (40, 40, 48, 255), "outline": (75, 75, 88)},
+    "expert": {"fill": (255, 202, 103, 72), "outline": (255, 202, 103)},
+    "master": {"fill": (255, 186, 186, 72), "outline": (255, 186, 186)},
+}
+BOSS_MODE_HEADER_COLORS = {
+    "normal": (255, 215, 0),
+    "expert": (255, 202, 103),
+    "master": (255, 186, 186),
+}
 BOSS_DROP_ICON_SLOT = (24, 24)
 COLORS = {
     "bg": (30, 30, 35, 230),
@@ -639,8 +653,14 @@ def _resolve_description_rich(data: dict) -> list[list[dict]]:
     return description_text_to_rich(text) if text else []
 
 
-def _calc_description_area(measure, description_rich: list[list[dict]], font) -> int:
-    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
+def _calc_description_area(
+    measure,
+    description_rich: list[list[dict]],
+    font,
+    max_w: int | None = None,
+) -> int:
+    if max_w is None:
+        max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
     area = 20 + 30
     for para in description_rich:
         lines = _layout_description_segments(measure, para, font, max_w)
@@ -657,11 +677,15 @@ def _draw_description_section(
     font_header,
     font_small,
     ui,
+    *,
+    x: int | None = None,
+    max_w: int | None = None,
 ) -> int:
-    draw.text((CARD_PADDING + 10, y), ui["description"], fill=COLORS["accent"], font=font_header)
+    desc_x = x if x is not None else CARD_PADDING + 20
+    if max_w is None:
+        max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
+    draw.text((desc_x - 10, y), ui["description"], fill=COLORS["accent"], font=font_header)
     y += 30
-    desc_x = CARD_PADDING + 20
-    max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
     for para in description_rich:
         for line in _layout_description_segments(draw, para, font_small, max_w):
             _draw_description_line(draw, card, desc_x, y, line, font_small)
@@ -2707,16 +2731,107 @@ def _draw_boss_stat_row(
     return col_bottoms
 
 
-def _boss_mode_column_layout(card_width: int = BOSS_CARD_WIDTH) -> list[tuple[str, int, int]]:
-    inner = card_width - CARD_PADDING * 2
-    gap = 12
-    col_w = (inner - gap * 2) // 3
-    x0 = CARD_PADDING + 10
-    return [
-        ("normal", x0, col_w),
-        ("expert", x0 + col_w + gap, col_w),
-        ("master", x0 + (col_w + gap) * 2, col_w),
-    ]
+def _boss_mode_column_layout(
+    card_width: int = BOSS_CARD_WIDTH,
+    *,
+    content_x: int | None = None,
+    content_w: int | None = None,
+    mini: bool = False,
+) -> list[dict]:
+    pad = BOSS_MINI_MODE_BOX_PAD if mini else BOSS_MODE_BOX_PAD
+    gap = BOSS_MINI_MODE_BOX_GAP if mini else BOSS_MODE_BOX_GAP
+    if content_x is not None and content_w is not None:
+        outer_left = content_x
+        outer_w = content_w
+    else:
+        outer_left = CARD_PADDING + 10
+        outer_w = card_width - CARD_PADDING * 2 - 20
+    box_w = (outer_w - gap * 2) // 3
+    cols: list[dict] = []
+    for i, mode in enumerate(BOSS_MODE_LABELS):
+        box_x = outer_left + i * (box_w + gap)
+        cols.append(
+            {
+                "mode": mode,
+                "box_x": box_x,
+                "box_w": box_w,
+                "x": box_x + pad,
+                "col_w": max(1, box_w - pad * 2),
+            }
+        )
+    return cols
+
+
+def _boss_mode_column_tuples(cols: list[dict]) -> list[tuple[str, int, int]]:
+    return [(col["mode"], col["x"], col["col_w"]) for col in cols]
+
+
+def _boss_mode_box_style(mode: str) -> dict[str, tuple[int, ...]]:
+    return BOSS_MODE_BOX_STYLES.get(mode, BOSS_MODE_BOX_STYLES["normal"])
+
+
+def _boss_mode_header_color(mode: str) -> tuple[int, ...]:
+    return BOSS_MODE_HEADER_COLORS.get(mode, COLORS["title"])
+
+
+def _draw_boss_mode_column_boxes(
+    draw: ImageDraw.ImageDraw,
+    cols: list[dict],
+    y_top: int,
+    height: int,
+) -> None:
+    if height <= 0:
+        return
+    bottom = y_top + height
+    for col in cols:
+        style = _boss_mode_box_style(col["mode"])
+        draw.rounded_rectangle(
+            [col["box_x"], y_top, col["box_x"] + col["box_w"], bottom],
+            radius=6,
+            fill=style["fill"],
+            outline=style["outline"],
+            width=1,
+        )
+
+
+def _boss_mode_box_pad(*, mini: bool = False) -> int:
+    return BOSS_MINI_MODE_BOX_PAD if mini else BOSS_MODE_BOX_PAD
+
+
+def _calc_boss_mode_stats_content_height(
+    measure,
+    stats: list[dict],
+    cols: list[dict],
+    font_label,
+    font_value,
+) -> int:
+    col_w = cols[0]["col_w"]
+    height = 24
+    for stat in stats:
+        height += _calc_boss_stat_row_height(measure, stat, font_label, font_value, col_w)
+    return height
+
+
+def _calc_boss_mode_drops_col_heights(
+    measure,
+    drops: dict,
+    cols: list[dict],
+    font,
+) -> list[int]:
+    items_by_mode = drops.get("items") or {}
+    money = drops.get("money") or {}
+    heights: list[int] = []
+    for col in cols:
+        mode = col["mode"]
+        col_w = col["col_w"]
+        h = 24
+        coins = _boss_mode_money(money, mode)
+        if coins:
+            h += _calc_boss_money_row_height(measure, coins, font) + 4
+        for entry in items_by_mode.get(mode) or []:
+            h += _calc_boss_mode_drop_entry_height(measure, entry, font, col_w)
+        heights.append(h)
+    return heights
 
 
 def _boss_stat_mode_value(stat: dict, mode: str) -> str:
@@ -2733,12 +2848,12 @@ def _calc_boss_mode_stats_area(
 ) -> int:
     if not stats:
         return 0
-    columns = _boss_mode_column_layout(card_width)
-    _, _, col_w = columns[0]
-    area = 34 + 24
-    for stat in stats:
-        area += _calc_boss_stat_row_height(measure, stat, font_label, font_value, col_w)
-    return area + 12
+    cols = _boss_mode_column_layout(card_width)
+    pad = _boss_mode_box_pad()
+    content_h = _calc_boss_mode_stats_content_height(
+        measure, stats, cols, font_label, font_value
+    )
+    return 34 + content_h + pad * 2 + 12
 
 
 def _draw_boss_mode_stats(
@@ -2756,17 +2871,30 @@ def _draw_boss_mode_stats(
     draw.text((CARD_PADDING + 10, y), ui["boss_stats"], fill=COLORS["accent"], font=font_header)
     y += 30
     mode_labels = _boss_mode_ui_labels(ui)
-    columns = _boss_mode_column_layout(card_width)
-    header_y = y
-    for mode, x, col_w in columns:
-        draw.text((x, header_y), mode_labels[mode], fill=COLORS["title"], font=font_label)
-    y += 24
-    col_bottoms = [y, y, y]
+    cols = _boss_mode_column_layout(card_width)
+    columns = _boss_mode_column_tuples(cols)
+    pad = _boss_mode_box_pad()
+    box_top = y
+    content_h = _calc_boss_mode_stats_content_height(
+        draw, stats, cols, font_label, font_value
+    )
+    box_h = content_h + pad * 2
+    _draw_boss_mode_column_boxes(draw, cols, box_top, box_h)
+
+    header_y = box_top + pad
+    for col in cols:
+        draw.text(
+            (col["x"], header_y),
+            mode_labels[col["mode"]],
+            fill=_boss_mode_header_color(col["mode"]),
+            font=font_label,
+        )
+    col_bottoms = [header_y + 24, header_y + 24, header_y + 24]
     for stat in stats:
         col_bottoms = _draw_boss_stat_row(
             draw, col_bottoms, stat, columns, font_label, font_value
         )
-    return max(col_bottoms) + 8
+    return box_top + box_h + 8
 
 
 def _boss_debuff_mode_rows(debuff: dict) -> list[dict]:
@@ -2801,13 +2929,18 @@ def _calc_boss_debuff_area(
         )
     mode_rows = _boss_debuff_mode_rows(debuff)
     if mode_rows:
-        area += 24
-        columns = _boss_mode_column_layout(card_width)
-        _, _, col_w = columns[0]
+        cols = _boss_mode_column_layout(card_width)
+        columns = _boss_mode_column_tuples(cols)
+        pad = _boss_mode_box_pad()
+        box_top = y
+        content_h = 24
         for row in mode_rows:
             stat = {"label": ui[row["label_key"]], "modes": row["modes"]}
-            area += _calc_boss_stat_row_height(measure, stat, font_small, font_small, col_w)
-        area += 8
+            content_h += _calc_boss_stat_row_height(
+                measure, stat, font_small, font_small, cols[0]["col_w"]
+            )
+        box_h = content_h + pad * 2
+        area += box_h + 8
     return area + 12
 
 
@@ -2852,18 +2985,33 @@ def _draw_boss_debuff_section(
     mode_rows = _boss_debuff_mode_rows(debuff)
     if mode_rows:
         mode_labels = _boss_mode_ui_labels(ui)
-        columns = _boss_mode_column_layout(card_width)
-        header_y = y
-        for mode, x, col_w in columns:
-            draw.text((x, header_y), mode_labels[mode], fill=COLORS["title"], font=font_small)
-        y += 24
-        col_bottoms = [y, y, y]
+        cols = _boss_mode_column_layout(card_width)
+        columns = _boss_mode_column_tuples(cols)
+        pad = _boss_mode_box_pad()
+        box_top = y
+        content_h = 24
+        for row in mode_rows:
+            stat = {"label": ui[row["label_key"]], "modes": row["modes"]}
+            content_h += _calc_boss_stat_row_height(
+                draw, stat, font_small, font_small, cols[0]["col_w"]
+            )
+        box_h = content_h + pad * 2
+        _draw_boss_mode_column_boxes(draw, cols, box_top, box_h)
+        header_y = box_top + pad
+        for col in cols:
+            draw.text(
+                (col["x"], header_y),
+                mode_labels[col["mode"]],
+                fill=COLORS["title"],
+                font=font_small,
+            )
+        col_bottoms = [header_y + 24, header_y + 24, header_y + 24]
         for row in mode_rows:
             stat = {"label": ui[row["label_key"]], "modes": row["modes"]}
             col_bottoms = _draw_boss_stat_row(
                 draw, col_bottoms, stat, columns, font_small, font_small
             )
-        y = max(col_bottoms) + 8
+        y = box_top + box_h + 8
     return y
 
 
@@ -2872,25 +3020,29 @@ def _calc_boss_part_debuff_area(
     debuff: dict | None,
     font_body,
     font_small,
-    part_w: int,
+    content_w: int,
+    content_x: int = 0,
+    ui: dict | None = None,
 ) -> int:
     if not debuff or not debuff.get("name"):
         return 0
     area = 10
     area += max(BUFF_ICON_SLOT[1], _font_line_height(font_body)) + 4
     desc = debuff.get("description") or ""
-    text_w = part_w - BUFF_ICON_SLOT[0] - 12
     if desc:
-        area += _calc_wrapped_text_height(measure, desc, font_small, text_w, trailing=4)
+        area += _calc_wrapped_text_height(measure, desc, font_small, content_w - 8, trailing=4)
     mode_rows = _boss_debuff_mode_rows(debuff)
     if mode_rows:
-        inner_gap = 6
-        mini_w = (part_w - inner_gap * 2) // 3
-        area += 20
+        cols = _boss_mode_column_layout(content_x=content_x, content_w=content_w, mini=True)
+        pad = _boss_mode_box_pad(mini=True)
+        content_h = 24
         for row in mode_rows:
-            stat = {"label": "", "modes": row["modes"]}
-            area += _calc_boss_stat_row_height(measure, stat, font_small, font_small, mini_w - 4)
-        area += 4
+            label = (ui or {}).get(row["label_key"], "几率")
+            stat = {"label": label, "modes": row["modes"]}
+            content_h += _calc_boss_stat_row_height(
+                measure, stat, font_small, font_small, cols[0]["col_w"]
+            )
+        area += content_h + pad * 2 + 4
     return area
 
 
@@ -2935,26 +3087,34 @@ def _draw_boss_part_debuff(
 
     mode_rows = _boss_debuff_mode_rows(debuff)
     if mode_rows:
-        inner_gap = 6
-        mini_w = (part_w - inner_gap * 2) // 3
+        cols = _boss_mode_column_layout(content_x=x, content_w=part_w, mini=True)
+        columns = _boss_mode_column_tuples(cols)
+        pad = _boss_mode_box_pad(mini=True)
         mode_labels = _boss_mode_ui_labels(ui)
-        header_y = y
-        for mi, mode in enumerate(BOSS_MODE_LABELS):
-            mx = x + mi * (mini_w + inner_gap)
-            draw.text((mx, header_y), mode_labels[mode], fill=COLORS["label"], font=font_small)
-        y += 20
-        col_bottoms = [y, y, y]
-        mini_columns = [
-            (mode, x + mi * (mini_w + inner_gap), mini_w)
-            for mi, mode in enumerate(BOSS_MODE_LABELS)
-        ]
+        box_top = y
+        content_h = 24
         for row in mode_rows:
-            label = ui[row["label_key"]]
-            stat = {"label": label, "modes": row["modes"]}
-            col_bottoms = _draw_boss_stat_row(
-                draw, col_bottoms, stat, mini_columns, font_small, font_small
+            stat = {"label": ui[row["label_key"]], "modes": row["modes"]}
+            content_h += _calc_boss_stat_row_height(
+                draw, stat, font_small, font_small, cols[0]["col_w"]
             )
-        y = max(col_bottoms) + 4
+        box_h = content_h + pad * 2
+        _draw_boss_mode_column_boxes(draw, cols, box_top, box_h)
+        header_y = box_top + pad
+        for col in cols:
+            draw.text(
+                (col["x"], header_y),
+                mode_labels[col["mode"]],
+                fill=_boss_mode_header_color(col["mode"]),
+                font=font_small,
+            )
+        col_bottoms = [header_y + 24, header_y + 24, header_y + 24]
+        for row in mode_rows:
+            stat = {"label": ui[row["label_key"]], "modes": row["modes"]}
+            col_bottoms = _draw_boss_stat_row(
+                draw, col_bottoms, stat, columns, font_small, font_small
+            )
+        y = box_top + box_h + 4
     return y
 
 
@@ -3047,20 +3207,11 @@ def _calc_boss_mode_drops_area(
     money = drops.get("money") or {}
     if not any(items_by_mode.get(m) for m in BOSS_MODE_LABELS) and not _boss_money_has_content(money):
         return 0
-    area = 34
-    columns = _boss_mode_column_layout(card_width)
-    col_heights = [24, 24, 24]
-    for mode, _, col_w in columns:
-        idx = BOSS_MODE_LABELS.index(mode)
-        y = 0
-        coins = _boss_mode_money(money, mode)
-        if coins:
-            y += _calc_boss_money_row_height(measure, coins, font) + 4
-        for entry in items_by_mode.get(mode) or []:
-            y += _calc_boss_mode_drop_entry_height(measure, entry, font, col_w)
-        col_heights[idx] = y
-    area += max(col_heights) + 12
-    return area
+    cols = _boss_mode_column_layout(card_width)
+    pad = _boss_mode_box_pad()
+    col_heights = _calc_boss_mode_drops_col_heights(measure, drops, cols, font)
+    content_h = max(col_heights) if col_heights else 24
+    return 34 + content_h + pad * 2 + 12
 
 
 def _draw_boss_mode_drops(
@@ -3082,15 +3233,29 @@ def _draw_boss_mode_drops(
     draw.text((CARD_PADDING + 10, y), ui["boss_drops"], fill=COLORS["accent"], font=font_header)
     y += 30
     mode_labels = _boss_mode_ui_labels(ui)
-    columns = _boss_mode_column_layout(card_width)
-    header_y = y
-    for mode, x, col_w in columns:
-        draw.text((x, header_y), mode_labels[mode], fill=COLORS["title"], font=font_label)
-    y += 24
-    col_bottoms = [y, y, y]
+    cols = _boss_mode_column_layout(card_width)
+    pad = _boss_mode_box_pad()
+    box_top = y
+    col_heights = _calc_boss_mode_drops_col_heights(draw, drops, cols, font_small)
+    content_h = max(col_heights) if col_heights else 24
+    box_h = content_h + pad * 2
+    _draw_boss_mode_column_boxes(draw, cols, box_top, box_h)
 
-    for mode, x, col_w in columns:
+    header_y = box_top + pad
+    for col in cols:
+        draw.text(
+            (col["x"], header_y),
+            mode_labels[col["mode"]],
+            fill=_boss_mode_header_color(col["mode"]),
+            font=font_label,
+        )
+    col_bottoms = [header_y + 24, header_y + 24, header_y + 24]
+
+    for col in cols:
+        mode = col["mode"]
         idx = BOSS_MODE_LABELS.index(mode)
+        x = col["x"]
+        col_w = col["col_w"]
         cy = col_bottoms[idx]
         coins = _boss_mode_money(money, mode)
         if coins:
@@ -3124,7 +3289,7 @@ def _draw_boss_mode_drops(
                 )
             cy += row_h
         col_bottoms[idx] = cy
-    return max(col_bottoms) + 8
+    return box_top + box_h + 8
 
 
 def _calc_boss_part_content_height(
@@ -3134,6 +3299,7 @@ def _calc_boss_part_content_height(
     font_label,
     font_value,
     content_w: int,
+    content_x: int = 0,
 ) -> int:
     h = 0
     title_lines = _wrap_text_lines(measure, part.get("name", ""), font_title, content_w - 8)
@@ -3141,13 +3307,15 @@ def _calc_boss_part_content_height(
     h += BOSS_PART_SPRITE_MAX_SIZE[1] + 8
     stats = part.get("stats") or []
     if stats:
-        h += 20
-        inner_gap = 6
-        mini_w = (content_w - inner_gap * 2) // 3
-        for stat in stats:
-            h += _calc_boss_stat_row_height(measure, stat, font_label, font_value, mini_w - 4)
-        h += 8
-    h += _calc_boss_part_debuff_area(measure, part.get("debuff"), font_title, font_value, content_w)
+        cols = _boss_mode_column_layout(content_x=content_x, content_w=content_w, mini=True)
+        pad = _boss_mode_box_pad(mini=True)
+        stats_h = _calc_boss_mode_stats_content_height(
+            measure, stats, cols, font_label, font_value
+        )
+        h += stats_h + pad * 2 + 8
+    h += _calc_boss_part_debuff_area(
+        measure, part.get("debuff"), font_title, font_value, content_w, content_x
+    )
     return h
 
 
@@ -3175,24 +3343,30 @@ def _draw_boss_part_content(
         py += part_img.height + 8
     stats = part.get("stats") or []
     if stats:
-        inner_gap = 6
-        mini_w = (content_w - inner_gap * 2) // 3
         mode_labels = _boss_mode_ui_labels(ui)
-        header_y = py
-        for mi, mode in enumerate(BOSS_MODE_LABELS):
-            mx = x + mi * (mini_w + inner_gap)
-            draw.text((mx, header_y), mode_labels[mode], fill=COLORS["label"], font=font_label)
-        py += 20
-        col_bottoms = [py, py, py]
-        mini_columns = [
-            (mode, x + mi * (mini_w + inner_gap), mini_w)
-            for mi, mode in enumerate(BOSS_MODE_LABELS)
-        ]
+        cols = _boss_mode_column_layout(content_x=x, content_w=content_w, mini=True)
+        columns = _boss_mode_column_tuples(cols)
+        pad = _boss_mode_box_pad(mini=True)
+        box_top = py
+        content_h = _calc_boss_mode_stats_content_height(
+            draw, stats, cols, font_label, font_value
+        )
+        box_h = content_h + pad * 2
+        _draw_boss_mode_column_boxes(draw, cols, box_top, box_h)
+        header_y = box_top + pad
+        for col in cols:
+            draw.text(
+                (col["x"], header_y),
+                mode_labels[col["mode"]],
+                fill=_boss_mode_header_color(col["mode"]),
+                font=font_label,
+            )
+        col_bottoms = [header_y + 24, header_y + 24, header_y + 24]
         for stat in stats:
             col_bottoms = _draw_boss_stat_row(
-                draw, col_bottoms, stat, mini_columns, font_label, font_value
+                draw, col_bottoms, stat, columns, font_label, font_value
             )
-        py = max(col_bottoms)
+        py = box_top + box_h
     debuff = part.get("debuff")
     if debuff:
         py = _draw_boss_part_debuff(
@@ -3219,7 +3393,7 @@ def _calc_boss_parts_area(
     max_h = 0
     for part in parts:
         h = _calc_boss_part_content_height(
-            measure, part, font_title, font_label, font_value, content_w
+            measure, part, font_title, font_label, font_value, content_w, 0
         )
         if boxed:
             h += BOSS_PART_BOX_PAD * 2
@@ -3251,7 +3425,7 @@ def _draw_boss_parts_section(
 
     content_heights = [
         _calc_boss_part_content_height(
-            draw, part, font_title, font_label, font_value, content_w
+            draw, part, font_title, font_label, font_value, content_w, 0
         )
         for part in parts
     ]
@@ -3326,6 +3500,7 @@ def _display_boss(boss: dict) -> dict:
         "name": boss.get("name", ""),
         "image": boss.get("image", ""),
         "description": boss.get("description"),
+        "description_rich": boss.get("description_rich"),
         "spawn": boss.get("spawn"),
         "stats": boss.get("stats") or [],
         "debuff": boss.get("debuff"),
@@ -3435,9 +3610,14 @@ def _generate_boss_card(data: dict) -> str:
     top_text_w = card_w - top_text_x - CARD_PADDING - 10
 
     desc_lines = _split_text_paragraphs(data.get("description") or "")
+    description_rich = _resolve_description_rich(data)
     spawn_lines = _split_text_paragraphs(data.get("spawn") or "")
     top_text_area = 0
-    if desc_lines:
+    if description_rich:
+        top_text_area += _calc_description_area(
+            measure, description_rich, font_small, top_text_w
+        )
+    elif desc_lines:
         top_text_area += 30 + _calc_boss_text_block_area(measure, desc_lines, font_small, top_text_w)
     if spawn_lines:
         top_text_area += 30 + _calc_boss_text_block_area(measure, spawn_lines, font_small, top_text_w)
@@ -3485,7 +3665,19 @@ def _generate_boss_card(data: dict) -> str:
     if sprite_img:
         card.paste(sprite_img, (CARD_PADDING + 20, y), sprite_img)
     text_y = y
-    if desc_lines:
+    if description_rich:
+        text_y = _draw_description_section(
+            draw,
+            card,
+            text_y,
+            description_rich,
+            font_header,
+            font_small,
+            ui,
+            x=top_text_x + 10,
+            max_w=top_text_w,
+        )
+    elif desc_lines:
         draw.text((top_text_x, text_y), ui["description"], fill=COLORS["accent"], font=font_header)
         text_y += 30
         text_y = _draw_boss_text_block(draw, text_y, desc_lines, font_small, top_text_w, top_text_x)

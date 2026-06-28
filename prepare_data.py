@@ -1028,7 +1028,7 @@ def _parse_coin_span(node: Tag) -> dict | None:
     return None
 
 
-def _parse_description_paragraph_rich(p: Tag) -> list[dict]:
+def _parse_tag_rich(el: Tag) -> list[dict]:
     from bs4 import NavigableString
 
     segments: list[dict] = []
@@ -1075,7 +1075,7 @@ def _parse_description_paragraph_rich(p: Tag) -> list[dict]:
         for child in node.children:
             walk(child)
 
-    for child in p.children:
+    for child in el.children:
         walk(child)
 
     cleaned: list[dict] = []
@@ -1084,6 +1084,10 @@ def _parse_description_paragraph_rich(p: Tag) -> list[dict]:
             continue
         cleaned.append(seg)
     return cleaned
+
+
+def _parse_description_paragraph_rich(p: Tag) -> list[dict]:
+    return _parse_tag_rich(p)
 
 
 def _rich_segments_to_text(segments: list[dict]) -> str:

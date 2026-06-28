@@ -21,8 +21,11 @@ try:
         _filename_from_url,
         _image_url_from_src,
         _parse_mode_field,
+        _parse_tag_rich,
         _resolve_mode_values,
+        _rich_segments_to_text,
         download_image,
+        parse_description_from_soup,
     )
 except ImportError:
     from prepare_data import (
@@ -33,8 +36,11 @@ except ImportError:
         _filename_from_url,
         _image_url_from_src,
         _parse_mode_field,
+        _parse_tag_rich,
         _resolve_mode_values,
+        _rich_segments_to_text,
         download_image,
+        parse_description_from_soup,
     )
 
 _PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -549,29 +555,38 @@ def _parse_boss_spawn(soup: BeautifulSoup) -> str:
     return "\n".join(parts[:2])
 
 
-def _parse_boss_description(soup: BeautifulSoup) -> str:
-    root = soup.select_one(".mw-parser-output")
-    if not root:
-        return ""
-    started = False
-    parts: list[str] = []
-    for child in root.children:
-        if not isinstance(child, Tag):
-            continue
-        if child.select_one("div.infobox.npc"):
-            started = True
-            continue
-        if not started:
-            continue
-        if child.get("id") == "toc" or (child.get("class") and "toc" in child.get("class", [])):
-            break
-        if child.name == "h2":
-            break
-        if child.name == "p":
-            text = _cell_text(child)
-            if text:
-                parts.append(text)
-    return "\n\n".join(parts[:2])
+def _rich_to_plain_text(segments: list[dict]) -> str:
+    plain_segments = [seg for seg in segments if seg.get("type") != "icon"]
+    return _rich_segments_to_text(plain_segments)
+
+
+def _parse_boss_flavor_rich(soup: BeautifulSoup) -> list[dict]:
+    flavor = soup.select_one("div.flavor-text")
+    if not flavor:
+        return []
+    return _parse_tag_rich(flavor)
+
+
+def _parse_boss_description(soup: BeautifulSoup) -> dict[str, Any] | None:
+    rich_paragraphs: list[list[dict]] = []
+    paragraphs: list[str] = []
+
+    flavor_rich = _parse_boss_flavor_rich(soup)
+    if flavor_rich:
+        rich_paragraphs.append(flavor_rich)
+        text = _rich_to_plain_text(flavor_rich)
+        text = re.sub(r"^[""「]|[""」]$", "", text.strip())
+        if text:
+            paragraphs.append(text)
+
+    parsed = parse_description_from_soup(soup)
+    if parsed:
+        paragraphs.extend(part for part in parsed["text"].split("\n\n") if part.strip())
+        rich_paragraphs.extend(parsed["rich"])
+
+    if not paragraphs:
+        return None
+    return {"text": "\n\n".join(paragraphs), "rich": rich_paragraphs}
 
 
 def _parse_boss_flavor(soup: BeautifulSoup) -> str:
@@ -712,7 +727,8 @@ def parse_boss_page_html(
         boss["flavor"] = flavor
     description = _parse_boss_description(soup)
     if description:
-        boss["description"] = description
+        boss["description"] = description["text"]
+        boss["description_rich"] = description["rich"]
     spawn = _parse_boss_spawn(soup)
     if spawn:
         boss["spawn"] = spawn
@@ -786,6 +802,10 @@ def _collect_boss_image_urls(bosses: dict[str, dict]) -> dict[str, str]:
     for boss in bosses.values():
         add(boss.get("image"))
         add((boss.get("debuff") or {}).get("image"))
+        for para in boss.get("description_rich") or []:
+            for seg in para:
+                if seg.get("type") == "icon":
+                    add(seg.get("image"))
         for part in boss.get("parts") or []:
             add(part.get("image"))
             add((part.get("debuff") or {}).get("image"))

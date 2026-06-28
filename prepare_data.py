@@ -3636,6 +3636,11 @@ if __name__ == "__main__":
         help="仅抓取 Boss 到 categories/bosses.json",
     )
     parser.add_argument(
+        "--backfill-boss-images",
+        action="store_true",
+        help="仅下载 bosses.json 引用但缺失的 Boss 相关图片",
+    )
+    parser.add_argument(
         "--split-categories",
         action="store_true",
         help="将根目录 items/mounts/pets.json 拆分/迁移到 data/terraria_query/categories/",
@@ -3731,6 +3736,20 @@ if __name__ == "__main__":
                 f"Boss 抓取完成：新增 {result['new_count']} 个，"
                 f"共 {result['total']} 条目，"
                 f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.backfill_boss_images:
+            async def _run_backfill() -> dict:
+                connector = aiohttp.TCPConnector(limit=10)
+                timeout = aiohttp.ClientTimeout(total=60)
+                async with aiohttp.ClientSession(
+                    connector=connector, timeout=timeout
+                ) as session:
+                    return await _boss_data_module().backfill_boss_images(session)
+
+            result = asyncio.run(_run_backfill())
+            print(
+                f"Boss 图片补全：{result['images_ok']}/{result['images_total']} 成功",
                 flush=True,
             )
         elif args.ingest_categories:

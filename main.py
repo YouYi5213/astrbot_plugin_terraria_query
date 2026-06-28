@@ -195,7 +195,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
-CARD_VERSION = "v32"
+CARD_VERSION = "v33"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -2599,6 +2599,106 @@ def _boss_mode_ui_labels(ui: dict) -> dict[str, str]:
     }
 
 
+def _split_text_paragraphs(text: str) -> list[str]:
+    if not text:
+        return []
+    return [part.strip() for part in re.split(r"\n+", text) if part.strip()]
+
+
+def _wrap_paragraph_lines(
+    draw: ImageDraw.ImageDraw, text: str, font, max_width: int
+) -> list[str]:
+    lines: list[str] = []
+    for para in _split_text_paragraphs(text):
+        wrapped = _wrap_text_lines(draw, para, font, max_width)
+        if wrapped:
+            lines.extend(wrapped)
+    return lines
+
+
+def _calc_wrapped_text_height(
+    measure,
+    text: str,
+    font,
+    max_width: int,
+    *,
+    line_height: int = STAT_LINE_HEIGHT,
+    trailing: int = 0,
+) -> int:
+    lines = _wrap_paragraph_lines(measure, text, font, max_width)
+    if not lines:
+        return 0
+    return len(lines) * line_height + trailing
+
+
+def _draw_wrapped_text_block(
+    draw,
+    x: int,
+    y: int,
+    text: str,
+    font,
+    max_width: int,
+    fill,
+    *,
+    line_height: int = STAT_LINE_HEIGHT,
+) -> int:
+    for line in _wrap_paragraph_lines(draw, text, font, max_width):
+        draw.text((x, y), line, fill=fill, font=font)
+        y += line_height
+    return y
+
+
+def _calc_boss_stat_row_height(
+    measure,
+    stat: dict,
+    font_label,
+    font_value,
+    col_w: int,
+) -> int:
+    row_h = 0
+    for mode in BOSS_MODE_LABELS:
+        value = _boss_stat_mode_value(stat, mode)
+        if not value:
+            continue
+        h = _calc_wrapped_text_height(
+            measure, f"{stat.get('label', '')}:", font_label, col_w - 8
+        )
+        h += _calc_wrapped_text_height(measure, value, font_value, col_w - 8)
+        h += 6
+        row_h = max(row_h, h)
+    return row_h
+
+
+def _draw_boss_stat_row(
+    draw,
+    col_bottoms: list[int],
+    stat: dict,
+    columns: list[tuple[str, int, int]],
+    font_label,
+    font_value,
+) -> list[int]:
+    row_start = min(col_bottoms)
+    row_bottom = row_start
+    for mode, x, col_w in columns:
+        idx = BOSS_MODE_LABELS.index(mode)
+        value = _boss_stat_mode_value(stat, mode)
+        if not value:
+            continue
+        cy = col_bottoms[idx]
+        label = stat.get("label", "")
+        cy = _draw_wrapped_text_block(
+            draw, x, cy, f"{label}:", font_label, col_w - 8, COLORS["label"]
+        )
+        cy = _draw_wrapped_text_block(
+            draw, x, cy, value, font_value, col_w - 8, COLORS["value"]
+        )
+        col_bottoms[idx] = cy + 6
+        row_bottom = max(row_bottom, col_bottoms[idx])
+    if row_bottom > row_start:
+        col_bottoms = [row_bottom, row_bottom, row_bottom]
+    return col_bottoms
+
+
 def _boss_mode_column_layout(card_width: int = BOSS_CARD_WIDTH) -> list[tuple[str, int, int]]:
     inner = card_width - CARD_PADDING * 2
     gap = 12
@@ -2625,24 +2725,12 @@ def _calc_boss_mode_stats_area(
 ) -> int:
     if not stats:
         return 0
-    area = 34
     columns = _boss_mode_column_layout(card_width)
-    col_heights = [0, 0, 0]
-    for mode, x, col_w in columns:
-        idx = BOSS_MODE_LABELS.index(mode)
-        y = 0
-        for stat in stats:
-            label = stat.get("label", "")
-            value = _boss_stat_mode_value(stat, mode)
-            if not value:
-                continue
-            label_lines = _wrap_text_lines(measure, f"{label}:", font_label, col_w - 8)
-            value_lines = _wrap_text_lines(measure, value, font_value, col_w - 8)
-            y += len(label_lines) * STAT_LINE_HEIGHT
-            y += max(1, len(value_lines)) * STAT_LINE_HEIGHT + 6
-        col_heights[idx] = y
-    area += max(col_heights) + 12
-    return area
+    _, _, col_w = columns[0]
+    area = 34 + 24
+    for stat in stats:
+        area += _calc_boss_stat_row_height(measure, stat, font_label, font_value, col_w)
+    return area + 12
 
 
 def _draw_boss_mode_stats(
@@ -2667,24 +2755,9 @@ def _draw_boss_mode_stats(
     y += 24
     col_bottoms = [y, y, y]
     for stat in stats:
-        row_start = min(col_bottoms)
-        row_bottom = row_start
-        for mode, x, col_w in columns:
-            idx = BOSS_MODE_LABELS.index(mode)
-            value = _boss_stat_mode_value(stat, mode)
-            if not value:
-                continue
-            cy = col_bottoms[idx]
-            label = stat.get("label", "")
-            draw.text((x, cy), f"{label}:", fill=COLORS["label"], font=font_label)
-            cy += STAT_LINE_HEIGHT
-            for line in _wrap_text_lines(draw, value, font_value, col_w - 8):
-                draw.text((x, cy), line, fill=COLORS["value"], font=font_value)
-                cy += STAT_LINE_HEIGHT
-            col_bottoms[idx] = cy + 6
-            row_bottom = max(row_bottom, col_bottoms[idx])
-        if row_bottom > row_start:
-            col_bottoms = [row_bottom, row_bottom, row_bottom]
+        col_bottoms = _draw_boss_stat_row(
+            draw, col_bottoms, stat, columns, font_label, font_value
+        )
     return max(col_bottoms) + 8
 
 
@@ -2695,15 +2768,16 @@ def _calc_boss_mode_drop_entry_height(
     col_w: int,
 ) -> int:
     if entry.get("type") == "caption":
-        lines = _wrap_text_lines(measure, entry.get("text", ""), font, col_w - 8)
-        return max(DROP_ROW_HEIGHT // 2, len(lines) * STAT_LINE_HEIGHT + 8)
+        return _calc_wrapped_text_height(
+            measure, entry.get("text", ""), font, col_w - 8, trailing=8
+        )
     name = entry.get("name", "")
     chance = entry.get("chance", "")
     text_w = col_w - BOSS_DROP_ICON_SLOT[0] - 12
-    name_lines = _wrap_text_lines(measure, name, font, text_w)
-    chance_lines = _wrap_text_lines(measure, chance, font, text_w) if chance else []
-    lines = max(len(name_lines), 1) + len(chance_lines)
-    return max(BOSS_DROP_ICON_SLOT[1] + 4, lines * STAT_LINE_HEIGHT + 8)
+    h = _calc_wrapped_text_height(measure, name, font, text_w)
+    if chance:
+        h += _calc_wrapped_text_height(measure, chance, font, text_w)
+    return max(BOSS_DROP_ICON_SLOT[1] + 4, h + 8)
 
 
 def _calc_boss_mode_drops_area(
@@ -2774,23 +2848,31 @@ def _draw_boss_mode_drops(
             cy += STAT_LINE_HEIGHT + 4
         for entry in items_by_mode.get(mode) or []:
             if entry.get("type") == "caption":
-                for line in _wrap_text_lines(draw, entry.get("text", ""), font_small, col_w - 8):
-                    draw.text((x, cy), line, fill=COLORS["accent"], font=font_small)
-                    cy += STAT_LINE_HEIGHT
+                cy = _draw_wrapped_text_block(
+                    draw,
+                    x,
+                    cy,
+                    entry.get("text", ""),
+                    font_small,
+                    col_w - 8,
+                    COLORS["accent"],
+                )
                 cy += 4
                 continue
             row_h = _calc_boss_mode_drop_entry_height(draw, entry, font_small, col_w)
             icon = _load_item_image(entry.get("image", ""), BOSS_DROP_ICON_SLOT)
             text_x = x + BOSS_DROP_ICON_SLOT[0] + 6
+            text_w = col_w - BOSS_DROP_ICON_SLOT[0] - 12
             if icon:
                 _paste_in_slot(card, icon, x, cy, BOSS_DROP_ICON_SLOT[0], row_h)
-            name_y = cy
-            for line in _wrap_text_lines(draw, entry.get("name", ""), font_small, col_w - text_x + x - 6):
-                draw.text((text_x, name_y), line, fill=COLORS["text"], font=font_small)
-                name_y += STAT_LINE_HEIGHT
+            name_y = _draw_wrapped_text_block(
+                draw, text_x, cy, entry.get("name", ""), font_small, text_w, COLORS["text"]
+            )
             chance = entry.get("chance", "")
             if chance:
-                draw.text((text_x, name_y), chance, fill=COLORS["label"], font=font_small)
+                _draw_wrapped_text_block(
+                    draw, text_x, name_y, chance, font_small, text_w, COLORS["label"]
+                )
             cy += row_h
         col_bottoms[idx] = cy
     return max(col_bottoms) + 8
@@ -2820,21 +2902,9 @@ def _calc_boss_parts_area(
             h += 20
             inner_gap = 6
             mini_w = (part_w - inner_gap * 2) // 3
-            mini_heights = [0, 0, 0]
-            for mode_idx, mode in enumerate(BOSS_MODE_LABELS):
-                my = 0
-                for stat in stats:
-                    value = _boss_stat_mode_value(stat, mode)
-                    if not value:
-                        continue
-                    label_lines = _wrap_text_lines(
-                        measure, f"{stat.get('label', '')}:", font_label, mini_w - 4
-                    )
-                    value_lines = _wrap_text_lines(measure, value, font_value, mini_w - 4)
-                    my += len(label_lines) * STAT_LINE_HEIGHT
-                    my += max(1, len(value_lines)) * STAT_LINE_HEIGHT + 4
-                mini_heights[mode_idx] = my
-            h += max(mini_heights) + 8
+            for stat in stats:
+                h += _calc_boss_stat_row_height(measure, stat, font_label, font_value, mini_w - 4)
+            h += 8
         max_h = max(max_h, h)
     return area + max_h + 12
 
@@ -2881,24 +2951,14 @@ def _draw_boss_parts_section(
                 draw.text((mx, header_y), mode_labels[mode], fill=COLORS["label"], font=font_label)
             py += 20
             col_bottoms = [py, py, py]
+            mini_columns = [
+                (mode, px + mi * (mini_w + inner_gap), mini_w)
+                for mi, mode in enumerate(BOSS_MODE_LABELS)
+            ]
             for stat in stats:
-                row_start = min(col_bottoms)
-                for mi, mode in enumerate(BOSS_MODE_LABELS):
-                    value = _boss_stat_mode_value(stat, mode)
-                    if not value:
-                        continue
-                    mx = px + mi * (mini_w + inner_gap)
-                    cy = col_bottoms[mi]
-                    label = stat.get("label", "")
-                    draw.text((mx, cy), f"{label}:", fill=COLORS["label"], font=font_label)
-                    cy += STAT_LINE_HEIGHT
-                    for line in _wrap_text_lines(draw, value, font_value, mini_w - 4):
-                        draw.text((mx, cy), line, fill=COLORS["value"], font=font_value)
-                        cy += STAT_LINE_HEIGHT
-                    col_bottoms[mi] = cy + 4
-                if max(col_bottoms) > row_start:
-                    base = max(col_bottoms)
-                    col_bottoms = [base, base, base]
+                col_bottoms = _draw_boss_stat_row(
+                    draw, col_bottoms, stat, mini_columns, font_label, font_value
+                )
             py = max(col_bottoms)
         row_bottom = max(row_bottom, py)
     return row_bottom + 8
@@ -2906,29 +2966,37 @@ def _draw_boss_parts_section(
 
 def _calc_boss_text_block_area(
     measure,
-    lines: list[str],
+    paragraphs: list[str],
     font,
     max_w: int,
 ) -> int:
     area = 0
-    for line in lines:
-        wrapped = _wrap_text_lines(measure, line, font, max_w)
-        area += max(1, len(wrapped)) * DESC_LINE_HEIGHT + 4
+    for para in paragraphs:
+        area += _calc_wrapped_text_height(
+            measure, para, font, max_w, line_height=DESC_LINE_HEIGHT, trailing=4
+        )
     return area
 
 
 def _draw_boss_text_block(
     draw,
     y: int,
-    lines: list[str],
+    paragraphs: list[str],
     font,
     max_w: int,
     x: int,
 ) -> int:
-    for line in lines:
-        for wrapped in _wrap_text_lines(draw, line, font, max_w):
-            draw.text((x, y), wrapped, fill=COLORS["value"], font=font)
-            y += DESC_LINE_HEIGHT
+    for para in paragraphs:
+        y = _draw_wrapped_text_block(
+            draw,
+            x,
+            y,
+            para,
+            font,
+            max_w,
+            COLORS["value"],
+            line_height=DESC_LINE_HEIGHT,
+        )
         y += 4
     return y
 
@@ -3027,8 +3095,8 @@ def _generate_boss_card(data: dict) -> str:
     top_text_x = CARD_PADDING + 20 + max(sprite_w, 180) + 16
     top_text_w = card_w - top_text_x - CARD_PADDING - 10
 
-    desc_lines = [data["description"]] if data.get("description") else []
-    spawn_lines = [data["spawn"]] if data.get("spawn") else []
+    desc_lines = _split_text_paragraphs(data.get("description") or "")
+    spawn_lines = _split_text_paragraphs(data.get("spawn") or "")
     top_text_area = 0
     if desc_lines:
         top_text_area += 30 + _calc_boss_text_block_area(measure, desc_lines, font_small, top_text_w)

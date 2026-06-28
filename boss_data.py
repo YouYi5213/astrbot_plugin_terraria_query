@@ -677,14 +677,21 @@ async def refresh_bosses(
     images_total = len(image_urls)
     images_ok = 0
     if image_urls:
-        semaphore = asyncio.Semaphore(8)
-        results = await asyncio.gather(
-            *[
-                download_image(session, fn, url, semaphore)
-                for fn, url in image_urls.items()
-            ]
-        )
-        images_ok = sum(1 for r in results if r)
+        pending = {
+            fn: url
+            for fn, url in image_urls.items()
+            if fn and not os.path.isfile(os.path.join(IMAGES_DIR, fn))
+        }
+        if pending:
+            semaphore = asyncio.Semaphore(8)
+            results = await asyncio.gather(
+                *[
+                    download_image(session, fn, url, semaphore)
+                    for fn, url in pending.items()
+                ]
+            )
+            images_ok = sum(1 for r in results if r)
+        images_total = len(pending) if pending else 0
 
     with open(BOSSES_JSON, "w", encoding="utf-8") as f:
         json.dump(bosses, f, ensure_ascii=False, indent=2)
@@ -700,7 +707,36 @@ async def refresh_bosses(
     }
 
 
-def ingest_bosses_local(*, force: bool = False) -> dict[str, Any]:
+async def backfill_boss_images(
+    session: aiohttp.ClientSession,
+    bosses: dict[str, dict] | None = None,
+) -> dict[str, int]:
+    """下载 bosses.json 中引用但 images/ 目录缺失的图片。"""
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    bosses = bosses if bosses is not None else _load_existing_bosses()
+    image_urls = _collect_boss_image_urls(bosses)
+    pending = {
+        fn: url
+        for fn, url in image_urls.items()
+        if fn and not os.path.isfile(os.path.join(IMAGES_DIR, fn))
+    }
+    if not pending:
+        return {"images_ok": 0, "images_total": 0}
+
+    semaphore = asyncio.Semaphore(8)
+    results = await asyncio.gather(
+        *[
+            download_image(session, fn, url, semaphore)
+            for fn, url in pending.items()
+        ]
+    )
+    return {
+        "images_ok": sum(1 for r in results if r),
+        "images_total": len(pending),
+    }
+
+
+def ingest_bosses_local(*, force: bool = False, download_images: bool = True) -> dict[str, Any]:
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
     bosses = build_bosses_from_mirror()
     if not force:
@@ -712,4 +748,19 @@ def ingest_bosses_local(*, force: bool = False) -> dict[str, Any]:
         json.dump(bosses, f, ensure_ascii=False, indent=2)
 
     _patch_manifest_boss_count(len(bosses))
-    return {"total": len(bosses), "catalog_size": len(load_boss_catalog_from_overview())}
+    result: dict[str, Any] = {
+        "total": len(bosses),
+        "catalog_size": len(load_boss_catalog_from_overview()),
+    }
+    if download_images:
+        async def _run() -> dict[str, int]:
+            connector = aiohttp.TCPConnector(limit=10)
+            timeout = aiohttp.ClientTimeout(total=60)
+            async with aiohttp.ClientSession(
+                connector=connector, timeout=timeout
+            ) as session:
+                return await backfill_boss_images(session, bosses)
+
+        img_result = asyncio.run(_run())
+        result.update(img_result)
+    return result

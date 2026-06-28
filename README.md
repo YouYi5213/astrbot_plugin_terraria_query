@@ -91,6 +91,7 @@ python prepare_data.py --ingest-mounts
 python prepare_data.py --ingest-pets
 python prepare_data.py --ingest-biomes
 python prepare_data.py --ingest-bosses
+python prepare_data.py --backfill-boss-images
 ```
 
 ## 数据来源

@@ -1111,6 +1111,48 @@ def _clean_description_paragraph(p: Tag) -> str:
     return _rich_segments_to_text(_parse_description_paragraph_rich(p))
 
 
+def _parse_description_list_block(list_el: Tag) -> tuple[str, list[dict]] | None:
+    """将导语区的 ul/ol 转为描述文本与富文本段落（如配饰效果列表）。"""
+    lines: list[str] = []
+    combined_rich: list[dict] = []
+    ordered = list_el.name == "ol"
+    for idx, li in enumerate(list_el.find_all("li", recursive=False), start=1):
+        rich = _parse_description_paragraph_rich(li)
+        text = _rich_segments_to_text(rich)
+        if not text:
+            continue
+        prefix = f"{idx}. " if ordered else "· "
+        lines.append(f"{prefix}{text}")
+        if combined_rich:
+            combined_rich.append({"type": "text", "text": "\n"})
+        combined_rich.append({"type": "text", "text": prefix})
+        combined_rich.extend(rich)
+    if not lines:
+        return None
+    return "\n".join(lines), combined_rich
+
+
+_INTRO_LIST_PROMPT_RE = re.compile(
+    r"(如下|以下).{0,24}(奖励|加成|效果|增强|方法|来自)|"
+    r"提供以下(效果|加成|增强)|会在以下方面|可以用以下"
+)
+
+
+def _description_missing_intro_list(item: dict) -> bool:
+    """描述以「如下效果：」等引导句结尾，但缺少后续列表内容。"""
+    text = (item.get("description") or "").strip()
+    if not text or not _INTRO_LIST_PROMPT_RE.search(text):
+        return False
+    tail = text.split("\n\n")[-1]
+    if re.search(r"\n· ", text) or re.search(r"\n\d+\. ", text):
+        return False
+    if tail.endswith("：") or tail.endswith(":"):
+        return True
+    if re.search(r"\[(\d+)\]$", tail):
+        return True
+    return False
+
+
 def parse_description_from_soup(soup: BeautifulSoup) -> dict | None:
     """提取 Wiki 正文开头导语（infobox 后、目录/章节前的连续段落）"""
     root = (
@@ -1120,7 +1162,7 @@ def parse_description_from_soup(soup: BeautifulSoup) -> dict | None:
     if not root:
         return None
 
-    stop_tags = frozenset({"h2", "h3", "h4", "ul", "ol", "figure", "style", "script"})
+    stop_tags = frozenset({"h2", "h3", "h4", "figure", "style", "script"})
     paragraphs: list[str] = []
     rich_paragraphs: list[list[dict]] = []
     for child in root.children:
@@ -1141,6 +1183,13 @@ def parse_description_from_soup(soup: BeautifulSoup) -> dict | None:
             rich = _parse_description_paragraph_rich(child)
             text = _rich_segments_to_text(rich)
             if text:
+                paragraphs.append(text)
+                rich_paragraphs.append(rich)
+            continue
+        if child.name in ("ul", "ol"):
+            parsed_list = _parse_description_list_block(child)
+            if parsed_list:
+                text, rich = parsed_list
                 paragraphs.append(text)
                 rich_paragraphs.append(rich)
             continue
@@ -2158,6 +2207,8 @@ def _description_needs_zh_refresh(item: dict) -> bool:
     desc = item.get("description") or ""
     name = item.get("name") or ""
     if not desc:
+        return True
+    if _description_missing_intro_list(item):
         return True
     if _has_cjk(name) and not _has_cjk(desc):
         return True

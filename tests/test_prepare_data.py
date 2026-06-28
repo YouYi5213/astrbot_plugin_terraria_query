@@ -7,6 +7,7 @@ sys.path.insert(0, str(ROOT))
 
 from prepare_data import (  # noqa: E402
     _description_is_tooltip_only,
+    _description_missing_intro_list,
     _description_needs_coin_refresh,
     _description_needs_zh_refresh,
     _is_set_item,
@@ -272,3 +273,28 @@ def test_parse_wings_source_from_overview_table():
     fin = wings["鳍翼"]
     assert fin.get("recipe") is None
     assert "渔夫" in fin["source"]
+
+
+def test_description_missing_intro_list_detects_truncated_accessory():
+    item = {
+        "name": "月光护身符",
+        "description": "……\n\n狼人增益会为玩家提供如下奖励：[1]",
+    }
+    assert _description_missing_intro_list(item)
+    assert _description_needs_zh_refresh(item)
+
+
+def test_parse_description_includes_intro_effect_list():
+    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "月光护身符.html"
+    if not html_path.is_file():
+        return
+    from prepare_data import parse_description_from_soup  # noqa: E402
+
+    parsed = parse_description_from_soup(
+        BeautifulSoup(html_path.read_text(encoding="utf-8"), "html.parser")
+    )
+    assert parsed is not None
+    assert "近战暴击" in parsed["text"]
+    assert "生命再生" in parsed["text"]
+    assert "· +2%" in parsed["text"]
+    assert len(parsed["rich"]) >= 3

@@ -23,6 +23,7 @@ from astrbot.api import AstrBotConfig, logger
 from .category_data import (
     load_biomes_for_plugin,
     load_bosses_for_plugin,
+    load_events_for_plugin,
     load_items_for_plugin,
     load_mounts_for_plugin,
     load_npcs_for_plugin,
@@ -196,7 +197,7 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
-CARD_VERSION = "v43"
+CARD_VERSION = "v45"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -216,6 +217,9 @@ BIOME_BANNER_MAX_SIZE = (CARD_WIDTH - CARD_PADDING * 2, 140)
 NPC_SPRITE_MAX_SIZE = (56, 72)
 NPC_SHOP_ICON_SLOT = (36, 36)
 NPC_PREF_ICON_SLOT = (24, 24)
+PAGE_CONTENT_COL_TITLE = CARD_PADDING + 16
+PAGE_CONTENT_COL_ITEMS = 190
+PAGE_CONTENT_TITLE_W = PAGE_CONTENT_COL_ITEMS - PAGE_CONTENT_COL_TITLE - 8
 NPC_TABLE_ROW_MIN = 36
 NPC_COL_PRICE = 220
 NPC_COL_AVAIL = 330
@@ -680,11 +684,17 @@ def _draw_description_section(
     *,
     x: int | None = None,
     max_w: int | None = None,
+    header_text: str | None = None,
 ) -> int:
     desc_x = x if x is not None else CARD_PADDING + 20
     if max_w is None:
         max_w = CARD_WIDTH - CARD_PADDING * 2 - 30
-    draw.text((desc_x - 10, y), ui["description"], fill=COLORS["accent"], font=font_header)
+    draw.text(
+        (desc_x - 10, y),
+        header_text if header_text is not None else ui["description"],
+        fill=COLORS["accent"],
+        font=font_header,
+    )
     y += 30
     for para in description_rich:
         for line in _layout_description_segments(draw, para, font_small, max_w):
@@ -1179,6 +1189,20 @@ def _extract_query_text(text: str) -> str | None:
     return None
 
 
+_PAGE_CONTENT_QUERY_SUFFIX = "内容"
+
+
+def _split_page_content_query(query: str) -> tuple[str, bool]:
+    """群系/事件：去掉末尾「内容」后缀，返回 (检索词, 是否仅查内容表)。"""
+    q = query.strip()
+    suffix = _PAGE_CONTENT_QUERY_SUFFIX
+    if q.endswith(suffix) and len(q) > len(suffix):
+        base = q[: -len(suffix)].strip()
+        if base:
+            return base, True
+    return q, False
+
+
 def _is_force_update_command(text: str) -> bool:
     normalized = _normalize_message(text)
     return normalized == "泰拉强制更新"
@@ -1262,6 +1286,10 @@ _CARD_UI = {
     "boss_mode_expert": "专家",
     "boss_mode_master": "大师",
     "boss_money": "钱币",
+    "page_conditions": "▎条件",
+    "page_content": "▎内容",
+    "page_content_col_category": "分类",
+    "page_content_col_items": "内容",
 }
 
 
@@ -1286,6 +1314,12 @@ def _biome_zh_search_names(key: str, biome: dict) -> set[str]:
     return {n for n in names if n}
 
 
+def _event_zh_search_names(key: str, event: dict) -> set[str]:
+    names = {key, event.get("name", ""), event.get("wiki_title", "")}
+    names.update(event.get("search_terms") or [])
+    return {n for n in names if n}
+
+
 def _npc_zh_search_names(key: str, npc: dict) -> set[str]:
     names = {key, npc.get("name", ""), npc.get("wiki_title", "")}
     names.update(npc.get("search_terms") or [])
@@ -1307,11 +1341,14 @@ def _search_index_signature(
     mounts: dict[str, dict],
     pets: dict[str, dict],
     biomes: dict[str, dict] | None = None,
+    events: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
 ) -> tuple:
     if biomes is None:
         biomes = {}
+    if events is None:
+        events = {}
     if npcs is None:
         npcs = {}
     if bosses is None:
@@ -1321,12 +1358,14 @@ def _search_index_signature(
         len(mounts),
         len(pets),
         len(biomes),
+        len(events),
         len(npcs),
         len(bosses),
         tuple(sorted(items.keys())),
         tuple(sorted(mounts.keys())),
         tuple(sorted(pets.keys())),
         tuple(sorted(biomes.keys())),
+        tuple(sorted(events.keys())),
         tuple(sorted(npcs.keys())),
         tuple(sorted(bosses.keys())),
     )
@@ -1337,12 +1376,15 @@ def rebuild_search_index(
     mounts: dict[str, dict],
     pets: dict[str, dict],
     biomes: dict[str, dict] | None = None,
+    events: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
 ) -> None:
     """预构建搜索索引，避免每次查询重复计算别名集合。"""
     if biomes is None:
         biomes = {}
+    if events is None:
+        events = {}
     if npcs is None:
         npcs = {}
     if bosses is None:
@@ -1351,6 +1393,7 @@ def rebuild_search_index(
     entries: list[tuple[str, str, frozenset[str]]] = []
     for pool_name, pool, name_fn in (
         ("biome", biomes, _biome_zh_search_names),
+        ("event", events, _event_zh_search_names),
         ("boss", bosses, _boss_zh_search_names),
         ("npc", npcs, _npc_zh_search_names),
         ("mount", mounts, _item_zh_search_names),
@@ -1361,7 +1404,9 @@ def rebuild_search_index(
             zh_names = frozenset(name_fn(key, item))
             entries.append((pool_name, key, zh_names))
     _SEARCH_INDEX = entries
-    _SEARCH_INDEX_SIG = _search_index_signature(items, mounts, pets, biomes, npcs)
+    _SEARCH_INDEX_SIG = _search_index_signature(
+        items, mounts, pets, biomes, events, npcs, bosses
+    )
 
 
 def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
@@ -1385,7 +1430,7 @@ def _fuzzy_match(query: str, items: dict[str, dict]) -> list[str]:
     return [key for key, _ in ranked]
 
 
-_POOL_SEARCH_ORDER = ("biome", "boss", "npc", "mount", "pet", "item")
+_POOL_SEARCH_ORDER = ("biome", "event", "boss", "npc", "mount", "pet", "item")
 _POOL_PRIORITY = {name: idx for idx, name in enumerate(_POOL_SEARCH_ORDER)}
 _FUZZY_MATCH_CARD_MAX = 2
 
@@ -1450,6 +1495,7 @@ def _split_search_matches(
     mounts: dict[str, dict],
     pets: dict[str, dict] | None = None,
     biomes: dict[str, dict] | None = None,
+    events: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
 ) -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
@@ -1458,14 +1504,16 @@ def _split_search_matches(
         pets = {}
     if biomes is None:
         biomes = {}
+    if events is None:
+        events = {}
     if npcs is None:
         npcs = {}
     if bosses is None:
         bosses = {}
     global _SEARCH_INDEX, _SEARCH_INDEX_SIG
-    sig = _search_index_signature(items, mounts, pets, biomes, npcs, bosses)
+    sig = _search_index_signature(items, mounts, pets, biomes, events, npcs, bosses)
     if _SEARCH_INDEX is None or _SEARCH_INDEX_SIG != sig:
-        rebuild_search_index(items, mounts, pets, biomes, npcs, bosses)
+        rebuild_search_index(items, mounts, pets, biomes, events, npcs, bosses)
 
     exact: list[tuple[str, str]] = []
     partial: list[tuple[str, str]] = []
@@ -1495,12 +1543,13 @@ def _fuzzy_match_all(
     mounts: dict[str, dict],
     pets: dict[str, dict] | None = None,
     biomes: dict[str, dict] | None = None,
+    events: dict[str, dict] | None = None,
     npcs: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
 ) -> list[tuple[str, str]]:
-    """返回 (来源, 键) 列表，来源为 biome、boss、npc、item、mount 或 pet。"""
+    """返回 (来源, 键) 列表，来源为 biome、event、boss、npc、item、mount 或 pet。"""
     exact, partial = _split_search_matches(
-        query, items, mounts, pets, biomes, npcs, bosses
+        query, items, mounts, pets, biomes, events, npcs, bosses
     )
     if exact:
         return exact
@@ -2145,34 +2194,221 @@ def _display_biome(biome: dict) -> dict:
         "image": biome.get("image", ""),
         "description": biome.get("description"),
         "description_rich": biome.get("description_rich"),
+        "conditions": biome.get("conditions"),
+        "conditions_rich": biome.get("conditions_rich"),
+        "content": biome.get("content"),
         "page_type": "biome",
     }
 
 
-def _format_biome_text(data: dict) -> str:
+def _display_event(event: dict) -> dict:
+    return {
+        "name": event.get("name", ""),
+        "image": event.get("image", ""),
+        "description": event.get("description"),
+        "description_rich": event.get("description_rich"),
+        "conditions": event.get("conditions"),
+        "conditions_rich": event.get("conditions_rich"),
+        "content": event.get("content"),
+        "page_type": "event",
+    }
+
+
+def _format_page_content_text(data: dict) -> list[str]:
+    ui = _CARD_UI
+    lines = [ui["page_content"].lstrip("▎")]
+    for group in data.get("content") or []:
+        heading = (group.get("heading") or "").strip()
+        if heading:
+            lines.append(heading)
+        for box in group.get("boxes") or []:
+            title = (box.get("title") or "").strip()
+            labels = [
+                (item.get("label") or item.get("name") or "")
+                for item in box.get("items") or []
+                if (item.get("label") or item.get("name"))
+            ]
+            if title and labels:
+                lines.append(f"{title} {'、'.join(labels)}")
+            elif title:
+                lines.append(title)
+            elif labels:
+                lines.append("、".join(labels))
+    return lines
+
+
+def _format_biome_text(data: dict, *, view: str = "summary") -> str:
+    ui = _CARD_UI
     lines = [data.get("name", ""), ""]
+    if view == "content":
+        content_lines = _format_page_content_text(data)
+        if len(content_lines) > 1:
+            lines.extend(content_lines)
+        lines.append("")
+        return "\n".join(lines).strip()
+
     desc = (data.get("description") or "").strip()
     if desc:
         lines.append(desc)
-    return "\n".join(lines)
+        lines.append("")
+    conditions = (data.get("conditions") or "").strip()
+    if conditions:
+        lines.extend([ui["page_conditions"].lstrip("▎"), conditions, ""])
+    return "\n".join(lines).strip()
 
 
-def _generate_biome_card(data: dict) -> str:
+def _format_event_text(data: dict, *, view: str = "summary") -> str:
+    return _format_biome_text(data, view=view)
+
+
+def _resolve_conditions_rich(data: dict) -> list[list[dict]]:
+    rich = data.get("conditions_rich")
+    if rich:
+        return rich
+    text = (data.get("conditions") or "").strip()
+    return description_text_to_rich(text) if text else []
+
+
+def _content_item_label(item: dict) -> str:
+    return item.get("label") or item.get("name") or ""
+
+
+def _calc_page_content_row_height(
+    draw: ImageDraw.ImageDraw,
+    box: dict,
+    font_title,
+    font_items,
+) -> int:
+    items_w = CARD_WIDTH - CARD_PADDING - PAGE_CONTENT_COL_ITEMS
+    title_lines = _wrap_text_lines(draw, box.get("title", ""), font_title, PAGE_CONTENT_TITLE_W)
+    item_entries = [
+        {"name": _content_item_label(item), "image": item.get("image", "")}
+        for item in box.get("items") or []
+        if _content_item_label(item)
+    ]
+    items_h = _calc_npc_icon_entries_height(draw, items_w, item_entries, font_items)
+    title_h = max(1, len(title_lines)) * STAT_LINE_HEIGHT
+    return max(NPC_TABLE_ROW_MIN, title_h, items_h) + 8
+
+
+def _calc_page_content_section_area(
+    measure: ImageDraw.ImageDraw,
+    content: list[dict],
+    font_title,
+    font_items,
+) -> int:
+    area = 30 + DROP_TABLE_HEADER + 6
+    for group in content:
+        if group.get("heading"):
+            area += 26
+        for box in group.get("boxes") or []:
+            area += _calc_page_content_row_height(measure, box, font_title, font_items) + 2
+    return area + 10
+
+
+def _draw_page_content_section(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    content: list[dict],
+    font_header,
+    font_title,
+    font_items,
+    ui: dict,
+) -> int:
+    items_w = CARD_WIDTH - CARD_PADDING - PAGE_CONTENT_COL_ITEMS
+    draw.text((CARD_PADDING + 10, y), ui["page_content"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    draw.text(
+        (PAGE_CONTENT_COL_TITLE, y),
+        ui["page_content_col_category"],
+        fill=COLORS["label"],
+        font=font_items,
+    )
+    draw.text(
+        (PAGE_CONTENT_COL_ITEMS, y),
+        ui["page_content_col_items"],
+        fill=COLORS["label"],
+        font=font_items,
+    )
+    y += DROP_TABLE_HEADER
+    _draw_table_hline(draw, y)
+    y += 4
+
+    for group in content:
+        heading = (group.get("heading") or "").strip()
+        if heading:
+            draw.text(
+                (PAGE_CONTENT_COL_TITLE, y),
+                heading,
+                fill=COLORS["accent"],
+                font=font_title,
+            )
+            y += 26
+        for box in group.get("boxes") or []:
+            row_h = _calc_page_content_row_height(draw, box, font_title, font_items)
+            title_lines = _wrap_text_lines(
+                draw, box.get("title", ""), font_title, PAGE_CONTENT_TITLE_W
+            )
+            for i, line in enumerate(title_lines):
+                draw.text(
+                    (PAGE_CONTENT_COL_TITLE, y + 4 + i * STAT_LINE_HEIGHT),
+                    line,
+                    fill=COLORS["text"],
+                    font=font_title,
+                )
+            item_entries = [
+                {"name": _content_item_label(item), "image": item.get("image", "")}
+                for item in box.get("items") or []
+                if _content_item_label(item)
+            ]
+            _draw_npc_icon_entries(
+                draw,
+                card,
+                PAGE_CONTENT_COL_ITEMS,
+                y + 4,
+                items_w,
+                item_entries,
+                font_items,
+            )
+            y += row_h
+            _draw_table_hline(draw, y)
+            y += 2
+    return y + 6
+
+
+def _generate_biome_card(
+    data: dict,
+    *,
+    card_kind: str | None = None,
+    view: str = "summary",
+) -> str:
     _ensure_dirs()
     ui = _CARD_UI
     locale = "zh"
-    output_path = _card_output_path(data.get("name", ""), locale)
+    cache_kind = card_kind or "biome"
+    output_path = _card_output_path(
+        data.get("name", ""), locale, kind=f"{cache_kind}_{view}"
+    )
     if os.path.isfile(output_path):
         return output_path
 
     font_title = _try_get_font(26)
     font_header = _try_get_font(20)
     font_small = _try_get_font(16)
-    description_rich = _resolve_description_rich(data)
+    show_summary = view != "content"
+    show_content = view == "content"
+    description_rich = _resolve_description_rich(data) if show_summary else []
+    conditions_rich = _resolve_conditions_rich(data) if show_summary else []
+    content = (data.get("content") or []) if show_content else []
 
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
     title_area = 52
-    banner_img = _load_item_image(data.get("image", ""), BIOME_BANNER_MAX_SIZE)
+    banner_img = (
+        _load_item_image(data.get("image", ""), BIOME_BANNER_MAX_SIZE)
+        if show_summary
+        else None
+    )
     banner_h = banner_img.height if banner_img else 0
     banner_area = banner_h + 16 if banner_h else 0
 
@@ -2180,7 +2416,24 @@ def _generate_biome_card(data: dict) -> str:
     if description_rich:
         desc_area = _calc_description_area(measure, description_rich, font_small) + 10
 
-    total_height = CARD_PADDING * 2 + title_area + banner_area + desc_area
+    conditions_area = 0
+    if conditions_rich:
+        conditions_area = _calc_description_area(measure, conditions_rich, font_small) + 10
+
+    content_area = 0
+    if content:
+        content_area = _calc_page_content_section_area(
+            measure, content, font_small, font_small
+        )
+
+    total_height = (
+        CARD_PADDING * 2
+        + title_area
+        + banner_area
+        + desc_area
+        + conditions_area
+        + content_area
+    )
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
 
@@ -2205,6 +2458,23 @@ def _generate_biome_card(data: dict) -> str:
     if description_rich:
         y = _draw_description_section(
             draw, card, y, description_rich, font_header, font_small, ui
+        )
+
+    if conditions_rich:
+        y = _draw_description_section(
+            draw,
+            card,
+            y,
+            conditions_rich,
+            font_header,
+            font_small,
+            ui,
+            header_text=ui["page_conditions"],
+        )
+
+    if content:
+        y = _draw_page_content_section(
+            draw, card, y, content, font_header, font_small, font_small, ui
         )
 
     card.convert("RGB").save(output_path, "PNG")
@@ -3794,6 +4064,10 @@ def _format_update_result(result: dict, force: bool = False) -> str:
     biome_total = result.get("biome_total", 0)
     if biome_new or biome_total:
         extra_lines += f"\n生物群系：{biome_total} 个（本次 +{biome_new}）"
+    event_new = result.get("event_new_count", 0)
+    event_total = result.get("event_total", 0)
+    if event_new or event_total:
+        extra_lines += f"\n事件：{event_total} 个（本次 +{event_new}）"
     npc_new = result.get("npc_new_count", 0)
     npc_total = result.get("npc_total", 0)
     if npc_new or npc_total:
@@ -3833,6 +4107,7 @@ class TerrariaQueryPlugin(Star):
         self.mounts: dict[str, dict] = {}
         self.pets: dict[str, dict] = {}
         self.biomes: dict[str, dict] = {}
+        self.events: dict[str, dict] = {}
         self.npcs: dict[str, dict] = {}
         self.bosses: dict[str, dict] = {}
         self._load_data()
@@ -3908,10 +4183,17 @@ class TerrariaQueryPlugin(Star):
         self._load_mounts()
         self._load_pets()
         self._load_biomes()
+        self._load_events()
         self._load_npcs()
         self._load_bosses()
         rebuild_search_index(
-            self.items, self.mounts, self.pets, self.biomes, self.npcs, self.bosses
+            self.items,
+            self.mounts,
+            self.pets,
+            self.biomes,
+            self.events,
+            self.npcs,
+            self.bosses,
         )
         if not _CARD_CACHE_PRUNED:
             _prune_old_card_cache()
@@ -3961,6 +4243,16 @@ class TerrariaQueryPlugin(Star):
             logger.error(f"加载 biomes.json 失败: {e}")
         self.biomes = {}
 
+    def _load_events(self) -> None:
+        try:
+            self.events = load_events_for_plugin(CATEGORIES_DIR)
+            if self.events:
+                logger.info(f"已加载 {len(self.events)} 个事件")
+                return
+        except Exception as e:
+            logger.error(f"加载 events.json 失败: {e}")
+        self.events = {}
+
     def _load_npcs(self) -> None:
         try:
             self.npcs = load_npcs_for_plugin(CATEGORIES_DIR)
@@ -4004,11 +4296,15 @@ class TerrariaQueryPlugin(Star):
     async def _handle_query(self, event: AstrMessageEvent, text: str):
         if not text:
             yield event.plain_result(
-                "用法: 泰拉查询 <物品名/群系名/Boss名/NPC名>\n"
+                "用法: 泰拉查询 <物品名/群系名/事件名/Boss名/NPC名>\n"
                 "例如: 泰拉查询 天顶剑\n"
                 "      泰拉查询 森林\n"
+                "      泰拉查询 血月\n"
+                "      泰拉查询 血月内容\n"
                 "      泰拉查询 月亮领主\n"
-                "      泰拉查询 军火商"
+                "      泰拉查询 军火商\n"
+                "\n"
+                "群系/事件加「内容」后缀可单独查看内容表，例如: 泰拉 森林内容"
             )
             return
 
@@ -4017,6 +4313,7 @@ class TerrariaQueryPlugin(Star):
             and not self.mounts
             and not self.pets
             and not self.biomes
+            and not self.events
             and not self.npcs
             and not self.bosses
         ):
@@ -4026,38 +4323,44 @@ class TerrariaQueryPlugin(Star):
             )
             return
 
+        search_text, page_content = _split_page_content_query(text)
+
         matches = _fuzzy_match_all(
-            text,
+            search_text,
             self.items,
             self.mounts,
             self.pets,
             self.biomes,
+            self.events,
             self.npcs,
             self.bosses,
         )
         if not matches:
-            yield event.plain_result(f"❌ 未找到「{text}」的相关信息。")
+            yield event.plain_result(f"❌ 未找到「{search_text}」的相关信息。")
             return
 
         exact, partial = _split_search_matches(
-            text,
+            search_text,
             self.items,
             self.mounts,
             self.pets,
             self.biomes,
+            self.events,
             self.npcs,
             self.bosses,
         )
 
         if exact:
             source, key = exact[0]
-            async for result in self._yield_match_card(event, source, key):
+            async for result in self._yield_match_card(
+                event, source, key, page_content=page_content
+            ):
                 yield result
 
             partial_items = [k for pool, k in partial if pool == "item"]
             if partial_items:
                 yield event.plain_result(
-                    _format_partial_item_hints(text, partial_items, self.items)
+                    _format_partial_item_hints(search_text, partial_items, self.items)
                 )
             return
 
@@ -4066,6 +4369,7 @@ class TerrariaQueryPlugin(Star):
             for source, key in matches:
                 pool = {
                     "biome": self.biomes,
+                    "event": self.events,
                     "boss": self.bosses,
                     "npc": self.npcs,
                     "mount": self.mounts,
@@ -4073,7 +4377,7 @@ class TerrariaQueryPlugin(Star):
                     "item": self.items,
                 }[source]
                 item = pool[key]
-                lines.append(f"· {_match_list_label(key, item, text)}")
+                lines.append(f"· {_match_list_label(key, item, search_text)}")
             yield event.plain_result("\n".join(lines))
             return
 
@@ -4081,14 +4385,22 @@ class TerrariaQueryPlugin(Star):
             yield event.plain_result(f"找到 {len(matches)} 个匹配结果：")
 
         for source, key in matches:
-            async for result in self._yield_match_card(event, source, key):
+            async for result in self._yield_match_card(
+                event, source, key, page_content=page_content
+            ):
                 yield result
 
     async def _yield_match_card(
-        self, event: AstrMessageEvent, source: str, key: str
+        self,
+        event: AstrMessageEvent,
+        source: str,
+        key: str,
+        *,
+        page_content: bool = False,
     ):
         pool = {
             "biome": self.biomes,
+            "event": self.events,
             "boss": self.bosses,
             "npc": self.npcs,
             "mount": self.mounts,
@@ -4098,12 +4410,33 @@ class TerrariaQueryPlugin(Star):
         item = pool[key]
         if source == "biome":
             display = _display_biome(item)
+            view = "content" if page_content else "summary"
+            if page_content and not display.get("content"):
+                yield event.plain_result(
+                    f"「{display.get('name', key)}」暂无内容数据。"
+                )
+                return
             try:
-                card_path = _generate_biome_card(display)
+                card_path = _generate_biome_card(display, view=view)
                 yield event.image_result(card_path)
             except Exception as e:
                 logger.error(f"生成群系图片失败 ({key}): {e}")
-                yield event.plain_result(_format_biome_text(display))
+                yield event.plain_result(_format_biome_text(display, view=view))
+            return
+        if source == "event":
+            display = _display_event(item)
+            view = "content" if page_content else "summary"
+            if page_content and not display.get("content"):
+                yield event.plain_result(
+                    f"「{display.get('name', key)}」暂无内容数据。"
+                )
+                return
+            try:
+                card_path = _generate_biome_card(display, card_kind="event", view=view)
+                yield event.image_result(card_path)
+            except Exception as e:
+                logger.error(f"生成事件图片失败 ({key}): {e}")
+                yield event.plain_result(_format_event_text(display, view=view))
             return
         if source == "npc":
             display = _display_npc(item)

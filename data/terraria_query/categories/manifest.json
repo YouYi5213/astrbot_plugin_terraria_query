@@ -156,7 +156,19 @@
       "label": "Boss",
       "file": "bosses.json",
       "count": 33
+    },
+    {
+      "key": "events",
+      "label": "事件",
+      "file": "events.json",
+      "count": 16
+    },
+    {
+      "key": "biomes",
+      "label": "生物群系",
+      "file": "biomes.json",
+      "count": 21
     }
   ],
-  "total": 2377
+  "total": 2414
 }

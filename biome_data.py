@@ -13,6 +13,11 @@ import aiohttp
 from bs4 import BeautifulSoup, Tag
 
 try:
+    from .page_section_data import (
+        collect_content_image_filenames,
+        parse_conditions_section,
+        parse_content_section,
+    )
     from .prepare_data import (
         HEADERS,
         IMAGES_DIR,
@@ -24,6 +29,11 @@ try:
         parse_description_from_soup,
     )
 except ImportError:
+    from page_section_data import (
+        collect_content_image_filenames,
+        parse_conditions_section,
+        parse_content_section,
+    )
     from prepare_data import (
         HEADERS,
         IMAGES_DIR,
@@ -127,6 +137,15 @@ def parse_biome_page_html(
     if parsed_desc:
         item["description"] = parsed_desc["text"]
         item["description_rich"] = parsed_desc["rich"]
+
+    conditions = parse_conditions_section(soup)
+    if conditions:
+        item["conditions"] = conditions["text"]
+        item["conditions_rich"] = conditions["rich"]
+
+    content = parse_content_section(soup)
+    if content:
+        item["content"] = content
     return item
 
 
@@ -177,6 +196,8 @@ def _collect_biome_image_urls(biomes: dict[str, dict]) -> dict[str, str]:
         fn = biome.get("image")
         if fn:
             urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+        for content_fn in collect_content_image_filenames(biome.get("content")):
+            urls[content_fn] = f"https://terraria.wiki.gg/images/{quote(content_fn, safe='')}"
     return urls
 
 

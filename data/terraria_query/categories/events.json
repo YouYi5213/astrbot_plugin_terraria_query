@@ -1,0 +1,5025 @@
+{
+  "血月": {
+    "name": "血月",
+    "wiki_title": "血月",
+    "page_type": "event",
+    "image": "BiomeBannerBloodMoon.png",
+    "search_terms": [],
+    "description": "天空变红的时候，你就知道血月升起来了。血月有一种魔力，能吸引怪物蜂拥而来。\n\n—向导\n\n“血月正在升起……”\n\n血月是一个事件，会在整个夜晚（由下午7:30 到早上4:30）期间发生，只影响地表地层。\n\n血月的发生伴随着状态讯息“血月正在升起……”。世界中所有的水，包括位于地下的，以及雨和月亮本身都会在此事件期间变为血红色。(电脑版、主机版、和移动版)玩家位于地表层时，屏幕上会应用一层红色的滤镜。\n\n事件会带来新的更危险的敌怪，也会改变它们的行为和生成条件（见下方）。\n\n(电脑版、主机版、和移动版)血月期间，在床睡觉以加速时间的能力也会被禁用。此外，玩家的渔力会增加到 1.1 倍，不过钓鱼也会带来新的敌怪。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "天空变红的时候，你就知道血月升起来了。血月有一种魔力，能吸引怪物蜂拥而来。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "—向导"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "“血月正在升起……”"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "血月是一个事件，会在整个夜晚（由下午7:30 到早上4:30）期间发生，只影响地表地层。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "血月的发生伴随着状态讯息“血月正在升起……”。世界中所有的水，包括位于地下的，以及雨和月亮本身都会在此事件期间变为血红色。(电脑版、主机版、和移动版)玩家位于地表层时，屏幕上会应用一层红色的滤镜。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "事件会带来新的更危险的敌怪，也会改变它们的行为和生成条件（见下方）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(电脑版、主机版、和移动版)血月期间，在床睡觉以加速时间的能力也会被禁用。此外，玩家的渔力会增加到 1.1 倍，不过钓鱼也会带来新的敌怪。"
+        }
+      ]
+    ],
+    "conditions": "要让血月自然发生，必须满足以下条件：\n\n· 它只会在世界中至少有一名玩家具有超过 120 永久最大生命时发生。\n· 它只能在月相不是新月的夜晚发生。\n· 如果克苏鲁之眼将会在那一夜晚生成，它就不会发生。满足以上条件后，血月有1/9 (11.11%)的几率发生。（在Celebrationmk10世界中为1/6 (16.67%)）\n\n(电脑版、主机版、和移动版)血月可以用血泪在夜晚手动触发，且无需满足以上条件。\n\n血月是否会自然发生是在每个夜晚的黄昏时分决定的。每天夜晚有相等的几率发生血月，且即使上个夜晚曾发生过血月，其发生几率也不会改变。有可能连续发生四次或以上的血月，且相对地，即使经过数个游戏内周后血月也不一定会发生。",
+    "conditions_rich": [
+      [
+        {
+          "type": "text",
+          "text": "要让血月自然发生，必须满足以下条件："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "它只会在世界中至少有一名玩家具有超过 120 永久最大生命时发生。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "它只能在月相不是新月的夜晚发生。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "如果克苏鲁之眼将会在那一夜晚生成，它就不会发生。满足以上条件后，血月有1/9 (11.11%)的几率发生。（在Celebrationmk10世界中为1/6 (16.67%)）"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(电脑版、主机版、和移动版)血月可以用血泪在夜晚手动触发，且无需满足以上条件。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "血月是否会自然发生是在每个夜晚的黄昏时分决定的。每天夜晚有相等的几率发生血月，且即使上个夜晚曾发生过血月，其发生几率也不会改变。有可能连续发生四次或以上的血月，且相对地，即使经过数个游戏内周后血月也不一定会发生。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "任何时间：",
+            "items": [
+              {
+                "name": "僵尸新郎",
+                "image": "The_Groom.png",
+                "label": "僵尸新郎"
+              },
+              {
+                "name": "僵尸新娘",
+                "image": "The_Bride.png",
+                "label": "僵尸新娘"
+              },
+              {
+                "name": "血腥僵尸",
+                "image": "Blood_Zombie.png",
+                "label": "血腥僵尸"
+              },
+              {
+                "name": "滴滴怪",
+                "image": "Drippler.png",
+                "label": "滴滴怪"
+              }
+            ]
+          },
+          {
+            "title": "在腐化世界：",
+            "items": [
+              {
+                "name": "腐化兔兔",
+                "image": "Corrupt_Bunny.png",
+                "label": "腐化兔兔"
+              },
+              {
+                "name": "腐化金鱼",
+                "image": "Corrupt_Goldfish.png",
+                "label": "腐化金鱼"
+              },
+              {
+                "name": "腐化企鹅",
+                "image": "Corrupt_Penguin.png",
+                "label": "腐化企鹅"
+              }
+            ]
+          },
+          {
+            "title": "在猩红世界：",
+            "items": [
+              {
+                "name": "毒兔兔",
+                "image": "Vicious_Bunny.png",
+                "label": "毒兔兔"
+              },
+              {
+                "name": "毒金鱼",
+                "image": "Vicious_Goldfish.png",
+                "label": "毒金鱼"
+              },
+              {
+                "name": "毒企鹅",
+                "image": "Vicious_Penguin.png",
+                "label": "毒企鹅"
+              }
+            ]
+          },
+          {
+            "title": "来自钓鱼：",
+            "items": [
+              {
+                "name": "游荡眼球怪鱼",
+                "image": "Wandering_Eye_Fish.png",
+                "label": "游荡眼球怪鱼"
+              },
+              {
+                "name": "僵尸人鱼",
+                "image": "Zombie_Merman.png",
+                "label": "僵尸人鱼"
+              },
+              {
+                "name": "暴躁史莱姆",
+                "image": "Surly_Slime.png",
+                "label": "暴躁史莱姆"
+              }
+            ]
+          },
+          {
+            "title": "困难模式期间：",
+            "items": [
+              {
+                "name": "小丑",
+                "image": "Clown.png",
+                "label": "小丑"
+              },
+              {
+                "name": "嗒嗒牙齿炸弹",
+                "image": "Chattering_Teeth_Bomb.png",
+                "label": "嗒嗒牙齿炸弹"
+              }
+            ]
+          },
+          {
+            "title": "来自在困难模式中钓鱼：",
+            "items": [
+              {
+                "name": "血浆哥布林鲨鱼",
+                "image": "Hemogoblin_Shark.png",
+                "label": "血浆哥布林鲨鱼"
+              },
+              {
+                "name": "血鳗鱼",
+                "image": "Blood_Eel.png",
+                "label": "血鳗鱼"
+              },
+              {
+                "name": "恐惧鹦鹉螺",
+                "image": "Dreadnautilus.png",
+                "label": "恐惧鹦鹉螺"
+              },
+              {
+                "name": "血乌贼",
+                "image": "Blood_Squid.png",
+                "label": "血乌贼"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "旗帜：",
+            "items": [
+              {
+                "name": "僵尸新郎旗",
+                "image": "The_Groom_Banner.png",
+                "label": "僵尸新郎旗"
+              },
+              {
+                "name": "僵尸新娘旗",
+                "image": "The_Bride_Banner.png",
+                "label": "僵尸新娘旗"
+              },
+              {
+                "name": "腐化兔兔旗",
+                "image": "Corrupt_Bunny_Banner.png",
+                "label": "腐化兔兔旗"
+              },
+              {
+                "name": "腐化金鱼旗",
+                "image": "Corrupt_Goldfish_Banner.png",
+                "label": "腐化金鱼旗"
+              },
+              {
+                "name": "腐化企鹅旗",
+                "image": "Corrupt_Penguin_Banner.png",
+                "label": "腐化企鹅旗"
+              },
+              {
+                "name": "血腥僵尸旗",
+                "image": "Blood_Zombie_Banner.png",
+                "label": "血腥僵尸旗"
+              },
+              {
+                "name": "滴滴怪旗",
+                "image": "Drippler_Banner.png",
+                "label": "滴滴怪旗"
+              },
+              {
+                "name": "毒兔兔旗",
+                "image": "Vicious_Bunny_Banner.png",
+                "label": "毒兔兔旗"
+              },
+              {
+                "name": "毒金鱼旗",
+                "image": "Vicious_Goldfish_Banner.png",
+                "label": "毒金鱼旗"
+              },
+              {
+                "name": "毒企鹅旗",
+                "image": "Vicious_Penguin_Banner.png",
+                "label": "毒企鹅旗"
+              },
+              {
+                "name": "游荡眼球怪鱼旗",
+                "image": "Wandering_Eye_Fish_Banner.png",
+                "label": "游荡眼球怪鱼旗"
+              },
+              {
+                "name": "僵尸人鱼旗",
+                "image": "Zombie_Merman_Banner.png",
+                "label": "僵尸人鱼旗"
+              }
+            ]
+          },
+          {
+            "title": "困难模式旗帜：",
+            "items": [
+              {
+                "name": "小丑旗",
+                "image": "Clown_Banner.png",
+                "label": "小丑旗"
+              },
+              {
+                "name": "血浆哥布林鲨鱼旗",
+                "image": "Hemogoblin_Shark_Banner.png",
+                "label": "血浆哥布林鲨鱼旗"
+              },
+              {
+                "name": "血鳗鱼旗",
+                "image": "Blood_Eel_Banner.png",
+                "label": "血鳗鱼旗"
+              },
+              {
+                "name": "恐惧鹦鹉螺旗",
+                "image": "Dreadnautilus_Banner.png",
+                "label": "恐惧鹦鹉螺旗"
+              },
+              {
+                "name": "血乌贼旗",
+                "image": "Blood_Squid_Banner.png",
+                "label": "血乌贼旗"
+              }
+            ]
+          },
+          {
+            "title": "来自腐化兔兔和毒兔兔：",
+            "items": [
+              {
+                "name": "兔兔兜帽",
+                "image": "Bunny_Hood.png",
+                "label": "兔兔兜帽"
+              }
+            ]
+          },
+          {
+            "title": "来自腐化企鹅和毒企鹅：",
+            "items": [
+              {
+                "name": "Pedguin的套装",
+                "image": "Pedguin's_set.png",
+                "label": "Pedguin的套装"
+              }
+            ]
+          },
+          {
+            "title": "来自大风天中的腐化兔兔：",
+            "items": [
+              {
+                "name": "腐化兔兔风筝",
+                "image": "Corrupt_Bunny_Kite.png",
+                "label": "腐化兔兔风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自大风天中的毒兔兔：",
+            "items": [
+              {
+                "name": "猩红兔兔风筝",
+                "image": "Crimson_Bunny_Kite.png",
+                "label": "猩红兔兔风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自僵尸新郎：",
+            "items": [
+              {
+                "name": "高顶礼帽",
+                "image": "Top_Hat.png",
+                "label": "高顶礼帽"
+              },
+              {
+                "name": "脑子",
+                "image": "Brain.png",
+                "label": "脑子"
+              }
+            ]
+          },
+          {
+            "title": "(前代主机版、和3DS版)来自任意敌怪或 NPC(仅在困难模式中掉落)：",
+            "items": [
+              {
+                "name": "致胜炮",
+                "image": "KO_Cannon.png",
+                "label": "致胜炮"
+              }
+            ]
+          },
+          {
+            "title": "来自恐惧鹦鹉螺(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "血红法杖",
+                "image": "Sanguine_Staff.png",
+                "label": "血红法杖"
+              },
+              {
+                "name": "血月天塔柱",
+                "image": "Blood_Moon_Monolith.png",
+                "label": "血月天塔柱"
+              }
+            ]
+          },
+          {
+            "title": "来自血浆哥布林鲨鱼(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "血荆棘",
+                "image": "Blood_Thorn.png",
+                "label": "血荆棘"
+              }
+            ]
+          },
+          {
+            "title": "来自血鳗鱼(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "滴滴怪致残者",
+                "image": "Drippler_Crippler.png",
+                "label": "滴滴怪致残者"
+              }
+            ]
+          },
+          {
+            "title": "来自僵尸新娘(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "面纱",
+                "image": "Wedding_Veil.png",
+                "label": "面纱"
+              },
+              {
+                "name": "婚裙",
+                "image": "Wedding_Dress.png",
+                "label": "婚裙"
+              }
+            ]
+          },
+          {
+            "title": "来自任意血月敌怪：",
+            "items": [
+              {
+                "name": "血泪",
+                "image": "Bloody_Tear.png",
+                "label": "血泪"
+              }
+            ]
+          },
+          {
+            "title": "来自任意钓鱼钓到的血月敌怪：",
+            "items": [
+              {
+                "name": "鱼饵桶",
+                "image": "Chum_Bucket.png",
+                "label": "鱼饵桶"
+              }
+            ]
+          },
+          {
+            "title": "来自血浆哥布林鲨鱼(电脑版、主机版、和移动版)和血鳗鱼(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "血锤斧",
+                "image": "Haemorrhaxe.png",
+                "label": "血锤斧"
+              }
+            ]
+          },
+          {
+            "title": "来自游荡眼球怪鱼(电脑版、主机版、和移动版)和僵尸人鱼(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "血雨弓",
+                "image": "Blood_Rain_Bow.png",
+                "label": "血雨弓"
+              },
+              {
+                "name": "吸血鬼青蛙法杖",
+                "image": "Vampire_Frog_Staff.png",
+                "label": "吸血鬼青蛙法杖"
+              },
+              {
+                "name": "鱼饵投掷者",
+                "image": "Chum_Caster.png",
+                "label": "鱼饵投掷者"
+              }
+            ]
+          },
+          {
+            "title": "来自滴滴怪(电脑版、主机版、和移动版)和血腥僵尸(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "钱币槽",
+                "image": "Money_Trough.png",
+                "label": "钱币槽"
+              },
+              {
+                "name": "鲨牙项链",
+                "image": "Shark_Tooth_Necklace.png",
+                "label": "鲨牙项链"
+              }
+            ]
+          },
+          {
+            "title": "来自小丑(仅限困难模式)：",
+            "items": [
+              {
+                "name": "香蕉回旋镖",
+                "image": "Bananarang.png",
+                "label": "香蕉回旋镖"
+              },
+              {
+                "name": "三折地图",
+                "image": "Trifold_Map.png",
+                "label": "三折地图"
+              },
+              {
+                "name": "致胜炮",
+                "image": "KO_Cannon.png",
+                "note": "(只在(电脑版、主机版、和移动版))",
+                "label": "致胜炮(只在(电脑版、主机版、和移动版))"
+              }
+            ]
+          },
+          {
+            "title": "来自植物：",
+            "items": [
+              {
+                "name": "死亡草种子",
+                "image": "Deathweed_Seeds.png",
+                "label": "死亡草种子"
+              }
+            ]
+          },
+          {
+            "title": "来自钓鱼：",
+            "items": [
+              {
+                "name": "先进战斗技术",
+                "image": "Advanced_Combat_Techniques.png",
+                "label": "先进战斗技术"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "售卖",
+        "boxes": [
+          {
+            "title": "来自服装商：",
+            "items": [
+              {
+                "name": "丑角面具",
+                "image": "Mime_Mask.png",
+                "label": "丑角面具"
+              },
+              {
+                "name": "堕落西装衣",
+                "image": "Fallen_Tuxedo_Shirt.png",
+                "label": "堕落西装衣"
+              },
+              {
+                "name": "堕落西装裤",
+                "image": "Fallen_Tuxedo_Pants.png",
+                "label": "堕落西装裤"
+              },
+              {
+                "name": "George的套装",
+                "image": "George's_set.png",
+                "label": "George的套装"
+              },
+              {
+                "name": "绝妙套装",
+                "image": "Fabulous_set.png",
+                "label": "绝妙套装"
+              }
+            ]
+          },
+          {
+            "title": "来自动物学家：",
+            "items": [
+              {
+                "name": "满月尖叫玩具",
+                "image": "Full_Moon_Squeaky_Toy.png",
+                "note": "(困难模式)",
+                "label": "满月尖叫玩具(困难模式)"
+              }
+            ]
+          },
+          {
+            "title": "来自树妖：",
+            "items": [
+              {
+                "name": "魔粉",
+                "image": "Vile_Powder.png",
+                "note": "(如果世界具有的是腐化)",
+                "label": "魔粉(如果世界具有的是腐化)"
+              },
+              {
+                "name": "腐化种子",
+                "image": "Corrupt_Seeds.png",
+                "note": "(如果世界具有的是腐化)",
+                "label": "腐化种子(如果世界具有的是腐化)"
+              },
+              {
+                "name": "腐化草墙",
+                "image": "Corrupt_Grass_Wall.png",
+                "note": "(如果世界具有的是腐化)",
+                "label": "腐化草墙(如果世界具有的是腐化)"
+              },
+              {
+                "name": "毒粉",
+                "image": "Vicious_Powder.png",
+                "note": "(如果世界具有的是猩红)",
+                "label": "毒粉(如果世界具有的是猩红)"
+              },
+              {
+                "name": "猩红种子",
+                "image": "Crimson_Seeds.png",
+                "note": "(如果世界具有的是猩红)",
+                "label": "猩红种子(如果世界具有的是猩红)"
+              },
+              {
+                "name": "猩红草墙",
+                "image": "Crimson_Grass_Wall.png",
+                "note": "(如果世界具有的是猩红)",
+                "label": "猩红草墙(如果世界具有的是猩红)"
+              },
+              {
+                "name": "闪耀翅膀",
+                "image": "Sparkly_Wings.png",
+                "note": "(如果世界是困难模式)",
+                "label": "闪耀翅膀(如果世界是困难模式)"
+              }
+            ]
+          },
+          {
+            "title": "来自军火商：",
+            "items": [
+              {
+                "name": "银子弹",
+                "image": "Silver_Bullet.png",
+                "label": "银子弹"
+              },
+              {
+                "name": "钨子弹",
+                "image": "Tungsten_Bullet.png",
+                "label": "钨子弹"
+              }
+            ]
+          },
+          {
+            "title": "来自染料商：",
+            "items": [
+              {
+                "name": "大屠杀染料",
+                "image": "Bloodbath_Dye.png",
+                "label": "大屠杀染料"
+              }
+            ]
+          },
+          {
+            "title": "来自机器侠：",
+            "items": [
+              {
+                "name": "火箭二型",
+                "image": "Rocket_II.png",
+                "label": "火箭二型"
+              },
+              {
+                "name": "集束火箭二型",
+                "image": "Cluster_Rocket_II.png",
+                "label": "集束火箭二型"
+              }
+            ]
+          },
+          {
+            "title": "来自商人：",
+            "items": [
+              {
+                "name": "投刀",
+                "image": "Throwing_Knife.png",
+                "label": "投刀"
+              }
+            ]
+          },
+          {
+            "title": "来自油漆工：",
+            "items": [
+              {
+                "name": "恶灵现世",
+                "image": "Evil_Presence.png",
+                "label": "恶灵现世"
+              }
+            ]
+          },
+          {
+            "title": "来自蒸汽朋克人：",
+            "items": [
+              {
+                "name": "紫溶液",
+                "image": "Purple_Solution.png",
+                "note": "(如果世界具有的是腐化)",
+                "label": "紫溶液(如果世界具有的是腐化)"
+              },
+              {
+                "name": "红溶液",
+                "image": "Red_Solution.png",
+                "note": "(如果世界具有的是猩红)",
+                "label": "红溶液(如果世界具有的是猩红)"
+              }
+            ]
+          },
+          {
+            "title": "来自骷髅商人(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "拍拍手",
+                "image": "Slap_Hand.png",
+                "note": "(困难模式)",
+                "label": "拍拍手(困难模式)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（恐惧）",
+                "image": "Music_Box_(Eerie).png",
+                "label": "八音盒（恐惧）"
+              },
+              {
+                "name": "异界八音盒（恐惧）",
+                "image": "Otherworldly_Music_Box_(Eerie).png",
+                "label": "异界八音盒（恐惧）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "哥布林军队": {
+    "name": "哥布林军队",
+    "wiki_title": "哥布林军队",
+    "page_type": "event",
+    "image": "BiomeBannerGoblinArmy.png",
+    "search_terms": [],
+    "description": "Bestiary Goblin Invasion.png“哥布林军队来了！”Bestiary Goblin Invasion.png\n\n哥布林军队（也称为哥布林入侵）是一个入侵事件，会使得独特的哥布林敌怪代替常规敌怪生成。在满足特定条件后，哥布林军队可能会在任何黎明时随机发生。它也可以用哥布林战旗手工召唤。\n\n在事件开始后，哥布林军队会从世界的随机一侧始发（由下列两个状态讯息之一提示：“一支哥布林军队正从西边逼近！”/“一支哥布林军队正从东边逼近！”）并向世界生成点移动。状态讯息“哥布林军队来了！”会在哥布林军队到达了世界生成点时显示。事件敌怪仅能在哥布林军队的位置附近或在城镇NPC附近生成。见备注获取细节。\n\n哥布林军队在击杀足够多来自它的敌怪后即完成。在电脑版电脑版、主机版主机版、和移动版移动版中，会显示进度条来展示事件进度。\n\n击败哥布林军队至少一次会满足哥布林工匠NPC 在洞穴地层中（作为受缚哥布林）生成的条件。",
+    "description_rich": [
+      [
+        {
+          "type": "icon",
+          "image": "Bestiary_Goblin_Invasion.png",
+          "alt": "Bestiary Goblin Invasion.png"
+        },
+        {
+          "type": "text",
+          "text": "“哥布林军队来了！”"
+        },
+        {
+          "type": "icon",
+          "image": "Bestiary_Goblin_Invasion.png",
+          "alt": "Bestiary Goblin Invasion.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "哥布林军队（也称为哥布林入侵）是一个入侵事件，会使得独特的哥布林敌怪代替常规敌怪生成。在满足特定条件后，哥布林军队可能会在任何黎明时随机发生。它也可以用哥布林战旗手工召唤。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在事件开始后，哥布林军队会从世界的随机一侧始发（由下列两个状态讯息之一提示：“一支哥布林军队正从西边逼近！”/“一支哥布林军队正从东边逼近！”）并向世界生成点移动。状态讯息“哥布林军队来了！”会在哥布林军队到达了世界生成点时显示。事件敌怪仅能在哥布林军队的位置附近或在城镇NPC附近生成。见备注获取细节。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "哥布林军队在击杀足够多来自它的敌怪后即完成。在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，会显示进度条来展示事件进度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "击败哥布林军队至少一次会满足哥布林工匠NPC 在洞穴地层中（作为受缚哥布林）生成的条件。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "困难模式之前：",
+            "items": [
+              {
+                "name": "哥布林苦力",
+                "image": "Goblin_Peon.png",
+                "label": "哥布林苦力"
+              },
+              {
+                "name": "哥布林盗贼",
+                "image": "Goblin_Thief.png",
+                "label": "哥布林盗贼"
+              },
+              {
+                "name": "哥布林战士",
+                "image": "Goblin_Warrior.png",
+                "label": "哥布林战士"
+              },
+              {
+                "name": "哥布林巫士",
+                "image": "Goblin_Sorcerer.png",
+                "label": "哥布林巫士"
+              },
+              {
+                "name": "哥布林弓箭手",
+                "image": "Goblin_Archer.png",
+                "label": "哥布林弓箭手"
+              }
+            ]
+          },
+          {
+            "title": "在困难模式中：",
+            "items": [
+              {
+                "name": "哥布林术士",
+                "image": "Goblin_Warlock.png",
+                "label": "哥布林术士"
+              },
+              {
+                "name": "暗影焰幻鬼",
+                "image": "Shadowflame_Apparition.png",
+                "note": "（来自哥布林术士）",
+                "label": "暗影焰幻鬼（来自哥布林术士）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自所有哥布林：（哥布林术士除外）",
+            "items": [
+              {
+                "name": "鱼叉枪",
+                "image": "Harpoon.png",
+                "label": "鱼叉枪"
+              },
+              {
+                "name": "尖球",
+                "image": "Spiky_Ball.png",
+                "label": "尖球"
+              }
+            ]
+          },
+          {
+            "title": "来自哥布林术士(电脑版、主机版、和移动版)：",
+            "items": [
+              {
+                "name": "暗影焰妖娃",
+                "image": "Shadowflame_Hex_Doll.png",
+                "label": "暗影焰妖娃"
+              },
+              {
+                "name": "暗影焰刀",
+                "image": "Shadowflame_Knife.png",
+                "label": "暗影焰刀"
+              },
+              {
+                "name": "暗影焰弓",
+                "image": "Shadowflame_Bow.png",
+                "label": "暗影焰弓"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（哥布林入侵）",
+                "image": "Music_Box_(Goblin_Invasion).png",
+                "label": "八音盒（哥布林入侵）"
+              },
+              {
+                "name": "八音盒（Boss 1）",
+                "image": "Music_Box_(Boss_1).png",
+                "label": "八音盒（Boss 1）"
+              },
+              {
+                "name": "异界八音盒（入侵）",
+                "image": "Otherworldly_Music_Box_(Invasion).png",
+                "label": "异界八音盒（入侵）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "撒旦军队": {
+    "name": "撒旦军队",
+    "wiki_title": "撒旦军队",
+    "page_type": "event",
+    "image": "BiomeBannerOldOne'sArmy.png",
+    "search_terms": [
+      "旧日军团"
+    ],
+    "description": "Bestiary Old One's Army.png“撒旦军队正在逼近！”Bestiary Old One's Army.png\n\n撒旦军队是个独特的《地牢守护者 2》（Dungeon Defenders 2）联动事件，可以通过将永恒水晶放置在永恒水晶座上来触发。会有一波波敌怪从水晶两边的传送门中生成出来，试图摧毁水晶。事件的目标是保护水晶直到清空所有波数——如果水晶被摧毁了，事件即告结束。\n\n此事件有三种难度版本，即“级别”：\n\n· 在击败世界吞噬怪或克苏鲁之脑后，将解锁撒旦军队的第一级，起初最高有 5 波。\n· 在击败任何机械 Boss后，事件进入难度提升的第二级，增加额外的两波，使得总波数最高为 7。\n· 在击败石巨人后，事件会达到第三级，也是最后一级难度，在 7 波中会有完整的敌怪和小 Boss 组合。\n\n通过靠后的波数会奖励给玩家护卫奖章，这是一种独特的货币，可以用来从酒馆老板NPC处购买特殊武器、盔甲、和护卫熔炉。由于此事件的较高难度，这些装备特别适合此事件，随着级数推进会解锁更强的装备。此事件还部署了许多反作弊/漏洞机制，例如在其持续时间内阻止玩家放置或移除物块和液体。",
+    "description_rich": [
+      [
+        {
+          "type": "icon",
+          "image": "Bestiary_Old_One's_Army.png",
+          "alt": "Bestiary Old One's Army.png"
+        },
+        {
+          "type": "text",
+          "text": "“撒旦军队正在逼近！”"
+        },
+        {
+          "type": "icon",
+          "image": "Bestiary_Old_One's_Army.png",
+          "alt": "Bestiary Old One's Army.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "撒旦军队是个独特的《地牢守护者 2》（Dungeon Defenders 2）联动事件，可以通过将永恒水晶放置在永恒水晶座上来触发。会有一波波敌怪从水晶两边的传送门中生成出来，试图摧毁水晶。事件的目标是保护水晶直到清空所有波数——如果水晶被摧毁了，事件即告结束。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "此事件有三种难度版本，即“级别”："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "在击败世界吞噬怪或克苏鲁之脑后，将解锁撒旦军队的第一级，起初最高有 5 波。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "在击败任何机械 Boss后，事件进入难度提升的第二级，增加额外的两波，使得总波数最高为 7。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "在击败石巨人后，事件会达到第三级，也是最后一级难度，在 7 波中会有完整的敌怪和小 Boss 组合。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "通过靠后的波数会奖励给玩家护卫奖章，这是一种独特的货币，可以用来从酒馆老板NPC处购买特殊武器、盔甲、和护卫熔炉。由于此事件的较高难度，这些装备特别适合此事件，随着级数推进会解锁更强的装备。此事件还部署了许多反作弊/漏洞机制，例如在其持续时间内阻止玩家放置或移除物块和液体。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "结构：",
+            "items": [
+              {
+                "name": "永恒水晶（NPC）",
+                "image": "Eternia_Crystal_(NPC).png",
+                "label": "永恒水晶（NPC）"
+              },
+              {
+                "name": "神秘传送门",
+                "image": "Mysterious_Portal.png",
+                "label": "神秘传送门"
+              }
+            ]
+          },
+          {
+            "title": "机械 Boss前：",
+            "items": [
+              {
+                "name": "埃特尼亚哥布林",
+                "image": "Etherian_Goblin.png",
+                "label": "埃特尼亚哥布林"
+              },
+              {
+                "name": "埃特尼亚哥布林投弹手",
+                "image": "Etherian_Goblin_Bomber.png",
+                "label": "埃特尼亚哥布林投弹手"
+              },
+              {
+                "name": "埃特尼亚标枪投掷怪",
+                "image": "Etherian_Javelin_Thrower.png",
+                "label": "埃特尼亚标枪投掷怪"
+              },
+              {
+                "name": "埃特尼亚飞龙",
+                "image": "Etherian_Wyvern.png",
+                "label": "埃特尼亚飞龙"
+              },
+              {
+                "name": "黑暗魔法师",
+                "image": "Dark_Mage.png",
+                "label": "黑暗魔法师"
+              },
+              {
+                "name": "撒旦骷髅",
+                "image": "Old_One's_Skeleton.png",
+                "note": "（来自黑暗魔法师）",
+                "label": "撒旦骷髅（来自黑暗魔法师）"
+              }
+            ]
+          },
+          {
+            "title": "打败一个机械 Boss后：",
+            "items": [
+              {
+                "name": "小妖魔",
+                "image": "Kobold.png",
+                "label": "小妖魔"
+              },
+              {
+                "name": "德拉克龙",
+                "image": "Drakin.png",
+                "label": "德拉克龙"
+              },
+              {
+                "name": "小妖魔滑翔怪",
+                "image": "Kobold_Glider.png",
+                "label": "小妖魔滑翔怪"
+              },
+              {
+                "name": "枯萎兽",
+                "image": "Wither_Beast.png",
+                "label": "枯萎兽"
+              },
+              {
+                "name": "食人魔",
+                "image": "Ogre.png",
+                "label": "食人魔"
+              }
+            ]
+          },
+          {
+            "title": "石巨人后：",
+            "items": [
+              {
+                "name": "埃特尼亚荧光虫",
+                "image": "Etherian_Lightning_Bug.png",
+                "label": "埃特尼亚荧光虫"
+              },
+              {
+                "name": "双足翼龙",
+                "image": "Betsy.png",
+                "label": "双足翼龙"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自永恒水晶（NPC）：",
+            "items": [
+              {
+                "name": "护卫奖章",
+                "image": "Defender_Medal.png",
+                "label": "护卫奖章"
+              }
+            ]
+          },
+          {
+            "title": "来自所有敌怪：",
+            "items": [
+              {
+                "name": "埃特尼亚魔力",
+                "image": "Etherian_Mana.png",
+                "label": "埃特尼亚魔力"
+              }
+            ]
+          },
+          {
+            "title": "来自黑暗魔法师：",
+            "items": [
+              {
+                "name": "学徒围巾",
+                "image": "Apprentice's_Scarf.png",
+                "label": "学徒围巾"
+              },
+              {
+                "name": "侍卫护盾",
+                "image": "Squire's_Shield.png",
+                "label": "侍卫护盾"
+              },
+              {
+                "name": "战争桌",
+                "image": "War_Table.png",
+                "label": "战争桌"
+              },
+              {
+                "name": "战争桌旗",
+                "image": "War_Table_Banner.png",
+                "label": "战争桌旗"
+              },
+              {
+                "name": "龙蛋",
+                "image": "Dragon_Egg.png",
+                "label": "龙蛋"
+              },
+              {
+                "name": "Gato蛋",
+                "image": "Gato_Egg.png",
+                "label": "Gato蛋"
+              },
+              {
+                "name": "暗黑魔法师面具",
+                "image": "Dark_Mage_Mask.png",
+                "label": "暗黑魔法师面具"
+              },
+              {
+                "name": "暗黑魔法师纪念章",
+                "image": "Dark_Mage_Trophy.png",
+                "label": "暗黑魔法师纪念章"
+              },
+              {
+                "name": "暗黑魔法师圣物",
+                "image": "Dark_Mage_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "暗黑魔法师圣物（仅限大师模式）"
+              },
+              {
+                "name": "暗黑魔法师巨著",
+                "image": "Dark_Mage's_Tome.png",
+                "note": "（仅限大师模式）",
+                "label": "暗黑魔法师巨著（仅限大师模式）"
+              }
+            ]
+          },
+          {
+            "title": "来自食人魔：",
+            "items": [
+              {
+                "name": "女猎人圆盾",
+                "image": "Huntress's_Buckler.png",
+                "label": "女猎人圆盾"
+              },
+              {
+                "name": "武僧腰带",
+                "image": "Monk's_Belt.png",
+                "label": "武僧腰带"
+              },
+              {
+                "name": "无限智慧巨著",
+                "image": "Tome_of_Infinite_Wisdom.png",
+                "label": "无限智慧巨著"
+              },
+              {
+                "name": "幽灵凤凰",
+                "image": "Phantom_Phoenix.png",
+                "label": "幽灵凤凰"
+              },
+              {
+                "name": "地狱之剑",
+                "image": "Brand_of_the_Inferno.png",
+                "label": "地狱之剑"
+              },
+              {
+                "name": "瞌睡章鱼",
+                "image": "Sleepy_Octopod.png",
+                "label": "瞌睡章鱼"
+              },
+              {
+                "name": "恐怖关刀",
+                "image": "Ghastly_Glaive.png",
+                "label": "恐怖关刀"
+              },
+              {
+                "name": "飞眼怪蛋",
+                "image": "Creeper_Egg.png",
+                "label": "飞眼怪蛋"
+              },
+              {
+                "name": "食人魔面具",
+                "image": "Ogre_Mask.png",
+                "label": "食人魔面具"
+              },
+              {
+                "name": "食人魔纪念章",
+                "image": "Ogre_Trophy.png",
+                "label": "食人魔纪念章"
+              },
+              {
+                "name": "食人魔圣物",
+                "image": "Ogre_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "食人魔圣物（仅限大师模式）"
+              },
+              {
+                "name": "食人魔棍棒",
+                "image": "Ogre's_Club.png",
+                "note": "（仅限大师模式）",
+                "label": "食人魔棍棒（仅限大师模式）"
+              }
+            ]
+          },
+          {
+            "title": "来自双足翼龙：",
+            "items": [
+              {
+                "name": "飞龙",
+                "image": "Flying_Dragon.png",
+                "label": "飞龙"
+              },
+              {
+                "name": "天龙之怒",
+                "image": "Sky_Dragon's_Fury.png",
+                "label": "天龙之怒"
+              },
+              {
+                "name": "空中祸害",
+                "image": "Aerial_Bane.png",
+                "label": "空中祸害"
+              },
+              {
+                "name": "双足翼龙怒气",
+                "image": "Betsy's_Wrath.png",
+                "label": "双足翼龙怒气"
+              },
+              {
+                "name": "双足翼龙之翼",
+                "image": "Betsy's_Wings.png",
+                "label": "双足翼龙之翼"
+              },
+              {
+                "name": "双足翼龙面具",
+                "image": "Betsy_Mask.png",
+                "label": "双足翼龙面具"
+              },
+              {
+                "name": "双足翼龙纪念章",
+                "image": "Betsy_Trophy.png",
+                "label": "双足翼龙纪念章"
+              },
+              {
+                "name": "宝藏袋（双足翼龙）",
+                "image": "Treasure_Bag_(Betsy).png",
+                "note": "（仅限专家模式）",
+                "label": "宝藏袋（双足翼龙）（仅限专家模式）"
+              },
+              {
+                "name": "双足翼龙圣物",
+                "image": "Betsy_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "双足翼龙圣物（仅限大师模式）"
+              },
+              {
+                "name": "双足翼龙蛋",
+                "image": "Betsy's_Egg.png",
+                "note": "（仅限大师模式）",
+                "label": "双足翼龙蛋（仅限大师模式）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（撒旦军队）",
+                "image": "Music_Box_(Old_One's_Army).png",
+                "label": "八音盒（撒旦军队）"
+              },
+              {
+                "name": "异界八音盒（入侵）",
+                "image": "Otherworldly_Music_Box_(Invasion).png",
+                "label": "异界八音盒（入侵）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "派对": {
+    "name": "派对",
+    "wiki_title": "派对",
+    "page_type": "event",
+    "image": "BiomeBannerParty.png",
+    "search_terms": [],
+    "description": "嗯？今天没什么特别的……逗你玩呢！现在是派对时间！接下来就是余兴派对时间！\n\n—Emote Town Party Girl.gif派对女孩\n\n派对是一个事件，可以随机发生，或者用派对中心手动激活。派对主要是视觉效果，对游戏玩法没有什么功能效果——除了来自服装商和派对女孩的一些独有的时装和小玩具物品。派对持续到黄昏（下午 7:30），如果是随机生成的，则从黎明（上午 4:30）开始。\n\n在任意黎明，派对都有1/10 (10%)几率（或者Celebrationmk10世界中1/7 (14.29%)几率）发生（由一至三个NPC“举办”），无需放置派对中心。见下方获取详细条件。当 NPC 举办派对时，所有放置的派对中心都会被激活，每个 NPC 处会爆发出彩纸，并且会显示一条粉色的状态讯息：“好像<NPC 名字>、<NPC 名字>和<NPC 名字>正在举办派对”在结束时，派对会自动解除，同时每个 NPC 头顶会出现一团烟雾，并显示另一条粉色状态讯息：“派对时间结束！”随后依然可以手动重新启动派对。\n\n在派对期间，会激活以下效果：\n\n· 除了老人、骷髅商人、税收官、和动物学家的所有 NPC 都会戴上派对帽（包括城镇宠物和旅商）。NPC（城镇宠物除外）也会偶尔向附近的玩家丢彩纸。\n· 在背景中会持续地升起气球。\n· 兔兔也会戴上派对帽（但用虫网捕捉后只会掉落普通的兔兔）。在派对期间生成的宝石兔兔会被替换为普通的（戴着派对帽的）兔兔。\n· 服装商和派对女孩会出售额外的派对专属小玩具和时装物品。\n· 当与其交谈时，大多数 NPC 都会显示独特的话语。\n· 如果派对是自然发生的：在玩家与派对女孩对话时，她会给玩家一个蛋糕块。她每次派对只会提供该物品一次，即使在多人模式中也如此。酷酷史莱姆城镇宠物会入住。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "嗯？今天没什么特别的……逗你玩呢！现在是派对时间！接下来就是余兴派对时间！"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "—"
+        },
+        {
+          "type": "icon",
+          "image": "Emote_Town_Party_Girl.gif",
+          "alt": "Emote Town Party Girl.gif"
+        },
+        {
+          "type": "text",
+          "text": "派对女孩"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "派对是一个事件，可以随机发生，或者用派对中心手动激活。派对主要是视觉效果，对游戏玩法没有什么功能效果——除了来自服装商和派对女孩的一些独有的时装和小玩具物品。派对持续到黄昏（下午 7:30），如果是随机生成的，则从黎明（上午 4:30）开始。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在任意黎明，派对都有1/10 (10%)几率（或者Celebrationmk10世界中1/7 (14.29%)几率）发生（由一至三个NPC“举办”），无需放置派对中心。见下方获取详细条件。当 NPC 举办派对时，所有放置的派对中心都会被激活，每个 NPC 处会爆发出彩纸，并且会显示一条粉色的状态讯息：“好像<NPC 名字>、<NPC 名字>和<NPC 名字>正在举办派对”在结束时，派对会自动解除，同时每个 NPC 头顶会出现一团烟雾，并显示另一条粉色状态讯息：“派对时间结束！”随后依然可以手动重新启动派对。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在派对期间，会激活以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "除了老人、骷髅商人、税收官、和动物学家的所有 NPC 都会戴上派对帽（包括城镇宠物和旅商）。NPC（城镇宠物除外）也会偶尔向附近的玩家丢彩纸。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "在背景中会持续地升起气球。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "兔兔也会戴上派对帽（但用虫网捕捉后只会掉落普通的兔兔）。在派对期间生成的宝石兔兔会被替换为普通的（戴着派对帽的）兔兔。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "服装商和派对女孩会出售额外的派对专属小玩具和时装物品。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "当与其交谈时，大多数 NPC 都会显示独特的话语。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "如果派对是自然发生的：在玩家与派对女孩对话时，她会给玩家一个蛋糕块。她每次派对只会提供该物品一次，即使在多人模式中也如此。酷酷史莱姆城镇宠物会入住。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "敌怪:",
+            "items": [
+              {
+                "name": "彩纸史莱姆",
+                "image": "Confetti_Slime.png",
+                "label": "彩纸史莱姆"
+              },
+              {
+                "name": "气球史莱姆",
+                "image": "Balloon_Slime.png",
+                "label": "气球史莱姆"
+              }
+            ]
+          },
+          {
+            "title": "小动物：",
+            "items": [
+              {
+                "name": "派对兔兔",
+                "image": "Party_Bunny.png",
+                "label": "派对兔兔"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "售卖",
+        "boxes": [
+          {
+            "title": "来自派对女孩：",
+            "items": [
+              {
+                "name": "派对礼物",
+                "image": "Party_Present.png",
+                "note": "（20 SC）",
+                "label": "派对礼物（20 SC）"
+              },
+              {
+                "name": "猪龙彩罐",
+                "image": "Pigronata.png",
+                "note": "（1 GC）",
+                "label": "猪龙彩罐（1 GC）"
+              },
+              {
+                "name": "饰带",
+                "image": "Streamers.png",
+                "note": "（50 CC）",
+                "label": "饰带（50 CC）"
+              },
+              {
+                "name": "呆萌气球",
+                "image": "Silly_Balloons.png",
+                "note": "（1 SC）",
+                "label": "呆萌气球（1 SC）"
+              },
+              {
+                "name": "呆萌丝带气球",
+                "image": "Silly_Tied_Balloons.png",
+                "note": "（10 SC）",
+                "label": "呆萌丝带气球（10 SC）"
+              },
+              {
+                "name": "蛋糕块",
+                "image": "Slice_of_Cake.png",
+                "note": "（与派对女孩交谈）",
+                "label": "蛋糕块（与派对女孩交谈）"
+              }
+            ]
+          },
+          {
+            "title": "来自服装商：",
+            "items": [
+              {
+                "name": "派对气球束",
+                "image": "Bundled_Party_Balloons.png",
+                "note": "（2 GC）",
+                "label": "派对气球束（2 GC）"
+              },
+              {
+                "name": "气球兔兔",
+                "image": "Balloon_Animal.png",
+                "note": "（2 GC）",
+                "label": "气球兔兔（2 GC）"
+              },
+              {
+                "name": "呆萌向日葵套装",
+                "image": "Silly_Sunflower_set.png",
+                "note": "（9 GC）",
+                "label": "呆萌向日葵套装（9 GC）"
+              }
+            ]
+          },
+          {
+            "title": "来自商人:",
+            "items": [
+              {
+                "name": "彩虹荧光棒",
+                "image": "Rainbow_Glowstick.png",
+                "note": "(20 CC)",
+                "label": "彩虹荧光棒(20 CC)"
+              }
+            ]
+          },
+          {
+            "title": "来自动物学家:",
+            "items": [
+              {
+                "name": "虫群手榴弹",
+                "image": "Swarm_Grenade.png",
+                "note": "(10 GC)",
+                "label": "虫群手榴弹(10 GC)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "雨": {
+    "name": "雨",
+    "wiki_title": "雨",
+    "page_type": "event",
+    "image": "BiomeBannerRain.png",
+    "search_terms": [],
+    "description": "我希望别下雨了，漆还没干。下雨就惨了！\n\n—Emote Town Painter.gif油漆工\n\n雨是一个事件，在其持续时间内会影响所有地表生物群系。每场雨事件都是随机发生的且总是持续游戏内的 24小时（现实中的 24 分钟），经过白天和夜晚。当玩家在下雨期间位于雪原生物群系中时，它会以暴雪的形式呈现，导致降雪量增加。\n\n在当玩家至少使用一个生命水晶时方可出现\n\n雨主要具有美学上的效果，仅在地表上可见：它会显示雨/暴雪的图像效果，降低环境的日光/月光，增加云量，且会改变音乐。不过，它也有一些功能上的效果。\n\n事件会生成部分普通敌怪的变体种类，但也有一些独特的敌怪，且特定的小动物的行为会有所不同。部分有趣的效果包括僵尸穿雨衣，打伞的史莱姆，和金鱼用尾鳍悠闲地在地面行走（游泳的金鱼能够离开水行走，而行走的金鱼也会在地面生成）。\n\n在电脑版电脑版、主机版主机版、和移动版移动版中，雨有三种不同的变化：小雨、普通的雨、和暴雨。雨下得越大，日光就越暗，而暴雨则会导致可观的变暗。这些变化只是视觉上的，可以被天气收音机检测到，且在一场降雨期间可能会改变多次。\n\n在电脑版电脑版、主机版主机版、和移动版移动版中，发生雨的几率可以通过杀死瓢虫来提升。\n\n雨不会产生新的水图格，也不会使得现存的水面上升，它也对熔岩或蜂蜜图格没有任何效果。\n\n其他效果包括以下内容：\n\n· 在雨期间，将提桶丢弃在地表，则会变为水桶\n· 在雨期间，在所有液体中具有 +20%渔力的奖励。\n· 水叶草开花。\n· 蠕虫会频繁地在森林生物群系中生成。\n· NPC会待在他们的房屋中，就像在夜晚一样。\n· (电脑版、主机版、和移动版)玩家人物在暴雪中的室外时会眯眼。\n· 地表植物生长速度更快",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "我希望别下雨了，漆还没干。下雨就惨了！"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "—"
+        },
+        {
+          "type": "icon",
+          "image": "Emote_Town_Painter.gif",
+          "alt": "Emote Town Painter.gif"
+        },
+        {
+          "type": "text",
+          "text": "油漆工"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "雨是一个事件，在其持续时间内会影响所有地表生物群系。每场雨事件都是随机发生的且总是持续游戏内的 24小时（现实中的 24 分钟），经过白天和夜晚。当玩家在下雨期间位于雪原生物群系中时，它会以暴雪的形式呈现，导致降雪量增加。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在当玩家至少使用一个生命水晶时方可出现"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "雨主要具有美学上的效果，仅在地表上可见：它会显示雨/暴雪的图像效果，降低环境的日光/月光，增加云量，且会改变音乐。不过，它也有一些功能上的效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "事件会生成部分普通敌怪的变体种类，但也有一些独特的敌怪，且特定的小动物的行为会有所不同。部分有趣的效果包括僵尸穿雨衣，打伞的史莱姆，和金鱼用尾鳍悠闲地在地面行走（游泳的金鱼能够离开水行走，而行走的金鱼也会在地面生成）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，雨有三种不同的变化：小雨、普通的雨、和暴雨。雨下得越大，日光就越暗，而暴雨则会导致可观的变暗。这些变化只是视觉上的，可以被天气收音机检测到，且在一场降雨期间可能会改变多次。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，发生雨的几率可以通过杀死瓢虫来提升。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "雨不会产生新的水图格，也不会使得现存的水面上升，它也对熔岩或蜂蜜图格没有任何效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其他效果包括以下内容："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "在雨期间，将提桶丢弃在地表，则会变为水桶"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "在雨期间，在所有液体中具有 +20%渔力的奖励。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "水叶草开花。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "蠕虫会频繁地在森林生物群系中生成。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "NPC会待在他们的房屋中，就像在夜晚一样。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "(电脑版、主机版、和移动版)玩家人物在暴雪中的室外时会眯眼。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "地表植物生长速度更快"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "困难模式之前：",
+            "items": [
+              {
+                "name": "飞鱼",
+                "image": "Flying_Fish.png",
+                "label": "飞鱼"
+              },
+              {
+                "name": "雨伞史莱姆",
+                "image": "Umbrella_Slime.png",
+                "label": "雨伞史莱姆"
+              },
+              {
+                "name": "雨衣僵尸",
+                "image": "Raincoat_Zombie.png",
+                "note": "（夜晚）",
+                "label": "雨衣僵尸（夜晚）"
+              }
+            ]
+          },
+          {
+            "title": "暴雪期间：",
+            "items": [
+              {
+                "name": "独眼巨鹿",
+                "image": "Deerclops.png",
+                "note": "（稀有）",
+                "label": "独眼巨鹿（稀有）"
+              }
+            ]
+          },
+          {
+            "title": "困难模式期间：",
+            "items": [
+              {
+                "name": "愤怒雨云怪",
+                "image": "Angry_Nimbus.png",
+                "note": "（不常见）",
+                "label": "愤怒雨云怪（不常见）"
+              },
+              {
+                "name": "彩虹史莱姆",
+                "image": "Rainbow_Slime.gif",
+                "note": "（神圣之地，稀有）",
+                "label": "彩虹史莱姆（神圣之地，稀有）"
+              }
+            ]
+          },
+          {
+            "title": "困难模式暴雪期间：",
+            "items": [
+              {
+                "name": "冰雪巨人",
+                "image": "Ice_Golem.png",
+                "note": "（稀有）",
+                "label": "冰雪巨人（稀有）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自雨衣僵尸：",
+            "items": [
+              {
+                "name": "雨帽",
+                "image": "Rain_Hat.png",
+                "label": "雨帽"
+              },
+              {
+                "name": "雨衣",
+                "image": "Rain_Coat.png",
+                "label": "雨衣"
+              }
+            ]
+          },
+          {
+            "title": "来自雨伞史莱姆：",
+            "items": [
+              {
+                "name": "伞帽",
+                "image": "Umbrella_Hat.png",
+                "label": "伞帽"
+              }
+            ]
+          },
+          {
+            "title": "来自飞鱼：",
+            "items": [
+              {
+                "name": "炸薯条",
+                "image": "Fries.png",
+                "label": "炸薯条"
+              },
+              {
+                "name": "雨歌",
+                "image": "Rain_Song.png",
+                "label": "雨歌"
+              }
+            ]
+          },
+          {
+            "title": "来自独眼巨鹿：",
+            "items": [
+              {
+                "name": "眼骨",
+                "image": "Eye_Bone.png",
+                "label": "眼骨"
+              },
+              {
+                "name": "眼球伞",
+                "image": "Eyebrella.png",
+                "label": "眼球伞"
+              },
+              {
+                "name": "收音机",
+                "image": "Radio_Thing.png",
+                "label": "收音机"
+              },
+              {
+                "name": "气喇叭",
+                "image": "Pew-matic_Horn.png",
+                "label": "气喇叭"
+              },
+              {
+                "name": "天候棒",
+                "image": "Weather_Pain.png",
+                "label": "天候棒"
+              },
+              {
+                "name": "眼球激光塔",
+                "image": "Houndius_Shootius.png",
+                "label": "眼球激光塔"
+              },
+              {
+                "name": "露西斧",
+                "image": "Lucy_the_Axe.png",
+                "label": "露西斧"
+              },
+              {
+                "name": "独眼巨鹿面具",
+                "image": "Deerclops_Mask.png",
+                "label": "独眼巨鹿面具"
+              },
+              {
+                "name": "独眼巨鹿纪念章",
+                "image": "Deerclops_Trophy.png",
+                "label": "独眼巨鹿纪念章"
+              },
+              {
+                "name": "宝藏袋（独眼巨鹿）",
+                "image": "Treasure_Bag_(Deerclops).png",
+                "note": "（仅专家模式）",
+                "label": "宝藏袋（独眼巨鹿）（仅专家模式）"
+              },
+              {
+                "name": "骸骨头盔",
+                "image": "Bone_Helm.png",
+                "note": "（仅专家模式）",
+                "label": "骸骨头盔（仅专家模式）"
+              },
+              {
+                "name": "独眼巨鹿眼球",
+                "image": "Deerclops_Eyeball.png",
+                "note": "（仅大师模式）",
+                "label": "独眼巨鹿眼球（仅大师模式）"
+              },
+              {
+                "name": "独眼巨鹿圣物",
+                "image": "Deerclops_Relic.png",
+                "note": "（仅大师模式）",
+                "label": "独眼巨鹿圣物（仅大师模式）"
+              }
+            ]
+          },
+          {
+            "title": "来自愤怒雨云怪：",
+            "items": [
+              {
+                "name": "雨云魔杖",
+                "image": "Nimbus_Rod.png",
+                "label": "雨云魔杖"
+              }
+            ]
+          },
+          {
+            "title": "来自彩虹史莱姆：",
+            "items": [
+              {
+                "name": "彩虹砖",
+                "image": "Rainbow_Brick.gif",
+                "label": "彩虹砖"
+              }
+            ]
+          },
+          {
+            "title": "来自冰雪巨人：",
+            "items": [
+              {
+                "name": "冰雪羽",
+                "image": "Ice_Feather.png",
+                "label": "冰雪羽"
+              },
+              {
+                "name": "寒霜核",
+                "image": "Frost_Core.png",
+                "label": "寒霜核"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（雨）",
+                "image": "Music_Box_(Rain).png",
+                "label": "八音盒（雨）"
+              },
+              {
+                "name": "八音盒（晨雨）",
+                "image": "Music_Box_(Morning_Rain).png",
+                "label": "八音盒（晨雨）"
+              },
+              {
+                "name": "异界八音盒（雨）",
+                "image": "Otherworldly_Music_Box_(Rain).png",
+                "label": "异界八音盒（雨）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "沙尘暴": {
+    "name": "沙尘暴",
+    "wiki_title": "沙尘暴",
+    "page_type": "event",
+    "image": "BiomeBannerSandstorm.png",
+    "search_terms": [],
+    "description": "沙尘暴是一个专属于沙漠的事件，会同时在所有的沙漠中发生。在此事件激活时，会持续对玩家施加强风减益，不过它可以通过站在背景墙前抵消。发生沙尘暴时，天气收音机和其升级物会在“沙尘暴”和基础读数之间切换。\n\n在沙尘暴期间，屏幕上可见飞扬的沙粒子。这些粒子的颜色会随着沙漠是纯净、腐化、猩红、或神圣而改变。玩家的视野也会受限。该效果在彩色和白光照明模式下会增强，可能在某些设备上会较为消耗资源；使用复古或迷幻设置会移除大部分的效果。\n\n在沙尘暴期间，常见于地下沙漠中的敌怪和数个新的危险敌怪会在地表生成。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "沙尘暴是一个专属于沙漠的事件，会同时在所有的沙漠中发生。在此事件激活时，会持续对玩家施加强风减益，不过它可以通过站在背景墙前抵消。发生沙尘暴时，天气收音机和其升级物会在“沙尘暴”和基础读数之间切换。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在沙尘暴期间，屏幕上可见飞扬的沙粒子。这些粒子的颜色会随着沙漠是纯净、腐化、猩红、或神圣而改变。玩家的视野也会受限。该效果在彩色和白光照明模式下会增强，可能在某些设备上会较为消耗资源；使用复古或迷幻设置会移除大部分的效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在沙尘暴期间，常见于地下沙漠中的敌怪和数个新的危险敌怪会在地表生成。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "打败克苏鲁之眼之前：",
+            "items": [
+              {
+                "name": "愤怒翻滚怪",
+                "image": "Angry_Tumbler.png",
+                "label": "愤怒翻滚怪"
+              },
+              {
+                "name": "蚁狮",
+                "image": "Antlion.png",
+                "label": "蚁狮"
+              },
+              {
+                "name": "秃鹰",
+                "image": "Vulture.png",
+                "label": "秃鹰"
+              }
+            ]
+          },
+          {
+            "title": "困难模式之前：",
+            "items": [
+              {
+                "name": "愤怒翻滚怪",
+                "image": "Angry_Tumbler.png",
+                "label": "愤怒翻滚怪"
+              },
+              {
+                "name": "蚁狮马",
+                "image": "Antlion_Charger.png",
+                "label": "蚁狮马"
+              },
+              {
+                "name": "蚁狮蜂",
+                "image": "Antlion_Swarmer.png",
+                "label": "蚁狮蜂"
+              }
+            ]
+          },
+          {
+            "title": "困难模式：",
+            "items": [
+              {
+                "name": "沙尘精",
+                "image": "Sand_Elemental.png",
+                "label": "沙尘精"
+              },
+              {
+                "name": "沙虫",
+                "image": "Dune_Splicer.png",
+                "label": "沙虫"
+              },
+              {
+                "name": "沙鲨",
+                "image": "Sand_Shark.png",
+                "note": "（常规沙漠）",
+                "label": "沙鲨（常规沙漠）"
+              },
+              {
+                "name": "水晶沙鲨",
+                "image": "Crystal_Thresher.png",
+                "note": "（神圣沙漠）",
+                "label": "水晶沙鲨（神圣沙漠）"
+              },
+              {
+                "name": "噬骨沙鲨",
+                "image": "Bone_Biter.png",
+                "note": "（腐化沙漠）",
+                "label": "噬骨沙鲨（腐化沙漠）"
+              },
+              {
+                "name": "戮血沙鲨",
+                "image": "Flesh_Reaver.png",
+                "note": "（猩红沙漠）",
+                "label": "戮血沙鲨（猩红沙漠）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自愤怒翻滚怪、沙鲨、水晶沙鲨、噬骨沙鲨、和戮血沙鲨：",
+            "items": [
+              {
+                "name": "玉米片",
+                "image": "Nachos.png",
+                "label": "玉米片"
+              }
+            ]
+          },
+          {
+            "title": "来自沙鲨、水晶沙鲨、噬骨沙鲨、和戮血沙鲨：",
+            "items": [
+              {
+                "name": "沙鲨风筝",
+                "image": "Sand_Shark_Kite.png",
+                "note": "（在大风天）",
+                "label": "沙鲨风筝（在大风天）"
+              },
+              {
+                "name": "鲨鱼鳍",
+                "image": "Shark_Fin.png",
+                "label": "鲨鱼鳍"
+              }
+            ]
+          },
+          {
+            "title": "来自沙尘精：",
+            "items": [
+              {
+                "name": "禁戒碎片",
+                "image": "Forbidden_Fragment.png",
+                "label": "禁戒碎片"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（沙尘暴）",
+                "image": "Music_Box_(Sandstorm).png",
+                "label": "八音盒（沙尘暴）"
+              },
+              {
+                "name": "异界八音盒（沙漠）",
+                "image": "Otherworldly_Music_Box_(Desert).png",
+                "label": "异界八音盒（沙漠）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "史莱姆雨": {
+    "name": "史莱姆雨",
+    "wiki_title": "史莱姆雨",
+    "page_type": "event",
+    "image": "BiomeBannerSlimeRain.png",
+    "search_terms": [],
+    "description": "Bestiary Slime Rain.png“史莱姆从天而降！”Bestiary Slime Rain.png\n\n史莱姆雨是一个小型的事件，会让绿史莱姆、蓝史莱姆、紫史莱姆、以及稀有的粉史莱姆频繁生成。在事件期间，和天然生成的史莱姆不同，所有生成的史莱姆在生成时就会对玩家展现敌对行为；绿史莱姆、蓝史莱姆、和紫史莱姆也会在背景中下落。在事件期间，史莱姆王会在打败 150 个史莱姆后生成。如果此前已经在世界中打败了史莱姆王，则在打败 75 个史莱姆后它就会生成。\n\n史莱姆雨会随机发生，状态讯息“史莱姆从天而降！”标志着其开始。通常持续 9 分钟到 15 分钟，但是击败史莱姆王会立即结束事件。史莱姆雨不会在玩家离开世界时结束。事件结束时出现状态讯息：“史莱姆已停止从天而降。”。",
+    "description_rich": [
+      [
+        {
+          "type": "icon",
+          "image": "Bestiary_Slime_Rain.png",
+          "alt": "Bestiary Slime Rain.png"
+        },
+        {
+          "type": "text",
+          "text": "“史莱姆从天而降！”"
+        },
+        {
+          "type": "icon",
+          "image": "Bestiary_Slime_Rain.png",
+          "alt": "Bestiary Slime Rain.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "史莱姆雨是一个小型的事件，会让绿史莱姆、蓝史莱姆、紫史莱姆、以及稀有的粉史莱姆频繁生成。在事件期间，和天然生成的史莱姆不同，所有生成的史莱姆在生成时就会对玩家展现敌对行为；绿史莱姆、蓝史莱姆、和紫史莱姆也会在背景中下落。在事件期间，史莱姆王会在打败 150 个史莱姆后生成。如果此前已经在世界中打败了史莱姆王，则在打败 75 个史莱姆后它就会生成。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "史莱姆雨会随机发生，状态讯息“史莱姆从天而降！”标志着其开始。通常持续 9 分钟到 15 分钟，但是击败史莱姆王会立即结束事件。史莱姆雨不会在玩家离开世界时结束。事件结束时出现状态讯息：“史莱姆已停止从天而降。”。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "绿史莱姆",
+                "image": "Green_Slime.png",
+                "label": "绿史莱姆"
+              },
+              {
+                "name": "蓝史莱姆",
+                "image": "Blue_Slime.png",
+                "label": "蓝史莱姆"
+              },
+              {
+                "name": "紫史莱姆",
+                "image": "Purple_Slime.png",
+                "label": "紫史莱姆"
+              },
+              {
+                "name": "云史莱姆",
+                "image": "Cloud_Slime.png",
+                "label": "云史莱姆"
+              },
+              {
+                "name": "粉史莱姆",
+                "image": "Pinky.png",
+                "label": "粉史莱姆"
+              },
+              {
+                "name": "史莱姆王",
+                "image": "King_Slime.png",
+                "note": "（Boss）",
+                "label": "史莱姆王（Boss）"
+              }
+            ]
+          },
+          {
+            "title": "来自专家模式下的史莱姆王：",
+            "items": [
+              {
+                "name": "尖刺史莱姆",
+                "image": "Spiked_Slime.png",
+                "label": "尖刺史莱姆"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自史莱姆王：",
+            "items": [
+              {
+                "name": "固化机",
+                "image": "Solidifier.png",
+                "label": "固化机"
+              },
+              {
+                "name": "忍者兜帽",
+                "image": "Ninja_Hood.png",
+                "label": "忍者兜帽"
+              },
+              {
+                "name": "忍者衣",
+                "image": "Ninja_Shirt.png",
+                "label": "忍者衣"
+              },
+              {
+                "name": "忍者裤",
+                "image": "Ninja_Pants.png",
+                "label": "忍者裤"
+              },
+              {
+                "name": "弱效治疗药水",
+                "image": "Lesser_Healing_Potion.png",
+                "label": "弱效治疗药水"
+              },
+              {
+                "name": "粘鞍",
+                "image": "Slimy_Saddle.png",
+                "label": "粘鞍"
+              },
+              {
+                "name": "史莱姆枪",
+                "image": "Slime_Gun.png",
+                "label": "史莱姆枪"
+              },
+              {
+                "name": "史莱姆钩",
+                "image": "Slime_Hook.png",
+                "label": "史莱姆钩"
+              },
+              {
+                "name": "史莱姆王纪念章",
+                "image": "King_Slime_Trophy.png",
+                "label": "史莱姆王纪念章"
+              },
+              {
+                "name": "史莱姆王面具",
+                "image": "King_Slime_Mask.png",
+                "label": "史莱姆王面具"
+              },
+              {
+                "name": "宝藏袋（史莱姆王）",
+                "image": "Treasure_Bag_(King_Slime).png",
+                "note": "（仅限专家模式）",
+                "label": "宝藏袋（史莱姆王）（仅限专家模式）"
+              },
+              {
+                "name": "皇家凝胶",
+                "image": "Royal_Gel.png",
+                "note": "（仅限专家模式）",
+                "label": "皇家凝胶（仅限专家模式）"
+              },
+              {
+                "name": "史莱姆王圣物",
+                "image": "King_Slime_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "史莱姆王圣物（仅限大师模式）"
+              },
+              {
+                "name": "皇家美味",
+                "image": "Royal_Delight.png",
+                "note": "（仅限大师模式）",
+                "label": "皇家美味（仅限大师模式）"
+              }
+            ]
+          },
+          {
+            "title": "来自蓝史莱姆、绿史莱姆、和紫史莱姆：",
+            "items": [
+              {
+                "name": "凝胶",
+                "image": "Gel.png",
+                "label": "凝胶"
+              }
+            ]
+          },
+          {
+            "title": "来自粉史莱姆：",
+            "items": [
+              {
+                "name": "粉凝胶",
+                "image": "Pink_Gel.png",
+                "label": "粉凝胶"
+              }
+            ]
+          },
+          {
+            "title": "罕见掉落：",
+            "items": [
+              {
+                "name": "史莱姆法杖",
+                "image": "Slime_Staff.png",
+                "label": "史莱姆法杖"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（史莱姆雨）",
+                "image": "Music_Box_(Slime_Rain).png",
+                "label": "八音盒（史莱姆雨）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "火把神": {
+    "name": "火把神",
+    "wiki_title": "火把神",
+    "page_type": "event",
+    "image": "BiomeBannerTorchGod.png",
+    "search_terms": [],
+    "description": "What am I?What am I?What am I?I am the Torch God!\n\n—Alternate Torch God 歌词\n\n火把神是一个事件，通过在地下放置大量火把的方式触发。此事件内容为躲避射弹，且存活的玩家会获得火把神的恩宠奖励，此物品可为玩家提供让被放置的火把自动匹配所处生物群系的选项。在大部分区域内，将火把放置在相匹配的生物群系中可以对玩家的运气带来正面影响。\n\n该事件可在任何生物群系中开始，需要以玩家的中心为中心周围的 41×41 格的长方形区域内有至少 101 个任何类型的火把，且玩家在地表地层以下。由于游戏在玩家移动时会将某些火把错误地重复计算，该事件可能会在少于 101 个火把被放置时开始。如果人物已经使用了火把神的恩宠，或是在物品栏中有一个该物品，火把神事件将不会开始。\n\n火把神事件开始时，火把的火焰会作为射弹射向玩家，每次一个。它们发射的顺序是随机的，每秒发射 3 个射弹，并造成 40 /80/120基础伤害。射弹能够穿过物块到达玩家处，但在经过玩家后就能重新与物块发生碰撞。每个火把会发射一个射弹，然后自己熄灭，就像它被电线关闭了一样。在整个事件的持续时间内，玩家会被施加黑视减益，极大地降低可视性。\n\n一旦周围的所有火把被耗尽，火把神事件就会结束，最多进行 200 次攻击。如果至少有 95 个火把发射了射弹，玩家就会被奖励火把神的恩宠物品。事件结束时，所有火把会被重新点亮。如果玩家死亡或离开地下，事件会提前结束且不会奖励任何东西；如果玩家进入没有火把的区域，事件也会提前结束，但如果至少有 95 个火把发射了射弹，仍会奖励火把神的恩宠。\n\n当火把神活着时，会播放《火把神》音乐。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《血肉墙（异界版）》。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "What am I?What am I?What am I?I am the Torch God!"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "—Alternate Torch God 歌词"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "火把神是一个事件，通过在地下放置大量火把的方式触发。此事件内容为躲避射弹，且存活的玩家会获得火把神的恩宠奖励，此物品可为玩家提供让被放置的火把自动匹配所处生物群系的选项。在大部分区域内，将火把放置在相匹配的生物群系中可以对玩家的运气带来正面影响。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "该事件可在任何生物群系中开始，需要以玩家的中心为中心周围的 41×41 格的长方形区域内有至少 101 个任何类型的火把，且玩家在地表地层以下。由于游戏在玩家移动时会将某些火把错误地重复计算，该事件可能会在少于 101 个火把被放置时开始。如果人物已经使用了火把神的恩宠，或是在物品栏中有一个该物品，火把神事件将不会开始。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "火把神事件开始时，火把的火焰会作为射弹射向玩家，每次一个。它们发射的顺序是随机的，每秒发射 3 个射弹，并造成 40 /80/120基础伤害。射弹能够穿过物块到达玩家处，但在经过玩家后就能重新与物块发生碰撞。每个火把会发射一个射弹，然后自己熄灭，就像它被电线关闭了一样。在整个事件的持续时间内，玩家会被施加黑视减益，极大地降低可视性。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "一旦周围的所有火把被耗尽，火把神事件就会结束，最多进行 200 次攻击。如果至少有 95 个火把发射了射弹，玩家就会被奖励火把神的恩宠物品。事件结束时，所有火把会被重新点亮。如果玩家死亡或离开地下，事件会提前结束且不会奖励任何东西；如果玩家进入没有火把的区域，事件也会提前结束，但如果至少有 95 个火把发射了射弹，仍会奖励火把神的恩宠。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当火把神活着时，会播放《火把神》音乐。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《血肉墙（异界版）》。"
+        }
+      ]
+    ]
+  },
+  "大风天": {
+    "name": "大风天",
+    "wiki_title": "大风天",
+    "page_type": "event",
+    "image": "BiomeBannerWindyDay.png",
+    "search_terms": [],
+    "description": "风吹叶，叶轻歌。\n\n—巫医\n\n大风天是当风速超过 20mph时发生的一个事件。玩家使用至少一个生命水晶时，即可自然发生。风速减少到低于 16 mph 后，事件即停。风可以来自东方也可以来自西方，使诸如树、藤蔓、植物、旗帜和灯笼之类的背景物体向同一方向摇摆。它会显示增加的风效以及使背景中出现更多的云。\n\n大风天中包含数个仅在白天生成的独特实体，例如瓢虫、绑在飞行气球上的史莱姆、和愤怒蒲公英。事件中某些敌怪有几率掉落风筝，商人会出售风车。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "风吹叶，叶轻歌。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "—巫医"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "大风天是当风速超过 20mph时发生的一个事件。玩家使用至少一个生命水晶时，即可自然发生。风速减少到低于 16 mph 后，事件即停。风可以来自东方也可以来自西方，使诸如树、藤蔓、植物、旗帜和灯笼之类的背景物体向同一方向摇摆。它会显示增加的风效以及使背景中出现更多的云。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "大风天中包含数个仅在白天生成的独特实体，例如瓢虫、绑在飞行气球上的史莱姆、和愤怒蒲公英。事件中某些敌怪有几率掉落风筝，商人会出售风车。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "大风气球怪",
+                "image": "Windy_Balloon.png",
+                "label": "大风气球怪"
+              },
+              {
+                "name": "愤怒蒲公英",
+                "image": "Angry_Dandelion.png",
+                "label": "愤怒蒲公英"
+              }
+            ]
+          },
+          {
+            "title": "小动物：",
+            "items": [
+              {
+                "name": "瓢虫",
+                "image": "Ladybug.png",
+                "label": "瓢虫"
+              },
+              {
+                "name": "金瓢虫",
+                "image": "Gold_Ladybug.png",
+                "note": "(稀有)",
+                "label": "金瓢虫(稀有)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自大风气球怪：",
+            "items": [
+              {
+                "name": "蓝风筝",
+                "image": "Blue_Kite.png",
+                "label": "蓝风筝"
+              },
+              {
+                "name": "蓝黄风筝",
+                "image": "Blue_and_Yellow_Kite.png",
+                "label": "蓝黄风筝"
+              },
+              {
+                "name": "红风筝",
+                "image": "Red_Kite.png",
+                "label": "红风筝"
+              },
+              {
+                "name": "红黄风筝",
+                "image": "Red_and_Yellow_Kite.png",
+                "label": "红黄风筝"
+              },
+              {
+                "name": "黄风筝",
+                "image": "Yellow_Kite.png",
+                "label": "黄风筝"
+              },
+              {
+                "name": "兔兔风筝",
+                "image": "Bunny_Kite.png",
+                "label": "兔兔风筝"
+              },
+              {
+                "name": "金鱼风筝",
+                "image": "Goldfish_Kite.png",
+                "label": "金鱼风筝"
+              },
+              {
+                "name": "纸飞机",
+                "image": "Paper_Airplane.png",
+                "label": "纸飞机"
+              },
+              {
+                "name": "白纸飞机",
+                "image": "White_Paper_Airplane.png",
+                "label": "白纸飞机"
+              }
+            ]
+          },
+          {
+            "title": "来自腐化兔兔：",
+            "items": [
+              {
+                "name": "腐化兔兔风筝",
+                "image": "Corrupt_Bunny_Kite.png",
+                "label": "腐化兔兔风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自毒兔兔：",
+            "items": [
+              {
+                "name": "猩红兔兔风筝",
+                "image": "Crimson_Bunny_Kite.png",
+                "label": "猩红兔兔风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自食人怪：",
+            "items": [
+              {
+                "name": "食人怪风筝",
+                "image": "Man_Eater_Kite.png",
+                "label": "食人怪风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自蓝水母：",
+            "items": [
+              {
+                "name": "蓝水母风筝",
+                "image": "Blue_Jellyfish_Kite.png",
+                "label": "蓝水母风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自粉水母：",
+            "items": [
+              {
+                "name": "粉水母风筝",
+                "image": "Pink_Jellyfish_Kite.png",
+                "label": "粉水母风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自鲨鱼：",
+            "items": [
+              {
+                "name": "鲨鱼风筝",
+                "image": "Shark_Kite.png",
+                "label": "鲨鱼风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自骨蛇：",
+            "items": [
+              {
+                "name": "骨蛇风筝",
+                "image": "Bone_Serpent_Kite.png",
+                "label": "骨蛇风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自游荡眼球怪：",
+            "items": [
+              {
+                "name": "游荡眼球怪风筝",
+                "image": "Wandering_Eye_Kite.png",
+                "label": "游荡眼球怪风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自独角兽：",
+            "items": [
+              {
+                "name": "独角兽风筝",
+                "image": "Unicorn_Kite.png",
+                "label": "独角兽风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自吞世怪：",
+            "items": [
+              {
+                "name": "吞世怪风筝",
+                "image": "World_Feeder_Kite.png",
+                "label": "吞世怪风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自沙鲨：",
+            "items": [
+              {
+                "name": "沙鲨风筝",
+                "image": "Sand_Shark_Kite.png",
+                "label": "沙鲨风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自飞龙：",
+            "items": [
+              {
+                "name": "飞龙风筝",
+                "image": "Wyvern_Kite.png",
+                "label": "飞龙风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自猪龙：",
+            "items": [
+              {
+                "name": "猪龙风筝",
+                "image": "Pigron_Kite.png",
+                "label": "猪龙风筝"
+              }
+            ]
+          },
+          {
+            "title": "来自愤怒捕手：",
+            "items": [
+              {
+                "name": "愤怒捕手风筝",
+                "image": "Angry_Trapper_Kite.png",
+                "label": "愤怒捕手风筝"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "售卖",
+        "boxes": [
+          {
+            "title": "来自商人：",
+            "items": [
+              {
+                "name": "风车",
+                "image": "Pin_Wheel.png",
+                "label": "风车"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（大风天）",
+                "image": "Music_Box_(Windy_Day).png",
+                "label": "八音盒（大风天）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "雪人军团": {
+    "name": "雪人军团",
+    "wiki_title": "雪人军团",
+    "page_type": "event",
+    "image": "BiomeBannerFrostLegion.png",
+    "search_terms": [],
+    "description": "这位热心市民，不必担心！我已经充分了解到雪人中的有组织犯罪问题。\n\n—Emote Town Princess.gif公主\n\nBestiary Frost Legion.png“雪人军团来了！”Bestiary Frost Legion.png\n\n雪人军团是一个困难模式入侵事件，会使得独特的雪人敌怪代替常规敌怪生成。雪人军团不会自然发生，而是用水晶雪球手工召唤。\n\n在事件开始后，雪人军团会从世界的随机一侧始发（由下列两个状态讯息之一提示：“雪人军团正从西边逼近！”/“雪人军团正从东边逼近！”）并向世界生成点移动。状态讯息“雪人军团来了！”会在雪人军团到达了世界生成点时显示。事件敌怪仅能在雪人军团的位置附近或在城镇NPC附近生成。见备注获取细节。\n\n雪人军团在击杀足够多来自它的敌怪后即完成。在电脑版电脑版、主机版主机版、和移动版移动版中，会显示进度条来展示事件进度。\n\n击败雪人军团至少一次会满足圣诞老人NPC入住的条件。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "这位热心市民，不必担心！我已经充分了解到雪人中的有组织犯罪问题。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "—"
+        },
+        {
+          "type": "icon",
+          "image": "Emote_Town_Princess.gif",
+          "alt": "Emote Town Princess.gif"
+        },
+        {
+          "type": "text",
+          "text": "公主"
+        }
+      ],
+      [
+        {
+          "type": "icon",
+          "image": "Bestiary_Frost_Legion.png",
+          "alt": "Bestiary Frost Legion.png"
+        },
+        {
+          "type": "text",
+          "text": "“雪人军团来了！”"
+        },
+        {
+          "type": "icon",
+          "image": "Bestiary_Frost_Legion.png",
+          "alt": "Bestiary Frost Legion.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "雪人军团是一个困难模式入侵事件，会使得独特的雪人敌怪代替常规敌怪生成。雪人军团不会自然发生，而是用水晶雪球手工召唤。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在事件开始后，雪人军团会从世界的随机一侧始发（由下列两个状态讯息之一提示：“雪人军团正从西边逼近！”/“雪人军团正从东边逼近！”）并向世界生成点移动。状态讯息“雪人军团来了！”会在雪人军团到达了世界生成点时显示。事件敌怪仅能在雪人军团的位置附近或在城镇NPC附近生成。见备注获取细节。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "雪人军团在击杀足够多来自它的敌怪后即完成。在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，会显示进度条来展示事件进度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "击败雪人军团至少一次会满足圣诞老人NPC入住的条件。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "敌怪：",
+            "items": [
+              {
+                "name": "戳刺先生",
+                "image": "Mister_Stabby.png",
+                "label": "戳刺先生"
+              },
+              {
+                "name": "雪人暴徒",
+                "image": "Snowman_Gangsta.png",
+                "label": "雪人暴徒"
+              },
+              {
+                "name": "巴拉雪人",
+                "image": "Snow_Balla.png",
+                "label": "巴拉雪人"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自所有敌怪：",
+            "items": [
+              {
+                "name": "雪块",
+                "image": "Snow_Block.png",
+                "label": "雪块"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（Boss 3）",
+                "image": "Music_Box_(Boss_3).png",
+                "label": "八音盒（Boss 3）"
+              },
+              {
+                "name": "异界八音盒（入侵）",
+                "image": "Otherworldly_Music_Box_(Invasion).png",
+                "label": "异界八音盒（入侵）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "霜月": {
+    "name": "霜月",
+    "wiki_title": "霜月",
+    "page_type": "event",
+    "image": "BiomeBannerFrostMoon.png",
+    "search_terms": [],
+    "description": "Bestiary Frost Moon.png“霜月正在升起……”Bestiary Frost Moon.png\n\n霜月是一种困难模式，世纪之花后的，以圣诞节为主题的事件，可用调皮礼物于任意时间在夜晚召唤，结束于黎明（4:30AM）。它可以在一年内的任意时间被召唤，并不需要实际处于圣诞节季节中。在该事件期间，特殊的且极度困难的敌怪会高速生成攻击玩家。它与南瓜月事件相似，但包含更多波数且略多的内容。视觉上，月亮会变为雪人头的样子，但保留当前的月相。\n\n整个事件由 20 波组成。当玩家达到某些击杀分数时，波数会推进。在波数所需的分数得以满足后，下一波即开始，并且击杀分数重置为 0。状态讯息会指示波数何时推进，以及已经达到哪一波。请参阅下表来了解每个敌怪所能获得的分数以及每一波所需要的分数。专家模式(电脑版、主机版、和移动版)世界会得到 2 倍的分数，而大师模式(电脑版、主机版、和移动版)则会得到 2.5 倍的分数。在电脑版电脑版、主机版主机版、和移动版移动版中，总分会在事件结束后显示。\n\n霜月事件总是在上午4:30 结束。此事件的目标是在事件结束之前到达 20 波，但事件的(电脑版、主机版、和移动版)成就则会在 15 波时就被给予。\n\n召唤霜月的调皮礼物需要的材料只在玩家已经打败世纪之花的困难模式世界中可用（但事件本身在困难模式之前的世界中可以召唤）。因此，它甚至对于具有最棒的装备的玩家都是个挑战。在最终波中，需要同时与多个Boss级的敌怪战斗。\n\n霜月敌怪掉落强大的武器和配饰，以及宠物和时装物品。大多数掉落物极为少见，即使是已经设法完成整个事件的玩家也会发现它们需要如此多次才能得到它们。Boss 掉落物的掉落率随着完成的波数增加而提高。参见下表以获取更加详细的拾取物和纪念章掉落率信息。\n\n在电脑版电脑版、主机版主机版、和移动版移动版中，在 4:30 AM 前达到 15 波会在黎明时（4:30 AM）显示信息“圣诞节的气氛传播着快乐……”。接下来的整个白天和整个黑夜，会显示所有圣诞节的特效。在翌日 4:30 AM，信息“圣诞节的气氛消失了……”会出现，然后所有的圣诞节事件将不再出现直至圣诞节再次来临或玩家再一次达到霜月的 15 波。",
+    "description_rich": [
+      [
+        {
+          "type": "icon",
+          "image": "Bestiary_Frost_Moon.png",
+          "alt": "Bestiary Frost Moon.png"
+        },
+        {
+          "type": "text",
+          "text": "“霜月正在升起……”"
+        },
+        {
+          "type": "icon",
+          "image": "Bestiary_Frost_Moon.png",
+          "alt": "Bestiary Frost Moon.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "霜月是一种困难模式，世纪之花后的，以圣诞节为主题的事件，可用调皮礼物于任意时间在夜晚召唤，结束于黎明（4:30AM）。它可以在一年内的任意时间被召唤，并不需要实际处于圣诞节季节中。在该事件期间，特殊的且极度困难的敌怪会高速生成攻击玩家。它与南瓜月事件相似，但包含更多波数且略多的内容。视觉上，月亮会变为雪人头的样子，但保留当前的月相。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "整个事件由 20 波组成。当玩家达到某些击杀分数时，波数会推进。在波数所需的分数得以满足后，下一波即开始，并且击杀分数重置为 0。状态讯息会指示波数何时推进，以及已经达到哪一波。请参阅下表来了解每个敌怪所能获得的分数以及每一波所需要的分数。专家模式(电脑版、主机版、和移动版)世界会得到 2 倍的分数，而大师模式(电脑版、主机版、和移动版)则会得到 2.5 倍的分数。在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，总分会在事件结束后显示。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "霜月事件总是在上午4:30 结束。此事件的目标是在事件结束之前到达 20 波，但事件的(电脑版、主机版、和移动版)成就则会在 15 波时就被给予。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "召唤霜月的调皮礼物需要的材料只在玩家已经打败世纪之花的困难模式世界中可用（但事件本身在困难模式之前的世界中可以召唤）。因此，它甚至对于具有最棒的装备的玩家都是个挑战。在最终波中，需要同时与多个Boss级的敌怪战斗。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "霜月敌怪掉落强大的武器和配饰，以及宠物和时装物品。大多数掉落物极为少见，即使是已经设法完成整个事件的玩家也会发现它们需要如此多次才能得到它们。Boss 掉落物的掉落率随着完成的波数增加而提高。参见下表以获取更加详细的拾取物和纪念章掉落率信息。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，在 4:30 AM 前达到 15 波会在黎明时（4:30 AM）显示信息“圣诞节的气氛传播着快乐……”。接下来的整个白天和整个黑夜，会显示所有圣诞节的特效。在翌日 4:30 AM，信息“圣诞节的气氛消失了……”会出现，然后所有的圣诞节事件将不再出现直至圣诞节再次来临或玩家再一次达到霜月的 15 波。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "礼物宝箱怪",
+                "image": "Present_Mimic.png",
+                "label": "礼物宝箱怪"
+              },
+              {
+                "name": "雪花怪",
+                "image": "Flocko.png",
+                "label": "雪花怪"
+              },
+              {
+                "name": "姜饼人",
+                "image": "Gingerbread_Man.png",
+                "label": "姜饼人"
+              },
+              {
+                "name": "僵尸精灵",
+                "image": "Zombie_Elf.png",
+                "label": "僵尸精灵"
+              },
+              {
+                "name": "精灵弓箭手",
+                "image": "Elf_Archer.png",
+                "label": "精灵弓箭手"
+              },
+              {
+                "name": "胡桃夹士",
+                "image": "Nutcracker.png",
+                "label": "胡桃夹士"
+              },
+              {
+                "name": "雪兽",
+                "image": "Yeti.png",
+                "label": "雪兽"
+              },
+              {
+                "name": "精灵直升机",
+                "image": "Elf_Copter.png",
+                "label": "精灵直升机"
+              },
+              {
+                "name": "坎卜斯",
+                "image": "Krampus.png",
+                "label": "坎卜斯"
+              },
+              {
+                "name": "常绿尖叫怪",
+                "image": "Everscream.png",
+                "note": "(Boss)",
+                "label": "常绿尖叫怪(Boss)"
+              },
+              {
+                "name": "圣诞坦克",
+                "image": "Santa-NK1.png",
+                "note": "(Boss)",
+                "label": "圣诞坦克(Boss)"
+              },
+              {
+                "name": "冰雪女王",
+                "image": "Ice_Queen.png",
+                "note": "(Boss)",
+                "label": "冰雪女王(Boss)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自僵尸精灵：",
+            "items": [
+              {
+                "name": "精灵套装",
+                "image": "Elf_set.png",
+                "label": "精灵套装"
+              }
+            ]
+          },
+          {
+            "title": "来自常绿尖叫怪：",
+            "items": [
+              {
+                "name": "圣诞树剑",
+                "image": "Christmas_Tree_Sword.png",
+                "label": "圣诞树剑"
+              },
+              {
+                "name": "剃刀松",
+                "image": "Razorpine.png",
+                "label": "剃刀松"
+              },
+              {
+                "name": "喜庆之翼",
+                "image": "Festive_Wings.png",
+                "label": "喜庆之翼"
+              },
+              {
+                "name": "圣诞钩",
+                "image": "Christmas_Hook.png",
+                "label": "圣诞钩"
+              },
+              {
+                "name": "常绿尖叫怪纪念章",
+                "image": "Everscream_Trophy.png",
+                "label": "常绿尖叫怪纪念章"
+              },
+              {
+                "name": "常绿尖叫怪圣物",
+                "image": "Everscream_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "常绿尖叫怪圣物（仅限大师模式）"
+              },
+              {
+                "name": "灌木星星",
+                "image": "Shrub_Star.png",
+                "note": "（仅限大师模式）",
+                "label": "灌木星星（仅限大师模式）"
+              }
+            ]
+          },
+          {
+            "title": "来自圣诞坦克：",
+            "items": [
+              {
+                "name": "精灵熔枪",
+                "image": "Elf_Melter.png",
+                "label": "精灵熔枪"
+              },
+              {
+                "name": "链式机枪",
+                "image": "Chain_Gun.png",
+                "label": "链式机枪"
+              },
+              {
+                "name": "圣诞坦克纪念章",
+                "image": "Santa-NK1_Trophy.png",
+                "label": "圣诞坦克纪念章"
+              },
+              {
+                "name": "圣诞坦克圣物",
+                "image": "Santa-NK1_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "圣诞坦克圣物（仅限大师模式）"
+              },
+              {
+                "name": "玩具坦克",
+                "image": "Toy_Tank.png",
+                "note": "（仅限大师模式）",
+                "label": "玩具坦克（仅限大师模式）"
+              }
+            ]
+          },
+          {
+            "title": "来自冰雪女王：",
+            "items": [
+              {
+                "name": "暴雪法杖",
+                "image": "Blizzard_Staff.png",
+                "label": "暴雪法杖"
+              },
+              {
+                "name": "北极",
+                "image": "North_Pole.png",
+                "label": "北极"
+              },
+              {
+                "name": "雪人炮",
+                "image": "Snowman_Cannon.png",
+                "label": "雪人炮"
+              },
+              {
+                "name": "格林奇宝宝的恶作剧口哨",
+                "image": "Baby_Grinch's_Mischief_Whistle.png",
+                "label": "格林奇宝宝的恶作剧口哨"
+              },
+              {
+                "name": "驯鹿铃铛",
+                "image": "Reindeer_Bells.png",
+                "label": "驯鹿铃铛"
+              },
+              {
+                "name": "冰雪女王纪念章",
+                "image": "Ice_Queen_Trophy.png",
+                "label": "冰雪女王纪念章"
+              },
+              {
+                "name": "冰雪女王圣物",
+                "image": "Ice_Queen_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "冰雪女王圣物（仅限大师模式）"
+              },
+              {
+                "name": "冰冻王冠",
+                "image": "Frozen_Crown.png",
+                "note": "（仅限大师模式）",
+                "label": "冰冻王冠（仅限大师模式）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（霜月）",
+                "image": "Music_Box_(Frost_Moon).png",
+                "label": "八音盒（霜月）"
+              },
+              {
+                "name": "异界八音盒（入侵）",
+                "image": "Otherworldly_Music_Box_(Invasion).png",
+                "label": "异界八音盒（入侵）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "月亮事件": {
+    "name": "月亮事件",
+    "wiki_title": "月亮事件",
+    "page_type": "event",
+    "image": "BiomeBannerLunarEvent.png",
+    "search_terms": [
+      "四柱",
+      "天界柱",
+      "月柱"
+    ],
+    "description": "Vortex Fragment.png“天界生物要入侵了！”Vortex Fragment.png\n\n月亮事件是由打败拜月教邪教徒Boss所引发的一系列困难模式后期的事件，由四个事件所组成。一旦此 Boss 被打败，在世界上会有四个不同的区间，每个都会在其背景中显示一个大行星，并以高生成速度生成几种独特的敌怪，并且各自之中会有一个对应的天界柱。这些区域可以在小地图上通过代表每个天界柱的图标找到。\n\n打败天界柱会使一个区域恢复正常。为了对天界柱造成伤害，必须首先在其区间内击杀 100 个敌怪，这将移除保护天界柱的护盾并使其可受攻击。\n\n打败所有四个天界柱会触发状态讯息“月亮末日慢慢逼近……”，意味着《泰拉瑞亚》的最终 Boss月亮领主即将生成。它会在讯息出现一分钟后生成。\n\n初次击败月亮领主后，移除保护天界柱的护盾就只需要击杀 50 敌怪。",
+    "description_rich": [
+      [
+        {
+          "type": "icon",
+          "image": "Vortex_Fragment.png",
+          "alt": "Vortex Fragment.png"
+        },
+        {
+          "type": "text",
+          "text": "“天界生物要入侵了！”"
+        },
+        {
+          "type": "icon",
+          "image": "Vortex_Fragment.png",
+          "alt": "Vortex Fragment.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "月亮事件是由打败拜月教邪教徒Boss所引发的一系列困难模式后期的事件，由四个事件所组成。一旦此 Boss 被打败，在世界上会有四个不同的区间，每个都会在其背景中显示一个大行星，并以高生成速度生成几种独特的敌怪，并且各自之中会有一个对应的天界柱。这些区域可以在小地图上通过代表每个天界柱的图标找到。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "打败天界柱会使一个区域恢复正常。为了对天界柱造成伤害，必须首先在其区间内击杀 100 个敌怪，这将移除保护天界柱的护盾并使其可受攻击。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "打败所有四个天界柱会触发状态讯息“月亮末日慢慢逼近……”，意味着《泰拉瑞亚》的最终 Boss月亮领主即将生成。它会在讯息出现一分钟后生成。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "初次击败月亮领主后，移除保护天界柱的护盾就只需要击杀 50 敌怪。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "在日耀区域中：",
+            "items": [
+              {
+                "name": "日耀柱",
+                "image": "Solar_Pillar.png",
+                "note": "(Boss)",
+                "label": "日耀柱(Boss)"
+              },
+              {
+                "name": "火龙怪骑士",
+                "image": "Drakomire_Rider.png",
+                "label": "火龙怪骑士"
+              },
+              {
+                "name": "火月怪",
+                "image": "Selenian.png",
+                "label": "火月怪"
+              },
+              {
+                "name": "火龙战士",
+                "image": "Drakanian.png",
+                "label": "火龙战士"
+              },
+              {
+                "name": "流星火怪",
+                "image": "Corite.png",
+                "label": "流星火怪"
+              },
+              {
+                "name": "火滚怪",
+                "image": "Sroller.png",
+                "label": "火滚怪"
+              },
+              {
+                "name": "千足蜈蚣",
+                "image": "Crawltipede.png",
+                "label": "千足蜈蚣"
+              },
+              {
+                "name": "火龙怪",
+                "image": "Drakomire.png",
+                "label": "火龙怪"
+              }
+            ]
+          },
+          {
+            "title": "在星旋区域中：",
+            "items": [
+              {
+                "name": "星旋柱",
+                "image": "Vortex_Pillar.png",
+                "note": "(Boss)",
+                "label": "星旋柱(Boss)"
+              },
+              {
+                "name": "星旋怪",
+                "image": "Vortexian.png",
+                "label": "星旋怪"
+              },
+              {
+                "name": "异星蜂王",
+                "image": "Alien_Queen.png",
+                "label": "异星蜂王"
+              },
+              {
+                "name": "异星黄蜂",
+                "image": "Alien_Hornet.png",
+                "label": "异星黄蜂"
+              },
+              {
+                "name": "异星幼虫",
+                "image": "Alien_Larva.png",
+                "label": "异星幼虫"
+              },
+              {
+                "name": "漩泥怪",
+                "image": "Storm_Diver.png",
+                "label": "漩泥怪"
+              }
+            ]
+          },
+          {
+            "title": "在星云区域中：",
+            "items": [
+              {
+                "name": "星云柱",
+                "image": "Nebula_Pillar.png",
+                "note": "(Boss)",
+                "label": "星云柱(Boss)"
+              },
+              {
+                "name": "星云浮怪",
+                "image": "Nebula_Floater.png",
+                "label": "星云浮怪"
+              },
+              {
+                "name": "吮脑怪",
+                "image": "Brain_Suckler.png",
+                "label": "吮脑怪"
+              },
+              {
+                "name": "预言怪",
+                "image": "Predictor.png",
+                "label": "预言怪"
+              },
+              {
+                "name": "进化兽",
+                "image": "Evolution_Beast.png",
+                "label": "进化兽"
+              }
+            ]
+          },
+          {
+            "title": "在星尘区域中：",
+            "items": [
+              {
+                "name": "星尘柱",
+                "image": "Stardust_Pillar.png",
+                "note": "(Boss)",
+                "label": "星尘柱(Boss)"
+              },
+              {
+                "name": "星细胞",
+                "image": "Star_Cell.png",
+                "label": "星细胞"
+              },
+              {
+                "name": "流体入侵怪",
+                "image": "Flow_Invader.png",
+                "label": "流体入侵怪"
+              },
+              {
+                "name": "闪耀炮手",
+                "image": "Twinkle_Popper.png",
+                "label": "闪耀炮手"
+              },
+              {
+                "name": "闪耀怪",
+                "image": "Twinkle.png",
+                "label": "闪耀怪"
+              },
+              {
+                "name": "银河织妖",
+                "image": "Milkyway_Weaver.png",
+                "label": "银河织妖"
+              },
+              {
+                "name": "观星怪",
+                "image": "Stargazer.png",
+                "label": "观星怪"
+              }
+            ]
+          },
+          {
+            "title": "打败全部四个天柱后：",
+            "items": [
+              {
+                "name": "月亮领主",
+                "image": "Moon_Lord.png",
+                "note": "(Boss)",
+                "label": "月亮领主(Boss)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自日耀柱：",
+            "items": [
+              {
+                "name": "日耀碎片",
+                "image": "Solar_Fragment.png",
+                "label": "日耀碎片"
+              }
+            ]
+          },
+          {
+            "title": "来自星云柱：",
+            "items": [
+              {
+                "name": "星云碎片",
+                "image": "Nebula_Fragment.png",
+                "label": "星云碎片"
+              }
+            ]
+          },
+          {
+            "title": "来自星尘柱：",
+            "items": [
+              {
+                "name": "星尘碎片",
+                "image": "Stardust_Fragment.png",
+                "label": "星尘碎片"
+              }
+            ]
+          },
+          {
+            "title": "来自星旋柱：",
+            "items": [
+              {
+                "name": "星旋碎片",
+                "image": "Vortex_Fragment.png",
+                "label": "星旋碎片"
+              }
+            ]
+          },
+          {
+            "title": "来自月亮领主：",
+            "items": [
+              {
+                "name": "传送枪",
+                "image": "Portal_Gun.png",
+                "label": "传送枪"
+              },
+              {
+                "name": "夜明矿",
+                "image": "Luminite.png",
+                "label": "夜明矿"
+              },
+              {
+                "name": "彩虹猫之刃",
+                "image": "Meowmere.png",
+                "label": "彩虹猫之刃"
+              },
+              {
+                "name": "彩虹猫矿车",
+                "image": "Meowmere_Minecart.png",
+                "label": "彩虹猫矿车"
+              },
+              {
+                "name": "泰拉悠悠球",
+                "image": "Terrarian.png",
+                "label": "泰拉悠悠球"
+              },
+              {
+                "name": "狂星之怒",
+                "image": "Star_Wrath.png",
+                "label": "狂星之怒"
+              },
+              {
+                "name": "太空海豚机枪",
+                "image": "S.D.M.G..png",
+                "label": "太空海豚机枪"
+              },
+              {
+                "name": "喜庆弹射器Mk2",
+                "image": "Celebration_Mk2.png",
+                "label": "喜庆弹射器Mk2"
+              },
+              {
+                "name": "终极棱镜",
+                "image": "Last_Prism.png",
+                "label": "终极棱镜"
+              },
+              {
+                "name": "月耀",
+                "image": "Lunar_Flare.png",
+                "label": "月耀"
+              },
+              {
+                "name": "七彩水晶法杖",
+                "image": "Rainbow_Crystal_Staff.png",
+                "label": "七彩水晶法杖"
+              },
+              {
+                "name": "月亮传送门法杖",
+                "image": "Lunar_Portal_Staff.png",
+                "label": "月亮传送门法杖"
+              },
+              {
+                "name": "月亮领主面具",
+                "image": "Moon_Lord_Mask.png",
+                "label": "月亮领主面具"
+              },
+              {
+                "name": "月亮领主纪念章",
+                "image": "Moon_Lord_Trophy.png",
+                "label": "月亮领主纪念章"
+              },
+              {
+                "name": "可疑触手",
+                "image": "Suspicious_Looking_Tentacle.png",
+                "note": "(仅限专家模式)",
+                "label": "可疑触手(仅限专家模式)"
+              },
+              {
+                "name": "重力球",
+                "image": "Gravity_Globe.png",
+                "note": "(仅限专家模式)",
+                "label": "重力球(仅限专家模式)"
+              },
+              {
+                "name": "天界星盘",
+                "image": "Celestial_Starboard.png",
+                "note": "(仅限专家模式)",
+                "label": "天界星盘(仅限专家模式)"
+              },
+              {
+                "name": "月亮乌贼",
+                "image": "Piece_of_Moon_Squid.png",
+                "note": "(仅限专家模式)",
+                "label": "月亮乌贼(仅限专家模式)"
+              },
+              {
+                "name": "月亮领主圣物",
+                "image": "Moon_Lord_Relic.png",
+                "note": "(仅限大师模式)",
+                "label": "月亮领主圣物(仅限大师模式)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（天界柱）",
+                "image": "Music_Box_(The_Towers).png",
+                "label": "八音盒（天界柱）"
+              },
+              {
+                "name": "异界八音盒（天界柱）",
+                "image": "Otherworldly_Music_Box_(The_Towers).png",
+                "label": "异界八音盒（天界柱）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "火星暴乱": {
+    "name": "火星暴乱",
+    "wiki_title": "火星暴乱",
+    "page_type": "event",
+    "image": "BiomeBannerMartianMadness.png",
+    "search_terms": [],
+    "description": "我看到空中有一些闪烁的灯光，又高又远。告诉你吧，真相就在那里。\n\n—Emote Town Guide.gif向导\n\nBestiary Martian Madness.png“火星人要入侵了！”Bestiary Martian Madness.png\n\n火星暴乱是一个困难模式、石巨人后的入侵事件，会使得独特的外星人主题的敌怪代替常规敌怪生成。\n\n火星暴乱由火星探测器触发，火星探测器会在整个地图左侧 1/3 和右侧 1/3 随机生成（在太空地层生成几率更高）。当火星探测器检测到玩家或是受到攻击时，会立即试图飞走并逃离。如果火星探测器成功逃离，事件就会开始。\n\n在事件开始后，会显示状态讯息“火星人要入侵了！”，UFO 会开始在背景中飞行（如上方横幅所示）。不过，事件敌怪仅能在世界生成点或城镇NPC附近生成。见备注获取细节。\n\n火星暴乱在击杀足够多来自它的敌怪后即完成。在电脑版电脑版、主机版主机版、和移动版移动版中，会显示进度条来展示事件进度。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "我看到空中有一些闪烁的灯光，又高又远。告诉你吧，真相就在那里。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "—"
+        },
+        {
+          "type": "icon",
+          "image": "Emote_Town_Guide.gif",
+          "alt": "Emote Town Guide.gif"
+        },
+        {
+          "type": "text",
+          "text": "向导"
+        }
+      ],
+      [
+        {
+          "type": "icon",
+          "image": "Bestiary_Martian_Madness.png",
+          "alt": "Bestiary Martian Madness.png"
+        },
+        {
+          "type": "text",
+          "text": "“火星人要入侵了！”"
+        },
+        {
+          "type": "icon",
+          "image": "Bestiary_Martian_Madness.png",
+          "alt": "Bestiary Martian Madness.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "火星暴乱是一个困难模式、石巨人后的入侵事件，会使得独特的外星人主题的敌怪代替常规敌怪生成。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "火星暴乱由火星探测器触发，火星探测器会在整个地图左侧 1/3 和右侧 1/3 随机生成（在太空地层生成几率更高）。当火星探测器检测到玩家或是受到攻击时，会立即试图飞走并逃离。如果火星探测器成功逃离，事件就会开始。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在事件开始后，会显示状态讯息“火星人要入侵了！”，UFO 会开始在背景中飞行（如上方横幅所示）。不过，事件敌怪仅能在世界生成点或城镇NPC附近生成。见备注获取细节。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "火星暴乱在击杀足够多来自它的敌怪后即完成。在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，会显示进度条来展示事件进度。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "火星飞碟",
+                "image": "Martian_Saucer.png",
+                "label": "火星飞碟"
+              },
+              {
+                "name": "鳞甲怪",
+                "image": "Scutlix.png",
+                "label": "鳞甲怪"
+              },
+              {
+                "name": "火星走妖",
+                "image": "Martian_Walker.png",
+                "label": "火星走妖"
+              },
+              {
+                "name": "火星飞船",
+                "image": "Martian_Drone.png",
+                "label": "火星飞船"
+              },
+              {
+                "name": "特斯拉炮塔",
+                "image": "Tesla_Turret.png",
+                "label": "特斯拉炮塔"
+              },
+              {
+                "name": "电击怪",
+                "image": "Gigazapper.png",
+                "label": "电击怪"
+              },
+              {
+                "name": "火星工程师",
+                "image": "Martian_Engineer.png",
+                "label": "火星工程师"
+              },
+              {
+                "name": "火星军官",
+                "image": "Martian_Officer.png",
+                "label": "火星军官"
+              },
+              {
+                "name": "激光枪手",
+                "image": "Ray_Gunner.png",
+                "label": "激光枪手"
+              },
+              {
+                "name": "灰咕噜",
+                "image": "Gray_Grunt.png",
+                "label": "灰咕噜"
+              },
+              {
+                "name": "扰脑怪",
+                "image": "Brain_Scrambler.png",
+                "label": "扰脑怪"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自所有敌怪：（特斯拉炮塔、火星飞船、鳞甲怪、和火星飞碟除外）",
+            "items": [
+              {
+                "name": "火星管道护板",
+                "image": "Martian_Conduit_Plating.png",
+                "label": "火星管道护板"
+              },
+              {
+                "name": "激光钻头",
+                "image": "Laser_Drill.png",
+                "label": "激光钻头"
+              },
+              {
+                "name": "充能爆破炮",
+                "image": "Charged_Blaster_Cannon.png",
+                "label": "充能爆破炮"
+              },
+              {
+                "name": "反重力钩",
+                "image": "Anti-Gravity_Hook.png",
+                "label": "反重力钩"
+              }
+            ]
+          },
+          {
+            "title": "来自灰咕噜、激光枪手、和扰脑怪：",
+            "items": [
+              {
+                "name": "火星装面具",
+                "image": "Martian_Costume_Mask.png",
+                "label": "火星装面具"
+              },
+              {
+                "name": "火星装衣",
+                "image": "Martian_Costume_Shirt.png",
+                "label": "火星装衣"
+              },
+              {
+                "name": "火星装裤",
+                "image": "Martian_Costume_Pants.png",
+                "label": "火星装裤"
+              }
+            ]
+          },
+          {
+            "title": "来自火星军官、火星工程师、和电击怪：",
+            "items": [
+              {
+                "name": "火星制服头盔",
+                "image": "Martian_Uniform_Helmet.png",
+                "label": "火星制服头盔"
+              },
+              {
+                "name": "火星制服上衣",
+                "image": "Martian_Uniform_Torso.png",
+                "label": "火星制服上衣"
+              },
+              {
+                "name": "火星制服裤",
+                "image": "Martian_Uniform_Pants.png",
+                "label": "火星制服裤"
+              }
+            ]
+          },
+          {
+            "title": "来自鳞甲怪枪手：",
+            "items": [
+              {
+                "name": "扰脑器",
+                "image": "Brain_Scrambler_(item).png",
+                "label": "扰脑器"
+              }
+            ]
+          },
+          {
+            "title": "来自火星飞碟：",
+            "items": [
+              {
+                "name": "激光机枪",
+                "image": "Laser_Machinegun.png",
+                "label": "激光机枪"
+              },
+              {
+                "name": "外星霰弹枪",
+                "image": "Xenopopper.png",
+                "label": "外星霰弹枪"
+              },
+              {
+                "name": "外星法杖",
+                "image": "Xeno_Staff.png",
+                "label": "外星法杖"
+              },
+              {
+                "name": "宇宙车钥匙",
+                "image": "Cosmic_Car_Key.png",
+                "label": "宇宙车钥匙"
+              },
+              {
+                "name": "电圈发射器",
+                "image": "Electrosphere_Launcher.png",
+                "label": "电圈发射器"
+              },
+              {
+                "name": "波涌之刃",
+                "image": "Influx_Waver.png",
+                "label": "波涌之刃"
+              },
+              {
+                "name": "火星飞碟纪念章",
+                "image": "Martian_Saucer_Trophy.png",
+                "label": "火星飞碟纪念章"
+              },
+              {
+                "name": "火星飞碟圣物",
+                "image": "Martian_Saucer_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "火星飞碟圣物（仅限大师模式）"
+              },
+              {
+                "name": "宇宙滑板",
+                "image": "Cosmic_Skateboard.png",
+                "note": "（仅限大师模式）",
+                "label": "宇宙滑板（仅限大师模式）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（火星暴乱）",
+                "image": "Music_Box_(Martian_Madness).png",
+                "label": "八音盒（火星暴乱）"
+              },
+              {
+                "name": "异界八音盒（入侵）",
+                "image": "Otherworldly_Music_Box_(Invasion).png",
+                "label": "异界八音盒（入侵）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "海盗入侵": {
+    "name": "海盗入侵",
+    "wiki_title": "海盗入侵",
+    "page_type": "event",
+    "image": "BiomeBannerPirateInvasion.png",
+    "search_terms": [],
+    "description": "Bestiary Pirate Invasion.png“海盗来了！”Bestiary Pirate Invasion.png\n\n海盗入侵是一个困难模式入侵事件，会使得海盗主题的敌怪代替常规敌怪生成。在满足特定条件后，海盗入侵可能会在任何黎明时随机发生。它也可以用海盗地图手工召唤。\n\n在事件开始后，海盗入侵会从世界的随机一侧始发（由下列两个状态讯息之一提示：“海盗正从西边逼近！”/“海盗正从东边逼近！”）并向世界生成点移动。状态讯息“海盗来了！”会在海盗入侵到达了世界生成点时显示。事件敌怪仅能在海盗入侵的位置附近或在城镇NPC附近生成。见备注获取细节。\n\n海盗入侵在击杀足够多来自它的敌怪后即完成。在电脑版电脑版、主机版主机版、和移动版移动版中，会显示进度条来展示事件进度。\n\n击败海盗入侵至少一次会满足海盗NPC入住的条件。",
+    "description_rich": [
+      [
+        {
+          "type": "icon",
+          "image": "Bestiary_Pirate_Invasion.png",
+          "alt": "Bestiary Pirate Invasion.png"
+        },
+        {
+          "type": "text",
+          "text": "“海盗来了！”"
+        },
+        {
+          "type": "icon",
+          "image": "Bestiary_Pirate_Invasion.png",
+          "alt": "Bestiary Pirate Invasion.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "海盗入侵是一个困难模式入侵事件，会使得海盗主题的敌怪代替常规敌怪生成。在满足特定条件后，海盗入侵可能会在任何黎明时随机发生。它也可以用海盗地图手工召唤。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在事件开始后，海盗入侵会从世界的随机一侧始发（由下列两个状态讯息之一提示：“海盗正从西边逼近！”/“海盗正从东边逼近！”）并向世界生成点移动。状态讯息“海盗来了！”会在海盗入侵到达了世界生成点时显示。事件敌怪仅能在海盗入侵的位置附近或在城镇NPC附近生成。见备注获取细节。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "海盗入侵在击杀足够多来自它的敌怪后即完成。在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，会显示进度条来展示事件进度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "击败海盗入侵至少一次会满足海盗NPC入住的条件。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "鹦鹉",
+                "image": "Parrot.png",
+                "label": "鹦鹉"
+              },
+              {
+                "name": "海盗船长",
+                "image": "Pirate_Captain.png",
+                "label": "海盗船长"
+              },
+              {
+                "name": "私船海盗",
+                "image": "Pirate_Corsair.png",
+                "label": "私船海盗"
+              },
+              {
+                "name": "海盗弩手",
+                "image": "Pirate_Crossbower.png",
+                "label": "海盗弩手"
+              },
+              {
+                "name": "海盗神射手",
+                "image": "Pirate_Deadeye.png",
+                "label": "海盗神射手"
+              },
+              {
+                "name": "海盗水手",
+                "image": "Pirate_Deckhand.png",
+                "label": "海盗水手"
+              },
+              {
+                "name": "海盗诅咒",
+                "image": "Pirate's_Curse.png",
+                "label": "海盗诅咒"
+              },
+              {
+                "name": "荷兰飞盗船",
+                "image": "Flying_Dutchman.png",
+                "label": "荷兰飞盗船"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自所有敌怪（海盗诅咒和鹦鹉除外）：",
+            "items": [
+              {
+                "name": "钱币枪",
+                "image": "Coin_Gun.png",
+                "label": "钱币枪"
+              },
+              {
+                "name": "短弯刀",
+                "image": "Cutlass.png",
+                "label": "短弯刀"
+              },
+              {
+                "name": "优惠卡",
+                "image": "Discount_Card.png",
+                "label": "优惠卡"
+              },
+              {
+                "name": "金戒指",
+                "image": "Gold_Ring.png",
+                "label": "金戒指"
+              },
+              {
+                "name": "幸运币",
+                "image": "Lucky_Coin.png",
+                "label": "幸运币"
+              },
+              {
+                "name": "海盗法杖",
+                "image": "Pirate_Staff.png",
+                "label": "海盗法杖"
+              },
+              {
+                "name": "木桶发射器",
+                "image": "Barrel_Launcher.png",
+                "label": "木桶发射器"
+              }
+            ]
+          },
+          {
+            "title": "来自荷兰飞盗船：",
+            "items": [
+              {
+                "name": "荷兰人矿车",
+                "image": "The_Dutchman.png",
+                "label": "荷兰人矿车"
+              },
+              {
+                "name": "荷兰飞盗船纪念章",
+                "image": "Flying_Dutchman_Trophy.png",
+                "label": "荷兰飞盗船纪念章"
+              },
+              {
+                "name": "荷兰飞盗船圣物",
+                "image": "Flying_Dutchman_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "荷兰飞盗船圣物（仅限大师模式）"
+              },
+              {
+                "name": "黑斑",
+                "image": "The_Black_Spot.png",
+                "note": "（仅限大师模式）",
+                "label": "黑斑（仅限大师模式）"
+              },
+              {
+                "name": "金家具",
+                "image": "Golden_furniture.png",
+                "label": "金家具"
+              }
+            ]
+          },
+          {
+            "title": "来自私船海盗、海盗弩手、海盗神射手、和海盗水手：",
+            "items": [
+              {
+                "name": "眼罩",
+                "image": "Eye_Patch.png",
+                "label": "眼罩"
+              },
+              {
+                "name": "水手帽",
+                "image": "Sailor_Hat.png",
+                "label": "水手帽"
+              },
+              {
+                "name": "水手衣",
+                "image": "Sailor_Shirt.png",
+                "label": "水手衣"
+              },
+              {
+                "name": "水手裤",
+                "image": "Sailor_Pants.png",
+                "label": "水手裤"
+              },
+              {
+                "name": "西域海盗头巾",
+                "image": "Buccaneer_Bandana.png",
+                "label": "西域海盗头巾"
+              },
+              {
+                "name": "西域海盗上装",
+                "image": "Buccaneer_Tunic.png",
+                "label": "西域海盗上装"
+              },
+              {
+                "name": "西域海盗马裤",
+                "image": "Buccaneer_Pantaloons.png",
+                "label": "西域海盗马裤"
+              },
+              {
+                "name": "金家具",
+                "image": "Golden_furniture.png",
+                "label": "金家具"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（海盗入侵）",
+                "image": "Music_Box_(Pirate_Invasion).png",
+                "label": "八音盒（海盗入侵）"
+              },
+              {
+                "name": "八音盒（Boss 4）",
+                "image": "Music_Box_(Boss_4).png",
+                "label": "八音盒（Boss 4）"
+              },
+              {
+                "name": "异界八音盒（入侵）",
+                "image": "Otherworldly_Music_Box_(Invasion).png",
+                "label": "异界八音盒（入侵）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "南瓜月": {
+    "name": "南瓜月",
+    "wiki_title": "南瓜月",
+    "page_type": "event",
+    "image": "BiomeBannerPumpkinMoon.png",
+    "search_terms": [],
+    "description": "Bestiary Pumpkin Moon.png“南瓜月正在升起……”Bestiary Pumpkin Moon.png\n\n南瓜月是一个困难模式，世纪之花之后的以万圣节为主题的事件，可以用南瓜月勋章在夜晚的任何时间召唤，并会在翌日黎明（上午 4:30）结束。此事件可以在全年的任何时间召唤，不需要实际的万圣节季节。在事件期间，独特且困难的敌怪将以高生成率生成并攻击玩家。此事件和霜月相似，但没那么困难。视觉上，月亮将变成南瓜灯笼的样子，不过仍保持原有的月相。\n\n整个事件由 20 波组成。当玩家达到特定的击杀分数时，波数会推进。在波数所需的分数得以满足后，下一波即开始，并且击杀分数重置为 0。状态讯息会指示波数何时推进，以及已经达到哪一波。请参阅下表来了解每个敌怪所能获得的分数以及每一波所需要的分数。专家模式世界具有 2 倍的分数系数，而大师模式世界具有 2.5 倍的系数。当事件结束后，状态讯息会显示获得的总分数：“南瓜月过去了！（得分：<''总分数''>)”\n\n南瓜月事件总是会在上午 4:30结束。此事件的目标是在事件结束之前通过全部 20 波，不过此事件的成就会在第 15 波给予。\n\n召唤南瓜月的南瓜月勋章需要的材料只在玩家已经打败世纪之花的困难模式世界中可用（但事件本身在困难模式之前的世界中可以召唤）。因此，它本身是给具有困难模式中后期装备的玩家带来的挑战。在最终波中，需要同时与多个Boss级的敌怪战斗。\n\n南瓜月敌怪掉落强大的武器和配饰，以及宠物和时装物品。大多数掉落物极为少见，即使是已经设法完成整个事件的玩家也会需要再完成数次事件才能得到它们。Boss 掉落物的掉落率随着完成的波数增加而提高。在最终波中，哀木和南瓜王都肯定会掉落它们相应的纪念章。\n\n在上午 4:30前到达第 15 波会在黎明时（上午 4:30）显示状态讯息“空气中弥漫着万圣节的气氛……”。之后的整天和整晚，会出现全部万圣节季节的效果。在次日的上午 4:30，会出现状态讯息“万圣节的气氛散去了……”，所有万圣节效果不再出现，直到万圣节季节开始或玩家再次到达南瓜月的第 15 波。",
+    "description_rich": [
+      [
+        {
+          "type": "icon",
+          "image": "Bestiary_Pumpkin_Moon.png",
+          "alt": "Bestiary Pumpkin Moon.png"
+        },
+        {
+          "type": "text",
+          "text": "“南瓜月正在升起……”"
+        },
+        {
+          "type": "icon",
+          "image": "Bestiary_Pumpkin_Moon.png",
+          "alt": "Bestiary Pumpkin Moon.png"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "南瓜月是一个困难模式，世纪之花之后的以万圣节为主题的事件，可以用南瓜月勋章在夜晚的任何时间召唤，并会在翌日黎明（上午 4:30）结束。此事件可以在全年的任何时间召唤，不需要实际的万圣节季节。在事件期间，独特且困难的敌怪将以高生成率生成并攻击玩家。此事件和霜月相似，但没那么困难。视觉上，月亮将变成南瓜灯笼的样子，不过仍保持原有的月相。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "整个事件由 20 波组成。当玩家达到特定的击杀分数时，波数会推进。在波数所需的分数得以满足后，下一波即开始，并且击杀分数重置为 0。状态讯息会指示波数何时推进，以及已经达到哪一波。请参阅下表来了解每个敌怪所能获得的分数以及每一波所需要的分数。专家模式世界具有 2 倍的分数系数，而大师模式世界具有 2.5 倍的系数。当事件结束后，状态讯息会显示获得的总分数：“南瓜月过去了！（得分：<''总分数''>)”"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "南瓜月事件总是会在上午 4:30结束。此事件的目标是在事件结束之前通过全部 20 波，不过此事件的成就会在第 15 波给予。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "召唤南瓜月的南瓜月勋章需要的材料只在玩家已经打败世纪之花的困难模式世界中可用（但事件本身在困难模式之前的世界中可以召唤）。因此，它本身是给具有困难模式中后期装备的玩家带来的挑战。在最终波中，需要同时与多个Boss级的敌怪战斗。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "南瓜月敌怪掉落强大的武器和配饰，以及宠物和时装物品。大多数掉落物极为少见，即使是已经设法完成整个事件的玩家也会需要再完成数次事件才能得到它们。Boss 掉落物的掉落率随着完成的波数增加而提高。在最终波中，哀木和南瓜王都肯定会掉落它们相应的纪念章。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在上午 4:30前到达第 15 波会在黎明时（上午 4:30）显示状态讯息“空气中弥漫着万圣节的气氛……”。之后的整天和整晚，会出现全部万圣节季节的效果。在次日的上午 4:30，会出现状态讯息“万圣节的气氛散去了……”，所有万圣节效果不再出现，直到万圣节季节开始或玩家再次到达南瓜月的第 15 波。"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "稻草人",
+                "image": "Scarecrow.png",
+                "label": "稻草人"
+              },
+              {
+                "name": "树精",
+                "image": "Splinterling.png",
+                "label": "树精"
+              },
+              {
+                "name": "地狱犬",
+                "image": "Hellhound.png",
+                "label": "地狱犬"
+              },
+              {
+                "name": "胡闹鬼",
+                "image": "Poltergeist.png",
+                "label": "胡闹鬼"
+              },
+              {
+                "name": "无头骑士",
+                "image": "Headless_Horseman.png",
+                "label": "无头骑士"
+              },
+              {
+                "name": "哀木",
+                "image": "Mourning_Wood.png",
+                "note": "（Boss）",
+                "label": "哀木（Boss）"
+              },
+              {
+                "name": "南瓜王",
+                "image": "Pumpking.png",
+                "note": "（Boss）",
+                "label": "南瓜王（Boss）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自稻草人：",
+            "items": [
+              {
+                "name": "稻草人套装",
+                "image": "Scarecrow_set.png",
+                "label": "稻草人套装"
+              }
+            ]
+          },
+          {
+            "title": "来自树精和哀木：",
+            "items": [
+              {
+                "name": "阴森木",
+                "image": "Spooky_Wood.png",
+                "label": "阴森木"
+              }
+            ]
+          },
+          {
+            "title": "来自无头骑士：",
+            "items": [
+              {
+                "name": "杰克南瓜灯面具",
+                "image": "Jack_'O_Lantern_Mask.png",
+                "note": "（罕见）",
+                "label": "杰克南瓜灯面具（罕见）"
+              }
+            ]
+          },
+          {
+            "title": "来自哀木：",
+            "items": [
+              {
+                "name": "尖桩发射器",
+                "image": "Stake_Launcher.png",
+                "note": "（同时掉落 30–60 个尖桩）",
+                "label": "尖桩发射器（同时掉落 30–60 个尖桩）"
+              },
+              {
+                "name": "死灵卷轴",
+                "image": "Necromantic_Scroll.png",
+                "label": "死灵卷轴"
+              },
+              {
+                "name": "阴森钩",
+                "image": "Spooky_Hook.png",
+                "label": "阴森钩"
+              },
+              {
+                "name": "阴森嫩枝",
+                "image": "Spooky_Twig.png",
+                "label": "阴森嫩枝"
+              },
+              {
+                "name": "诅咒树苗",
+                "image": "Cursed_Sapling.png",
+                "label": "诅咒树苗"
+              },
+              {
+                "name": "哀木纪念章",
+                "image": "Mourning_Wood_Trophy.png",
+                "label": "哀木纪念章"
+              },
+              {
+                "name": "女巫扫帚",
+                "image": "Witch's_Broom.png",
+                "note": "（仅限专家模式）",
+                "label": "女巫扫帚（仅限专家模式）"
+              },
+              {
+                "name": "哀木圣物",
+                "image": "Mourning_Wood_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "哀木圣物（仅限大师模式）"
+              },
+              {
+                "name": "魔法树枝",
+                "image": "Hexxed_Branch.png",
+                "note": "（仅限大师模式）",
+                "label": "魔法树枝（仅限大师模式）"
+              }
+            ]
+          },
+          {
+            "title": "来自南瓜王：",
+            "items": [
+              {
+                "name": "无头骑士剑",
+                "image": "The_Horseman's_Blade.png",
+                "label": "无头骑士剑"
+              },
+              {
+                "name": "乌鸦法杖",
+                "image": "Raven_Staff.png",
+                "label": "乌鸦法杖"
+              },
+              {
+                "name": "蝙蝠权杖",
+                "image": "Bat_Scepter.png",
+                "label": "蝙蝠权杖"
+              },
+              {
+                "name": "玉米糖步枪",
+                "image": "Candy_Corn_Rifle.png",
+                "note": "（同时掉落 50–100 个玉米糖）",
+                "label": "玉米糖步枪（同时掉落 50–100 个玉米糖）"
+              },
+              {
+                "name": "杰克南瓜灯发射器",
+                "image": "Jack_'O_Lantern_Launcher.png",
+                "note": "（同时掉落 25–50 个爆炸杰克南瓜灯）",
+                "label": "杰克南瓜灯发射器（同时掉落 25–50 个爆炸杰克南瓜灯）"
+              },
+              {
+                "name": "黑色仙尘",
+                "image": "Black_Fairy_Dust.png",
+                "label": "黑色仙尘"
+              },
+              {
+                "name": "蜘蛛卵",
+                "image": "Spider_Egg.png",
+                "label": "蜘蛛卵"
+              },
+              {
+                "name": "暗黑收割",
+                "image": "Dark_Harvest.png",
+                "label": "暗黑收割"
+              },
+              {
+                "name": "南瓜王纪念章",
+                "image": "Pumpking_Trophy.png",
+                "label": "南瓜王纪念章"
+              },
+              {
+                "name": "南瓜王圣物",
+                "image": "Pumpking_Relic.png",
+                "note": "（仅限大师模式）",
+                "label": "南瓜王圣物（仅限大师模式）"
+              },
+              {
+                "name": "南瓜香薰蜡烛",
+                "image": "Pumpkin_Scented_Candle.png",
+                "note": "（仅限大师模式）",
+                "label": "南瓜香薰蜡烛（仅限大师模式）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（南瓜月）",
+                "image": "Music_Box_(Pumpkin_Moon).png",
+                "label": "八音盒（南瓜月）"
+              },
+              {
+                "name": "异界八音盒（入侵）",
+                "image": "Otherworldly_Music_Box_(Invasion).png",
+                "label": "异界八音盒（入侵）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "日食": {
+    "name": "日食",
+    "wiki_title": "日食",
+    "page_type": "event",
+    "image": "BiomeBannerSolarEclipse.png",
+    "search_terms": [
+      "日蚀"
+    ],
+    "description": "“正在发生日食！”\n\n日食是个困难模式事件，在至少有一个机械 Boss被打败后会偶有发生。日食在任何特定黎明都有1/20 (5%)几率发生。在电脑版电脑版、主机版主机版、和移动版移动版上，也可以用日耀碑牌（只在打败了世纪之花后才能合法获得，但偶然也能在此之前获得）来召唤日食。\n\n在日食期间，会以非常高的速度生成独特且难以消灭的敌怪，甚至在NPC附近亦是如此。此事件持续一整个白天，从日出到日落，不受已经杀掉多少敌怪影响。可以看到月亮挡在太阳前方，导致环境光照水平下降到夜间水平以下。类似于血月，在日食期间不能通过睡觉来加速时间流逝。\n\n日食会在白天开始时伴随状态讯息：“正在发生日食！”宣告开始。此事件只会影响到地表层，可以通过移动到地下层或更深处来避开。在Don't dig up或者Get fixed boi世界中，由于不存在能被遮住的太阳，状态讯息会显示为：“恐怖来袭！”",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "“正在发生日食！”"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "日食是个困难模式事件，在至少有一个机械 Boss被打败后会偶有发生。日食在任何特定黎明都有1/20 (5%)几率发生。在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版上，也可以用日耀碑牌（只在打败了世纪之花后才能合法获得，但偶然也能在此之前获得）来召唤日食。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在日食期间，会以非常高的速度生成独特且难以消灭的敌怪，甚至在NPC附近亦是如此。此事件持续一整个白天，从日出到日落，不受已经杀掉多少敌怪影响。可以看到月亮挡在太阳前方，导致环境光照水平下降到夜间水平以下。类似于血月，在日食期间不能通过睡觉来加速时间流逝。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "日食会在白天开始时伴随状态讯息：“正在发生日食！”宣告开始。此事件只会影响到地表层，可以通过移动到地下层或更深处来避开。在Don't dig up或者Get fixed boi世界中，由于不存在能被遮住的太阳，状态讯息会显示为：“恐怖来袭！”"
+        }
+      ]
+    ],
+    "content": [
+      {
+        "heading": "角色",
+        "boxes": [
+          {
+            "title": "任何时间:",
+            "items": [
+              {
+                "name": "眼怪",
+                "image": "Eyezor.png",
+                "label": "眼怪"
+              },
+              {
+                "name": "科学怪人",
+                "image": "Frankenstein.png",
+                "label": "科学怪人"
+              },
+              {
+                "name": "沼泽怪",
+                "image": "Swamp_Thing.png",
+                "label": "沼泽怪"
+              },
+              {
+                "name": "吸血鬼",
+                "image": "Vampire.png",
+                "label": "吸血鬼"
+              },
+              {
+                "name": "水月怪",
+                "image": "Creature_from_the_Deep.png",
+                "label": "水月怪"
+              },
+              {
+                "name": "弗里茨",
+                "image": "Fritz.png",
+                "label": "弗里茨"
+              },
+              {
+                "name": "攀爬魔",
+                "image": "The_Possessed.png",
+                "label": "攀爬魔"
+              },
+              {
+                "name": "死神",
+                "image": "Reaper.png",
+                "note": "(只在 (前代主机版、和3DS版))",
+                "label": "死神(只在 (前代主机版、和3DS版))"
+              }
+            ]
+          },
+          {
+            "title": "打败所有机械 Boss之后:",
+            "items": [
+              {
+                "name": "死神",
+                "image": "Reaper.png",
+                "label": "死神"
+              }
+            ]
+          },
+          {
+            "title": "打败世纪之花之后:",
+            "items": [
+              {
+                "name": "蛾怪宝宝",
+                "image": "Baby_Mothron.png",
+                "label": "蛾怪宝宝"
+              },
+              {
+                "name": "蛾怪",
+                "image": "Mothron.png",
+                "label": "蛾怪"
+              },
+              {
+                "name": "屠夫",
+                "image": "Butcher.png",
+                "label": "屠夫"
+              },
+              {
+                "name": "致命球",
+                "image": "Deadly_Sphere.png",
+                "label": "致命球"
+              },
+              {
+                "name": "苍蝇人博士",
+                "image": "Dr._Man_Fly.png",
+                "label": "苍蝇人博士"
+              },
+              {
+                "name": "钉头",
+                "image": "Nailhead.png",
+                "label": "钉头"
+              },
+              {
+                "name": "变态人",
+                "image": "Psycho.png",
+                "label": "变态人"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "独特掉落",
+        "boxes": [
+          {
+            "title": "来自眼怪:",
+            "items": [
+              {
+                "name": "弹簧眼",
+                "image": "Eye_Spring.png",
+                "label": "弹簧眼"
+              },
+              {
+                "name": "眼怪头",
+                "image": "Eyezorhead.png",
+                "label": "眼怪头"
+              },
+              {
+                "name": "视觉共振",
+                "image": "Ocular_Resonance.png",
+                "label": "视觉共振"
+              }
+            ]
+          },
+          {
+            "title": "来自科学怪人和沼泽怪:",
+            "items": [
+              {
+                "name": "铁哥们",
+                "image": "Buddies.png",
+                "label": "铁哥们"
+              }
+            ]
+          },
+          {
+            "title": "来自吸血鬼:",
+            "items": [
+              {
+                "name": "破蝙蝠之翼",
+                "image": "Broken_Bat_Wing.png",
+                "label": "破蝙蝠之翼"
+              },
+              {
+                "name": "月亮石",
+                "image": "Moon_Stone.png",
+                "label": "月亮石"
+              }
+            ]
+          },
+          {
+            "title": "来自水月怪:",
+            "items": [
+              {
+                "name": "海神贝壳",
+                "image": "Neptune's_Shell.png",
+                "label": "海神贝壳"
+              }
+            ]
+          },
+          {
+            "title": "来自弗里茨:",
+            "items": [
+              {
+                "name": "午夜太阳",
+                "image": "Midnight_Sun.png",
+                "label": "午夜太阳"
+              }
+            ]
+          },
+          {
+            "title": "来自攀爬魔:",
+            "items": [
+              {
+                "name": "牛排",
+                "image": "Steak.png",
+                "label": "牛排"
+              },
+              {
+                "name": "局面失控",
+                "image": "This_Is_Getting_Out_Of_Hand.png",
+                "label": "局面失控"
+              }
+            ]
+          },
+          {
+            "title": "来自死神:",
+            "items": [
+              {
+                "name": "死神镰刀",
+                "image": "Death_Sickle.png",
+                "label": "死神镰刀"
+              },
+              {
+                "name": "安魂",
+                "image": "Requiem.png",
+                "label": "安魂"
+              }
+            ]
+          },
+          {
+            "title": "来自蛾怪:",
+            "items": [
+              {
+                "name": "断裂英雄剑",
+                "image": "Broken_Hero_Sword.png",
+                "label": "断裂英雄剑"
+              },
+              {
+                "name": "蛾怪之翼",
+                "image": "Mothron_Wings.png",
+                "label": "蛾怪之翼"
+              },
+              {
+                "name": "克苏鲁之眼",
+                "image": "The_Eye_of_Cthulhu.png",
+                "label": "克苏鲁之眼"
+              },
+              {
+                "name": "邪恶之翼",
+                "image": "Wings_of_Evil.png",
+                "label": "邪恶之翼"
+              }
+            ]
+          },
+          {
+            "title": "来自屠夫:",
+            "items": [
+              {
+                "name": "屠夫链锯",
+                "image": "Butcher's_Chainsaw.png",
+                "label": "屠夫链锯"
+              },
+              {
+                "name": "屠夫套装",
+                "image": "Butcher's_set.png",
+                "label": "屠夫套装"
+              },
+              {
+                "name": "给泰拉瑞亚人的机器",
+                "image": "A_Machine_for_Terrarians.png",
+                "label": "给泰拉瑞亚人的机器"
+              }
+            ]
+          },
+          {
+            "title": "来自致命球:",
+            "items": [
+              {
+                "name": "致命球法杖",
+                "image": "Deadly_Sphere_Staff.png",
+                "label": "致命球法杖"
+              }
+            ]
+          },
+          {
+            "title": "来自苍蝇人博士:",
+            "items": [
+              {
+                "name": "毒气瓶",
+                "image": "Toxic_Flask.png",
+                "label": "毒气瓶"
+              },
+              {
+                "name": "苍蝇人博士套装",
+                "image": "Dr._Man_Fly_set.png",
+                "label": "苍蝇人博士套装"
+              }
+            ]
+          },
+          {
+            "title": "来自钉头:",
+            "items": [
+              {
+                "name": "钉枪",
+                "image": "Nail_Gun.png",
+                "label": "钉枪"
+              },
+              {
+                "name": "钉子",
+                "image": "Nail.png",
+                "note": "(只会和钉枪一起掉落)",
+                "label": "钉子(只会和钉枪一起掉落)"
+              }
+            ]
+          },
+          {
+            "title": "来自变态人:",
+            "items": [
+              {
+                "name": "变态人的刀",
+                "image": "Psycho_Knife.png",
+                "label": "变态人的刀"
+              }
+            ]
+          },
+          {
+            "title": "(前代主机版、和3DS版)来自科学怪人和沼泽怪:",
+            "items": [
+              {
+                "name": "断裂英雄剑",
+                "image": "Broken_Hero_Sword.png",
+                "label": "断裂英雄剑"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "售卖",
+        "boxes": [
+          {
+            "title": "来自机器侠:",
+            "items": [
+              {
+                "name": "火箭四型",
+                "image": "Rocket_IV.png",
+                "label": "火箭四型"
+              },
+              {
+                "name": "集束火箭二型",
+                "image": "Cluster_Rocket_II.png",
+                "label": "集束火箭二型"
+              }
+            ]
+          },
+          {
+            "title": "来自蒸汽朋克人:",
+            "items": [
+              {
+                "name": "紫溶液",
+                "image": "Purple_Solution.png",
+                "note": "(仅腐化世界)",
+                "label": "紫溶液(仅腐化世界)"
+              },
+              {
+                "name": "红溶液",
+                "image": "Red_Solution.png",
+                "note": "(仅猩红世界)",
+                "label": "红溶液(仅猩红世界)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "音乐",
+        "boxes": [
+          {
+            "title": "",
+            "items": [
+              {
+                "name": "八音盒（日食）",
+                "image": "Music_Box_(Eclipse).png",
+                "label": "八音盒（日食）"
+              },
+              {
+                "name": "异界八音盒（恐惧）",
+                "image": "Otherworldly_Music_Box_(Eerie).png",
+                "label": "异界八音盒（恐惧）"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

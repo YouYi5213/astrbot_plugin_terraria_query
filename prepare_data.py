@@ -138,6 +138,14 @@ def _biome_data_module():
     return biome_data
 
 
+def _event_data_module():
+    try:
+        from . import event_data
+    except ImportError:
+        import event_data
+    return event_data
+
+
 def _npc_data_module():
     try:
         from . import npc_data
@@ -3087,6 +3095,7 @@ async def update_wiki_data(
         mount_result = await refresh_mounts(session, force=force)
         pet_result = await refresh_pets(session, force=force)
         biome_result = await _biome_data_module().refresh_biomes(session, force=force)
+        event_result = await _event_data_module().refresh_events(session, force=force)
         npc_result = await _npc_data_module().refresh_npcs(session, force=force)
         boss_result = await _boss_data_module().refresh_bosses(session, force=force)
 
@@ -3116,6 +3125,8 @@ async def update_wiki_data(
         "pet_total": pet_result.get("total", 0),
         "biome_new_count": biome_result.get("new_count", 0),
         "biome_total": biome_result.get("total", 0),
+        "event_new_count": event_result.get("new_count", 0),
+        "event_total": event_result.get("total", 0),
         "npc_new_count": npc_result.get("new_count", 0),
         "npc_total": npc_result.get("total", 0),
         "boss_new_count": boss_result.get("new_count", 0),
@@ -3630,6 +3641,11 @@ if __name__ == "__main__":
         help="仅抓取生物群系到 categories/biomes.json",
     )
     parser.add_argument(
+        "--ingest-events",
+        action="store_true",
+        help="仅抓取事件到 categories/events.json",
+    )
+    parser.add_argument(
         "--ingest-npcs",
         action="store_true",
         help="仅抓取城镇 NPC 到 categories/npcs.json",
@@ -3702,6 +3718,24 @@ if __name__ == "__main__":
             result = asyncio.run(_run_biomes())
             print(
                 f"生物群系抓取完成：新增 {result['new_count']} 个，"
+                f"共 {result['total']} 条目，"
+                f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.ingest_events:
+            async def _run_events() -> dict:
+                connector = aiohttp.TCPConnector(limit=10)
+                timeout = aiohttp.ClientTimeout(total=60)
+                async with aiohttp.ClientSession(
+                    connector=connector, timeout=timeout
+                ) as session:
+                    return await _event_data_module().refresh_events(
+                        session, force=args.force
+                    )
+
+            result = asyncio.run(_run_events())
+            print(
+                f"事件抓取完成：新增 {result['new_count']} 个，"
                 f"共 {result['total']} 条目，"
                 f"图片 {result['images_ok']}/{result['images_total']}",
                 flush=True,

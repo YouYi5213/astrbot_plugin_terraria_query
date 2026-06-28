@@ -29,6 +29,8 @@ def test_parse_forest_biome_page():
     assert parsed["description"]
     assert parsed["page_type"] == "biome"
     assert "森林" in parsed["description"]
+    assert parsed.get("content")
+    assert any(g.get("heading") == "角色" for g in parsed["content"])
 
 
 def test_underground_layer_alias():

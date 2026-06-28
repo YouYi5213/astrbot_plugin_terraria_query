@@ -92,6 +92,13 @@ def test_teraria_cmd_regex():
     assert pattern.match("/泰拉查询 剑")
 
 
+def test_split_page_content_query():
+    assert main._split_page_content_query("血月") == ("血月", False)
+    assert main._split_page_content_query("血月内容") == ("血月", True)
+    assert main._split_page_content_query("森林内容") == ("森林", True)
+    assert main._split_page_content_query("内容") == ("内容", False)
+
+
 def test_fuzzy_match_chinese_name():
     items = {
         "环境改造枪": {

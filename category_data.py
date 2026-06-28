@@ -28,6 +28,7 @@ LEGACY_PETS_JSON = os.path.join(DATA_DIR, "pets.json")
 MOUNTS_FILE = "mounts.json"
 PETS_FILE = "pets.json"
 BIOMES_FILE = "biomes.json"
+EVENTS_FILE = "events.json"
 
 # Wiki 多分类重叠时的分配优先级
 CATEGORY_PRIORITY: tuple[str, ...] = (
@@ -221,6 +222,10 @@ def load_pets_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict
 
 def load_biomes_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict]:
     return _load_json_dict(os.path.join(categories_dir, BIOMES_FILE))
+
+
+def load_events_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict]:
+    return _load_json_dict(os.path.join(categories_dir, EVENTS_FILE))
 
 
 def load_npcs_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, dict]:

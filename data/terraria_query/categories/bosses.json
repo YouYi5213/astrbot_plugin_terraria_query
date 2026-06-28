@@ -24,25 +24,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "史莱姆王 AI",
-          "expert": "史莱姆王 AI",
+          "normal": "",
+          "expert": "",
           "master": "史莱姆王 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "40 40 /",
-          "expert": "64 64 /",
-          "master": "96 96"
+          "normal": "40",
+          "expert": "64",
+          "master": "96"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "2000 2000 /",
-          "expert": "2800 2800 /",
-          "master": "3570 3570"
+          "normal": "2000",
+          "expert": "2800",
+          "master": "3570"
         }
       },
       {
@@ -64,9 +64,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "1 金币",
-        "expert": "1 金币",
-        "master": "1 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -418,25 +466,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "克苏鲁之眼 AI",
-          "expert": "克苏鲁之眼 AI",
+          "normal": "",
+          "expert": "",
           "master": "克苏鲁之眼 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "15 15 /",
-          "expert": "30 30 /",
-          "master": "45 45"
+          "normal": "15",
+          "expert": "30",
+          "master": "45"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "2800 2800 /",
-          "expert": "3640 3640 /",
-          "master": "4641 4641"
+          "normal": "2800",
+          "expert": "3640",
+          "master": "4641"
         }
       },
       {
@@ -458,9 +506,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "3 金币",
-        "expert": "3 金币",
-        "master": "3 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "7",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "7",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "7",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [],
@@ -499,17 +595,17 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "蠕虫 AI",
-          "expert": "蠕虫 AI",
+          "normal": "",
+          "expert": "",
           "master": "蠕虫 AI"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "10050 10050",
-          "expert": "15120 15120",
-          "master": "19296 19296"
+          "normal": "10050",
+          "expert": "15120",
+          "master": "19296"
         }
       },
       {
@@ -523,9 +619,42 @@
     ],
     "drops": {
       "money": {
-        "normal": "8 银币",
-        "expert": "8 银币",
-        "master": "8 银币"
+        "normal": [
+          {
+            "type": "sc",
+            "amount": "8",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "sc",
+            "amount": "8",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "sc",
+            "amount": "8",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -749,25 +878,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "克苏鲁之脑 AI",
-          "expert": "克苏鲁之脑 AI",
+          "normal": "",
+          "expert": "",
           "master": "克苏鲁之脑 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "30 30 /",
-          "expert": "54 54 /",
-          "master": "81 81"
+          "normal": "30",
+          "expert": "54",
+          "master": "81"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "1250 1250 /\n3250 3250",
-          "expert": "2125 2125 /\n5525 5525",
-          "master": "2709 2709\n7049 7049 （计入飞眼怪）"
+          "normal": "1250\n3250\n（计入飞眼怪）",
+          "expert": "2125\n5525\n（计入飞眼怪）",
+          "master": "2709\n7049\n（计入飞眼怪）"
         }
       },
       {
@@ -781,17 +910,65 @@
       {
         "label": "击退抗性",
         "modes": {
-          "normal": "55% (电脑版、主机版、和移动版) / 50% (前代主机版、和3DS版) 55% (电脑版、主机版、和移动版) / 50% (前代主机版、和3DS版)",
-          "expert": "60% 60%",
-          "master": "64% 64%"
+          "normal": "55% (电脑版、主机版、和移动版) / 50% (前代主机版、和3DS版)",
+          "expert": "60%",
+          "master": "64%"
         }
       }
     ],
     "drops": {
       "money": {
-        "normal": "5 金币",
-        "expert": "5 金币",
-        "master": "5 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [],
@@ -829,31 +1006,31 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "蜂王 AI",
-          "expert": "蜂王 AI",
+          "normal": "",
+          "expert": "",
           "master": "蜂王 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "30 30 /\n22 22",
-          "expert": "54 54 /\n44 44",
-          "master": "81 81 （接触）\n66 66 （ 蜂王毒刺 ）"
+          "normal": "30\n22\n（ 蜂王毒刺 ）",
+          "expert": "54\n44\n（ 蜂王毒刺 ）",
+          "master": "81 （接触）\n66\n（ 蜂王毒刺 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "3400 3400 /",
-          "expert": "4760 4760 /",
-          "master": "6069 6069"
+          "normal": "3400",
+          "expert": "4760",
+          "master": "6069"
         }
       },
       {
         "label": "防御",
         "modes": {
-          "normal": "8 8",
+          "normal": "8",
           "expert": "8–28 （取决于生命）",
           "master": "8–28 （取决于生命）"
         }
@@ -869,9 +1046,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "5 金币",
-        "expert": "5 金币",
-        "master": "5 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -1287,6 +1512,21 @@
         ]
       }
     },
+    "debuff": {
+      "name": "中毒",
+      "image": "Poisoned.png",
+      "description": "缓慢损失生命值",
+      "chance": {
+        "normal": "33.33%",
+        "expert": "100%",
+        "master": "100%"
+      },
+      "duration": {
+        "normal": "10 秒\n（ 蜂王毒刺 ）",
+        "expert": "2–20 秒\n（ 蜂王毒刺 ）\n2–8 秒 （接触）",
+        "master": "2.5–25 秒\n（ 蜂王毒刺 ）\n2.5–10 秒 （接触）"
+      }
+    },
     "category": "pre_hardmode",
     "flavor": "“统治丛林蜂巢的女王。”",
     "spawn": "蜂王会在摧毁 地下丛林 中 蜂巢 内的 幼虫 时生成。\n也可以在任何时间于 丛林 或地下丛林中用 憎恶之蜂 来手工召唤她。"
@@ -1316,25 +1556,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "独眼巨鹿 AI",
-          "expert": "独眼巨鹿 AI",
+          "normal": "",
+          "expert": "",
           "master": "独眼巨鹿 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "20 20\n26 26\n36 36\n20 20",
-          "expert": "40 40\n52 52\n72 72\n40 40",
-          "master": "60 60 （接触）\n78 78 （ 冰雪尖刺 ）\n108 108 （ 残骸 ）\n60 60 （ 暗影之手 ）"
+          "normal": "20\n（接触）\n26\n（ 冰雪尖刺 ）\n36\n（ 残骸 ）\n20\n（ 暗影之手 ）",
+          "expert": "40\n（接触）\n52\n（ 冰雪尖刺 ）\n72\n（ 残骸 ）\n40\n（ 暗影之手 ）",
+          "master": "60\n（接触）\n78\n（ 冰雪尖刺 ）\n108\n（ 残骸 ）\n60\n（ 暗影之手 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "7000 7000 /",
-          "expert": "11900 11900 /",
-          "master": "15172 15172"
+          "normal": "7000",
+          "expert": "11900",
+          "master": "15172"
         }
       },
       {
@@ -1356,9 +1596,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "5 金币",
-        "expert": "5 金币",
-        "master": "5 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -1670,6 +1958,21 @@
         ]
       }
     },
+    "debuff": {
+      "name": "缓慢",
+      "image": "Slow.png",
+      "description": "移动速度降低",
+      "chance": {
+        "normal": "",
+        "expert": "",
+        "master": "100% （吼叫）"
+      },
+      "duration": {
+        "normal": "12 秒",
+        "expert": "24 秒",
+        "master": "30 秒"
+      }
+    },
     "category": "pre_hardmode",
     "flavor": "“来自异地的阴冷独眼怪物。”",
     "spawn": "可以通过在任何时间于 雪原生物群系 或 冰雪生物群系 中使用 鹿华 来手动召唤独眼巨鹿。\n独眼巨鹿也可以在 暴雪 期间在 午夜 于 地表 雪原生物群系自然生成，但需要满足以下条件："
@@ -1699,33 +2002,33 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "头部 AI",
-          "expert": "头部 AI",
+          "normal": "",
+          "expert": "",
           "master": "头部 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "32 32 /",
-          "expert": "70 70 /\n68 （骷髅头）91 （旋转时）\n68 （ 骷髅头 ）\n91 （旋转时）",
-          "master": "106 106 （接触）\n102 （骷髅头）137 （旋转时）\n102 （ 骷髅头 ）\n137 （旋转时）\n9999 （ 白天 期间）"
+          "normal": "32\n9999\n（ 白天 期间）",
+          "expert": "70\n68 （ 骷髅头 ） 91 （旋转时）\n9999\n（ 白天 期间）",
+          "master": "106 （接触）\n102 （ 骷髅头 ） 137 （旋转时）\n9999\n（ 白天 期间）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "4400 4400 /",
-          "expert": "8800 8800 /",
-          "master": "11220 11220"
+          "normal": "4400",
+          "expert": "8800",
+          "master": "11220"
         }
       },
       {
         "label": "防御",
         "modes": {
-          "normal": "10 10\n0 0",
-          "expert": "10，每存活一只手 +25\n0，每存活一只手 +25",
-          "master": "10，每存活一只手 +25\n0，每存活一只手 +25"
+          "normal": "10\n0\n（旋转时）\n9999\n（白天期间）",
+          "expert": "10，每存活一只手 +25\n0，每存活一只手 +25\n（旋转时）\n9999\n（白天期间）",
+          "master": "10，每存活一只手 +25\n0，每存活一只手 +25\n（旋转时）\n9999\n（白天期间）"
         }
       },
       {
@@ -1739,9 +2042,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "5 金币",
-        "expert": "5 金币",
-        "master": "5 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -1948,11 +2299,107 @@
         ]
       }
     },
+    "debuff": {
+      "name": "流血",
+      "image": "Bleeding.png",
+      "description": "无法再生生命",
+      "chance": {
+        "normal": "100%",
+        "expert": "100%",
+        "master": "100%"
+      },
+      "duration": {
+        "normal": "",
+        "expert": "6–10 秒",
+        "master": "7.5–12.5 秒"
+      }
+    },
     "subtitle": "骷髅王头部",
     "category": "pre_hardmode",
     "flavor": "“被诅咒的地牢守卫。”",
     "description": "骷髅王有一个称为 红帽骷髅王 的变体种类，是对 《泰拉瑞亚》 YouTube 创作者和主播 James/ChippyGaming 的致谢。 可以在 夜晚 期间装备 服装商巫毒娃娃 ，附近有 服装商 时坐在 Chippy的沙发 上来召唤它。它死亡时除了常规拾取物以外总是掉落 Chippy的套装 。\n\n红帽骷髅王有下列能力：",
-    "spawn": "要召唤骷髅王，玩家需要在 夜晚 与地牢入口处的 老人 交谈。在选择 “ 诅咒 ” 选项后，他就会变成骷髅王。每个夜晚只能召唤一次骷髅王，因为老人直到黎明才会重生。\n击败骷髅王后，老人的诅咒会被解除，他不会再出现。此后只能通过 服装商巫毒娃娃 来召唤骷髅王。装备此配饰时，在夜晚杀死 服装商 会召唤出骷髅王。"
+    "spawn": "要召唤骷髅王，玩家需要在 夜晚 与地牢入口处的 老人 交谈。在选择 “ 诅咒 ” 选项后，他就会变成骷髅王。每个夜晚只能召唤一次骷髅王，因为老人直到黎明才会重生。\n击败骷髅王后，老人的诅咒会被解除，他不会再出现。此后只能通过 服装商巫毒娃娃 来召唤骷髅王。装备此配饰时，在夜晚杀死 服装商 会召唤出骷髅王。",
+    "parts": [
+      {
+        "name": "骷髅王之手",
+        "subtitle": "骷髅王之手",
+        "image": "Skeletron_Hand_(NPC).png",
+        "stats": [
+          {
+            "label": "类型",
+            "modes": {
+              "normal": "Boss 部位",
+              "expert": "Boss 部位",
+              "master": "Boss 部位"
+            }
+          },
+          {
+            "label": "环境",
+            "modes": {
+              "normal": "地牢入口  +  夜晚",
+              "expert": "地牢入口  +  夜晚",
+              "master": "地牢入口  +  夜晚"
+            }
+          },
+          {
+            "label": "AI 类型",
+            "modes": {
+              "normal": "",
+              "expert": "",
+              "master": "骷髅王之手 AI"
+            }
+          },
+          {
+            "label": "伤害",
+            "modes": {
+              "normal": "20",
+              "expert": "44",
+              "master": "66"
+            }
+          },
+          {
+            "label": "最大生命值",
+            "modes": {
+              "normal": "600",
+              "expert": "1560",
+              "master": "1989"
+            }
+          },
+          {
+            "label": "防御",
+            "modes": {
+              "normal": "14",
+              "expert": "14",
+              "master": "14"
+            }
+          },
+          {
+            "label": "击退抗性",
+            "modes": {
+              "normal": "100%",
+              "expert": "100%",
+              "master": "100%"
+            }
+          }
+        ],
+        "debuff": {
+          "name": "缓慢",
+          "image": "Slow.png",
+          "description": "移动速度降低",
+          "chance": {
+            "normal": "50%",
+            "expert": "50%",
+            "master": "50%"
+          },
+          "duration": {
+            "normal": "",
+            "expert": "1−2 秒",
+            "master": "1.5–2.5 秒"
+          }
+        },
+        "drops": {}
+      }
+    ]
   },
   "血肉墙": {
     "name": "血肉墙",
@@ -1979,17 +2426,17 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "血肉墙 AI",
-          "expert": "血肉墙 AI",
+          "normal": "",
+          "expert": "",
           "master": "血肉墙 AI"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "8000 8000 /",
-          "expert": "11200 11200 /",
-          "master": "14280 14280"
+          "normal": "8000",
+          "expert": "11200",
+          "master": "14280"
         }
       },
       {
@@ -2003,9 +2450,42 @@
     ],
     "drops": {
       "money": {
-        "normal": "8 金币",
-        "expert": "8 金币",
-        "master": "8 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -2367,6 +2847,16 @@
         ]
       }
     },
+    "debuff": {
+      "name": "惊恐",
+      "image": "Horrified.png",
+      "description": "你已看到污秽之物，无可逃脱。",
+      "duration": {
+        "normal": "当玩家距离 Boss 120 格以内。",
+        "expert": "当玩家距离 Boss 120 格以内。",
+        "master": "当玩家距离 Boss 120 格以内。"
+      }
+    },
     "category": "pre_hardmode",
     "flavor": "“世界的主宰与核心。”",
     "spawn": "血肉墙可在 地狱 中用 向导巫毒娃娃 召唤。若向导巫毒娃娃被丢入地狱中的 熔岩 并被摧毁， 向导 会立即死亡且血肉墙会立即被召唤。要让此流程发生，向导必须存活。如果物品被其他地方的熔岩摧毁，向导会像通常一样死亡，但 Boss 不会被召唤；如果物品被熔岩摧毁但向导并不存活，则会浪费掉物品，不会召唤出 Boss。\n也可以通过让向导在地狱中的熔岩内死亡的方式来召唤血肉墙。他可以以任何方式死亡（玩家、敌怪、或环境），只要他死亡时接触到熔岩即可。",
@@ -2395,33 +2885,33 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "血肉墙 AI",
-              "expert": "血肉墙 AI",
+              "normal": "",
+              "expert": "",
               "master": "血肉墙 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "50 50 /",
-              "expert": "150 150 /",
-              "master": "225 225"
+              "normal": "50",
+              "expert": "150",
+              "master": "225"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "8000 8000 /",
-              "expert": "11200 11200 /",
-              "master": "14280 14280"
+              "normal": "8000",
+              "expert": "11200",
+              "master": "14280"
             }
           },
           {
             "label": "防御",
             "modes": {
-              "normal": "12 12 /",
-              "expert": "18",
-              "master": "18"
+              "normal": "12",
+              "expert": "12",
+              "master": "12"
             }
           },
           {
@@ -2433,10 +2923,11 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       },
       {
-        "name": "血肉墙血肉墙眼睛",
+        "name": "血肉墙眼睛",
         "subtitle": "血肉墙眼睛",
         "image": "Wall_of_Flesh_Eye.gif",
         "stats": [
@@ -2459,33 +2950,33 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "血肉墙眼睛 AI",
-              "expert": "血肉墙眼睛 AI",
+              "normal": "",
+              "expert": "",
               "master": "血肉墙眼睛 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "50 50 /\n22–30 22–30",
-              "expert": "150 150 /\n44–60 44–60",
-              "master": "225 225 （接触）\n66–90 66–90 （ 魔眼激光 ；取决于生命）"
+              "normal": "50\n22–30\n（ 魔眼激光 ；取决于生命）",
+              "expert": "150\n44–60\n（ 魔眼激光 ；取决于生命）",
+              "master": "225 （接触）\n66–90\n（ 魔眼激光 ；取决于生命）"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "8000 8000 /",
-              "expert": "11200 11200 /",
-              "master": "14280 14280"
+              "normal": "8000",
+              "expert": "11200",
+              "master": "14280"
             }
           },
           {
             "label": "防御",
             "modes": {
-              "normal": "0 0 /",
-              "expert": "6",
-              "master": "6"
+              "normal": "0",
+              "expert": "0",
+              "master": "0"
             }
           },
           {
@@ -2497,6 +2988,7 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       },
       {
@@ -2523,48 +3015,49 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "饿鬼 AI",
-              "expert": "饿鬼 AI",
+              "normal": "",
+              "expert": "",
               "master": "饿鬼 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "30 30 /\n45 45\n60 60",
-              "expert": "60 60 /\n90 90\n120 120",
-              "master": "90 90 （血肉墙生命 >75%）\n135 135 （血肉墙生命 75–50%）\n180 180 （血肉墙生命 <50%）"
+              "normal": "30\n45\n（血肉墙生命 75–50%）\n60\n（血肉墙生命 <50%）",
+              "expert": "60\n90\n（血肉墙生命 75–50%）\n120\n（血肉墙生命 <50%）",
+              "master": "90 （血肉墙生命 >75%）\n135\n（血肉墙生命 75–50%）\n180\n（血肉墙生命 <50%）"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "240 240 /",
-              "expert": "336 336 /",
-              "master": "504 504"
+              "normal": "240",
+              "expert": "336",
+              "master": "504"
             }
           },
           {
             "label": "防御",
             "modes": {
-              "normal": "10 10 /",
-              "expert": "16",
-              "master": "16"
+              "normal": "10",
+              "expert": "10",
+              "master": "10 （血肉墙生命 >75%）\n20 （血肉墙生命 75–50%）\n30 （血肉墙生命 <50%）"
             }
           },
           {
             "label": "击退抗性",
             "modes": {
-              "normal": "−10% −10% /",
-              "expert": "1% 1% /\n（1 名玩家）57% （2 名玩家）71% （3 名玩家）81%  （4 名玩家）100% （5 名玩家及以上） （1 名玩家）\n57% （2 名玩家）\n71% （3 名玩家）\n81% （4 名玩家）\n100% （5 名玩家及以上）",
-              "master": "12% 12%\n（1 名玩家）62% （2 名玩家）75% （3 名玩家）83% （4 名玩家）100% （5 名玩家及以上） （1 名玩家）\n62% （2 名玩家）\n75% （3 名玩家）\n83% （4 名玩家）\n100% （5 名玩家及以上）"
+              "normal": "−10%",
+              "expert": "1%\n（1 名玩家） 57% （2 名玩家） 71% （3 名玩家） 81% （4 名玩家） 100% （5 名玩家及以上）",
+              "master": "12%\n（1 名玩家） 62% （2 名玩家） 75% （3 名玩家） 83% （4 名玩家） 100% （5 名玩家及以上）"
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       },
       {
-        "name": "饿鬼饿鬼 II",
+        "name": "饿鬼 II",
         "subtitle": "饿鬼 II",
         "image": "The_Hungry_II.gif",
         "stats": [
@@ -2587,25 +3080,25 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "恶魔眼 AI",
-              "expert": "恶魔眼 AI",
+              "normal": "",
+              "expert": "",
               "master": "恶魔眼 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "30 30 /",
-              "expert": "60 60 /",
-              "master": "90 90"
+              "normal": "30",
+              "expert": "60",
+              "master": "90"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "80 80 /",
-              "expert": "112 112 /",
-              "master": "168 168"
+              "normal": "80",
+              "expert": "112",
+              "master": "168"
             }
           },
           {
@@ -2619,12 +3112,13 @@
           {
             "label": "击退抗性",
             "modes": {
-              "normal": "20% 20% /",
-              "expert": "28% 28% /\n（1 名玩家）69% （2 名玩家）79% （3 名玩家）86%  （4 名玩家）100% （5 名玩家及以上） （1 名玩家）\n69% （2 名玩家）\n79% （3 名玩家）\n86% （4 名玩家）\n100% （5 名玩家及以上）",
-              "master": "36% 36%\n（1 名玩家）72% （2 名玩家）82% （3 名玩家）88% （4 名玩家）100% （5 名玩家及以上） （1 名玩家）\n72% （2 名玩家）\n82% （3 名玩家）\n88% （4 名玩家）\n100% （5 名玩家及以上）"
+              "normal": "20%",
+              "expert": "28%\n（1 名玩家） 69% （2 名玩家） 79% （3 名玩家） 86% （4 名玩家） 100% （5 名玩家及以上）",
+              "master": "36%\n（1 名玩家） 72% （2 名玩家） 82% （3 名玩家） 88% （4 名玩家） 100% （5 名玩家及以上）"
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       }
     ]
@@ -2654,25 +3148,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "史莱姆皇后 AI",
-          "expert": "史莱姆皇后 AI",
+          "normal": "",
+          "expert": "",
           "master": "史莱姆皇后 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "60 60\n80 80\n60 60",
-          "expert": "120 120\n160 160\n120 120",
-          "master": "180 180 （近战）\n240 240 （ 皇后猛击 ）\n180 180 （ 皇家凝胶 ）"
+          "normal": "60\n（近战）\n80\n（ 皇后猛击 ）\n60\n（ 皇家凝胶 ）",
+          "expert": "120\n（近战）\n160\n（ 皇后猛击 ）\n120\n（ 皇家凝胶 ）",
+          "master": "180\n（近战）\n240\n（ 皇后猛击 ）\n180\n（ 皇家凝胶 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "18000 18000 /",
-          "expert": "28800 28800 /",
-          "master": "36720 36720"
+          "normal": "18000",
+          "expert": "28800",
+          "master": "36720"
         }
       },
       {
@@ -2723,9 +3217,9 @@
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "43000 43000",
-          "expert": "64500 64500",
-          "master": "82238 82238 （总共）"
+          "normal": "43000\n（总共）",
+          "expert": "64500\n（总共）",
+          "master": "82238\n（总共）"
         }
       },
       {
@@ -2747,9 +3241,42 @@
     ],
     "drops": {
       "money": {
-        "normal": "12 金币",
-        "expert": "12 金币",
-        "master": "12 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -2937,17 +3464,17 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "毁灭者 AI",
-          "expert": "毁灭者 AI",
+          "normal": "",
+          "expert": "",
           "master": "毁灭者 AI"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "80000 80000 /",
-          "expert": "120000 120000 /",
-          "master": "153000 153000"
+          "normal": "80000",
+          "expert": "120000",
+          "master": "153000"
         }
       },
       {
@@ -2961,9 +3488,27 @@
     ],
     "drops": {
       "money": {
-        "normal": "12 GC",
-        "expert": "30 GC",
-        "master": "30 GC"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -3173,25 +3718,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "机械骷髅王头部 AI",
-          "expert": "机械骷髅王头部 AI",
+          "normal": "",
+          "expert": "",
           "master": "机械骷髅王头部 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "47 47 /\n94 94",
-          "expert": "80 80 /\n160 160",
-          "master": "120 120\n240 240 (旋转时)"
+          "normal": "47\n94\n(旋转时)",
+          "expert": "80\n160\n(旋转时)",
+          "master": "120\n240\n(旋转时)"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "28000 28000 /",
-          "expert": "42000 42000 /",
-          "master": "53550 53550"
+          "normal": "28000",
+          "expert": "42000",
+          "master": "53550"
         }
       },
       {
@@ -3199,7 +3744,7 @@
         "modes": {
           "normal": "24",
           "expert": "24",
-          "master": "24"
+          "master": "24\n48 (旋转时)"
         }
       },
       {
@@ -3213,9 +3758,42 @@
     ],
     "drops": {
       "money": {
-        "normal": "12 金币",
-        "expert": "12 金币",
-        "master": "12 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "30",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -3425,32 +4003,32 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "世纪之花 AI",
-          "expert": "世纪之花 AI",
+          "normal": "",
+          "expert": "",
           "master": "世纪之花 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "50 50\n44 44\n54 54\n62 62",
-          "expert": "100 100\n76 76\n96 96\n108 108",
-          "master": "150 150 （接触）\n114 114 （ 种子 ）\n144 144 （ 毒种子 ）\n162 162 （ 刺球 ）"
+          "normal": "50\n（接触）\n44\n（ 种子 ）\n54\n（ 毒种子 ）\n62\n（ 刺球 ）",
+          "expert": "100\n（接触）\n76\n（ 种子 ）\n96\n（ 毒种子 ）\n108\n（ 刺球 ）",
+          "master": "150\n（接触）\n114\n（ 种子 ）\n144\n（ 毒种子 ）\n162\n（ 刺球 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "30000 30000",
-          "expert": "42000 42000",
-          "master": "53550 53550"
+          "normal": "30000",
+          "expert": "42000",
+          "master": "53550"
         }
       },
       {
         "label": "防御",
         "modes": {
-          "normal": "36",
-          "expert": "36",
+          "normal": "",
+          "expert": "",
           "master": "36"
         }
       },
@@ -3464,6 +4042,21 @@
       }
     ],
     "drops": {},
+    "debuff": {
+      "name": "中毒",
+      "image": "Poisoned.png",
+      "description": "缓慢损失生命值",
+      "chance": {
+        "normal": "50%\n（ 毒种子 ）",
+        "expert": "100%\n（ 毒种子 ）",
+        "master": "100%\n（ 毒种子 ）"
+      },
+      "duration": {
+        "normal": "3–7 秒",
+        "expert": "4–18 秒",
+        "master": "5–22.5 秒"
+      }
+    },
     "subtitle": "第一形态",
     "category": "hardmode",
     "flavor": "“蔓生在丛林深处的畸形怪花。”",
@@ -3495,25 +4088,53 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "石巨人身体 AI",
-          "expert": "石巨人身体 AI",
+          "normal": "",
+          "expert": "",
           "master": "石巨人身体 AI"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "60000 60000\n25000 25000\n15000 15000\n10000 10000",
-          "expert": "90000 90000\n37500 37500\n22500 22500\n15000 15000",
-          "master": "114749 114749 （总计）\n47812 47812 （头部）\n28687 28687 （身体）\n19125 19125 （每只拳头）"
+          "normal": "60000\n（总计）\n25000\n（头部）\n15000\n（身体）\n10000\n（每只拳头）",
+          "expert": "90000\n（总计）\n37500\n（头部）\n22500\n（身体）\n15000\n（每只拳头）",
+          "master": "114749\n（总计）\n47812\n（头部）\n28687\n（身体）\n19125\n（每只拳头）"
         }
       }
     ],
     "drops": {
       "money": {
-        "normal": "15 GC",
-        "expert": "37 GC50 SC",
-        "master": "37 GC50 SC"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "37",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "37",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -3846,6 +4467,21 @@
         ]
       }
     },
+    "debuff": {
+      "name": "着火了！",
+      "image": "On_Fire!.png",
+      "description": "缓慢损失生命值",
+      "chance": {
+        "normal": "",
+        "expert": "",
+        "master": "50% （ 火球 ）"
+      },
+      "duration": {
+        "normal": "5–7 秒",
+        "expert": "10–14 秒",
+        "master": "15–21 秒"
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "hardmode",
     "flavor": "“丛林蜥蜴部落的石脸祭祀神像。”",
@@ -3875,25 +4511,25 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "石巨人头 AI",
-              "expert": "石巨人头 AI",
+              "normal": "",
+              "expert": "",
               "master": "石巨人头 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "64 64 /\n36 36\n48 48\n56 56",
-              "expert": "102 102 /\n72 72\n96 96\n112 112",
-              "master": "154 154 （接触）\n108 108 （ 火球 ，生命 ≥50% 时）\n144 144 （ 火球 ，生命 <50% 时）\n168 168 （ 魔眼光束 ）"
+              "normal": "64\n36\n（ 火球 ，生命 ≥50% 时）\n48\n（ 火球 ，生命 <50% 时）\n56\n（ 魔眼光束 ）",
+              "expert": "102\n72\n（ 火球 ，生命 ≥50% 时）\n96\n（ 火球 ，生命 <50% 时）\n112\n（ 魔眼光束 ）",
+              "master": "154 （接触）\n108\n（ 火球 ，生命 ≥50% 时）\n144\n（ 火球 ，生命 <50% 时）\n168\n（ 魔眼光束 ）"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "25000 25000 /",
-              "expert": "37500 37500 /",
-              "master": "47812 47812"
+              "normal": "25000",
+              "expert": "37500",
+              "master": "47812"
             }
           },
           {
@@ -3913,6 +4549,7 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       },
       {
@@ -3939,25 +4576,25 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "石巨人之拳 AI",
-              "expert": "石巨人之拳 AI",
+              "normal": "",
+              "expert": "",
               "master": "石巨人之拳 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "59 59 /",
-              "expert": "94 94 /",
-              "master": "142 142"
+              "normal": "59",
+              "expert": "94",
+              "master": "142"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "10000 10000 /",
-              "expert": "15000 15000 /",
-              "master": "19125 19125"
+              "normal": "10000",
+              "expert": "15000",
+              "master": "19125"
             }
           },
           {
@@ -3977,6 +4614,7 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       }
     ]
@@ -4006,25 +4644,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "猪龙鱼公爵 AI",
-          "expert": "猪龙鱼公爵 AI",
+          "normal": "",
+          "expert": "",
           "master": "猪龙鱼公爵 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "100 100 /\n200 200\n80 80\n100 100",
-          "expert": "140 140 /\n280 280\n100 100\n150 150",
-          "master": "210 210 （接触）\n420 420 （接触，暴怒时）\n150 150 （ 鲨鱼旋风 ）\n225 225 （ 爆炸泡泡 ）"
+          "normal": "100\n200\n（接触，暴怒时）\n80\n（ 鲨鱼旋风 ）\n100\n（ 爆炸泡泡 ）",
+          "expert": "140\n280\n（接触，暴怒时）\n100\n（ 鲨鱼旋风 ）\n150\n（ 爆炸泡泡 ）",
+          "master": "210 （接触）\n420\n（接触，暴怒时）\n150\n（ 鲨鱼旋风 ）\n225\n（ 爆炸泡泡 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "60000 60000 /",
-          "expert": "78000 78000 /",
-          "master": "99450 99450"
+          "normal": "60000",
+          "expert": "78000",
+          "master": "99450"
         }
       },
       {
@@ -4032,7 +4670,7 @@
         "modes": {
           "normal": "50",
           "expert": "50",
-          "master": "50"
+          "master": "50\n100 （暴怒时）"
         }
       },
       {
@@ -4046,14 +4684,77 @@
     ],
     "drops": {
       "money": {
-        "normal": "25 金币",
-        "expert": "25 金币",
-        "master": "25 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "62",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "62",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "62",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [],
         "expert": [],
         "master": []
+      }
+    },
+    "debuff": {
+      "name": "流血",
+      "image": "Bleeding.png",
+      "description": "无法再生生命",
+      "chance": {
+        "normal": "33%",
+        "expert": "33%",
+        "master": "33%"
+      },
+      "duration": {
+        "normal": "",
+        "expert": "6–20 秒",
+        "master": "7.5–25 秒"
       }
     },
     "subtitle": "第一阶段",
@@ -4087,25 +4788,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "光之女皇 AI",
-          "expert": "光之女皇 AI",
+          "normal": "",
+          "expert": "",
           "master": "光之女皇 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "80 80\n120 120\n90 90\n100 100\n90 90\n100 100",
-          "expert": "110 110\n165 165\n120 120\n140 140\n120 120\n120 120",
-          "master": "248 248 （接触）\n372 372 （猛冲）\n180 180 （ 七彩矢 1）\n210 210 （ 太阳舞 ）\n180 180 （ 永恒彩虹 ）\n180 180 （ 空灵长枪 1）"
+          "normal": "80\n（接触）\n120\n（猛冲）\n90\n（ 七彩矢 1）\n100\n（ 太阳舞 ）\n90\n（ 永恒彩虹 ）\n100\n（ 空灵长枪 1）",
+          "expert": "110\n（接触）\n165\n（猛冲）\n120\n（ 七彩矢 1）\n140\n（ 太阳舞 ）\n120\n（ 永恒彩虹 ）\n120\n（ 空灵长枪 1）",
+          "master": "248\n（接触）\n372\n（猛冲）\n180\n（ 七彩矢 1）\n210\n（ 太阳舞 ）\n180\n（ 永恒彩虹 ）\n180\n（ 空灵长枪 1）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "70000 70000 /",
-          "expert": "98000 98000 /",
-          "master": "124950 124950"
+          "normal": "70000",
+          "expert": "98000",
+          "master": "124950"
         }
       },
       {
@@ -4127,9 +4828,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "25 金币",
-        "expert": "25 金币",
-        "master": "25 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "62",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "62",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "62",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [],
@@ -4168,25 +4917,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "拜月教邪教徒 AI",
-          "expert": "拜月教邪教徒 AI",
+          "normal": "",
+          "expert": "",
           "master": "拜月教邪教徒 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "50 50 /\n36 36\n70 70\n60 60\n90 90\n120 120",
-          "expert": "75 75 /\n72 72\n100 100\n80 80\n120 120\n180 180\n45 （远古噩运妖） 45 （ 远古噩运妖 ）\n180 （预言之末） 180 （ 预言之末 ）",
-          "master": "112 112 （接触）\n108 108 （ 暗影火球 ）\n150 150 （ 冰雪雾 ）\n120 120 （ 火球 ）\n180 180 （ 闪电珠 ）\n270 270 （ 远古光明妖 ）\n67 （远古噩运妖） 67 （ 远古噩运妖 ）\n402 （预言之末） 402 （ 预言之末 ）"
+          "normal": "50\n36\n（ 暗影火球 ）\n70\n（ 冰雪雾 ）\n60\n（ 火球 ）\n90\n（ 闪电珠 ）\n120\n（ 远古光明妖 ）",
+          "expert": "75\n72\n（ 暗影火球 ）\n100\n（ 冰雪雾 ）\n80\n（ 火球 ）\n120\n（ 闪电珠 ）\n180\n（ 远古光明妖 ）\n45 （ 远古噩运妖 ）\n180 （ 预言之末 ）",
+          "master": "112 （接触）\n108\n（ 暗影火球 ）\n150\n（ 冰雪雾 ）\n120\n（ 火球 ）\n180\n（ 闪电珠 ）\n270\n（ 远古光明妖 ）\n67 （ 远古噩运妖 ）\n402 （ 预言之末 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "32000 32000",
-          "expert": "48000 48000",
-          "master": "61000 61000"
+          "normal": "32000",
+          "expert": "48000",
+          "master": "61000"
         }
       },
       {
@@ -4194,7 +4943,7 @@
         "modes": {
           "normal": "42",
           "expert": "42",
-          "master": "42"
+          "master": "42\n/ 27 （≤50% 生命）"
         }
       },
       {
@@ -4208,9 +4957,42 @@
     ],
     "drops": {
       "money": {
-        "normal": "10 金币",
-        "expert": "10 金币",
-        "master": "10 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -4319,6 +5101,21 @@
         ]
       }
     },
+    "debuff": {
+      "name": "着火了！",
+      "image": "On_Fire!.png",
+      "description": "缓慢损失生命值",
+      "chance": {
+        "normal": "",
+        "expert": "",
+        "master": "100% （ 火球 ）"
+      },
+      "duration": {
+        "normal": "0.5–2.5 秒",
+        "expert": "1–5 秒",
+        "master": "1.25–6.25 秒"
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "hardmode",
     "flavor": "“地牢巫团的狂热首领。”",
@@ -4350,8 +5147,8 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "月亮领主 AI",
-          "expert": "月亮领主 AI",
+          "normal": "",
+          "expert": "",
           "master": "月亮领主 AI"
         }
       },
@@ -4366,9 +5163,9 @@
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "145000 145000",
-          "expert": "217500 217500",
-          "master": "277311 277311 (总共)"
+          "normal": "145000\n(总共)",
+          "expert": "217500\n(总共)",
+          "master": "277311\n(总共)"
         }
       },
       {
@@ -4382,17 +5179,45 @@
       {
         "label": "击退抗性",
         "modes": {
-          "normal": "100%",
-          "expert": "100%",
+          "normal": "",
+          "expert": "",
           "master": "100%"
         }
       }
     ],
     "drops": {
       "money": {
-        "normal": "1 PC",
-        "expert": "2 PC50 GC",
-        "master": "2 PC50 GC"
+        "normal": [
+          {
+            "type": "pc",
+            "amount": "1",
+            "image": "Platinum_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "pc",
+            "amount": "2",
+            "image": "Platinum_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "50",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "pc",
+            "amount": "2",
+            "image": "Platinum_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "50",
+            "image": "Gold_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -4825,6 +5650,16 @@
         ]
       }
     },
+    "debuff": {
+      "name": "月噬",
+      "image": "Moon_Bite.png",
+      "description": "你无法吸收治疗效果",
+      "duration": {
+        "normal": "14 秒",
+        "expert": "16 秒",
+        "master": "16 秒"
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "hardmode",
     "flavor": "“ 月亮末日慢慢逼近…… ”",
@@ -4854,25 +5689,25 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "月亮领主头 AI",
-              "expert": "月亮领主头 AI",
+              "normal": "",
+              "expert": "",
               "master": "月亮领主头 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "150 150\n60 60\n140 140",
-              "expert": "300 300\n120 120\n280 280",
-              "master": "450 450 （ 幻影死亡射线 ）\n180 180 （ 幻影矢 ）\n420 420 （ For the Worthy 和 Get fixed boi 世界中的 月亮巨石 ）"
+              "normal": "0\n150\n（ 幻影死亡射线 ）\n60\n（ 幻影矢 ）\n140\n（ For the Worthy 和 Get fixed boi 世界中的 月亮巨石 ）",
+              "expert": "0\n300\n（ 幻影死亡射线 ）\n120\n（ 幻影矢 ）\n280\n（ For the Worthy 和 Get fixed boi 世界中的 月亮巨石 ）",
+              "master": "0 （接触）\n450\n（ 幻影死亡射线 ）\n180\n（ 幻影矢 ）\n420\n（ For the Worthy 和 Get fixed boi 世界中的 月亮巨石 ）"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "45000 45000 /",
-              "expert": "67500 67500 /",
-              "master": "86062 86062"
+              "normal": "45000",
+              "expert": "67500",
+              "master": "86062"
             }
           },
           {
@@ -4892,6 +5727,7 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       },
       {
@@ -4918,25 +5754,25 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "月亮领主手 AI",
-              "expert": "月亮领主手 AI",
+              "normal": "",
+              "expert": "",
               "master": "月亮领主手 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "80 80\n60 60\n60 60",
-              "expert": "160 160\n120 120\n120 120",
-              "master": "240 240 （ 幻影球 ）\n180 180 （ 幻影眼 ）\n180 180 （ 幻影矢 ）"
+              "normal": "0\n80\n（ 幻影球 ）\n60\n（ 幻影眼 ）\n60\n（ 幻影矢 ）",
+              "expert": "0\n160\n（ 幻影球 ）\n120\n（ 幻影眼 ）\n120\n（ 幻影矢 ）",
+              "master": "0 （接触）\n80 （接触）（暴露的眼窝）\n240\n（ 幻影球 ）\n180\n（ 幻影眼 ）\n180\n（ 幻影矢 ）"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "25000 25000 /",
-              "expert": "37500 37500 /",
-              "master": "47812 47812"
+              "normal": "25000",
+              "expert": "37500",
+              "master": "47812"
             }
           },
           {
@@ -4956,6 +5792,7 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       },
       {
@@ -4982,8 +5819,8 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "月亮领主心脏 AI",
-              "expert": "月亮领主心脏 AI",
+              "normal": "",
+              "expert": "",
               "master": "月亮领主心脏 AI"
             }
           },
@@ -4998,9 +5835,9 @@
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "50000 50000 /",
-              "expert": "75000 75000 /",
-              "master": "95625 95625"
+              "normal": "50000",
+              "expert": "75000",
+              "master": "95625"
             }
           },
           {
@@ -5020,6 +5857,7 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       }
     ]
@@ -5049,8 +5887,8 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "黑暗魔法师 AI",
-          "expert": "黑暗魔法师 AI",
+          "normal": "",
+          "expert": "",
           "master": "黑暗魔法师 AI"
         }
       },
@@ -5091,8 +5929,8 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "攻击者 AI",
-          "expert": "攻击者 AI",
+          "normal": "",
+          "expert": "",
           "master": "攻击者 AI"
         }
       },
@@ -5106,6 +5944,21 @@
       }
     ],
     "drops": {},
+    "debuff": {
+      "name": "分泌物",
+      "image": "Oozed.png",
+      "description": "移动速度显著降低",
+      "chance": {
+        "normal": "",
+        "expert": "",
+        "master": "100% （ 食人魔唾液 ）"
+      },
+      "duration": {
+        "normal": "15 秒",
+        "expert": "15 秒",
+        "master": "15 秒"
+      }
+    },
     "category": "event"
   },
   "双足翼龙": {
@@ -5133,25 +5986,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "双足翼龙 AI",
-          "expert": "双足翼龙 AI",
+          "normal": "",
+          "expert": "",
           "master": "双足翼龙 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "80 80 /\n70 70\n70 70",
-          "expert": "104 104 /\n140 140\n140 140",
-          "master": "156 156 （接触）\n210 210 （ 双足翼龙火球 ）\n210 210 （ 双足翼龙吐息 ）"
+          "normal": "80\n70\n（ 双足翼龙火球 ）\n70\n（ 双足翼龙吐息 ）",
+          "expert": "104\n140\n（ 双足翼龙火球 ）\n140\n（ 双足翼龙吐息 ）",
+          "master": "156 （接触）\n210\n（ 双足翼龙火球 ）\n210\n（ 双足翼龙吐息 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "50000 50000 /",
-          "expert": "75000 75000 /",
-          "master": "95625 95625"
+          "normal": "50000",
+          "expert": "75000",
+          "master": "95625"
         }
       },
       {
@@ -5385,6 +6238,21 @@
         ]
       }
     },
+    "debuff": {
+      "name": "着火了！",
+      "image": "On_Fire!.png",
+      "description": "缓慢损失生命值",
+      "chance": {
+        "normal": "",
+        "expert": "",
+        "master": "100% （ 双足翼龙吐息 ）"
+      },
+      "duration": {
+        "normal": "7–10 秒",
+        "expert": "14–20 秒",
+        "master": "17.5-25 秒"
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "event"
   },
@@ -5413,8 +6281,8 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "荷兰飞盗船 AI",
-          "expert": "荷兰飞盗船 AI",
+          "normal": "",
+          "expert": "",
           "master": "荷兰飞盗船 AI"
         }
       },
@@ -5429,9 +6297,9 @@
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "8000 8000",
-          "expert": "13600 13600",
-          "master": "20400 20400 （4 门大炮）"
+          "normal": "8000\n（4 门大炮）",
+          "expert": "13600\n（4 门大炮）",
+          "master": "20400\n（4 门大炮）"
         }
       },
       {
@@ -5714,25 +6582,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "哀木 AI",
-          "expert": "哀木 AI",
+          "normal": "",
+          "expert": "",
           "master": "哀木 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "120 120 /\n100 100\n150 150\n80 80\n100 100",
-          "expert": "180 180 /\n200 200\n300 300\n160 160\n200 200",
-          "master": "270 270 （接触）\n300 300 （ 烈焰木 、生命 ≥ 25%）\n450 450 （ 烈焰木 、生命 < 25%）\n240 240 （ 希腊烈火 、生命 ≥ 25%）\n300 300 （ 希腊烈火 、生命 < 25%）"
+          "normal": "120\n100\n（ 烈焰木 、生命 ≥ 25%）\n150\n（ 烈焰木 、生命 < 25%）\n80\n（ 希腊烈火 、生命 ≥ 25%）\n100\n（ 希腊烈火 、生命 < 25%）",
+          "expert": "180\n200\n（ 烈焰木 、生命 ≥ 25%）\n300\n（ 烈焰木 、生命 < 25%）\n160\n（ 希腊烈火 、生命 ≥ 25%）\n200\n（ 希腊烈火 、生命 < 25%）",
+          "master": "270 （接触）\n300\n（ 烈焰木 、生命 ≥ 25%）\n450\n（ 烈焰木 、生命 < 25%）\n240\n（ 希腊烈火 、生命 ≥ 25%）\n300\n（ 希腊烈火 、生命 < 25%）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "14000 14000 /",
-          "expert": "18200 18200 /",
-          "master": "23205 23205"
+          "normal": "14000",
+          "expert": "18200",
+          "master": "23205"
         }
       },
       {
@@ -5754,9 +6622,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "1 金币",
-        "expert": "1 金币",
-        "master": "1 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -5982,25 +6898,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "南瓜王 AI",
-          "expert": "南瓜王 AI",
+          "normal": "",
+          "expert": "",
           "master": "南瓜王 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "50 50 /\n80 80",
-          "expert": "75 75 /\n160 160",
-          "master": "112 112 （接触）\n240 240 （ 希腊烈火 ）"
+          "normal": "50\n80\n（ 希腊烈火 ）",
+          "expert": "75\n160\n（ 希腊烈火 ）",
+          "master": "112 （接触）\n240\n（ 希腊烈火 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "26000 26000 /",
-          "expert": "33800 33800 /",
-          "master": "43095 43095"
+          "normal": "26000",
+          "expert": "33800",
+          "master": "43095"
         }
       },
       {
@@ -6022,9 +6938,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "5 金币",
-        "expert": "5 金币",
-        "master": "5 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -6279,25 +7243,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "哀木 AI",
-          "expert": "哀木 AI",
+          "normal": "",
+          "expert": "",
           "master": "哀木 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "110 110 /\n86 86\n114 114\n80 80",
-          "expert": "165 165 /\n172 172\n228 228\n160 160",
-          "master": "248 248 （接触）\n258 258 （ 松针 ）\n342 342 （ 装饰 ）\n240 240 （ 装饰 弹片）"
+          "normal": "110\n86\n（ 松针 ）\n114\n（ 装饰 ）\n80\n（ 装饰 弹片）",
+          "expert": "165\n172\n（ 松针 ）\n228\n（ 装饰 ）\n160\n（ 装饰 弹片）",
+          "master": "248 （接触）\n258\n（ 松针 ）\n342\n（ 装饰 ）\n240\n（ 装饰 弹片）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "13000 13000 /",
-          "expert": "16900 16900 /",
-          "master": "21548 21548"
+          "normal": "13000",
+          "expert": "16900",
+          "master": "21548"
         }
       },
       {
@@ -6319,9 +7283,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "1 金币",
-        "expert": "1 金币",
-        "master": "1 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -6491,25 +7503,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "圣诞坦克 AI",
-          "expert": "圣诞坦克 AI",
+          "normal": "",
+          "expert": "",
           "master": "圣诞坦克 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "120 120 /\n72 72\n160 160\n84 84\n100 100",
-          "expert": "180 180 /\n144 144\n320 320\n168 168\n200 200",
-          "master": "270 270 （近战）\n216 216 （ 链式机枪 ）\n480 480 （ 尖球 ）\n252 252 （ 导弹 ）\n300 300 （ 礼物 ）"
+          "normal": "120\n72\n（ 链式机枪 ）\n160\n（ 尖球 ）\n84\n（ 导弹 ）\n100\n（ 礼物 ）",
+          "expert": "180\n144\n（ 链式机枪 ）\n320\n（ 尖球 ）\n168\n（ 导弹 ）\n200\n（ 礼物 ）",
+          "master": "270 （近战）\n216\n（ 链式机枪 ）\n480\n（ 尖球 ）\n252\n（ 导弹 ）\n300\n（ 礼物 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "18000 18000 /",
-          "expert": "23400 23400 /",
-          "master": "29835 29835"
+          "normal": "18000",
+          "expert": "23400",
+          "master": "29835"
         }
       },
       {
@@ -6531,9 +7543,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "1 金币",
-        "expert": "1 金币",
-        "master": "1 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -6661,25 +7721,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "冰雪女王 AI",
-          "expert": "冰雪女王 AI",
+          "normal": "",
+          "expert": "",
           "master": "冰雪女王 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "120 120 /\n(电脑版、主机版、和移动版) （接触）110 (前代主机版) （接触）84 （寒霜波）70–74 （寒霜碎块） (电脑版、主机版、和移动版) （接触）\n110 (前代主机版) （接触）\n84 （ 寒霜波 ）\n70–74 （ 寒霜碎块 ）",
-          "expert": "180 180 /\n（接触）168 （寒霜波）140–148 （寒霜碎块） （接触）\n168 （ 寒霜波 ）\n140–148 （ 寒霜碎块 ）",
-          "master": "270 270\n（接触）252 （寒霜波）210–222 （寒霜碎块） （接触）\n252 （ 寒霜波 ）\n210–222 （ 寒霜碎块 ）"
+          "normal": "120\n(电脑版、主机版、和移动版) （接触） 110 (前代主机版) （接触） 84 （ 寒霜波 ） 70–74 （ 寒霜碎块 ）",
+          "expert": "180\n（接触） 168 （ 寒霜波 ） 140–148 （ 寒霜碎块 ）",
+          "master": "270\n（接触） 252 （ 寒霜波 ） 210–222 （ 寒霜碎块 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "34000 34000 /",
-          "expert": "44200 44200 /",
-          "master": "56355 56355"
+          "normal": "34000",
+          "expert": "44200",
+          "master": "56355"
         }
       },
       {
@@ -6701,9 +7761,57 @@
     ],
     "drops": {
       "money": {
-        "normal": "5 金币",
-        "expert": "5 金币",
-        "master": "5 金币"
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "12",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       "items": {
         "normal": [
@@ -6866,6 +7974,21 @@
         ]
       }
     },
+    "debuff": {
+      "name": "冷冻",
+      "image": "Chilled.png",
+      "description": "你的移动速度已降低",
+      "chance": {
+        "normal": "",
+        "expert": "",
+        "master": "100% （ 寒霜波 ）\n66.67% （ 寒霜碎块 ）"
+      },
+      "duration": {
+        "normal": "5–10 秒\n（参见 备注 ）",
+        "expert": "10–20 秒\n（参见 备注 ）",
+        "master": "12.5–25 秒\n（参见 备注 ）"
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "event"
   },
@@ -6894,25 +8017,25 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "骑士 AI",
-          "expert": "骑士 AI",
+          "normal": "",
+          "expert": "",
           "master": "骑士 AI"
         }
       },
       {
         "label": "伤害",
         "modes": {
-          "normal": "50 50 /\n100 100\n160 160\n60 60",
-          "expert": "100 100 /\n200 200\n320 320\n100 100",
-          "master": "150 150 （接触）\n300 300 （ 火星死亡射线 ）\n480 480 （狂暴 火星死亡射线 ）\n150 150 （ 飞碟残片 ）"
+          "normal": "50\n100\n（ 火星死亡射线 ）\n160\n（狂暴 火星死亡射线 ）\n60\n（ 飞碟残片 ）",
+          "expert": "100\n200\n（ 火星死亡射线 ）\n320\n（狂暴 火星死亡射线 ）\n100\n（ 飞碟残片 ）",
+          "master": "150 （接触）\n300\n（ 火星死亡射线 ）\n480\n（狂暴 火星死亡射线 ）\n150\n（ 飞碟残片 ）"
         }
       },
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "27000 27000",
-          "expert": "54000 54000",
-          "master": "81000 81000 （所有部件）"
+          "normal": "27000\n（所有部件）",
+          "expert": "54000\n（所有部件）",
+          "master": "81000\n（所有部件）"
         }
       },
       {
@@ -7164,25 +8287,25 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "骑士 AI",
-              "expert": "骑士 AI",
+              "normal": "",
+              "expert": "",
               "master": "骑士 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "60 60 /\n70 70",
-              "expert": "120 120 /\n120 120",
-              "master": "180 180 （接触）\n180 180 （ 飞碟激光 ）"
+              "normal": "60\n70\n（ 飞碟激光 ）",
+              "expert": "120\n120\n（ 飞碟激光 ）",
+              "master": "180 （接触）\n180\n（ 飞碟激光 ）"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "5000 5000 /",
-              "expert": "8500 8500 /",
-              "master": "12750 12750"
+              "normal": "5000",
+              "expert": "8500",
+              "master": "12750"
             }
           },
           {
@@ -7202,6 +8325,7 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       },
       {
@@ -7228,25 +8352,25 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "骑士 AI",
-              "expert": "骑士 AI",
+              "normal": "",
+              "expert": "",
               "master": "骑士 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "60 60 /\n100 100",
-              "expert": "120 120 /\n148 148",
-              "master": "180 180 （接触）\n222 222 （ 火星火箭 ）"
+              "normal": "60\n100\n（ 火星火箭 ）",
+              "expert": "120\n148\n（ 火星火箭 ）",
+              "master": "180 （接触）\n222\n（ 火星火箭 ）"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "3500 3500 /",
-              "expert": "5950 5950 /",
-              "master": "8925 8925"
+              "normal": "3500",
+              "expert": "5950",
+              "master": "8925"
             }
           },
           {
@@ -7266,10 +8390,11 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       },
       {
-        "name": "火星飞碟火星飞碟核心",
+        "name": "火星飞碟核心",
         "subtitle": "火星飞碟核心",
         "image": "Martian_Saucer_Core.png",
         "stats": [
@@ -7292,25 +8417,25 @@
           {
             "label": "AI 类型",
             "modes": {
-              "normal": "火星飞碟 AI",
-              "expert": "火星飞碟 AI",
+              "normal": "",
+              "expert": "",
               "master": "火星飞碟 AI"
             }
           },
           {
             "label": "伤害",
             "modes": {
-              "normal": "80 80 /",
-              "expert": "160 160 /",
-              "master": "240 240 （接触）"
+              "normal": "80",
+              "expert": "160",
+              "master": "240 （接触）"
             }
           },
           {
             "label": "最大生命值",
             "modes": {
-              "normal": "10000 10000 /",
-              "expert": "17000 17000 /",
-              "master": "25500 25500"
+              "normal": "10000",
+              "expert": "17000",
+              "master": "25500"
             }
           },
           {
@@ -7330,6 +8455,7 @@
             }
           }
         ],
+        "debuff": null,
         "drops": {}
       }
     ]
@@ -7359,8 +8485,8 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "天界柱 AI",
-          "expert": "天界柱 AI",
+          "normal": "",
+          "expert": "",
           "master": "天界柱 AI"
         }
       },
@@ -7426,8 +8552,8 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "天界柱 AI",
-          "expert": "天界柱 AI",
+          "normal": "",
+          "expert": "",
           "master": "天界柱 AI"
         }
       },
@@ -7493,8 +8619,8 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "天界柱 AI",
-          "expert": "天界柱 AI",
+          "normal": "",
+          "expert": "",
           "master": "天界柱 AI"
         }
       },
@@ -7560,8 +8686,8 @@
       {
         "label": "AI 类型",
         "modes": {
-          "normal": "天界柱 AI",
-          "expert": "天界柱 AI",
+          "normal": "",
+          "expert": "",
           "master": "天界柱 AI"
         }
       },
@@ -7627,9 +8753,9 @@
       {
         "label": "最大生命值",
         "modes": {
-          "normal": "256800 256800",
-          "expert": "327420 327420",
-          "master": "436560 436560 （总计）"
+          "normal": "256800\n（总计）",
+          "expert": "327420\n（总计）",
+          "master": "436560\n（总计）"
         }
       }
     ],

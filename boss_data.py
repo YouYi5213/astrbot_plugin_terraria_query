@@ -187,39 +187,49 @@ def _li_matches_mode(classes: set[str], mode: str) -> bool:
     return False
 
 
-def _parse_coin_text(td: Tag) -> str:
-    coin = td.select_one("span.coin")
-    if coin and coin.get("title"):
-        return _clean_text(coin["title"])
-    parts: list[str] = []
-    for coin_span in td.select("span.coin"):
-        for cls in COIN_SPECS:
+def _parse_coins_from_node(node: Tag) -> list[dict[str, str]]:
+    coins: list[dict[str, str]] = []
+    for coin_span in node.select("span.coin"):
+        for cls, image in COIN_SPECS.items():
             amt_el = coin_span.select_one(f"span.{cls}")
             if not amt_el:
                 continue
             match = re.search(r"(\d+)", _clean_text(amt_el.get_text()))
             if match:
-                abbr = {"pc": "PC", "gc": "GC", "sc": "SC", "cc": "CC"}.get(cls, cls.upper())
-                parts.append(f"{match.group(1)} {abbr}")
-            break
-    return " ".join(parts) if parts else _cell_text(td)
+                coins.append({"type": cls, "amount": match.group(1), "image": image})
+    return coins
 
 
-def _parse_boss_money(table: Tag | None) -> dict[str, str]:
+def _parse_boss_money(table: Tag | None) -> dict[str, list[dict[str, str]]]:
     if not table:
         return {}
     td = table.select_one("td")
     if not td:
         return {}
-    by_mode = _parse_mode_field(td)
-    if by_mode:
-        return {
-            "normal": by_mode.get("normal", ""),
-            "expert": by_mode.get("expert", by_mode.get("normal", "")),
-            "master": by_mode.get("master", by_mode.get("expert", "")),
-        }
-    text = _parse_coin_text(td)
-    return {"normal": text, "expert": text, "master": text}
+
+    result: dict[str, list[dict[str, str]]] = {mode: [] for mode in _MODE_ORDER}
+    mode_content = td.select_one("span.mode-content")
+    if mode_content:
+        for span in mode_content.find_all("span", recursive=False):
+            classes = set(span.get("class") or [])
+            coins = _parse_coins_from_node(span)
+            if not coins:
+                continue
+            if classes & {"m-normal", "m-journey"}:
+                result["normal"] = coins
+            if "m-expert-master" in classes:
+                result["expert"] = list(coins)
+                result["master"] = list(coins)
+            elif "m-expert" in classes:
+                result["expert"] = coins
+            elif "m-master" in classes:
+                result["master"] = coins
+        return result
+
+    coins = _parse_coins_from_node(td)
+    if coins:
+        return {mode: list(coins) for mode in _MODE_ORDER}
+    return result
 
 
 def _parse_boss_drops_list(ul: Tag | None) -> dict[str, list[dict[str, Any]]]:
@@ -267,23 +277,19 @@ def _parse_boss_drops_list(ul: Tag | None) -> dict[str, list[dict[str, Any]]]:
     return result
 
 
-def _parse_npcstat_modes(td: Tag) -> dict[str, str]:
-    npcstat = td.select_one("span.npcstat")
-    if not npcstat:
-        resolved = _resolve_mode_values(td)
-        if resolved:
-            return resolved
-        text = _cell_text(td, multiline=True)
-        return {"normal": text, "expert": text, "master": text}
-
+def _parse_npcstat_from_tag(npcstat: Tag) -> dict[str, str]:
     values: dict[str, str] = {}
-    for span in npcstat.select("span[class]"):
-        classes = set(span.get("class", []))
-        text = _clean_text(span.get_text())
+    for child in npcstat.children:
+        if not isinstance(child, Tag) or child.name != "span":
+            continue
+        classes = set(child.get("class") or [])
+        if "ssep" in classes:
+            continue
+        text = _clean_text(child.get_text())
         if not text:
             continue
         if "m-all" in classes:
-            return {"normal": text, "expert": text, "master": text}
+            return {mode: text for mode in _MODE_ORDER}
         if classes & {"m-normal", "m-journey"}:
             values["normal"] = text
         elif "m-expert" in classes:
@@ -296,7 +302,80 @@ def _parse_npcstat_modes(td: Tag) -> dict[str, str]:
             "expert": values.get("expert", values.get("normal", "")),
             "master": values.get("master", values.get("expert", values.get("normal", ""))),
         }
-    return {"normal": _cell_text(npcstat), "expert": _cell_text(npcstat), "master": _cell_text(npcstat)}
+    text = _cell_text(npcstat)
+    return {"normal": text, "expert": text, "master": text}
+
+
+def _append_mode_content_span(parts: dict[str, list[str]], span: Tag) -> None:
+    classes = set(span.get("class") or [])
+    text = _cell_text(span)
+    if not text:
+        return
+    if classes & {"m-normal", "m-journey"}:
+        parts["normal"].append(text)
+    elif "m-expert-master" in classes:
+        parts["expert"].append(text)
+        parts["master"].append(text)
+    elif "m-expert" in classes:
+        parts["expert"].append(text)
+    elif "m-master" in classes:
+        parts["master"].append(text)
+
+
+def _parse_mode_content_block(parts: dict[str, list[str]], block: Tag) -> None:
+    for child in block.children:
+        if isinstance(child, Tag) and child.name == "span":
+            _append_mode_content_span(parts, child)
+            continue
+        text = _clean_text(str(child))
+        if text:
+            _append_trailing_text(parts, text)
+
+
+def _append_note_to_parts(parts: dict[str, list[str]], note: str) -> None:
+    if not note:
+        return
+    for mode in _MODE_ORDER:
+        if parts[mode]:
+            parts[mode][-1] = f"{parts[mode][-1]} {note}".strip()
+        else:
+            parts[mode].append(note)
+
+
+def _append_trailing_text(parts: dict[str, list[str]], text: str) -> None:
+    if not text:
+        return
+    for mode in reversed(_MODE_ORDER):
+        if parts[mode]:
+            parts[mode].append(text)
+            return
+    parts["master"].append(text)
+
+
+def _append_trailing_text_active_modes(parts: dict[str, list[str]], text: str) -> None:
+    if not text:
+        return
+    active = [mode for mode in _MODE_ORDER if parts[mode]]
+    if not active:
+        parts["master"].append(text)
+        return
+    for mode in active:
+        parts[mode].append(text)
+
+
+def _finalize_mode_parts(parts: dict[str, list[str]]) -> dict[str, str]:
+    return {mode: "\n".join(line for line in parts[mode] if line).strip() for mode in _MODE_ORDER}
+
+
+def _parse_npcstat_modes(td: Tag) -> dict[str, str]:
+    npcstat = td.select_one("span.npcstat")
+    if not npcstat:
+        resolved = _resolve_mode_values(td)
+        if resolved:
+            return resolved
+        text = _cell_text(td, multiline=True)
+        return {"normal": text, "expert": text, "master": text}
+    return _parse_npcstat_from_tag(npcstat)
 
 
 def _parse_mode_text_lines(td: Tag) -> dict[str, str]:
@@ -306,66 +385,69 @@ def _parse_mode_text_lines(td: Tag) -> dict[str, str]:
     for sup in node.select("sup.reference"):
         sup.decompose()
 
-    mode_lines: dict[str, list[str]] = {m: [] for m in _MODE_ORDER}
-    current_mode: str | None = None
-    buffer: list[str] = []
+    npcstat = node.select_one("span.npcstat")
+    mode_blocks = node.select("span.mode-content")
+    notes = node.select("span.note-text")
 
-    def flush() -> None:
-        nonlocal buffer, current_mode
-        if buffer and current_mode:
-            mode_lines[current_mode].append(" ".join(buffer))
-        buffer = []
+    if npcstat and not mode_blocks and not notes:
+        return _parse_npcstat_from_tag(npcstat)
 
-    for child in node.descendants:
+    parts: dict[str, list[str]] = {mode: [] for mode in _MODE_ORDER}
+    if npcstat:
+        base = _parse_npcstat_from_tag(npcstat)
+        for mode, value in base.items():
+            if value:
+                parts[mode].append(value)
+
+    seen_mode_content = False
+    for child in node.children:
         if isinstance(child, Tag):
-            if child.name == "br":
-                flush()
-                continue
             classes = set(child.get("class") or [])
-            if child.name == "span" and classes & {"m-normal", "m-journey"}:
-                flush()
-                current_mode = "normal"
-                buffer = [_clean_text(child.get_text())]
+            if "npcstat" in classes:
                 continue
-            if child.name == "span" and "m-expert" in classes and "m-expert-master" not in classes:
-                flush()
-                current_mode = "expert"
-                buffer = [_clean_text(child.get_text())]
-                continue
-            if child.name == "span" and "m-master" in classes:
-                flush()
-                current_mode = "master"
-                buffer = [_clean_text(child.get_text())]
-                continue
-            if child.name == "span" and "m-expert-master" in classes:
-                flush()
-                text = _clean_text(child.get_text())
-                mode_lines["expert"].append(text)
-                mode_lines["master"].append(text)
-                current_mode = None
-                buffer = []
-                continue
-        elif isinstance(child, str):
-            text = _clean_text(child)
-            if text and current_mode:
-                buffer.append(text)
-    flush()
+            if "mode-content" in classes:
+                seen_mode_content = True
+                _parse_mode_content_block(parts, child)
+            elif "note-text" in classes:
+                note = _cell_text(child)
+                if seen_mode_content:
+                    _append_trailing_text_active_modes(parts, note)
+                elif parts["master"]:
+                    parts["master"][-1] = f"{parts['master'][-1]} {note}".strip()
+                else:
+                    _append_note_to_parts(parts, note)
+            continue
+        text = _clean_text(str(child))
+        if text:
+            if seen_mode_content:
+                _append_trailing_text_active_modes(parts, text)
+            else:
+                _append_trailing_text(parts, text)
 
-    if not any(mode_lines[m] for m in _MODE_ORDER):
-        resolved = _parse_npcstat_modes(td)
-        if resolved:
+    if not any(parts[mode] for mode in _MODE_ORDER):
+        resolved = _parse_npcstat_modes(node)
+        if any(resolved.get(mode) for mode in _MODE_ORDER):
             return resolved
-        mode_content = _parse_mode_field(td)
+        mode_content = _parse_mode_field(node)
         if mode_content:
             return {
                 "normal": mode_content.get("normal", ""),
                 "expert": mode_content.get("expert", mode_content.get("normal", "")),
                 "master": mode_content.get("master", mode_content.get("expert", "")),
             }
-        plain = _cell_text(td, multiline=True)
+        plain = _cell_text(node, multiline=True)
         return {"normal": plain, "expert": plain, "master": plain}
 
-    return {m: "\n".join(lines).strip() for m, lines in mode_lines.items()}
+    return _finalize_mode_parts(parts)
+
+
+def _parse_uniform_or_mode_cell(td: Tag) -> dict[str, str]:
+    if td.select_one("span.npcstat, span.mode-content, span.note-text"):
+        return _parse_mode_text_lines(td)
+    text = _cell_text(td)
+    if not text:
+        return {mode: "" for mode in _MODE_ORDER}
+    return {mode: text for mode in _MODE_ORDER}
 
 
 def _parse_boss_stats_table(table: Tag) -> list[dict[str, Any]]:
@@ -380,6 +462,38 @@ def _parse_boss_stats_table(table: Tag) -> list[dict[str, Any]]:
         modes = _parse_mode_text_lines(td)
         rows.append({"label": label, "modes": modes})
     return rows
+
+
+def _parse_boss_debuff_section(section: Tag | None) -> dict[str, Any] | None:
+    if not section:
+        return None
+    table = section.select_one("table.stat")
+    if not table:
+        return None
+
+    debuff: dict[str, Any] = {}
+    for tr in table.select("tr"):
+        th, td = tr.select_one("th"), tr.select_one("td")
+        if not th or not td:
+            continue
+        label = _clean_text(th.get_text())
+        if label == "减益":
+            name, image = _parse_item_from_span(td.select_one("span.i"))
+            if not name:
+                name = _cell_text(td)
+            debuff["name"] = name
+            if image:
+                debuff["image"] = image
+        elif label == "减益描述":
+            debuff["description"] = _cell_text(td)
+        elif label == "几率":
+            debuff["chance"] = _parse_uniform_or_mode_cell(td)
+        elif label == "持续时间":
+            debuff["duration"] = _parse_uniform_or_mode_cell(td)
+
+    if not debuff.get("name"):
+        return None
+    return debuff
 
 
 def _parse_boss_infobox(infobox: Tag, *, include_drops: bool = True) -> dict[str, Any]:
@@ -398,6 +512,8 @@ def _parse_boss_infobox(infobox: Tag, *, include_drops: bool = True) -> dict[str
         if table:
             stats = _parse_boss_stats_table(table)
 
+    debuff = _parse_boss_debuff_section(infobox.select_one("div.section.debuff"))
+
     drops: dict[str, Any] = {}
     if include_drops:
         drops_section = infobox.select_one("div.section.drops")
@@ -411,6 +527,7 @@ def _parse_boss_infobox(infobox: Tag, *, include_drops: bool = True) -> dict[str
         "subtitle": subtitle,
         "image": image,
         "stats": stats,
+        "debuff": debuff,
         "drops": drops,
     }
 
@@ -466,18 +583,94 @@ def _parse_boss_flavor(soup: BeautifulSoup) -> str:
     return text
 
 
-def _parse_boss_parts(soup: BeautifulSoup) -> list[dict[str, Any]]:
-    h2 = _section_h2(soup, "部位")
-    if not h2:
-        return []
-    wrapper = h2.find_next("div", class_="infobox-wrapper")
-    if not wrapper:
-        return []
+def _is_boss_part_infobox(infobox: Tag) -> bool:
+    table = infobox.select_one("div.section.statistics table.stat")
+    if not table:
+        return False
+    for tr in table.select("tr"):
+        th = tr.select_one("th")
+        if not th or _clean_text(th.get_text()) != "类型":
+            continue
+        td = tr.select_one("td")
+        text = _cell_text(td) if td else ""
+        return "Boss部位" in text.replace(" ", "")
+    return False
+
+
+def _part_display_name(parsed: dict[str, Any], boss_label: str) -> str:
+    subtitle = (parsed.get("subtitle") or "").strip()
+    name = (parsed.get("name") or "").strip()
+    if subtitle and subtitle != name:
+        return subtitle
+    if name and name != boss_label:
+        return name
+    return subtitle or name
+
+
+def _parse_boss_inline_parts(
+    main_infobox: Tag,
+    *,
+    boss_label: str,
+) -> list[dict[str, Any]]:
+    """解析紧挨主 infobox 之后、正文前的 Boss 部位（如骷髅王之手）。"""
     parts: list[dict[str, Any]] = []
-    for box in wrapper.select("div.infobox.npc"):
-        parsed = _parse_boss_infobox(box, include_drops=False)
-        if parsed.get("name"):
+    for sib in main_infobox.find_next_siblings():
+        if not isinstance(sib, Tag):
+            continue
+        if sib.name == "h2" or sib.get("id") == "toc":
+            break
+        classes = sib.get("class") or []
+        if sib.name == "div" and "flavor-text" in classes:
+            break
+        if (
+            sib.name == "div"
+            and "infobox" in classes
+            and "npc" in classes
+            and "modesbox" in classes
+        ):
+            if not _is_boss_part_infobox(sib):
+                continue
+            parsed = _parse_boss_infobox(sib, include_drops=False)
+            display = _part_display_name(parsed, boss_label)
+            if not display:
+                continue
+            parsed["name"] = display
             parts.append(parsed)
+            continue
+        if sib.name in ("h2", "h3", "p"):
+            break
+    return parts
+
+
+def _parse_boss_parts(
+    soup: BeautifulSoup,
+    *,
+    main_infobox: Tag | None = None,
+    boss_label: str = "",
+) -> list[dict[str, Any]]:
+    parts: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    h2 = _section_h2(soup, "部位")
+    if h2:
+        wrapper = h2.find_next("div", class_="infobox-wrapper")
+        if wrapper:
+            for box in wrapper.select("div.infobox.npc"):
+                parsed = _parse_boss_infobox(box, include_drops=False)
+                display = _part_display_name(parsed, boss_label) if boss_label else parsed.get("name", "")
+                if not display or display in seen:
+                    continue
+                parsed["name"] = display
+                seen.add(display)
+                parts.append(parsed)
+
+    if main_infobox is not None:
+        for parsed in _parse_boss_inline_parts(main_infobox, boss_label=boss_label):
+            display = parsed.get("name", "")
+            if display and display not in seen:
+                seen.add(display)
+                parts.append(parsed)
+
     return parts
 
 
@@ -507,6 +700,8 @@ def parse_boss_page_html(
         "stats": main.get("stats") or [],
         "drops": main.get("drops") or {},
     }
+    if main.get("debuff"):
+        boss["debuff"] = main["debuff"]
     if main.get("subtitle"):
         boss["subtitle"] = main["subtitle"]
     if catalog_entry.get("category"):
@@ -522,7 +717,7 @@ def parse_boss_page_html(
     if spawn:
         boss["spawn"] = spawn
 
-    parts = _parse_boss_parts(soup)
+    parts = _parse_boss_parts(soup, main_infobox=infobox, boss_label=name)
     if parts:
         boss["parts"] = parts
 
@@ -590,8 +785,10 @@ def _collect_boss_image_urls(bosses: dict[str, dict]) -> dict[str, str]:
 
     for boss in bosses.values():
         add(boss.get("image"))
+        add((boss.get("debuff") or {}).get("image"))
         for part in boss.get("parts") or []:
             add(part.get("image"))
+            add((part.get("debuff") or {}).get("image"))
         drops = boss.get("drops") or {}
         for mode_items in (drops.get("items") or {}).values():
             for entry in mode_items:

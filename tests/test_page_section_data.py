@@ -41,6 +41,13 @@ def test_blood_moon_has_conditions_and_content():
         for item in box.get("items") or []
     }
     assert "僵尸新郎" in names
+    groom = next(
+        item
+        for box in role_group["boxes"]
+        for item in box.get("items") or []
+        if item.get("name") == "僵尸新郎"
+    )
+    assert groom.get("image") == "The_Groom.png"
 
 
 def test_forest_biome_has_content_without_conditions():

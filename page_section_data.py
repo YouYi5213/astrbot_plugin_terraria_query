@@ -180,3 +180,82 @@ def collect_content_image_filenames(content: list[dict[str, Any]] | None) -> lis
                     seen.add(fn)
                     filenames.append(fn)
     return filenames
+
+
+def collect_page_content_image_urls(
+    pages: dict[str, dict],
+    *,
+    banner_field: str = "image",
+) -> dict[str, str]:
+    """收集生物群系/事件等内容区引用的图片 filename → wiki URL。"""
+    from urllib.parse import quote
+
+    urls: dict[str, str] = {}
+    for page in pages.values():
+        fn = page.get(banner_field)
+        if fn:
+            urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+        for content_fn in collect_content_image_filenames(page.get("content")):
+            urls[content_fn] = (
+                f"https://terraria.wiki.gg/images/{quote(content_fn, safe='')}"
+            )
+    return urls
+
+
+async def backfill_page_content_images(
+    session,
+    *,
+    events: dict[str, dict] | None = None,
+    biomes: dict[str, dict] | None = None,
+    download_image_fn=None,
+    images_dir: str | None = None,
+) -> dict[str, int]:
+    """下载 events/biomes 内容区引用但 images/ 缺失的图片。"""
+    import asyncio
+    import os
+
+    if download_image_fn is None or images_dir is None:
+        try:
+            from .prepare_data import IMAGES_DIR, download_image
+        except ImportError:
+            from prepare_data import IMAGES_DIR, download_image
+        download_image_fn = download_image
+        images_dir = IMAGES_DIR
+
+    if events is None:
+        try:
+            from .event_data import load_events_for_plugin
+        except ImportError:
+            from event_data import load_events_for_plugin
+        events = load_events_for_plugin()
+    if biomes is None:
+        try:
+            from .biome_data import load_biomes_for_plugin
+        except ImportError:
+            from biome_data import load_biomes_for_plugin
+        biomes = load_biomes_for_plugin()
+
+    os.makedirs(images_dir, exist_ok=True)
+    urls = collect_page_content_image_urls(events)
+    urls.update(collect_page_content_image_urls(biomes))
+    pending = {
+        fn: url
+        for fn, url in urls.items()
+        if fn and not os.path.isfile(os.path.join(images_dir, fn))
+    }
+    if not pending:
+        return {"images_ok": 0, "images_total": 0, "images_failed": 0}
+
+    semaphore = asyncio.Semaphore(8)
+    results = await asyncio.gather(
+        *[
+            download_image_fn(session, fn, url, semaphore)
+            for fn, url in pending.items()
+        ]
+    )
+    ok = sum(1 for r in results if r)
+    return {
+        "images_ok": ok,
+        "images_total": len(pending),
+        "images_failed": len(pending) - ok,
+    }

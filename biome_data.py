@@ -7,7 +7,6 @@ import json
 import os
 import re
 from typing import Any
-from urllib.parse import quote
 
 import aiohttp
 from bs4 import BeautifulSoup, Tag
@@ -15,6 +14,7 @@ from bs4 import BeautifulSoup, Tag
 try:
     from .page_section_data import (
         collect_content_image_filenames,
+        collect_page_content_image_urls,
         parse_conditions_section,
         parse_content_section,
     )
@@ -31,6 +31,7 @@ try:
 except ImportError:
     from page_section_data import (
         collect_content_image_filenames,
+        collect_page_content_image_urls,
         parse_conditions_section,
         parse_content_section,
     )
@@ -191,14 +192,7 @@ def load_biomes_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, di
 
 
 def _collect_biome_image_urls(biomes: dict[str, dict]) -> dict[str, str]:
-    urls: dict[str, str] = {}
-    for biome in biomes.values():
-        fn = biome.get("image")
-        if fn:
-            urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
-        for content_fn in collect_content_image_filenames(biome.get("content")):
-            urls[content_fn] = f"https://terraria.wiki.gg/images/{quote(content_fn, safe='')}"
-    return urls
+    return collect_page_content_image_urls(biomes)
 
 
 def _patch_manifest_biome_count(count: int, categories_dir: str = CATEGORIES_DIR) -> None:
@@ -300,8 +294,8 @@ async def refresh_biomes(
     }
 
 
-def ingest_biomes_local(*, force: bool = False) -> dict[str, Any]:
-    """仅使用本地镜像构建 biomes.json（不下载图片）。"""
+def ingest_biomes_local(*, force: bool = False, download_images: bool = True) -> dict[str, Any]:
+    """仅使用本地镜像构建 biomes.json；默认补全内容区缺失图片。"""
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
     biomes = build_biomes_from_mirror()
     if not force:
@@ -313,4 +307,24 @@ def ingest_biomes_local(*, force: bool = False) -> dict[str, Any]:
         json.dump(biomes, f, ensure_ascii=False, indent=2)
 
     _patch_manifest_biome_count(len(biomes))
-    return {"total": len(biomes), "catalog_size": len(load_biome_catalog_from_homepage())}
+    result: dict[str, Any] = {
+        "total": len(biomes),
+        "catalog_size": len(load_biome_catalog_from_homepage()),
+    }
+    if download_images:
+        try:
+            from .page_section_data import backfill_page_content_images
+        except ImportError:
+            from page_section_data import backfill_page_content_images
+
+        async def _run() -> dict[str, int]:
+            connector = aiohttp.TCPConnector(limit=10)
+            timeout = aiohttp.ClientTimeout(total=120)
+            async with aiohttp.ClientSession(
+                connector=connector, timeout=timeout
+            ) as session:
+                return await backfill_page_content_images(session, biomes=biomes)
+
+        img_result = asyncio.run(_run())
+        result.update(img_result)
+    return result

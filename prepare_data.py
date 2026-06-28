@@ -146,6 +146,14 @@ def _event_data_module():
     return event_data
 
 
+def _page_section_data_module():
+    try:
+        from . import page_section_data
+    except ImportError:
+        import page_section_data
+    return page_section_data
+
+
 def _npc_data_module():
     try:
         from . import npc_data
@@ -3661,6 +3669,11 @@ if __name__ == "__main__":
         help="仅下载 bosses.json 引用但缺失的 Boss 相关图片",
     )
     parser.add_argument(
+        "--backfill-content-images",
+        action="store_true",
+        help="仅下载 events/biomes 内容区引用但缺失的图片",
+    )
+    parser.add_argument(
         "--split-categories",
         action="store_true",
         help="将根目录 items/mounts/pets.json 拆分/迁移到 data/terraria_query/categories/",
@@ -3774,6 +3787,23 @@ if __name__ == "__main__":
                 f"Boss 抓取完成：新增 {result['new_count']} 个，"
                 f"共 {result['total']} 条目，"
                 f"图片 {result['images_ok']}/{result['images_total']}",
+                flush=True,
+            )
+        elif args.backfill_content_images:
+            async def _run_backfill_content() -> dict:
+                connector = aiohttp.TCPConnector(limit=10)
+                timeout = aiohttp.ClientTimeout(total=120)
+                async with aiohttp.ClientSession(
+                    connector=connector, timeout=timeout
+                ) as session:
+                    return await _page_section_data_module().backfill_page_content_images(
+                        session
+                    )
+
+            result = asyncio.run(_run_backfill_content())
+            print(
+                f"内容区图片补全：{result['images_ok']}/{result['images_total']} 成功，"
+                f"失败 {result.get('images_failed', 0)}",
                 flush=True,
             )
         elif args.backfill_boss_images:

@@ -6,7 +6,6 @@ import asyncio
 import json
 import os
 from typing import Any
-from urllib.parse import quote
 
 import aiohttp
 from bs4 import BeautifulSoup, Tag
@@ -14,6 +13,7 @@ from bs4 import BeautifulSoup, Tag
 try:
     from .page_section_data import (
         collect_content_image_filenames,
+        collect_page_content_image_urls,
         parse_conditions_section,
         parse_content_section,
     )
@@ -35,6 +35,7 @@ try:
 except ImportError:
     from page_section_data import (
         collect_content_image_filenames,
+        collect_page_content_image_urls,
         parse_conditions_section,
         parse_content_section,
     )
@@ -271,14 +272,7 @@ def load_events_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, di
 
 
 def _collect_event_image_urls(events: dict[str, dict]) -> dict[str, str]:
-    urls: dict[str, str] = {}
-    for event in events.values():
-        fn = event.get("image")
-        if fn:
-            urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
-        for content_fn in collect_content_image_filenames(event.get("content")):
-            urls[content_fn] = f"https://terraria.wiki.gg/images/{quote(content_fn, safe='')}"
-    return urls
+    return collect_page_content_image_urls(events)
 
 
 def _patch_manifest_event_count(count: int, categories_dir: str = CATEGORIES_DIR) -> None:
@@ -379,7 +373,7 @@ async def refresh_events(
     }
 
 
-def ingest_events_local(*, force: bool = False) -> dict[str, Any]:
+def ingest_events_local(*, force: bool = False, download_images: bool = True) -> dict[str, Any]:
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
     events = build_events_from_mirror()
     if not force:
@@ -391,4 +385,24 @@ def ingest_events_local(*, force: bool = False) -> dict[str, Any]:
         json.dump(events, f, ensure_ascii=False, indent=2)
 
     _patch_manifest_event_count(len(events))
-    return {"total": len(events), "catalog_size": len(load_event_catalog_from_homepage())}
+    result: dict[str, Any] = {
+        "total": len(events),
+        "catalog_size": len(load_event_catalog_from_homepage()),
+    }
+    if download_images:
+        try:
+            from .page_section_data import backfill_page_content_images
+        except ImportError:
+            from page_section_data import backfill_page_content_images
+
+        async def _run() -> dict[str, int]:
+            connector = aiohttp.TCPConnector(limit=10)
+            timeout = aiohttp.ClientTimeout(total=120)
+            async with aiohttp.ClientSession(
+                connector=connector, timeout=timeout
+            ) as session:
+                return await backfill_page_content_images(session, events=events)
+
+        img_result = asyncio.run(_run())
+        result.update(img_result)
+    return result

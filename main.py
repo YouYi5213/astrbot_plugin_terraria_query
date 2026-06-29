@@ -198,7 +198,8 @@ CARDS_DIR = os.path.join(DATA_DIR, "cards")
 CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
-CARD_VERSION = "v46"
+CARD_BOTTOM_EXTRA = 10
+CARD_VERSION = "v47"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -273,6 +274,11 @@ COLORS = {
 DESC_LINE_HEIGHT = 18
 KEY_BADGE_PAD_X = 5
 KEY_BADGE_PAD_Y = 2
+
+
+def _card_height(content_height: int) -> int:
+    """卡片内容高度 + 底部留白，避免末行被裁切。"""
+    return content_height + CARD_BOTTOM_EXTRA
 
 
 def _ensure_dirs() -> None:
@@ -2084,7 +2090,7 @@ def _generate_item_card(data: dict) -> str:
 
     wing_extra_sep = 20 if is_wing and source_area and description_rich else 0
 
-    total_height = (
+    total_height = _card_height(
         title_area
         + (0 if is_wing else desc_area)
         + stats_area
@@ -2485,7 +2491,7 @@ def _generate_biome_card(
             measure, content, font_small, font_small
         )
 
-    total_height = (
+    total_height = _card_height(
         CARD_PADDING * 2
         + title_area
         + banner_area
@@ -2912,7 +2918,9 @@ def _generate_npc_card(data: dict) -> str:
         body_area += _calc_labeled_text_block(measure, shimmer_lines, font_small)
         body_area += shimmer_img_area
 
-    total_height = CARD_PADDING * 2 + title_area + sprite_area + body_area + 10
+    total_height = _card_height(
+        CARD_PADDING * 2 + title_area + sprite_area + body_area + 10
+    )
     card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
 
@@ -4206,7 +4214,9 @@ def _generate_treasure_bag_card(data: dict) -> str:
 
     drops = data.get("drops") or []
     drops_area = _calc_treasure_bag_drops_area(measure, drops, font_small)
-    total_height = CARD_PADDING * 2 + title_h + TB_TABLE_HEADER + drops_area + 12
+    total_height = _card_height(
+        CARD_PADDING * 2 + title_h + TB_TABLE_HEADER + drops_area + 12
+    )
 
     card = Image.new("RGBA", (CARD_WIDTH, total_height), TB_CARD_BG)
     draw = ImageDraw.Draw(card)
@@ -4292,7 +4302,7 @@ def _generate_boss_card(data: dict) -> str:
         measure, parts, font_header, font_label, font_small, card_w
     )
 
-    total_height = (
+    total_height = _card_height(
         CARD_PADDING * 2
         + title_area
         + top_row_h

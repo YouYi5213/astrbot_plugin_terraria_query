@@ -26007,7 +26007,14 @@
     ],
     "wiki_title": "Chippy的斗篷（停用）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "Heroicis的翅膀（停用）": {
     "name": "Heroicis的翅膀（停用）",
@@ -26141,7 +26148,14 @@
     ],
     "wiki_title": "Heroicis的翅膀（停用）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "Sharanga弓": {
     "name": "Sharanga弓",
@@ -26238,7 +26252,14 @@
     },
     "wiki_title": "Sharanga弓",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "Tizona剑": {
     "name": "Tizona剑",
@@ -26358,7 +26379,14 @@
     ],
     "wiki_title": "Tizona剑",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "Wiesnbräu啤酒": {
     "name": "Wiesnbräu啤酒",
@@ -26448,7 +26476,14 @@
     },
     "wiki_title": "Wiesnbräu啤酒",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "丰饶之角": {
     "name": "丰饶之角",
@@ -26501,7 +26536,14 @@
     ],
     "wiki_title": "丰饶之角",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "冲击枪": {
     "name": "冲击枪",
@@ -26582,7 +26624,14 @@
     },
     "wiki_title": "冲击枪",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "卷心菜": {
     "name": "卷心菜",
@@ -26655,7 +26704,14 @@
     },
     "wiki_title": "卷心菜",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "可疑苹果": {
     "name": "可疑苹果",
@@ -26746,7 +26802,14 @@
     },
     "wiki_title": "可疑苹果",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "可疑蛋": {
     "name": "可疑蛋",
@@ -26799,7 +26862,14 @@
     ],
     "wiki_title": "可疑蛋",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "可疑骷髅": {
     "name": "可疑骷髅",
@@ -26902,7 +26972,14 @@
     ],
     "wiki_title": "可疑骷髅",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "培养皿": {
     "name": "培养皿",
@@ -26959,7 +27036,14 @@
     },
     "wiki_title": "培养皿",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "奥丝塔拉之靴": {
     "name": "奥丝塔拉之靴",
@@ -27017,7 +27101,14 @@
     ],
     "wiki_title": "奥丝塔拉之靴",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "女仆帽": {
     "name": "女仆帽",
@@ -27088,7 +27179,14 @@
     ],
     "wiki_title": "女仆帽",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "女仆裙": {
     "name": "女仆裙",
@@ -27159,7 +27257,14 @@
     ],
     "wiki_title": "女仆裙",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "女仆鞋": {
     "name": "女仆鞋",
@@ -27230,7 +27335,14 @@
     ],
     "wiki_title": "女仆鞋",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "心箭": {
     "name": "心箭",
@@ -27328,7 +27440,14 @@
     },
     "wiki_title": "心箭",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "情人节戒指": {
     "name": "情人节戒指",
@@ -27403,7 +27522,14 @@
     ],
     "wiki_title": "情人节戒指",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "枯萎之魂": {
     "name": "枯萎之魂",
@@ -27504,7 +27630,14 @@
     ],
     "wiki_title": "枯萎之魂",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "泰坦头盔": {
     "name": "泰坦头盔",
@@ -27661,7 +27794,14 @@
     ],
     "wiki_title": "泰坦头盔",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "泰坦护腿": {
     "name": "泰坦护腿",
@@ -27818,7 +27958,14 @@
     ],
     "wiki_title": "泰坦护腿",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "火神弩箭": {
     "name": "火神弩箭",
@@ -27904,7 +28051,14 @@
     },
     "wiki_title": "火神弩箭",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "火神连弩": {
     "name": "火神连弩",
@@ -28010,7 +28164,14 @@
     },
     "wiki_title": "火神连弩",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "火鸡羽毛": {
     "name": "火鸡羽毛",
@@ -28100,7 +28261,14 @@
     },
     "wiki_title": "火鸡羽毛",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "灵能头饰": {
     "name": "灵能头饰",
@@ -28269,7 +28437,14 @@
     ],
     "wiki_title": "灵能头饰",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "灵能箭": {
     "name": "灵能箭",
@@ -28356,7 +28531,14 @@
     },
     "wiki_title": "灵能箭",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "狼牙": {
     "name": "狼牙",
@@ -28447,7 +28629,14 @@
     },
     "wiki_title": "狼牙",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "黑线": {
     "name": "黑线",
@@ -28527,7 +28716,14 @@
     ],
     "wiki_title": "白线",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "碎心": {
     "name": "碎心",
@@ -28593,7 +28789,14 @@
     },
     "wiki_title": "碎心",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "神圣手榴弹": {
     "name": "神圣手榴弹",
@@ -28694,7 +28897,14 @@
     },
     "wiki_title": "神圣手榴弹",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "粉女仆帽": {
     "name": "粉女仆帽",
@@ -28765,7 +28975,14 @@
     ],
     "wiki_title": "粉女仆帽",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "粉女仆裙": {
     "name": "粉女仆裙",
@@ -28836,7 +29053,14 @@
     ],
     "wiki_title": "粉女仆裙",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "粉女仆鞋": {
     "name": "粉女仆鞋",
@@ -28907,7 +29131,14 @@
     ],
     "wiki_title": "粉女仆鞋",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "粉线": {
     "name": "粉线",
@@ -29041,7 +29272,14 @@
     ],
     "wiki_title": "粉线",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "紫线": {
     "name": "紫线",
@@ -29146,7 +29384,14 @@
     ],
     "wiki_title": "紫线",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "绿线": {
     "name": "绿线",
@@ -29268,7 +29513,14 @@
     ],
     "wiki_title": "绿线",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "罗马焰火筒": {
     "name": "罗马焰火筒",
@@ -29363,7 +29615,14 @@
     ],
     "wiki_title": "罗马焰火筒",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "老手杖": {
     "name": "老手杖",
@@ -29447,7 +29706,14 @@
     },
     "wiki_title": "老手杖",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "脑子": {
     "name": "脑子",
@@ -29544,7 +29810,14 @@
     },
     "wiki_title": "脑子",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "节日大礼帽": {
     "name": "节日大礼帽",
@@ -29618,7 +29891,14 @@
     ],
     "wiki_title": "节日大礼帽",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "节日装饰品": {
     "name": "节日装饰品",
@@ -29669,7 +29949,14 @@
     },
     "wiki_title": "节日装饰品",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "英雄帽": {
     "name": "英雄帽",
@@ -29746,7 +30033,14 @@
     ],
     "wiki_title": "英雄帽",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "英雄衣": {
     "name": "英雄衣",
@@ -29823,7 +30117,14 @@
     ],
     "wiki_title": "英雄衣",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "英雄裤": {
     "name": "英雄裤",
@@ -29900,7 +30201,14 @@
     ],
     "wiki_title": "英雄裤",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "蛋炮": {
     "name": "蛋炮",
@@ -29980,7 +30288,14 @@
     },
     "wiki_title": "蛋炮",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "蜜蜡": {
     "name": "蜜蜡",
@@ -30037,7 +30352,14 @@
     },
     "wiki_title": "蜜蜡",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "蜻蛉切": {
     "name": "蜻蛉切",
@@ -30167,7 +30489,14 @@
     },
     "wiki_title": "蜻蛉切",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "血液瓶": {
     "name": "血液瓶",
@@ -30224,7 +30553,14 @@
     },
     "wiki_title": "血液瓶",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "西装衣": {
     "name": "西装衣",
@@ -30341,7 +30677,14 @@
     ],
     "wiki_title": "西装衣",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "西装裤": {
     "name": "西装裤",
@@ -30458,7 +30801,14 @@
     ],
     "wiki_title": "西装裤",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "诅咒填料": {
     "name": "诅咒填料",
@@ -30505,7 +30855,14 @@
     ],
     "wiki_title": "诅咒填料",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "超级英雄服装": {
     "name": "超级英雄服装",
@@ -30576,7 +30933,14 @@
     ],
     "wiki_title": "超级英雄服装",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "超级英雄紧身裤": {
     "name": "超级英雄紧身裤",
@@ -30647,7 +31011,14 @@
     ],
     "wiki_title": "超级英雄紧身裤",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "超级英雄面具": {
     "name": "超级英雄面具",
@@ -30718,7 +31089,14 @@
     ],
     "wiki_title": "超级英雄面具",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "龙护胫": {
     "name": "龙护胫",
@@ -30886,7 +31264,14 @@
     ],
     "wiki_title": "龙护胫",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "PlayStation 3": {
     "name": "PlayStation 3",
@@ -30895,7 +31280,14 @@
     "recipe": null,
     "wiki_title": "PlayStation 3",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "Wii U": {
     "name": "Wii U",
@@ -30904,7 +31296,14 @@
     "recipe": null,
     "wiki_title": "Wii U",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（Boss 1）": {
     "name": "八音盒（Boss 1）",
@@ -30972,7 +31371,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（Boss 1）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（Boss 2）": {
     "name": "八音盒（Boss 2）",
@@ -31040,7 +31446,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（Boss 2）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（Boss 3）": {
     "name": "八音盒（Boss 3）",
@@ -31108,7 +31521,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（Boss 3）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（Boss 4）": {
     "name": "八音盒（Boss 4）",
@@ -31176,7 +31596,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（Boss 4）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（Boss 5）": {
     "name": "八音盒（Boss 5）",
@@ -31244,7 +31671,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（Boss 5）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（丛林夜晚）": {
     "name": "八音盒（丛林夜晚）",
@@ -31312,7 +31746,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（丛林夜晚）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（丛林）": {
     "name": "八音盒（丛林）",
@@ -31380,7 +31821,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（丛林）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（光之女皇）": {
     "name": "八音盒（光之女皇）",
@@ -31448,7 +31896,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（光之女皇）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（冰雪）": {
     "name": "八音盒（冰雪）",
@@ -31516,7 +31971,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（冰雪）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（史莱姆皇后）": {
     "name": "八音盒（史莱姆皇后）",
@@ -31584,7 +32046,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（史莱姆皇后）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（史莱姆雨）": {
     "name": "八音盒（史莱姆雨）",
@@ -31652,7 +32121,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（史莱姆雨）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（地下丛林）": {
     "name": "八音盒（地下丛林）",
@@ -31720,7 +32196,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（地下丛林）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（地下沙漠）": {
     "name": "八音盒（地下沙漠）",
@@ -31788,7 +32271,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（地下沙漠）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（地下神圣之地）": {
     "name": "八音盒（地下神圣之地）",
@@ -31856,7 +32346,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（地下神圣之地）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（地下腐化之地）": {
     "name": "八音盒（地下腐化之地）",
@@ -31924,7 +32421,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（地下腐化之地）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（地下）": {
     "name": "八音盒（地下）",
@@ -31992,7 +32496,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（地下）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（地表世界）": {
     "name": "八音盒（地表世界）",
@@ -32060,7 +32571,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（地表世界）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（城镇夜晚）": {
     "name": "八音盒（城镇夜晚）",
@@ -32128,7 +32646,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（城镇夜晚）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（城镇白天）": {
     "name": "八音盒（城镇白天）",
@@ -32196,7 +32721,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（城镇白天）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（墓地）": {
     "name": "八音盒（墓地）",
@@ -32264,7 +32796,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（墓地）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（夜间）": {
     "name": "八音盒（夜间）",
@@ -32332,7 +32871,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（夜间）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（大风天）": {
     "name": "八音盒（大风天）",
@@ -32400,7 +32946,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（大风天）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（太空白天）": {
     "name": "八音盒（太空白天）",
@@ -32468,7 +33021,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（太空白天）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（太空）": {
     "name": "八音盒（太空）",
@@ -32536,7 +33096,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（太空）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（恐惧）": {
     "name": "八音盒（恐惧）",
@@ -32604,7 +33171,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（恐惧）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（教程）": {
     "name": "八音盒（教程）",
@@ -32613,7 +33187,14 @@
     "recipe": null,
     "wiki_title": "八音盒（教程）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（晨雨）": {
     "name": "八音盒（晨雨）",
@@ -32681,7 +33262,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（晨雨）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（暴风雨）": {
     "name": "八音盒（暴风雨）",
@@ -32749,7 +33337,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（暴风雨）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（沙漠）": {
     "name": "八音盒（沙漠）",
@@ -32817,7 +33412,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（沙漠）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（海洋夜晚）": {
     "name": "八音盒（海洋夜晚）",
@@ -32885,7 +33487,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（海洋夜晚）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（海洋）": {
     "name": "八音盒（海洋）",
@@ -32953,7 +33562,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（海洋）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（猪龙鱼公爵）": {
     "name": "八音盒（猪龙鱼公爵）",
@@ -33021,7 +33637,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（猪龙鱼公爵）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（神圣之地）": {
     "name": "八音盒（神圣之地）",
@@ -33089,7 +33712,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（神圣之地）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（腐化之地）": {
     "name": "八音盒（腐化之地）",
@@ -33157,7 +33787,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（腐化之地）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "八音盒（雪原）": {
     "name": "八音盒（雪原）",
@@ -33225,7 +33862,14 @@
     "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
     "wiki_title": "八音盒（雪原）",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "奇怪的墓石": {
     "name": "奇怪的墓石",
@@ -33323,7 +33967,14 @@
     ],
     "wiki_title": "奇怪的墓石",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "奥库瑞姆纪念章": {
     "name": "奥库瑞姆纪念章",
@@ -33379,7 +34030,14 @@
     "description": "纪念章是一系列装饰家具物品，通常以1/10 (10%)的几率由大多数Boss掉落。虽然它们可视作“Boss 版本的旗帜”，但不同的是，纪念章是纯粹的装饰物品，不提供任何特殊效果。一些纪念章只能由渔夫给予，作为完成钓鱼任务的奖励。总共有(电脑版、主机版、和移动版)33 /(前代主机版、和3DS版)24 个纪念章。",
     "wiki_title": "奥库瑞姆纪念章",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "腹足怪": {
     "name": "腹足怪",
@@ -33388,7 +34046,14 @@
     "recipe": null,
     "wiki_title": "腹足怪",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "蚁狮": {
     "name": "蚁狮",
@@ -33397,7 +34062,14 @@
     "recipe": null,
     "wiki_title": "蚁狮",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "闪耀翅膀": {
     "name": "闪耀翅膀",
@@ -33406,7 +34078,14 @@
     "recipe": null,
     "wiki_title": "闪耀翅膀",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   },
   "鬼魂之翼": {
     "name": "鬼魂之翼",
@@ -33489,6 +34168,13 @@
     "page_type": "overview",
     "wiki_title": "鬼魂之翼",
     "legacy_item": true,
-    "item_category": "misc"
+    "item_category": "misc",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   }
 }

@@ -13,7 +13,15 @@ class _FilterMock:
         return deco
 
 
-def _import_main():
+def _bootstrap_plugin_package():
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    if str(root) not in sys.path:
+        sys.path.insert(0, str(root))
+    pkg = types.ModuleType("astrbot_plugin_terraria_query")
+    pkg.__path__ = [str(root)]
+    sys.modules["astrbot_plugin_terraria_query"] = pkg
     for mod in ["astrbot", "astrbot.api", "astrbot.api.event", "astrbot.api.star"]:
         sys.modules.setdefault(mod, types.ModuleType(mod))
     sys.modules["astrbot.api.event"].filter = _FilterMock()
@@ -24,9 +32,65 @@ def _import_main():
     api.AstrBotConfig = object
     api.logger = type("L", (), {"info": print, "warning": print, "error": print})()
     sys.modules["astrbot.api"] = api
+
+
+def _import_main():
+    _bootstrap_plugin_package()
     from astrbot_plugin_terraria_query.main import _compact_boss_stat_multiline
 
     return _compact_boss_stat_multiline
+
+
+def _import_main_boss_layout():
+    _bootstrap_plugin_package()
+    from astrbot_plugin_terraria_query.main import (
+        _boss_uses_single_mode,
+        _calc_boss_mode_drops_area,
+        _calc_boss_mode_stats_area,
+        _display_boss,
+        _try_get_font,
+    )
+    from boss_data import load_bosses_for_plugin
+
+    return (
+        _boss_uses_single_mode,
+        _calc_boss_mode_stats_area,
+        _calc_boss_mode_drops_area,
+        _display_boss,
+        _try_get_font,
+        load_bosses_for_plugin,
+    )
+
+
+def test_legacy_boss_single_mode_layout_smaller_than_three_columns():
+    (
+        uses_single,
+        calc_stats_area,
+        calc_drops_area,
+        display_boss,
+        try_get_font,
+        load_bosses,
+    ) = _import_main_boss_layout()
+    from PIL import ImageDraw, Image
+
+    boss = load_bosses()["奥库瑞姆"]
+    display = display_boss(boss)
+    assert uses_single(boss) is True
+
+    measure = ImageDraw.Draw(Image.new("RGBA", (960, 100)))
+    font_label = try_get_font(15)
+    font_small = try_get_font(14)
+    three_col_stats = calc_stats_area(
+        measure, display["stats"], font_label, font_small, single_mode=False
+    )
+    single_stats = calc_stats_area(
+        measure, display["stats"], font_label, font_small, single_mode=True
+    )
+    assert single_stats < three_col_stats
+
+    three_col_drops = calc_drops_area(measure, display["drops"], font_small, single_mode=False)
+    single_drops = calc_drops_area(measure, display["drops"], font_small, single_mode=True)
+    assert single_drops < three_col_drops
 
 
 def test_compact_boss_damage_merges_number_and_note():

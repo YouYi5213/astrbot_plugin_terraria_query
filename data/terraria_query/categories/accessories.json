@@ -30642,6 +30642,13 @@
     "recipe": null,
     "wiki_title": "配饰",
     "legacy_item": true,
-    "item_category": "accessories"
+    "item_category": "accessories",
+    "legacy_scope": "old_gen",
+    "legacy_source": "craft_chain",
+    "internal_tags": [
+      "legacy",
+      "legacy_item",
+      "old_gen"
+    ]
   }
 }

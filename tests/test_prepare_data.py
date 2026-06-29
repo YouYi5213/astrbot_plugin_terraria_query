@@ -20,6 +20,7 @@ from prepare_data import (  # noqa: E402
     parse_description_from_soup,
     parse_item_page,
     resync_set_piece_locales,
+    resolve_local_item_image,
     strip_english_fields,
 )
 from bs4 import BeautifulSoup  # noqa: E402
@@ -28,6 +29,16 @@ from bs4 import BeautifulSoup  # noqa: E402
 def test_normalize_image_filename_strips_px_prefix():
     assert _normalize_image_filename("17px-Titanium_Mask.png") == "Titanium_Mask.png"
     assert _normalize_image_filename("Amethyst_Staff.png") == "Amethyst_Staff.png"
+
+
+def test_resolve_local_item_image_falls_back_to_item_image():
+    items = {
+        "钴头盔": {"name": "钴头盔", "image": "Cobalt_Helmet.png"},
+    }
+    assert (
+        resolve_local_item_image("钴头盔", items, "Missing_Old_Variant_(old).png")
+        == "Cobalt_Helmet.png"
+    )
 
 
 def test_is_set_item_detects_armor_and_vanity():

@@ -29,6 +29,13 @@ def test_navbox_collects_old_gen_items():
     assert "枯萎之魂" in titles
 
 
+def test_build_legacy_item_seed_titles_maps_sources():
+    seeds = build_legacy_item_seed_titles()
+    assert isinstance(seeds, dict)
+    assert seeds.get("龙盔甲") == "navbox"
+    assert seeds.get("枯萎之魂") == "boss_drop"
+
+
 def test_parse_variant_trophy_and_music_box():
     ocram = _parse_list_variant_item(_read_page("奥库瑞姆纪念章"), "奥库瑞姆纪念章")
     assert ocram is not None
@@ -59,12 +66,12 @@ def test_ingest_legacy_items_adds_boss_drops_and_craft_chain():
 
     for name in ("枯萎之魂", "龙盔甲", "Tizona剑", "蛋炮"):
         assert name in items, f"missing item: {name}"
-        assert items[name].get("legacy_item") is True
+        assert items[name].get("internal_tags")
+        assert items[name].get("legacy_scope") == "old_gen"
 
     drops = collect_legacy_boss_drop_titles()
     missing_drops = [d for d in drops if d not in items]
     assert "奥库瑞姆纪念章" not in missing_drops
 
-    # 合成链产物也应可索引（本地有镜像时）
     if "Tizona剑" in expanded:
         assert "Tizona剑" in items

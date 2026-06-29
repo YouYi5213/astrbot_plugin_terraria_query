@@ -11,6 +11,15 @@ from bs4 import BeautifulSoup
 
 try:
     from .boss_data import LEGACY_BOSS_WIKI_TITLES, load_bosses_for_plugin
+    from .legacy_metadata import (
+        SOURCE_ARMOR_SET_PIECE,
+        SOURCE_BOSS_DROP,
+        SOURCE_CRAFT_CHAIN,
+        SOURCE_NAVBOX,
+        SOURCE_VARIANT_PAGE,
+        apply_legacy_item_metadata,
+        inherit_legacy_item_from_parent,
+    )
     from .prepare_data import (
         IMAGES_DIR,
         _WIKI_MIRROR_DIR,
@@ -29,6 +38,15 @@ try:
     )
 except ImportError:
     from boss_data import LEGACY_BOSS_WIKI_TITLES, load_bosses_for_plugin
+    from legacy_metadata import (
+        SOURCE_ARMOR_SET_PIECE,
+        SOURCE_BOSS_DROP,
+        SOURCE_CRAFT_CHAIN,
+        SOURCE_NAVBOX,
+        SOURCE_VARIANT_PAGE,
+        apply_legacy_item_metadata,
+        inherit_legacy_item_from_parent,
+    )
     from prepare_data import (
         IMAGES_DIR,
         _WIKI_MIRROR_DIR,
@@ -190,23 +208,29 @@ def _recipe_names_from_html(html: str) -> set[str]:
 def build_legacy_item_seed_titles(
     items: dict[str, dict] | None = None,
     bosses: dict[str, dict] | None = None,
-) -> list[str]:
-    seeds: set[str] = set()
-    seeds.update(load_old_gen_item_titles_from_navbox())
-    seeds.update(collect_legacy_boss_drop_titles(bosses))
-    return sorted(seeds)
+) -> dict[str, str]:
+    """返回 {wiki_title: legacy_source}。"""
+    seeds: dict[str, str] = {}
+    for title in load_old_gen_item_titles_from_navbox():
+        seeds[title] = SOURCE_NAVBOX
+    for title in collect_legacy_boss_drop_titles(bosses):
+        seeds[title] = SOURCE_BOSS_DROP
+    return seeds
 
 
 def expand_legacy_item_titles(
-    seeds: list[str],
+    seeds: dict[str, str] | list[str],
     items: dict[str, dict],
     *,
     max_passes: int = LEGACY_ITEM_MAX_EXPAND_PASSES,
-) -> list[str]:
+) -> dict[str, str]:
     """BFS：把已解析页内配方表中的材料/产物加入待抓取列表。"""
-    pending = [t for t in seeds if not _item_indexed(items, t)]
-    seen: set[str] = set(seeds)
-    queue = list(pending)
+    if isinstance(seeds, list):
+        seed_map = {t: SOURCE_CRAFT_CHAIN for t in seeds}
+    else:
+        seed_map = dict(seeds)
+    seen: dict[str, str] = dict(seed_map)
+    queue = [t for t in seed_map if not _item_indexed(items, t)]
     passes = 0
 
     while queue and passes < max_passes:
@@ -232,15 +256,19 @@ def expand_legacy_item_titles(
                     continue
                 if not os.path.isfile(_page_html_path(name)):
                     continue
-                seen.add(name)
+                seen[name] = SOURCE_CRAFT_CHAIN
                 next_queue.append(name)
         queue = next_queue
 
-    return sorted(seen)
+    return seen
 
 
-def _apply_legacy_item_metadata(item: dict[str, Any]) -> None:
-    item["legacy_item"] = True
+def _apply_legacy_item_metadata(item: dict[str, Any], *, source: str) -> None:
+    apply_legacy_item_metadata(item, source=source)
+
+
+def _legacy_source_for_title(title: str, seed_sources: dict[str, str]) -> str:
+    return seed_sources.get(title, SOURCE_CRAFT_CHAIN)
 
 
 def _find_variant_wrapper(soup: BeautifulSoup, title: str):
@@ -319,6 +347,7 @@ def _ingest_one_title(
     items: dict[str, dict],
     title: str,
     html: str,
+    seed_sources: dict[str, str],
     *,
     force: bool = False,
 ) -> bool:
@@ -333,12 +362,19 @@ def _ingest_one_title(
     if not force and _item_indexed(items, name):
         return False
     item["wiki_title"] = title
-    _apply_legacy_item_metadata(item)
+    legacy_source = _legacy_source_for_title(title, seed_sources)
+    if _parse_list_variant_item(html, title) and legacy_source == SOURCE_CRAFT_CHAIN:
+        legacy_source = SOURCE_VARIANT_PAGE
+    _apply_legacy_item_metadata(item, source=legacy_source)
     _apply_overview_page_meta(item, title)
     _apply_search_aliases(item)
     items[name] = item
     if _is_set_item(item):
         _merge_set_pieces(items, name, item)
+        for piece in item.get("set_pieces") or []:
+            pname = piece.get("name")
+            if pname and pname in items:
+                inherit_legacy_item_from_parent(items[pname], item, parent_set=name)
     return True
 
 
@@ -352,17 +388,17 @@ async def ingest_legacy_items_into(
     """抓取旧版物品（Boss 掉落 + navbox + 合成链）并写入 items 字典。"""
     os.makedirs(IMAGES_DIR, exist_ok=True)
     bosses = load_bosses_for_plugin()
-    seeds = build_legacy_item_seed_titles(items, bosses)
-    titles = expand_legacy_item_titles(seeds, items)
+    seed_sources = build_legacy_item_seed_titles(items, bosses)
+    title_sources = expand_legacy_item_titles(seed_sources, items)
 
     new_count = 0
     image_urls: dict[str, str] = {}
 
     for _round in range(3):
         if force:
-            pending = list(titles)
+            pending = list(title_sources.keys())
         else:
-            pending = [t for t in titles if not _item_indexed(items, t)]
+            pending = [t for t in title_sources if not _item_indexed(items, t)]
         if not pending:
             break
         round_added = 0
@@ -375,7 +411,7 @@ async def ingest_legacy_items_into(
                 html = _load_page_html_local(title)
             if not html:
                 continue
-            if not _ingest_one_title(items, title, html, force=force):
+            if not _ingest_one_title(items, title, html, title_sources, force=force):
                 continue
             round_added += 1
             for value in items.values():
@@ -387,7 +423,7 @@ async def ingest_legacy_items_into(
         new_count += round_added
         if round_added == 0:
             break
-        titles = expand_legacy_item_titles(seeds, items)
+        title_sources = expand_legacy_item_titles(seed_sources, items)
 
     images_ok = 0
     images_total = 0
@@ -409,8 +445,8 @@ async def ingest_legacy_items_into(
             images_ok = sum(1 for r in results if r)
 
     return {
-        "seed_count": len(seeds),
-        "title_count": len(titles),
+        "seed_count": len(seed_sources),
+        "title_count": len(title_sources),
         "new_count": new_count,
         "images_ok": images_ok,
         "images_total": images_total,

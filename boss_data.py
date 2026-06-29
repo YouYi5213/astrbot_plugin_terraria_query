@@ -835,9 +835,11 @@ def parse_boss_page_file(
 
 
 def _apply_legacy_boss_metadata(boss: dict[str, Any], wiki_title: str) -> None:
-    boss["legacy_boss"] = True
-    boss["exclude_overview"] = True
-    boss["single_mode"] = True
+    try:
+        from .legacy_metadata import apply_legacy_boss_metadata
+    except ImportError:
+        from legacy_metadata import apply_legacy_boss_metadata
+    apply_legacy_boss_metadata(boss, wiki_title)
     aliases = LEGACY_BOSS_SEARCH_ALIASES.get(wiki_title, ())
     if aliases:
         boss["search_terms"] = sorted(set(boss.get("search_terms") or []) | set(aliases))
@@ -1028,6 +1030,11 @@ async def refresh_bosses(
 
     ingest_legacy_bosses_into(bosses)
     apply_boss_overview_metadata(bosses)
+    try:
+        from .legacy_metadata import backfill_internal_tags_on_bosses
+    except ImportError:
+        from legacy_metadata import backfill_internal_tags_on_bosses
+    backfill_internal_tags_on_bosses(bosses)
 
     image_urls = _collect_boss_image_urls(bosses)
     images_total = len(image_urls)

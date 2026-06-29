@@ -178,6 +178,14 @@ def _boss_data_module():
     return boss_data
 
 
+def _legacy_metadata_module():
+    try:
+        from . import legacy_metadata
+    except ImportError:
+        import legacy_metadata
+    return legacy_metadata
+
+
 def _legacy_item_data_module():
     try:
         from . import legacy_item_data
@@ -1548,6 +1556,12 @@ def _merge_set_pieces(items: dict[str, dict], set_name: str, set_item: dict) -> 
             "from_armor_set": True,
             "parent_set": set_name,
         }
+        try:
+            from .legacy_metadata import inherit_legacy_item_from_parent, is_legacy_item
+        except ImportError:
+            from legacy_metadata import inherit_legacy_item_from_parent, is_legacy_item
+        if is_legacy_item(set_item):
+            inherit_legacy_item_from_parent(entry, set_item, parent_set=set_name)
         items[pname] = entry
         added += 1
     return added
@@ -2640,6 +2654,115 @@ def _collect_image_urls(item: dict) -> dict[str, str]:
     return urls
 
 
+def _local_image_exists(filename: str) -> bool:
+    return bool(filename) and os.path.isfile(os.path.join(IMAGES_DIR, filename))
+
+
+def resolve_local_item_image(
+    name: str,
+    items: dict[str, dict] | None,
+    preferred: str = "",
+) -> str:
+    """为配方/掉落图标选取本地存在的图片文件名（优先 preferred，回退物品库）。"""
+    candidates: list[str] = []
+    if preferred:
+        candidates.append(preferred)
+        if "(old)" in preferred.lower():
+            candidates.append(re.sub(r"_?\(old\)", "", preferred, flags=re.I))
+    if items and name:
+        item = items.get(name) or {}
+        img = item.get("image") or ""
+        if img:
+            candidates.append(img)
+    seen: set[str] = set()
+    for fn in candidates:
+        if not fn or fn in seen:
+            continue
+        seen.add(fn)
+        if _local_image_exists(fn):
+            return fn
+    return preferred or (items.get(name, {}).get("image") if items and name else "") or ""
+
+
+def _iter_item_recipes(item: dict) -> list[dict]:
+    recipes: list[dict] = []
+    recipe = item.get("recipe")
+    if recipe:
+        recipes.append(recipe)
+    for piece in item.get("set_pieces") or []:
+        piece_recipe = piece.get("recipe")
+        if piece_recipe:
+            recipes.append(piece_recipe)
+    return recipes
+
+
+def collect_recipe_image_urls(items: dict[str, dict]) -> dict[str, str]:
+    """收集所有配方材料/产物引用的图片 filename -> wiki url。"""
+    urls: dict[str, str] = {}
+    for item in items.values():
+        for recipe in _iter_item_recipes(item):
+            for ing in recipe.get("ingredients") or []:
+                fn = ing.get("image", "")
+                if fn and fn not in urls:
+                    urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+            res = recipe.get("result") or {}
+            fn = res.get("image", "")
+            if fn and fn not in urls:
+                urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    return urls
+
+
+def normalize_recipe_images_in_items(items: dict[str, dict]) -> int:
+    """将配方条目中的 image 字段规范为本地可加载的文件名。"""
+    updated = 0
+
+    def fix_entry(entry: dict) -> None:
+        nonlocal updated
+        if not entry:
+            return
+        name = entry.get("name", "")
+        preferred = entry.get("image", "")
+        resolved = resolve_local_item_image(name, items, preferred)
+        if resolved and resolved != preferred:
+            entry["image"] = resolved
+            updated += 1
+
+    for item in items.values():
+        for recipe in _iter_item_recipes(item):
+            for ing in recipe.get("ingredients") or []:
+                fix_entry(ing)
+            fix_entry(recipe.get("result") or {})
+    return updated
+
+
+async def backfill_missing_recipe_images(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+) -> dict[str, int]:
+    """下载配方引用但缺失的图片，并将 image 字段回退到本地可用文件名。"""
+    urls = collect_recipe_image_urls(items)
+    pending = {
+        fn: url for fn, url in urls.items() if fn and not _local_image_exists(fn)
+    }
+    images_total = len(pending)
+    images_ok = 0
+    if pending:
+        semaphore = asyncio.Semaphore(8)
+        results = await asyncio.gather(
+            *[
+                download_image(session, fn, url, semaphore)
+                for fn, url in pending.items()
+            ]
+        )
+        images_ok = sum(1 for r in results if r)
+    normalized = normalize_recipe_images_in_items(items)
+    return {
+        "images_total": images_total,
+        "images_ok": images_ok,
+        "normalized": normalized,
+    }
+
+
 def _apply_overview_page_meta(item: dict, wiki_title: str) -> None:
     if wiki_title not in OVERVIEW_PAGES and item.get("name", "") not in OVERVIEW_PAGES:
         return
@@ -3035,6 +3158,10 @@ async def update_wiki_data(
             _treasure_bag_data_module().load_treasure_bags_for_plugin(CATEGORIES_DIR)
         ),
     }
+    legacy_item_result: dict = {}
+    legacy_item_tags = 0
+    legacy_boss_tags = 0
+    recipe_img_result: dict = {}
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -3138,6 +3265,17 @@ async def update_wiki_data(
         legacy_item_result = await _legacy_item_data_module().ingest_legacy_items_into(
             items, session
         )
+        lm = _legacy_metadata_module()
+        legacy_item_tags = lm.backfill_internal_tags_on_items(items)
+        bosses = _boss_data_module().load_bosses_for_plugin(CATEGORIES_DIR)
+        legacy_boss_tags = lm.backfill_internal_tags_on_bosses(bosses)
+        if legacy_boss_tags:
+            with open(
+                os.path.join(CATEGORIES_DIR, "bosses.json"), "w", encoding="utf-8"
+            ) as f:
+                json.dump(bosses, f, ensure_ascii=False, indent=2)
+
+        recipe_img_result = await backfill_missing_recipe_images(session, items)
 
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
@@ -3179,6 +3317,11 @@ async def update_wiki_data(
         "boss_images_total": boss_img_result.get("images_total", 0),
         "legacy_item_new_count": legacy_item_result.get("new_count", 0),
         "legacy_item_seed_count": legacy_item_result.get("seed_count", 0),
+        "legacy_item_tags_backfill": legacy_item_tags,
+        "legacy_boss_tags_backfill": legacy_boss_tags,
+        "recipe_images_ok": recipe_img_result.get("images_ok", 0),
+        "recipe_images_total": recipe_img_result.get("images_total", 0),
+        "recipe_images_normalized": recipe_img_result.get("normalized", 0),
     }
 
 

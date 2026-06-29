@@ -51,6 +51,7 @@ def test_ingest_legacy_bosses_into():
     assert "奥库瑞姆" in bosses
     assert bosses["奥库瑞姆"].get("legacy_boss") is True
     assert bosses["奥库瑞姆"].get("exclude_overview") is True
+    assert "legacy_boss" in (bosses["奥库瑞姆"].get("internal_tags") or [])
     ocram_drops = bosses["奥库瑞姆"].get("drops", {}).get("items", {}).get("normal") or []
     assert len(ocram_drops) >= 10
     turkey_parts = bosses["不感恩的火鸡"].get("parts") or []

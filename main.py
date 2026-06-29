@@ -199,7 +199,7 @@ CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
 CARD_BOTTOM_EXTRA = 10
-CARD_VERSION = "v47"
+CARD_VERSION = "v48"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -250,12 +250,9 @@ TB_BAG_ICON_SLOT = (36, 36)
 TB_DROP_ICON_SLOT = (28, 28)
 TB_COL_CHANCE = 300
 TB_COL_QTY = 440
-TB_EXPERT_ROW_FILL = (105, 100, 92, 220)
-TB_CARD_BG = (38, 30, 24, 255)
-TB_HEADER_BG = (52, 42, 34, 255)
-TB_ID_BG = (68, 58, 48, 255)
+TB_EXPERT_ROW_FILL = (78, 78, 85, 255)
+TB_HEADER_BODY_GAP = 10
 TB_TABLE_ROW_MIN = 36
-TB_TITLE_AREA = 88
 TB_TABLE_HEADER = 8
 COLORS = {
     "bg": (30, 30, 35, 230),
@@ -4081,7 +4078,7 @@ def _calc_tb_drop_row_height(draw, entry: dict, font) -> int:
 def _calc_treasure_bag_drops_area(measure, drops: list[dict], font) -> int:
     if not drops:
         return 0
-    area = TB_TABLE_HEADER + DROP_TABLE_HEADER + 6
+    area = TB_TABLE_HEADER + DROP_TABLE_HEADER + TB_HEADER_BODY_GAP + 6
     for entry in drops:
         area += _calc_tb_drop_row_height(measure, entry, font)
     return area
@@ -4127,10 +4124,6 @@ def _draw_treasure_bag_drops_section(
     table_right = CARD_WIDTH - CARD_PADDING
     header_y = y
 
-    draw.rectangle(
-        [table_left, header_y, table_right, header_y + DROP_TABLE_HEADER],
-        fill=TB_HEADER_BG,
-    )
     draw.text(
         (_tb_col_item_x(), header_y + 4),
         ui["tb_col_item"],
@@ -4149,7 +4142,7 @@ def _draw_treasure_bag_drops_section(
         fill=COLORS["label"],
         font=font_small,
     )
-    y += DROP_TABLE_HEADER
+    y += DROP_TABLE_HEADER + TB_HEADER_BODY_GAP
 
     for entry in drops:
         row_h = _calc_tb_drop_row_height(draw, entry, font_small)
@@ -4161,7 +4154,7 @@ def _draw_treasure_bag_drops_section(
         else:
             draw.line(
                 [table_left, y + row_h - 1, table_right, y + row_h - 1],
-                fill=(70, 58, 48, 255),
+                fill=COLORS["separator"],
                 width=1,
             )
 
@@ -4172,7 +4165,7 @@ def _draw_treasure_bag_drops_section(
             _paste_in_slot(card, drop_img, icon_x, y + 4, TB_DROP_ICON_SLOT[0], row_h - 8)
         label = entry.get("label") or entry.get("name") or ""
         _draw_drop_field_lines(
-            draw, label, text_x, y + 6, _tb_col_item_w() - TB_DROP_ICON_SLOT[0] - 10, font_small, COLORS["accent"]
+            draw, label, text_x, y + 6, _tb_col_item_w() - TB_DROP_ICON_SLOT[0] - 10, font_small, COLORS["text"]
         )
         chance = entry.get("chance", "")
         if chance:
@@ -4218,13 +4211,14 @@ def _generate_treasure_bag_card(data: dict) -> str:
         CARD_PADDING * 2 + title_h + TB_TABLE_HEADER + drops_area + 12
     )
 
-    card = Image.new("RGBA", (CARD_WIDTH, total_height), TB_CARD_BG)
+    card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
     draw = ImageDraw.Draw(card)
 
     header_bottom = CARD_PADDING + title_h
-    draw.rectangle(
+    draw.rounded_rectangle(
         [CARD_PADDING, CARD_PADDING, CARD_WIDTH - CARD_PADDING, header_bottom],
-        fill=TB_HEADER_BG,
+        radius=8,
+        fill=COLORS["header_bg"],
     )
     icon_y = CARD_PADDING + (title_h - (bag_img.height if bag_img else TB_BAG_ICON_SLOT[1])) // 2
     if bag_img:
@@ -4232,7 +4226,7 @@ def _generate_treasure_bag_card(data: dict) -> str:
     draw.text(
         (title_x, CARD_PADDING + 12),
         data.get("name", ui["unknown"]),
-        fill=COLORS["accent"],
+        fill=COLORS["title"],
         font=font_title,
     )
     if id_text:
@@ -4241,7 +4235,7 @@ def _generate_treasure_bag_card(data: dict) -> str:
         draw.rounded_rectangle(
             [title_x, id_y, title_x + id_w, id_y + _font_line_height(font_id) + 8],
             radius=4,
-            fill=TB_ID_BG,
+            fill=COLORS["key_bg"],
         )
         draw.text((title_x + 8, id_y + 4), id_text, fill=COLORS["value"], font=font_id)
 

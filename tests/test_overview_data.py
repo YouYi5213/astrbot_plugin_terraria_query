@@ -12,6 +12,11 @@ from overview_data import (  # noqa: E402
     build_treasure_bag_overview,
 )
 
+try:
+    from boss_data import load_bosses_for_plugin
+except ImportError:
+    from boss_data import load_bosses_for_plugin
+
 
 def test_build_boss_overview_has_two_sections():
     overview = build_boss_overview({})
@@ -51,6 +56,18 @@ def test_build_boss_overview_uses_homepage_icons():
     pre_items = overview["sections"][0]["items"]
     assert pre_items
     assert pre_items[0]["image"].startswith("Map_Icon_")
+
+
+def test_legacy_bosses_excluded_from_overview():
+    bosses = load_bosses_for_plugin()
+    overview = build_boss_overview(bosses)
+    names = {
+        item["name"]
+        for section in overview["sections"]
+        for item in section["items"]
+    }
+    for legacy in ("不感恩的火鸡", "奥库瑞姆", "天兔"):
+        assert legacy not in names
 
 
 def test_build_event_overview_uses_homepage_icons():

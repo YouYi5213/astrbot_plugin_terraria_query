@@ -3444,5 +3444,3212 @@
     ],
     "wiki_title": "鱼缸",
     "item_category": "vanity"
+  },
+  "George的套装": {
+    "name": "George的套装",
+    "image": "George's_set.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "\"Oh myyy!\"",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "51",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "George的套装是一套时装物品套装，在血月可从服装商处以51 GC（全套）购买，但仅男性角色可买。它由George的帽子、George的上衣、和George的裤子组成。它是绝妙套装的男性对应物。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "George的套装是一套时装物品套装，在血月可从服装商处以"
+        },
+        {
+          "type": "coin",
+          "amount": "51",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）购买，但仅男性角色可买。它由George的帽子、George的上衣、和George的裤子组成。它是绝妙套装的男性对应物。"
+        }
+      ]
+    ],
+    "page_type": "vanity_set",
+    "set_pieces": [
+      {
+        "name": "George的帽子",
+        "image": "George's_Hat.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交头盔",
+            "extra": ""
+          },
+          {
+            "label": "工具提示",
+            "value": "\"Oh myyy!\"",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "1",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "20",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "George的西装上衣",
+        "image": "George's_Tuxedo_Shirt.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "工具提示",
+            "value": "\"Oh myyy!\"",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "George的裤子",
+        "image": "George's_Tuxedo_Pants.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "工具提示",
+            "value": "\"Oh myyy!\"",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "wiki_title": "George的套装",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "George的帽子": {
+    "name": "George的帽子",
+    "image": "George's_Hat.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "\"Oh myyy!\"",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "George的套装",
+    "item_category": "vanity"
+  },
+  "George的西装上衣": {
+    "name": "George的西装上衣",
+    "image": "George's_Tuxedo_Shirt.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "\"Oh myyy!\"",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "George的套装",
+    "item_category": "vanity"
+  },
+  "George的裤子": {
+    "name": "George的裤子",
+    "image": "George's_Tuxedo_Pants.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "\"Oh myyy!\"",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "George的套装",
+    "item_category": "vanity"
+  },
+  "兔兔兜帽": {
+    "name": "兔兔兜帽",
+    "image": "Bunny_Hood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "毒兔兔",
+              "image": "Vicious_Bunny.gif",
+              "quantity": "1",
+              "chance": "1.33%"
+            },
+            {
+              "name": "腐化兔兔",
+              "image": "Corrupt_Bunny.gif",
+              "quantity": "1",
+              "chance": "1.33%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "毒兔兔",
+              "image": "Vicious_Bunny.gif",
+              "quantity": "1",
+              "chance": "1.33%"
+            },
+            {
+              "name": "腐化兔兔",
+              "image": "Corrupt_Bunny.gif",
+              "quantity": "1",
+              "chance": "1.33%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "毒兔兔",
+              "image": "Vicious_Bunny.gif",
+              "quantity": "1",
+              "chance": "1.33%"
+            },
+            {
+              "name": "腐化兔兔",
+              "image": "Corrupt_Bunny.gif",
+              "quantity": "1",
+              "chance": "1.33%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "兔兔兜帽是一种时装头部装备物品。它有1/75 (1.33%)几率掉落自腐化兔兔和毒兔兔(电脑版、主机版、和移动版)。在任天堂3DS任天堂3DS版版上，它也会掉落自病兔或天兔。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "兔兔兜帽是一种时装头部装备物品。它有1/75 (1.33%)几率掉落自腐化兔兔和毒兔兔(电脑版、主机版、和移动版)。在任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版上，它也会掉落自病兔或天兔。"
+        }
+      ]
+    ],
+    "wiki_title": "兔兔兜帽",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "十月啤酒节套装": {
+    "name": "十月啤酒节套装",
+    "image": "Oktoberfest_set.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      }
+    ],
+    "recipe": null,
+    "description": "十月啤酒节套装是两套从前可于服装商处在十月啤酒节期间购买的时装套装。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "十月啤酒节套装是两套从前可于服装商处在十月啤酒节期间购买的时装套装。"
+        }
+      ]
+    ],
+    "page_type": "vanity_set",
+    "set_pieces": [
+      {
+        "name": "登山帽",
+        "image": "Alpine_Hat.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交头盔",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "浅红色",
+            "extra": "",
+            "sortkey": "04*",
+            "color": "#ff7777"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "80",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "皮背心",
+        "image": "Lederweste.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "浅红色",
+            "extra": "",
+            "sortkey": "04*",
+            "color": "#ff7777"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "1",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "皮裤",
+        "image": "Lederhosen.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "浅红色",
+            "extra": "",
+            "sortkey": "04*",
+            "color": "#ff7777"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "1",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "啤酒节假发",
+        "image": "Oktober_Locks.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交头盔",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "浅红色",
+            "extra": "",
+            "sortkey": "04*",
+            "color": "#ff7777"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "80",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "旦多尔女衫",
+        "image": "Dirndl_Blouse.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "浅红色",
+            "extra": "",
+            "sortkey": "04*",
+            "color": "#ff7777"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "1",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "旦多尔裙",
+        "image": "Dirndl_Skirt.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "浅红色",
+            "extra": "",
+            "sortkey": "04*",
+            "color": "#ff7777"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "1",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "wiki_title": "十月啤酒节套装",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "登山帽": {
+    "name": "登山帽",
+    "image": "Alpine_Hat.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "80",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "十月啤酒节套装",
+    "item_category": "vanity"
+  },
+  "皮背心": {
+    "name": "皮背心",
+    "image": "Lederweste.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "十月啤酒节套装",
+    "item_category": "vanity"
+  },
+  "皮裤": {
+    "name": "皮裤",
+    "image": "Lederhosen.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "十月啤酒节套装",
+    "item_category": "vanity"
+  },
+  "啤酒节假发": {
+    "name": "啤酒节假发",
+    "image": "Oktober_Locks.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "80",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "十月啤酒节套装",
+    "item_category": "vanity"
+  },
+  "旦多尔女衫": {
+    "name": "旦多尔女衫",
+    "image": "Dirndl_Blouse.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "十月啤酒节套装",
+    "item_category": "vanity"
+  },
+  "旦多尔裙": {
+    "name": "旦多尔裙",
+    "image": "Dirndl_Skirt.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "十月啤酒节套装",
+    "item_category": "vanity"
+  },
+  "多乐套装トロの衣装": {
+    "name": "多乐套装トロの衣装",
+    "image": "Toro's_set.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "51",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "多乐套装是游戏的日本主机版日本主机版PlayStation Vita独有的时装套装。它由多乐头部、多乐身体和多乐腿部组成。此套装的不同组件可以在不同月相的血月期间从服装商处购买（不同月相下还能购买到粉白美套装）。多乐身体是在上弦月期间得到的。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "多乐套装是游戏的"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版"
+        },
+        {
+          "type": "icon",
+          "image": "Playstation_Vita.svg",
+          "alt": "PlayStation Vita"
+        },
+        {
+          "type": "text",
+          "text": "独有的时装套装。它由多乐头部、多乐身体和多乐腿部组成。此套装的不同组件可以在不同月相的血月期间从服装商处购买（不同月相下还能购买到粉白美套装）。多乐身体是在上弦月期间得到的。"
+        }
+      ]
+    ],
+    "page_type": "vanity_set",
+    "set_pieces": [
+      {
+        "name": "多乐头部トロのあたま",
+        "image": "Toro's_Head.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交帽子",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "1",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "20",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "多乐身体トロのからだ",
+        "image": "Toro's_Body.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "多乐腿部トロのあし",
+        "image": "Toro's_Legs.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "wiki_title": "多乐套装",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "多乐头部トロのあたま": {
+    "name": "多乐头部トロのあたま",
+    "image": "Toro's_Head.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交帽子",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "多乐套装トロの衣装",
+    "item_category": "vanity"
+  },
+  "多乐身体トロのからだ": {
+    "name": "多乐身体トロのからだ",
+    "image": "Toro's_Body.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "多乐套装トロの衣装",
+    "item_category": "vanity"
+  },
+  "多乐腿部トロのあし": {
+    "name": "多乐腿部トロのあし",
+    "image": "Toro's_Legs.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "多乐套装トロの衣装",
+    "item_category": "vanity"
+  },
+  "面具": {
+    "name": "面具",
+    "image": "Eye_of_Cthulhu_Mask.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "面具是时装物品，它掉落于所有非事件Boss，但也包括撒旦军队(电脑版、主机版、和移动版)的 Boss。它们被穿戴在社交头部栏。每个 Boss 都有1/7 (14.29%)的几率掉落它自己的面具。\n\n· 特别的，骷髅王的面具有1/3 (33.33%)的几率从它的宝藏袋中从开出。\n· 黑暗魔法师和食人魔在T3中掉落面具的几率从1/7 (14.29%)降低至1/14 (7.14%)。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "面具是时装物品，它掉落于所有非事件Boss，但也包括撒旦军队(电脑版、主机版、和移动版)的 Boss。它们被穿戴在社交头部栏。每个 Boss 都有1/7 (14.29%)的几率掉落它自己的面具。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "特别的，骷髅王的面具有1/3 (33.33%)的几率从它的宝藏袋中从开出。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "黑暗魔法师和食人魔在T3中掉落面具的几率从1/7 (14.29%)降低至1/14 (7.14%)。"
+        }
+      ]
+    ],
+    "wiki_title": "奥库瑞姆面具",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "希炼套装ふうらいにんの衣装": {
+    "name": "希炼套装ふうらいにんの衣装",
+    "image": "Shiren_set.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "火焰小鬼",
+              "image": "Fire_Imp.gif",
+              "quantity": "1",
+              "chance": "0.4%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "火焰小鬼",
+              "image": "Fire_Imp.gif",
+              "quantity": "1",
+              "chance": "0.4%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "火焰小鬼",
+              "image": "Fire_Imp.gif",
+              "quantity": "1",
+              "chance": "0.4%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "希炼套装是游戏的日本主机版日本主机版PlayStation 3和Wii UWii U 版所独有的一套时装套装，看起来像是游戏《风来之希炼（Shiren the Wanderer）》系列中的同名角色。它由希炼帽、希炼衣、和希炼裤组成。希炼帽有1/250 (0.4%)几率掉落自火焰小鬼而希炼衣和希炼裤则可在满月时在服装商处购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "希炼套装是游戏的"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版"
+        },
+        {
+          "type": "icon",
+          "image": "Playstation_3.svg",
+          "alt": "PlayStation 3"
+        },
+        {
+          "type": "text",
+          "text": "和"
+        },
+        {
+          "type": "icon",
+          "image": "Wii_U_icon.svg",
+          "alt": "Wii U"
+        },
+        {
+          "type": "text",
+          "text": "Wii U 版所独有的一套时装套装，看起来像是游戏《风来之希炼（Shiren the Wanderer）》系列中的同名角色。它由希炼帽、希炼衣、和希炼裤组成。希炼帽有1/250 (0.4%)几率掉落自火焰小鬼而希炼衣和希炼裤则可在满月时在服装商处购买。"
+        }
+      ]
+    ],
+    "page_type": "vanity_set",
+    "set_pieces": [
+      {
+        "name": "希炼帽さんどがさ",
+        "image": "Shiren_Hat.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交帽子",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "20",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "希炼衣ふうらいにんのふく",
+        "image": "Shiren_Shirt.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "希炼裤ふうらいにんのこしあて",
+        "image": "Shiren_Pants.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "wiki_title": "希炼套装",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "希炼帽さんどがさ": {
+    "name": "希炼帽さんどがさ",
+    "image": "Shiren_Hat.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交帽子",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "希炼套装ふうらいにんの衣装",
+    "item_category": "vanity"
+  },
+  "希炼衣ふうらいにんのふく": {
+    "name": "希炼衣ふうらいにんのふく",
+    "image": "Shiren_Shirt.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "希炼套装ふうらいにんの衣装",
+    "item_category": "vanity"
+  },
+  "希炼裤ふうらいにんのこしあて": {
+    "name": "希炼裤ふうらいにんのこしあて",
+    "image": "Shiren_Pants.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "希炼套装ふうらいにんの衣装",
+    "item_category": "vanity"
+  },
+  "粉白美套装モノミの衣装": {
+    "name": "粉白美套装モノミの衣装",
+    "image": "Monomi_set.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "51",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "粉白美套装是游戏的日本主机版日本主机版PlayStation Vita独有的时装套装，看起来像是电子游戏《枪弹辩驳》（又译弹丸论破）系列中的同名角色。它由粉白美头部、粉白美身体、和粉白美腿部组成。此套装的不同组件可以在不同月相的血月期间从服装商处购买（不同月相下还能购买到多乐套装）。粉白美身体是在上弦月期间得到的。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "粉白美套装是游戏的"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版"
+        },
+        {
+          "type": "icon",
+          "image": "Playstation_Vita.svg",
+          "alt": "PlayStation Vita"
+        },
+        {
+          "type": "text",
+          "text": "独有的时装套装，看起来像是电子游戏《枪弹辩驳》（又译弹丸论破）系列中的同名角色。它由粉白美头部、粉白美身体、和粉白美腿部组成。此套装的不同组件可以在不同月相的血月期间从服装商处购买（不同月相下还能购买到多乐套装）。粉白美身体是在上弦月期间得到的。"
+        }
+      ]
+    ],
+    "page_type": "vanity_set",
+    "set_pieces": [
+      {
+        "name": "粉白美头部モノミヘッド",
+        "image": "Monomi_Head.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交帽子",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "1",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "20",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "粉白美身体モノミボディ",
+        "image": "Monomi_Body.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "粉白美腿部モノミレッグ",
+        "image": "Monomi_Legs.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "wiki_title": "粉白美套装",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "粉白美头部モノミヘッド": {
+    "name": "粉白美头部モノミヘッド",
+    "image": "Monomi_Head.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交帽子",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "粉白美套装モノミの衣装",
+    "item_category": "vanity"
+  },
+  "粉白美身体モノミボディ": {
+    "name": "粉白美身体モノミボディ",
+    "image": "Monomi_Body.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "粉白美套装モノミの衣装",
+    "item_category": "vanity"
+  },
+  "粉白美腿部モノミレッグ": {
+    "name": "粉白美腿部モノミレッグ",
+    "image": "Monomi_Legs.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "粉白美套装モノミの衣装",
+    "item_category": "vanity"
+  },
+  "绝妙套装": {
+    "name": "绝妙套装",
+    "image": "Fabulous_set.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "51",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "绝妙套装是由绝妙丝带、绝妙礼服和绝妙拖鞋所组成的时装套装。在血月期间可以51 GC（全套）的价格自服装商处购买，但仅限女性人物。它是George的套装的女性版本对应物。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\n当穿着全套时，绝妙丝带会随着移动而上下摆动。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "绝妙套装是由绝妙丝带、绝妙礼服和绝妙拖鞋所组成的时装套装。在血月期间可以"
+        },
+        {
+          "type": "coin",
+          "amount": "51",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "（全套）的价格自服装商处购买，但仅限女性人物。它是George的套装的女性版本对应物。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当穿着全套时，绝妙丝带会随着移动而上下摆动。"
+        }
+      ]
+    ],
+    "page_type": "vanity_set",
+    "set_pieces": [
+      {
+        "name": "绝妙丝带",
+        "image": "Fabulous_Ribbon.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交头盔",
+            "extra": ""
+          },
+          {
+            "label": "工具提示",
+            "value": "飞行和缓慢坠落",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "1",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "20",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "绝妙礼服",
+        "image": "Fabulous_Dress.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "绝妙拖鞋",
+        "image": "Fabulous_Slippers.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "买入",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "25",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "5",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "wiki_title": "绝妙套装",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "绝妙丝带": {
+    "name": "绝妙丝带",
+    "image": "Fabulous_Ribbon.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "飞行和缓慢坠落",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "绝妙套装",
+    "item_category": "vanity"
+  },
+  "绝妙礼服": {
+    "name": "绝妙礼服",
+    "image": "Fabulous_Dress.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "绝妙套装",
+    "item_category": "vanity"
+  },
+  "绝妙拖鞋": {
+    "name": "绝妙拖鞋",
+    "image": "Fabulous_Slippers.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "25",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "绝妙套装",
+    "item_category": "vanity"
+  },
+  "角神套装": {
+    "name": "角神套装",
+    "image": "Horned_God_set.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“奇迹时代之孑遗”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "description": "角神套装是一套困难模式时装套装，由角神面具、角神长袍和角神靴组成。\n\n每个部件有1/7 (14.29%)的几率由不同的机械 Boss掉落：角神面具掉落自机械骷髅王，角神长袍掉落自毁灭者，而角神靴掉落自双子魔眼。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "角神套装是一套困难模式时装套装，由角神面具、角神长袍和角神靴组成。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "每个部件有1/7 (14.29%)的几率由不同的机械 Boss掉落：角神面具掉落自机械骷髅王，角神长袍掉落自毁灭者，而角神靴掉落自双子魔眼。"
+        }
+      ]
+    ],
+    "page_type": "vanity_set",
+    "set_pieces": [
+      {
+        "name": "角神面具",
+        "image": "Horned_God_Mask.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交头盔",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          }
+        ]
+      },
+      {
+        "name": "角神长袍",
+        "image": "Horned_God_Robe.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          }
+        ]
+      },
+      {
+        "name": "角神靴",
+        "image": "Horned_God_Boots.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          }
+        ]
+      }
+    ],
+    "wiki_title": "角神套装",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "角神面具": {
+    "name": "角神面具",
+    "image": "Horned_God_Mask.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "角神套装",
+    "item_category": "vanity"
+  },
+  "角神长袍": {
+    "name": "角神长袍",
+    "image": "Horned_God_Robe.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "角神套装",
+    "item_category": "vanity"
+  },
+  "角神靴": {
+    "name": "角神靴",
+    "image": "Horned_God_Boots.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "角神套装",
+    "item_category": "vanity"
+  },
+  "黑白熊套装モノクマの衣装": {
+    "name": "黑白熊套装モノクマの衣装",
+    "image": "Monokuma_set.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "黑白熊套装是《泰拉瑞亚》的日本主机版日本主机版独有的时装套装，看起来像是电子游戏《枪弹辩驳》（Danganronpa）（又译弹丸论破）系列中的同名角色（译注：指 Monokuma，黑白熊）。它由黑白熊头部、黑白熊身体、和黑白熊腿部组成。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "黑白熊套装是《泰拉瑞亚》的"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版独有的时装套装，看起来像是电子游戏《枪弹辩驳》（Danganronpa）（又译弹丸论破）系列中的同名角色（译注：指 Monokuma，黑白熊）。它由黑白熊头部、黑白熊身体、和黑白熊腿部组成。"
+        }
+      ]
+    ],
+    "page_type": "vanity_set",
+    "set_pieces": [
+      {
+        "name": "黑白熊头部モノクマヘッド",
+        "image": "Monokuma_Head.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交帽子",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "20",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "黑白熊身体モノクマボディ",
+        "image": "Monokuma_Body.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "10",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "黑白熊腿部モノクマレッグ",
+        "image": "Monokuma_Legs.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "时装",
+            "extra": ""
+          },
+          {
+            "label": "装备栏位",
+            "value": "社交裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "白色",
+            "extra": "",
+            "sortkey": "00*",
+            "color": "#ffffff"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "sc",
+                "amount": "10",
+                "image": "Silver_Coin.png"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "wiki_title": "黑白熊头部",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "黑白熊头部モノクマヘッド": {
+    "name": "黑白熊头部モノクマヘッド",
+    "image": "Monokuma_Head.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交帽子",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "黑白熊套装モノクマの衣装",
+    "item_category": "vanity"
+  },
+  "黑白熊身体モノクマボディ": {
+    "name": "黑白熊身体モノクマボディ",
+    "image": "Monokuma_Body.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "黑白熊套装モノクマの衣装",
+    "item_category": "vanity"
+  },
+  "黑白熊腿部モノクマレッグ": {
+    "name": "黑白熊腿部モノクマレッグ",
+    "image": "Monokuma_Legs.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "page_type": "vanity_piece",
+    "from_armor_set": true,
+    "parent_set": "黑白熊套装モノクマの衣装",
+    "item_category": "vanity"
+  },
+  "黑白熊套装": {
+    "name": "黑白熊套装",
+    "image": "Playstation_3.svg",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "黑白熊套装是《泰拉瑞亚》的日本主机版日本主机版独有的时装套装，看起来像是电子游戏《枪弹辩驳》（Danganronpa）（又译弹丸论破）系列中的同名角色（译注：指 Monokuma，黑白熊）。它由黑白熊头部、黑白熊身体、和黑白熊腿部组成。",
+    "page_type": "vanity_set",
+    "wiki_title": "黑白熊套装",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "黑白熊腿部": {
+    "name": "黑白熊腿部",
+    "image": "Monokuma_Legs.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "黑白熊套装是《泰拉瑞亚》的日本主机版日本主机版独有的时装套装，看起来像是电子游戏《枪弹辩驳》（Danganronpa）（又译弹丸论破）系列中的同名角色（译注：指 Monokuma，黑白熊）。它由黑白熊头部、黑白熊身体、和黑白熊腿部组成。",
+    "page_type": "vanity_set",
+    "wiki_title": "黑白熊腿部",
+    "legacy_item": true,
+    "item_category": "vanity"
+  },
+  "黑白熊身体": {
+    "name": "黑白熊身体",
+    "image": "Monokuma_Body.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装套装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "黑白熊套装是《泰拉瑞亚》的日本主机版日本主机版独有的时装套装，看起来像是电子游戏《枪弹辩驳》（Danganronpa）（又译弹丸论破）系列中的同名角色（译注：指 Monokuma，黑白熊）。它由黑白熊头部、黑白熊身体、和黑白熊腿部组成。",
+    "page_type": "vanity_set",
+    "wiki_title": "黑白熊身体",
+    "legacy_item": true,
+    "item_category": "vanity"
   }
 }

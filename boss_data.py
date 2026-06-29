@@ -56,6 +56,18 @@ _BOSS_SKIP_STAT_LABELS = frozenset({"免疫", "Immunities"})
 _MODE_ORDER = ("normal", "expert", "master")
 _MODE_LABELS = {"normal": "经典", "expert": "专家", "master": "大师"}
 
+# 前代主机/3DS 旧版 Boss：可查询，但不列入「泰拉 boss」总览
+LEGACY_BOSS_WIKI_TITLES: tuple[str, ...] = (
+    "不感恩的火鸡",
+    "奥库瑞姆",
+    "天兔",
+)
+LEGACY_BOSS_SEARCH_ALIASES: dict[str, tuple[str, ...]] = {
+    "不感恩的火鸡": ("火鸡", "Turkor"),
+    "奥库瑞姆": ("Ocram",),
+    "天兔": ("Lepus",),
+}
+
 
 def _overview_html_path() -> str:
     return os.path.join(_WIKI_MIRROR_DIR, "wiki", "zh", "pages", f"{BOSS_OVERVIEW_PAGE}.html")
@@ -495,7 +507,12 @@ def _parse_mode_text_lines(td: Tag) -> dict[str, str]:
         plain = _cell_text(node, multiline=True)
         return {"normal": plain, "expert": plain, "master": plain}
 
-    return _finalize_mode_parts(parts)
+    result = _finalize_mode_parts(parts)
+    non_empty = [mode for mode in _MODE_ORDER if result.get(mode)]
+    if len(non_empty) == 1:
+        text = result[non_empty[0]]
+        return {mode: text for mode in _MODE_ORDER}
+    return result
 
 
 def _parse_uniform_or_mode_cell(td: Tag) -> dict[str, str]:
@@ -788,6 +805,17 @@ def parse_boss_page_html(
     if parts:
         boss["parts"] = parts
 
+    drop_items = (boss.get("drops") or {}).get("items") or {}
+    if not any(drop_items.get(mode) for mode in _MODE_ORDER):
+        for box in soup.select(".mw-parser-output div.infobox.npc.modesbox"):
+            if box is infobox:
+                continue
+            extra = _parse_boss_infobox(box, include_drops=True)
+            extra_items = (extra.get("drops") or {}).get("items") or {}
+            if any(extra_items.get(mode) for mode in _MODE_ORDER):
+                boss["drops"] = extra["drops"]
+                break
+
     if not boss.get("stats") and not boss.get("drops") and not image:
         return None
     return boss
@@ -806,6 +834,36 @@ def parse_boss_page_file(
     return parse_boss_page_html(html, wiki_title=wiki_title, catalog_entry=catalog_entry)
 
 
+def _apply_legacy_boss_metadata(boss: dict[str, Any], wiki_title: str) -> None:
+    boss["legacy_boss"] = True
+    boss["exclude_overview"] = True
+    boss["single_mode"] = True
+    aliases = LEGACY_BOSS_SEARCH_ALIASES.get(wiki_title, ())
+    if aliases:
+        boss["search_terms"] = sorted(set(boss.get("search_terms") or []) | set(aliases))
+
+
+def ingest_legacy_bosses_into(
+    bosses: dict[str, dict],
+    *,
+    wiki_titles: tuple[str, ...] | None = None,
+) -> int:
+    """解析旧版 Boss 页并并入 bosses.json（不进入总览目录）。"""
+    titles = wiki_titles if wiki_titles is not None else LEGACY_BOSS_WIKI_TITLES
+    added = 0
+    for wiki_title in titles:
+        parsed = parse_boss_page_file(wiki_title)
+        if not parsed:
+            continue
+        key = parsed.get("name") or wiki_title
+        parsed["name"] = key
+        parsed["wiki_title"] = wiki_title
+        _apply_legacy_boss_metadata(parsed, wiki_title)
+        bosses[key] = parsed
+        added += 1
+    return added
+
+
 def apply_boss_overview_metadata(
     bosses: dict[str, dict],
     catalog: list[dict[str, str]] | None = None,
@@ -817,6 +875,8 @@ def apply_boss_overview_metadata(
     by_title = {entry["wiki_title"]: entry for entry in catalog}
     by_label = {entry.get("label") or entry["wiki_title"]: entry for entry in catalog}
     for key, item in bosses.items():
+        if item.get("exclude_overview"):
+            continue
         entry = (
             by_title.get(item.get("wiki_title", ""))
             or by_title.get(key)
@@ -966,6 +1026,7 @@ async def refresh_bosses(
         bosses[key] = parsed
         new_count += 1
 
+    ingest_legacy_bosses_into(bosses)
     apply_boss_overview_metadata(bosses)
 
     image_urls = _collect_boss_image_urls(bosses)
@@ -1039,6 +1100,7 @@ def ingest_bosses_local(*, force: bool = False, download_images: bool = True) ->
         for key, value in existing.items():
             bosses.setdefault(key, value)
 
+    ingest_legacy_bosses_into(bosses)
     apply_boss_overview_metadata(bosses)
 
     with open(BOSSES_JSON, "w", encoding="utf-8") as f:

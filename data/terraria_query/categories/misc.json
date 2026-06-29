@@ -25874,5 +25874,7621 @@
     ],
     "wiki_title": "风筝",
     "item_category": "misc"
+  },
+  "Chippy的斗篷（停用）": {
+    "name": "Chippy的斗篷（停用）",
+    "image": "Chippy's_Cloak_(Inactive).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充泰拉瑞亚爱好者！”\n可使用合适的材料激活",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "“非常适合冒充泰拉瑞亚爱好者！”\n可使用合适的材料激活"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "Heroicis的翅膀（停用）",
+          "image": "Heroicis'_Wings_(Inactive).png"
+        },
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "神圣锭",
+          "image": "Hallowed_Bar.png",
+          "amount": "12"
+        }
+      ],
+      "result": {
+        "name": "Heroicis的翅膀",
+        "image": "Heroicis'_Wings.png"
+      }
+    },
+    "description": "翅膀是一类配饰，让玩家能通过按住↷跳键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住↷跳键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。\n\n装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。\n\n某些类型的翅膀还能让玩家在飞行中可以通过按住▼下键悬浮在固定高度，和/或按住▲上键来加快上升速度。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "翅膀是一类配饰，让玩家能通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "某些类型的翅膀还能让玩家在飞行中可以通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "键悬浮在固定高度，和/或按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▲",
+          "label": "上"
+        },
+        {
+          "type": "text",
+          "text": "键来加快上升速度。"
+        }
+      ]
+    ],
+    "wiki_title": "Chippy的斗篷（停用）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "Heroicis的翅膀（停用）": {
+    "name": "Heroicis的翅膀（停用）",
+    "image": "Heroicis'_Wings_(Inactive).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "可用合适的材料激活\n“每遇挫折，便重新开始……且变得更明智。”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "可用合适的材料激活\n“每遇挫折，便重新开始……且变得更明智。”"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "Heroicis的翅膀（停用）",
+          "image": "Heroicis'_Wings_(Inactive).png"
+        },
+        {
+          "name": "飞翔之魂",
+          "image": "Soul_of_Flight.png",
+          "amount": "20"
+        },
+        {
+          "name": "神圣锭",
+          "image": "Hallowed_Bar.png",
+          "amount": "12"
+        }
+      ],
+      "result": {
+        "name": "Heroicis的翅膀",
+        "image": "Heroicis'_Wings.png"
+      }
+    },
+    "description": "翅膀是一类配饰，让玩家能通过按住↷跳键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住↷跳键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。\n\n装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。\n\n某些类型的翅膀还能让玩家在飞行中可以通过按住▼下键悬浮在固定高度，和/或按住▲上键来加快上升速度。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "翅膀是一类配饰，让玩家能通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "某些类型的翅膀还能让玩家在飞行中可以通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "键悬浮在固定高度，和/或按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▲",
+          "label": "上"
+        },
+        {
+          "type": "text",
+          "text": "键来加快上升速度。"
+        }
+      ]
+    ],
+    "wiki_title": "Heroicis的翅膀（停用）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "Sharanga弓": {
+    "name": "Sharanga弓",
+    "image": "Sharanga.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "36",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "把任何合适的弹药变成灵能箭",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "熔火之怒",
+          "image": "Molten_Fury_(old).png",
+          "amount": "2"
+        },
+        {
+          "name": "狱石锭",
+          "image": "Hellstone_Bar_(old).png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "Sharanga弓",
+        "image": "Sharanga.png"
+      }
+    },
+    "description": "Sharanga弓是一个困难模式之前的弓。发射时，它会将任何类型的箭转化为灵能箭。灵能箭会产生发光效果并造成诅咒狱火减益。\n\n其最佳修饰语是虚幻。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Sharanga弓是一个困难模式之前的弓。发射时，它会将任何类型的箭转化为灵能箭。灵能箭会产生发光效果并造成诅咒狱火减益。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是虚幻。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "灵能箭",
+      "image": "Spectral_Arrow.png"
+    },
+    "wiki_title": "Sharanga弓",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "Tizona剑": {
+    "name": "Tizona剑",
+    "image": "Tizona.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "55",
+        "extra": "(近战)"
+      },
+      {
+        "label": "击退",
+        "value": "5",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "25",
+        "extra": "（快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有几率造成流血",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "断钢剑",
+          "image": "Excalibur_(old).png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        },
+        {
+          "name": "精金锭",
+          "image": "Adamantite_Bar_(old).png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "Tizona剑",
+        "image": "Tizona.png"
+      }
+    },
+    "description": "Tizona剑是一种奥库瑞姆后的剑，可以在击中时造成流血减益。其可自动挥舞，且可在挥舞时防止玩家转身。挥舞时，它会展示黄红夹杂的火焰动画，这和炽焰巨剑很相似，但不能造成着火了！减益。\n\n其最佳修饰语是传奇。\n\n在主机版主机版和移动版移动版中，Tizona剑在升级至对应于1.3.0.1的版本后被替换为叶绿双刃刀。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Tizona剑是一种奥库瑞姆后的剑，可以在击中时造成流血减益。其可自动挥舞，且可在挥舞时防止玩家转身。挥舞时，它会展示黄红夹杂的火焰动画，这和炽焰巨剑很相似，但不能造成着火了！减益。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是传奇。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，Tizona剑在升级至对应于1.3.0.1的版本后被替换为叶绿双刃刀。"
+        }
+      ]
+    ],
+    "wiki_title": "Tizona剑",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "Wiesnbräu啤酒": {
+    "name": "Wiesnbräu啤酒",
+    "image": "Wiesnbräu.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "16",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "饮用者的知觉麻木，受到的伤害降低，但也会降低造成的伤害",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "9",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "cc",
+            "amount": "95",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "cc",
+            "amount": "99",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "Wiesnbräu啤酒是一种消耗性增益药水，能提供Drunk增益。在增益的效果期间，玩家受到和造成的伤害减半（向上取整）。这会持续 30 秒，但任何时候都可以通过在增益屏幕取消增益来取消。使用 Wiesnbräu啤酒时也会获得耐药性减益，在此减益激活期间无法再次使用它。它可以在十月啤酒节期间于商人以每个9 SC的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Wiesnbräu啤酒是一种消耗性增益药水，能提供Drunk增益。在增益的效果期间，玩家受到和造成的伤害减半（向上取整）。这会持续 30 秒，但任何时候都可以通过在增益屏幕取消增益来取消。使用 Wiesnbräu啤酒时也会获得耐药性减益，在此减益激活期间无法再次使用它。它可以在十月啤酒节期间于商人以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "9",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ]
+    ],
+    "page_type": "mount",
+    "buff": {
+      "name": "Drunk",
+      "image": "Drunk_(buff).png",
+      "tooltip": "喝醉了"
+    },
+    "wiki_title": "Wiesnbräu啤酒",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "丰饶之角": {
+    "name": "丰饶之角",
+    "image": "Horn_o'_plenty.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "药水工具",
+        "extra": ""
+      },
+      {
+        "label": "恢复生命值",
+        "value": "120",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "它装了无穷的庆祝水果作为礼物。",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "丰饶之角是个在使用时不会被消耗的治疗物品。使用它仍然会引起耐药性，所以在两次使用之间仍然需要等待。它总会掉落自不感恩的火鸡。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "丰饶之角是个在使用时不会被消耗的治疗物品。使用它仍然会引起耐药性，所以在两次使用之间仍然需要等待。它总会掉落自不感恩的火鸡。"
+        }
+      ]
+    ],
+    "wiki_title": "丰饶之角",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "冲击枪": {
+    "name": "冲击枪",
+    "image": "Zapinator.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "50",
+        "extra": "(魔法)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "魔力",
+        "value": "4",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "7",
+        "extra": "（超快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "12",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      }
+    ],
+    "recipe": null,
+    "description": "冲击枪是一种任天堂3DS任天堂3DS版版专有的、困难模式下的魔法武器，射击极为迅速。它有大约1/80 (1.25%)的几率由世纪之花掉落，但确切几率未知。它可迅速射出绿色射弹。它可以被视为太空枪的升级版。\n\n其最佳修饰语是精湛（节约魔力）或神级/恶魔（较高的伤害输出）。由于其低魔力消耗，它无法得到神话修饰语。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "冲击枪是一种任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版专有的、困难模式下的魔法武器，射击极为迅速。它有大约1/80 (1.25%)的几率由世纪之花掉落，但确切几率未知。它可迅速射出绿色射弹。它可以被视为太空枪的升级版。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是精湛（节约魔力）或神级/恶魔（较高的伤害输出）。由于其低魔力消耗，它无法得到神话修饰语。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "绿激光",
+      "image": "Green_Laser_(projectile).png"
+    },
+    "wiki_title": "冲击枪",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "卷心菜": {
+    "name": "卷心菜",
+    "image": "Cabbage.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤宠物豚鼠",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "抓人草",
+              "image": "Dragon_Snatcher.png",
+              "quantity": "1",
+              "chance": "1%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "卷心菜是个宠物召唤物品，召唤一只跟随在玩家左右的宠物豚鼠。如果玩家距离太远，豚鼠会开始飞行以求赶上玩家，在飞行中偶尔会在身后留下白云。\n\n它是龙抓人草的不常见掉落物。它也很罕见地能自宝箱和金箱中得到。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "卷心菜是个宠物召唤物品，召唤一只跟随在玩家左右的宠物豚鼠。如果玩家距离太远，豚鼠会开始飞行以求赶上玩家，在飞行中偶尔会在身后留下白云。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它是龙抓人草的不常见掉落物。它也很罕见地能自宝箱和金箱中得到。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物豚鼠",
+      "image": "Pet_Guinea_Pig.png",
+      "tooltip": "就是可爱"
+    },
+    "pet": {
+      "name": "豚鼠",
+      "image": "Guinea_Pig.png"
+    },
+    "wiki_title": "卷心菜",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "可疑苹果": {
+    "name": "可疑苹果",
+    "image": "Suspicious_Looking_Apple.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "19",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤一个宠物天虫",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "吞世怪",
+              "image": "World_Feeder.png",
+              "quantity": "1",
+              "chance": "45%"
+            },
+            {
+              "name": "吞噬怪",
+              "image": "Devourer.png",
+              "quantity": "1",
+              "chance": "10–30%"
+            },
+            {
+              "name": "巨型蠕虫",
+              "image": "Giant_Worm.png",
+              "quantity": "1",
+              "chance": "20%"
+            },
+            {
+              "name": "挖掘怪",
+              "image": "Digger.png",
+              "quantity": "1",
+              "chance": "40%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "可疑苹果是一个宠物召唤物品，召唤一个会跟随玩家的宠物天虫。当玩家玩家死亡、手动取消或再次使用可疑苹果解除。有时它会出现在宝箱中，并且有 10–30% 的几率掉落自吞噬怪、20% 的几率掉落自巨型蠕虫、40% 的几率掉落自挖掘怪、45% 的几率掉落自吞世怪、~5%验证的几率掉落自世界吞噬怪的一个体节。\n\n宠物天虫是唯一一种会说话的宠物，它会根据特定情况选择对话内容。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "可疑苹果是一个宠物召唤物品，召唤一个会跟随玩家的宠物天虫。当玩家玩家死亡、手动取消或再次使用可疑苹果解除。有时它会出现在宝箱中，并且有 10–30% 的几率掉落自吞噬怪、20% 的几率掉落自巨型蠕虫、40% 的几率掉落自挖掘怪、45% 的几率掉落自吞世怪、~5%验证的几率掉落自世界吞噬怪的一个体节。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "宠物天虫是唯一一种会说话的宠物，它会根据特定情况选择对话内容。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物天虫",
+      "image": "Pet_Worm.png",
+      "tooltip": "不是给鱼吃的"
+    },
+    "pet": {
+      "name": "蠕虫",
+      "image": "Worm_Pet.png"
+    },
+    "wiki_title": "可疑苹果",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "可疑蛋": {
+    "name": "可疑蛋",
+    "image": "Suspicious_Looking_Egg.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "Boss 召唤",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "45",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤天兔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      }
+    ],
+    "recipe": null,
+    "description": "可疑蛋是一个Boss 召唤物品，用于召唤天兔Boss。它掉落自复活节期间的病兔和腐化兔兔，还有天兔自身。\n\n在复活节期间，病兔会像普通兔兔那样在地表生成，但它们具有攻击性并会主动攻击。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "可疑蛋是一个Boss 召唤物品，用于召唤天兔Boss。它掉落自复活节期间的病兔和腐化兔兔，还有天兔自身。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在复活节期间，病兔会像普通兔兔那样在地表生成，但它们具有攻击性并会主动攻击。"
+        }
+      ]
+    ],
+    "wiki_title": "可疑蛋",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "可疑骷髅": {
+    "name": "可疑骷髅",
+    "image": "Suspicious_Looking_Skull.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "Boss 召唤",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "45",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤奥库瑞姆",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "机械骷髅头",
+          "image": "Mechanical_Skull_(old).png"
+        },
+        {
+          "name": "机械魔眼",
+          "image": "Mechanical_Eye_(old).png",
+          "amount": "2"
+        },
+        {
+          "name": "精金锭",
+          "image": "Adamantite_Bar_(old).png",
+          "amount": "10"
+        },
+        {
+          "name": "暗影之魂",
+          "image": "Soul_of_Night_(old).png",
+          "amount": "5"
+        },
+        {
+          "name": "光明之魂",
+          "image": "Soul_of_Light_(old).png",
+          "amount": "5"
+        }
+      ],
+      "result": {
+        "name": "可疑骷髅",
+        "image": "Suspicious_Looking_Skull.png"
+      }
+    },
+    "description": "可疑骷髅是一个Boss 召唤物品，用于召唤前代主机版前代主机版和任天堂3DS任天堂3DS版版独有的Boss奥库瑞姆。和大多数 Boss 一样，不能同时召唤两个奥库瑞姆，试图召唤第二个不会有效果。奥库瑞姆只能在困难模式世界中于夜晚召唤。\n\n可疑骷髅一共需要 20 个光明之魂、6 个晶状体、15 个铁/铅锭、30 个骨头、8 个暗影之魂、和 10 个精金/钛金锭。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "可疑骷髅是一个Boss 召唤物品，用于召唤"
+        },
+        {
+          "type": "icon",
+          "image": "Old-Gen_Console_only.png",
+          "alt": "前代主机版"
+        },
+        {
+          "type": "text",
+          "text": "前代主机版和任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版独有的Boss奥库瑞姆。和大多数 Boss 一样，不能同时召唤两个奥库瑞姆，试图召唤第二个不会有效果。奥库瑞姆只能在困难模式世界中于夜晚召唤。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "可疑骷髅一共需要 20 个光明之魂、6 个晶状体、15 个铁/铅锭、30 个骨头、8 个暗影之魂、和 10 个精金/钛金锭。"
+        }
+      ]
+    ],
+    "wiki_title": "可疑骷髅",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "培养皿": {
+    "name": "培养皿",
+    "image": "Petri_Dish.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "19",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤一只宠物史莱姆",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      }
+    ],
+    "recipe": null,
+    "description": "培养皿是一个宠物召唤物品，生成一个跟在玩家周围的宠物史莱姆。持续到玩家在物品界面盔甲栏的增益图标上按 X 或 X/Square 手动取消、再次使用培养皿或玩家死亡。\n\n它可以在金箱中找到或以 ~3/10 (30%)的几率掉落自暗影史莱姆。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "培养皿是一个宠物召唤物品，生成一个跟在玩家周围的宠物史莱姆。持续到玩家在物品界面盔甲栏的增益图标上按 X 或 X/Square 手动取消、再次使用培养皿或玩家死亡。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它可以在金箱中找到或以 ~3/10 (30%)的几率掉落自暗影史莱姆。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物史莱姆",
+      "image": "Pet_Slime.png",
+      "tooltip": "真正的史莱姆球"
+    },
+    "pet": {
+      "name": "史莱姆",
+      "image": "Slime_Pet.png"
+    },
+    "wiki_title": "培养皿",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "奥丝塔拉之靴": {
+    "name": "奥丝塔拉之靴",
+    "image": "Boots_of_Ostara.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "3",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "裤装",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "润泽泥土，允许穿戴者进行兔子跳",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "奥丝塔拉之靴是一个掉落自天兔Boss的物品。它能给玩家提供3点防御，并使玩家走过的土块长出草。奥丝塔拉之靴还可以允许佩戴者进行“兔子跳”，玩家可以在一系列的跳跃中每次都跳得更高一些，直到达到 16 个物块的最大高度。它在玩家跳跃时会产生绿色粒子特效。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "奥丝塔拉之靴是一个掉落自天兔Boss的物品。它能给玩家提供3点防御，并使玩家走过的土块长出草。奥丝塔拉之靴还可以允许佩戴者进行“兔子跳”，玩家可以在一系列的跳跃中每次都跳得更高一些，直到达到 16 个物块的最大高度。它在玩家跳跃时会产生绿色粒子特效。"
+        }
+      ]
+    ],
+    "wiki_title": "奥丝塔拉之靴",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "女仆帽": {
+    "name": "女仆帽",
+    "image": "Maid_Bonnet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "黑线",
+          "image": "Black_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "女仆帽",
+        "image": "Maid_Bonnet.png"
+      }
+    },
+    "description": "女仆套装是由女仆帽、女仆裙和女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "女仆套装是由女仆帽、女仆裙和女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "女仆帽",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "女仆裙": {
+    "name": "女仆裙",
+    "image": "Maid_Dress.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "黑线",
+          "image": "Black_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "女仆帽",
+        "image": "Maid_Bonnet.png"
+      }
+    },
+    "description": "女仆套装是由女仆帽、女仆裙和女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "女仆套装是由女仆帽、女仆裙和女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "女仆裙",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "女仆鞋": {
+    "name": "女仆鞋",
+    "image": "Maid_Shoes.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "黑线",
+          "image": "Black_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "女仆帽",
+        "image": "Maid_Bonnet.png"
+      }
+    },
+    "description": "女仆套装是由女仆帽、女仆裙和女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "女仆套装是由女仆帽、女仆裙和女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "女仆鞋",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "心箭": {
+    "name": "心箭",
+    "image": "Heart_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "4",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "来自丘比特本人的传奇箭矢，在击中时会使敌怪错愕。",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "50",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "10",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "心箭（Heart Arrow）是一种箭，总会在击中敌怪时造成错愕减益，使其陷入 1.5 秒的停滞状态。任天堂3DS任天堂3DS版版中，它们可以在情人节季节性事件以每支50 CC的价格从商人购入。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "心箭（Heart Arrow）是一种箭，总会在击中敌怪时造成错愕减益，使其陷入 1.5 秒的停滞状态。任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版中，它们可以在情人节季节性事件以每支"
+        },
+        {
+          "type": "coin",
+          "amount": "50",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格从商人购入。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "心箭",
+      "image": "Heart_Arrow.png"
+    },
+    "wiki_title": "心箭",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "情人节戒指": {
+    "name": "情人节戒指",
+    "image": "Valentine_Ring.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "将它送给特别的人！/\n50% 生命再生\n提升跳跃高度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "将它送给特别的人！/\n50% 生命再生\n提升跳跃高度"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "情人节戒指是一个配饰，能增加跳跃高度和 50% 的生命再生，但此效果只在将它丢在地上后被自己或其它玩家捡起才会生效。它可以在情人节季节性事件期间从商人处以1 GC的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "情人节戒指是一个配饰，能增加跳跃高度和 50% 的生命再生，但此效果只在将它丢在地上后被自己或其它玩家捡起才会生效。它可以在情人节季节性事件期间从商人处以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ]
+    ],
+    "wiki_title": "情人节戒指",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "枯萎之魂": {
+    "name": "枯萎之魂",
+    "image": "Soul_of_Blight.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "被感染生物的精华 [原]",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "断钢剑",
+          "image": "Excalibur_(old).png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        },
+        {
+          "name": "精金锭",
+          "image": "Adamantite_Bar_(old).png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "Tizona剑",
+        "image": "Tizona.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "奥库瑞姆",
+              "image": "Ocram.png",
+              "quantity": "15–25  / 5–16",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "枯萎之魂是一种制作材料，由奥库瑞姆，一只独有Boss掉落。它们用于制作独有的武器和盔甲。\n\n在任天堂3DS任天堂3DS版版中，奥库瑞姆平均掉落的枯萎之魂更少。和其他魂不同，它会受重力影响。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "枯萎之魂是一种制作材料，由奥库瑞姆，一只独有Boss掉落。它们用于制作独有的武器和盔甲。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版中，奥库瑞姆平均掉落的枯萎之魂更少。和其他魂不同，它会受重力影响。"
+        }
+      ]
+    ],
+    "wiki_title": "枯萎之魂",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "泰坦头盔": {
+    "name": "泰坦头盔",
+    "image": "Titan_Helmet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "14",
+        "extra": ""
+      },
+      {
+        "label": "奖励",
+        "value": "远程伤害提高15%，5%几率不消耗弹药\n远程暴击率提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "远程伤害提高15%，5%几率不消耗弹药\n远程暴击率提高10%"
+          }
+        ]
+      },
+      {
+        "label": "装备栏位",
+        "value": "头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣头盔",
+          "image": "Hallowed_Helmet_(old).png"
+        },
+        {
+          "name": "钴面具",
+          "image": "Cobalt_Mask_(old).png"
+        },
+        {
+          "name": "秘银帽",
+          "image": "Mythril_Hat_(old).png"
+        },
+        {
+          "name": "精金面具",
+          "image": "Adamantite_Mask_(old).png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "泰坦头盔",
+        "image": "Titan_Helmet.png"
+      }
+    },
+    "description": "泰坦盔甲是一套困难模式远程盔甲套装，由泰坦头盔、泰坦铠甲、和泰坦护腿组成。泰坦盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。\n\n全套泰坦盔甲能提供以下好处：\n\n· +45 防御\n· +30% 远程伤害\n· +20% 远程暴击率\n· +10% 移动速度\n· +48%弹药节约",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "泰坦盔甲是一套困难模式远程盔甲套装，由泰坦头盔、泰坦铠甲、和泰坦护腿组成。泰坦盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "全套泰坦盔甲能提供以下好处："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+45 防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+30% 远程伤害"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+20% 远程暴击率"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+10% 移动速度"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+48%弹药节约"
+        }
+      ]
+    ],
+    "wiki_title": "泰坦头盔",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "泰坦护腿": {
+    "name": "泰坦护腿",
+    "image": "Titan_Leggings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "13",
+        "extra": ""
+      },
+      {
+        "label": "奖励",
+        "value": "移动速度和远程伤害各提高10%\n10%几率不消耗弹药",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "移动速度和远程伤害各提高10%\n10%几率不消耗弹药"
+          }
+        ]
+      },
+      {
+        "label": "装备栏位",
+        "value": "裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣头盔",
+          "image": "Hallowed_Helmet_(old).png"
+        },
+        {
+          "name": "钴面具",
+          "image": "Cobalt_Mask_(old).png"
+        },
+        {
+          "name": "秘银帽",
+          "image": "Mythril_Hat_(old).png"
+        },
+        {
+          "name": "精金面具",
+          "image": "Adamantite_Mask_(old).png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "泰坦头盔",
+        "image": "Titan_Helmet.png"
+      }
+    },
+    "description": "泰坦盔甲是一套困难模式远程盔甲套装，由泰坦头盔、泰坦铠甲、和泰坦护腿组成。泰坦盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。\n\n全套泰坦盔甲能提供以下好处：\n\n· +45 防御\n· +30% 远程伤害\n· +20% 远程暴击率\n· +10% 移动速度\n· +48%弹药节约",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "泰坦盔甲是一套困难模式远程盔甲套装，由泰坦头盔、泰坦铠甲、和泰坦护腿组成。泰坦盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "全套泰坦盔甲能提供以下好处："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+45 防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+30% 远程伤害"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+20% 远程暴击率"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+10% 移动速度"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+48%弹药节约"
+        }
+      ]
+    ],
+    "wiki_title": "泰坦护腿",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "火神弩箭": {
+    "name": "火神弩箭",
+    "image": "Vulcan_Bolt.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "12",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "8.5",
+        "extra": "（很强击退力）"
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "30",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣连弩",
+          "image": "Hallowed_Repeater_(old).png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        },
+        {
+          "name": "精金锭",
+          "image": "Adamantite_Bar_(old).png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "火神连弩",
+        "image": "Vulcan_Repeater.png"
+      }
+    },
+    "description": "火神连弩是一个奥库瑞姆后的困难模式连弩。由火神连弩发射的所有箭都会被转化为特殊的火神弩箭，它们会在碰撞时爆炸，造成范围伤害（类似于狱炎箭）。\n\n其最佳修饰语是虚幻。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "火神连弩是一个奥库瑞姆后的困难模式连弩。由火神连弩发射的所有箭都会被转化为特殊的火神弩箭，它们会在碰撞时爆炸，造成范围伤害（类似于狱炎箭）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是虚幻。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "火神弩箭",
+      "image": "Vulcan_Bolt.png"
+    },
+    "wiki_title": "火神弩箭",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "火神连弩": {
+    "name": "火神连弩",
+    "image": "Vulcan_Repeater.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "56",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2.5",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "17",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "15",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "把任何合适的弹药变成火神弩箭",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣连弩",
+          "image": "Hallowed_Repeater_(old).png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        },
+        {
+          "name": "精金锭",
+          "image": "Adamantite_Bar_(old).png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "火神连弩",
+        "image": "Vulcan_Repeater.png"
+      }
+    },
+    "description": "火神连弩是一个奥库瑞姆后的困难模式连弩。由火神连弩发射的所有箭都会被转化为特殊的火神弩箭，它们会在碰撞时爆炸，造成范围伤害（类似于狱炎箭）。\n\n其最佳修饰语是虚幻。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "火神连弩是一个奥库瑞姆后的困难模式连弩。由火神连弩发射的所有箭都会被转化为特殊的火神弩箭，它们会在碰撞时爆炸，造成范围伤害（类似于狱炎箭）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是虚幻。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "火神弩箭",
+      "image": "Vulcan_Bolt.png"
+    },
+    "wiki_title": "火神连弩",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "火鸡羽毛": {
+    "name": "火鸡羽毛",
+    "image": "Turkey_feather.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤宠物火鸡",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "火鸡羽毛是宠物召唤物品，使用后会召唤一只宠物火鸡。它可在感恩节期间（11 月 1 日–30 日）从商人处以每个10 GC的价格购买。火鸡羽毛可以和诅咒填料一起用来召唤不感恩的火鸡。\n\n要召唤不感恩的火鸡，玩家要先用火鸡羽毛召唤宠物火鸡，然后使用使用诅咒填料。这会让宠物火鸡消失，并消耗掉玩家物品栏中的火鸡羽毛。不感恩的火鸡只能在感恩节期间召唤。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "火鸡羽毛是宠物召唤物品，使用后会召唤一只宠物火鸡。它可在感恩节期间（11 月 1 日–30 日）从商人处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "10",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。火鸡羽毛可以和诅咒填料一起用来召唤不感恩的火鸡。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "要召唤不感恩的火鸡，玩家要先用火鸡羽毛召唤宠物火鸡，然后使用使用诅咒填料。这会让宠物火鸡消失，并消耗掉玩家物品栏中的火鸡羽毛。不感恩的火鸡只能在感恩节期间召唤。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物火鸡",
+      "image": "Pet_Turkey_(buff).png",
+      "tooltip": "个大肉多的土鸡"
+    },
+    "pet": {
+      "name": "宠物火鸡",
+      "image": "Pet_Turkey.png"
+    },
+    "wiki_title": "火鸡羽毛",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "灵能头饰": {
+    "name": "灵能头饰",
+    "image": "Spectral_Headgear.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "奖励",
+        "value": "最大魔力提高120\n魔法伤害和魔法暴击率各提高15%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "最大魔力提高120\n魔法伤害和魔法暴击率各提高15%"
+          }
+        ]
+      },
+      {
+        "label": "装备栏位",
+        "value": "头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣头饰",
+          "image": "Hallowed_Headgear_(old).png"
+        },
+        {
+          "name": "钴帽",
+          "image": "Cobalt_Hat_(old).png"
+        },
+        {
+          "name": "秘银兜帽",
+          "image": "Mythril_Hood_(old).png"
+        },
+        {
+          "name": "精金头饰",
+          "image": "Adamantite_Headgear_(old).png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "灵能头饰",
+        "image": "Spectral_Headgear.png"
+      }
+    },
+    "description": "灵能盔甲是一套困难模式魔法盔甲套装，由灵能头饰、灵能盔甲、和灵能衬裤组成。灵能盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。\n\n全套灵能盔甲能提供以下好处：\n\n· +40 防御\n· +150 最大魔力\n· +30% 魔法伤害\n· +25% 魔法暴击率\n· -33% 魔力消耗\n· +10% 移动速度",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "灵能盔甲是一套困难模式魔法盔甲套装，由灵能头饰、灵能盔甲、和灵能衬裤组成。灵能盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "全套灵能盔甲能提供以下好处："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+40 防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+150 最大魔力"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+30% 魔法伤害"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+25% 魔法暴击率"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "-33% 魔力消耗"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+10% 移动速度"
+        }
+      ]
+    ],
+    "wiki_title": "灵能头饰",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "灵能箭": {
+    "name": "灵能箭",
+    "image": "Spectral_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "16",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "0.5",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "18",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "熔火之怒",
+          "image": "Molten_Fury_(old).png",
+          "amount": "2"
+        },
+        {
+          "name": "狱石锭",
+          "image": "Hellstone_Bar_(old).png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "Sharanga弓",
+        "image": "Sharanga.png"
+      }
+    },
+    "description": "Sharanga弓是一个困难模式之前的弓。发射时，它会将任何类型的箭转化为灵能箭。灵能箭会产生发光效果并造成诅咒狱火减益。\n\n其最佳修饰语是虚幻。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Sharanga弓是一个困难模式之前的弓。发射时，它会将任何类型的箭转化为灵能箭。灵能箭会产生发光效果并造成诅咒狱火减益。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是虚幻。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "灵能箭",
+      "image": "Spectral_Arrow.png"
+    },
+    "wiki_title": "灵能箭",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "狼牙": {
+    "name": "狼牙",
+    "image": "Wolf_Fang.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤一只宠物狼人",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "狼人",
+              "image": "Werewolf.gif",
+              "quantity": "1",
+              "chance": "1.5%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "狼人",
+              "image": "Werewolf.gif",
+              "quantity": "1",
+              "chance": "1.5%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "狼人",
+              "image": "Werewolf.gif",
+              "quantity": "1",
+              "chance": "1.5%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "狼牙是个宠物召唤物品，使用时会召唤一个狼人宠物跟随玩家。狼人宠物会对接触他的敌怪造成大约 10 点接触伤害。除非主动取消其提供的增益或重新选择一个宠物，否则他将不会消失。狼牙有3/500 (0.6%)的概率掉落自狼人或在金箱中找到。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "狼牙是个宠物召唤物品，使用时会召唤一个狼人宠物跟随玩家。狼人宠物会对接触他的敌怪造成大约 10 点接触伤害。除非主动取消其提供的增益或重新选择一个宠物，否则他将不会消失。狼牙有3/500 (0.6%)的概率掉落自狼人或在金箱中找到。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物狼人",
+      "image": "Pet_Werewolf.png",
+      "tooltip": "人类最好的朋友"
+    },
+    "pet": {
+      "name": "狼人",
+      "image": "Werewolf_Pet.png"
+    },
+    "wiki_title": "狼牙",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "黑线": {
+    "name": "黑线",
+    "image": "Black_Thread_(old).png",
+    "stats": [],
+    "recipe": {
+      "station": "放置的瓶子",
+      "ingredients": [
+        {
+          "name": "蘑菇草种子",
+          "image": "Mushroom_Grass_Seeds.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "白线",
+        "image": "White_Thread.png"
+      }
+    },
+    "description": "There are two exclusive threads:\n\n· Purple Threadis crafted. It replaces Green Thread.\n· White Threadis crafted, and is only available in the日本主机版日本主机版. White Thread replaces Green Thread in all日本主机版日本主机版crafting recipes. The Japanese任天堂3DS任天堂3DS版版has Purple Thread as in the US.",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "There are two exclusive threads:"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "Purple Threadis crafted. It replaces Green Thread."
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "White Threadis crafted, and is only available in the"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版. White Thread replaces Green Thread in all"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版crafting recipes. The Japanese任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版has Purple Thread as in the US."
+        }
+      ]
+    ],
+    "wiki_title": "白线",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "碎心": {
+    "name": "碎心",
+    "image": "Broken_Heart.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤宠物丘比特",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      }
+    ],
+    "recipe": null,
+    "description": "碎心是一个宠物召唤物品，使用时会生成一个丘比特宠物。在情人节季节性事件期挖掘宝石时，将会有1/12 (8.33%)的几率掉落碎心。验证\n\n丘比特会飞在玩家周围，并且会发光。不像其他任天堂3DS任天堂3DS版版独有的宠物，它不能攻击敌怪。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "碎心是一个宠物召唤物品，使用时会生成一个丘比特宠物。在情人节季节性事件期挖掘宝石时，将会有1/12 (8.33%)的几率掉落碎心。验证"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "丘比特会飞在玩家周围，并且会发光。不像其他任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版独有的宠物，它不能攻击敌怪。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物丘比特",
+      "image": "Pet_Cupid.png",
+      "tooltip": "爱上爱情"
+    },
+    "pet": {
+      "name": "丘比特",
+      "image": "Cupid.png"
+    },
+    "wiki_title": "碎心",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "神圣手榴弹": {
+    "name": "神圣手榴弹",
+    "image": "Holy_Hand_Grenade.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "600",
+        "extra": ""
+      },
+      {
+        "label": "击退",
+        "value": "?",
+        "extra": ""
+      },
+      {
+        "label": "可消耗",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "50",
+        "extra": "（极慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "4",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "上帝选择的武器",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "雷管",
+          "image": "Dynamite_(old).png",
+          "amount": "5"
+        },
+        {
+          "name": "金锭",
+          "image": "Gold_Bar_(old).png",
+          "amount": "2"
+        },
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water_(old).png"
+        }
+      ],
+      "result": {
+        "name": "神圣手榴弹",
+        "image": "Holy_Hand_Grenade.png"
+      }
+    },
+    "description": "神圣手榴弹是一种投掷爆炸物。它是雷管的升级版本，有其两倍的爆炸范围。它会破坏除了防爆物体以外的物块和物品。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "神圣手榴弹是一种投掷爆炸物。它是雷管的升级版本，有其两倍的爆炸范围。它会破坏除了防爆物体以外的物块和物品。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "神圣手榴弹",
+      "image": "Holy_Hand_Grenade.png"
+    },
+    "wiki_title": "神圣手榴弹",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "粉女仆帽": {
+    "name": "粉女仆帽",
+    "image": "Pink_Maid_Bonnet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "粉线",
+          "image": "Pink_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "粉女仆帽",
+        "image": "Pink_Maid_Bonnet.png"
+      }
+    },
+    "description": "粉女仆套装是由粉女仆帽、粉女仆裙和粉女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "粉女仆套装是由粉女仆帽、粉女仆裙和粉女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "粉女仆帽",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "粉女仆裙": {
+    "name": "粉女仆裙",
+    "image": "Pink_Maid_Dress.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "粉线",
+          "image": "Pink_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "粉女仆帽",
+        "image": "Pink_Maid_Bonnet.png"
+      }
+    },
+    "description": "粉女仆套装是由粉女仆帽、粉女仆裙和粉女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "粉女仆套装是由粉女仆帽、粉女仆裙和粉女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "粉女仆裙",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "粉女仆鞋": {
+    "name": "粉女仆鞋",
+    "image": "Pink_Maid_Shoes.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "粉线",
+          "image": "Pink_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "粉女仆帽",
+        "image": "Pink_Maid_Bonnet.png"
+      }
+    },
+    "description": "粉女仆套装是由粉女仆帽、粉女仆裙和粉女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "粉女仆套装是由粉女仆帽、粉女仆裙和粉女仆鞋组成的时装套装。这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "粉女仆鞋",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "粉线": {
+    "name": "粉线",
+    "image": "Pink_Thread.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作材料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子",
+      "ingredients": [
+        {
+          "name": "蘑菇草种子",
+          "image": "Mushroom_Grass_Seeds.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "白线",
+        "image": "White_Thread.png"
+      }
+    },
+    "description": "线是一类用于制作时装物品的制作材料。\n\n· 黑线和粉线购买自服装商。\n· 绿线(电脑版、主机版、和移动版)和紫线(前代主机版、和3DS版)是制作而成的。\n· 白线是制作而成的，仅在日本主机版日本主机版上可用。在所有日本主机版日本主机版的制作配方中，白线均取代了绿线。在日本和美国的任天堂3DS任天堂3DS版版中存在紫线。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "线是一类用于制作时装物品的制作材料。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "黑线和粉线购买自服装商。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "绿线(电脑版、主机版、和移动版)和紫线(前代主机版、和3DS版)是制作而成的。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "白线是制作而成的，仅在"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版上可用。在所有"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版的制作配方中，白线均取代了绿线。在日本和美国的任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版中存在紫线。"
+        }
+      ]
+    ],
+    "wiki_title": "粉线",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "紫线": {
+    "name": "紫线",
+    "image": "Purple_Thread.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作材料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "4",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子",
+      "ingredients": [
+        {
+          "name": "蘑菇草种子",
+          "image": "Mushroom_Grass_Seeds.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "白线",
+        "image": "White_Thread.png"
+      }
+    },
+    "description": "There are two exclusive threads:\n\n· Purple Threadis crafted. It replaces Green Thread.\n· White Threadis crafted, and is only available in the日本主机版日本主机版. White Thread replaces Green Thread in all日本主机版日本主机版crafting recipes. The Japanese任天堂3DS任天堂3DS版版has Purple Thread as in the US.",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "There are two exclusive threads:"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "Purple Threadis crafted. It replaces Green Thread."
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "White Threadis crafted, and is only available in the"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版. White Thread replaces Green Thread in all"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版crafting recipes. The Japanese任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版has Purple Thread as in the US."
+        }
+      ]
+    ],
+    "wiki_title": "紫线",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "绿线": {
+    "name": "绿线",
+    "image": "Green_Thread.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作材料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "4",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "放置的瓶子",
+      "ingredients": [
+        {
+          "name": "蘑菇草种子",
+          "image": "Mushroom_Grass_Seeds.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "白线",
+        "image": "White_Thread.png"
+      }
+    },
+    "description": "线是一类用于制作时装物品的制作材料。\n\n· 黑线和粉线购买自服装商。\n· 绿线(电脑版、主机版、和移动版)和紫线(前代主机版、和3DS版)是制作而成的。\n· 白线是制作而成的，仅在日本主机版日本主机版上可用。在所有日本主机版日本主机版的制作配方中，白线均取代了绿线。在日本和美国的任天堂3DS任天堂3DS版版中存在紫线。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "线是一类用于制作时装物品的制作材料。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "黑线和粉线购买自服装商。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "绿线(电脑版、主机版、和移动版)和紫线(前代主机版、和3DS版)是制作而成的。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "白线是制作而成的，仅在"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版上可用。在所有"
+        },
+        {
+          "type": "icon",
+          "image": "Flag_jp.svg",
+          "alt": "日本主机版"
+        },
+        {
+          "type": "text",
+          "text": "日本主机版的制作配方中，白线均取代了绿线。在日本和美国的任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版中存在紫线。"
+        }
+      ]
+    ],
+    "wiki_title": "绿线",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "罗马焰火筒": {
+    "name": "罗马焰火筒",
+    "image": "Roman_candle.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "10",
+        "extra": "(魔法)"
+      },
+      {
+        "label": "击退",
+        "value": "5",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "魔力",
+        "value": "5",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "礼花！",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "罗马焰火筒是一种魔法武器，发射可变色的小焰火。在相当短的范围内，它分解为三个独立的烟花，每个烟花都爆炸成三股色彩流。罗马焰火筒可在圣诞节期间以5 GC于爆破专家处购买。\n\n罗马焰火筒不能重铸，因此也无法拥有修饰语。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "罗马焰火筒是一种魔法武器，发射可变色的小焰火。在相当短的范围内，它分解为三个独立的烟花，每个烟花都爆炸成三股色彩流。罗马焰火筒可在圣诞节期间以"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "于爆破专家处购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "罗马焰火筒不能重铸，因此也无法拥有修饰语。"
+        }
+      ]
+    ],
+    "wiki_title": "罗马焰火筒",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "老手杖": {
+    "name": "老手杖",
+    "image": "Old_Walking_Stick.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤宠物老太太",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "pc",
+            "amount": "1",
+            "image": "Platinum_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "老手杖是一个宠物召唤物品，生成一个跟在玩家周围的宠物老太太。如果玩家越过老太太，她将飞在玩家身后，直到它再度靠近玩家，这时，她将再次开始行走。老手杖能够以1 PC的价格购买自服装商。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "老手杖是一个宠物召唤物品，生成一个跟在玩家周围的宠物老太太。如果玩家越过老太太，她将飞在玩家身后，直到它再度靠近玩家，这时，她将再次开始行走。老手杖能够以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "pc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买自服装商。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物老太太",
+      "image": "Pet_Old_Lady.png",
+      "tooltip": "不要以貌取人"
+    },
+    "pet": {
+      "name": "老太太",
+      "image": "Old_Lady_Pet.png"
+    },
+    "wiki_title": "老手杖",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "脑子": {
+    "name": "脑子",
+    "image": "Brain.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤一只宠物僵尸",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "75%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "75%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "75%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "脑子是一个宠物召唤物品，生成一个跟在玩家周围的宠物僵尸。它会提供宠物僵尸增益，直至玩家取消或死亡。宠物僵尸会对所接触的敌怪、小动物或 PvP 中的其他玩家造成 6-7 点伤害。\n\n脑子以3/4 (75%)的几率掉落自僵尸新郎。同时它也可以在金箱，丛林蜥蜴箱与暗影箱中被发现。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "脑子是一个宠物召唤物品，生成一个跟在玩家周围的宠物僵尸。它会提供宠物僵尸增益，直至玩家取消或死亡。宠物僵尸会对所接触的敌怪、小动物或 PvP 中的其他玩家造成 6-7 点伤害。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "脑子以3/4 (75%)的几率掉落自僵尸新郎。同时它也可以在金箱，丛林蜥蜴箱与暗影箱中被发现。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物僵尸",
+      "image": "Pet_Zombie.png",
+      "tooltip": "吃脑子"
+    },
+    "pet": {
+      "name": "僵尸",
+      "image": "Zombie_Pet.png"
+    },
+    "wiki_title": "脑子",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "节日大礼帽": {
+    "name": "节日大礼帽",
+    "image": "Festive_Top_Hat.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "因为任何事都没有节日重要！",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "节日大礼帽是一种时装物品，圣诞节期间以1 GC购买自服装商。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "节日大礼帽是一种时装物品，圣诞节期间以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "购买自服装商。"
+        }
+      ]
+    ],
+    "wiki_title": "节日大礼帽",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "节日装饰品": {
+    "name": "节日装饰品",
+    "image": "Holiday_Bauble.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤宠物 Elfa",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      }
+    ],
+    "recipe": null,
+    "description": "节日装饰品是一个宠物召唤物品，会生成一个跟随在玩家附近的Elfa。Elfa 会以极快的频率对所有接触到的敌怪造成 1 伤害。然而 Elfa 并不会追逐敌怪。它可以通过在圣诞节季节性事件期间砍倒树获得。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "节日装饰品是一个宠物召唤物品，会生成一个跟随在玩家附近的Elfa。Elfa 会以极快的频率对所有接触到的敌怪造成 1 伤害。然而 Elfa 并不会追逐敌怪。它可以通过在圣诞节季节性事件期间砍倒树获得。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物 Elfa",
+      "image": "Pet_Elfa.png",
+      "tooltip": "特殊的小精灵"
+    },
+    "pet": {
+      "name": "Elfa",
+      "image": "Elfa.png"
+    },
+    "wiki_title": "节日装饰品",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "英雄帽": {
+    "name": "英雄帽",
+    "image": "Hero's_Hat.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "绿线",
+          "image": "Green_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "英雄帽",
+        "image": "Hero's_Hat.png"
+      }
+    },
+    "description": "英雄套装是一套时装物品，由英雄帽、英雄衣和英雄裤组成。为了制作出整个套装，一共需要 420 个蛛网和 27 个丛林草种子作为基础材料。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "英雄套装是一套时装物品，由英雄帽、英雄衣和英雄裤组成。为了制作出整个套装，一共需要 420 个蛛网和 27 个丛林草种子作为基础材料。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "英雄帽",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "英雄衣": {
+    "name": "英雄衣",
+    "image": "Hero's_Shirt.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "绿线",
+          "image": "Green_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "英雄帽",
+        "image": "Hero's_Hat.png"
+      }
+    },
+    "description": "英雄套装是一套时装物品，由英雄帽、英雄衣和英雄裤组成。为了制作出整个套装，一共需要 420 个蛛网和 27 个丛林草种子作为基础材料。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "英雄套装是一套时装物品，由英雄帽、英雄衣和英雄裤组成。为了制作出整个套装，一共需要 420 个蛛网和 27 个丛林草种子作为基础材料。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "英雄衣",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "英雄裤": {
+    "name": "英雄裤",
+    "image": "Hero's_Pants.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "绿线",
+          "image": "Green_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "英雄帽",
+        "image": "Hero's_Hat.png"
+      }
+    },
+    "description": "英雄套装是一套时装物品，由英雄帽、英雄衣和英雄裤组成。为了制作出整个套装，一共需要 420 个蛛网和 27 个丛林草种子作为基础材料。\n\n这些物品应当装备于社交栏，因为它们仅提供外观效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "英雄套装是一套时装物品，由英雄帽、英雄衣和英雄裤组成。为了制作出整个套装，一共需要 420 个蛛网和 27 个丛林草种子作为基础材料。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ]
+    ],
+    "wiki_title": "英雄裤",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "蛋炮": {
+    "name": "蛋炮",
+    "image": "Egg_Cannon.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "16",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "0.5",
+        "extra": "（极弱击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "要杀死哥布林，你需要打破好几个蛋。",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "蛋炮是一种远程武器，有 50% 几率掉落自天兔。它用子弹作为弹药，但发射外观类似于可疑蛋的射弹。因此，像诅咒弹之类的子弹对生成的射弹没有影响。\n\n蛋在撞击时有小几率生成兔兔（在血月时是腐化兔兔）或鸟。它们也受重力影响（无论弹药），但可以行进很长距离。\n\n蛋炮不能重铸，因此也无法拥有修饰语。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "蛋炮是一种远程武器，有 50% 几率掉落自天兔。它用子弹作为弹药，但发射外观类似于可疑蛋的射弹。因此，像诅咒弹之类的子弹对生成的射弹没有影响。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "蛋在撞击时有小几率生成兔兔（在血月时是腐化兔兔）或鸟。它们也受重力影响（无论弹药），但可以行进很长距离。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "蛋炮不能重铸，因此也无法拥有修饰语。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "蛋",
+      "image": "Suspicious_Looking_Egg.png"
+    },
+    "wiki_title": "蛋炮",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "蜜蜡": {
+    "name": "蜜蜡",
+    "image": "Beeswax.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤宠物土蜂",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      }
+    ],
+    "recipe": null,
+    "description": "蜜蜡是一个宠物召唤物品，生成一只跟随玩家的宠物土蜂。一直持续直到玩家通过选择增益菜单中此增益的图标来手工取消或者玩家死亡。宠物土蜂如果接触到敌怪，将对其造成 1–5 伤害，但它并不会追逐敌怪。距离过远时宠物土蜂不会传送到玩家身边。\n\n蜜蜡以1/10 (10%)的几率掉落自龙黄蜂。它也很罕见地能自地下丛林内的金箱和常春藤箱中获得。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "蜜蜡是一个宠物召唤物品，生成一只跟随玩家的宠物土蜂。一直持续直到玩家通过选择增益菜单中此增益的图标来手工取消或者玩家死亡。宠物土蜂如果接触到敌怪，将对其造成 1–5 伤害，但它并不会追逐敌怪。距离过远时宠物土蜂不会传送到玩家身边。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "蜜蜡以1/10 (10%)的几率掉落自龙黄蜂。它也很罕见地能自地下丛林内的金箱和常春藤箱中获得。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物土蜂",
+      "image": "Pet_Tiphia.png",
+      "tooltip": "想要所有的蜂蜜"
+    },
+    "pet": {
+      "name": "土蜂",
+      "image": "Tiphia.png"
+    },
+    "wiki_title": "蜜蜡",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "蜻蛉切": {
+    "name": "蜻蛉切",
+    "image": "Tonbogiri.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "50",
+        "extra": "(近战)"
+      },
+      {
+        "label": "击退",
+        "value": "6.5",
+        "extra": "（较强击退力）"
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "5.6",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "一把涂满了毒液的日本传说长矛",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "40",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "永恒之枪",
+          "image": "Gungnir_(old).png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        },
+        {
+          "name": "精金锭",
+          "image": "Adamantite_Bar_(old).png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "蜻蛉切",
+        "image": "Tonbogiri.png"
+      }
+    },
+    "description": "蜻蛉切是一种困难模式长矛。它有小几率对敌人造成中毒减益，是一把与Tizona剑相同阶段的武器。\n\n其最佳修饰语是神级或恶魔。这两个修饰语对平均伤害输出的提高量是相同的。\n\n在主机版主机版和移动版移动版中，蜻蛉切在升级至对应于1.3.0.1的版本后被替换为叶绿镋。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "蜻蛉切是一种困难模式长矛。它有小几率对敌人造成中毒减益，是一把与Tizona剑相同阶段的武器。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是神级或恶魔。这两个修饰语对平均伤害输出的提高量是相同的。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，蜻蛉切在升级至对应于1.3.0.1的版本后被替换为叶绿镋。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "蜻蛉切",
+      "image": "Tonbogiri_(projectile).png"
+    },
+    "wiki_title": "蜻蛉切",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "血液瓶": {
+    "name": "血液瓶",
+    "image": "Vial_of_Blood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "宠物召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤一只宠物蝙蝠",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      }
+    ],
+    "recipe": null,
+    "description": "血液瓶是一个宠物召唤物品，使用时会生成一个宠物蝙蝠。宠物蝙蝠飞在玩家周围，会对所有接触到的敌怪造成 2–4 伤害并且可以穿过所有物块。但玩家浸没在水中时，宠物蝙蝠会和其他类型的蝙蝠一样飞在水面上。当宠物蝙蝠离玩家过远时，它将会飞回来而不是后面带云地射回来。\n\n血液瓶以1/10 (10%)掉落自吸血鬼矿工。它也可以罕见地出现在金箱和常春藤箱中。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "血液瓶是一个宠物召唤物品，使用时会生成一个宠物蝙蝠。宠物蝙蝠飞在玩家周围，会对所有接触到的敌怪造成 2–4 伤害并且可以穿过所有物块。但玩家浸没在水中时，宠物蝙蝠会和其他类型的蝙蝠一样飞在水面上。当宠物蝙蝠离玩家过远时，它将会飞回来而不是后面带云地射回来。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "血液瓶以1/10 (10%)掉落自吸血鬼矿工。它也可以罕见地出现在金箱和常春藤箱中。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "宠物蝙蝠",
+      "image": "Pet_Bat.png",
+      "tooltip": "渴求血液"
+    },
+    "pet": {
+      "name": "蝙蝠",
+      "image": "Bat_Pet.png"
+    },
+    "wiki_title": "血液瓶",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "西装衣": {
+    "name": "西装衣",
+    "image": "Tuxedo_Shirt.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "黑线",
+          "image": "Black_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "西装衣",
+        "image": "Tuxedo_Shirt.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "90%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "90%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "90%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "西装套装是一套时装套装，由高顶礼帽、西装衣和西装裤组成。这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\n套装里的两件是制作而成的，但高顶礼帽却是由僵尸新郎掉落的。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "西装套装是一套时装套装，由高顶礼帽、西装衣和西装裤组成。这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "套装里的两件是制作而成的，但高顶礼帽却是由僵尸新郎掉落的。"
+        }
+      ]
+    ],
+    "wiki_title": "西装衣",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "西装裤": {
+    "name": "西装裤",
+    "image": "Tuxedo_Pants.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "10",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "黑线",
+          "image": "Black_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "西装衣",
+        "image": "Tuxedo_Shirt.png"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "90%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "90%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "僵尸新郎",
+              "image": "The_Groom.gif",
+              "quantity": "1",
+              "chance": "90%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "西装套装是一套时装套装，由高顶礼帽、西装衣和西装裤组成。这些物品应当装备于社交栏，因为它们仅提供外观效果。\n\n套装里的两件是制作而成的，但高顶礼帽却是由僵尸新郎掉落的。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "西装套装是一套时装套装，由高顶礼帽、西装衣和西装裤组成。这些物品应当装备于社交栏，因为它们仅提供外观效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "套装里的两件是制作而成的，但高顶礼帽却是由僵尸新郎掉落的。"
+        }
+      ]
+    ],
+    "wiki_title": "西装裤",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "诅咒填料": {
+    "name": "诅咒填料",
+    "image": "Cursed_stuffing.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "Boss 召唤",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "45",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "它散发着恶毒的能量",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      }
+    ],
+    "recipe": null,
+    "description": "诅咒填料是一种Boss 召唤物品，用于召唤不感恩的火鸡Boss。在感恩节（11月 1 日 – 30 日）期间，它有1/7 (14.29%)几率掉落自所有敌怪。\n\n要召唤不感恩的火鸡，玩家要先用火鸡羽毛召唤宠物火鸡，然后使用使用诅咒填料。召唤行为会让宠物火鸡消失，并消耗掉玩家物品栏中的火鸡羽毛。不感恩的火鸡只能在感恩节期间召唤。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "诅咒填料是一种Boss 召唤物品，用于召唤不感恩的火鸡Boss。在感恩节（11月 1 日 – 30 日）期间，它有1/7 (14.29%)几率掉落自所有敌怪。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "要召唤不感恩的火鸡，玩家要先用火鸡羽毛召唤宠物火鸡，然后使用使用诅咒填料。召唤行为会让宠物火鸡消失，并消耗掉玩家物品栏中的火鸡羽毛。不感恩的火鸡只能在感恩节期间召唤。"
+        }
+      ]
+    ],
+    "wiki_title": "诅咒填料",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "超级英雄服装": {
+    "name": "超级英雄服装",
+    "image": "Superhero_Costume.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "绿线",
+          "image": "Green_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "超级英雄服装",
+        "image": "Superhero_Costume.png"
+      }
+    },
+    "description": "超级英雄套装是由超级英雄面具、超级英雄服装、和超级英雄紧身裤组成的时装套装。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "超级英雄套装是由超级英雄面具、超级英雄服装、和超级英雄紧身裤组成的时装套装。"
+        }
+      ]
+    ],
+    "wiki_title": "超级英雄服装",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "超级英雄紧身裤": {
+    "name": "超级英雄紧身裤",
+    "image": "Superhero_Tights.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "绿线",
+          "image": "Green_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "超级英雄服装",
+        "image": "Superhero_Costume.png"
+      }
+    },
+    "description": "超级英雄套装是由超级英雄面具、超级英雄服装、和超级英雄紧身裤组成的时装套装。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "超级英雄套装是由超级英雄面具、超级英雄服装、和超级英雄紧身裤组成的时装套装。"
+        }
+      ]
+    ],
+    "wiki_title": "超级英雄紧身裤",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "超级英雄面具": {
+    "name": "超级英雄面具",
+    "image": "Superhero_Mask.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "时装",
+        "extra": ""
+      },
+      {
+        "label": "装备栏位",
+        "value": "社交头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "织布机",
+      "ingredients": [
+        {
+          "name": "丝绸",
+          "image": "Silk.png",
+          "amount": "20"
+        },
+        {
+          "name": "绿线",
+          "image": "Green_Thread.png",
+          "amount": "3"
+        }
+      ],
+      "result": {
+        "name": "超级英雄服装",
+        "image": "Superhero_Costume.png"
+      }
+    },
+    "description": "超级英雄套装是由超级英雄面具、超级英雄服装、和超级英雄紧身裤组成的时装套装。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "超级英雄套装是由超级英雄面具、超级英雄服装、和超级英雄紧身裤组成的时装套装。"
+        }
+      ]
+    ],
+    "wiki_title": "超级英雄面具",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "龙护胫": {
+    "name": "龙护胫",
+    "image": "Dragon_Greaves.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "14",
+        "extra": ""
+      },
+      {
+        "label": "奖励",
+        "value": "移动速度提高12%\n近战速度提高2%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "移动速度提高12%\n近战速度提高2%"
+          }
+        ]
+      },
+      {
+        "label": "装备栏位",
+        "value": "裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣护胫",
+          "image": "Hallowed_Greaves_(old).png"
+        },
+        {
+          "name": "钴护腿",
+          "image": "Cobalt_Leggings_(old).png"
+        },
+        {
+          "name": "秘银护胫",
+          "image": "Mythril_Greaves_(old).png"
+        },
+        {
+          "name": "精金护腿",
+          "image": "Adamantite_Leggings_(old).png"
+        },
+        {
+          "name": "力量之魂",
+          "image": "Soul_of_Might_(old).png",
+          "amount": "15"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "龙护胫",
+        "image": "Dragon_Greaves.png"
+      }
+    },
+    "description": "龙盔甲是一套困难模式近战盔甲套装，由龙面具、龙胸甲、和龙护胫组成。龙盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。\n\n全套龙盔甲能提供以下好处：\n\n· +60 防御\n· +20% 近战伤害\n· +15% 暴击率\n· +38% 近战速度\n· +35% 移动速度\n\n此外，若全套套装可见，玩家会具有残影效果，类似于死灵盔甲。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "龙盔甲是一套困难模式近战盔甲套装，由龙面具、龙胸甲、和龙护胫组成。龙盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "全套龙盔甲能提供以下好处："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+60 防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+20% 近战伤害"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+15% 暴击率"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+38% 近战速度"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+35% 移动速度"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "此外，若全套套装可见，玩家会具有残影效果，类似于死灵盔甲。"
+        }
+      ]
+    ],
+    "wiki_title": "龙护胫",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "PlayStation 3": {
+    "name": "PlayStation 3",
+    "image": "Playstation_4.svg",
+    "stats": [],
+    "recipe": null,
+    "wiki_title": "PlayStation 3",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "Wii U": {
+    "name": "Wii U",
+    "image": "Wii_U_icon.svg",
+    "stats": [],
+    "recipe": null,
+    "wiki_title": "Wii U",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（Boss 1）": {
+    "name": "八音盒（Boss 1）",
+    "image": "Music_Box_(Boss_1).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（Boss 1）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（Boss 2）": {
+    "name": "八音盒（Boss 2）",
+    "image": "Music_Box_(Boss_2).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（Boss 2）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（Boss 3）": {
+    "name": "八音盒（Boss 3）",
+    "image": "Music_Box_(Boss_3).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（Boss 3）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（Boss 4）": {
+    "name": "八音盒（Boss 4）",
+    "image": "Music_Box_(Boss_4).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（Boss 4）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（Boss 5）": {
+    "name": "八音盒（Boss 5）",
+    "image": "Music_Box_(Boss_5).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（Boss 5）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（丛林夜晚）": {
+    "name": "八音盒（丛林夜晚）",
+    "image": "Music_Box_(Jungle_Night).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（丛林夜晚）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（丛林）": {
+    "name": "八音盒（丛林）",
+    "image": "Music_Box_(Jungle).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（丛林）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（光之女皇）": {
+    "name": "八音盒（光之女皇）",
+    "image": "Music_Box_(Empress_Of_Light).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（光之女皇）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（冰雪）": {
+    "name": "八音盒（冰雪）",
+    "image": "Music_Box_(Ice).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（冰雪）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（史莱姆皇后）": {
+    "name": "八音盒（史莱姆皇后）",
+    "image": "Music_Box_(Queen_Slime).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（史莱姆皇后）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（史莱姆雨）": {
+    "name": "八音盒（史莱姆雨）",
+    "image": "Music_Box_(Slime_Rain).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（史莱姆雨）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（地下丛林）": {
+    "name": "八音盒（地下丛林）",
+    "image": "Music_Box_(Underground_Jungle).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（地下丛林）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（地下沙漠）": {
+    "name": "八音盒（地下沙漠）",
+    "image": "Music_Box_(Underground_Desert).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（地下沙漠）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（地下神圣之地）": {
+    "name": "八音盒（地下神圣之地）",
+    "image": "Music_Box_(Underground_Hallow).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（地下神圣之地）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（地下腐化之地）": {
+    "name": "八音盒（地下腐化之地）",
+    "image": "Music_Box_(Underground_Corruption).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（地下腐化之地）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（地下）": {
+    "name": "八音盒（地下）",
+    "image": "Music_Box_(Underground).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（地下）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（地表世界）": {
+    "name": "八音盒（地表世界）",
+    "image": "Music_Box_(Overworld_Day).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（地表世界）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（城镇夜晚）": {
+    "name": "八音盒（城镇夜晚）",
+    "image": "Music_Box_(Town_Night).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（城镇夜晚）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（城镇白天）": {
+    "name": "八音盒（城镇白天）",
+    "image": "Music_Box_(Town_Day).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（城镇白天）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（墓地）": {
+    "name": "八音盒（墓地）",
+    "image": "Music_Box_(Graveyard).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（墓地）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（夜间）": {
+    "name": "八音盒（夜间）",
+    "image": "Music_Box_(Night).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（夜间）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（大风天）": {
+    "name": "八音盒（大风天）",
+    "image": "Music_Box_(Windy_Day).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（大风天）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（太空白天）": {
+    "name": "八音盒（太空白天）",
+    "image": "Music_Box_(Space_Day).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（太空白天）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（太空）": {
+    "name": "八音盒（太空）",
+    "image": "Music_Box_(Space)_(pre-1.2.3).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（太空）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（恐惧）": {
+    "name": "八音盒（恐惧）",
+    "image": "Music_Box_(Eerie).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（恐惧）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（教程）": {
+    "name": "八音盒（教程）",
+    "image": "Music_Box_(Tutorial).png",
+    "stats": [],
+    "recipe": null,
+    "wiki_title": "八音盒（教程）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（晨雨）": {
+    "name": "八音盒（晨雨）",
+    "image": "Music_Box_(Morning_Rain).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（晨雨）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（暴风雨）": {
+    "name": "八音盒（暴风雨）",
+    "image": "Music_Box_(Storm).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（暴风雨）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（沙漠）": {
+    "name": "八音盒（沙漠）",
+    "image": "Music_Box_(Desert).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（沙漠）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（海洋夜晚）": {
+    "name": "八音盒（海洋夜晚）",
+    "image": "Music_Box_(Ocean_Night).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（海洋夜晚）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（海洋）": {
+    "name": "八音盒（海洋）",
+    "image": "Music_Box_(Ocean)_(pre-1.2.3).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（海洋）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（猪龙鱼公爵）": {
+    "name": "八音盒（猪龙鱼公爵）",
+    "image": "Music_Box_(Duke_Fishron).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（猪龙鱼公爵）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（神圣之地）": {
+    "name": "八音盒（神圣之地）",
+    "image": "Music_Box_(The_Hallow).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（神圣之地）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（腐化之地）": {
+    "name": "八音盒（腐化之地）",
+    "image": "Music_Box_(Corruption).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（腐化之地）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "八音盒（雪原）": {
+    "name": "八音盒（雪原）",
+    "image": "Music_Box_(Snow).png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰家具机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "有机会录下歌曲",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "八音盒是一种困难模式配饰和家具物品，以10 GC的价格从巫师处购买。当八音盒装备在配饰栏内时，它会在经过一段随机时长的延迟后录下当前正在播放的游戏音乐。这包括其他八音盒播放的音乐。一旦录下音乐，它就会变为下面列出的那些八音盒之一。完成录音时，会播放一个录音成功音效来提示玩家。大部分八音盒变体种类仅能通过录音游戏内音乐获得，例外为八音盒（旅程结束），可以在击败月亮领主后以10 GC的价格从公主处购买。\n\n录音后的八音盒可以用以下两种方法之一来播放：\n\n· 将其作为配饰来装备。\n· 将其作为家具放置并用⚷打开/激活按键或电线激活。\n\n可用微光嬗变将录制好的八音盒变为空的八音盒。\n\n一共有 101 种不同的八音盒可用。",
+    "wiki_title": "八音盒（雪原）",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "奇怪的墓石": {
+    "name": "奇怪的墓石",
+    "image": "Tombstone.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 2 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "墓石是一种会在玩家死亡时掉落的家具物品。可以将其取回，像标牌使用或作为装饰。默认情况下，墓石会包含根据玩家死亡方式而生成的死亡讯息以及现实生活中的日期。\n\n玩家死亡后，墓石会在周围弹跳，直到落到 2×2 的空地上，此时它将变成放置状态。如果一个墓石找不到放置位置（由于没有合适的空间），将不能被取回并最终消失。两个墓石不能重叠放置。\n\n玩家死亡时会随机选择墓石的变体种类。当玩家在物品栏中拥有超过10 GC时，将会掉落金墓石。\n\n邻近位置放置有 4–8 个墓石会逐渐使环境变暗、饱和度降低。有 5 个或更多墓石会创造一个墓地迷你生物群系。挖掉墓石有 12.5% /25%/50%的几率从屏幕外生成一只鬼魂。\n\n在硬核难度下，墓石没有办法轻易获得，因为在这个难度下人物死亡是永久性的。NPC在存在硬核人物的世界中死亡时会掉落墓石。掉落的墓石变体种类同样是完全随机的，大部分 NPC 都会掉落普通墓石，而商人和税收官会掉落金墓石。\n\n在For the Worthy和Get fixed boi世界中，玩家掉落的墓石射弹（硬核难度中 NPC 掉落的不算）会造成伤害，对玩家 140 /280/420，对 NPC、敌怪、小动物是 70。\n\n由于墓石可创造墓地且可标记死亡地点，墓石会被危险感药水高亮标记。\n\n阿比盖尔之花可以作为一种植物，在任意世界进程中，被少见地发现于放置状态下墓石旁的草地上。它的生成几率在The Constant世界中被提高。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "墓石是一种会在玩家死亡时掉落的家具物品。可以将其取回，像标牌使用或作为装饰。默认情况下，墓石会包含根据玩家死亡方式而生成的死亡讯息以及现实生活中的日期。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "玩家死亡后，墓石会在周围弹跳，直到落到 2×2 的空地上，此时它将变成放置状态。如果一个墓石找不到放置位置（由于没有合适的空间），将不能被取回并最终消失。两个墓石不能重叠放置。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "玩家死亡时会随机选择墓石的变体种类。当玩家在物品栏中拥有超过"
+        },
+        {
+          "type": "coin",
+          "amount": "10",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "时，将会掉落金墓石。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "邻近位置放置有 4–8 个墓石会逐渐使环境变暗、饱和度降低。有 5 个或更多墓石会创造一个墓地迷你生物群系。挖掉墓石有 12.5% /25%/50%的几率从屏幕外生成一只鬼魂。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在硬核难度下，墓石没有办法轻易获得，因为在这个难度下人物死亡是永久性的。NPC在存在硬核人物的世界中死亡时会掉落墓石。掉落的墓石变体种类同样是完全随机的，大部分 NPC 都会掉落普通墓石，而商人和税收官会掉落金墓石。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在For the Worthy和Get fixed boi世界中，玩家掉落的墓石射弹（硬核难度中 NPC 掉落的不算）会造成伤害，对玩家 140 /280/420，对 NPC、敌怪、小动物是 70。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "由于墓石可创造墓地且可标记死亡地点，墓石会被危险感药水高亮标记。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "阿比盖尔之花可以作为一种植物，在任意世界进程中，被少见地发现于放置状态下墓石旁的草地上。它的生成几率在The Constant世界中被提高。"
+        }
+      ]
+    ],
+    "wiki_title": "奇怪的墓石",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "奥库瑞姆纪念章": {
+    "name": "奥库瑞姆纪念章",
+    "image": "Ocram_Trophy.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "纪念章是一系列装饰家具物品，通常以1/10 (10%)的几率由大多数Boss掉落。虽然它们可视作“Boss 版本的旗帜”，但不同的是，纪念章是纯粹的装饰物品，不提供任何特殊效果。一些纪念章只能由渔夫给予，作为完成钓鱼任务的奖励。总共有(电脑版、主机版、和移动版)33 /(前代主机版、和3DS版)24 个纪念章。",
+    "wiki_title": "奥库瑞姆纪念章",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "腹足怪": {
+    "name": "腹足怪",
+    "image": "Gastropod.png",
+    "stats": [],
+    "recipe": null,
+    "wiki_title": "腹足怪",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "蚁狮": {
+    "name": "蚁狮",
+    "image": "Antlion.png",
+    "stats": [],
+    "recipe": null,
+    "wiki_title": "蚁狮",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "闪耀翅膀": {
+    "name": "闪耀翅膀",
+    "image": "Sparkly_Wings.png",
+    "stats": [],
+    "recipe": null,
+    "wiki_title": "闪耀翅膀",
+    "legacy_item": true,
+    "item_category": "misc"
+  },
+  "鬼魂之翼": {
+    "name": "鬼魂之翼",
+    "image": "Fledgling_Wings.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "可飞行和缓慢坠落",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "翅膀是一类配饰，让玩家能通过按住↷跳键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住↷跳键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。\n\n装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。\n\n某些类型的翅膀还能让玩家在飞行中可以通过按住▼下键悬浮在固定高度，和/或按住▲上键来加快上升速度。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "翅膀是一类配饰，让玩家能通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "某些类型的翅膀还能让玩家在飞行中可以通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "键悬浮在固定高度，和/或按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▲",
+          "label": "上"
+        },
+        {
+          "type": "text",
+          "text": "键来加快上升速度。"
+        }
+      ]
+    ],
+    "page_type": "overview",
+    "wiki_title": "鬼魂之翼",
+    "legacy_item": true,
+    "item_category": "misc"
   }
 }

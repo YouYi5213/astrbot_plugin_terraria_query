@@ -120,8 +120,13 @@ def _build_grouped_overview(
 
 
 def build_boss_overview(bosses: dict[str, dict]) -> OverviewLayout:
+    pool = {
+        key: value
+        for key, value in bosses.items()
+        if not value.get("exclude_overview")
+    }
     return _build_grouped_overview(
-        bosses,
+        pool,
         title="Boss",
         load_catalog=load_boss_catalog_from_homepage,
     )

@@ -5,8 +5,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from boss_data import (  # noqa: E402
+    LEGACY_BOSS_WIKI_TITLES,
     apply_boss_overview_metadata,
     build_bosses_from_mirror,
+    ingest_legacy_bosses_into,
     load_boss_catalog_from_homepage,
     load_boss_catalog_from_overview,
     load_bosses_for_plugin,
@@ -33,6 +35,26 @@ def test_apply_boss_overview_metadata_sets_list_icon():
     bosses = load_bosses_for_plugin()
     apply_boss_overview_metadata(bosses)
     assert bosses["史莱姆王"]["list_icon"] == "Map_Icon_King_Slime.png"
+
+
+def test_legacy_boss_parsing_uniform_stats():
+    parsed = parse_boss_page_file("天兔")
+    assert parsed is not None
+    hp = next(row for row in parsed["stats"] if row["label"] == "最大生命值")
+    assert hp["modes"]["normal"] == hp["modes"]["expert"] == hp["modes"]["master"] == "9000"
+
+
+def test_ingest_legacy_bosses_into():
+    bosses: dict = {}
+    count = ingest_legacy_bosses_into(bosses)
+    assert count == len(LEGACY_BOSS_WIKI_TITLES)
+    assert "奥库瑞姆" in bosses
+    assert bosses["奥库瑞姆"].get("legacy_boss") is True
+    assert bosses["奥库瑞姆"].get("exclude_overview") is True
+    ocram_drops = bosses["奥库瑞姆"].get("drops", {}).get("items", {}).get("normal") or []
+    assert len(ocram_drops) >= 10
+    turkey_parts = bosses["不感恩的火鸡"].get("parts") or []
+    assert len(turkey_parts) == 3
 
 
 def test_parse_moon_lord_boss():

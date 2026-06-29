@@ -53,7 +53,7 @@
       "key": "minions",
       "label": "仆从",
       "file": "minions.json",
-      "count": 24
+      "count": 22
     },
     {
       "key": "tools",
@@ -71,19 +71,19 @@
       "key": "armor",
       "label": "盔甲",
       "file": "armor.json",
-      "count": 318
+      "count": 325
     },
     {
       "key": "accessories",
       "label": "配饰",
       "file": "accessories.json",
-      "count": 281
+      "count": 282
     },
     {
       "key": "vanity",
       "label": "时装物品",
       "file": "vanity.json",
-      "count": 42
+      "count": 82
     },
     {
       "key": "wings",
@@ -131,7 +131,7 @@
       "key": "misc",
       "label": "杂项",
       "file": "misc.json",
-      "count": 289
+      "count": 387
     },
     {
       "key": "mounts",
@@ -144,37 +144,7 @@
       "label": "宠物",
       "file": "pets.json",
       "count": 87
-    },
-    {
-      "key": "npcs",
-      "label": "NPC",
-      "file": "npcs.json",
-      "count": 29
-    },
-    {
-      "key": "bosses",
-      "label": "Boss",
-      "file": "bosses.json",
-      "count": 33
-    },
-    {
-      "key": "events",
-      "label": "事件",
-      "file": "events.json",
-      "count": 16
-    },
-    {
-      "key": "biomes",
-      "label": "生物群系",
-      "file": "biomes.json",
-      "count": 21
-    },
-    {
-      "key": "treasure_bags",
-      "label": "宝藏袋",
-      "file": "treasure_bags.json",
-      "count": 18
     }
   ],
-  "total": 2432
+  "total": 2459
 }

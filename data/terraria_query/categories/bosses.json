@@ -10054,5 +10054,693 @@
         }
       ]
     ]
+  },
+  "不感恩的火鸡": {
+    "name": "不感恩的火鸡",
+    "wiki_title": "不感恩的火鸡",
+    "page_type": "boss",
+    "image": "Turkor_the_Ungrateful.png",
+    "stats": [
+      {
+        "label": "类型",
+        "modes": {
+          "normal": "Boss",
+          "expert": "Boss",
+          "master": "Boss"
+        }
+      },
+      {
+        "label": "伤害",
+        "modes": {
+          "normal": "15",
+          "expert": "15",
+          "master": "15"
+        }
+      },
+      {
+        "label": "最大生命值",
+        "modes": {
+          "normal": "7000",
+          "expert": "7000",
+          "master": "7000"
+        }
+      },
+      {
+        "label": "防御",
+        "modes": {
+          "normal": "?",
+          "expert": "?",
+          "master": "?"
+        }
+      },
+      {
+        "label": "击退抗性",
+        "modes": {
+          "normal": "100%",
+          "expert": "100%",
+          "master": "100%"
+        }
+      }
+    ],
+    "drops": {
+      "money": {
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion_(old).png",
+            "quantity": "(5-20)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "羽毛",
+            "image": "Feather_(old).png",
+            "quantity": "(1-5)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "丰饶之角",
+            "image": "Horn_o'_plenty.png",
+            "quantity": "",
+            "chance": "100%"
+          }
+        ],
+        "expert": [],
+        "master": []
+      }
+    },
+    "description": "不感恩的火鸡是一个Boss，只能在感恩节召唤。它的身体似乎是一个盘子上的煮熟的火鸡，它的头部由一个长而灵活的脊椎连接（由于一个漏洞，头部没有附着在身体上，可以在 1.3 以前的移动版移动版中自由漫游）。必须先被摧毁头部，否则身体的防御力会强到使大多数困难模式前的武器无用。一旦头部被摧毁，身体的防御就会降低 25 秒，之后会有更多的头部生长。\n\n当不感恩的火鸡存活时，将会播放 Boss 1音乐。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "不感恩的火鸡是一个Boss，只能在感恩节召唤。它的身体似乎是一个盘子上的煮熟的火鸡，它的头部由一个长而灵活的脊椎连接（由于一个漏洞，头部没有附着在身体上，可以在 1.3 以前的"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中自由漫游）。必须先被摧毁头部，否则身体的防御力会强到使大多数困难模式前的武器无用。一旦头部被摧毁，身体的防御就会降低 25 秒，之后会有更多的头部生长。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当不感恩的火鸡存活时，将会播放 Boss 1音乐。"
+        }
+      ]
+    ],
+    "spawn": "要召唤不感恩的火鸡，玩家必须首先用 火鸡羽毛 召唤宠物火鸡，然后使用 诅咒填料 。召唤将消灭宠物火鸡，并将消耗玩家 物品栏 中的火鸡羽毛。这可以通过召唤宠物后，将火鸡羽毛放在 宝箱 中来避免。不感恩的火鸡只能在感恩节期间召唤。如果有人试图在感恩节之外召唤它，那么物品和羽毛将被消耗，但Boss不会被召唤。",
+    "parts": [
+      {
+        "name": "火鸡头部",
+        "subtitle": "",
+        "image": "Turkor_Head.png",
+        "stats": [
+          {
+            "label": "伤害",
+            "modes": {
+              "normal": "38",
+              "expert": "38",
+              "master": "38"
+            }
+          },
+          {
+            "label": "最大生命值",
+            "modes": {
+              "normal": "2500",
+              "expert": "2500",
+              "master": "2500"
+            }
+          },
+          {
+            "label": "防御",
+            "modes": {
+              "normal": "?",
+              "expert": "?",
+              "master": "?"
+            }
+          },
+          {
+            "label": "击退抗性",
+            "modes": {
+              "normal": "100%",
+              "expert": "100%",
+              "master": "100%"
+            }
+          }
+        ],
+        "debuff": null,
+        "drops": {}
+      },
+      {
+        "name": "火鸡身体",
+        "subtitle": "",
+        "image": "Turkor_Body.png",
+        "stats": [
+          {
+            "label": "伤害",
+            "modes": {
+              "normal": "15",
+              "expert": "15",
+              "master": "15"
+            }
+          },
+          {
+            "label": "最大生命值",
+            "modes": {
+              "normal": "7000",
+              "expert": "7000",
+              "master": "7000"
+            }
+          },
+          {
+            "label": "防御",
+            "modes": {
+              "normal": "0 (无头部存活时)\n/\n50 (头部存活时)",
+              "expert": "0 (无头部存活时)\n/\n50 (头部存活时)",
+              "master": "0 (无头部存活时)\n/\n50 (头部存活时)"
+            }
+          },
+          {
+            "label": "击退抗性",
+            "modes": {
+              "normal": "100%",
+              "expert": "100%",
+              "master": "100%"
+            }
+          }
+        ],
+        "debuff": null,
+        "drops": {}
+      },
+      {
+        "name": "火鸡脖颈",
+        "subtitle": "",
+        "image": "Turkor_Neck.png",
+        "stats": [
+          {
+            "label": "类型",
+            "modes": {
+              "normal": "不受伤害",
+              "expert": "不受伤害",
+              "master": "不受伤害"
+            }
+          },
+          {
+            "label": "击退抗性",
+            "modes": {
+              "normal": "100%",
+              "expert": "100%",
+              "master": "100%"
+            }
+          }
+        ],
+        "debuff": null,
+        "drops": {}
+      }
+    ],
+    "legacy_boss": true,
+    "exclude_overview": true,
+    "single_mode": true,
+    "search_terms": [
+      "Turkor",
+      "火鸡"
+    ]
+  },
+  "奥库瑞姆": {
+    "name": "奥库瑞姆",
+    "wiki_title": "奥库瑞姆",
+    "page_type": "boss",
+    "image": "Ocram_(Phase_1).gif",
+    "stats": [
+      {
+        "label": "类型",
+        "modes": {
+          "normal": "Boss",
+          "expert": "Boss",
+          "master": "Boss"
+        }
+      },
+      {
+        "label": "AI 类型",
+        "modes": {
+          "normal": "奥库瑞姆 AI",
+          "expert": "奥库瑞姆 AI",
+          "master": "奥库瑞姆 AI"
+        }
+      },
+      {
+        "label": "伤害",
+        "modes": {
+          "normal": "65",
+          "expert": "65",
+          "master": "65"
+        }
+      },
+      {
+        "label": "最大生命值",
+        "modes": {
+          "normal": "35000",
+          "expert": "35000",
+          "master": "35000"
+        }
+      },
+      {
+        "label": "防御",
+        "modes": {
+          "normal": "20",
+          "expert": "20",
+          "master": "20"
+        }
+      }
+    ],
+    "drops": {
+      "money": {
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "枯萎之魂",
+            "image": "Soul_of_Blight.png",
+            "quantity": "(15-25  / 5-16 )",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "精金矿",
+            "image": "Adamantite_Ore_(old).png",
+            "quantity": "(10-38)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion_(old).png",
+            "quantity": "(5-15)",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "可能会掉落以下 3 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "龙面具",
+            "image": "Dragon_Mask.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "item",
+            "name": "龙胸甲",
+            "image": "Dragon_Breastplate.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "item",
+            "name": "龙护胫",
+            "image": "Dragon_Greaves.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "caption",
+            "text": "可能会掉落以下 3 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "泰坦头盔",
+            "image": "Titan_Helmet.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "item",
+            "name": "泰坦铠甲",
+            "image": "Titan_Mail.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "item",
+            "name": "泰坦护腿",
+            "image": "Titan_Leggings.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "caption",
+            "text": "可能会掉落以下 3 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "灵能头饰",
+            "image": "Spectral_Headgear.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "item",
+            "name": "灵能盔甲",
+            "image": "Spectral_Armor.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "item",
+            "name": "灵能衬裤",
+            "image": "Spectral_Subligar.png",
+            "quantity": "",
+            "chance": "11%"
+          },
+          {
+            "type": "item",
+            "name": "灵能箭",
+            "image": "Spectral_Arrow.png",
+            "quantity": "(~28)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "奥库瑞姆纪念章",
+            "image": "Ocram_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "奥库瑞姆面具",
+            "image": "Ocram_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          }
+        ],
+        "expert": [],
+        "master": []
+      }
+    },
+    "subtitle": "第一形态",
+    "description": "奥库瑞姆是《泰拉瑞亚》在前代主机版前代主机版和任天堂3DS任天堂3DS版版中的最终困难模式Boss之一。它是在夜晚用可疑骷髅召唤的。奥库瑞姆是枯萎之魂的唯一来源，也是唯一会掉落精金矿的敌怪/Boss（前代主机版不过暗影锤会掉落精金锭）。\n\n当奥库瑞姆活着时，会播放《Boss 5》音乐。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "奥库瑞姆是《泰拉瑞亚》在"
+        },
+        {
+          "type": "icon",
+          "image": "Old-Gen_Console_only.png",
+          "alt": "前代主机版"
+        },
+        {
+          "type": "text",
+          "text": "前代主机版和任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版中的最终困难模式Boss之一。它是在夜晚用可疑骷髅召唤的。奥库瑞姆是枯萎之魂的唯一来源，也是唯一会掉落精金矿的敌怪/Boss（"
+        },
+        {
+          "type": "icon",
+          "image": "Old-Gen_Console_only.png",
+          "alt": "前代主机版"
+        },
+        {
+          "type": "text",
+          "text": "不过暗影锤会掉落精金锭）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当奥库瑞姆活着时，会播放《Boss 5》音乐。"
+        }
+      ]
+    ],
+    "legacy_boss": true,
+    "exclude_overview": true,
+    "single_mode": true,
+    "search_terms": [
+      "Ocram"
+    ]
+  },
+  "天兔": {
+    "name": "天兔",
+    "wiki_title": "天兔",
+    "page_type": "boss",
+    "image": "Lepus.png",
+    "stats": [
+      {
+        "label": "类型",
+        "modes": {
+          "normal": "Boss",
+          "expert": "Boss",
+          "master": "Boss"
+        }
+      },
+      {
+        "label": "环境",
+        "modes": {
+          "normal": "地表",
+          "expert": "地表",
+          "master": "地表"
+        }
+      },
+      {
+        "label": "AI 类型",
+        "modes": {
+          "normal": "天兔 AI",
+          "expert": "天兔 AI",
+          "master": "天兔 AI"
+        }
+      },
+      {
+        "label": "伤害",
+        "modes": {
+          "normal": "50",
+          "expert": "50",
+          "master": "50"
+        }
+      },
+      {
+        "label": "最大生命值",
+        "modes": {
+          "normal": "9000",
+          "expert": "9000",
+          "master": "9000"
+        }
+      },
+      {
+        "label": "防御",
+        "modes": {
+          "normal": "8",
+          "expert": "8",
+          "master": "8"
+        }
+      }
+    ],
+    "drops": {
+      "money": {
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "80",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "80",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "80",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "可疑蛋",
+            "image": "Suspicious_Looking_Egg.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion_(old).png",
+            "quantity": "(5-20)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "蛋炮",
+            "image": "Egg_Cannon.png",
+            "quantity": "",
+            "chance": "50%"
+          },
+          {
+            "type": "item",
+            "name": "奥丝塔拉之靴",
+            "image": "Boots_of_Ostara.png",
+            "quantity": "",
+            "chance": "50%"
+          },
+          {
+            "type": "item",
+            "name": "兔兔兜帽",
+            "image": "Bunny_Hood_(old).png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "忍者兜帽",
+            "image": "Ninja_Hood_(old).png",
+            "quantity": "",
+            "chance": "3%"
+          },
+          {
+            "type": "item",
+            "name": "忍者衣",
+            "image": "Ninja_Shirt_(old).png",
+            "quantity": "",
+            "chance": "3%"
+          },
+          {
+            "type": "item",
+            "name": "忍者裤",
+            "image": "Ninja_Pants_(old).png",
+            "quantity": "",
+            "chance": "3%"
+          },
+          {
+            "type": "item",
+            "name": "力量之魂",
+            "image": "Soul_of_Might_(old).png",
+            "quantity": "(3)",
+            "chance": "1%"
+          }
+        ],
+        "expert": [],
+        "master": []
+      }
+    },
+    "description": "天兔是个困难模式之前的Boss，可以在一天中的任意时间在任何地方用复活节期间掉落自天兔自身、腐化兔兔和病兔的可疑蛋召唤。\n\n任天堂3DS版当天兔活着时，会播放《Boss 1》音乐。\n\n移动版当天兔活着时，会播放《地下神圣之地》音乐。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "天兔是个困难模式之前的Boss，可以在一天中的任意时间在任何地方用复活节期间掉落自天兔自身、腐化兔兔和病兔的可疑蛋召唤。"
+        }
+      ],
+      [
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "当天兔活着时，会播放《Boss 1》音乐。"
+        }
+      ],
+      [
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "当天兔活着时，会播放《地下神圣之地》音乐。"
+        }
+      ]
+    ],
+    "legacy_boss": true,
+    "exclude_overview": true,
+    "single_mode": true,
+    "search_terms": [
+      "Lepus"
+    ]
   }
 }

@@ -51234,5 +51234,1497 @@
         }
       ]
     ]
+  },
+  "泰坦盔甲": {
+    "name": "泰坦盔甲",
+    "image": "Titan_armor.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲套装",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "45",
+        "extra": ""
+      },
+      {
+        "label": "套装奖励",
+        "value": "28%的几率不消耗弹药",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "45",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "泰坦盔甲是一套困难模式远程盔甲套装，由泰坦头盔、泰坦铠甲、和泰坦护腿组成。泰坦盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。\n\n全套泰坦盔甲能提供以下好处：\n\n· +45 防御\n· +30% 远程伤害\n· +20% 远程暴击率\n· +10% 移动速度\n· +48%弹药节约",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "泰坦盔甲是一套困难模式远程盔甲套装，由泰坦头盔、泰坦铠甲、和泰坦护腿组成。泰坦盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "全套泰坦盔甲能提供以下好处："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+45 防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+30% 远程伤害"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+20% 远程暴击率"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+10% 移动速度"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+48%弹药节约"
+        }
+      ]
+    ],
+    "page_type": "armor_set",
+    "set_pieces": [
+      {
+        "name": "泰坦头盔",
+        "image": "Titan_Helmet.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "14",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "远程伤害提高15%，5%几率不消耗弹药\n远程暴击率提高10%",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "远程伤害提高15%，5%几率不消耗弹药\n远程暴击率提高10%"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "头盔",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "10",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣头盔",
+              "image": "Hallowed_Helmet_(old).png"
+            },
+            {
+              "name": "钴面具",
+              "image": "Cobalt_Mask_(old).png"
+            },
+            {
+              "name": "秘银帽",
+              "image": "Mythril_Hat_(old).png"
+            },
+            {
+              "name": "精金面具",
+              "image": "Adamantite_Mask.png"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "15"
+            }
+          ],
+          "result": {
+            "name": "泰坦头盔",
+            "image": "Titan_Helmet.png"
+          }
+        }
+      },
+      {
+        "name": "泰坦铠甲",
+        "image": "Titan_Mail.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "18",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "远程伤害提高5%，5%几率不消耗弹药\n远程暴击率提高10%",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "远程伤害提高5%，5%几率不消耗弹药\n远程暴击率提高10%"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "20",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣板甲",
+              "image": "Hallowed_Plate_Mail_(old).png"
+            },
+            {
+              "name": "钴胸甲",
+              "image": "Cobalt_Breastplate_(old).png"
+            },
+            {
+              "name": "秘银链甲",
+              "image": "Mythril_Chainmail_(old).png"
+            },
+            {
+              "name": "精金胸甲",
+              "image": "Adamantite_Breastplate_(old).png"
+            },
+            {
+              "name": "视域之魂",
+              "image": "Soul_of_Sight_(old).png",
+              "amount": "20"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "20"
+            }
+          ],
+          "result": {
+            "name": "泰坦铠甲",
+            "image": "Titan_Mail.png"
+          }
+        }
+      },
+      {
+        "name": "泰坦护腿",
+        "image": "Titan_Leggings.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "13",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "移动速度和远程伤害各提高10%\n10%几率不消耗弹药",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "移动速度和远程伤害各提高10%\n10%几率不消耗弹药"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "15",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣护胫",
+              "image": "Hallowed_Greaves_(old).png"
+            },
+            {
+              "name": "钴护腿",
+              "image": "Cobalt_Leggings_(old).png"
+            },
+            {
+              "name": "秘银护胫",
+              "image": "Mythril_Greaves_(old).png"
+            },
+            {
+              "name": "精金护腿",
+              "image": "Adamantite_Leggings_(old).png"
+            },
+            {
+              "name": "视域之魂",
+              "image": "Soul_of_Sight_(old).png",
+              "amount": "10"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "15"
+            }
+          ],
+          "result": {
+            "name": "泰坦护腿",
+            "image": "Titan_Leggings.png"
+          }
+        }
+      }
+    ],
+    "wiki_title": "泰坦盔甲",
+    "legacy_item": true,
+    "item_category": "armor"
+  },
+  "泰坦铠甲": {
+    "name": "泰坦铠甲",
+    "image": "Titan_Mail.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "18",
+        "extra": ""
+      },
+      {
+        "label": "奖励",
+        "value": "远程伤害提高5%，5%几率不消耗弹药\n远程暴击率提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "远程伤害提高5%，5%几率不消耗弹药\n远程暴击率提高10%"
+          }
+        ]
+      },
+      {
+        "label": "装备栏位",
+        "value": "上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣板甲",
+          "image": "Hallowed_Plate_Mail_(old).png"
+        },
+        {
+          "name": "钴胸甲",
+          "image": "Cobalt_Breastplate_(old).png"
+        },
+        {
+          "name": "秘银链甲",
+          "image": "Mythril_Chainmail_(old).png"
+        },
+        {
+          "name": "精金胸甲",
+          "image": "Adamantite_Breastplate_(old).png"
+        },
+        {
+          "name": "视域之魂",
+          "image": "Soul_of_Sight_(old).png",
+          "amount": "20"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "20"
+        }
+      ],
+      "result": {
+        "name": "泰坦铠甲",
+        "image": "Titan_Mail.png"
+      }
+    },
+    "page_type": "armor_piece",
+    "from_armor_set": true,
+    "parent_set": "泰坦盔甲",
+    "item_category": "armor"
+  },
+  "灵能盔甲": {
+    "name": "灵能盔甲",
+    "image": "Spectral_armor.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲套装",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "40",
+        "extra": ""
+      },
+      {
+        "label": "套装奖励",
+        "value": "魔力消耗减少23%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "45",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "灵能盔甲是一套困难模式魔法盔甲套装，由灵能头饰、灵能盔甲、和灵能衬裤组成。灵能盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。\n\n全套灵能盔甲能提供以下好处：\n\n· +40 防御\n· +150 最大魔力\n· +30% 魔法伤害\n· +25% 魔法暴击率\n· -33% 魔力消耗\n· +10% 移动速度",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "灵能盔甲是一套困难模式魔法盔甲套装，由灵能头饰、灵能盔甲、和灵能衬裤组成。灵能盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "全套灵能盔甲能提供以下好处："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+40 防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+150 最大魔力"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+30% 魔法伤害"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+25% 魔法暴击率"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "-33% 魔力消耗"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+10% 移动速度"
+        }
+      ]
+    ],
+    "page_type": "armor_set",
+    "set_pieces": [
+      {
+        "name": "灵能头饰",
+        "image": "Spectral_Headgear.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "10",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "最大魔力提高120\n魔法伤害和魔法暴击率各提高15%",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "最大魔力提高120\n魔法伤害和魔法暴击率各提高15%"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "头盔",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "10",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣头饰",
+              "image": "Hallowed_Headgear_(old).png"
+            },
+            {
+              "name": "钴帽",
+              "image": "Cobalt_Hat_(old).png"
+            },
+            {
+              "name": "秘银兜帽",
+              "image": "Mythril_Hood_(old).png"
+            },
+            {
+              "name": "精金头饰",
+              "image": "Adamantite_Headgear_(old).png"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "15"
+            }
+          ],
+          "result": {
+            "name": "灵能头饰",
+            "image": "Spectral_Headgear.png"
+          }
+        }
+      },
+      {
+        "name": "灵能盔甲",
+        "image": "Spectral_Armor.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "15",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "魔法伤害提高5%，魔力消耗减少10%\n魔法暴击率提高10%",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "魔法伤害提高5%，魔力消耗减少10%\n魔法暴击率提高10%"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "20",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣板甲",
+              "image": "Hallowed_Plate_Mail_(old).png"
+            },
+            {
+              "name": "钴胸甲",
+              "image": "Cobalt_Breastplate_(old).png"
+            },
+            {
+              "name": "秘银链甲",
+              "image": "Mythril_Chainmail_(old).png"
+            },
+            {
+              "name": "精金胸甲",
+              "image": "Adamantite_Breastplate_(old).png"
+            },
+            {
+              "name": "恐惧之魂",
+              "image": "Soul_of_Fright_(old).png",
+              "amount": "10"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "20"
+            }
+          ],
+          "result": {
+            "name": "灵能盔甲",
+            "image": "Spectral_Armor.png"
+          }
+        }
+      },
+      {
+        "name": "灵能衬裤",
+        "image": "Spectral_Subligar.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "15",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "移动速度和魔法伤害各提高10%\n最大魔力提高30",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "移动速度和魔法伤害各提高10%\n最大魔力提高30"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "15",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣护胫",
+              "image": "Hallowed_Greaves_(old).png"
+            },
+            {
+              "name": "钴护腿",
+              "image": "Cobalt_Leggings_(old).png"
+            },
+            {
+              "name": "秘银护胫",
+              "image": "Mythril_Greaves_(old).png"
+            },
+            {
+              "name": "精金护腿",
+              "image": "Adamantite_Leggings_(old).png"
+            },
+            {
+              "name": "恐惧之魂",
+              "image": "Soul_of_Fright_(old).png",
+              "amount": "10"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "15"
+            }
+          ],
+          "result": {
+            "name": "灵能衬裤",
+            "image": "Spectral_Subligar.png"
+          }
+        }
+      }
+    ],
+    "wiki_title": "灵能盔甲",
+    "legacy_item": true,
+    "item_category": "armor"
+  },
+  "灵能衬裤": {
+    "name": "灵能衬裤",
+    "image": "Spectral_Subligar.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "15",
+        "extra": ""
+      },
+      {
+        "label": "奖励",
+        "value": "移动速度和魔法伤害各提高10%\n最大魔力提高30",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "移动速度和魔法伤害各提高10%\n最大魔力提高30"
+          }
+        ]
+      },
+      {
+        "label": "装备栏位",
+        "value": "裤装",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣护胫",
+          "image": "Hallowed_Greaves_(old).png"
+        },
+        {
+          "name": "钴护腿",
+          "image": "Cobalt_Leggings_(old).png"
+        },
+        {
+          "name": "秘银护胫",
+          "image": "Mythril_Greaves_(old).png"
+        },
+        {
+          "name": "精金护腿",
+          "image": "Adamantite_Leggings_(old).png"
+        },
+        {
+          "name": "恐惧之魂",
+          "image": "Soul_of_Fright_(old).png",
+          "amount": "10"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "灵能衬裤",
+        "image": "Spectral_Subligar.png"
+      }
+    },
+    "page_type": "armor_piece",
+    "from_armor_set": true,
+    "parent_set": "灵能盔甲",
+    "item_category": "armor"
+  },
+  "龙盔甲": {
+    "name": "龙盔甲",
+    "image": "Dragon_armor.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲套装",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "60",
+        "extra": ""
+      },
+      {
+        "label": "套装奖励",
+        "value": "近战速度和移动速度各提高21%",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "45",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": null,
+    "description": "龙盔甲是一套困难模式近战盔甲套装，由龙面具、龙胸甲、和龙护胫组成。龙盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。\n\n全套龙盔甲能提供以下好处：\n\n· +60 防御\n· +20% 近战伤害\n· +15% 暴击率\n· +38% 近战速度\n· +35% 移动速度\n\n此外，若全套套装可见，玩家会具有残影效果，类似于死灵盔甲。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "龙盔甲是一套困难模式近战盔甲套装，由龙面具、龙胸甲、和龙护胫组成。龙盔甲的每个部件都有1/9 (11.11%)几率掉落自奥库瑞姆，它们也可被制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "全套龙盔甲能提供以下好处："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+60 防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+20% 近战伤害"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+15% 暴击率"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+38% 近战速度"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+35% 移动速度"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "此外，若全套套装可见，玩家会具有残影效果，类似于死灵盔甲。"
+        }
+      ]
+    ],
+    "page_type": "armor_set",
+    "set_pieces": [
+      {
+        "name": "龙面具",
+        "image": "Dragon_Mask.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "26",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "近战速度和近战伤害各提高15%\n暴击率提高10%",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "近战速度和近战伤害各提高15%\n暴击率提高10%"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "头盔",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "10",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣面具",
+              "image": "Hallowed_Mask_(old).png"
+            },
+            {
+              "name": "钴头盔",
+              "image": "Cobalt_Helmet_(old).png"
+            },
+            {
+              "name": "秘银头盔",
+              "image": "Mythril_Helmet_(old).png"
+            },
+            {
+              "name": "精金头盔",
+              "image": "Adamantite_Helmet.png"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "15"
+            }
+          ],
+          "result": {
+            "name": "龙面具",
+            "image": "Dragon_Mask.png"
+          }
+        }
+      },
+      {
+        "name": "龙胸甲",
+        "image": "Dragon_Breastplate.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "20",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "暴击率提高10%\n近战伤害提高5%",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "暴击率提高10%\n近战伤害提高5%"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "上衣",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "20",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣板甲",
+              "image": "Hallowed_Plate_Mail_(old).png"
+            },
+            {
+              "name": "钴胸甲",
+              "image": "Cobalt_Breastplate_(old).png"
+            },
+            {
+              "name": "秘银链甲",
+              "image": "Mythril_Chainmail_(old).png"
+            },
+            {
+              "name": "精金胸甲",
+              "image": "Adamantite_Breastplate_(old).png"
+            },
+            {
+              "name": "力量之魂",
+              "image": "Soul_of_Might_(old).png",
+              "amount": "15"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "20"
+            }
+          ],
+          "result": {
+            "name": "龙胸甲",
+            "image": "Dragon_Breastplate.png"
+          }
+        }
+      },
+      {
+        "name": "龙护胫",
+        "image": "Dragon_Greaves.png",
+        "stats": [
+          {
+            "label": "类型",
+            "value": "盔甲",
+            "extra": ""
+          },
+          {
+            "label": "防御",
+            "value": "14",
+            "extra": ""
+          },
+          {
+            "label": "奖励",
+            "value": "移动速度提高12%\n近战速度提高2%",
+            "extra": "",
+            "segments": [
+              {
+                "type": "text",
+                "text": "移动速度提高12%\n近战速度提高2%"
+              }
+            ]
+          },
+          {
+            "label": "装备栏位",
+            "value": "裤装",
+            "extra": ""
+          },
+          {
+            "label": "稀有度",
+            "value": "粉红色",
+            "extra": "",
+            "sortkey": "05*",
+            "color": "#ff88bb"
+          },
+          {
+            "label": "卖出",
+            "value": "",
+            "extra": "",
+            "coins": [
+              {
+                "type": "gc",
+                "amount": "15",
+                "image": "Gold_Coin.png"
+              }
+            ]
+          }
+        ],
+        "recipe": {
+          "station": "秘银砧或山铜砧",
+          "ingredients": [
+            {
+              "name": "神圣护胫",
+              "image": "Hallowed_Greaves_(old).png"
+            },
+            {
+              "name": "钴护腿",
+              "image": "Cobalt_Leggings_(old).png"
+            },
+            {
+              "name": "秘银护胫",
+              "image": "Mythril_Greaves_(old).png"
+            },
+            {
+              "name": "精金护腿",
+              "image": "Adamantite_Leggings_(old).png"
+            },
+            {
+              "name": "力量之魂",
+              "image": "Soul_of_Might_(old).png",
+              "amount": "15"
+            },
+            {
+              "name": "枯萎之魂",
+              "image": "Soul_of_Blight.png",
+              "amount": "15"
+            }
+          ],
+          "result": {
+            "name": "龙护胫",
+            "image": "Dragon_Greaves.png"
+          }
+        }
+      }
+    ],
+    "wiki_title": "龙盔甲",
+    "legacy_item": true,
+    "item_category": "armor"
+  },
+  "龙面具": {
+    "name": "龙面具",
+    "image": "Dragon_Mask.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "26",
+        "extra": ""
+      },
+      {
+        "label": "奖励",
+        "value": "近战速度和近战伤害各提高15%\n暴击率提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "近战速度和近战伤害各提高15%\n暴击率提高10%"
+          }
+        ]
+      },
+      {
+        "label": "装备栏位",
+        "value": "头盔",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣面具",
+          "image": "Hallowed_Mask_(old).png"
+        },
+        {
+          "name": "钴头盔",
+          "image": "Cobalt_Helmet_(old).png"
+        },
+        {
+          "name": "秘银头盔",
+          "image": "Mythril_Helmet_(old).png"
+        },
+        {
+          "name": "精金头盔",
+          "image": "Adamantite_Helmet.png"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "15"
+        }
+      ],
+      "result": {
+        "name": "龙面具",
+        "image": "Dragon_Mask.png"
+      }
+    },
+    "page_type": "armor_piece",
+    "from_armor_set": true,
+    "parent_set": "龙盔甲",
+    "item_category": "armor"
+  },
+  "龙胸甲": {
+    "name": "龙胸甲",
+    "image": "Dragon_Breastplate.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盔甲",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "20",
+        "extra": ""
+      },
+      {
+        "label": "奖励",
+        "value": "暴击率提高10%\n近战伤害提高5%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "暴击率提高10%\n近战伤害提高5%"
+          }
+        ]
+      },
+      {
+        "label": "装备栏位",
+        "value": "上衣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "20",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "神圣板甲",
+          "image": "Hallowed_Plate_Mail_(old).png"
+        },
+        {
+          "name": "钴胸甲",
+          "image": "Cobalt_Breastplate_(old).png"
+        },
+        {
+          "name": "秘银链甲",
+          "image": "Mythril_Chainmail_(old).png"
+        },
+        {
+          "name": "精金胸甲",
+          "image": "Adamantite_Breastplate_(old).png"
+        },
+        {
+          "name": "力量之魂",
+          "image": "Soul_of_Might_(old).png",
+          "amount": "15"
+        },
+        {
+          "name": "枯萎之魂",
+          "image": "Soul_of_Blight.png",
+          "amount": "20"
+        }
+      ],
+      "result": {
+        "name": "龙胸甲",
+        "image": "Dragon_Breastplate.png"
+      }
+    },
+    "page_type": "armor_piece",
+    "from_armor_set": true,
+    "parent_set": "龙盔甲",
+    "item_category": "armor"
   }
 }

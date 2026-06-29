@@ -178,6 +178,14 @@ def _boss_data_module():
     return boss_data
 
 
+def _legacy_item_data_module():
+    try:
+        from . import legacy_item_data
+    except ImportError:
+        import legacy_item_data
+    return legacy_item_data
+
+
 def _persist_items(items: dict[str, dict]) -> None:
     cd = _category_data_module()
     strip_english_fields(items)
@@ -3127,6 +3135,9 @@ async def update_wiki_data(
             session
         )
         boss_img_result = await _boss_data_module().backfill_boss_images(session)
+        legacy_item_result = await _legacy_item_data_module().ingest_legacy_items_into(
+            items, session
+        )
 
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
@@ -3166,6 +3177,8 @@ async def update_wiki_data(
         "content_images_total": content_img_result.get("images_total", 0),
         "boss_images_ok": boss_img_result.get("images_ok", 0),
         "boss_images_total": boss_img_result.get("images_total", 0),
+        "legacy_item_new_count": legacy_item_result.get("new_count", 0),
+        "legacy_item_seed_count": legacy_item_result.get("seed_count", 0),
     }
 
 

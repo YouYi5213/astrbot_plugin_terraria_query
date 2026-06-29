@@ -30634,5 +30634,14 @@
     },
     "description": "黑腰带是一个困难模式、世纪之花后的配饰，它提供1/10 (10%)几率闪避攻击的能力，这包括从危险物处（如陷阱和熔岩）受到的伤害。在进行闪避时，玩家会被一团烟雾包围。黑腰带有1/12 (8.33%)/23/144 (15.97%)几率掉落自世纪之花后地牢中的骷髅李。",
     "item_category": "accessories"
+  },
+  "配饰": {
+    "name": "配饰",
+    "image": "Anklet_of_the_Wind.png",
+    "stats": [],
+    "recipe": null,
+    "wiki_title": "配饰",
+    "legacy_item": true,
+    "item_category": "accessories"
   }
 }

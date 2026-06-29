@@ -22,14 +22,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "史莱姆王 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "40",
@@ -560,14 +552,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "克苏鲁之眼 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "15",
@@ -717,14 +701,6 @@
           "normal": "腐化之地  地下腐化之地",
           "expert": "腐化之地  地下腐化之地",
           "master": "腐化之地  地下腐化之地"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "蠕虫 AI"
         }
       },
       {
@@ -1047,14 +1023,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "克苏鲁之脑 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "30",
@@ -1215,14 +1183,6 @@
           "normal": "蜂巢  丛林  地下丛林",
           "expert": "蜂巢  丛林  地下丛林",
           "master": "蜂巢  丛林  地下丛林"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "蜂王 AI"
         }
       },
       {
@@ -1800,14 +1760,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "独眼巨鹿 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "20\n（接触）\n26\n（ 冰雪尖刺 ）\n36\n（ 残骸 ）\n20\n（ 暗影之手 ）",
@@ -2278,14 +2230,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "头部 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "32\n9999\n（ 白天 期间）",
@@ -2656,14 +2600,6 @@
             }
           },
           {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "骷髅王之手 AI"
-            }
-          },
-          {
             "label": "伤害",
             "modes": {
               "normal": "20",
@@ -2736,14 +2672,6 @@
           "normal": "地狱",
           "expert": "地狱",
           "master": "地狱"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "血肉墙 AI"
         }
       },
       {
@@ -3241,14 +3169,6 @@
             }
           },
           {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "血肉墙 AI"
-            }
-          },
-          {
             "label": "伤害",
             "modes": {
               "normal": "50",
@@ -3303,14 +3223,6 @@
               "normal": "地狱",
               "expert": "地狱",
               "master": "地狱"
-            }
-          },
-          {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "血肉墙眼睛 AI"
             }
           },
           {
@@ -3371,14 +3283,6 @@
             }
           },
           {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "饿鬼 AI"
-            }
-          },
-          {
             "label": "伤害",
             "modes": {
               "normal": "30\n45\n（血肉墙生命 75–50%）\n60\n（血肉墙生命 <50%）",
@@ -3433,14 +3337,6 @@
               "normal": "地狱",
               "expert": "地狱",
               "master": "地狱"
-            }
-          },
-          {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "恶魔眼 AI"
             }
           },
           {
@@ -3502,14 +3398,6 @@
           "normal": "神圣之地",
           "expert": "神圣之地",
           "master": "神圣之地"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "史莱姆皇后 AI"
         }
       },
       {
@@ -3896,14 +3784,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "毁灭者 AI"
-        }
-      },
-      {
         "label": "最大生命值",
         "modes": {
           "normal": "80000",
@@ -4206,14 +4086,6 @@
           "normal": "地表  +  夜晚  太空  +  夜晚",
           "expert": "地表  +  夜晚  太空  +  夜晚",
           "master": "地表  +  夜晚  太空  +  夜晚"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "机械骷髅王头部 AI"
         }
       },
       {
@@ -4538,14 +4410,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "世纪之花 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "50\n（接触）\n44\n（ 种子 ）\n54\n（ 毒种子 ）\n62\n（ 刺球 ）",
@@ -4651,14 +4515,6 @@
           "normal": "丛林神庙",
           "expert": "丛林神庙",
           "master": "丛林神庙"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "石巨人身体 AI"
         }
       },
       {
@@ -5108,14 +4964,6 @@
             }
           },
           {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "石巨人头 AI"
-            }
-          },
-          {
             "label": "伤害",
             "modes": {
               "normal": "64\n36\n（ 火球 ，生命 ≥50% 时）\n48\n（ 火球 ，生命 <50% 时）\n56\n（ 魔眼光束 ）",
@@ -5170,14 +5018,6 @@
               "normal": "丛林神庙",
               "expert": "丛林神庙",
               "master": "丛林神庙"
-            }
-          },
-          {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "石巨人之拳 AI"
             }
           },
           {
@@ -5239,14 +5079,6 @@
           "normal": "海洋",
           "expert": "海洋",
           "master": "海洋"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "猪龙鱼公爵 AI"
         }
       },
       {
@@ -5417,14 +5249,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "光之女皇 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "80\n（接触）\n120\n（猛冲）\n90\n（ 七彩矢 1）\n100\n（ 太阳舞 ）\n90\n（ 永恒彩虹 ）\n100\n（ 空灵长枪 1）",
@@ -5574,14 +5398,6 @@
           "normal": "地牢入口",
           "expert": "地牢入口",
           "master": "地牢入口"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "拜月教邪教徒 AI"
         }
       },
       {
@@ -5841,14 +5657,6 @@
           "normal": "月亮事件",
           "expert": "月亮事件",
           "master": "月亮事件"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "月亮领主 AI"
         }
       },
       {
@@ -6444,14 +6252,6 @@
             }
           },
           {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "月亮领主头 AI"
-            }
-          },
-          {
             "label": "伤害",
             "modes": {
               "normal": "0\n150\n（ 幻影死亡射线 ）\n60\n（ 幻影矢 ）\n140\n（ For the Worthy 和 Get fixed boi 世界中的 月亮巨石 ）",
@@ -6509,14 +6309,6 @@
             }
           },
           {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "月亮领主手 AI"
-            }
-          },
-          {
             "label": "伤害",
             "modes": {
               "normal": "0\n80\n（ 幻影球 ）\n60\n（ 幻影眼 ）\n60\n（ 幻影矢 ）",
@@ -6571,14 +6363,6 @@
               "normal": "月亮事件",
               "expert": "月亮事件",
               "master": "月亮事件"
-            }
-          },
-          {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "月亮领主心脏 AI"
             }
           },
           {
@@ -6643,14 +6427,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "黑暗魔法师 AI"
-        }
-      },
-      {
         "label": "击退抗性",
         "modes": {
           "normal": "100%",
@@ -6691,14 +6467,6 @@
           "normal": "撒旦军队",
           "expert": "撒旦军队",
           "master": "撒旦军队"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "攻击者 AI"
         }
       },
       {
@@ -6757,14 +6525,6 @@
           "normal": "撒旦军队",
           "expert": "撒旦军队",
           "master": "撒旦军队"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "双足翼龙 AI"
         }
       },
       {
@@ -7061,14 +6821,6 @@
           "normal": "海盗入侵",
           "expert": "海盗入侵",
           "master": "海盗入侵"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "荷兰飞盗船 AI"
         }
       },
       {
@@ -7377,14 +7129,6 @@
           "normal": "南瓜月",
           "expert": "南瓜月",
           "master": "南瓜月"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "哀木 AI"
         }
       },
       {
@@ -7708,14 +7452,6 @@
           "normal": "南瓜月",
           "expert": "南瓜月",
           "master": "南瓜月"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "南瓜王 AI"
         }
       },
       {
@@ -8076,14 +7812,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "哀木 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "110\n86\n（ 松针 ）\n114\n（ 装饰 ）\n80\n（ 装饰 弹片）",
@@ -8345,14 +8073,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "圣诞坦克 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "120\n72\n（ 链式机枪 ）\n160\n（ 尖球 ）\n84\n（ 导弹 ）\n100\n（ 礼物 ）",
@@ -8575,14 +8295,6 @@
           "normal": "霜月",
           "expert": "霜月",
           "master": "霜月"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "冰雪女王 AI"
         }
       },
       {
@@ -8889,14 +8601,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "骑士 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "50\n100\n（ 火星死亡射线 ）\n160\n（狂暴 火星死亡射线 ）\n60\n（ 飞碟残片 ）",
@@ -9168,14 +8872,6 @@
             }
           },
           {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "骑士 AI"
-            }
-          },
-          {
             "label": "伤害",
             "modes": {
               "normal": "60\n70\n（ 飞碟激光 ）",
@@ -9230,14 +8926,6 @@
               "normal": "火星暴乱",
               "expert": "火星暴乱",
               "master": "火星暴乱"
-            }
-          },
-          {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "骑士 AI"
             }
           },
           {
@@ -9298,14 +8986,6 @@
             }
           },
           {
-            "label": "AI 类型",
-            "modes": {
-              "normal": "",
-              "expert": "",
-              "master": "火星飞碟 AI"
-            }
-          },
-          {
             "label": "伤害",
             "modes": {
               "normal": "80",
@@ -9363,14 +9043,6 @@
           "normal": "月亮事件",
           "expert": "月亮事件",
           "master": "月亮事件"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "天界柱 AI"
         }
       },
       {
@@ -9518,14 +9190,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "天界柱 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "0",
@@ -9670,14 +9334,6 @@
         }
       },
       {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "天界柱 AI"
-        }
-      },
-      {
         "label": "伤害",
         "modes": {
           "normal": "0",
@@ -9819,14 +9475,6 @@
           "normal": "月亮事件",
           "expert": "月亮事件",
           "master": "月亮事件"
-        }
-      },
-      {
-        "label": "AI 类型",
-        "modes": {
-          "normal": "",
-          "expert": "",
-          "master": "天界柱 AI"
         }
       },
       {

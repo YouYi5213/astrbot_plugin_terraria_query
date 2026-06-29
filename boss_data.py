@@ -52,7 +52,7 @@ MANIFEST_JSON = os.path.join(CATEGORIES_DIR, "manifest.json")
 BOSS_OVERVIEW_PAGE = "Bosses"
 HOMEPAGE_TITLE = "Terraria Wiki"
 BOSS_BOX_ID = "box-bosses"
-_BOSS_SKIP_STAT_LABELS = frozenset({"免疫", "Immunities"})
+_BOSS_SKIP_STAT_LABELS = frozenset({"免疫", "Immunities", "AI 类型", "AI type", "AI Type"})
 _MODE_ORDER = ("normal", "expert", "master")
 _MODE_LABELS = {"normal": "经典", "expert": "专家", "master": "大师"}
 
@@ -536,6 +536,30 @@ def _parse_boss_stats_table(table: Tag) -> list[dict[str, Any]]:
         modes = _parse_mode_text_lines(td)
         rows.append({"label": label, "modes": modes})
     return rows
+
+
+def _prune_boss_skipped_stats(boss: dict[str, Any]) -> int:
+    """移除 Boss / 部位 stats 中不需要展示的行（如免疫、AI 类型）。"""
+    removed = 0
+    stats = boss.get("stats")
+    if isinstance(stats, list):
+        kept = [row for row in stats if row.get("label") not in _BOSS_SKIP_STAT_LABELS]
+        removed += len(stats) - len(kept)
+        if removed:
+            boss["stats"] = kept
+    for part in boss.get("parts") or []:
+        if isinstance(part, dict):
+            removed += _prune_boss_skipped_stats(part)
+    return removed
+
+
+def purge_skipped_boss_stats(bosses: dict[str, dict]) -> int:
+    """从 Boss 库批量移除跳过的 stats 行。"""
+    removed = 0
+    for boss in bosses.values():
+        if isinstance(boss, dict):
+            removed += _prune_boss_skipped_stats(boss)
+    return removed
 
 
 def _parse_boss_debuff_section(section: Tag | None) -> dict[str, Any] | None:
@@ -1035,6 +1059,7 @@ async def refresh_bosses(
         new_count += 1
 
     apply_boss_overview_metadata(bosses)
+    purge_skipped_boss_stats(bosses)
 
     image_urls = _collect_boss_image_urls(bosses)
     images_total = len(image_urls)
@@ -1108,6 +1133,7 @@ def ingest_bosses_local(*, force: bool = False, download_images: bool = True) ->
             bosses.setdefault(key, value)
 
     apply_boss_overview_metadata(bosses)
+    purge_skipped_boss_stats(bosses)
 
     with open(BOSSES_JSON, "w", encoding="utf-8") as f:
         json.dump(bosses, f, ensure_ascii=False, indent=2)

@@ -3581,7 +3581,8 @@ async def update_wiki_data(
             except (json.JSONDecodeError, OSError):
                 bosses_raw = {}
         legacy_purge_bosses = purge_legacy_bosses(bosses_raw)
-        if legacy_purge_bosses:
+        boss_stats_purge = _boss_data_module().purge_skipped_boss_stats(bosses_raw)
+        if legacy_purge_bosses or boss_stats_purge:
             with open(bosses_path, "w", encoding="utf-8") as f:
                 json.dump(bosses_raw, f, ensure_ascii=False, indent=2)
         legacy_item_result = await _legacy_item_data_module().ingest_legacy_items_into(

@@ -12,6 +12,7 @@ from boss_data import (  # noqa: E402
     load_boss_catalog_from_overview,
     load_bosses_for_plugin,
     parse_boss_page_file,
+    purge_skipped_boss_stats,
 )
 
 
@@ -61,6 +62,7 @@ def test_parse_moon_lord_boss():
     assert parsed.get("stats")
     stat_labels = {row["label"] for row in parsed["stats"]}
     assert "免疫" not in stat_labels
+    assert "AI 类型" not in stat_labels
     assert "最大生命值" in stat_labels
     assert len(parsed.get("parts") or []) == 3
     part_names = {part["name"] for part in parsed["parts"]}
@@ -177,3 +179,31 @@ def test_build_bosses_from_mirror():
     assert len(bosses) >= 30
     assert "月亮领主" in bosses
     assert "克苏鲁之眼" in bosses
+    for boss in bosses.values():
+        labels = {row["label"] for row in boss.get("stats") or []}
+        assert "AI 类型" not in labels
+        for part in boss.get("parts") or []:
+            part_labels = {row["label"] for row in part.get("stats") or []}
+            assert "AI 类型" not in part_labels
+
+
+def test_purge_skipped_boss_stats_removes_ai_type():
+    bosses = {
+        "示例": {
+            "stats": [
+                {"label": "伤害", "modes": {"normal": "10"}},
+                {"label": "AI 类型", "modes": {"master": "示例 AI"}},
+            ],
+            "parts": [
+                {
+                    "stats": [
+                        {"label": "AI 类型", "modes": {"master": "部位 AI"}},
+                    ]
+                }
+            ],
+        }
+    }
+    removed = purge_skipped_boss_stats(bosses)
+    assert removed == 2
+    assert "AI 类型" not in {s["label"] for s in bosses["示例"]["stats"]}
+    assert bosses["示例"]["parts"][0]["stats"] == []

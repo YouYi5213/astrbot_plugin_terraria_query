@@ -207,7 +207,7 @@ CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
 CARD_BOTTOM_EXTRA = 10
-CARD_VERSION = "v54"
+CARD_VERSION = "v55"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -3143,6 +3143,29 @@ def _boss_single_column_layout(
     return {"x": outer_left, "col_w": max(1, outer_w)}
 
 
+def _boss_legacy_split_columns(
+    card_width: int = BOSS_CARD_WIDTH,
+) -> tuple[dict, dict]:
+    """旧版 Boss：属性左栏 + 掉落右栏，复用原专家/大师列空间。"""
+    outer_left = CARD_PADDING + 20
+    outer_w = card_width - CARD_PADDING * 2 - 40
+    gap = 24
+    left_w = max(260, int(outer_w * 0.36))
+    right_w = max(1, outer_w - left_w - gap)
+    return (
+        {"x": outer_left, "col_w": left_w},
+        {"x": outer_left + left_w + gap, "col_w": right_w},
+    )
+
+
+def _boss_has_normal_drops(drops: dict | None) -> bool:
+    if not drops:
+        return False
+    items_by_mode = drops.get("items") or {}
+    money = drops.get("money") or {}
+    return bool(items_by_mode.get("normal")) or _boss_money_has_content(money)
+
+
 def _boss_mode_column_layout(
     card_width: int = BOSS_CARD_WIDTH,
     *,
@@ -3362,6 +3385,31 @@ def _calc_boss_mode_stats_area(
     return 34 + content_h + pad * 2 + 12
 
 
+def _draw_boss_single_stats_content(
+    draw,
+    y: int,
+    stats: list[dict],
+    font_label,
+    font_value,
+    col: dict,
+) -> int:
+    x = col["x"]
+    col_w = col["col_w"]
+    for stat in stats:
+        value = _boss_stat_display_value(stat, "normal")
+        if not value:
+            continue
+        label = stat.get("label", "")
+        y = _draw_wrapped_text_block(
+            draw, x, y, f"{label}:", font_label, col_w - 8, COLORS["label"]
+        )
+        y = _draw_wrapped_text_block(
+            draw, x, y, value, font_value, col_w - 8, COLORS["value"]
+        )
+        y += 6
+    return y
+
+
 def _draw_boss_single_stats(
     draw,
     y: int,
@@ -3377,21 +3425,7 @@ def _draw_boss_single_stats(
     draw.text((CARD_PADDING + 10, y), ui["boss_stats"], fill=COLORS["accent"], font=font_header)
     y += 30
     col = _boss_single_column_layout(card_width)
-    x = col["x"]
-    col_w = col["col_w"]
-    for stat in stats:
-        value = _boss_stat_display_value(stat, "normal")
-        if not value:
-            continue
-        label = stat.get("label", "")
-        y = _draw_wrapped_text_block(
-            draw, x, y, f"{label}:", font_label, col_w - 8, COLORS["label"]
-        )
-        y = _draw_wrapped_text_block(
-            draw, x, y, value, font_value, col_w - 8, COLORS["value"]
-        )
-        y += 6
-    return y + 8
+    return _draw_boss_single_stats_content(draw, y, stats, font_label, font_value, col) + 8
 
 
 def _draw_boss_mode_stats(
@@ -3794,15 +3828,14 @@ def _calc_boss_mode_drops_area(
     return 34 + content_h + pad * 2 + 12
 
 
-def _draw_boss_single_drops(
+def _draw_boss_single_drops_content(
     draw,
     card: Image.Image,
     y: int,
     drops: dict,
-    font_header,
     font_small,
     ui: dict,
-    card_width: int = BOSS_CARD_WIDTH,
+    col: dict,
 ) -> int:
     items_by_mode = drops.get("items") or {}
     money = drops.get("money") or {}
@@ -3811,9 +3844,6 @@ def _draw_boss_single_drops(
     if not items and not coins:
         return y
 
-    draw.text((CARD_PADDING + 10, y), ui["boss_drops"], fill=COLORS["accent"], font=font_header)
-    y += 30
-    col = _boss_single_column_layout(card_width)
     x = col["x"]
     col_w = col["col_w"]
     cy = y
@@ -3847,7 +3877,26 @@ def _draw_boss_single_drops(
                 draw, text_x, name_y, chance, font_small, text_w, COLORS["label"]
             )
         cy += row_h
-    return cy + 8
+    return cy
+
+
+def _draw_boss_single_drops(
+    draw,
+    card: Image.Image,
+    y: int,
+    drops: dict,
+    font_header,
+    font_small,
+    ui: dict,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    if not _boss_has_normal_drops(drops):
+        return y
+
+    draw.text((CARD_PADDING + 10, y), ui["boss_drops"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    col = _boss_single_column_layout(card_width)
+    return _draw_boss_single_drops_content(draw, card, y, drops, font_small, ui, col) + 8
 
 
 def _draw_boss_mode_drops(
@@ -3932,6 +3981,73 @@ def _draw_boss_mode_drops(
             cy += row_h
         col_bottoms[idx] = cy
     return box_top + box_h + 8
+
+
+def _calc_boss_legacy_stats_drops_area(
+    measure,
+    stats: list[dict],
+    drops: dict | None,
+    font_label,
+    font_value,
+    font_small,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    has_stats = bool(stats)
+    has_drops = _boss_has_normal_drops(drops)
+    if not has_stats and not has_drops:
+        return 0
+    if has_stats and has_drops:
+        left, right = _boss_legacy_split_columns(card_width)
+        stats_h = _calc_boss_single_stats_content_height(
+            measure, stats, left, font_label, font_value
+        )
+        drops_h = _calc_boss_single_drops_content_height(measure, drops, right, font_small)
+        return 34 + max(stats_h, drops_h) + 8
+    if has_stats:
+        return _calc_boss_mode_stats_area(
+            measure, stats, font_label, font_value, card_width, single_mode=True
+        )
+    return _calc_boss_mode_drops_area(
+        measure, drops, font_small, card_width, single_mode=True
+    )
+
+
+def _draw_boss_legacy_stats_drops(
+    draw,
+    card: Image.Image,
+    y: int,
+    stats: list[dict],
+    drops: dict | None,
+    font_header,
+    font_label,
+    font_value,
+    font_small,
+    ui: dict,
+    card_width: int = BOSS_CARD_WIDTH,
+) -> int:
+    has_stats = bool(stats)
+    has_drops = _boss_has_normal_drops(drops)
+    if not has_stats and not has_drops:
+        return y
+    if has_stats and has_drops:
+        left, right = _boss_legacy_split_columns(card_width)
+        draw.text((left["x"], y), ui["boss_stats"], fill=COLORS["accent"], font=font_header)
+        draw.text((right["x"], y), ui["boss_drops"], fill=COLORS["accent"], font=font_header)
+        content_y = y + 30
+        stats_bottom = _draw_boss_single_stats_content(
+            draw, content_y, stats, font_label, font_value, left
+        )
+        drops_bottom = _draw_boss_single_drops_content(
+            draw, card, content_y, drops, font_small, ui, right
+        )
+        return max(stats_bottom, drops_bottom) + 8
+    if has_stats:
+        return _draw_boss_single_stats(
+            draw, y, stats, font_header, font_label, font_value, ui, card_width
+        )
+    return _draw_boss_single_drops(
+        draw, card, y, drops, font_header, font_small, ui, card_width
+    )
 
 
 def _calc_boss_part_content_height(
@@ -4842,9 +4958,20 @@ def _generate_boss_card(data: dict, *, single_mode: bool = False) -> str:
     parts = data.get("parts") or []
     if not single_mode:
         single_mode = _boss_uses_single_mode(data)
-    stats_area = _calc_boss_mode_stats_area(
-        measure, stats, font_label, font_small, card_w, single_mode=single_mode
-    )
+    if single_mode:
+        stats_drops_area = _calc_boss_legacy_stats_drops_area(
+            measure, stats, drops, font_label, font_small, font_small, card_w
+        )
+        stats_area = 0
+        drops_area = 0
+    else:
+        stats_drops_area = 0
+        stats_area = _calc_boss_mode_stats_area(
+            measure, stats, font_label, font_small, card_w, single_mode=False
+        )
+        drops_area = _calc_boss_mode_drops_area(
+            measure, drops, font_small, card_w, single_mode=False
+        )
     debuff_area = _calc_boss_debuff_area(
         measure,
         debuff,
@@ -4854,9 +4981,6 @@ def _generate_boss_card(data: dict, *, single_mode: bool = False) -> str:
         ui,
         card_w,
         single_mode=single_mode,
-    )
-    drops_area = _calc_boss_mode_drops_area(
-        measure, drops, font_small, card_w, single_mode=single_mode
     )
     parts_area = _calc_boss_parts_area(
         measure,
@@ -4872,6 +4996,7 @@ def _generate_boss_card(data: dict, *, single_mode: bool = False) -> str:
         CARD_PADDING * 2
         + title_area
         + top_row_h
+        + stats_drops_area
         + stats_area
         + debuff_area
         + drops_area
@@ -4919,9 +5044,36 @@ def _generate_boss_card(data: dict, *, single_mode: bool = False) -> str:
         text_y = _draw_boss_text_block(draw, text_y, spawn_lines, font_small, top_text_w, top_text_x)
     y += top_row_h
 
-    y = _draw_boss_mode_stats(
-        draw, y, stats, font_header, font_label, font_small, ui, card_w, single_mode=single_mode
-    )
+    if single_mode:
+        y = _draw_boss_legacy_stats_drops(
+            draw,
+            card,
+            y,
+            stats,
+            drops,
+            font_header,
+            font_label,
+            font_small,
+            font_small,
+            ui,
+            card_w,
+        )
+    else:
+        y = _draw_boss_mode_stats(
+            draw, y, stats, font_header, font_label, font_small, ui, card_w, single_mode=False
+        )
+        y = _draw_boss_mode_drops(
+            draw,
+            card,
+            y,
+            drops,
+            font_header,
+            font_label,
+            font_small,
+            ui,
+            card_w,
+            single_mode=False,
+        )
     if debuff:
         y = _draw_boss_debuff_section(
             draw,
@@ -4935,18 +5087,6 @@ def _generate_boss_card(data: dict, *, single_mode: bool = False) -> str:
             card_w,
             single_mode=single_mode,
         )
-    y = _draw_boss_mode_drops(
-        draw,
-        card,
-        y,
-        drops,
-        font_header,
-        font_label,
-        font_small,
-        ui,
-        card_w,
-        single_mode=single_mode,
-    )
     y = _draw_boss_parts_section(
         draw,
         card,

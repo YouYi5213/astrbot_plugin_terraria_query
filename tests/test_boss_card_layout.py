@@ -45,6 +45,7 @@ def _import_main_boss_layout():
     _bootstrap_plugin_package()
     from astrbot_plugin_terraria_query.main import (
         _boss_uses_single_mode,
+        _calc_boss_legacy_stats_drops_area,
         _calc_boss_mode_drops_area,
         _calc_boss_mode_stats_area,
         _display_boss,
@@ -56,6 +57,7 @@ def _import_main_boss_layout():
         _boss_uses_single_mode,
         _calc_boss_mode_stats_area,
         _calc_boss_mode_drops_area,
+        _calc_boss_legacy_stats_drops_area,
         _display_boss,
         _try_get_font,
         load_bosses_for_plugin,
@@ -67,6 +69,7 @@ def test_legacy_boss_single_mode_layout_smaller_than_three_columns():
         uses_single,
         calc_stats_area,
         calc_drops_area,
+        calc_legacy_area,
         display_boss,
         try_get_font,
         load_bosses,
@@ -83,14 +86,21 @@ def test_legacy_boss_single_mode_layout_smaller_than_three_columns():
     three_col_stats = calc_stats_area(
         measure, display["stats"], font_label, font_small, single_mode=False
     )
-    single_stats = calc_stats_area(
-        measure, display["stats"], font_label, font_small, single_mode=True
-    )
-    assert single_stats < three_col_stats
-
     three_col_drops = calc_drops_area(measure, display["drops"], font_small, single_mode=False)
-    single_drops = calc_drops_area(measure, display["drops"], font_small, single_mode=True)
-    assert single_drops < three_col_drops
+    legacy_area = calc_legacy_area(
+        measure,
+        display["stats"],
+        display["drops"],
+        font_label,
+        font_small,
+        font_small,
+    )
+    stacked_single = calc_stats_area(
+        measure, display["stats"], font_label, font_small, single_mode=True
+    ) + calc_drops_area(measure, display["drops"], font_small, single_mode=True)
+
+    assert legacy_area < three_col_stats + three_col_drops
+    assert legacy_area < stacked_single
 
 
 def test_compact_boss_damage_merges_number_and_note():

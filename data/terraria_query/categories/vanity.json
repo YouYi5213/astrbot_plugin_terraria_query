@@ -3931,13 +3931,13 @@
           "entries": [
             {
               "name": "毒兔兔",
-              "image": "Vicious_Bunny.gif",
+              "image": "Vicious_Bunny.png",
               "quantity": "1",
               "chance": "1.33%"
             },
             {
               "name": "腐化兔兔",
-              "image": "Corrupt_Bunny.gif",
+              "image": "Corrupt_Bunny.png",
               "quantity": "1",
               "chance": "1.33%"
             }
@@ -3949,13 +3949,13 @@
           "entries": [
             {
               "name": "毒兔兔",
-              "image": "Vicious_Bunny.gif",
+              "image": "Vicious_Bunny.png",
               "quantity": "1",
               "chance": "1.33%"
             },
             {
               "name": "腐化兔兔",
-              "image": "Corrupt_Bunny.gif",
+              "image": "Corrupt_Bunny.png",
               "quantity": "1",
               "chance": "1.33%"
             }
@@ -3967,13 +3967,13 @@
           "entries": [
             {
               "name": "毒兔兔",
-              "image": "Vicious_Bunny.gif",
+              "image": "Vicious_Bunny.png",
               "quantity": "1",
               "chance": "1.33%"
             },
             {
               "name": "腐化兔兔",
-              "image": "Corrupt_Bunny.gif",
+              "image": "Corrupt_Bunny.png",
               "quantity": "1",
               "chance": "1.33%"
             }

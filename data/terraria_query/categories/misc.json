@@ -6499,25 +6499,25 @@
           "entries": [
             {
               "name": "日耀柱",
-              "image": "34px-Solar_Pillar.png",
+              "image": "Solar_Pillar.png",
               "quantity": "12-60",
               "chance": "100%"
             },
             {
               "name": "星旋柱",
-              "image": "34px-Vortex_Pillar.png",
+              "image": "Vortex_Pillar.png",
               "quantity": "12-60",
               "chance": "100%"
             },
             {
               "name": "星云柱",
-              "image": "34px-Nebula_Pillar.png",
+              "image": "Nebula_Pillar.png",
               "quantity": "12-60",
               "chance": "100%"
             },
             {
               "name": "星尘柱",
-              "image": "34px-Stardust_Pillar.png",
+              "image": "Stardust_Pillar.png",
               "quantity": "12-60",
               "chance": "100%"
             }
@@ -6529,25 +6529,25 @@
           "entries": [
             {
               "name": "日耀柱",
-              "image": "34px-Solar_Pillar.png",
+              "image": "Solar_Pillar.png",
               "quantity": "24-100",
               "chance": "100%"
             },
             {
               "name": "星旋柱",
-              "image": "34px-Vortex_Pillar.png",
+              "image": "Vortex_Pillar.png",
               "quantity": "24-100",
               "chance": "100%"
             },
             {
               "name": "星云柱",
-              "image": "34px-Nebula_Pillar.png",
+              "image": "Nebula_Pillar.png",
               "quantity": "24-100",
               "chance": "100%"
             },
             {
               "name": "星尘柱",
-              "image": "34px-Stardust_Pillar.png",
+              "image": "Stardust_Pillar.png",
               "quantity": "24-100",
               "chance": "100%"
             }
@@ -6559,25 +6559,25 @@
           "entries": [
             {
               "name": "日耀柱",
-              "image": "34px-Solar_Pillar.png",
+              "image": "Solar_Pillar.png",
               "quantity": "24-100",
               "chance": "100%"
             },
             {
               "name": "星旋柱",
-              "image": "34px-Vortex_Pillar.png",
+              "image": "Vortex_Pillar.png",
               "quantity": "24-100",
               "chance": "100%"
             },
             {
               "name": "星云柱",
-              "image": "34px-Nebula_Pillar.png",
+              "image": "Nebula_Pillar.png",
               "quantity": "24-100",
               "chance": "100%"
             },
             {
               "name": "星尘柱",
-              "image": "34px-Stardust_Pillar.png",
+              "image": "Stardust_Pillar.png",
               "quantity": "24-100",
               "chance": "100%"
             }
@@ -27596,7 +27596,7 @@
           "entries": [
             {
               "name": "奥库瑞姆",
-              "image": "Ocram.png",
+              "image": "Ocram_(Phase_1).gif",
               "quantity": "15–25  / 5–16",
               "chance": "100%"
             }
@@ -29751,7 +29751,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "75%"
             }
@@ -29763,7 +29763,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "75%"
             }
@@ -29775,7 +29775,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "75%"
             }
@@ -30628,7 +30628,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "90%"
             }
@@ -30640,7 +30640,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "90%"
             }
@@ -30652,7 +30652,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "90%"
             }
@@ -30752,7 +30752,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "90%"
             }
@@ -30764,7 +30764,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "90%"
             }
@@ -30776,7 +30776,7 @@
           "entries": [
             {
               "name": "僵尸新郎",
-              "image": "The_Groom.gif",
+              "image": "The_Groom.png",
               "quantity": "1",
               "chance": "90%"
             }

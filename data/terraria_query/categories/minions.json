@@ -315,7 +315,7 @@
             },
             {
               "name": "僵尸",
-              "image": "30px-Slimed_Zombie.gif",
+              "image": "Slimed_Zombie.gif",
               "quantity": "1",
               "chance": "0.01%"
             },
@@ -477,7 +477,7 @@
             },
             {
               "name": "僵尸",
-              "image": "30px-Slimed_Zombie.gif",
+              "image": "Slimed_Zombie.gif",
               "quantity": "1",
               "chance": "0.014%"
             },
@@ -639,7 +639,7 @@
             },
             {
               "name": "僵尸",
-              "image": "30px-Slimed_Zombie.gif",
+              "image": "Slimed_Zombie.gif",
               "quantity": "1",
               "chance": "0.014%"
             },

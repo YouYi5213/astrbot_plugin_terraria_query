@@ -178,7 +178,7 @@
             },
             {
               "name": "僵尸",
-              "image": "30px-Slimed_Zombie.gif",
+              "image": "Slimed_Zombie.gif",
               "quantity": "1–2",
               "chance": "100%"
             },
@@ -280,7 +280,7 @@
             },
             {
               "name": "恶翅史莱姆",
-              "image": "37px-Corrupt_Slime.gif",
+              "image": "Corrupt_Slime.gif",
               "quantity": "2–4",
               "chance": "100%"
             },
@@ -406,7 +406,7 @@
             },
             {
               "name": "僵尸",
-              "image": "30px-Slimed_Zombie.gif",
+              "image": "Slimed_Zombie.gif",
               "quantity": "1–2",
               "chance": "100%"
             },
@@ -508,7 +508,7 @@
             },
             {
               "name": "恶翅史莱姆",
-              "image": "37px-Corrupt_Slime.gif",
+              "image": "Corrupt_Slime.gif",
               "quantity": "2–4",
               "chance": "100%"
             },
@@ -634,7 +634,7 @@
             },
             {
               "name": "僵尸",
-              "image": "30px-Slimed_Zombie.gif",
+              "image": "Slimed_Zombie.gif",
               "quantity": "1–2",
               "chance": "100%"
             },
@@ -736,7 +736,7 @@
             },
             {
               "name": "恶翅史莱姆",
-              "image": "37px-Corrupt_Slime.gif",
+              "image": "Corrupt_Slime.gif",
               "quantity": "2–4",
               "chance": "100%"
             },
@@ -1236,7 +1236,7 @@
             },
             {
               "name": "僵尸",
-              "image": "32px-Pincushion_Zombie.gif",
+              "image": "Pincushion_Zombie.gif",
               "quantity": "1–9",
               "chance": "100%"
             },
@@ -1278,7 +1278,7 @@
             },
             {
               "name": "僵尸",
-              "image": "32px-Pincushion_Zombie.gif",
+              "image": "Pincushion_Zombie.gif",
               "quantity": "1–9",
               "chance": "100%"
             },
@@ -1320,7 +1320,7 @@
             },
             {
               "name": "僵尸",
-              "image": "32px-Pincushion_Zombie.gif",
+              "image": "Pincushion_Zombie.gif",
               "quantity": "1–9",
               "chance": "100%"
             },

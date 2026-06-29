@@ -21,6 +21,8 @@ from prepare_data import (  # noqa: E402
     parse_item_page,
     resync_set_piece_locales,
     resolve_local_item_image,
+    resolve_local_entity_image,
+    normalize_drop_images_in_items,
     strip_english_fields,
 )
 from bs4 import BeautifulSoup  # noqa: E402
@@ -39,6 +41,53 @@ def test_resolve_local_item_image_falls_back_to_item_image():
         resolve_local_item_image("钴头盔", items, "Missing_Old_Variant_(old).png")
         == "Cobalt_Helmet.png"
     )
+
+
+def test_resolve_local_entity_image_falls_back_to_boss_and_png():
+    bosses = {"奥库瑞姆": {"name": "奥库瑞姆", "image": "Ocram_(Phase_1).gif"}}
+    assert (
+        resolve_local_entity_image("奥库瑞姆", "Ocram.png", bosses=bosses)
+        == "Ocram_(Phase_1).gif"
+    )
+    items = {"脑子": {"name": "脑子", "image": "Brain.png"}}
+    # The_Groom.png must exist in images/ for this test
+    groom_png = ROOT / "data" / "terraria_query" / "images" / "The_Groom.png"
+    if groom_png.is_file():
+        assert (
+            resolve_local_entity_image("僵尸新郎", "The_Groom.gif", items=items)
+            == "The_Groom.png"
+        )
+
+
+def test_normalize_drop_images_in_items_updates_ocram_entry():
+    bosses = {"奥库瑞姆": {"name": "奥库瑞姆", "image": "Ocram_(Phase_1).gif"}}
+    items = {
+        "枯萎之魂": {
+            "drops": {
+                "modes": [
+                    {
+                        "mode": "normal",
+                        "label": "经典",
+                        "entries": [
+                            {
+                                "name": "奥库瑞姆",
+                                "image": "Ocram.png",
+                                "quantity": "15–25",
+                                "chance": "100%",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    groom_png = ROOT / "data" / "terraria_query" / "images" / "Ocram_(Phase_1).gif"
+    if not groom_png.is_file():
+        return
+    count = normalize_drop_images_in_items(items, bosses=bosses)
+    assert count == 1
+    entry = items["枯萎之魂"]["drops"]["modes"][0]["entries"][0]
+    assert entry["image"] == "Ocram_(Phase_1).gif"
 
 
 def test_is_set_item_detects_armor_and_vanity():

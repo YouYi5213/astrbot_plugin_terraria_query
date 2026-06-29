@@ -2684,6 +2684,131 @@ def resolve_local_item_image(
     return preferred or (items.get(name, {}).get("image") if items and name else "") or ""
 
 
+def resolve_local_entity_image(
+    entity_name: str,
+    preferred: str = "",
+    *,
+    items: dict[str, dict] | None = None,
+    bosses: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
+) -> str:
+    """为「来自」表格实体图标选取本地存在的图片（回退 Boss/NPC/物品库及 png↔gif）。"""
+    candidates: list[str] = []
+
+    def add(fn: str) -> None:
+        if fn and fn not in candidates:
+            candidates.append(fn)
+
+    if preferred:
+        add(preferred)
+        add(_normalize_image_filename(preferred))
+        low = preferred.lower()
+        if low.endswith(".gif"):
+            add(preferred[:-4] + ".png")
+        elif low.endswith(".png"):
+            add(preferred[:-4] + ".gif")
+
+    for registry in (bosses, npcs, items):
+        if not registry or not entity_name:
+            continue
+        entry = registry.get(entity_name) or {}
+        img = entry.get("image") or ""
+        if img:
+            add(img)
+            add(_normalize_image_filename(img))
+
+    for fn in candidates:
+        if _local_image_exists(fn):
+            return fn
+    return preferred or ""
+
+
+def normalize_drop_images_in_items(
+    items: dict[str, dict],
+    bosses: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
+) -> int:
+    """将掉落来源条目的 image 规范为本地可加载的文件名。"""
+    updated = 0
+    for item in items.values():
+        drops = item.get("drops")
+        if not isinstance(drops, dict):
+            continue
+        for mode in drops.get("modes", []):
+            for entry in mode.get("entries", []):
+                if not entry:
+                    continue
+                name = entry.get("name", "")
+                preferred = entry.get("image", "")
+                resolved = resolve_local_entity_image(
+                    name,
+                    preferred,
+                    items=items,
+                    bosses=bosses,
+                    npcs=npcs,
+                )
+                if resolved and resolved != preferred:
+                    entry["image"] = resolved
+                    updated += 1
+    return updated
+
+
+def collect_unresolved_drop_image_urls(
+    items: dict[str, dict],
+    bosses: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
+) -> dict[str, str]:
+    """收集规范化后仍缺失的掉落实体图片 URL。"""
+    urls: dict[str, str] = {}
+    for item in items.values():
+        drops = item.get("drops")
+        if not isinstance(drops, dict):
+            continue
+        for mode in drops.get("modes", []):
+            for entry in mode.get("entries", []):
+                name = entry.get("name", "")
+                preferred = entry.get("image", "")
+                resolved = resolve_local_entity_image(
+                    name,
+                    preferred,
+                    items=items,
+                    bosses=bosses,
+                    npcs=npcs,
+                )
+                fn = resolved or preferred
+                if fn and not _local_image_exists(fn):
+                    urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    return urls
+
+
+async def backfill_missing_drop_entity_images(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+    bosses: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
+) -> dict[str, int]:
+    """下载仍缺失的掉落实体图，并再次规范化 image 字段。"""
+    normalized = normalize_drop_images_in_items(items, bosses, npcs)
+    urls = collect_unresolved_drop_image_urls(items, bosses, npcs)
+    images_total = len(urls)
+    images_ok = 0
+    if urls:
+        semaphore = asyncio.Semaphore(8)
+        results = await asyncio.gather(
+            *[
+                download_image(session, fn, url, semaphore)
+                for fn, url in urls.items()
+            ]
+        )
+        images_ok = sum(1 for r in results if r)
+    normalized += normalize_drop_images_in_items(items, bosses, npcs)
+    return {
+        "normalized": normalized,
+        "images_total": images_total,
+        "images_ok": images_ok,
+    }
+
+
 def _iter_item_recipes(item: dict) -> list[dict]:
     recipes: list[dict] = []
     recipe = item.get("recipe")
@@ -3162,6 +3287,7 @@ async def update_wiki_data(
     legacy_item_tags = 0
     legacy_boss_tags = 0
     recipe_img_result: dict = {}
+    drop_entity_img_result: dict = {}
 
     connector = aiohttp.TCPConnector(limit=10)
     timeout = aiohttp.ClientTimeout(total=60)
@@ -3277,6 +3403,15 @@ async def update_wiki_data(
 
         recipe_img_result = await backfill_missing_recipe_images(session, items)
 
+        npcs = _npc_data_module().load_npcs_for_plugin(CATEGORIES_DIR)
+        drop_entity_img_result = await backfill_missing_drop_entity_images(
+            session, items, bosses, npcs
+        )
+        if drop_entity_img_result.get("images_ok"):
+            images_ok += drop_entity_img_result["images_ok"]
+        if drop_entity_img_result.get("images_total"):
+            images_total += drop_entity_img_result["images_total"]
+
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
         piece_sync_count = resync_set_piece_locales(items)
@@ -3322,6 +3457,9 @@ async def update_wiki_data(
         "recipe_images_ok": recipe_img_result.get("images_ok", 0),
         "recipe_images_total": recipe_img_result.get("images_total", 0),
         "recipe_images_normalized": recipe_img_result.get("normalized", 0),
+        "drop_entity_images_ok": drop_entity_img_result.get("images_ok", 0),
+        "drop_entity_images_total": drop_entity_img_result.get("images_total", 0),
+        "drop_entity_images_normalized": drop_entity_img_result.get("normalized", 0),
     }
 
 

@@ -46,6 +46,7 @@ from .prepare_data import (
     parse_sell_text_to_coins,
     resolve_bool_icon,
     resolve_local_item_image,
+    resolve_local_entity_image,
     update_wiki_data,
 )
 
@@ -207,7 +208,7 @@ CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
 CARD_BOTTOM_EXTRA = 10
-CARD_VERSION = "v55"
+CARD_VERSION = "v56"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -950,8 +951,22 @@ def _draw_stat_value(
     return max(STAT_MIN_ROW, len(lines) * STAT_LINE_HEIGHT + 6)
 
 
-def _load_entity_image(filename: str) -> Image.Image | None:
-    img = _load_item_image(filename)
+def _load_entity_image(
+    filename: str,
+    entity_name: str = "",
+    *,
+    items: dict[str, dict] | None = None,
+    bosses: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
+) -> Image.Image | None:
+    resolved = resolve_local_entity_image(
+        entity_name,
+        filename,
+        items=items,
+        bosses=bosses,
+        npcs=npcs,
+    )
+    img = _load_item_image(resolved)
     if not img:
         return None
     return _fit_image(img, 48, 36)
@@ -1021,6 +1036,10 @@ def _draw_drops_section(
     font_small,
     ui: dict,
     locale: str = "zh",
+    *,
+    items: dict[str, dict] | None = None,
+    bosses: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
 ) -> int:
     block = drops_display_block(drops, locale)
     if not block:
@@ -1045,7 +1064,13 @@ def _draw_drops_section(
 
     for entry in block.get("entries", []):
         row_h = _drop_entry_row_height(draw, entry, font_small, col_qty, col_chance)
-        img = _load_entity_image(entry.get("image", ""))
+        img = _load_entity_image(
+            entry.get("image", ""),
+            entry.get("name", ""),
+            items=items,
+            bosses=bosses,
+            npcs=npcs,
+        )
         entity_slot_w = 48
         text_x = col_entity + entity_slot_w + 8
         if img:
@@ -2050,7 +2075,12 @@ def _draw_set_pieces_section(
     return y
 
 
-def _generate_item_card(data: dict, items: dict[str, dict] | None = None) -> str:
+def _generate_item_card(
+    data: dict,
+    items: dict[str, dict] | None = None,
+    bosses: dict[str, dict] | None = None,
+    npcs: dict[str, dict] | None = None,
+) -> str:
     _ensure_dirs()
     ui = _card_ui_for_data(data)
     locale = "zh"
@@ -2299,7 +2329,19 @@ def _generate_item_card(data: dict, items: dict[str, dict] | None = None) -> str
                 width=1,
             )
             y += 20
-        _draw_drops_section(draw, card, y, drops, font_header, font_small, ui, locale)
+        _draw_drops_section(
+            draw,
+            card,
+            y,
+            drops,
+            font_header,
+            font_small,
+            ui,
+            locale,
+            items=items,
+            bosses=bosses,
+            npcs=npcs,
+        )
 
     card.convert("RGB").save(output_path, "PNG")
     return output_path
@@ -5600,7 +5642,9 @@ class TerrariaQueryPlugin(Star):
             return
         display = _display_item(item)
         try:
-            card_path = _generate_item_card(display, self.items)
+            card_path = _generate_item_card(
+                display, self.items, self.bosses, self.npcs
+            )
             yield event.image_result(card_path)
         except Exception as e:
             logger.error(f"生成图片失败 ({key}): {e}")

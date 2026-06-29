@@ -924,7 +924,13 @@ def load_bosses_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, di
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return data if isinstance(data, dict) else {}
+        if not isinstance(data, dict):
+            return {}
+        return {
+            key: value
+            for key, value in data.items()
+            if isinstance(value, dict) and not value.get("legacy_boss")
+        }
     except (json.JSONDecodeError, OSError):
         return {}
 
@@ -1028,13 +1034,7 @@ async def refresh_bosses(
         bosses[key] = parsed
         new_count += 1
 
-    ingest_legacy_bosses_into(bosses)
     apply_boss_overview_metadata(bosses)
-    try:
-        from .legacy_metadata import backfill_internal_tags_on_bosses
-    except ImportError:
-        from legacy_metadata import backfill_internal_tags_on_bosses
-    backfill_internal_tags_on_bosses(bosses)
 
     image_urls = _collect_boss_image_urls(bosses)
     images_total = len(image_urls)
@@ -1107,7 +1107,6 @@ def ingest_bosses_local(*, force: bool = False, download_images: bool = True) ->
         for key, value in existing.items():
             bosses.setdefault(key, value)
 
-    ingest_legacy_bosses_into(bosses)
     apply_boss_overview_metadata(bosses)
 
     with open(BOSSES_JSON, "w", encoding="utf-8") as f:

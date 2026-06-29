@@ -49,28 +49,45 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png",
-          "amount": "5"
-        },
-        {
-          "name": "叶绿矿",
-          "image": "Chlorophyte_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "叶绿砖",
-        "image": "Chlorophyte_Brick.png",
-        "amount": "5"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "叶绿矿是一种困难模式矿石。困难模式开始后，在地下层下半部分或更深处，位于丛林草附近的泥块（天然生成于地下丛林）偶尔会被转化为叶绿矿。采挖它至少需要镐斧或斧钻，其材料需要击败所有三个机械 Boss才能获得。\n\n叶绿矿是可再生的。它通过将相邻泥块和丛林草块转化为更多叶绿矿来缓慢自我蔓延。它还会通过将附近土块转化为泥块，以及将附近腐化草块、猩红草块、神圣草块、和普通草块转化为丛林草块来蔓延（注：草是一种物块）。叶绿矿仅当位于地下层下半部分或更深处时才能蔓延和转化物块。它只能自我蔓延至相邻图格（且仅当附近没有过多叶绿矿时），且只能转化最多 6 图格内的图格。\n\n有关叶绿矿的生成与扩散机制，以及在特殊世界种子中叶绿矿运作机制的区别，请参见技术细节章节。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "叶绿矿",
+            "image": "Chlorophyte_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "叶绿砖",
+          "image": "Chlorophyte_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "精金熔炉或钛金熔炉",
+        "ingredients": [
+          {
+            "name": "叶绿矿",
+            "image": "Chlorophyte_Ore.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "叶绿锭",
+          "image": "Chlorophyte_Bar.png"
+        }
+      }
+    ]
   },
   "夜明矿": {
     "name": "夜明矿",
@@ -122,23 +139,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png"
-        },
-        {
-          "name": "夜明矿",
-          "image": "Luminite.png"
-        }
-      ],
-      "result": {
-        "name": "夜明砖",
-        "image": "Luminite_Brick.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -198,7 +199,56 @@
       ]
     },
     "description": "夜明矿是一种困难模式、月亮领主后的矿石，仅掉落于月亮领主，数量为 70–90（90–110）个。它不会自然生成于世界中。\n\n制作所有物品（除了弹药、染料、和砖）需要总计 362 个夜明锭和 25 个夜明矿（1,473 个夜明矿；这需要打败月亮领主 17–22 /14–17次）。制作和一种月亮碎片有关的所有物品（即盔甲、翅膀、镐、和锤斧）总计需要 68 个夜明锭（272 个夜明矿）外加 85 个对应的月亮碎片；这只需要打败月亮领主 4 /3-4次。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "夜明矿",
+            "image": "Luminite.png"
+          }
+        ],
+        "result": {
+          "name": "夜明砖",
+          "image": "Luminite_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "夜明矿",
+            "image": "Luminite.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "夜明矿",
+            "image": "Luminite.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "虚空天塔柱",
+          "image": "Void_Monolith.png"
+        }
+      }
+    ]
   },
   "山铜矿": {
     "name": "山铜矿",
@@ -245,20 +295,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "山铜矿",
-          "image": "Orichalcum_Ore.png",
-          "amount": "4"
-        }
-      ],
-      "result": {
-        "name": "山铜锭",
-        "image": "Orichalcum_Bar.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -498,7 +535,61 @@
       ]
     },
     "description": "山铜矿属于困难模式早期的第二级矿石。摧毁第二个祭坛时，洞穴层会生成山铜矿或秘银矿。开采山铜矿需要钴镐/钯金镐或更强的镐。\n\n与所有困难模式早期矿石相同，之后每摧毁三个祭坛所生成的矿石数量会逐渐减少。它对爆炸物免疫（除了强力炸弹和粘性强力炸弹）。它可以从困难模式宝匣中获得。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "山铜矿",
+            "image": "Orichalcum_Ore.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "山铜锭",
+          "image": "Orichalcum_Bar.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "山铜矿",
+            "image": "Orichalcum_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "泡泡糖块",
+          "image": "Bubblegum_Block.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "山铜矿",
+            "image": "Orichalcum_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "粉砖",
+          "image": "Pink_Brick.png",
+          "amount": "5"
+        }
+      }
+    ]
   },
   "狱石": {
     "name": "狱石",
@@ -555,20 +646,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "狱石",
-          "image": "Hellstone.png"
-        }
-      ],
-      "result": {
-        "name": "余烬墙",
-        "image": "Ember_Wall.png",
-        "amount": "4"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -628,7 +706,186 @@
       ]
     },
     "description": "狱石是种困难模式之前的矿石，可发现于地狱。开采狱石至少需要梦魇镐或死亡使者镐，它们在困难模式之前不会被爆炸物破坏。在地狱开采时，狱石会释放出半个物块体积的熔岩。\n\n狱石会对接触它们的玩家施加燃烧减益。通过装备黑曜石骷髅头或其升级物，或者使用黑曜石皮药水可将该减益抵消。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "狱石",
+            "image": "Hellstone.png"
+          }
+        ],
+        "result": {
+          "name": "余烬墙",
+          "image": "Ember_Wall.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "狱石",
+            "image": "Hellstone.png"
+          }
+        ],
+        "result": {
+          "name": "岩浆墙",
+          "image": "Magma_Wall.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "狱石",
+            "image": "Hellstone.png"
+          }
+        ],
+        "result": {
+          "name": "灰渣墙",
+          "image": "Cinder_Wall.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "烈火药剂",
+          "image": "Flask_of_Fire.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png"
+          }
+        ],
+        "result": {
+          "name": "狱石砖",
+          "image": "Hellstone_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "3"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png"
+          }
+        ],
+        "result": {
+          "name": "狱石锭",
+          "image": "Hellstone_Bar.png"
+        }
+      },
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "狱石",
+            "image": "Hellstone.png"
+          }
+        ],
+        "result": {
+          "name": "阴燃石墙",
+          "image": "Smouldering_Stone_Wall.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "4"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "2"
+          },
+          {
+            "name": "水桶",
+            "image": "Water_Bucket.png"
+          }
+        ],
+        "result": {
+          "name": "黑曜石水槽",
+          "image": "Obsidian_Sink.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "6"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "2"
+          },
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "黑曜石箱",
+          "image": "Obsidian_Chest.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "4"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "黑曜石马桶",
+          "image": "Obsidian_Toilet.png"
+        }
+      }
+    ]
   },
   "猩红矿": {
     "name": "猩红矿",
@@ -675,25 +932,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "猩红矿",
-          "image": "Crimtane_Ore.png"
-        },
-        {
-          "name": "猩红石块",
-          "image": "Crimstone_Block.png",
-          "amount": "5"
-        }
-      ],
-      "result": {
-        "name": "猩红矿砖",
-        "image": "Crimtane_Brick.png",
-        "amount": "5"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -807,7 +1046,65 @@
       ]
     },
     "description": "猩红矿是种困难模式之前的矿石。它主要掉落自克苏鲁之脑，在猩红世界也可掉落自克苏鲁之眼。地下也会罕见找到小股猩红矿矿脉。在高度低于0 英尺时，开采猩红矿需要金镐或更强的镐，否则可以用任意镐。\n\n它是腐化之地的魔矿的猩红对应物。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png"
+          },
+          {
+            "name": "猩红石块",
+            "image": "Crimstone_Block.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "猩红矿砖",
+          "image": "Crimtane_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "猩红矿锭",
+          "image": "Crimtane_Bar.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "小雪怪皮毛",
+            "image": "Flinx_Fur.png",
+            "amount": "3"
+          },
+          {
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png",
+            "amount": "5"
+          },
+          {
+            "name": "晶状体",
+            "image": "Lens.png"
+          }
+        ],
+        "result": {
+          "name": "鹿华",
+          "image": "Deer_Thing.png"
+        }
+      }
+    ]
   },
   "矿石": {
     "name": "矿石",
@@ -911,25 +1208,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png",
-          "amount": "5"
-        },
-        {
-          "name": "秘银矿",
-          "image": "Mythril_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "秘银砖",
-        "image": "Mythril_Brick.png",
-        "amount": "5"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -1169,7 +1448,61 @@
       ]
     },
     "description": "秘银矿属于困难模式早期的第二级矿石。摧毁第二个祭坛时，洞穴层会生成秘银矿或山铜矿。开采秘银矿需要钴镐/钯金镐或更强的镐。\n\n与所有困难模式早期矿石相同，之后每摧毁三个祭坛所生成的矿石数量会逐渐减少。它对爆炸物免疫（除了强力炸弹和粘性强力炸弹）。它可以从困难模式宝匣中获得。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "秘银矿",
+            "image": "Mythril_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "秘银砖",
+          "image": "Mythril_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "秘银矿",
+            "image": "Mythril_Ore.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "秘银锭",
+          "image": "Mythril_Bar.png"
+        }
+      },
+      {
+        "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "秘银矿",
+            "image": "Mythril_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "绿砖",
+          "image": "Green_Brick.png",
+          "amount": "5"
+        }
+      }
+    ]
   },
   "精金矿": {
     "name": "精金矿",
@@ -1216,25 +1549,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png",
-          "amount": "5"
-        },
-        {
-          "name": "精金矿",
-          "image": "Adamantite_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "粉砖",
-        "image": "Pink_Brick.png",
-        "amount": "5"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -1456,7 +1771,79 @@
       ]
     },
     "description": "精金矿属于困难模式早期的第三级矿石。摧毁第三个祭坛时，洞穴层会生成精金矿或钛金矿，大致在出现熔岩的深度。开采精金矿需要秘银镐/山铜镐或更强的镐。\n\n与所有困难模式早期矿石相同，之后每摧毁三个祭坛所生成的矿石数量会逐渐减少。它对爆炸物免疫。它可以从困难模式宝匣中获得。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "精金矿",
+            "image": "Adamantite_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "粉砖",
+          "image": "Pink_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "精金矿",
+            "image": "Adamantite_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "精金梁",
+          "image": "Adamantite_Beam.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金矿",
+            "image": "Adamantite_Ore.png",
+            "amount": "30"
+          },
+          {
+            "name": "地狱熔炉",
+            "image": "Hellforge.png"
+          }
+        ],
+        "result": {
+          "name": "精金熔炉",
+          "image": "Adamantite_Forge.png"
+        }
+      },
+      {
+        "station": "精金熔炉或钛金熔炉",
+        "ingredients": [
+          {
+            "name": "精金矿",
+            "image": "Adamantite_Ore.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "精金锭",
+          "image": "Adamantite_Bar.png"
+        }
+      }
+    ]
   },
   "金矿": {
     "name": "金矿",
@@ -1503,31 +1890,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
-      "ingredients": [
-        {
-          "name": "瓶装水",
-          "image": "Bottled_Water.png"
-        },
-        {
-          "name": "闪耀根",
-          "image": "Blinkroot.png"
-        },
-        {
-          "name": "月光草",
-          "image": "Moonglow.png"
-        },
-        {
-          "name": "金矿",
-          "image": "Gold_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "洞穴探险药水",
-        "image": "Spelunker_Potion.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -2073,7 +2436,67 @@
       ]
     },
     "description": "金矿是种困难模式之前的矿石。它生成于地下和洞穴层中，偶尔生成于漂浮岛。它也有小几率作为史莱姆的额外掉落出现。\n\n其代用矿石对应物是铂金矿。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "金矿",
+            "image": "Gold_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "洞穴探险药水",
+          "image": "Spelunker_Potion.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "金矿",
+            "image": "Gold_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "金砖",
+          "image": "Gold_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "金矿",
+            "image": "Gold_Ore.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "金锭",
+          "image": "Gold_Bar.png"
+        }
+      }
+    ]
   },
   "钛金矿": {
     "name": "钛金矿",
@@ -2120,23 +2543,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png"
-        },
-        {
-          "name": "钛金矿",
-          "image": "Titanium_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "绿砖",
-        "image": "Green_Brick.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -2358,7 +2765,79 @@
       ]
     },
     "description": "钛金矿属于困难模式早期的第三级矿石。摧毁第三个祭坛时，洞穴层会生成钛金矿或精金矿，大致在出现熔岩的深度。开采钛金矿需要秘银镐/山铜镐或更强的镐。\n\n与所有困难模式早期矿石相同，之后每摧毁三个祭坛所生成的矿石数量会逐渐减少。它对爆炸物免疫。它可以从困难模式宝匣中获得。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "钛金矿",
+            "image": "Titanium_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "绿砖",
+          "image": "Green_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "钛金矿",
+            "image": "Titanium_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "钛石块",
+          "image": "Titanstone_Block.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金矿",
+            "image": "Titanium_Ore.png",
+            "amount": "30"
+          },
+          {
+            "name": "地狱熔炉",
+            "image": "Hellforge.png"
+          }
+        ],
+        "result": {
+          "name": "钛金熔炉",
+          "image": "Titanium_Forge.png"
+        }
+      },
+      {
+        "station": "精金熔炉或钛金熔炉",
+        "ingredients": [
+          {
+            "name": "钛金矿",
+            "image": "Titanium_Ore.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "钛金锭",
+          "image": "Titanium_Bar.png"
+        }
+      }
+    ]
   },
   "钨矿": {
     "name": "钨矿",
@@ -2410,23 +2889,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png"
-        },
-        {
-          "name": "钨矿",
-          "image": "Tungsten_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "钨砖",
-        "image": "Tungsten_Brick.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -3008,7 +3471,42 @@
       ]
     },
     "description": "钨矿是种困难模式之前的矿石。它生成于地下和洞穴层中，偶尔生成于漂浮岛。它也有小几率作为史莱姆的额外掉落出现。\n\n其代用矿石对应物是银矿。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "钨矿",
+            "image": "Tungsten_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "钨砖",
+          "image": "Tungsten_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "钨矿",
+            "image": "Tungsten_Ore.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "钨锭",
+          "image": "Tungsten_Bar.png"
+        }
+      }
+    ]
   },
   "钯金矿": {
     "name": "钯金矿",
@@ -3055,23 +3553,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png"
-        },
-        {
-          "name": "钯金矿",
-          "image": "Palladium_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "粉砖",
-        "image": "Pink_Brick.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -3311,7 +3793,61 @@
       ]
     },
     "description": "钯金矿属于困难模式早期的第一级矿石。摧毁首个祭坛时，地下和洞穴层会生成钯金矿或钴矿。开采钯金矿需要熔岩镐或更强的镐。\n\n与所有困难模式早期矿石相同，之后每摧毁三个祭坛所生成的矿石数量会逐渐减少。它对爆炸物免疫。它可以从困难模式宝匣中获得。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "钯金矿",
+            "image": "Palladium_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "粉砖",
+          "image": "Pink_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "钯金矿",
+            "image": "Palladium_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "钯金柱",
+          "image": "Palladium_Column.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "钯金矿",
+            "image": "Palladium_Ore.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "钯金锭",
+          "image": "Palladium_Bar.png"
+        }
+      }
+    ]
   },
   "钴矿": {
     "name": "钴矿",
@@ -3358,23 +3894,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png"
-        },
-        {
-          "name": "钴矿",
-          "image": "Cobalt_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "蓝砖",
-        "image": "Blue_Brick.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -3614,7 +4134,61 @@
       ]
     },
     "description": "钴矿属于困难模式早期的第一级矿石。摧毁首个祭坛时，地下和洞穴层会生成钴矿或钯金矿。开采钴矿需要熔岩镐或更强的镐。\n\n与所有困难模式早期矿石相同，之后每摧毁三个祭坛所生成的矿石数量会逐渐减少。它对爆炸物免疫。它可以从困难模式宝匣中获得。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "钴矿",
+            "image": "Cobalt_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "蓝砖",
+          "image": "Blue_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "钴矿",
+            "image": "Cobalt_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "钴砖",
+          "image": "Cobalt_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "钴矿",
+            "image": "Cobalt_Ore.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "钴锭",
+          "image": "Cobalt_Bar.png"
+        }
+      }
+    ]
   },
   "铁矿": {
     "name": "铁矿",
@@ -3661,27 +4235,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
-      "ingredients": [
-        {
-          "name": "瓶装水",
-          "image": "Bottled_Water.png"
-        },
-        {
-          "name": "太阳花",
-          "image": "Daybloom.png"
-        },
-        {
-          "name": "铁矿",
-          "image": "Iron_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "铁皮药水",
-        "image": "Ironskin_Potion.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -4263,7 +4817,63 @@
       ]
     },
     "description": "铁矿是种困难模式之前的矿石。它生成于地下和洞穴层中，偶尔生成于地表。它也有小几率作为史莱姆的额外掉落出现。它还可以从所有类型的宝匣中获得。\n\n其代用矿石对应物是铅矿。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "铁矿",
+            "image": "Iron_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "铁皮药水",
+          "image": "Ironskin_Potion.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "铁矿",
+            "image": "Iron_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "铁砖",
+          "image": "Iron_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "铁矿",
+            "image": "Iron_Ore.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铁锭",
+          "image": "Iron_Bar.png"
+        }
+      }
+    ]
   },
   "铂金矿": {
     "name": "铂金矿",
@@ -4315,31 +4925,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
-      "ingredients": [
-        {
-          "name": "瓶装水",
-          "image": "Bottled_Water.png"
-        },
-        {
-          "name": "闪耀根",
-          "image": "Blinkroot.png"
-        },
-        {
-          "name": "月光草",
-          "image": "Moonglow.png"
-        },
-        {
-          "name": "铂金矿",
-          "image": "Platinum_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "洞穴探险药水",
-        "image": "Spelunker_Potion.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -4885,7 +5471,67 @@
       ]
     },
     "description": "铂金矿是种困难模式之前的矿石。它生成于地下和洞穴层中，偶尔生成于漂浮岛。它也有小几率作为史莱姆的额外掉落出现。\n\n其代用矿石对应物是金矿。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "铂金矿",
+            "image": "Platinum_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "洞穴探险药水",
+          "image": "Spelunker_Potion.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "铂金矿",
+            "image": "Platinum_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "铂金砖",
+          "image": "Platinum_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "铂金矿",
+            "image": "Platinum_Ore.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "铂金锭",
+          "image": "Platinum_Bar.png"
+        }
+      }
+    ]
   },
   "铅矿": {
     "name": "铅矿",
@@ -4937,27 +5583,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
-      "ingredients": [
-        {
-          "name": "瓶装水",
-          "image": "Bottled_Water.png"
-        },
-        {
-          "name": "太阳花",
-          "image": "Daybloom.png"
-        },
-        {
-          "name": "铅矿",
-          "image": "Lead_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "铁皮药水",
-        "image": "Ironskin_Potion.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -5539,7 +6165,63 @@
       ]
     },
     "description": "铅矿是种困难模式之前的矿石。它生成于地下和洞穴层中，偶尔生成于地表。它也有小几率作为史莱姆的额外掉落出现。\n\n其代用矿石对应物是铁矿。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "铅矿",
+            "image": "Lead_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "铁皮药水",
+          "image": "Ironskin_Potion.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "铅矿",
+            "image": "Lead_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "铅砖",
+          "image": "Lead_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "铅矿",
+            "image": "Lead_Ore.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铅锭",
+          "image": "Lead_Bar.png"
+        }
+      }
+    ]
   },
   "铜矿": {
     "name": "铜矿",
@@ -5586,25 +6268,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png",
-          "amount": "5"
-        },
-        {
-          "name": "铜矿",
-          "image": "Copper_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "铜护板",
-        "image": "Copper_Plating.png",
-        "amount": "5"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -6186,7 +6850,61 @@
       ]
     },
     "description": "铜矿是种困难模式之前的矿石。它生成于地下和洞穴层中，偶尔生成于地表。它也有小几率作为额外掉落出现。\n\n其代用矿石对应物是锡矿。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "铜矿",
+            "image": "Copper_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "铜护板",
+          "image": "Copper_Plating.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "铜矿",
+            "image": "Copper_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "铜砖",
+          "image": "Copper_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "铜矿",
+            "image": "Copper_Ore.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铜锭",
+          "image": "Copper_Bar.png"
+        }
+      }
+    ]
   },
   "银矿": {
     "name": "银矿",
@@ -6238,25 +6956,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png",
-          "amount": "5"
-        },
-        {
-          "name": "银矿",
-          "image": "Silver_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "银砖",
-        "image": "Silver_Brick.png",
-        "amount": "5"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -6838,7 +7538,42 @@
       ]
     },
     "description": "银矿是种困难模式之前的矿石。它生成于地下和洞穴层中，偶尔生成于漂浮岛。它也有小几率作为史莱姆的额外掉落出现。\n\n其代用矿石对应物是钨矿。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "银矿",
+            "image": "Silver_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "银砖",
+          "image": "Silver_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "银矿",
+            "image": "Silver_Ore.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "银锭",
+          "image": "Silver_Bar.png"
+        }
+      }
+    ]
   },
   "锡矿": {
     "name": "锡矿",
@@ -6885,25 +7620,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png",
-          "amount": "5"
-        },
-        {
-          "name": "锡矿",
-          "image": "Tin_Ore.png"
-        }
-      ],
-      "result": {
-        "name": "锡护板",
-        "image": "Tin_Plating.png",
-        "amount": "5"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -7485,7 +8202,61 @@
       ]
     },
     "description": "锡矿是种困难模式之前的矿石。它生成于地下和洞穴层中，偶尔生成于地表。它也有小几率作为史莱姆的额外掉落出现。\n\n其代用矿石对应物是铜矿。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "锡矿",
+            "image": "Tin_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "锡护板",
+          "image": "Tin_Plating.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "锡矿",
+            "image": "Tin_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "锡砖",
+          "image": "Tin_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "锡矿",
+            "image": "Tin_Ore.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "锡锭",
+          "image": "Tin_Bar.png"
+        }
+      }
+    ]
   },
   "陨石": {
     "name": "陨石",
@@ -7537,28 +8308,45 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "石块",
-          "image": "Stone_Block.png",
-          "amount": "5"
-        },
-        {
-          "name": "陨石",
-          "image": "Meteorite.png"
-        }
-      ],
-      "result": {
-        "name": "陨石砖",
-        "image": "Meteorite_Brick.png",
-        "amount": "5"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "陨石是种困难模式之前的矿石，通常开采自陨石坠落地点。陨石坠落地点是种迷你生物群系，在首次击败世界吞噬怪或克苏鲁之脑后必定生成。如果上述 Boss 击败于午夜和黎明之间（上午 12:00 – 上午 4:30），那么流星会立即坠落，否则将会于下个午夜（上午 12:00）坠落。开采陨石必须使用钨镐或更强的镐（其对应物银镐没有足够镐力开采）。\n\n接触陨石块会导致玩家被施加燃烧减益，除非玩家装备了黑曜石骷髅头配饰或其升级物，或者使用了黑曜石皮药水。\n\n流星头自然生成于陨石坠落地点，并有1/50 (2%)几率掉落 1 块陨石。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "陨石",
+            "image": "Meteorite.png"
+          }
+        ],
+        "result": {
+          "name": "陨石砖",
+          "image": "Meteorite_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "陨石",
+            "image": "Meteorite.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "陨石锭",
+          "image": "Meteorite_Bar.png"
+        }
+      }
+    ]
   },
   "魔矿": {
     "name": "魔矿",
@@ -7610,23 +8398,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "魔矿",
-          "image": "Demonite_Ore.png"
-        },
-        {
-          "name": "黑檀石块",
-          "image": "Ebonstone_Block.png"
-        }
-      ],
-      "result": {
-        "name": "魔矿砖",
-        "image": "Demonite_Brick.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -7776,7 +8548,65 @@
       ]
     },
     "description": "魔矿是种困难模式之前的矿石。它主要掉落自世界吞噬怪，在腐化世界也可掉落自克苏鲁之眼。地下也会罕见找到小股魔矿矿脉。在高度低于0 英尺时，开采魔矿需要金镐或更强的镐，否则可以用任意镐。\n\n它是猩红之地的猩红矿的腐化对应物。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "魔矿",
+            "image": "Demonite_Ore.png"
+          },
+          {
+            "name": "黑檀石块",
+            "image": "Ebonstone_Block.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "魔矿砖",
+          "image": "Demonite_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "魔矿",
+            "image": "Demonite_Ore.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "魔矿锭",
+          "image": "Demonite_Bar.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "小雪怪皮毛",
+            "image": "Flinx_Fur.png",
+            "amount": "3"
+          },
+          {
+            "name": "魔矿",
+            "image": "Demonite_Ore.png",
+            "amount": "5"
+          },
+          {
+            "name": "晶状体",
+            "image": "Lens.png"
+          }
+        ],
+        "result": {
+          "name": "鹿华",
+          "image": "Deer_Thing.png"
+        }
+      }
+    ]
   },
   "黑曜石": {
     "name": "黑曜石",
@@ -7832,6 +8662,327 @@
     },
     "drops": null,
     "description": "黑曜石是种困难模式之前的矿石，当水和熔岩触碰时生成。开采黑曜石需要一把金镐/铂金镐或更强的镐。爆炸物也可以摧毁黑曜石。\n\n黑曜石的独特之处在于它并没有对应的锭，而是用于制作狱石锭。",
-    "item_category": "ores"
+    "item_category": "ores",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "3"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png"
+          }
+        ],
+        "result": {
+          "name": "恶魔火把",
+          "image": "Demon_Torch.png",
+          "amount": "3"
+        }
+      },
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "3"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png"
+          }
+        ],
+        "result": {
+          "name": "狱石锭",
+          "image": "Hellstone_Bar.png"
+        }
+      },
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png"
+          }
+        ],
+        "result": {
+          "name": "黑曜石墙",
+          "image": "Obsidian_Wall.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "4"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "2"
+          },
+          {
+            "name": "水桶",
+            "image": "Water_Bucket.png"
+          }
+        ],
+        "result": {
+          "name": "黑曜石水槽",
+          "image": "Obsidian_Sink.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png"
+          }
+        ],
+        "result": {
+          "name": "黑曜石皮药水",
+          "image": "Obsidian_Skin_Potion.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png"
+          }
+        ],
+        "result": {
+          "name": "黑曜石砖",
+          "image": "Obsidian_Brick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "6"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "2"
+          },
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "黑曜石箱",
+          "image": "Obsidian_Chest.png"
+        }
+      },
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "20"
+          },
+          {
+            "name": "暗影鳞片",
+            "image": "Shadow_Scale.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "黑曜石裤",
+          "image": "Obsidian_Pants.png"
+        }
+      },
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "20"
+          },
+          {
+            "name": "组织样本",
+            "image": "Tissue_Sample.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "20"
+          },
+          {
+            "name": "暗影鳞片",
+            "image": "Shadow_Scale.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "黑曜石逃犯帽",
+          "image": "Obsidian_Outlaw_Hat.png"
+        }
+      },
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "20"
+          },
+          {
+            "name": "组织样本",
+            "image": "Tissue_Sample.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "20"
+          },
+          {
+            "name": "暗影鳞片",
+            "image": "Shadow_Scale.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "黑曜石风衣",
+          "image": "Obsidian_Longcoat.png"
+        }
+      },
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "20"
+          },
+          {
+            "name": "组织样本",
+            "image": "Tissue_Sample.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "4"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "黑曜石马桶",
+          "image": "Obsidian_Toilet.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "黑曜石骷髅头",
+          "image": "Obsidian_Skull.png"
+        }
+      }
+    ]
   }
 }

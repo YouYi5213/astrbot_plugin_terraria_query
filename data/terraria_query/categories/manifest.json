@@ -71,19 +71,19 @@
       "key": "armor",
       "label": "盔甲",
       "file": "armor.json",
-      "count": 325
+      "count": 318
     },
     {
       "key": "accessories",
       "label": "配饰",
       "file": "accessories.json",
-      "count": 282
+      "count": 281
     },
     {
       "key": "vanity",
       "label": "时装物品",
       "file": "vanity.json",
-      "count": 82
+      "count": 42
     },
     {
       "key": "wings",
@@ -131,7 +131,7 @@
       "key": "misc",
       "label": "杂项",
       "file": "misc.json",
-      "count": 387
+      "count": 289
     },
     {
       "key": "mounts",
@@ -146,5 +146,5 @@
       "count": 87
     }
   ],
-  "total": 2459
+  "total": 2313
 }

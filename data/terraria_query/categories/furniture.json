@@ -123,7 +123,27 @@
         }
       ]
     ],
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "宝箱",
+            "image": "Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "陷阱箱",
+          "image": "Trapped_Chest.png"
+        }
+      }
+    ]
   },
   "压力板": {
     "name": "压力板",
@@ -280,7 +300,27 @@
     },
     "drops": null,
     "description": "丛林蜥蜴箱是出现在丛林神庙中的宝箱。每个丛林蜥蜴箱中都会包含一个丛林蜥蜴电池，并可能包含一件丛林蜥蜴熔炉、一些日耀碑牌碎片、并有时会有一块日耀碑牌。它们也会包含其他典型的金箱拾取物。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "丛林蜥蜴箱",
+            "image": "Lihzahrd_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "丛林蜥蜴陷阱箱",
+          "image": "Trapped_Lihzahrd_Chest.png"
+        }
+      }
+    ]
   },
   "书": {
     "name": "书",
@@ -350,25 +390,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "丛林蜥蜴砖",
-          "image": "Lihzahrd_Brick.png",
-          "amount": "20"
-        },
-        {
-          "name": "书",
-          "image": "Book.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "丛林蜥蜴书架",
-        "image": "Lihzahrd_Bookcase.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -445,7 +467,2585 @@
         }
       ]
     ],
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "丛林蜥蜴砖",
+            "image": "Lihzahrd_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "丛林蜥蜴书架",
+          "image": "Lihzahrd_Bookcase.png"
+        }
+      },
+      {
+        "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "丛林蜥蜴砖",
+            "image": "Lihzahrd_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "丛林蜥蜴钢琴",
+          "image": "Lihzahrd_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "乌木",
+            "image": "Ebonwood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "乌木书架",
+          "image": "Ebonwood_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "乌木",
+            "image": "Ebonwood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "乌木钢琴",
+          "image": "Ebonwood_Piano.png"
+        }
+      },
+      {
+        "station": "书架",
+        "ingredients": [
+          {
+            "name": "书卷块",
+            "image": "Librarian_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "书卷书架",
+          "image": "Librarian_Bookcase.png"
+        }
+      },
+      {
+        "station": "书架",
+        "ingredients": [
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "书卷块",
+          "image": "Librarian_Block.png",
+          "amount": "20"
+        }
+      },
+      {
+        "station": "书架",
+        "ingredients": [
+          {
+            "name": "书卷块",
+            "image": "Librarian_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "书卷钢琴",
+          "image": "Librarian_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "木材",
+            "image": "Wood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "书架",
+          "image": "Bookcase.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "云",
+            "image": "Cloud.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "云书架",
+          "image": "Cloud_Bookcase.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "云",
+            "image": "Cloud.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "云钢琴",
+          "image": "Cloud_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "仙人掌",
+            "image": "Cactus.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "仙人掌书架",
+          "image": "Cactus_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "仙人掌",
+            "image": "Cactus.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "仙人掌钢琴",
+          "image": "Cactus_Piano.png"
+        }
+      },
+      {
+        "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "仙灵木",
+            "image": "Feywood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "仙灵木书架",
+          "image": "Feywood_Bookcase.png"
+        }
+      },
+      {
+        "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "仙灵木",
+            "image": "Feywood.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "仙灵木钢琴",
+          "image": "Feywood_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "以太砖",
+            "image": "Aetherium_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "以太书架",
+          "image": "Aetherium_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "以太砖",
+            "image": "Aetherium_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "以太钢琴",
+          "image": "Aetherium_Piano.png"
+        }
+      },
+      {
+        "station": "冰雪机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "冰雪块",
+            "image": "Ice_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "冰冻书架",
+          "image": "Frozen_Bookcase.png"
+        }
+      },
+      {
+        "station": "冰雪机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "冰雪块",
+            "image": "Ice_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "冰冻钢琴",
+          "image": "Frozen_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "办公块",
+            "image": "Office_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "办公书架",
+          "image": "Office_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "办公块",
+            "image": "Office_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "办公钢琴",
+          "image": "Office_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "南瓜",
+            "image": "Pumpkin.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "南瓜书架",
+          "image": "Pumpkin_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "南瓜",
+            "image": "Pumpkin.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "南瓜钢琴",
+          "image": "Pumpkin_Piano.png"
+        }
+      },
+      {
+        "station": "固化机",
+        "ingredients": [
+          {
+            "name": "史莱姆块",
+            "image": "Slime_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "史莱姆书架",
+          "image": "Slime_Bookcase.png"
+        }
+      },
+      {
+        "station": "固化机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "史莱姆块",
+            "image": "Slime_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "史莱姆钢琴",
+          "image": "Slime_Piano.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "哥特砖",
+            "image": "Gothic_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "哥特书架",
+          "image": "Gothic_Bookcase.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "哥特砖",
+            "image": "Gothic_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "哥特钢琴",
+          "image": "Gothic_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "坠落之星块",
+            "image": "Fallen_Star_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "坠落之星书架",
+          "image": "Fallen_Star_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "坠落之星块",
+            "image": "Fallen_Star_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "坠落之星钢琴",
+          "image": "Fallen_Star_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "复活节块",
+            "image": "Easter_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "复活节书架",
+          "image": "Easter_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "复活节块",
+            "image": "Easter_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "复活节钢琴",
+          "image": "Easter_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "光面大理石块",
+            "image": "Smooth_Marble_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "大理石书架",
+          "image": "Marble_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "光面大理石块",
+            "image": "Smooth_Marble_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "大理石钢琴",
+          "image": "Marble_Piano.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "日盘块",
+            "image": "Sunplate_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "天域书架",
+          "image": "Skyware_Bookcase.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "日盘块",
+            "image": "Sunplate_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "天域钢琴",
+          "image": "Skyware_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "小雪怪皮毛块",
+            "image": "Flinx_Fur_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "小雪怪皮毛书架",
+          "image": "Flinx_Fur_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "小雪怪皮毛块",
+            "image": "Flinx_Fur_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "小雪怪皮毛钢琴",
+          "image": "Flinx_Fur_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "尖刺块",
+            "image": "Spike_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "尖刺书架",
+          "image": "Spike_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "尖刺块",
+            "image": "Spike_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "尖刺钢琴",
+          "image": "Spike_Piano.png"
+        }
+      },
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "巨石块",
+            "image": "Boulder_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "巨石书架",
+          "image": "Boulder_Bookcase.png"
+        }
+      },
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "巨石块",
+            "image": "Boulder_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "巨石钢琴",
+          "image": "Boulder_Piano.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "日耀砖",
+            "image": "Solar_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "日耀书架",
+          "image": "Solar_Bookcase.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "日耀砖",
+            "image": "Solar_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "日耀钢琴",
+          "image": "Solar_Piano.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星云砖",
+            "image": "Nebula_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "星云书架",
+          "image": "Nebula_Bookcase.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星云砖",
+            "image": "Nebula_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "星云钢琴",
+          "image": "Nebula_Piano.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星尘砖",
+            "image": "Stardust_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "星尘书架",
+          "image": "Stardust_Bookcase.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星尘砖",
+            "image": "Stardust_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "星尘钢琴",
+          "image": "Stardust_Piano.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星旋砖",
+            "image": "Vortex_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "星旋书架",
+          "image": "Vortex_Bookcase.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星旋砖",
+            "image": "Vortex_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "星旋钢琴",
+          "image": "Vortex_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "暗影木",
+            "image": "Shadewood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "暗影木书架",
+          "image": "Shadewood_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "暗影木",
+            "image": "Shadewood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "暗影木钢琴",
+          "image": "Shadewood_Piano.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "月盘块",
+            "image": "Moonplate_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "暮色书架",
+          "image": "Duskware_Bookcase.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "月盘块",
+            "image": "Moonplate_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "暮色钢琴",
+          "image": "Duskware_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "松树块",
+            "image": "Pine_Tree_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "松木书架",
+          "image": "Pine_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "松木",
+            "image": "Pine_Wood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "松木",
+            "image": "Pine_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "松木钢琴",
+          "image": "Pine_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "松树块",
+            "image": "Pine_Tree_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "棕榈木",
+            "image": "Palm_Wood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "棕榈木书架",
+          "image": "Palm_Wood_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "棕榈木",
+            "image": "Palm_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "棕榈木钢琴",
+          "image": "Palm_Wood_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "任何气球",
+            "image": "Any_Balloon.gif",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "气球书架",
+          "image": "Balloon_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "任何气球",
+            "image": "Any_Balloon.gif",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "气球钢琴",
+          "image": "Balloon_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "水族块",
+            "image": "Aquarium_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "水族书架",
+          "image": "Aquarium_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "水族块",
+            "image": "Aquarium_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "水族钢琴",
+          "image": "Aquarium_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "水晶块",
+            "image": "Crystal_Block.png",
+            "amount": "50"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "水晶书架",
+          "image": "Crystal_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "水晶块",
+            "image": "Crystal_Block.png",
+            "amount": "40"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "水晶钢琴",
+          "image": "Crystal_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "水母块",
+            "image": "Jellyfish_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "水母书架",
+          "image": "Jellyfish_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "水母块",
+            "image": "Jellyfish_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "水母钢琴",
+          "image": "Jellyfish_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "光面沙岩",
+            "image": "Smooth_Sandstone.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "沙岩书架",
+          "image": "Sandstone_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "光面沙岩",
+            "image": "Smooth_Sandstone.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "沙岩钢琴",
+          "image": "Sandstone_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "火星管道护板",
+            "image": "Martian_Conduit_Plating.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "火星整体书架",
+          "image": "Martian_Holobookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "火星管道护板",
+            "image": "Martian_Conduit_Plating.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "火星钢琴",
+          "image": "Martian_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "灰烬木",
+            "image": "Ash_Wood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "灰烬木书架",
+          "image": "Ash_Wood_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "灰烬木",
+            "image": "Ash_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "灰烬木钢琴",
+          "image": "Ash_Wood_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "猩红矿砖",
+            "image": "Crimtane_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "猩红矿书架",
+          "image": "Crimtane_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "猩红矿砖",
+            "image": "Crimtane_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "猩红矿钢琴",
+          "image": "Crimtane_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "王朝木",
+            "image": "Dynasty_Wood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "王朝书架",
+          "image": "Dynasty_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "王朝木",
+            "image": "Dynasty_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "王朝钢琴",
+          "image": "Dynasty_Piano.png"
+        }
+      },
+      {
+        "station": "玻璃窑(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "玻璃",
+            "image": "Glass.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "玻璃书架",
+          "image": "Glass_Bookcase.png"
+        }
+      },
+      {
+        "station": "玻璃窑(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "玻璃",
+            "image": "Glass.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "玻璃钢琴",
+          "image": "Glass_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "珊瑚礁块",
+            "image": "Reef_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "珊瑚礁书架",
+          "image": "Reef_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "珊瑚礁块",
+            "image": "Reef_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "珊瑚礁钢琴",
+          "image": "Reef_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "珍珠木",
+            "image": "Pearlwood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "珍珠木书架",
+          "image": "Pearlwood_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "珍珠木",
+            "image": "Pearlwood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "珍珠木钢琴",
+          "image": "Pearlwood_Piano.png"
+        }
+      },
+      {
+        "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "木材",
+            "image": "Wood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "生命木书架",
+          "image": "Living_Wood_Bookcase.png"
+        }
+      },
+      {
+        "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "木材",
+            "image": "Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "生命木钢琴",
+          "image": "Living_Wood_Piano.png"
+        }
+      },
+      {
+        "station": "腐变室(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "病变块",
+            "image": "Lesion_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "病变书架",
+          "image": "Lesion_Bookcase.png"
+        }
+      },
+      {
+        "station": "腐变室(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "病变块",
+            "image": "Lesion_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "病变钢琴",
+          "image": "Lesion_Piano.png"
+        }
+      },
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "灰砖",
+            "image": "Gray_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "石书架",
+          "image": "Stone_Bookcase.png"
+        }
+      },
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "灰砖",
+            "image": "Gray_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "石钢琴",
+          "image": "Stone_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "神圣砖",
+            "image": "Hallowed_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "神圣书架",
+          "image": "Hallowed_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "神圣砖",
+            "image": "Hallowed_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "神圣钢琴",
+          "image": "Hallowed_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "禁戒块",
+            "image": "Forbidden_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "禁戒书架",
+          "image": "Forbidden_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "禁戒块",
+            "image": "Forbidden_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "禁戒钢琴",
+          "image": "Forbidden_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "竹子",
+            "image": "Bamboo.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "竹书架",
+          "image": "Bamboo_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "竹子",
+            "image": "Bamboo.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "竹钢琴",
+          "image": "Bamboo_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "红木",
+            "image": "Rich_Mahogany.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "红木书架",
+          "image": "Rich_Mahogany_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "红木",
+            "image": "Rich_Mahogany.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "红木钢琴",
+          "image": "Rich_Mahogany_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "光面花岗岩块",
+            "image": "Smooth_Granite_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "花岗岩书架",
+          "image": "Granite_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "光面花岗岩块",
+            "image": "Smooth_Granite_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "花岗岩钢琴",
+          "image": "Granite_Piano.png"
+        }
+      },
+      {
+        "station": "蒸汽朋克锅炉(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "齿轮",
+            "image": "Cog.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蒸汽朋克书架",
+          "image": "Steampunk_Bookcase.png"
+        }
+      },
+      {
+        "station": "蒸汽朋克锅炉(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "齿轮",
+            "image": "Cog.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蒸汽朋克钢琴",
+          "image": "Steampunk_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蘑菇书架",
+          "image": "Mushroom_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇钢琴",
+          "image": "Mushroom_Piano.png"
+        }
+      },
+      {
+        "station": "蜂蜜分配机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "蜂蜜块",
+            "image": "Honey_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蜂蜜书架",
+          "image": "Honey_Bookcase.png"
+        }
+      },
+      {
+        "station": "蜂蜜分配机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "蜂蜜块",
+            "image": "Honey_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蜂蜜钢琴",
+          "image": "Honey_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "蜘蛛窝块",
+            "image": "Spider_Nest_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蜘蛛书架",
+          "image": "Spider_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "蜘蛛窝块",
+            "image": "Spider_Nest_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蜘蛛钢琴",
+          "image": "Spider_Piano.png"
+        }
+      },
+      {
+        "station": "血肉克隆台(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "血肉块",
+            "image": "Flesh_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "血肉书架",
+          "image": "Flesh_Bookcase.png"
+        }
+      },
+      {
+        "station": "血肉克隆台(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "血肉块",
+            "image": "Flesh_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "血肉钢琴",
+          "image": "Flesh_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "针叶木",
+            "image": "Boreal_Wood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "针叶木书架",
+          "image": "Boreal_Wood_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "针叶木",
+            "image": "Boreal_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "针叶木钢琴",
+          "image": "Boreal_Wood_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "木材",
+            "image": "Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "钢琴",
+          "image": "Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "阴森木",
+            "image": "Spooky_Wood.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "阴森书架",
+          "image": "Spooky_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "阴森木",
+            "image": "Spooky_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "阴森钢琴",
+          "image": "Spooky_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "陨石砖",
+            "image": "Meteorite_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "陨石书架",
+          "image": "Meteorite_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "陨石砖",
+            "image": "Meteorite_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "陨石钢琴",
+          "image": "Meteorite_Piano.png"
+        }
+      },
+      {
+        "station": "冰雪机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "雪块",
+            "image": "Snow_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "雪书架",
+          "image": "Snow_Bookcase.png"
+        }
+      },
+      {
+        "station": "冰雪机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "雪块",
+            "image": "Snow_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "雪钢琴",
+          "image": "Snow_Piano.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "骨头书架",
+          "image": "Bone_Bookcase.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "19"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "骨头钢琴",
+          "image": "Bone_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "魔矿砖",
+            "image": "Demonite_Brick.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "魔矿书架",
+          "image": "Demonite_Bookcase.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "魔矿砖",
+            "image": "Demonite_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "魔矿钢琴",
+          "image": "Demonite_Piano.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "鸟妖块",
+            "image": "Harpy_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "鸟妖书架",
+          "image": "Harpy_Bookcase.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "鸟妖块",
+            "image": "Harpy_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "鸟妖钢琴",
+          "image": "Harpy_Piano.png"
+        }
+      }
+    ]
   },
   "冰冻箱": {
     "name": "冰冻箱",
@@ -513,7 +3113,27 @@
     },
     "drops": null,
     "description": "冰冻箱是一种宝箱类收纳物品，只在冰雪生物群系中发现。其生成频率与其他生物群系中的宝箱相同。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "冰冻箱",
+            "image": "Frozen_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "冰冻陷阱箱",
+          "image": "Trapped_Frozen_Chest.png"
+        }
+      }
+    ]
   },
   "吊挂盆": {
     "name": "吊挂盆",
@@ -560,23 +3180,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "吊挂盆",
-          "image": "Hanging_Pot.png"
-        },
-        {
-          "name": "太阳花",
-          "image": "Daybloom.png"
-        }
-      ],
-      "result": {
-        "name": "吊挂太阳花",
-        "image": "Hanging_Daybloom.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -636,7 +3240,163 @@
       ]
     },
     "description": "吊挂盆是一个可放置的装饰性家具物品，可以从黑曜石匣和狱石匣中获得。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          }
+        ],
+        "result": {
+          "name": "吊挂太阳花",
+          "image": "Hanging_Daybloom.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          }
+        ],
+        "result": {
+          "name": "吊挂寒颤棘",
+          "image": "Hanging_Shiverthorn.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          }
+        ],
+        "result": {
+          "name": "吊挂月光草",
+          "image": "Hanging_Moonglow.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          }
+        ],
+        "result": {
+          "name": "吊挂水叶草",
+          "image": "Hanging_Waterleaf.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          }
+        ],
+        "result": {
+          "name": "吊挂火焰花",
+          "image": "Hanging_Fireblossom.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "吊挂火盆",
+          "image": "Hanging_Brazier.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          }
+        ],
+        "result": {
+          "name": "吊挂猩红死亡草",
+          "image": "Hanging_Crimson_Deathweed.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          }
+        ],
+        "result": {
+          "name": "吊挂腐化死亡草",
+          "image": "Hanging_Corrupt_Deathweed.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "吊挂盆",
+            "image": "Hanging_Pot.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          }
+        ],
+        "result": {
+          "name": "吊挂闪耀根",
+          "image": "Hanging_Blinkroot.png"
+        }
+      }
+    ]
   },
   "呆萌丝带气球": {
     "name": "呆萌丝带气球",
@@ -777,11 +3537,13 @@
       "ingredients": [
         {
           "name": "光面大理石块",
-          "image": "Smooth_Marble_Block.png"
+          "image": "Smooth_Marble_Block.png",
+          "amount": "8"
         },
         {
           "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif"
+          "image": "Any_Iron_Bar.gif",
+          "amount": "2"
         }
       ],
       "result": {
@@ -791,7 +3553,27 @@
     },
     "drops": null,
     "description": "大理石箱是一种宝箱类收纳物品，只在大理石洞里面的地下小屋发现。就像花岗岩箱和红木箱一样，大理石箱与金箱里面的拾取物完全相同。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "大理石箱",
+            "image": "Marble_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "大理石陷阱箱",
+          "image": "Trapped_Marble_Chest.png"
+        }
+      }
+    ]
   },
   "天域箱": {
     "name": "天域箱",
@@ -843,11 +3625,13 @@
       "ingredients": [
         {
           "name": "日盘块",
-          "image": "Sunplate_Block.png"
+          "image": "Sunplate_Block.png",
+          "amount": "8"
         },
         {
           "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif"
+          "image": "Any_Iron_Bar.gif",
+          "amount": "2"
         }
       ],
       "result": {
@@ -857,7 +3641,27 @@
     },
     "drops": null,
     "description": "天域箱是一种收纳物品，只出现在漂浮岛上。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "天域箱",
+            "image": "Skyware_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "天域陷阱箱",
+          "image": "Trapped_Skyware_Chest.png"
+        }
+      }
+    ]
   },
   "天蓝花朵": {
     "name": "天蓝花朵",
@@ -909,22 +3713,39 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "天蓝花朵",
-          "image": "Sky_Blue_Flower_(old).png"
-        }
-      ],
-      "result": {
-        "name": "天蓝染料",
-        "image": "Sky_Blue_Dye_(old).png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "天蓝花朵是一种植物。它可在除了地狱以外的任何地层中的丛林草上生长，或在位于地表以上浸没在至少 2 格任何液体中的沙块上生长。与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作天蓝染料。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "天蓝花朵",
+            "image": "Sky_Blue_Flower_(old).png"
+          }
+        ],
+        "result": {
+          "name": "天蓝染料",
+          "image": "Sky_Blue_Dye_(old).png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "天蓝花朵",
+            "image": "Sky_Blue_Flower.png"
+          }
+        ],
+        "result": {
+          "name": "天蓝染料",
+          "image": "Sky_Blue_Dye.png",
+          "amount": "2"
+        }
+      }
+    ]
   },
   "小火山": {
     "name": "小火山",
@@ -971,20 +3792,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "小火山",
-          "image": "Mini_Volcano.png",
-          "amount": "3"
-        }
-      ],
-      "result": {
-        "name": "大火山",
-        "image": "Large_Volcano.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -1044,7 +3852,23 @@
       ]
     },
     "description": "小火山是带有动画的装饰性家具物品，它的动画可通过电路控制开关。它有19/100 (19%)的几率在打开黑曜石匣以及狱石匣时获得。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "小火山",
+            "image": "Mini_Volcano.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "大火山",
+          "image": "Large_Volcano.png"
+        }
+      }
+    ]
   },
   "常春藤箱": {
     "name": "常春藤箱",
@@ -1091,27 +3915,30 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台",
-      "ingredients": [
-        {
-          "name": "常春藤箱",
-          "image": "Ivy_Chest.png"
-        },
-        {
-          "name": "电线",
-          "image": "Wire.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "常春藤陷阱箱",
-        "image": "Trapped_Ivy_Chest.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "常春藤箱是一种宝箱类收纳物品，仅可发现于地下丛林处的丛林神龛和生命红木树中。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "常春藤箱",
+            "image": "Ivy_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "常春藤陷阱箱",
+          "image": "Trapped_Ivy_Chest.png"
+        }
+      }
+    ]
   },
   "提炼机": {
     "name": "提炼机",
@@ -1169,24 +3996,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "叶绿锭",
-          "image": "Chlorophyte_Bar.png",
-          "amount": "18"
-        },
-        {
-          "name": "提炼机",
-          "image": "Extractinator.png"
-        }
-      ],
-      "result": {
-        "name": "叶绿提炼机",
-        "image": "Chlorophyte_Extractinator.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -1300,7 +4110,27 @@
       ]
     },
     "description": "提炼机或泥沙提炼机是一种将泥沙块、雪泥块与沙漠化石转换为更有价值的物品（例如矿石，钱币，和宝石）的物品。在没有平台版本中，它也可以将发光苔藓交换为所有类型的普通苔藓，以及将钓鱼垃圾转换为低级鱼饵。\n\n要使用提炼机，首先需要将它放置在世界中。在此之后，需要在提炼机 3×3 的区域内使用合适的物块（使用⚒使用/攻击键）。按住自动选择键，并点击提炼机时，会自动地将玩家物品栏中可提炼的物品自动消耗掉，而无需手动把它们挑选出来。\n\n它可以通过多种途径获得：在冰冻箱中，它有4.9%的概率生成；在地下和洞穴地层的金箱中，它有5%到6.67%的概率生成；打开木匣时有1.86%的概率掉落。地下沙漠(电脑版、主机版、和移动版)中的地下小屋也有概率包含一个提炼机作为随机装饰的一部分。\n\n使用提炼机是获取蚊子琥珀的唯一途径；同时，使用提炼机与开启宝匣也是获取世界中困难模式之前同等级替代矿物（如锡和铜、铁和铅等）仅有的可靠途径。这是在游戏早期是获取矿石和钱币的不错方式。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "叶绿锭",
+            "image": "Chlorophyte_Bar.png",
+            "amount": "18"
+          },
+          {
+            "name": "提炼机",
+            "image": "Extractinator.png"
+          }
+        ],
+        "result": {
+          "name": "叶绿提炼机",
+          "image": "Chlorophyte_Extractinator.png"
+        }
+      }
+    ]
   },
   "暗影箱": {
     "name": "暗影箱",
@@ -1347,24 +4177,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台",
-      "ingredients": [
-        {
-          "name": "暗影箱",
-          "image": "Shadow_Chest.png"
-        },
-        {
-          "name": "电线",
-          "image": "Wire.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "暗影陷阱箱",
-        "image": "Trapped_Shadow_Chest.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "暗影箱是一种仅可被发现于地狱的收纳物品，通常在废墟建筑的顶部或内部，其中含有稀有物品。\n\n所有暗影箱最初都是锁住的，打开时需要一个暗影钥匙。钥匙在使用时不会被消耗掉。每一个暗影箱包括一个03*Orange（稀有度级别：3）稀有度的高价值物品，也包括其他地下中的标准拾取物。\n\n与其他自然生成的宝箱一样，在被清空后，暗影箱可以被镐或钻头破坏，并可被拾取以及在其他地方放置。",
     "item_category": "furniture",
@@ -1396,6 +4209,26 @@
           "text": "与其他自然生成的宝箱一样，在被清空后，暗影箱可以被镐或钻头破坏，并可被拾取以及在其他地方放置。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "暗影箱",
+            "image": "Shadow_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "暗影陷阱箱",
+          "image": "Trapped_Shadow_Chest.png"
+        }
+      }
     ]
   },
   "暗影蜡烛": {
@@ -1519,7 +4352,32 @@
     },
     "drops": null,
     "description": "标牌是一种可以储存玩家所写信息的装饰家具。标牌必须被放置，然后使用⚷打开/激活按钮才能编辑或显示信息。标牌可被放置在物块上方、侧方或悬挂于下方，还能被悬挂于墙上。每个标牌上的信息最多 10 行，每行 48 个字符，总计最多 480 个字符。标牌可用于装饰，标注区域、冒险信息，等等。\n\n每个世界中最多可以有 32000 个写有信息的标牌。如果超过了 32000 个，则只能编辑前 32000 个交互的标牌；其余的使用⚷打开/激活无法打开菜单（直到前 32000 个标牌中的一个被移除）。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "标牌",
+            "image": "Sign.png"
+          },
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "4"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "广播盒",
+          "image": "Announcement_Box.png"
+        }
+      }
+    ]
   },
   "桶": {
     "name": "桶",
@@ -1586,7 +4444,27 @@
     },
     "drops": null,
     "description": "桶是一种收纳物品，类似于宝箱，有着 40 个栏位供存储物品。其制作配方所需的金属只有宝箱所需的一半，但要有锯木机而非工作台。除此之外，区别就纯粹只是在于美学上。\n\n桶只在空着时才能用镐或钻头取下。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "雷管",
+            "image": "Dynamite.png",
+            "amount": "3"
+          },
+          {
+            "name": "桶",
+            "image": "Barrel.png"
+          }
+        ],
+        "result": {
+          "name": "TNT桶",
+          "image": "TNT_Barrel.png"
+        }
+      }
+    ]
   },
   "橙绿海藻": {
     "name": "橙绿海藻",
@@ -1638,22 +4516,39 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "橙绿海藻",
-          "image": "Lime_Kelp_(old).png"
-        }
-      ],
-      "result": {
-        "name": "橙绿染料",
-        "image": "Lime_Dye_(old).png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "橙绿海藻是一种植物和染料材料。它可在位于地下和洞穴地层中且浸没于至少 2 格深的任何液体中的任何图格上生长。与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作橙绿染料。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "橙绿海藻",
+            "image": "Lime_Kelp_(old).png"
+          }
+        ],
+        "result": {
+          "name": "橙绿染料",
+          "image": "Lime_Dye_(old).png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "橙绿海藻",
+            "image": "Lime_Kelp.png"
+          }
+        ],
+        "result": {
+          "name": "橙绿染料",
+          "image": "Lime_Dye.png",
+          "amount": "2"
+        }
+      }
+    ]
   },
   "橙血根草": {
     "name": "橙血根草",
@@ -1705,22 +4600,39 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "橙血根草",
-          "image": "Orange_Bloodroot_(old).png"
-        }
-      ],
-      "result": {
-        "name": "橙染料",
-        "image": "Orange_Dye_(old).png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "橙血根草是一种植物。它可在位于地下和洞穴地层中的土块下方生长。与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作橙染料。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "橙血根草",
+            "image": "Orange_Bloodroot_(old).png"
+          }
+        ],
+        "result": {
+          "name": "橙染料",
+          "image": "Orange_Dye_(old).png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "橙血根草",
+            "image": "Orange_Bloodroot.png"
+          }
+        ],
+        "result": {
+          "name": "橙染料",
+          "image": "Orange_Dye.png",
+          "amount": "2"
+        }
+      }
+    ]
   },
   "水中箱": {
     "name": "水中箱",
@@ -1772,11 +4684,13 @@
       "ingredients": [
         {
           "name": "水族块",
-          "image": "Aquarium_Block.png"
+          "image": "Aquarium_Block.png",
+          "amount": "8"
         },
         {
           "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif"
+          "image": "Any_Iron_Bar.gif",
+          "amount": "2"
         }
       ],
       "result": {
@@ -1786,7 +4700,27 @@
     },
     "drops": null,
     "description": "水中箱是一种宝箱，会出现在大于 250 格的水塘中。它们在海洋中最常见，但也罕见出现在任何水体中，包括地下和洞穴层湖泊、地表湖、甚至漂浮湖。除了包含基于所处位置生成的常见宝箱拾取物，其中还会有只能在水中箱中找到的特殊物品，如下所示。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "水中箱",
+            "image": "Water_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "水中陷阱箱",
+          "image": "Trapped_Water_Chest.png"
+        }
+      }
+    ]
   },
   "水晶碎块": {
     "name": "水晶碎块",
@@ -1833,27 +4767,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "木悠悠球",
-          "image": "Wooden_Yoyo.png"
-        },
-        {
-          "name": "水晶碎块",
-          "image": "Crystal_Shard.png"
-        },
-        {
-          "name": "光明之魂",
-          "image": "Soul_of_Light.png"
-        }
-      ],
-      "result": {
-        "name": "吉克球",
-        "image": "Chik.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -1895,7 +4809,401 @@
       ]
     },
     "description": "水晶碎块是一种常见的困难模式制作材料，可在地下神圣之地中找到。它们可以天然在下列物块的左侧、右侧、和底部生长：珍珠石块、粉冰雪块、珍珠沙块、硬化珍珠沙块、和珍珠沙岩块。由于它们能持续地生长，可以建造农场来刷取它们（详见指南:刷资源 § 水晶碎块）。与魔矿和猩红矿类似，水晶碎块会发出微弱的光。它们不会传播神圣之地。\n\n当水晶碎块将要长出时，它有1/50 (2%)几率被明胶水晶(电脑版、主机版、和移动版)替代。\n\n水晶碎块有1/2 (50%)几率从天赐匣(电脑版、主机版、和移动版)中获得，数量为 4–10 个。\n\n水晶碎块能被放置在几乎所有位置（包括墙上、地面上、天花板上），但它们的亮度通常不足以取代其他光源，放置它们也没有任何功能性的效果。尽管水晶碎块只能自然生成在与神圣之地有关的图格上，将它们收集后便可将其放置在任何地方。\n\n制作所有物品（包括一种颜色的晶光刃，且不包括消耗品和家具）总计需要 90 个水晶碎块。制作每种武器和每种颜色的晶光刃则总计需要 240 个水晶碎块。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "木悠悠球",
+            "image": "Wooden_Yoyo.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "15"
+          },
+          {
+            "name": "光明之魂",
+            "image": "Soul_of_Light.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "吉克球",
+          "image": "Chik.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png",
+            "amount": "3"
+          },
+          {
+            "name": "妖精尘",
+            "image": "Pixie_Dust.png",
+            "amount": "3"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png"
+          }
+        ],
+        "result": {
+          "name": "强效治疗药水",
+          "image": "Greater_Healing_Potion.png",
+          "amount": "3"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "彩虹陨石光剑",
+            "image": "Rainbow_Phaseblade.gif"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "彩虹晶光刃",
+          "image": "Rainbow_Phasesaber.gif"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "10"
+          },
+          {
+            "name": "独角兽角",
+            "image": "Unicorn_Horn.png",
+            "amount": "2"
+          },
+          {
+            "name": "妖精尘",
+            "image": "Pixie_Dust.png",
+            "amount": "10"
+          },
+          {
+            "name": "光明之魂",
+            "image": "Soul_of_Light.png",
+            "amount": "8"
+          },
+          {
+            "name": "视域之魂",
+            "image": "Soul_of_Sight.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "彩虹魔杖",
+          "image": "Rainbow_Rod.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "橙陨石光剑",
+            "image": "Orange_Phaseblade.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "橙晶光刃",
+          "image": "Orange_Phasesaber.png"
+        }
+      },
+      {
+        "station": "精金熔炉或钛金熔炉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png"
+          }
+        ],
+        "result": {
+          "name": "水晶块",
+          "image": "Crystal_Block.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "火枪子弹",
+            "image": "Musket_Ball.png",
+            "amount": "100"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png"
+          }
+        ],
+        "result": {
+          "name": "水晶子弹",
+          "image": "Crystal_Bullet.png",
+          "amount": "100"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png"
+          }
+        ],
+        "result": {
+          "name": "水晶镖",
+          "image": "Crystal_Dart.png",
+          "amount": "100"
+        }
+      },
+      {
+        "station": "书架",
+        "ingredients": [
+          {
+            "name": "魔法书",
+            "image": "Spell_Tome.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "20"
+          },
+          {
+            "name": "光明之魂",
+            "image": "Soul_of_Light.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "水晶风暴",
+          "image": "Crystal_Storm.png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "流沙染料",
+            "image": "Shifting_Sands_Dye.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "珍珠流沙染料",
+          "image": "Shifting_Pearlsands_Dye.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "白陨石光剑",
+            "image": "White_Phaseblade.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "白晶光刃",
+          "image": "White_Phasesaber.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "粉陨石光剑",
+            "image": "Pink_Phaseblade.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "粉晶光刃",
+          "image": "Pink_Phasesaber.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "紫陨石光剑",
+            "image": "Purple_Phaseblade.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "紫晶光刃",
+          "image": "Purple_Phasesaber.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "红陨石光剑",
+            "image": "Red_Phaseblade.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "红晶光刃",
+          "image": "Red_Phasesaber.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "绿陨石光剑",
+            "image": "Green_Phaseblade.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "绿晶光刃",
+          "image": "Green_Phasesaber.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "蓝陨石光剑",
+            "image": "Blue_Phaseblade.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "蓝晶光刃",
+          "image": "Blue_Phasesaber.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "强效魔力药水",
+            "image": "Greater_Mana_Potion.png",
+            "amount": "15"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "3"
+          },
+          {
+            "name": "独角兽角",
+            "image": "Unicorn_Horn.png"
+          }
+        ],
+        "result": {
+          "name": "超级魔力药水",
+          "image": "Super_Mana_Potion.png",
+          "amount": "15"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "竖琴",
+            "image": "Harp.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "20"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png",
+            "amount": "8"
+          },
+          {
+            "name": "视域之魂",
+            "image": "Soul_of_Sight.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "魔法竖琴",
+          "image": "Magical_Harp.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "黄陨石光剑",
+            "image": "Yellow_Phaseblade.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "黄晶光刃",
+          "image": "Yellow_Phasesaber.png"
+        }
+      }
+    ]
   },
   "沙岩箱": {
     "name": "沙岩箱",
@@ -1947,11 +5255,13 @@
       "ingredients": [
         {
           "name": "光面沙岩",
-          "image": "Smooth_Sandstone.png"
+          "image": "Smooth_Sandstone.png",
+          "amount": "8"
         },
         {
           "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif"
+          "image": "Any_Iron_Bar.gif",
+          "amount": "2"
         }
       ],
       "result": {
@@ -1961,7 +5271,27 @@
     },
     "drops": null,
     "description": "沙岩箱是一种能在地下沙漠找到的收纳物品。它们通常可以在地下小屋中发现，但也可能较少见地自己生成。沙岩箱也可以被制作。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "沙岩箱",
+            "image": "Sandstone_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "沙岩陷阱箱",
+          "image": "Trapped_Sandstone_Chest.png"
+        }
+      }
+    ]
   },
   "沙漠幽魂灯": {
     "name": "沙漠幽魂灯",
@@ -2008,27 +5338,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "沙漠幽魂灯",
-          "image": "Desert_Spirit_Lamp.png"
-        },
-        {
-          "name": "禁戒碎片",
-          "image": "Forbidden_Fragment.png"
-        },
-        {
-          "name": "暗影之魂",
-          "image": "Soul_of_Night.png"
-        }
-      ],
-      "result": {
-        "name": "神灯烈焰",
-        "image": "Spirit_Flame.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -2070,7 +5380,32 @@
       ]
     },
     "description": "沙漠幽魂灯是一种装饰家具物品和制作材料。它必须放置在平台或其他平坦表面物品上。它有1/40 (2.5%)几率掉落自腐化或猩红地下沙漠中会碰到的沙漠幽魂。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "沙漠幽魂灯",
+            "image": "Desert_Spirit_Lamp.png"
+          },
+          {
+            "name": "禁戒碎片",
+            "image": "Forbidden_Fragment.png",
+            "amount": "2"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "神灯烈焰",
+          "image": "Spirit_Flame.png"
+        }
+      }
+    ]
   },
   "火把": {
     "name": "火把",
@@ -2236,12 +5571,847 @@
       ],
       "result": {
         "name": "玻璃瓶",
-        "image": "Bottle.png"
+        "image": "Bottle.png",
+        "amount": "2"
       }
     },
     "drops": null,
     "description": "玻璃瓶是大多数药水的制作材料。像粉花瓶,玻璃杯, 和其他各种的杯子一样，将其放置(在\"平面物体\"或平台上)可以使它充当放置的瓶子的作用，玩家可以在其中制作药水。当玩家拿着玻璃瓶靠近水或蜂蜜时也可以将玻璃瓶“装满”，制成瓶装水或瓶装蜂蜜。\n\n玻璃瓶可以用玻璃制作或者在宝箱中找到。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "杨桃",
+            "image": "Star_Fruit.png"
+          },
+          {
+            "name": "火龙果",
+            "image": "Dragon_Fruit.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "七彩潘趣酒",
+          "image": "Prismatic_Punch.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "七彩草蛉",
+            "image": "Prismatic_Lacewing.png"
+          }
+        ],
+        "result": {
+          "name": "七彩草蛉罐",
+          "image": "Prismatic_Lacewing_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "光明之魂",
+            "image": "Soul_of_Light.png"
+          }
+        ],
+        "result": {
+          "name": "光明之魂瓶",
+          "image": "Soul_of_Light_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "香蕉",
+            "image": "Banana.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "雪块",
+            "image": "Snow_Block.png"
+          }
+        ],
+        "result": {
+          "name": "冰冻香蕉代基里",
+          "image": "Frozen_Banana_Daiquiri.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "力量之魂",
+            "image": "Soul_of_Might.png"
+          }
+        ],
+        "result": {
+          "name": "力量之魂瓶",
+          "image": "Soul_of_Might_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "地狱蝴蝶",
+            "image": "Hell_Butterfly.png"
+          }
+        ],
+        "result": {
+          "name": "地狱蝴蝶罐",
+          "image": "Hell_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "帛斑蝶",
+            "image": "Tree_Nymph_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "帛斑蝶罐",
+          "image": "Tree_Nymph_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "帝王蝶",
+            "image": "Monarch_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "帝王蝶罐",
+          "image": "Monarch_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "带凤蝶",
+            "image": "Zebra_Swallowtail_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "带凤蝶罐",
+          "image": "Zebra_Swallowtail_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png",
+            "amount": "2"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "弱效治疗药水",
+          "image": "Lesser_Healing_Potion.png",
+          "amount": "2"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "恐惧之魂",
+            "image": "Soul_of_Fright.png"
+          }
+        ],
+        "result": {
+          "name": "恐惧之魂瓶",
+          "image": "Soul_of_Fright_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          },
+          {
+            "name": "粉凝胶",
+            "image": "Pink_Gel.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "恢复药水",
+          "image": "Restoration_Potion.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star.png"
+          }
+        ],
+        "result": {
+          "name": "星星瓶",
+          "image": "Star_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png"
+          }
+        ],
+        "result": {
+          "name": "暗影之魂瓶",
+          "image": "Soul_of_Night_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "黑醋栗",
+            "image": "Blackcurrant.png"
+          },
+          {
+            "name": "接骨木果",
+            "image": "Elderberry.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "暗黑奶昔",
+          "image": "Smoothie_of_Darkness.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "任何水果",
+            "image": "Any_Fruit.gif",
+            "amount": "2"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "果汁",
+          "image": "Fruit_Juice.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "柠檬",
+            "image": "Lemon.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "柠檬水",
+          "image": "Lemonade.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "桃子",
+            "image": "Peach.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "桃子果酒",
+          "image": "Peach_Sangria.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "菠萝",
+            "image": "Pineapple.png"
+          },
+          {
+            "name": "椰子",
+            "image": "Coconut.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "椰林飘香",
+          "image": "Piña_Colada.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "橙蜻蜓",
+            "image": "Orange_Dragonfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "橙蜻蜓罐",
+          "image": "Orange_Dragonfly_Jar.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "芒果",
+            "image": "Mango.png"
+          },
+          {
+            "name": "菠萝",
+            "image": "Pineapple.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "热带奶昔",
+          "image": "Tropical_Smoothie.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "熔岩萤火虫",
+            "image": "Lavafly.png"
+          }
+        ],
+        "result": {
+          "name": "熔岩萤火虫瓶",
+          "image": "Lavafly_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "珠袖蝶",
+            "image": "Julia_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "珠袖蝶罐",
+          "image": "Julia_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "水或水槽(电脑版、主机版、和移动版)或喷泉",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png"
+        }
+      },
+      {
+        "station": "蜂蜜",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "瓶装蜂蜜",
+          "image": "Bottled_Honey.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "粉仙灵",
+            "image": "Pink_Fairy.png"
+          }
+        ],
+        "result": {
+          "name": "粉仙灵罐",
+          "image": "Pink_Fairy_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "紫蛱蝶",
+            "image": "Purple_Emperor_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "紫蛱蝶罐",
+          "image": "Purple_Emperor_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "红蛱蝶",
+            "image": "Red_Admiral_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "红蛱蝶罐",
+          "image": "Red_Admiral_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "红蜻蜓",
+            "image": "Red_Dragonfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "红蜻蜓罐",
+          "image": "Red_Dragonfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "绿仙灵",
+            "image": "Green_Fairy.png"
+          }
+        ],
+        "result": {
+          "name": "绿仙灵罐",
+          "image": "Green_Fairy_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "绿蜻蜓",
+            "image": "Green_Dragonfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "绿蜻蜓罐",
+          "image": "Green_Dragonfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "翠凤蝶",
+            "image": "Ulysses_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "翠凤蝶罐",
+          "image": "Ulysses_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "苹果",
+            "image": "Apple.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "苹果汁",
+          "image": "Apple_Juice.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "荧光虫",
+            "image": "Lightning_Bug.png"
+          }
+        ],
+        "result": {
+          "name": "荧光虫瓶",
+          "image": "Lightning_Bug_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "萤火虫",
+            "image": "Firefly.png"
+          }
+        ],
+        "result": {
+          "name": "萤火虫瓶",
+          "image": "Firefly_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "葡萄",
+            "image": "Grapes.png",
+            "amount": "2"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "葡萄汁",
+          "image": "Grape_Juice.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "蓝仙灵",
+            "image": "Blue_Fairy.png"
+          }
+        ],
+        "result": {
+          "name": "蓝仙灵罐",
+          "image": "Blue_Fairy_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "蓝蜻蜓",
+            "image": "Blue_Dragonfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "蓝蜻蜓罐",
+          "image": "Blue_Dragonfly_Jar.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "血橙",
+            "image": "Blood_Orange.png"
+          },
+          {
+            "name": "红毛丹",
+            "image": "Rambutan.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "血腥麝香葡萄",
+          "image": "Bloody_Moscato.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "视域之魂",
+            "image": "Soul_of_Sight.png"
+          }
+        ],
+        "result": {
+          "name": "视域之魂瓶",
+          "image": "Soul_of_Sight_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "金蜻蜓",
+            "image": "Gold_Dragonfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "金蜻蜓罐",
+          "image": "Gold_Dragonfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "金蝴蝶",
+            "image": "Gold_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "金蝴蝶罐",
+          "image": "Gold_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "飞灵",
+            "image": "Faeling.png"
+          }
+        ],
+        "result": {
+          "name": "飞灵瓶",
+          "image": "Faeling_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "飞翔之魂",
+            "image": "Soul_of_Flight.png"
+          }
+        ],
+        "result": {
+          "name": "飞翔之魂瓶",
+          "image": "Soul_of_Flight_in_a_Bottle.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "黄粉蝶",
+            "image": "Sulphur_Butterfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "黄粉蝶罐",
+          "image": "Sulphur_Butterfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "黄蜻蜓",
+            "image": "Yellow_Dragonfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "黄蜻蜓罐",
+          "image": "Yellow_Dragonfly_Jar.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "黑蜻蜓",
+            "image": "Black_Dragonfly.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "黑蜻蜓罐",
+          "image": "Black_Dragonfly_Jar.png"
+        }
+      }
+    ]
   },
   "珊瑚": {
     "name": "珊瑚",
@@ -2293,30 +6463,187 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
-      "ingredients": [
-        {
-          "name": "瓶装水",
-          "image": "Bottled_Water.png"
-        },
-        {
-          "name": "水叶草",
-          "image": "Waterleaf.png"
-        },
-        {
-          "name": "珊瑚",
-          "image": "Coral.png"
-        }
-      ],
-      "result": {
-        "name": "声呐药水",
-        "image": "Sonar_Potion.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "珊瑚是一种制作材料，可在世界尽头处的海洋生物群系中发现。它们会在位于水下、世界左右边缘的 380 格内、且深度高于(电脑版、主机版、和移动版)−20 英尺 /(前代主机版、和3DS版)0 英尺的沙块上自然生长，但需要 7 图格范围内有不多于 5 个珊瑚（(电脑版、主机版、和移动版)或贝壳）。珊瑚可通过镐/钻头挖掘、挖掘下方的沙或在其上方放置物块的方式收获。\n\n珊瑚放置后会有随机的外观。在收获珊瑚后，它们可以被放置在任何物块上。\n\n(电脑版、主机版、和移动版)珊瑚可在水浅于 5 格的沙块上生成，只是速度较慢。生成速率和雨、风和沙块上方最多 14 图格的空余空间有关。\n\n(前代主机版、和3DS版)珊瑚仅生成于水下至少 5 图格处，雨和风不影响其生成速率。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "珊瑚",
+            "image": "Coral.png"
+          }
+        ],
+        "result": {
+          "name": "声呐药水",
+          "image": "Sonar_Potion.png"
+        }
+      },
+      {
+        "station": "织布机",
+        "ingredients": [
+          {
+            "name": "珊瑚",
+            "image": "Coral.png",
+            "amount": "15"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "摩羯座头盔",
+          "image": "Capricorn_Helmet.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "恐惧之魂",
+            "image": "Soul_of_Fright_(old).png",
+            "amount": "20"
+          },
+          {
+            "name": "珊瑚",
+            "image": "Coral_(old).png",
+            "amount": "15"
+          },
+          {
+            "name": "金鱼",
+            "image": "Goldfish.png",
+            "amount": "15"
+          },
+          {
+            "name": "鲨鱼鳍",
+            "image": "Shark_Fin_(old).png",
+            "amount": "5"
+          },
+          {
+            "name": "光明之魂",
+            "image": "Soul_of_Light_(old).png",
+            "amount": "5"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night_(old).png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "海神贝壳",
+          "image": "Neptune's_Shell_(old).png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "3"
+          },
+          {
+            "name": "珊瑚",
+            "image": "Coral.png"
+          }
+        ],
+        "result": {
+          "name": "珊瑚火把",
+          "image": "Coral_Torch.png",
+          "amount": "3"
+        }
+      },
+      {
+        "station": "水或水槽(电脑版、主机版、和移动版)或喷泉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "珊瑚",
+            "image": "Coral.png"
+          }
+        ],
+        "result": {
+          "name": "珊瑚石块",
+          "image": "Coralstone_Block.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "水或水槽(电脑版、主机版、和移动版)或喷泉",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "珊瑚",
+            "image": "Coral.png"
+          },
+          {
+            "name": "任何贝壳或海星",
+            "image": "Any_Seashell_or_Starfish.gif"
+          }
+        ],
+        "result": {
+          "name": "珊瑚礁块",
+          "image": "Reef_Block.png",
+          "amount": "15"
+        }
+      },
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "珊瑚",
+            "image": "Coral.png"
+          }
+        ],
+        "result": {
+          "name": "贝壳堆",
+          "image": "Shell_Pile.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "珊瑚",
+            "image": "Coral.png"
+          }
+        ],
+        "result": {
+          "name": "鱼鳃药水",
+          "image": "Gills_Potion.png"
+        }
+      }
+    ]
   },
   "生命木箱": {
     "name": "生命木箱",
@@ -2368,11 +6695,13 @@
       "ingredients": [
         {
           "name": "木材",
-          "image": "Wood.png"
+          "image": "Wood.png",
+          "amount": "8"
         },
         {
           "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif"
+          "image": "Any_Iron_Bar.gif",
+          "amount": "2"
         }
       ],
       "result": {
@@ -2382,7 +6711,27 @@
     },
     "drops": null,
     "description": "生命木箱是一种宝箱类收纳物品，可以在空心生命树内部的房间中发现。它也可以使用生命木织机制作，后者有时会发现于生命木箱旁边。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "生命木箱",
+            "image": "Living_Wood_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "生命木陷阱箱",
+          "image": "Trapped_Living_Wood_Chest.png"
+        }
+      }
+    ]
   },
   "生物群系宝箱": {
     "name": "生物群系宝箱",
@@ -2567,7 +6916,8 @@
       ],
       "result": {
         "name": "矿车轨道",
-        "image": "Minecart_Track.png"
+        "image": "Minecart_Track.png",
+        "amount": "50"
       }
     },
     "drops": null,
@@ -2693,6 +7043,25 @@
           "text": "乘坐矿车时可以正常使用武器和工具。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "矿车轨道",
+            "image": "Minecart_Track.png"
+          },
+          {
+            "name": "任何压力板",
+            "image": "Any_Pressure_Plate.gif"
+          }
+        ],
+        "result": {
+          "name": "压力板轨道",
+          "image": "Pressure_Plate_Track.png"
+        }
+      }
     ]
   },
   "碗": {
@@ -2756,7 +7125,48 @@
     },
     "drops": null,
     "description": "碗是一种装饰性家具，它们可以被放置。与盘子不同的是，食物无法被放置于碗中。仅粘土碗能被用于制作。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "任何水果",
+            "image": "Any_Fruit.gif",
+            "amount": "3"
+          },
+          {
+            "name": "碗",
+            "image": "Bowl.png"
+          }
+        ],
+        "result": {
+          "name": "水果沙拉",
+          "image": "Fruit_Salad.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "碗",
+            "image": "Bowl.png"
+          },
+          {
+            "name": "蘑菇",
+            "image": "Mushroom_(old).png"
+          },
+          {
+            "name": "金鱼",
+            "image": "Goldfish.png"
+          }
+        ],
+        "result": {
+          "name": "鱼菇汤",
+          "image": "Bowl_of_Soup_(old).png"
+        }
+      }
+    ]
   },
   "红木箱": {
     "name": "红木箱",
@@ -2824,7 +7234,27 @@
     },
     "drops": null,
     "description": "红木箱是一种宝箱类收纳物品，只在丛林与地下丛林里的地下小屋发现。就像大理石箱和花岗岩箱一样，红木箱与金箱里面的拾取物完全相同。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "红木箱",
+            "image": "Rich_Mahogany_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "红木陷阱箱",
+          "image": "Trapped_Rich_Mahogany_Chest.png"
+        }
+      }
+    ]
   },
   "绿蘑菇": {
     "name": "绿蘑菇",
@@ -2876,23 +7306,26 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "绿蘑菇",
-          "image": "Green_Mushroom.png"
-        }
-      ],
-      "result": {
-        "name": "绿染料",
-        "image": "Green_Dye.png",
-        "amount": "2"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "绿蘑菇是一种蘑菇。它可在位于地下和洞穴地层中的土块、石块、泥块、或常规丛林草上生长。与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作绿染料。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "绿蘑菇",
+            "image": "Green_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "绿染料",
+          "image": "Green_Dye.png",
+          "amount": "2"
+        }
+      }
+    ]
   },
   "花岗岩箱": {
     "name": "花岗岩箱",
@@ -2944,11 +7377,13 @@
       "ingredients": [
         {
           "name": "光面花岗岩块",
-          "image": "Smooth_Granite_Block.png"
+          "image": "Smooth_Granite_Block.png",
+          "amount": "8"
         },
         {
           "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif"
+          "image": "Any_Iron_Bar.gif",
+          "amount": "2"
         }
       ],
       "result": {
@@ -2958,7 +7393,27 @@
     },
     "drops": null,
     "description": "花岗岩箱是一种宝箱类收纳物品，只在花岗岩洞里面的地下小屋发现。就像大理石箱和红木箱一样，花岗岩箱与金箱里面的拾取物完全相同。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "花岗岩箱",
+            "image": "Granite_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "花岗岩陷阱箱",
+          "image": "Trapped_Granite_Chest.png"
+        }
+      }
+    ]
   },
   "蓝浆果": {
     "name": "蓝浆果",
@@ -3010,19 +7465,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "蓝浆果",
-          "image": "Blue_Berries.png"
-        }
-      ],
-      "result": {
-        "name": "蓝染料",
-        "image": "Blue_Dye.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "蓝浆果是一种植物和染料材料。放置的蓝浆果有着蓝莓丛的外观。它可在地表以上的常规草或丛林草上生长。与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作蓝染料。",
     "description_rich": [
@@ -3033,7 +7476,23 @@
         }
       ]
     ],
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "蓝浆果",
+            "image": "Blue_Berries.png"
+          }
+        ],
+        "result": {
+          "name": "蓝染料",
+          "image": "Blue_Dye.png",
+          "amount": "2"
+        }
+      }
+    ]
   },
   "蘑菇箱": {
     "name": "蘑菇箱",
@@ -3085,11 +7544,13 @@
       "ingredients": [
         {
           "name": "发光蘑菇",
-          "image": "Glowing_Mushroom.png"
+          "image": "Glowing_Mushroom.png",
+          "amount": "8"
         },
         {
           "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif"
+          "image": "Any_Iron_Bar.gif",
+          "amount": "2"
         }
       ],
       "result": {
@@ -3099,7 +7560,27 @@
     },
     "drops": null,
     "description": "蘑菇箱是一种宝箱，可以在发光蘑菇生物群系的地下小屋中发现。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "蘑菇箱",
+            "image": "Mushroom_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蘑菇陷阱箱",
+          "image": "Trapped_Mushroom_Chest.png"
+        }
+      }
+    ]
   },
   "蛛丝箱": {
     "name": "蛛丝箱",
@@ -3146,27 +7627,30 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台",
-      "ingredients": [
-        {
-          "name": "蛛丝箱",
-          "image": "Web_Covered_Chest.png"
-        },
-        {
-          "name": "电线",
-          "image": "Wire.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "蛛丝陷阱箱",
-        "image": "Trapped_Web_Covered_Chest.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "蛛丝箱出现在蜘蛛窝，但很稀有。它们总是会包含蛛丝吊索，另外还有常见或不常见物品（也会出现在金箱中），取决于所在高度：地下或洞穴。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "蛛丝箱",
+            "image": "Web_Covered_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蛛丝陷阱箱",
+          "image": "Trapped_Web_Covered_Chest.png"
+        }
+      }
+    ]
   },
   "蜂巢": {
     "name": "蜂巢",
@@ -3289,7 +7773,22 @@
     },
     "drops": null,
     "description": "贝壳是一类装饰物品，可被发现于海洋生物群系中。它们可在生物群系中的沙块上生成，既可以在沙滩上也可在水下生成。它们被放置出来时会呈现为三种变体之一。\n\n贝壳可在沙滩上和水下重新生成，只要 8 图格内有不多于 3 个珊瑚或贝壳。生成速率和雨、风、和沙块上最多 14 图格的空余空间有关。当贝壳生成时，有 79.4% 几率生成普通贝壳或海星，9.8% 几率生成旋螺壳，8.8% 几率生成香螺壳，2% 几率生成涡螺壳。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "贝壳",
+            "image": "Seashell.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      }
+    ]
   },
   "金箱": {
     "name": "金箱",
@@ -3336,24 +7835,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台",
-      "ingredients": [
-        {
-          "name": "金箱",
-          "image": "Gold_Chest.png"
-        },
-        {
-          "name": "电线",
-          "image": "Wire.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "金陷阱箱",
-        "image": "Trapped_Gold_Chest.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "金箱是一种自然生成的宝箱，里面装着各种战利品。每个金箱包含一件稀有物品，以及一些钱币和其他更常见的物品。金箱可以在地下和洞穴层的地下小屋中，以及金字塔中找到。\n\n除了初始物品不同之外，金箱和其它宝箱类似。从金箱中移除所有物品之后才能用镐或钻头进行采挖。之后它可以被拾取、放置，并像其它宝箱一样使用，具有 40 栏位的收纳空间。它和其它宝箱仅有的三处不同为：金箱无法被制作，只会在世界创建时于随机位置生成；它们也可以在NPC处以10 SC进行出售，高于普通宝箱1 SC的售价；金箱暴露在光源下时会闪烁，类似于钱币。",
     "item_category": "furniture",
@@ -3388,6 +7870,26 @@
           "text": "的售价；金箱暴露在光源下时会闪烁，类似于钱币。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "金箱",
+            "image": "Gold_Chest.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "金陷阱箱",
+          "image": "Trapped_Gold_Chest.png"
+        }
+      }
     ]
   },
   "青绿蘑菇": {
@@ -3440,22 +7942,26 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "青绿蘑菇",
-          "image": "Teal_Mushroom.png"
-        }
-      ],
-      "result": {
-        "name": "青绿染料",
-        "image": "Teal_Dye.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "青绿蘑菇是一种蘑菇。它可在位于地下和洞穴地层中的土块、石块、泥块、或常规丛林草上生长。与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作青绿染料。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "青绿蘑菇",
+            "image": "Teal_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "青绿染料",
+          "image": "Teal_Dye.png",
+          "amount": "2"
+        }
+      }
+    ]
   },
   "黄万寿菊": {
     "name": "黄万寿菊",
@@ -3507,23 +8013,26 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "黄万寿菊",
-          "image": "Yellow_Marigold.png"
-        }
-      ],
-      "result": {
-        "name": "黄染料",
-        "image": "Yellow_Dye.png",
-        "amount": "2"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "黄万寿菊是一种植物。它可在地表以上的常规草和神圣草上生长。与许多植物不同，它无法通过攻击被破坏，需要用镐采集。它的唯一用途是制作黄染料。",
-    "item_category": "furniture"
+    "item_category": "furniture",
+    "used_in": [
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "黄万寿菊",
+            "image": "Yellow_Marigold.png"
+          }
+        ],
+        "result": {
+          "name": "黄染料",
+          "image": "Yellow_Dye.png",
+          "amount": "2"
+        }
+      }
+    ]
   },
   "计时器": {
     "name": "计时器",

@@ -143,7 +143,603 @@
     },
     "drops": null,
     "description": "发光蘑菇是一种植物、制作材料、和物块，可以在发光蘑菇生物群系的蘑菇草上找到。发光蘑菇植物会发出蓝光。\n\n发光蘑菇物品不会被放置为植物，而是会被放置为实心块。发光蘑菇物品可以通过摧毁发光蘑菇植物、砍倒巨型发光蘑菇、和摧毁蘑菇藤蔓和香蒲获得。如此做还会获得蘑菇草种子。",
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "光芒药水",
+          "image": "Shine_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          },
+          {
+            "name": "粉凝胶",
+            "image": "Pink_Gel.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "恢复药水",
+          "image": "Restoration_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png",
+            "amount": "2"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "治疗药水",
+          "image": "Healing_Potion.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蘑菇书架",
+          "image": "Mushroom_Bookcase.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "4"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "4"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇吊灯",
+          "image": "Mushroom_Chandelier.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇墙",
+          "image": "Mushroom_Wall.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蘑菇工作台",
+          "image": "Mushroom_Work_Bench.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇平台",
+          "image": "Mushroom_Platform.png",
+          "amount": "2"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "15"
+          },
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "蘑菇床",
+          "image": "Mushroom_Bed.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "3"
+          },
+          {
+            "name": "玻璃",
+            "image": "Glass.png",
+            "amount": "6"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "蘑菇时钟",
+          "image": "Mushroom_Clock.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "蘑菇桌",
+          "image": "Mushroom_Table.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇梁",
+          "image": "Mushroom_Beam.png",
+          "amount": "2"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "16"
+          }
+        ],
+        "result": {
+          "name": "蘑菇梳妆台",
+          "image": "Mushroom_Dresser.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "蘑菇椅",
+          "image": "Mushroom_Chair.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "6"
+          },
+          {
+            "name": "水桶",
+            "image": "Water_Bucket.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇水槽",
+          "image": "Mushroom_Sink.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "5"
+          },
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "蘑菇沙发",
+          "image": "Mushroom_Sofa.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "300"
+          },
+          {
+            "name": "蘑菇草种子",
+            "image": "Mushroom_Grass_Seeds.png",
+            "amount": "5"
+          },
+          {
+            "name": "组织样本",
+            "image": "Tissue_Sample.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "蘑菇法杖",
+          "image": "Mushroom_Staff.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "300"
+          },
+          {
+            "name": "蘑菇草种子",
+            "image": "Mushroom_Grass_Seeds.png",
+            "amount": "5"
+          },
+          {
+            "name": "暗影鳞片",
+            "image": "Shadow_Scale.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "14"
+          }
+        ],
+        "result": {
+          "name": "蘑菇浴缸",
+          "image": "Mushroom_Bathtub.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "3"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇火把",
+          "image": "Mushroom_Torch.png",
+          "amount": "3"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "蘑菇灯",
+          "image": "Mushroom_Lamp.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "6"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇灯笼",
+          "image": "Mushroom_Lantern.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "5"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "蘑菇烛台",
+          "image": "Mushroom_Candelabra.png"
+        }
+      },
+      {
+        "station": "自动锤炼机",
+        "ingredients": [
+          {
+            "name": "叶绿锭",
+            "image": "Chlorophyte_Bar.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "蘑菇矿锭",
+          "image": "Shroomite_Bar.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "蘑菇箱",
+          "image": "Mushroom_Chest.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "10"
+          },
+          {
+            "name": "蘑菇火把",
+            "image": "Mushroom_Torch.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "蘑菇篝火",
+          "image": "Mushroom_Campfire.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "4"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇蜡烛",
+          "image": "Mushroom_Candle.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇钢琴",
+          "image": "Mushroom_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "蘑菇长椅",
+          "image": "Mushroom_Bench.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "蘑菇门",
+          "image": "Mushroom_Door.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "蘑菇马桶",
+          "image": "Mushroom_Toilet.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "弱效魔力药水",
+            "image": "Lesser_Mana_Potion.png",
+            "amount": "2"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "魔力药水",
+          "image": "Mana_Potion.png"
+        }
+      }
+    ]
   },
   "回忆药水": {
     "name": "回忆药水",
@@ -455,7 +1051,26 @@
       ]
     },
     "description": "回忆药水是一种药水，使用时可以将玩家传送至生成点。它和魔镜或冰雪镜的作用相同，但使用时间比它们快很多。\n\n除了制作之外，回忆药水还可在罐子和宝箱中找到，并有小几率作为史莱姆的额外掉落出现。",
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "回忆药水",
+            "image": "Recall_Potion.png"
+          },
+          {
+            "name": "黑曜石鱼",
+            "image": "Obsidifish.png"
+          }
+        ],
+        "result": {
+          "name": "返回药水",
+          "image": "Potion_of_Return.png"
+        }
+      }
+    ]
   },
   "弱效治疗药水": {
     "name": "弱效治疗药水",
@@ -784,7 +1399,40 @@
         }
       ]
     ],
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png",
+            "amount": "2"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "治疗药水",
+          "image": "Healing_Potion.png"
+        }
+      },
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png"
+          }
+        ],
+        "result": {
+          "name": "装饰治疗药水",
+          "image": "Decorative_Healing_Potion.png"
+        }
+      }
+    ]
   },
   "弱效魔力药水": {
     "name": "弱效魔力药水",
@@ -848,19 +1496,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "重型装配台",
-      "ingredients": [
-        {
-          "name": "弱效魔力药水",
-          "image": "Lesser_Mana_Potion.png"
-        }
-      ],
-      "result": {
-        "name": "装饰魔力药水",
-        "image": "Decorative_Mana_Potion.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -958,7 +1594,40 @@
         }
       ]
     ],
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "弱效魔力药水",
+            "image": "Lesser_Mana_Potion.png"
+          }
+        ],
+        "result": {
+          "name": "装饰魔力药水",
+          "image": "Decorative_Mana_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "弱效魔力药水",
+            "image": "Lesser_Mana_Potion.png",
+            "amount": "2"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "魔力药水",
+          "image": "Mana_Potion.png"
+        }
+      }
+    ]
   },
   "强效治疗药水": {
     "name": "强效治疗药水",
@@ -1291,7 +1960,59 @@
       ]
     },
     "description": "强效治疗药水是一种困难模式的回复药水，使用后能够恢复 150生命并造成 60 秒的耐药性减益。此持续时间可以通过点金石或神话护身符来缩短。\n\n强效治疗药水可以被制作，或从困难模式Boss、生物群系宝箱怪以及火星飞碟处获得。\n\n它是第三级别的治疗药水，优于弱效治疗药水和治疗药水，次于丛林果汁和超级治疗药水。",
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "amount": "3"
+          },
+          {
+            "name": "生命果",
+            "image": "Life_Fruit.png"
+          }
+        ],
+        "result": {
+          "name": "丛林果汁",
+          "image": "Jungle_Juice.png",
+          "amount": "3"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "amount": "4"
+          },
+          {
+            "name": "星云碎片",
+            "image": "Nebula_Fragment.png"
+          },
+          {
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png"
+          },
+          {
+            "name": "星尘碎片",
+            "image": "Stardust_Fragment.png"
+          },
+          {
+            "name": "星旋碎片",
+            "image": "Vortex_Fragment.png"
+          }
+        ],
+        "result": {
+          "name": "超级治疗药水",
+          "image": "Super_Healing_Potion.png",
+          "amount": "4"
+        }
+      }
+    ]
   },
   "强效魔力药水": {
     "name": "强效魔力药水",
@@ -1355,34 +2076,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
-      "ingredients": [
-        {
-          "name": "强效魔力药水",
-          "image": "Greater_Mana_Potion.png",
-          "amount": "15"
-        },
-        {
-          "name": "坠落之星",
-          "image": "Fallen_Star.png"
-        },
-        {
-          "name": "水晶碎块",
-          "image": "Crystal_Shard.png",
-          "amount": "3"
-        },
-        {
-          "name": "独角兽角",
-          "image": "Unicorn_Horn.png"
-        }
-      ],
-      "result": {
-        "name": "超级魔力药水",
-        "image": "Super_Mana_Potion.png",
-        "amount": "15"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -1483,7 +2177,37 @@
         }
       ]
     ],
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "强效魔力药水",
+            "image": "Greater_Mana_Potion.png",
+            "amount": "15"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "3"
+          },
+          {
+            "name": "独角兽角",
+            "image": "Unicorn_Horn.png"
+          }
+        ],
+        "result": {
+          "name": "超级魔力药水",
+          "image": "Super_Mana_Potion.png",
+          "amount": "15"
+        }
+      }
+    ]
   },
   "恢复药水": {
     "name": "恢复药水",
@@ -1664,27 +2388,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "烹饪锅或大锅",
-      "ingredients": [
-        {
-          "name": "黑醋栗",
-          "image": "Blackcurrant.png"
-        },
-        {
-          "name": "接骨木果",
-          "image": "Elderberry.png"
-        },
-        {
-          "name": "玻璃瓶",
-          "image": "Bottle.png"
-        }
-      ],
-      "result": {
-        "name": "暗黑奶昔",
-        "image": "Smoothie_of_Darkness.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -1850,6 +2554,29 @@
           "alt": "Elderberry (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "黑醋栗",
+            "image": "Blackcurrant.png"
+          },
+          {
+            "name": "接骨木果",
+            "image": "Elderberry.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "暗黑奶昔",
+          "image": "Smoothie_of_Darkness.png"
+        }
+      }
     ]
   },
   "李子": {
@@ -2288,27 +3015,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "烹饪锅或大锅",
-      "ingredients": [
-        {
-          "name": "杨桃",
-          "image": "Star_Fruit.png"
-        },
-        {
-          "name": "火龙果",
-          "image": "Dragon_Fruit.png"
-        },
-        {
-          "name": "玻璃瓶",
-          "image": "Bottle.png"
-        }
-      ],
-      "result": {
-        "name": "七彩潘趣酒",
-        "image": "Prismatic_Punch.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -2492,6 +3199,29 @@
           "alt": "Star Fruit (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "杨桃",
+            "image": "Star_Fruit.png"
+          },
+          {
+            "name": "火龙果",
+            "image": "Dragon_Fruit.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "七彩潘趣酒",
+          "image": "Prismatic_Punch.png"
+        }
+      }
     ]
   },
   "柠檬": {
@@ -2697,6 +3427,25 @@
           "alt": "Lemon (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "柠檬",
+            "image": "Lemon.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "柠檬水",
+          "image": "Lemonade.png"
+        }
+      }
     ]
   },
   "桃子": {
@@ -2896,6 +3645,25 @@
           "alt": "Peach (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "桃子",
+            "image": "Peach.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "桃子果酒",
+          "image": "Peach_Sangria.png"
+        }
+      }
     ]
   },
   "棉花糖": {
@@ -2966,23 +3734,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "棉花糖",
-          "image": "Marshmallow.png"
-        },
-        {
-          "name": "任何木材",
-          "image": "Any_Wood.gif"
-        }
-      ],
-      "result": {
-        "name": "棒棒棉花糖",
-        "image": "Marshmallow_on_a_Stick.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "棉花糖是一种食物物品，食用后给予吃得好增益。这会持续 1 分钟，但任何时候都可以通过右键点击图标（电脑版）、通过轮转上一个/下一个增益选择图标然后按下取消增益（主机版）、或通过双击增益图标（移动版）来取消。商人在雪原生物群系中时，与其对话可以每个1 SC的价格购买棉花糖。\n\n棉花糖也是一种制作材料，用于制作棒棒棉花糖。后者可在篝火处制作成熟棉花糖，从而大幅延长增益持续时间。\n\n和所有其他食物物品一样，棉花糖可以放在盘子里：Marshmallow (on Plate).png",
     "description_rich": [
@@ -3046,7 +3798,26 @@
         }
       ]
     ],
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "棉花糖",
+            "image": "Marshmallow.png"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif"
+          }
+        ],
+        "result": {
+          "name": "棒棒棉花糖",
+          "image": "Marshmallow_on_a_Stick.png"
+        }
+      }
+    ]
   },
   "椰子": {
     "name": "椰子",
@@ -3269,6 +4040,29 @@
           "alt": "Coconut (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "菠萝",
+            "image": "Pineapple.png"
+          },
+          {
+            "name": "椰子",
+            "image": "Coconut.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "椰林飘香",
+          "image": "Piña_Colada.png"
+        }
+      }
     ]
   },
   "樱桃": {
@@ -4139,27 +4933,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "烹饪锅或大锅",
-      "ingredients": [
-        {
-          "name": "杨桃",
-          "image": "Star_Fruit.png"
-        },
-        {
-          "name": "火龙果",
-          "image": "Dragon_Fruit.png"
-        },
-        {
-          "name": "玻璃瓶",
-          "image": "Bottle.png"
-        }
-      ],
-      "result": {
-        "name": "七彩潘趣酒",
-        "image": "Prismatic_Punch.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -4343,6 +5117,29 @@
           "alt": "Dragon Fruit (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "杨桃",
+            "image": "Star_Fruit.png"
+          },
+          {
+            "name": "火龙果",
+            "image": "Dragon_Fruit.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "七彩潘趣酒",
+          "image": "Prismatic_Punch.png"
+        }
+      }
     ]
   },
   "瓶装水": {
@@ -4410,7 +5207,1620 @@
     },
     "drops": null,
     "description": "瓶装水是一种困难模式之前的回复药水和制作材料。它可以在水槽处或水体处制作。瓶装水是游戏中几乎所有可制作药水的基础材料，同时也是制作药剂的必备物品。\n\n使用时，它能恢复 30生命值并造成持续 45 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。",
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "茶壶(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          }
+        ],
+        "result": {
+          "name": "一杯茶",
+          "image": "Teacup.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "混沌鱼",
+            "image": "Chaos_Fish.png"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          }
+        ],
+        "result": {
+          "name": "传送药水",
+          "image": "Teleportation_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "寒霜鲦鱼",
+            "image": "Frost_Minnow.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          }
+        ],
+        "result": {
+          "name": "保暖药水",
+          "image": "Warmth_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "光芒药水",
+          "image": "Shine_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "再生药水",
+          "image": "Regeneration_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          },
+          {
+            "name": "蛛网",
+            "image": "Cobweb.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "危险感药水",
+          "image": "Dangersense_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          }
+        ],
+        "result": {
+          "name": "变性药水",
+          "image": "Gender_Change_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "斑驳油鱼",
+            "image": "Variegated_Lardfish.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          }
+        ],
+        "result": {
+          "name": "召唤药水",
+          "image": "Summoning_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "镜面鱼",
+            "image": "Specular_Fish.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          }
+        ],
+        "result": {
+          "name": "回忆药水",
+          "image": "Recall_Potion.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png",
+            "amount": "10"
+          },
+          {
+            "name": "妖精尘",
+            "image": "Pixie_Dust.png",
+            "amount": "2"
+          },
+          {
+            "name": "神圣种子",
+            "image": "Hallowed_Seeds.png"
+          }
+        ],
+        "result": {
+          "name": "圣水",
+          "image": "Holy_Water.png",
+          "amount": "10"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "珊瑚",
+            "image": "Coral.png"
+          }
+        ],
+        "result": {
+          "name": "声呐药水",
+          "image": "Sonar_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          }
+        ],
+        "result": {
+          "name": "夜猫子药水",
+          "image": "Night_Owl_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "琥珀",
+            "image": "Amber.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          }
+        ],
+        "result": {
+          "name": "宝匣药水",
+          "image": "Crate_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "瓢虫",
+            "image": "Ladybug.png"
+          },
+          {
+            "name": "黑珍珠",
+            "image": "Black_Pearl.png"
+          }
+        ],
+        "result": {
+          "name": "幸运药水",
+          "image": "Luck_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          }
+        ],
+        "result": {
+          "name": "建筑工药水",
+          "image": "Builder_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "瓢虫",
+            "image": "Ladybug.png"
+          },
+          {
+            "name": "白珍珠",
+            "image": "White_Pearl.png"
+          }
+        ],
+        "result": {
+          "name": "弱效幸运药水",
+          "image": "Lesser_Luck_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "双鳍鳕鱼",
+            "image": "Double_Cod.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          }
+        ],
+        "result": {
+          "name": "弹药储备药水",
+          "image": "Ammo_Reservation_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "瓢虫",
+            "image": "Ladybug.png"
+          },
+          {
+            "name": "粉珍珠",
+            "image": "Pink_Pearl.png"
+          }
+        ],
+        "result": {
+          "name": "强效幸运药水",
+          "image": "Greater_Luck_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png",
+            "amount": "3"
+          },
+          {
+            "name": "妖精尘",
+            "image": "Pixie_Dust.png",
+            "amount": "3"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png"
+          }
+        ],
+        "result": {
+          "name": "强效治疗药水",
+          "image": "Greater_Healing_Potion.png",
+          "amount": "3"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "黑檀锦鲤",
+            "image": "Ebonkoi.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          }
+        ],
+        "result": {
+          "name": "怒气药水",
+          "image": "Wrath_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          },
+          {
+            "name": "腐肉",
+            "image": "Rotten_Chunk.png"
+          }
+        ],
+        "result": {
+          "name": "战斗药水",
+          "image": "Battle_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          },
+          {
+            "name": "椎骨",
+            "image": "Vertebra.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "猩红虎鱼",
+            "image": "Crimson_Tigerfish.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          }
+        ],
+        "result": {
+          "name": "拾心药水",
+          "image": "Heartreach_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "蚁狮上颚",
+            "image": "Antlion_Mandible.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          }
+        ],
+        "result": {
+          "name": "挖矿药水",
+          "image": "Mining_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "仙人掌",
+            "image": "Cactus.png"
+          }
+        ],
+        "result": {
+          "name": "敏捷药水",
+          "image": "Swiftness_Potion.png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "日耀染料",
+          "image": "Solar_Dye.png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "星云碎片",
+            "image": "Nebula_Fragment.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "星云染料",
+          "image": "Nebula_Dye.png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "星尘碎片",
+            "image": "Stardust_Fragment.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "星尘染料",
+          "image": "Stardust_Dye.png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "星旋碎片",
+            "image": "Vortex_Fragment.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "星旋染料",
+          "image": "Vortex_Dye.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "血腥食人鱼",
+            "image": "Hemopiranha.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          }
+        ],
+        "result": {
+          "name": "暴怒药水",
+          "image": "Rage_Potion.png"
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "小瓶毒液",
+            "image": "Vial_of_Venom.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "毒液药剂",
+          "image": "Flask_of_Venom.png"
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "毒刺",
+            "image": "Stinger.png"
+          }
+        ],
+        "result": {
+          "name": "毒药剂",
+          "image": "Flask_of_Poison.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "鲨鱼鳍",
+            "image": "Shark_Fin.png"
+          }
+        ],
+        "result": {
+          "name": "水上漂药水",
+          "image": "Water_Walking_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          }
+        ],
+        "result": {
+          "name": "泰坦药水",
+          "image": "Titan_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "铂金矿",
+            "image": "Platinum_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "洞穴探险药水",
+          "image": "Spelunker_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "金矿",
+            "image": "Gold_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "彩纸",
+            "image": "Confetti.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "派对药剂",
+          "image": "Flask_of_Party.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          }
+        ],
+        "result": {
+          "name": "火把神的调味剂",
+          "image": "Torch_God's_Flavor.png"
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "灵液",
+            "image": "Ichor.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "灵液药剂",
+          "image": "Flask_of_Ichor.png"
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "狱石",
+            "image": "Hellstone.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "烈火药剂",
+          "image": "Flask_of_Fire.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "公主鱼",
+            "image": "Princess_Fish.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          }
+        ],
+        "result": {
+          "name": "爱情药水",
+          "image": "Love_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "鲨鱼鳍",
+            "image": "Shark_Fin.png"
+          }
+        ],
+        "result": {
+          "name": "狩猎药水",
+          "image": "Hunter_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "闪鳍锦鲤",
+            "image": "Flarefin_Koi.png"
+          },
+          {
+            "name": "黑曜石鱼",
+            "image": "Obsidifish.png",
+            "amount": "2"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          }
+        ],
+        "result": {
+          "name": "狱火药水",
+          "image": "Inferno_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "七彩矿鱼",
+            "image": "Prismite.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          }
+        ],
+        "result": {
+          "name": "生命力药水",
+          "image": "Lifeforce_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "草种子",
+            "image": "Grass_Seeds.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "生物群系视觉药水",
+          "image": "Biome_Sight_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "晶状体",
+            "image": "Lens.png"
+          }
+        ],
+        "result": {
+          "name": "箭术药水",
+          "image": "Archery_Potion.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "粉水母（鱼饵）",
+            "image": "Pink_Jellyfish_(bait).png"
+          },
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          }
+        ],
+        "result": {
+          "name": "粉水母罐",
+          "image": "Pink_Jellyfish_Jar.png"
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "纳米机器人",
+            "image": "Nanites.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "纳米机器人药剂",
+          "image": "Flask_of_Nanites.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "绿水母（鱼饵）",
+            "image": "Green_Jellyfish_(bait).png"
+          },
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          }
+        ],
+        "result": {
+          "name": "绿水母罐",
+          "image": "Green_Jellyfish_Jar.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "羽毛",
+            "image": "Feather.png"
+          }
+        ],
+        "result": {
+          "name": "羽落药水",
+          "image": "Featherfall_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "装甲洞穴鱼",
+            "image": "Armored_Cavefish.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          }
+        ],
+        "result": {
+          "name": "耐力药水",
+          "image": "Endurance_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          }
+        ],
+        "result": {
+          "name": "脚蹼药水",
+          "image": "Flipper_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png",
+            "amount": "2"
+          },
+          {
+            "name": "臭味鱼",
+            "image": "Stinkfish.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          }
+        ],
+        "result": {
+          "name": "臭味药水",
+          "image": "Stink_Potion.png",
+          "amount": "2"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          },
+          {
+            "name": "仙人掌",
+            "image": "Cactus.png"
+          }
+        ],
+        "result": {
+          "name": "荆棘药水",
+          "image": "Thorns_Potion.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "蓝水母（鱼饵）",
+            "image": "Blue_Jellyfish_(bait).png"
+          },
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          }
+        ],
+        "result": {
+          "name": "蓝水母罐",
+          "image": "Blue_Jellyfish_Jar.png"
+        }
+      },
+      {
+        "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "夜明锭",
+            "image": "Luminite_Bar.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "虚空染料",
+          "image": "Void_Dye.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png",
+            "amount": "3"
+          },
+          {
+            "name": "镜面鱼",
+            "image": "Specular_Fish.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          }
+        ],
+        "result": {
+          "name": "虫洞药水",
+          "image": "Wormhole_Potion.png",
+          "amount": "3"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png",
+            "amount": "10"
+          },
+          {
+            "name": "猩红沙块",
+            "image": "Crimsand_Block.png"
+          },
+          {
+            "name": "猩红种子",
+            "image": "Crimson_Seeds.png"
+          }
+        ],
+        "result": {
+          "name": "血水",
+          "image": "Blood_Water.png",
+          "amount": "10"
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "诅咒焰",
+            "image": "Cursed_Flame.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "诅咒焰药剂",
+          "image": "Flask_of_Cursed_Flames.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png",
+            "amount": "10"
+          },
+          {
+            "name": "黑檀沙块",
+            "image": "Ebonsand_Block.png"
+          },
+          {
+            "name": "腐化种子",
+            "image": "Corrupt_Seeds.png"
+          }
+        ],
+        "result": {
+          "name": "邪水",
+          "image": "Unholy_Water.png",
+          "amount": "10"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "羽毛",
+            "image": "Feather.png"
+          }
+        ],
+        "result": {
+          "name": "重力药水",
+          "image": "Gravitation_Potion.png"
+        }
+      },
+      {
+        "station": "灌注站",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "金尘",
+            "image": "Gold_Dust.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "金药剂",
+          "image": "Flask_of_Gold.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "金金鱼",
+            "image": "Gold_Goldfish.png"
+          },
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          }
+        ],
+        "result": {
+          "name": "金鱼缸",
+          "image": "Gold_Fish_Bowl.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "松脆蜂蜜块",
+            "image": "Crispy_Honey_Block.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          }
+        ],
+        "result": {
+          "name": "钓鱼药水",
+          "image": "Fishing_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "铅矿",
+            "image": "Lead_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "铁皮药水",
+          "image": "Ironskin_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "铁矿",
+            "image": "Iron_Ore.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "雀鲷",
+            "image": "Damselfish.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          }
+        ],
+        "result": {
+          "name": "镇静药水",
+          "image": "Calming_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "闪耀根",
+            "image": "Blinkroot.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          }
+        ],
+        "result": {
+          "name": "隐身药水",
+          "image": "Invisibility_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star.png"
+          }
+        ],
+        "result": {
+          "name": "魔力再生药水",
+          "image": "Mana_Regeneration_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "月光草",
+            "image": "Moonglow.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star.png"
+          }
+        ],
+        "result": {
+          "name": "魔能药水",
+          "image": "Magic_Power_Potion.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "金鱼",
+            "image": "Goldfish.png"
+          },
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          }
+        ],
+        "result": {
+          "name": "鱼缸",
+          "image": "Fish_Bowl.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "珊瑚",
+            "image": "Coral.png"
+          }
+        ],
+        "result": {
+          "name": "鱼鳃药水",
+          "image": "Gills_Potion.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "鳉鱼",
+            "image": "Pupfish.png"
+          },
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          }
+        ],
+        "result": {
+          "name": "鳉鱼缸",
+          "image": "Pupfish_Bowl.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "火焰花",
+            "image": "Fireblossom.png"
+          },
+          {
+            "name": "水叶草",
+            "image": "Waterleaf.png"
+          },
+          {
+            "name": "黑曜石",
+            "image": "Obsidian.png"
+          }
+        ],
+        "result": {
+          "name": "黑曜石皮药水",
+          "image": "Obsidian_Skin_Potion.png"
+        }
+      }
+    ]
   },
   "瓶装蜂蜜": {
     "name": "瓶装蜂蜜",
@@ -4521,7 +6931,36 @@
       ]
     },
     "description": "瓶装蜂蜜是一种困难模式之前的回复药水和制作材料。使用后，它会恢复 80生命并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。它还会给予玩家蜂蜜增益，持续 15 秒。除了可以制作得到之外，瓶装蜂蜜也掉落自出现在地下丛林中的蜂巢内的蜂王。",
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "蜂蜜块",
+            "image": "Honey_Block.png",
+            "amount": "5"
+          },
+          {
+            "name": "毒刺",
+            "image": "Stinger.png"
+          },
+          {
+            "name": "蜂巢",
+            "image": "Hive.png",
+            "amount": "5"
+          },
+          {
+            "name": "瓶装蜂蜜",
+            "image": "Bottled_Honey.png"
+          }
+        ],
+        "result": {
+          "name": "憎恶之蜂",
+          "image": "Abeemination.png"
+        }
+      }
+    ]
   },
   "石榴": {
     "name": "石榴",
@@ -4954,6 +7393,29 @@
           "alt": "Rambutan (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "血橙",
+            "image": "Blood_Orange.png"
+          },
+          {
+            "name": "红毛丹",
+            "image": "Rambutan.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "血腥麝香葡萄",
+          "image": "Bloody_Moscato.png"
+        }
+      }
     ]
   },
   "芒果": {
@@ -5152,6 +7614,29 @@
           "alt": "Mango (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "芒果",
+            "image": "Mango.png"
+          },
+          {
+            "name": "菠萝",
+            "image": "Pineapple.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "热带奶昔",
+          "image": "Tropical_Smoothie.png"
+        }
+      }
     ]
   },
   "苹果": {
@@ -5356,6 +7841,25 @@
           "alt": "Apple (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "苹果",
+            "image": "Apple.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "苹果汁",
+          "image": "Apple_Juice.png"
+        }
+      }
     ]
   },
   "菠萝": {
@@ -5560,6 +8064,50 @@
           "alt": "Pineapple (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "菠萝",
+            "image": "Pineapple.png"
+          },
+          {
+            "name": "椰子",
+            "image": "Coconut.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "椰林飘香",
+          "image": "Piña_Colada.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "芒果",
+            "image": "Mango.png"
+          },
+          {
+            "name": "菠萝",
+            "image": "Pineapple.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "热带奶昔",
+          "image": "Tropical_Smoothie.png"
+        }
+      }
     ]
   },
   "葡萄": {
@@ -5618,23 +8166,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "烹饪锅或大锅",
-      "ingredients": [
-        {
-          "name": "葡萄",
-          "image": "Grapes.png"
-        },
-        {
-          "name": "玻璃瓶",
-          "image": "Bottle.png"
-        }
-      ],
-      "result": {
-        "name": "葡萄汁",
-        "image": "Grape_Juice.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -5746,6 +8278,26 @@
           "alt": "Grapes (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "葡萄",
+            "image": "Grapes.png",
+            "amount": "2"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "葡萄汁",
+          "image": "Grape_Juice.png"
+        }
+      }
     ]
   },
   "葡萄柚": {
@@ -6001,26 +8553,118 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "任何木材",
-          "image": "Any_Wood.gif"
-        },
-        {
-          "name": "蘑菇",
-          "image": "Mushroom.png"
-        }
-      ],
-      "result": {
-        "name": "仙灵木",
-        "image": "Feywood.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "蘑菇是种困难模式之前的制作材料和治疗物品，在位于地表的草或神圣草上随机生成，通常在森林中。可以用任意工具或武器来收取此物品。\n\n蘑菇使用时能恢复 15生命值并造成持续 30 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。\n\n在The Constant世界中，如果玩家饥饿，食用蘑菇也会将饥饿度重置为 5 分钟的稍饿。",
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "20"
+          },
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "仙灵木",
+          "image": "Feywood.png",
+          "amount": "20"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "太阳花",
+            "image": "Daybloom.png"
+          },
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "再生药水",
+          "image": "Regeneration_Potion.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png",
+            "amount": "2"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "弱效治疗药水",
+          "image": "Lesser_Healing_Potion.png",
+          "amount": "2"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          },
+          {
+            "name": "粉凝胶",
+            "image": "Pink_Gel.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "恢复药水",
+          "image": "Restoration_Potion.png"
+        }
+      },
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          },
+          {
+            "name": "金鱼",
+            "image": "Goldfish.png"
+          }
+        ],
+        "result": {
+          "name": "鱼菇汤",
+          "image": "Bowl_of_Soup.png"
+        }
+      }
+    ]
   },
   "虫洞药水": {
     "name": "虫洞药水",
@@ -6244,23 +8888,26 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "烹饪锅或大锅",
-      "ingredients": [
-        {
-          "name": "蜂蜜鱼",
-          "image": "Honeyfin.png",
-          "amount": "2"
-        }
-      ],
-      "result": {
-        "name": "海鲜大餐",
-        "image": "Seafood_Dinner.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "蜂蜜鱼是一种困难模式之前的鱼和回复药水，使用时能恢复 120生命值并造成持续 60 秒的耐药性。此持续时间可以通过点金石或神话护身符来缩短。它也可以用于制作海鲜大餐。\n\n蜂蜜鱼仅能从蜂蜜中钓得，例如在地下丛林的蜂巢内。除了在渔夫任务期间能钓到的大黄蜂金枪鱼外，蜂蜜鱼是唯一一种能在蜂蜜中钓到的鱼。",
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "蜂蜜鱼",
+            "image": "Honeyfin.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "海鲜大餐",
+          "image": "Seafood_Dinner.png"
+        }
+      }
+    ]
   },
   "血橙": {
     "name": "血橙",
@@ -6501,6 +9148,29 @@
           "alt": "Blood Orange (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "血橙",
+            "image": "Blood_Orange.png"
+          },
+          {
+            "name": "红毛丹",
+            "image": "Rambutan.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "血腥麝香葡萄",
+          "image": "Bloody_Moscato.png"
+        }
+      }
     ]
   },
   "诡药": {
@@ -6983,27 +9653,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "烹饪锅或大锅",
-      "ingredients": [
-        {
-          "name": "香蕉",
-          "image": "Banana.png"
-        },
-        {
-          "name": "玻璃瓶",
-          "image": "Bottle.png"
-        },
-        {
-          "name": "雪块",
-          "image": "Snow_Block.png"
-        }
-      ],
-      "result": {
-        "name": "冰冻香蕉代基里",
-        "image": "Frozen_Banana_Daiquiri.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -7151,6 +9801,29 @@
           "alt": "Banana (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "香蕉",
+            "image": "Banana.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          },
+          {
+            "name": "雪块",
+            "image": "Snow_Block.png"
+          }
+        ],
+        "result": {
+          "name": "冰冻香蕉代基里",
+          "image": "Frozen_Banana_Daiquiri.png"
+        }
+      }
     ]
   },
   "魔力药水": {
@@ -7225,7 +9898,8 @@
       "ingredients": [
         {
           "name": "弱效魔力药水",
-          "image": "Lesser_Mana_Potion.png"
+          "image": "Lesser_Mana_Potion.png",
+          "amount": "2"
         },
         {
           "name": "发光蘑菇",
@@ -7715,7 +10389,26 @@
         }
       ]
     ],
-    "item_category": "potions"
+    "item_category": "potions",
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "大自然的恩赐",
+            "image": "Nature's_Gift.png"
+          },
+          {
+            "name": "魔力药水",
+            "image": "Mana_Potion.png"
+          }
+        ],
+        "result": {
+          "name": "魔力花",
+          "image": "Mana_Flower.png"
+        }
+      }
+    ]
   },
   "黑醋栗": {
     "name": "黑醋栗",
@@ -7767,27 +10460,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "烹饪锅或大锅",
-      "ingredients": [
-        {
-          "name": "黑醋栗",
-          "image": "Blackcurrant.png"
-        },
-        {
-          "name": "接骨木果",
-          "image": "Elderberry.png"
-        },
-        {
-          "name": "玻璃瓶",
-          "image": "Bottle.png"
-        }
-      ],
-      "result": {
-        "name": "暗黑奶昔",
-        "image": "Smoothie_of_Darkness.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -7953,6 +10626,29 @@
           "alt": "Blackcurrant (on Plate).png"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "烹饪锅或大锅",
+        "ingredients": [
+          {
+            "name": "黑醋栗",
+            "image": "Blackcurrant.png"
+          },
+          {
+            "name": "接骨木果",
+            "image": "Elderberry.png"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png"
+          }
+        ],
+        "result": {
+          "name": "暗黑奶昔",
+          "image": "Smoothie_of_Darkness.png"
+        }
+      }
     ]
   }
 }

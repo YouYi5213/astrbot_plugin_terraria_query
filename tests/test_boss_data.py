@@ -8,7 +8,6 @@ from boss_data import (  # noqa: E402
     LEGACY_BOSS_WIKI_TITLES,
     apply_boss_overview_metadata,
     build_bosses_from_mirror,
-    ingest_legacy_bosses_into,
     load_boss_catalog_from_homepage,
     load_boss_catalog_from_overview,
     load_bosses_for_plugin,
@@ -44,18 +43,14 @@ def test_legacy_boss_parsing_uniform_stats():
     assert hp["modes"]["normal"] == hp["modes"]["expert"] == hp["modes"]["master"] == "9000"
 
 
-def test_ingest_legacy_bosses_into():
-    bosses: dict = {}
-    count = ingest_legacy_bosses_into(bosses)
-    assert count == len(LEGACY_BOSS_WIKI_TITLES)
-    assert "奥库瑞姆" in bosses
-    assert bosses["奥库瑞姆"].get("legacy_boss") is True
-    assert bosses["奥库瑞姆"].get("exclude_overview") is True
-    assert "legacy_boss" in (bosses["奥库瑞姆"].get("internal_tags") or [])
-    ocram_drops = bosses["奥库瑞姆"].get("drops", {}).get("items", {}).get("normal") or []
-    assert len(ocram_drops) >= 10
-    turkey_parts = bosses["不感恩的火鸡"].get("parts") or []
-    assert len(turkey_parts) == 3
+def test_legacy_boss_pages_parse_but_not_in_plugin_load():
+    parsed = parse_boss_page_file("奥库瑞姆")
+    assert parsed is not None
+    bosses = load_bosses_for_plugin()
+    assert "奥库瑞姆" not in bosses
+    assert "天兔" not in bosses
+    assert "不感恩的火鸡" not in bosses
+    assert len(LEGACY_BOSS_WIKI_TITLES) == 3
 
 
 def test_parse_moon_lord_boss():

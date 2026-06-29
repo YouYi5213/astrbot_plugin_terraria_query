@@ -44,23 +44,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "精金矿",
-          "image": "Adamantite_Ore.png"
-        },
-        {
-          "name": "地狱熔炉",
-          "image": "Hellforge.png"
-        }
-      ],
-      "result": {
-        "name": "精金熔炉",
-        "image": "Adamantite_Forge.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -120,7 +104,45 @@
       ]
     },
     "description": "地狱熔炉是一种制作站，具有和常规熔炉相同的功能，另外能够将狱石熔炼成狱石锭。它也用于制作困难模式中所必需的精金熔炉/钛金熔炉。\n\n地狱熔炉无法被制作，而是出现在地狱中的废墟建筑内，也可以从黑曜石匣或者狱石匣中开出。地狱熔炉只能用死亡使者镐或梦魇镐或更好（60% 镐力）的工具采挖。在困难模式之前，无法被爆炸物摧毁。",
-    "item_category": "crafting_stations"
+    "item_category": "crafting_stations",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金矿",
+            "image": "Adamantite_Ore.png",
+            "amount": "30"
+          },
+          {
+            "name": "地狱熔炉",
+            "image": "Hellforge.png"
+          }
+        ],
+        "result": {
+          "name": "精金熔炉",
+          "image": "Adamantite_Forge.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金矿",
+            "image": "Titanium_Ore.png",
+            "amount": "30"
+          },
+          {
+            "name": "地狱熔炉",
+            "image": "Hellforge.png"
+          }
+        ],
+        "result": {
+          "name": "钛金熔炉",
+          "image": "Titanium_Forge.png"
+        }
+      }
+    ]
   },
   "玻璃杯": {
     "name": "玻璃杯",
@@ -182,7 +204,22 @@
     },
     "drops": null,
     "description": "玻璃杯是用玻璃制成的杯子。它可用于制作麦芽酒。它可以放置在平坦的家具物品上，作为放置的瓶子制作站使用。",
-    "item_category": "crafting_stations"
+    "item_category": "crafting_stations",
+    "used_in": [
+      {
+        "station": "酒桶",
+        "ingredients": [
+          {
+            "name": "玻璃杯",
+            "image": "Mug.png"
+          }
+        ],
+        "result": {
+          "name": "麦芽酒",
+          "image": "Ale.png"
+        }
+      }
+    ]
   },
   "腐变室": {
     "name": "腐变室",
@@ -255,7 +292,8 @@
         },
         {
           "name": "暗影之魂",
-          "image": "Soul_of_Night.png"
+          "image": "Soul_of_Night.png",
+          "amount": "10"
         }
       ],
       "result": {
@@ -288,7 +326,27 @@
         }
       ]
     ],
-    "item_category": "crafting_stations"
+    "item_category": "crafting_stations",
+    "used_in": [
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "腐变室",
+            "image": "Decay_Chamber.png"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "血肉克隆台",
+          "image": "Flesh_Cloning_Vat.png"
+        }
+      }
+    ]
   },
   "血肉克隆台": {
     "name": "血肉克隆台",
@@ -395,7 +453,27 @@
         }
       ]
     ],
-    "item_category": "crafting_stations"
+    "item_category": "crafting_stations",
+    "used_in": [
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "血肉克隆台",
+            "image": "Flesh_Cloning_Vat.png"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "腐变室",
+          "image": "Decay_Chamber.png"
+        }
+      }
+    ]
   },
   "精金熔炉": {
     "name": "精金熔炉",

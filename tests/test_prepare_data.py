@@ -23,6 +23,8 @@ from prepare_data import (  # noqa: E402
     resolve_local_item_image,
     resolve_local_entity_image,
     normalize_drop_images_in_items,
+    classify_item_recipes,
+    apply_item_recipes_from_tables,
     strip_english_fields,
 )
 from bs4 import BeautifulSoup  # noqa: E402
@@ -88,6 +90,66 @@ def test_normalize_drop_images_in_items_updates_ocram_entry():
     assert count == 1
     entry = items["枯萎之魂"]["drops"]["modes"][0]["entries"][0]
     assert entry["image"] == "Ocram_(Phase_1).gif"
+
+
+def test_classify_item_recipes_splits_craft_and_used_in():
+    recipes = [
+        {
+            "station": "砧",
+            "ingredients": [{"name": "力量之魂", "image": "a.png", "amount": "5"}],
+            "result": {"name": "光辉飞盘", "image": "b.png"},
+        },
+        {
+            "station": "砧",
+            "ingredients": [{"name": "力量之魂", "image": "a.png", "amount": "3"}],
+            "result": {"name": "巨兽之刃", "image": "c.png"},
+        },
+        {
+            "station": "砧",
+            "ingredients": [{"name": "铁锭", "image": "d.png"}],
+            "result": {"name": "力量之魂", "image": "a.png"},
+        },
+    ]
+    craft, used_in = classify_item_recipes("力量之魂", recipes)
+    assert craft and craft["result"]["name"] == "力量之魂"
+    assert len(used_in) == 2
+    assert {r["result"]["name"] for r in used_in} == {"光辉飞盘", "巨兽之刃"}
+
+
+def test_apply_item_recipes_from_tables_sets_used_in():
+    item = {"name": "力量之魂", "recipe": None}
+    recipes = [
+        {
+            "station": "砧",
+            "ingredients": [{"name": "力量之魂"}],
+            "result": {"name": "光辉飞盘"},
+        },
+        {
+            "station": "砧",
+            "ingredients": [{"name": "力量之魂"}],
+            "result": {"name": "巨兽之刃"},
+        },
+    ]
+    apply_item_recipes_from_tables(item, recipes)
+    assert item.get("recipe") is None
+    assert len(item.get("used_in") or []) == 2
+
+
+def test_recipe_needs_used_in_backfill_when_craft_recipe_exists():
+    from prepare_data import _recipe_needs_used_in_backfill
+
+    obsidian = {
+        "name": "黑曜石",
+        "stats": [{"label": "类型", "value": "矿石制作材料"}],
+        "recipe": {
+            "station": "徒手",
+            "ingredients": [{"name": "黑曜石墙"}],
+            "result": {"name": "黑曜石"},
+        },
+    }
+    assert _recipe_needs_used_in_backfill(obsidian) is True
+    obsidian["used_in"] = [{"result": {"name": "狱石锭"}}]
+    assert _recipe_needs_used_in_backfill(obsidian) is False
 
 
 def test_is_set_item_detects_armor_and_vanity():

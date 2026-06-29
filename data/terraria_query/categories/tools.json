@@ -876,6 +876,34 @@
           "text": "按钮上方弹出，按钮以两行的形式列出。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "五彩扳手",
+            "image": "Multicolor_Wrench.png"
+          },
+          {
+            "name": "机械透镜",
+            "image": "Mechanical_Lens.png"
+          },
+          {
+            "name": "机械标尺",
+            "image": "Mechanical_Ruler.png"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "60"
+          }
+        ],
+        "result": {
+          "name": "宏伟蓝图",
+          "image": "The_Grand_Design.png"
+        }
+      }
     ]
   },
   "仙人掌镐": {
@@ -1590,33 +1618,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "工作台",
-      "ingredients": [
-        {
-          "name": "再生法杖",
-          "image": "Staff_of_Regrowth.png"
-        },
-        {
-          "name": "铜斧",
-          "image": "Copper_Axe.png"
-        },
-        {
-          "name": "丛林孢子",
-          "image": "Jungle_Spores.png",
-          "amount": "12"
-        },
-        {
-          "name": "藤蔓",
-          "image": "Vine.png",
-          "amount": "3"
-        }
-      ],
-      "result": {
-        "name": "再生之斧",
-        "image": "Axe_of_Regrowth.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -1694,7 +1696,63 @@
       ]
     },
     "description": "再生法杖是一个工具，可在常春藤箱、丛林匣、和荆棘匣中找到。在收获开花阶段的草药时，它可以提高草药与其种子的产量。也可以在土块上使用再生法杖以种下草，无需草种子。与其他工具不同，除非直接以图格为目标，它在挥舞时不会摧毁植被。再生法杖在收获粘土盆或种植盆中的草药时会自动重新种植它们。\n\n其最佳修饰语针对收割用途是轻，针对战斗用途是传奇。",
-    "item_category": "tools"
+    "item_category": "tools",
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "再生法杖",
+            "image": "Staff_of_Regrowth.png"
+          },
+          {
+            "name": "铜斧",
+            "image": "Copper_Axe.png"
+          },
+          {
+            "name": "丛林孢子",
+            "image": "Jungle_Spores.png",
+            "amount": "12"
+          },
+          {
+            "name": "藤蔓",
+            "image": "Vine.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "再生之斧",
+          "image": "Axe_of_Regrowth.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "再生法杖",
+            "image": "Staff_of_Regrowth.png"
+          },
+          {
+            "name": "锡斧",
+            "image": "Tin_Axe.png"
+          },
+          {
+            "name": "丛林孢子",
+            "image": "Jungle_Spores.png",
+            "amount": "12"
+          },
+          {
+            "name": "藤蔓",
+            "image": "Vine.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      }
+    ]
   },
   "冰雪魔杖": {
     "name": "冰雪魔杖",
@@ -5309,30 +5367,33 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "工匠作坊",
-      "ingredients": [
-        {
-          "name": "手机",
-          "image": "Cell_Phone.png"
-        },
-        {
-          "name": "魔法海螺",
-          "image": "Magic_Conch.png"
-        },
-        {
-          "name": "恶魔海螺",
-          "image": "Demon_Conch.png"
-        }
-      ],
-      "result": {
-        "name": "贝壳电话",
-        "image": "Shellphone.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "恶魔海螺是一个稀有的困难模式之前物品，可以通过在熔岩中钓鱼获得。它能将玩家传送到地狱的中心。和魔法海螺类似，它可以无限制无消耗的使用，这让它成为传统地狱电梯的可行替代品。",
-    "item_category": "tools"
+    "item_category": "tools",
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "手机",
+            "image": "Cell_Phone.png"
+          },
+          {
+            "name": "魔法海螺",
+            "image": "Magic_Conch.png"
+          },
+          {
+            "name": "恶魔海螺",
+            "image": "Demon_Conch.png"
+          }
+        ],
+        "result": {
+          "name": "贝壳电话",
+          "image": "Shellphone.png"
+        }
+      }
+    ]
   },
   "悲剧雨伞": {
     "name": "悲剧雨伞",
@@ -5517,7 +5578,30 @@
     },
     "drops": null,
     "description": "手机是骷髅王后的信息物品，能显示渔力、天气、月相、高度、与世界中心的距离、时间、最接近的珍贵环境物品、移动速度、当前每秒伤害、最后所攻击的敌怪的总击杀数、附近的稀有生物、和附近敌怪的总数。它还能将玩家传送回家，类似于魔镜。\n\n与大多数其他信息物品（例如，其构成部件）不同，手机并不兼作配饰，并且不能装备在配饰栏中。它只能在玩家的普通物品栏栏内起作用，因此他归属于工具分类。\n\n当物品栏屏幕打开时，会隐藏所有的手机信息。相对的，会为每种信息显示一个图标，每个图标都是切换键，单击这些图标可以打开或关闭相应信息的显示。\n\n在多人模式中，来自手机的信息会与附近同一团队的玩家共享。\n\n手机可以和恶魔海螺与魔法海螺制成贝壳电话。",
-    "item_category": "tools"
+    "item_category": "tools",
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "手机",
+            "image": "Cell_Phone.png"
+          },
+          {
+            "name": "魔法海螺",
+            "image": "Magic_Conch.png"
+          },
+          {
+            "name": "恶魔海螺",
+            "image": "Demon_Conch.png"
+          }
+        ],
+        "result": {
+          "name": "贝壳电话",
+          "image": "Shellphone.png"
+        }
+      }
+    ]
   },
   "扳手": {
     "name": "扳手",
@@ -10069,24 +10153,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "地狱熔炉",
-      "ingredients": [
-        {
-          "name": "狱石锭",
-          "image": "Hellstone_Bar.png",
-          "amount": "15"
-        },
-        {
-          "name": "虫网",
-          "image": "Bug_Net.png"
-        }
-      ],
-      "result": {
-        "name": "防熔岩虫网",
-        "image": "Lavaproof_Bug_Net.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "虫网是一个将小动物捕捉到物品栏的工具。它的挥舞方式像阔剑，但不会造成伤害。如果想钓鱼，就需要用到虫网，因为这是获得鱼饵的主要途径。大多数小动物像是昆虫，蠕虫，或蜗牛被捕捉后就可以变成鱼饵。\n\n虫网可以从商人处购买，价格为(电脑版、主机版、和移动版)25 SC/(前代主机版、和3DS版)1 GC。\n\n防熔岩虫网防熔岩虫网(电脑版、主机版、和移动版)和金虫网金虫网(电脑版、主机版、和移动版)是虫网的升级版本。它们尺寸更大，速度更快，且可以像剑与其它武器一样破坏高草、藤蔓和植物，不过它们并不会造成伤害。它们还能捕捉地狱的小动物（熔岩萤火虫(电脑版、主机版、和移动版)、地狱蝴蝶(电脑版、主机版、和移动版)和岩浆蜗牛(电脑版、主机版、和移动版)）。如果尝试用普通虫网捕捉这些小动物，会对玩家造成 1 伤害和着火了！减益（5 秒 /10 秒/13 秒）。",
     "description_rich": [
@@ -10141,7 +10208,27 @@
         }
       ]
     ],
-    "item_category": "tools"
+    "item_category": "tools",
+    "used_in": [
+      {
+        "station": "地狱熔炉",
+        "ingredients": [
+          {
+            "name": "狱石锭",
+            "image": "Hellstone_Bar.png",
+            "amount": "15"
+          },
+          {
+            "name": "虫网",
+            "image": "Bug_Net.png"
+          }
+        ],
+        "result": {
+          "name": "防熔岩虫网",
+          "image": "Lavaproof_Bug_Net.png"
+        }
+      }
+    ]
   },
   "蝙蝠钩": {
     "name": "蝙蝠钩",
@@ -11419,35 +11506,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "工匠作坊",
-      "ingredients": [
-        {
-          "name": "红扳手",
-          "image": "Red_Wrench.png"
-        },
-        {
-          "name": "绿扳手",
-          "image": "Green_Wrench.png"
-        },
-        {
-          "name": "蓝扳手",
-          "image": "Blue_Wrench.png"
-        },
-        {
-          "name": "黄扳手",
-          "image": "Yellow_Wrench.png"
-        },
-        {
-          "name": "钢丝钳",
-          "image": "Wire_Cutter.png"
-        }
-      ],
-      "result": {
-        "name": "五彩扳手",
-        "image": "Multicolor_Wrench.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "钢丝钳是一种让玩家能释放并收取电线和致动器的工具。它是由一开始出现在地牢中的机械师NPC出售的。\n\n钢丝钳有超大的范围奖励，让它可以够得着屏幕的大部分。电脑版如果你经常需要连接不同设备，建议获取此物品，因为它也是五彩扳手的材料之一。",
     "item_category": "tools",
@@ -11473,6 +11532,37 @@
           "text": "如果你经常需要连接不同设备，建议获取此物品，因为它也是五彩扳手的材料之一。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "红扳手",
+            "image": "Red_Wrench.png"
+          },
+          {
+            "name": "绿扳手",
+            "image": "Green_Wrench.png"
+          },
+          {
+            "name": "蓝扳手",
+            "image": "Blue_Wrench.png"
+          },
+          {
+            "name": "黄扳手",
+            "image": "Yellow_Wrench.png"
+          },
+          {
+            "name": "钢丝钳",
+            "image": "Wire_Cutter.png"
+          }
+        ],
+        "result": {
+          "name": "五彩扳手",
+          "image": "Multicolor_Wrench.png"
+        }
+      }
     ]
   },
   "钨斧": {
@@ -13313,7 +13403,36 @@
         }
       ]
     ],
-    "item_category": "tools"
+    "item_category": "tools",
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "再生法杖",
+            "image": "Staff_of_Regrowth.png"
+          },
+          {
+            "name": "铜斧",
+            "image": "Copper_Axe.png"
+          },
+          {
+            "name": "丛林孢子",
+            "image": "Jungle_Spores.png",
+            "amount": "12"
+          },
+          {
+            "name": "藤蔓",
+            "image": "Vine.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "再生之斧",
+          "image": "Axe_of_Regrowth.png"
+        }
+      }
+    ]
   },
   "铜锤": {
     "name": "铜锤",
@@ -13867,7 +13986,36 @@
     },
     "drops": null,
     "description": "锡斧是个游戏早期的斧头，弱于铁或铅斧。其代用矿石对应物是铜斧。和所有斧头一样，它用于砍伐树、仙人掌、巨型发光蘑菇、和倒木(电脑版、主机版、和移动版)。\n\n其最佳修饰语针对收割用途是轻，针对战斗用途是传奇。",
-    "item_category": "tools"
+    "item_category": "tools",
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "再生法杖",
+            "image": "Staff_of_Regrowth.png"
+          },
+          {
+            "name": "锡斧",
+            "image": "Tin_Axe.png"
+          },
+          {
+            "name": "丛林孢子",
+            "image": "Jungle_Spores.png",
+            "amount": "12"
+          },
+          {
+            "name": "藤蔓",
+            "image": "Vine.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "再生之斧",
+          "image": "Axe_of_Regrowth.png"
+        }
+      }
+    ]
   },
   "锡锤": {
     "name": "锡锤",
@@ -15109,27 +15257,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "工匠作坊",
-      "ingredients": [
-        {
-          "name": "手机",
-          "image": "Cell_Phone.png"
-        },
-        {
-          "name": "魔法海螺",
-          "image": "Magic_Conch.png"
-        },
-        {
-          "name": "恶魔海螺",
-          "image": "Demon_Conch.png"
-        }
-      ],
-      "result": {
-        "name": "贝壳电话",
-        "image": "Shellphone.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -15207,7 +15335,30 @@
       ]
     },
     "description": "魔法海螺是一种物品。一经使用，经过 0.75 秒 (45 嘀嗒)后，将玩家传送至较远侧的海洋。和魔镜类似，魔法海螺可以无限使用。它能从地下沙漠较浅的 4/7 部分的沙岩箱、绿洲匣和幻象匣中获得。",
-    "item_category": "tools"
+    "item_category": "tools",
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "手机",
+            "image": "Cell_Phone.png"
+          },
+          {
+            "name": "魔法海螺",
+            "image": "Magic_Conch.png"
+          },
+          {
+            "name": "恶魔海螺",
+            "image": "Demon_Conch.png"
+          }
+        ],
+        "result": {
+          "name": "贝壳电话",
+          "image": "Shellphone.png"
+        }
+      }
+    ]
   },
   "魔锤": {
     "name": "魔锤",
@@ -15338,15 +15489,18 @@
       "ingredients": [
         {
           "name": "玻璃",
-          "image": "Glass.png"
+          "image": "Glass.png",
+          "amount": "10"
         },
         {
           "name": "金锭",
-          "image": "Gold_Bar.png"
+          "image": "Gold_Bar.png",
+          "amount": "8"
         },
         {
           "name": "钻石",
-          "image": "Diamond.png"
+          "image": "Diamond.png",
+          "amount": "3"
         }
       ],
       "result": {
@@ -15356,6 +15510,25 @@
     },
     "drops": null,
     "description": "魔镜是一个独特的物品，可以将玩家送回他们的生成点。使用后，会播放一小段动画，之后将玩家传送到其设定的生成点；如果玩家以前曾使用过床，他们会出现在床前面，但如果找不到有效的床，玩家将返回创建世界时的生成点。这种传送可以无花费，无限次地重复而不消耗魔镜/冰雪镜。\n\n冰雪镜(电脑版、主机版、和移动版)是魔镜的变种。除了外观，它每个功能都与魔镜相同，包括可以作为手机的制作材料。\n\n魔镜可以在地下、洞穴和地狱地层中的金箱内找到。冰雪镜可以在地下雪原中生成的冰冻箱找到。魔镜是新的旅行模式(电脑版、主机版、和移动版)人物一创建就得到的装备之一。",
-    "item_category": "tools"
+    "item_category": "tools",
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "个人数字助手",
+            "image": "PDA.png"
+          },
+          {
+            "name": "魔镜",
+            "image": "Magic_Mirror.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      }
+    ]
   }
 }

@@ -147,10 +147,15 @@ def load_old_gen_item_titles_from_navbox(
 def collect_legacy_boss_drop_titles(
     bosses: dict[str, dict] | None = None,
 ) -> list[str]:
-    bosses = bosses if bosses is not None else load_bosses_for_plugin()
+    """从旧版 Boss 镜像页解析掉落物名（不依赖 bosses.json 中的条目）。"""
+    from boss_data import LEGACY_BOSS_WIKI_TITLES, parse_boss_page_file
+
     names: set[str] = set()
-    for boss_key in LEGACY_BOSS_WIKI_TITLES:
-        boss = bosses.get(boss_key) or {}
+    for wiki_title in LEGACY_BOSS_WIKI_TITLES:
+        if bosses and wiki_title in bosses:
+            boss = bosses[wiki_title]
+        else:
+            boss = parse_boss_page_file(wiki_title) or {}
         items_by_mode = (boss.get("drops") or {}).get("items") or {}
         for mode_items in items_by_mode.values():
             for entry in mode_items:

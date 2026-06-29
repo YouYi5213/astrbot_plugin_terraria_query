@@ -66,27 +66,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "铁砧或铅砧",
-      "ingredients": [
-        {
-          "name": "致动器",
-          "image": "Actuator.png"
-        },
-        {
-          "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif"
-        },
-        {
-          "name": "电线",
-          "image": "Wire.png"
-        }
-      ],
-      "result": {
-        "name": "致动魔杖",
-        "image": "Actuation_Rod.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "致动器是一个机械，可以在机械师处以每个10 SC的价格购买，或者由落沙、熔岩或死人宝箱陷阱处收集。它需要用电线连接以生效。激活时，它所在的图格会在激活与非激活状态切换，这会让任何物块都能够像通电或未通电石块一样切换。和电线一样，致动器通常情况下是不可见的，仅当选择一件机械物品时才可见。\n\n以下物品可以与致动器交互：\n\n· 它们可以用钢丝钳或宏伟蓝图(电脑版、主机版、和移动版)移除。\n· 它们可以用宏伟蓝图(电脑版、主机版、和移动版)放置。\n· 如果玩家拥有致动器，自动安放器会自动将它们安装到放置的物体上。\n· 致动魔杖可以切换有限距离内的致动器的状态，无需电线连接。",
     "description_rich": [
@@ -158,6 +138,32 @@
         }
       ]
     ],
-    "item_category": "mechanisms"
+    "item_category": "mechanisms",
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "致动器",
+            "image": "Actuator.png",
+            "amount": "50"
+          },
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "10"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "致动魔杖",
+          "image": "Actuation_Rod.png"
+        }
+      }
+    ]
   }
 }

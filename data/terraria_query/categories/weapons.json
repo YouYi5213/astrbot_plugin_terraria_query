@@ -2874,55 +2874,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "泰拉刃",
-          "image": "Terra_Blade.png"
-        },
-        {
-          "name": "彩虹猫之刃",
-          "image": "Meowmere.png"
-        },
-        {
-          "name": "狂星之怒",
-          "image": "Star_Wrath.png"
-        },
-        {
-          "name": "波涌之刃",
-          "image": "Influx_Waver.png"
-        },
-        {
-          "name": "无头骑士剑",
-          "image": "The_Horseman's_Blade.png"
-        },
-        {
-          "name": "种子弯刀",
-          "image": "Seedler.png"
-        },
-        {
-          "name": "星怒",
-          "image": "Starfury.png"
-        },
-        {
-          "name": "养蜂人",
-          "image": "Bee_Keeper.png"
-        },
-        {
-          "name": "附魔剑",
-          "image": "Enchanted_Sword_(item).png"
-        },
-        {
-          "name": "铜短剑",
-          "image": "Copper_Shortsword.png"
-        }
-      ],
-      "result": {
-        "name": "天顶剑",
-        "image": "Zenith.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -2982,7 +2934,58 @@
       ]
     },
     "description": "养蜂人是一个困难模式之前的阔剑，有1/3 (33.33%)的概率掉落自蜂王。挥舞时，它可施加 2 秒困惑减益。此外，它击中时会释放 1–3 个蜜蜂射弹，蜜蜂自动追踪敌怪，造成武器伤害的1/3 (33.33%)（10 基础伤害），可穿透敌怪两次并在物块上反弹三次，并且有1/2 (50%)的概率造成 1 点额外伤害。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "冰之哀伤": {
     "name": "冰之哀伤",
@@ -3268,27 +3271,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "工作台",
-      "ingredients": [
-        {
-          "name": "附魔回旋镖",
-          "image": "Enchanted_Boomerang.png"
-        },
-        {
-          "name": "蘑菇回旋镖",
-          "image": "Shroomerang.png"
-        },
-        {
-          "name": "冰雪回旋镖",
-          "image": "Ice_Boomerang.png"
-        }
-      ],
-      "result": {
-        "name": "三尖回旋镖",
-        "image": "Trimarang.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -3384,7 +3367,30 @@
       ]
     },
     "description": "冰雪回旋镖是一个困难模式之前的回旋镖，冰雪回旋镖有15.52%几率在冰雪生物群系中的冰冻箱内找到，也有1/6 (16.67%)几率从冰冻匣和针叶木匣中获得。它会造成持续 3 秒的霜冻减益，且具有 6% 的基础暴击率而非通常的 4%。\n\n其最佳修饰语是神级或恶魔。这两个修饰语对平均伤害输出的提高量是相同的。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "附魔回旋镖",
+            "image": "Enchanted_Boomerang.png"
+          },
+          {
+            "name": "蘑菇回旋镖",
+            "image": "Shroomerang.png"
+          },
+          {
+            "name": "冰雪回旋镖",
+            "image": "Ice_Boomerang.png"
+          }
+        ],
+        "result": {
+          "name": "三尖回旋镖",
+          "image": "Trimarang.png"
+        }
+      }
+    ]
   },
   "冰雪弓": {
     "name": "冰雪弓",
@@ -4462,24 +4468,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "剧毒法杖",
-          "image": "Poison_Staff.png"
-        },
-        {
-          "name": "叶绿锭",
-          "image": "Chlorophyte_Bar.png",
-          "amount": "14"
-        }
-      ],
-      "result": {
-        "name": "毒液法杖",
-        "image": "Venom_Staff.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -4521,7 +4510,27 @@
       ]
     },
     "description": "剧毒法杖是一个困难模式的魔棒，有1/40 (2.5%)的概率掉落自黑隐士。使用时，它会以约 30°的角度发射 3-4 颗毒牙。每个射弹可穿透两个敌怪并施加 30 秒中毒减益。\n\n其最佳修饰语是神话。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "剧毒法杖",
+            "image": "Poison_Staff.png"
+          },
+          {
+            "name": "叶绿锭",
+            "image": "Chlorophyte_Bar.png",
+            "amount": "14"
+          }
+        ],
+        "result": {
+          "name": "毒液法杖",
+          "image": "Venom_Staff.png"
+        }
+      }
+    ]
   },
   "北极": {
     "name": "北极",
@@ -6857,7 +6866,8 @@
         },
         {
           "name": "土块",
-          "image": "Dirt_Block.png"
+          "image": "Dirt_Block.png",
+          "amount": "25"
         }
       ],
       "result": {
@@ -6867,7 +6877,26 @@
     },
     "drops": null,
     "description": "土炸弹是一种爆炸物，就像普通的炸弹一样，它将会在等待 3 秒后爆炸。但它随后将在小半径内的爆炸区域中填充土块而非破坏物块。爆炸半径内的已有物块将不受影响。它可以与凝胶合成为粘性土炸弹。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "土炸弹",
+            "image": "Dirt_Bomb.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性土炸弹",
+          "image": "Sticky_Dirt_Bomb.png"
+        }
+      }
+    ]
   },
   "圣诞树剑": {
     "name": "圣诞树剑",
@@ -11351,7 +11380,26 @@
     },
     "drops": null,
     "description": "强力炸弹是一种困难模式爆炸物，是炸弹的升级版本。在掷出后 5 秒爆炸。爆炸对雷管水平和垂直方向 8.75 格内的所有敌怪、小动物、和玩家（但不包括NPC）造成 200 伤害。此外，它摧毁半径 9 格内的几乎所有物块、墙和家具。与其他爆炸物不同，它能摧毁早期困难模式矿石，不过仍然无法摧毁其他的防爆物体。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "强力炸弹",
+            "image": "Power_Bomb.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性强力炸弹",
+          "image": "Sticky_Power_Bomb.png"
+        }
+      }
+    ]
   },
   "彩弹枪": {
     "name": "彩弹枪",
@@ -11550,55 +11598,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "泰拉刃",
-          "image": "Terra_Blade.png"
-        },
-        {
-          "name": "彩虹猫之刃",
-          "image": "Meowmere.png"
-        },
-        {
-          "name": "狂星之怒",
-          "image": "Star_Wrath.png"
-        },
-        {
-          "name": "波涌之刃",
-          "image": "Influx_Waver.png"
-        },
-        {
-          "name": "无头骑士剑",
-          "image": "The_Horseman's_Blade.png"
-        },
-        {
-          "name": "种子弯刀",
-          "image": "Seedler.png"
-        },
-        {
-          "name": "星怒",
-          "image": "Starfury.png"
-        },
-        {
-          "name": "养蜂人",
-          "image": "Bee_Keeper.png"
-        },
-        {
-          "name": "附魔剑",
-          "image": "Enchanted_Sword_(item).png"
-        },
-        {
-          "name": "铜短剑",
-          "image": "Copper_Shortsword.png"
-        }
-      ],
-      "result": {
-        "name": "天顶剑",
-        "image": "Zenith.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -11658,7 +11658,58 @@
       ]
     },
     "description": "彩虹猫之刃是一把困难模式、月亮领主后的阔剑，有1/5 (20%)几率掉落自月亮领主。挥舞时，每间隔 0.23 秒 都会发射一枚并具有彩虹尾迹的猫头射弹；猫头射弹造成武器基础伤害的 125%（250 伤害），受重力影响，最多能够穿透敌怪或在实心物块表面反弹四次。彩虹猫之刃的猫头射弹每次在物块上反弹时会发出“喵”声并产生彩虹色爆炸，伤害周围的敌怪，且每次反弹爆炸范围都会增大。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "彩虹魔杖": {
     "name": "彩虹魔杖",
@@ -12704,24 +12755,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "铁砧或铅砧",
-      "ingredients": [
-        {
-          "name": "狱石锭",
-          "image": "Hellstone_Bar.png",
-          "amount": "10"
-        },
-        {
-          "name": "手枪",
-          "image": "Handgun.png"
-        }
-      ],
-      "result": {
-        "name": "凤凰爆破枪",
-        "image": "Phoenix_Blaster.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -12822,6 +12856,26 @@
           "text": "其最佳修饰语是虚幻。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "狱石锭",
+            "image": "Hellstone_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "手枪",
+            "image": "Handgun.png"
+          }
+        ],
+        "result": {
+          "name": "凤凰爆破枪",
+          "image": "Phoenix_Blaster.png"
+        }
+      }
     ]
   },
   "手榴弹": {
@@ -12906,25 +12960,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "手榴弹",
-          "image": "Grenade.png",
-          "amount": "2"
-        },
-        {
-          "name": "粉凝胶",
-          "image": "Pink_Gel.png"
-        }
-      ],
-      "result": {
-        "name": "弹力手榴弹",
-        "image": "Bouncy_Grenade.png",
-        "amount": "2"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "手榴弹是一种爆炸性消耗性远程武器，可从爆破专家处以每个75 CC的价格购买，或者少见地会出现在罐子和天然宝箱中。一旦困难模式已激活，它们会出现在罐子中（替换掉手里剑）。\n\n投掷出的手榴弹会轻微反弹并滚动，直到击中有效目标或经过 3 秒钟，之后它会爆炸。",
     "description_rich": [
@@ -12950,7 +12986,64 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "手榴弹",
+            "image": "Grenade.png",
+            "amount": "2"
+          },
+          {
+            "name": "粉凝胶",
+            "image": "Pink_Gel.png"
+          }
+        ],
+        "result": {
+          "name": "弹力手榴弹",
+          "image": "Bouncy_Grenade.png",
+          "amount": "2"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "手榴弹",
+            "image": "Grenade.png",
+            "amount": "5"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性手榴弹",
+          "image": "Sticky_Grenade.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "手榴弹",
+            "image": "Grenade.png"
+          },
+          {
+            "name": "蜂蜡",
+            "image": "Bee_Wax.png"
+          }
+        ],
+        "result": {
+          "name": "蜜蜂手榴弹",
+          "image": "Beenade.png"
+        }
+      }
+    ]
   },
   "手里剑": {
     "name": "手里剑",
@@ -13221,25 +13314,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "投刀",
-          "image": "Throwing_Knife.png",
-          "amount": "50"
-        },
-        {
-          "name": "魔粉",
-          "image": "Vile_Powder.png"
-        }
-      ],
-      "result": {
-        "name": "毒刀",
-        "image": "Poisoned_Knife.png",
-        "amount": "50"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "投刀是一种消耗性远程武器。它最多可击中 2 个目标。它可于血月期间自商人处以50 CC每个的价格购买或是于宝箱中找到。投刀受重力影响极大，类似于手里剑和骨头。投刀在这些消耗性远程武器中有最好的攻击范围（而骨头最差）。\n\n(前代主机版、和3DS版)投刀有1/2 (50%)的几率可以回收再利用，即使是在命中敌怪后。\n\n(电脑版、主机版、和移动版)商人会使用投刀以保护自己。",
     "description_rich": [
@@ -13271,7 +13346,65 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "投刀",
+            "image": "Throwing_Knife.png",
+            "amount": "50"
+          },
+          {
+            "name": "魔粉",
+            "image": "Vile_Powder.png"
+          }
+        ],
+        "result": {
+          "name": "毒刀",
+          "image": "Poisoned_Knife.png",
+          "amount": "50"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "投刀",
+            "image": "Throwing_Knife.png",
+            "amount": "50"
+          },
+          {
+            "name": "毒粉",
+            "image": "Vicious_Powder.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "投刀",
+            "image": "Throwing_Knife.png",
+            "amount": "20"
+          },
+          {
+            "name": "魔粉",
+            "image": "Vile_Powder.png"
+          }
+        ],
+        "result": {
+          "name": "毒刀",
+          "image": "Poisoned_Knife_(old).png",
+          "amount": "20"
+        }
+      }
+    ]
   },
   "拍拍手": {
     "name": "拍拍手",
@@ -13629,7 +13762,27 @@
     },
     "drops": null,
     "description": "断钢剑是一把困难模式的剑，可在击败任何机械 Boss后获得。挥舞时，会伴有较大的黄色光环，范围约为剑本身的两倍。光环最多可击中三个敌怪。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "断钢剑",
+            "image": "Excalibur.png"
+          },
+          {
+            "name": "叶绿锭",
+            "image": "Chlorophyte_Bar.png",
+            "amount": "24"
+          }
+        ],
+        "result": {
+          "name": "真断钢剑",
+          "image": "True_Excalibur.png"
+        }
+      }
+    ]
   },
   "无头骑士剑": {
     "name": "无头骑士剑",
@@ -13690,55 +13843,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "泰拉刃",
-          "image": "Terra_Blade.png"
-        },
-        {
-          "name": "彩虹猫之刃",
-          "image": "Meowmere.png"
-        },
-        {
-          "name": "狂星之怒",
-          "image": "Star_Wrath.png"
-        },
-        {
-          "name": "波涌之刃",
-          "image": "Influx_Waver.png"
-        },
-        {
-          "name": "无头骑士剑",
-          "image": "The_Horseman's_Blade.png"
-        },
-        {
-          "name": "种子弯刀",
-          "image": "Seedler.png"
-        },
-        {
-          "name": "星怒",
-          "image": "Starfury.png"
-        },
-        {
-          "name": "养蜂人",
-          "image": "Bee_Keeper.png"
-        },
-        {
-          "name": "附魔剑",
-          "image": "Enchanted_Sword_(item).png"
-        },
-        {
-          "name": "铜短剑",
-          "image": "Copper_Shortsword.png"
-        }
-      ],
-      "result": {
-        "name": "天顶剑",
-        "image": "Zenith.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -13780,7 +13885,58 @@
       ]
     },
     "description": "无头骑士剑是一把困难模式、世纪之花后的剑。它在挥舞时还会在周围产生一圈大范围的橙色斩击，显著提高了它对敌怪造成伤害的范围，并且能覆盖到玩家身后。不过，和可击中所有在近战范围内的敌怪的大部分阔剑不同，无头骑士剑每次挥舞最多只能击中三个目标。在击中一个敌怪后，无头骑士剑会召唤一个烈焰杰克南瓜：能自动追踪的南瓜头射弹，会穿过实心块来攻击最接近的目标。烈焰杰克南瓜具有和剑本身相同的伤害和暴击率。无头骑士剑掉落自南瓜月事件中的南瓜王，掉落率为 2.5–12.5%（6.25–12.5%），具体取决于当前波数。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "无限智慧巨著": {
     "name": "无限智慧巨著",
@@ -14930,55 +15086,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "泰拉刃",
-          "image": "Terra_Blade.png"
-        },
-        {
-          "name": "彩虹猫之刃",
-          "image": "Meowmere.png"
-        },
-        {
-          "name": "狂星之怒",
-          "image": "Star_Wrath.png"
-        },
-        {
-          "name": "波涌之刃",
-          "image": "Influx_Waver.png"
-        },
-        {
-          "name": "无头骑士剑",
-          "image": "The_Horseman's_Blade.png"
-        },
-        {
-          "name": "种子弯刀",
-          "image": "Seedler.png"
-        },
-        {
-          "name": "星怒",
-          "image": "Starfury.png"
-        },
-        {
-          "name": "养蜂人",
-          "image": "Bee_Keeper.png"
-        },
-        {
-          "name": "附魔剑",
-          "image": "Enchanted_Sword_(item).png"
-        },
-        {
-          "name": "铜短剑",
-          "image": "Copper_Shortsword.png"
-        }
-      ],
-      "result": {
-        "name": "天顶剑",
-        "image": "Zenith.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -15056,7 +15164,58 @@
       ]
     },
     "description": "星怒是一把困难模式之前的剑，有1/4 (25%)几率在漂浮岛上的天域箱中找到，有1/4 (25%)几率从天空匣(电脑版、主机版、和移动版)和天蓝匣(电脑版、主机版、和移动版)中获得。在挥舞时，星怒有时能生成从天而降的星星射弹落向光标位置。星星会发光，造成 1.5 倍于剑的伤害（37 基础伤害），不造成击退，且能够穿透一次。星星在到达光标处或光标上方最低的开阔空间之前可以穿透所有物块，此后它会在击中物块时消失。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "星旋机枪": {
     "name": "星旋机枪",
@@ -15388,7 +15547,27 @@
     },
     "drops": null,
     "description": "星星炮是一个困难模式之前的远程武器，能够以直线发射坠落之星。发射的射弹不受重力影响，可以穿透无限数量的敌怪，会在发射 1 分钟后或命中实心块后消散成发光粒子。\n\n其最佳修饰语是虚幻。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "神圣锭",
+            "image": "Hallowed_Bar.png",
+            "amount": "12"
+          },
+          {
+            "name": "星星炮",
+            "image": "Star_Cannon.png"
+          }
+        ],
+        "result": {
+          "name": "超级星星炮",
+          "image": "Super_Star_Shooter.png"
+        }
+      }
+    ]
   },
   "晨星": {
     "name": "晨星",
@@ -17067,23 +17246,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "木回旋镖",
-          "image": "Wooden_Boomerang.png"
-        },
-        {
-          "name": "坠落之星",
-          "image": "Fallen_Star.png"
-        }
-      ],
-      "result": {
-        "name": "附魔回旋镖",
-        "image": "Enchanted_Boomerang.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -17154,7 +17317,26 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "木回旋镖",
+            "image": "Wooden_Boomerang.png"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star.png"
+          }
+        ],
+        "result": {
+          "name": "附魔回旋镖",
+          "image": "Enchanted_Boomerang.png"
+        }
+      }
+    ]
   },
   "木弓": {
     "name": "木弓",
@@ -17328,7 +17510,32 @@
     },
     "drops": null,
     "description": "木悠悠球是个游戏早期困难模式之前的悠悠球，而且它通常是玩家可使用的第一个悠悠球。它是所有悠悠球中最弱的。\n\n其最佳修饰语是神级或恶魔。这两个修饰语对平均伤害输出的提高量是相同的。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "木悠悠球",
+            "image": "Wooden_Yoyo.png"
+          },
+          {
+            "name": "水晶碎块",
+            "image": "Crystal_Shard.png",
+            "amount": "15"
+          },
+          {
+            "name": "光明之魂",
+            "image": "Soul_of_Light.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "吉克球",
+          "image": "Chik.png"
+        }
+      }
+    ]
   },
   "木桶发射器": {
     "name": "木桶发射器",
@@ -17545,31 +17752,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "恶魔祭坛或猩红祭坛",
-      "ingredients": [
-        {
-          "name": "魔光剑",
-          "image": "Light's_Bane.png"
-        },
-        {
-          "name": "村正",
-          "image": "Muramasa.png"
-        },
-        {
-          "name": "草剑",
-          "image": "Blade_of_Grass.png"
-        },
-        {
-          "name": "火山",
-          "image": "Volcano.png"
-        }
-      ],
-      "result": {
-        "name": "永夜刃",
-        "image": "Night's_Edge.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -17670,6 +17853,108 @@
           "text": "其最佳修饰语是传奇。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "魔光剑",
+            "image": "Light's_Bane.png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa.png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass.png"
+          },
+          {
+            "name": "火山",
+            "image": "Volcano.png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "魔光剑",
+            "image": "Light's_Bane_(old).png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa_(old).png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass_(old).png"
+          },
+          {
+            "name": "炽焰巨剑",
+            "image": "Volcano_(old).png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge_(old).png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "血腥屠刀",
+            "image": "Blood_Butcherer.png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa.png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass.png"
+          },
+          {
+            "name": "火山",
+            "image": "Volcano.png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "血腥屠刀",
+            "image": "Blood_Butcherer_(old).png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa_(old).png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass_(old).png"
+          },
+          {
+            "name": "炽焰巨剑",
+            "image": "Volcano_(old).png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge_(old).png"
+        }
+      }
     ]
   },
   "标尺": {
@@ -19577,7 +19862,37 @@
     },
     "drops": null,
     "description": "永夜刃是一把困难模式之前，骷髅王后的剑。挥舞时，永夜刃会发出像火焰一样的紫色微粒，这和用于制作它的剑类似，但效果不那么明显且持续时间稍短些。值得注意的是，它具有困难模式前的所有剑中最高的基础伤害，和火山持平。\n\n永夜刃在挥舞时会散发紫色光环，光环会伴随挥舞并增大能触及敌怪的范围。另一个光环会再次旋转一周，进一步地增大了攻击范围，甚至能覆盖到玩家身后。两个光环都最多可击中 2 个目标，且单个目标无法被两个光环一同击中。光环能穿过墙壁打破罐子，但不能如此伤害敌怪。击中敌怪时会产生紫色的闪光。永夜刃还能够自动挥舞。\n\n在困难模式中，永夜刃可以被升级为真永夜刃。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "永夜刃",
+            "image": "Night's_Edge.png"
+          },
+          {
+            "name": "恐惧之魂",
+            "image": "Soul_of_Fright.png",
+            "amount": "20"
+          },
+          {
+            "name": "力量之魂",
+            "image": "Soul_of_Might.png",
+            "amount": "20"
+          },
+          {
+            "name": "视域之魂",
+            "image": "Soul_of_Sight.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "真永夜刃",
+          "image": "True_Night's_Edge.png"
+        }
+      }
+    ]
   },
   "永恒之枪": {
     "name": "永恒之枪",
@@ -19648,7 +19963,8 @@
       "ingredients": [
         {
           "name": "神圣锭",
-          "image": "Hallowed_Bar.png"
+          "image": "Hallowed_Bar.png",
+          "amount": "12"
         }
       ],
       "result": {
@@ -19658,7 +19974,32 @@
     },
     "drops": null,
     "description": "永恒之枪是一把用神圣锭制作的困难模式长矛。使用时，它会发出典型的神圣主题光粒。(电脑版、主机版、和移动版)使用时，它会在其尖端创造出一阵小的震荡波。\n\n其最佳修饰语是神级或恶魔。这两个修饰语对平均伤害输出的提高量是相同的。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "永恒之枪",
+            "image": "Gungnir_(old).png"
+          },
+          {
+            "name": "枯萎之魂",
+            "image": "Soul_of_Blight.png",
+            "amount": "15"
+          },
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar_(old).png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "蜻蛉切",
+          "image": "Tonbogiri.png"
+        }
+      }
+    ]
   },
   "沙枪": {
     "name": "沙枪",
@@ -19958,55 +20299,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "泰拉刃",
-          "image": "Terra_Blade.png"
-        },
-        {
-          "name": "彩虹猫之刃",
-          "image": "Meowmere.png"
-        },
-        {
-          "name": "狂星之怒",
-          "image": "Star_Wrath.png"
-        },
-        {
-          "name": "波涌之刃",
-          "image": "Influx_Waver.png"
-        },
-        {
-          "name": "无头骑士剑",
-          "image": "The_Horseman's_Blade.png"
-        },
-        {
-          "name": "种子弯刀",
-          "image": "Seedler.png"
-        },
-        {
-          "name": "星怒",
-          "image": "Starfury.png"
-        },
-        {
-          "name": "养蜂人",
-          "image": "Bee_Keeper.png"
-        },
-        {
-          "name": "附魔剑",
-          "image": "Enchanted_Sword_(item).png"
-        },
-        {
-          "name": "铜短剑",
-          "image": "Copper_Shortsword.png"
-        }
-      ],
-      "result": {
-        "name": "天顶剑",
-        "image": "Zenith.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -20048,7 +20341,58 @@
       ]
     },
     "description": "波涌之刃是一个困难模式，石巨人后的阔剑，有1/6 (16.67%)的概率掉落自火星暴乱事件期间的火星飞碟。挥舞时，它会发射一个蓝色剑形射弹。击中敌怪时，剑形射弹会传送至附近敌怪，传送可进行两次，总计可击中三次。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "泥球": {
     "name": "泥球",
@@ -20197,7 +20541,58 @@
     },
     "drops": null,
     "description": "泰拉刃是一把困难模式、世纪之花后的剑，会在挥舞时发射宽大的绿色斩波射弹。它在挥舞时还会在剑刃周围产生一圈大范围的能量光环，显著提高了它对敌怪造成伤害的范围，并且能覆盖到玩家身后。不过，和可击中所有在近战范围内的敌怪的大部分阔剑不同，泰拉刃的近战挥舞最多只能击中三个目标。泰拉刃的射弹最初造成 100% 武器的伤害，能够穿透无限数量的目标，每穿透一个目标后受到 25% 的伤害惩罚。射弹会在 1.5 秒后、击中实心块时、或其伤害在穿透后降低至 0 时消失。泰拉刃的剑刃、光环、或射弹击中敌怪时会产生独特的绿色闪光。\n\n它此后被用来制作天顶剑，后者是游戏中最强的近战武器。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "泰拉悠悠球": {
     "name": "泰拉悠悠球",
@@ -21531,7 +21926,59 @@
     },
     "drops": null,
     "description": "火山是一把困难模式之前的阔剑。挥舞时，它会在击中敌怪时产生爆炸，对该敌怪和它附近区域内的另外 2 个目标造成 75% 武器伤害（30 基础伤害）。火山有1/2 (50%)几率造成着火了！减益，持续 3 秒:其爆炸则必定造成此减益，持续时间相同。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "魔光剑",
+            "image": "Light's_Bane.png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa.png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass.png"
+          },
+          {
+            "name": "火山",
+            "image": "Volcano.png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "血腥屠刀",
+            "image": "Blood_Butcherer.png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa.png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass.png"
+          },
+          {
+            "name": "火山",
+            "image": "Volcano.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      }
+    ]
   },
   "火枪": {
     "name": "火枪",
@@ -22168,24 +22615,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "火花魔棒",
-          "image": "Wand_of_Sparking.png"
-        },
-        {
-          "name": "冰雪火把",
-          "image": "Ice_Torch.png",
-          "amount": "99"
-        }
-      ],
-      "result": {
-        "name": "结霜魔棒",
-        "image": "Wand_of_Frosting.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -22250,7 +22680,27 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "火花魔棒",
+            "image": "Wand_of_Sparking.png"
+          },
+          {
+            "name": "冰雪火把",
+            "image": "Ice_Torch.png",
+            "amount": "99"
+          }
+        ],
+        "result": {
+          "name": "结霜魔棒",
+          "image": "Wand_of_Frosting.png"
+        }
+      }
+    ]
   },
   "灰冲击枪": {
     "name": "灰冲击枪",
@@ -22674,24 +23124,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "炸弹",
-          "image": "Bomb.png"
-        },
-        {
-          "name": "土块",
-          "image": "Dirt_Block.png",
-          "amount": "25"
-        }
-      ],
-      "result": {
-        "name": "土炸弹",
-        "image": "Dirt_Bomb.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -22942,7 +23375,97 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "炸弹",
+            "image": "Bomb.png"
+          },
+          {
+            "name": "土块",
+            "image": "Dirt_Block.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "土炸弹",
+          "image": "Dirt_Bomb.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "炸弹",
+            "image": "Bomb.png"
+          },
+          {
+            "name": "粉凝胶",
+            "image": "Pink_Gel.png"
+          }
+        ],
+        "result": {
+          "name": "弹力炸弹",
+          "image": "Bouncy_Bomb.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "炸弹",
+            "image": "Bomb.png",
+            "amount": "5"
+          },
+          {
+            "name": "任何钴锭",
+            "image": "Any_Cobalt_Bar.gif"
+          }
+        ],
+        "result": {
+          "name": "强力炸弹",
+          "image": "Power_Bomb.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "炸弹",
+            "image": "Bomb.png"
+          },
+          {
+            "name": "坚固化石",
+            "image": "Sturdy_Fossil.png"
+          }
+        ],
+        "result": {
+          "name": "甲虫炸弹",
+          "image": "Scarab_Bomb.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "炸弹",
+            "image": "Bomb.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性炸弹",
+          "image": "Sticky_Bomb.png"
+        }
+      }
+    ]
   },
   "炸弹鱼": {
     "name": "炸弹鱼",
@@ -23595,29 +24118,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "铁砧或铅砧",
-      "ingredients": [
-        {
-          "name": "陨石锭",
-          "image": "Meteorite_Bar_(old).png",
-          "amount": "30"
-        },
-        {
-          "name": "坠落之星",
-          "image": "Fallen_Star_(old).png",
-          "amount": "2"
-        },
-        {
-          "name": "燧发枪",
-          "image": "Flintlock_Pistol_(old).png"
-        }
-      ],
-      "result": {
-        "name": "太空枪",
-        "image": "Space_Gun_(pre-1.3.0.1).png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "燧发枪是种以高频率发射子弹的困难模式之前的枪。它可从军火商处以5 GC购买。在前代主机版前代主机版和任天堂3DS任天堂3DS版版中，它不造成任何击退。\n\n(电脑版、主机版、和移动版)其最佳修饰语是虚幻。\n\n(前代主机版、和3DS版)其最佳修饰语是恶魔，由于它没有任何击退，因此无法得到影响击退的修饰语。",
     "description_rich": [
@@ -23667,7 +24168,32 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "陨石锭",
+            "image": "Meteorite_Bar_(old).png",
+            "amount": "30"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star_(old).png",
+            "amount": "2"
+          },
+          {
+            "name": "燧发枪",
+            "image": "Flintlock_Pistol_(old).png"
+          }
+        ],
+        "result": {
+          "name": "太空枪",
+          "image": "Space_Gun_(pre-1.3.0.1).png"
+        }
+      }
+    ]
   },
   "燧石": {
     "name": "燧石",
@@ -24284,55 +24810,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "泰拉刃",
-          "image": "Terra_Blade.png"
-        },
-        {
-          "name": "彩虹猫之刃",
-          "image": "Meowmere.png"
-        },
-        {
-          "name": "狂星之怒",
-          "image": "Star_Wrath.png"
-        },
-        {
-          "name": "波涌之刃",
-          "image": "Influx_Waver.png"
-        },
-        {
-          "name": "无头骑士剑",
-          "image": "The_Horseman's_Blade.png"
-        },
-        {
-          "name": "种子弯刀",
-          "image": "Seedler.png"
-        },
-        {
-          "name": "星怒",
-          "image": "Starfury.png"
-        },
-        {
-          "name": "养蜂人",
-          "image": "Bee_Keeper.png"
-        },
-        {
-          "name": "附魔剑",
-          "image": "Enchanted_Sword_(item).png"
-        },
-        {
-          "name": "铜短剑",
-          "image": "Copper_Shortsword.png"
-        }
-      ],
-      "result": {
-        "name": "天顶剑",
-        "image": "Zenith.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -24392,7 +24870,58 @@
       ]
     },
     "description": "狂星之怒是把困难模式的阔剑，有1/5 (20%)几率掉落自月亮领主。它在挥舞时会使三颗粉色星星向着光标位置坠落。每颗星星可以穿透一个敌怪并能穿过物块直到到达光标的高度或者低于玩家上方的 12.5 图格。在这之后，一旦接触到物块便会消散。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "狙击步枪": {
     "name": "狙击步枪",
@@ -26174,7 +26703,8 @@
         },
         {
           "name": "叶绿锭",
-          "image": "Chlorophyte_Bar.png"
+          "image": "Chlorophyte_Bar.png",
+          "amount": "24"
         }
       ],
       "result": {
@@ -26184,7 +26714,30 @@
     },
     "drops": null,
     "description": "真断钢剑是一个困难模式的剑。它是断钢剑的直接升级。真断钢剑是制作泰拉刃所必需的材料之一。\n\n真断钢剑拥有断钢剑的效果的更强版本，在此前的黄色光环上外加了粉色的光环，它们都会跟随剑的挥舞弧度，从而提高其有效距离。不过，和可击中所有在近战范围内的敌怪的大部分阔剑不同，真断钢剑的近战挥舞最多只能击中六个目标。当击中敌怪时，会产生明亮的粉色和黄色闪光。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "真永夜刃",
+            "image": "True_Night's_Edge.png"
+          },
+          {
+            "name": "真断钢剑",
+            "image": "True_Excalibur.png"
+          },
+          {
+            "name": "断裂英雄剑",
+            "image": "Broken_Hero_Sword.png"
+          }
+        ],
+        "result": {
+          "name": "泰拉刃",
+          "image": "Terra_Blade.png"
+        }
+      }
+    ]
   },
   "真永夜刃": {
     "name": "真永夜刃",
@@ -26254,15 +26807,18 @@
         },
         {
           "name": "恐惧之魂",
-          "image": "Soul_of_Fright.png"
+          "image": "Soul_of_Fright.png",
+          "amount": "20"
         },
         {
           "name": "力量之魂",
-          "image": "Soul_of_Might.png"
+          "image": "Soul_of_Might.png",
+          "amount": "20"
         },
         {
           "name": "视域之魂",
-          "image": "Soul_of_Sight.png"
+          "image": "Soul_of_Sight.png",
+          "amount": "20"
         }
       ],
       "result": {
@@ -26272,7 +26828,30 @@
     },
     "drops": null,
     "description": "真永夜刃是一把困难模式的剑。它是永夜刃的更强版本，造成更高伤害，且在挥舞时能发射射弹。它是制作泰拉刃所必需的材料之一。真永夜刃能够自动挥舞。\n\n剑本身挥舞时会在剑刃周围产生一圈大范围的黑暗光环，显著提高了它对敌怪造成伤害的范围，并且能覆盖到玩家身后。不过，和可击中所有在近战范围内的敌怪的大部分阔剑不同，真永夜刃的近战挥舞最多只能击中两个目标。剑每次挥舞时，都会发射旋转的、盘状的绿色能量射弹。射弹会相对玩家移动而移动，随着玩家移动停留在屏幕上的相同路径上。射弹造成 50% 基础伤害（35 基础伤害），且最多能击中 3 次。射弹会为击中的目标施加 10 嘀嗒的免伤帧，且能够击中同一目标多次（如目标足够大，使得射弹在 10 嘀嗒后仍然停留在其身上）。如果近距离的光环击中了敌怪，会产生紫色的闪光；如果其射弹击中了敌怪，会产生绿色的闪光。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "真永夜刃",
+            "image": "True_Night's_Edge.png"
+          },
+          {
+            "name": "真断钢剑",
+            "image": "True_Excalibur.png"
+          },
+          {
+            "name": "断裂英雄剑",
+            "image": "Broken_Hero_Sword.png"
+          }
+        ],
+        "result": {
+          "name": "泰拉刃",
+          "image": "Terra_Blade.png"
+        }
+      }
+    ]
   },
   "真铜短剑": {
     "name": "真铜短剑",
@@ -27225,7 +27804,32 @@
     },
     "drops": null,
     "description": "神圣连弩是用神圣锭制作而成的困难模式的连弩。它与其他神圣装备和武器共享相同的白加金配色方案。神圣连弩在所有发射箭的连弩中有最高的速度和每击伤害。\n\n其最佳修饰语是虚幻。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "神圣连弩",
+            "image": "Hallowed_Repeater_(old).png"
+          },
+          {
+            "name": "枯萎之魂",
+            "image": "Soul_of_Blight.png",
+            "amount": "15"
+          },
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar_(old).png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "火神连弩",
+          "image": "Vulcan_Repeater.png"
+        }
+      }
+    ]
   },
   "神圣骑枪": {
     "name": "神圣骑枪",
@@ -27464,55 +28068,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "泰拉刃",
-          "image": "Terra_Blade.png"
-        },
-        {
-          "name": "彩虹猫之刃",
-          "image": "Meowmere.png"
-        },
-        {
-          "name": "狂星之怒",
-          "image": "Star_Wrath.png"
-        },
-        {
-          "name": "波涌之刃",
-          "image": "Influx_Waver.png"
-        },
-        {
-          "name": "无头骑士剑",
-          "image": "The_Horseman's_Blade.png"
-        },
-        {
-          "name": "种子弯刀",
-          "image": "Seedler.png"
-        },
-        {
-          "name": "星怒",
-          "image": "Starfury.png"
-        },
-        {
-          "name": "养蜂人",
-          "image": "Bee_Keeper.png"
-        },
-        {
-          "name": "附魔剑",
-          "image": "Enchanted_Sword_(item).png"
-        },
-        {
-          "name": "铜短剑",
-          "image": "Copper_Shortsword.png"
-        }
-      ],
-      "result": {
-        "name": "天顶剑",
-        "image": "Zenith.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -27572,7 +28128,58 @@
       ]
     },
     "description": "种子弯刀是一把困难模式、世纪之花后的剑，它在挥舞时会发射出弧线飞行的种子弯刀坚果射弹，这些种子弯刀坚果射弹会在击中敌怪或 0.33 至 2.17 秒后爆炸成四到七个种子弯刀荆棘。种子弯刀荆棘会造成 66% 的武器基础伤害（33 伤害），不受重力影响，会自动瞄准 125 格内的敌怪，在可能的情况下每个射弹会瞄准不同的敌怪。如果附近没有敌怪，种子弯刀荆棘就会以随机角度发射。种子弯刀有1/8 (12.5%)的几率掉落自世纪之花。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "秘银剑": {
     "name": "秘银剑",
@@ -28424,7 +29031,46 @@
     },
     "drops": null,
     "description": "粘性炸弹是一种爆炸物，功能与炸弹相同，但是会接触到物块后会粘在上面。如果它所粘着的物块被某些手段移除，它会落下直到碰到另一个物块。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "粘性炸弹",
+            "image": "Sticky_Bomb.png"
+          },
+          {
+            "name": "土块",
+            "image": "Dirt_Block.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "粘性土炸弹",
+          "image": "Sticky_Dirt_Bomb.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "粘性炸弹",
+            "image": "Sticky_Bomb.png",
+            "amount": "5"
+          },
+          {
+            "name": "任何钴锭",
+            "image": "Any_Cobalt_Bar.gif"
+          }
+        ],
+        "result": {
+          "name": "粘性强力炸弹",
+          "image": "Sticky_Power_Bomb.png",
+          "amount": "5"
+        }
+      }
+    ]
   },
   "粘性雷管": {
     "name": "粘性雷管",
@@ -32644,15 +33290,18 @@
       "ingredients": [
         {
           "name": "毒刺",
-          "image": "Stinger.png"
+          "image": "Stinger.png",
+          "amount": "12"
         },
         {
           "name": "丛林孢子",
-          "image": "Jungle_Spores.png"
+          "image": "Jungle_Spores.png",
+          "amount": "15"
         },
         {
           "name": "藤蔓",
-          "image": "Vine.png"
+          "image": "Vine.png",
+          "amount": "3"
         }
       ],
       "result": {
@@ -32662,7 +33311,59 @@
     },
     "drops": null,
     "description": "草剑是一把困难模式之前的剑。挥舞时，它会发射小的、绿色的叶刃射弹，轨迹呈圆形向上飞行，在后方留下作为视觉效果的叶片粒子。叶刃射弹可以穿过物块但会在接触熔岩时被摧毁、造成 25% 武器伤害（4 基础伤害）、具有 20盔甲穿透、追踪 9.375 格内的敌怪、并能穿透两个敌怪。剑及其射弹在击中时均有1/4 (25%)几率造成中毒减益，持续 7 秒。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "魔光剑",
+            "image": "Light's_Bane.png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa.png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass.png"
+          },
+          {
+            "name": "火山",
+            "image": "Volcano.png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "血腥屠刀",
+            "image": "Blood_Butcherer.png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa.png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass.png"
+          },
+          {
+            "name": "火山",
+            "image": "Volcano.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      }
+    ]
   },
   "莫洛托夫鸡尾酒": {
     "name": "莫洛托夫鸡尾酒",
@@ -33165,27 +33866,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "工作台",
-      "ingredients": [
-        {
-          "name": "附魔回旋镖",
-          "image": "Enchanted_Boomerang.png"
-        },
-        {
-          "name": "蘑菇回旋镖",
-          "image": "Shroomerang.png"
-        },
-        {
-          "name": "冰雪回旋镖",
-          "image": "Ice_Boomerang.png"
-        }
-      ],
-      "result": {
-        "name": "三尖回旋镖",
-        "image": "Trimarang.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -33227,7 +33908,30 @@
       ]
     },
     "description": "蘑菇回旋镖是一个困难模式之前的回旋镖，有1/40 (2.5%)几率掉落自孢子蝙蝠。\n\n其最佳修饰语是神级或恶魔。这两个修饰语对平均伤害输出的提高量是相同的。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "附魔回旋镖",
+            "image": "Enchanted_Boomerang.png"
+          },
+          {
+            "name": "蘑菇回旋镖",
+            "image": "Shroomerang.png"
+          },
+          {
+            "name": "冰雪回旋镖",
+            "image": "Ice_Boomerang.png"
+          }
+        ],
+        "result": {
+          "name": "三尖回旋镖",
+          "image": "Trimarang.png"
+        }
+      }
+    ]
   },
   "蘑菇长矛": {
     "name": "蘑菇长矛",
@@ -34802,6 +35506,58 @@
           "text": "其最佳修饰语是传奇。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "血腥屠刀",
+            "image": "Blood_Butcherer.png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa.png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass.png"
+          },
+          {
+            "name": "火山",
+            "image": "Volcano.png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "血腥屠刀",
+            "image": "Blood_Butcherer_(old).png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa_(old).png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass_(old).png"
+          },
+          {
+            "name": "炽焰巨剑",
+            "image": "Volcano_(old).png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge_(old).png"
+        }
+      }
     ]
   },
   "血腥砍刀": {
@@ -35724,33 +36480,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "迷你鲨",
-          "image": "Minishark.png"
-        },
-        {
-          "name": "非法枪械部件",
-          "image": "Illegal_Gun_Parts.png"
-        },
-        {
-          "name": "鲨鱼鳍",
-          "image": "Shark_Fin.png",
-          "amount": "5"
-        },
-        {
-          "name": "力量之魂",
-          "image": "Soul_of_Might.png",
-          "amount": "20"
-        }
-      ],
-      "result": {
-        "name": "巨兽鲨",
-        "image": "Megashark.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "迷你鲨是一把困难模式前的枪，能以35 GC的价格从军火商处购买。它可以消耗任何种类的子弹，可以自动开火，且每发子弹都有1/3 (33.33%)的几率不消耗任何弹药。它的使用时间是所有困难模式之前的远程武器中最低的。\n\n其最佳修饰语是灵活，由于它没有任何击退因此无法得到影响击退的修饰语。在前代主机版前代主机版和任天堂3DS任天堂3DS版版中，它还能用致命的修饰语以提高DPS。",
     "description_rich": [
@@ -35794,7 +36524,59 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "迷你鲨",
+            "image": "Minishark.png"
+          },
+          {
+            "name": "非法枪械部件",
+            "image": "Illegal_Gun_Parts.png"
+          },
+          {
+            "name": "鲨鱼鳍",
+            "image": "Shark_Fin.png",
+            "amount": "5"
+          },
+          {
+            "name": "力量之魂",
+            "image": "Soul_of_Might.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "巨兽鲨",
+          "image": "Megashark.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "迷你鲨",
+            "image": "Minishark.png"
+          },
+          {
+            "name": "陨石锭",
+            "image": "Meteorite_Bar.png",
+            "amount": "20"
+          },
+          {
+            "name": "坠落之星",
+            "image": "Fallen_Star.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "星星炮",
+          "image": "Star_Cannon.png"
+        }
+      }
+    ]
   },
   "邪恶三叉戟": {
     "name": "邪恶三叉戟",
@@ -36127,7 +36909,8 @@
       "ingredients": [
         {
           "name": "金锭",
-          "image": "Gold_Bar.png"
+          "image": "Gold_Bar.png",
+          "amount": "8"
         }
       ],
       "result": {
@@ -36137,7 +36920,27 @@
     },
     "drops": null,
     "description": "金阔剑是一把困难模式之前的阔剑。\n\n其代用矿石对应物是铂金宽剑。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "蜂蜜",
+        "ingredients": [
+          {
+            "name": "金阔剑",
+            "image": "Gold_Broadsword.png"
+          },
+          {
+            "name": "臭虫",
+            "image": "Stinkbug.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "臭虫剑",
+          "image": "Flymeal.png"
+        }
+      }
+    ]
   },
   "针叶木剑": {
     "name": "针叶木剑",
@@ -38188,7 +38991,27 @@
     },
     "drops": null,
     "description": "铂金宽剑是一把困难模式之前的阔剑。\n\n其代用矿石对应物是金阔剑。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "蜂蜜",
+        "ingredients": [
+          {
+            "name": "铂金宽剑",
+            "image": "Platinum_Broadsword.png"
+          },
+          {
+            "name": "臭虫",
+            "image": "Stinkbug.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "臭虫剑",
+          "image": "Flymeal.png"
+        }
+      }
+    ]
   },
   "铂金弓": {
     "name": "铂金弓",
@@ -38823,6 +39646,57 @@
           "text": "其最佳修饰语是传奇。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
     ]
   },
   "铜阔剑": {
@@ -39623,27 +40497,30 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "链锤",
-          "image": "Mace.png"
-        },
-        {
-          "name": "火把",
-          "image": "Torch.png",
-          "amount": "99"
-        }
-      ],
-      "result": {
-        "name": "烈焰链锤",
-        "image": "Flaming_Mace.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "链锤是一个连枷，可以在位于地下的金箱中找到。链锤可以升级为烈焰链锤，后者能够造成着火了！减益。\n\n其最佳修饰语是神级或恶魔。这两个修饰语对平均伤害输出的提高量是相同的。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "链锤",
+            "image": "Mace.png"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "99"
+          }
+        ],
+        "result": {
+          "name": "烈焰链锤",
+          "image": "Flaming_Mace.png"
+        }
+      }
+    ]
   },
   "锚": {
     "name": "锚",
@@ -40462,55 +41339,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "泰拉刃",
-          "image": "Terra_Blade.png"
-        },
-        {
-          "name": "彩虹猫之刃",
-          "image": "Meowmere.png"
-        },
-        {
-          "name": "狂星之怒",
-          "image": "Star_Wrath.png"
-        },
-        {
-          "name": "波涌之刃",
-          "image": "Influx_Waver.png"
-        },
-        {
-          "name": "无头骑士剑",
-          "image": "The_Horseman's_Blade.png"
-        },
-        {
-          "name": "种子弯刀",
-          "image": "Seedler.png"
-        },
-        {
-          "name": "星怒",
-          "image": "Starfury.png"
-        },
-        {
-          "name": "养蜂人",
-          "image": "Bee_Keeper.png"
-        },
-        {
-          "name": "附魔剑",
-          "image": "Enchanted_Sword_(item).png"
-        },
-        {
-          "name": "铜短剑",
-          "image": "Copper_Shortsword.png"
-        }
-      ],
-      "result": {
-        "name": "天顶剑",
-        "image": "Zenith.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -40570,7 +41399,58 @@
       ]
     },
     "description": "附魔剑是一把困难模式之前的剑。它在挥舞时会定期发射附魔光束射弹，该射弹无法穿透敌怪或穿过物块。剑和其射弹都会产生发出大量光的滞留粒子。\n\n可以通过摧毁“石中附魔剑”背景物体来获得附魔剑，该背景物体可以在地下的随机地点和附魔剑冢中找到。摧毁该背景物体有29/30 (96.67%)几率掉落附魔剑，剩余1/30 (3.33%)几率掉落泰拉魔刃。附魔剑也分别有1/30 (3.33%)和1/15 (6.67%)几率从金匣和钛金匣中获得。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "泰拉刃",
+            "image": "Terra_Blade.png"
+          },
+          {
+            "name": "彩虹猫之刃",
+            "image": "Meowmere.png"
+          },
+          {
+            "name": "狂星之怒",
+            "image": "Star_Wrath.png"
+          },
+          {
+            "name": "波涌之刃",
+            "image": "Influx_Waver.png"
+          },
+          {
+            "name": "无头骑士剑",
+            "image": "The_Horseman's_Blade.png"
+          },
+          {
+            "name": "种子弯刀",
+            "image": "Seedler.png"
+          },
+          {
+            "name": "星怒",
+            "image": "Starfury.png"
+          },
+          {
+            "name": "养蜂人",
+            "image": "Bee_Keeper.png"
+          },
+          {
+            "name": "附魔剑",
+            "image": "Enchanted_Sword_(item).png"
+          },
+          {
+            "name": "铜短剑",
+            "image": "Copper_Shortsword.png"
+          }
+        ],
+        "result": {
+          "name": "天顶剑",
+          "image": "Zenith.png"
+        }
+      }
+    ]
   },
   "附魔回旋镖": {
     "name": "附魔回旋镖",
@@ -40715,6 +41595,47 @@
           "text": "其最佳修饰语是神级或恶魔。这两个修饰语对平均伤害输出的提高量是相同的。"
         }
       ]
+    ],
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "附魔回旋镖",
+            "image": "Enchanted_Boomerang.png"
+          },
+          {
+            "name": "蘑菇回旋镖",
+            "image": "Shroomerang.png"
+          },
+          {
+            "name": "冰雪回旋镖",
+            "image": "Ice_Boomerang.png"
+          }
+        ],
+        "result": {
+          "name": "三尖回旋镖",
+          "image": "Trimarang.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "狱石锭",
+            "image": "Hellstone_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "附魔回旋镖",
+            "image": "Enchanted_Boomerang.png"
+          }
+        ],
+        "result": {
+          "name": "烈焰回旋镖",
+          "image": "Flamarang.png"
+        }
+      }
     ]
   },
   "雨云魔杖": {
@@ -41263,24 +42184,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "徒手",
-      "ingredients": [
-        {
-          "name": "雷管",
-          "image": "Dynamite.png",
-          "amount": "3"
-        },
-        {
-          "name": "桶",
-          "image": "Barrel.png"
-        }
-      ],
-      "result": {
-        "name": "TNT桶",
-        "image": "TNT_Barrel.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "雷管是强力的爆炸物，在掷出后 5 秒爆炸。爆炸对雷管水平和垂直方向 7.8 格内的所有敌怪、小动物、和玩家（但不包括NPC）造成 250 无职业伤害。此外，它会摧毁半径 7 格内的几乎所有物块、墙、和家具（防爆物体除外）。雷管可在宝箱中找到，或以每个20 SC的价格从爆破专家处购买。\n\n雷管的爆炸威力不受中间物质的影响：例如，若雷管被地牢砖（不会被爆炸摧毁）包围，它仍然能摧毁爆炸范围内其他可摧毁的物块并伤害地牢砖外部的实体。雷管也能在液体中生效。",
     "description_rich": [
@@ -41306,7 +42210,96 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "雷管",
+            "image": "Dynamite.png",
+            "amount": "3"
+          },
+          {
+            "name": "桶",
+            "image": "Barrel.png"
+          }
+        ],
+        "result": {
+          "name": "TNT桶",
+          "image": "TNT_Barrel.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "雷管",
+            "image": "Dynamite.png"
+          },
+          {
+            "name": "粉凝胶",
+            "image": "Pink_Gel.png"
+          }
+        ],
+        "result": {
+          "name": "弹力雷管",
+          "image": "Bouncy_Dynamite.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "雷管",
+            "image": "Dynamite.png",
+            "amount": "3"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png"
+          }
+        ],
+        "result": {
+          "name": "炸药",
+          "image": "Explosives.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "兔兔",
+            "image": "Bunny.png"
+          },
+          {
+            "name": "雷管",
+            "image": "Dynamite.png"
+          }
+        ],
+        "result": {
+          "name": "爆炸兔",
+          "image": "Explosive_Bunny.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "雷管",
+            "image": "Dynamite.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性雷管",
+          "image": "Sticky_Dynamite.png"
+        }
+      }
+    ]
   },
   "霰弹枪": {
     "name": "霰弹枪",
@@ -41389,29 +42382,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "霰弹枪",
-          "image": "Shotgun.png"
-        },
-        {
-          "name": "暗黑碎块",
-          "image": "Dark_Shard.png",
-          "amount": "2"
-        },
-        {
-          "name": "暗影之魂",
-          "image": "Soul_of_Night.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "玛瑙爆破枪",
-        "image": "Onyx_Blaster.png"
-      }
-    },
+    "recipe": null,
     "drops": null,
     "description": "霰弹枪是一把困难模式的枪，一次发射四到五发子弹，但只消耗一枚弹药。它可以在击败血肉墙后以25 GC的价格从军火商处购买。\n\n它是困难模式之前的三发猎枪的升级。玛瑙爆破枪(电脑版、主机版、和移动版)和战术霰弹枪是霰弹枪的升级。\n\n其最佳修饰语是虚幻。",
     "description_rich": [
@@ -41443,7 +42414,32 @@
         }
       ]
     ],
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "霰弹枪",
+            "image": "Shotgun.png"
+          },
+          {
+            "name": "暗黑碎块",
+            "image": "Dark_Shard.png",
+            "amount": "2"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "玛瑙爆破枪",
+          "image": "Onyx_Blaster.png"
+        }
+      }
+    ]
   },
   "霹雳法杖": {
     "name": "霹雳法杖",
@@ -42839,7 +43835,8 @@
       "ingredients": [
         {
           "name": "骨块墙",
-          "image": "Bone_Block_Wall.png"
+          "image": "Bone_Block_Wall.png",
+          "amount": "4"
         }
       ],
       "result": {
@@ -42960,7 +43957,2098 @@
       ]
     },
     "description": "骨头既是消耗性远程武器，也是制作材料。它们掉落自生成在地牢中的愤怒骷髅怪、暗黑法师、诅咒骷髅头、和图书管理员骷髅。\n\n骨头受重力影响很大，运动弧度与投刀和手里剑类似。这三种消耗性投掷武器中，骨头的射程最小（投刀最大）。\n\n此外，骨头可以用白骨魔棒来放置为物块，如此它们会变为骨块。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "丛林蜥蜴砖",
+            "image": "Lihzahrd_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "丛林蜥蜴钢琴",
+          "image": "Lihzahrd_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "乌木",
+            "image": "Ebonwood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "乌木钢琴",
+          "image": "Ebonwood_Piano.png"
+        }
+      },
+      {
+        "station": "书架",
+        "ingredients": [
+          {
+            "name": "书卷块",
+            "image": "Librarian_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "书卷钢琴",
+          "image": "Librarian_Piano.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "云",
+            "image": "Cloud.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "云钢琴",
+          "image": "Cloud_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "仙人掌",
+            "image": "Cactus.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "仙人掌钢琴",
+          "image": "Cactus_Piano.png"
+        }
+      },
+      {
+        "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "仙灵木",
+            "image": "Feywood.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "仙灵木钢琴",
+          "image": "Feywood_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "以太砖",
+            "image": "Aetherium_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "以太钢琴",
+          "image": "Aetherium_Piano.png"
+        }
+      },
+      {
+        "station": "冰雪机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "冰雪块",
+            "image": "Ice_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "冰冻钢琴",
+          "image": "Frozen_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "办公块",
+            "image": "Office_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "办公钢琴",
+          "image": "Office_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "南瓜",
+            "image": "Pumpkin.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "南瓜钢琴",
+          "image": "Pumpkin_Piano.png"
+        }
+      },
+      {
+        "station": "固化机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "史莱姆块",
+            "image": "Slime_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "史莱姆钢琴",
+          "image": "Slime_Piano.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "20"
+          },
+          {
+            "name": "蛛网",
+            "image": "Cobweb.png",
+            "amount": "5"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "哥特砖",
+          "image": "Gothic_Brick.png",
+          "amount": "20"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "哥特砖",
+            "image": "Gothic_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "哥特钢琴",
+          "image": "Gothic_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "坠落之星块",
+            "image": "Fallen_Star_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "坠落之星钢琴",
+          "image": "Fallen_Star_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "复活节块",
+            "image": "Easter_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "复活节钢琴",
+          "image": "Easter_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "光面大理石块",
+            "image": "Smooth_Marble_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "大理石钢琴",
+          "image": "Marble_Piano.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "日盘块",
+            "image": "Sunplate_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "天域钢琴",
+          "image": "Skyware_Piano.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "链条",
+            "image": "Chain.png",
+            "amount": "2"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "宝箱锁",
+          "image": "Chest_Lock.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "小雪怪皮毛块",
+            "image": "Flinx_Fur_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "小雪怪皮毛钢琴",
+          "image": "Flinx_Fur_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "尖刺块",
+            "image": "Spike_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "尖刺钢琴",
+          "image": "Spike_Piano.png"
+        }
+      },
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "巨石块",
+            "image": "Boulder_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "巨石钢琴",
+          "image": "Boulder_Piano.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "日耀砖",
+            "image": "Solar_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "日耀钢琴",
+          "image": "Solar_Piano.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星云砖",
+            "image": "Nebula_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "星云钢琴",
+          "image": "Nebula_Piano.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星尘砖",
+            "image": "Stardust_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "星尘钢琴",
+          "image": "Stardust_Piano.png"
+        }
+      },
+      {
+        "station": "远古操纵机(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "星旋砖",
+            "image": "Vortex_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "星旋钢琴",
+          "image": "Vortex_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "暗影木",
+            "image": "Shadewood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "暗影木钢琴",
+          "image": "Shadewood_Piano.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "月盘块",
+            "image": "Moonplate_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "暮色钢琴",
+          "image": "Duskware_Piano.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "30"
+          },
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "5"
+          },
+          {
+            "name": "光明之魂",
+            "image": "Soul_of_Light.png",
+            "amount": "3"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "机械骷髅头",
+          "image": "Mechanical_Skull.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "松树块",
+            "image": "Pine_Tree_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "松木钢琴",
+          "image": "Pine_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "松木",
+            "image": "Pine_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "棕榈木",
+            "image": "Palm_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "棕榈木钢琴",
+          "image": "Palm_Wood_Piano.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "40"
+          },
+          {
+            "name": "蛛网",
+            "image": "Cobweb.png",
+            "amount": "40"
+          }
+        ],
+        "result": {
+          "name": "死灵头盔",
+          "image": "Necro_Helmet.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "50"
+          },
+          {
+            "name": "蛛网",
+            "image": "Cobweb.png",
+            "amount": "45"
+          }
+        ],
+        "result": {
+          "name": "死灵护胫",
+          "image": "Necro_Greaves.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "60"
+          },
+          {
+            "name": "蛛网",
+            "image": "Cobweb.png",
+            "amount": "50"
+          }
+        ],
+        "result": {
+          "name": "死灵胸甲",
+          "image": "Necro_Breastplate.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "任何气球",
+            "image": "Any_Balloon.gif",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "气球钢琴",
+          "image": "Balloon_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "水族块",
+            "image": "Aquarium_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "水族钢琴",
+          "image": "Aquarium_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "水晶块",
+            "image": "Crystal_Block.png",
+            "amount": "40"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "水晶钢琴",
+          "image": "Crystal_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "水母块",
+            "image": "Jellyfish_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "水母钢琴",
+          "image": "Jellyfish_Piano.png"
+        }
+      },
+      {
+        "station": "织布机",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "永恒旅人兜帽",
+          "image": "Timeless_Traveler's_Hood.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "光面沙岩",
+            "image": "Smooth_Sandstone.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "沙岩钢琴",
+          "image": "Sandstone_Piano.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "瓶装水",
+            "image": "Bottled_Water.png"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png"
+          },
+          {
+            "name": "死亡草",
+            "image": "Deathweed.png"
+          },
+          {
+            "name": "寒颤棘",
+            "image": "Shiverthorn.png"
+          }
+        ],
+        "result": {
+          "name": "泰坦药水",
+          "image": "Titan_Potion.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "火星管道护板",
+            "image": "Martian_Conduit_Plating.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "火星钢琴",
+          "image": "Martian_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "灰烬木",
+            "image": "Ash_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "灰烬木钢琴",
+          "image": "Ash_Wood_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "猩红矿砖",
+            "image": "Crimtane_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "猩红矿钢琴",
+          "image": "Crimtane_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "王朝木",
+            "image": "Dynasty_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "王朝钢琴",
+          "image": "Dynasty_Piano.png"
+        }
+      },
+      {
+        "station": "玻璃窑(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "玻璃",
+            "image": "Glass.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "玻璃钢琴",
+          "image": "Glass_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "珊瑚礁块",
+            "image": "Reef_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "珊瑚礁钢琴",
+          "image": "Reef_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "珍珠木",
+            "image": "Pearlwood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "珍珠木钢琴",
+          "image": "Pearlwood_Piano.png"
+        }
+      },
+      {
+        "station": "生命木织机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "木材",
+            "image": "Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "生命木钢琴",
+          "image": "Living_Wood_Piano.png"
+        }
+      },
+      {
+        "station": "腐变室(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "病变块",
+            "image": "Lesion_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "病变钢琴",
+          "image": "Lesion_Piano.png"
+        }
+      },
+      {
+        "station": "织布机",
+        "ingredients": [
+          {
+            "name": "椎骨",
+            "image": "Vertebra.png",
+            "amount": "10"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "瘟疫使者骷髅头",
+          "image": "Plaguebringer's_Skull.png"
+        }
+      },
+      {
+        "station": "重型装配台",
+        "ingredients": [
+          {
+            "name": "灰砖",
+            "image": "Gray_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "石钢琴",
+          "image": "Stone_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "神圣砖",
+            "image": "Hallowed_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "神圣钢琴",
+          "image": "Hallowed_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "禁戒块",
+            "image": "Forbidden_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "禁戒钢琴",
+          "image": "Forbidden_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "竹子",
+            "image": "Bamboo.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "竹钢琴",
+          "image": "Bamboo_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "红木",
+            "image": "Rich_Mahogany.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "红木钢琴",
+          "image": "Rich_Mahogany_Piano.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "臭臭",
+            "image": "Poo.png",
+            "amount": "3"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "3"
+          },
+          {
+            "name": "灰烬块",
+            "image": "Ash_Block.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "肥料",
+          "image": "Fertilizer.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "90"
+          },
+          {
+            "name": "蛛网",
+            "image": "Cobweb.png",
+            "amount": "55"
+          }
+        ],
+        "result": {
+          "name": "脊柱骨鞭",
+          "image": "Spinal_Tap.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "光面花岗岩块",
+            "image": "Smooth_Granite_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "花岗岩钢琴",
+          "image": "Granite_Piano.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "粘土块",
+            "image": "Clay_Block.png",
+            "amount": "12"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "茶壶",
+          "image": "Teapot.png"
+        }
+      },
+      {
+        "station": "蒸汽朋克锅炉(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "齿轮",
+            "image": "Cog.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蒸汽朋克钢琴",
+          "image": "Steampunk_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇钢琴",
+          "image": "Mushroom_Piano.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "15"
+          },
+          {
+            "name": "丛林孢子",
+            "image": "Jungle_Spores.png",
+            "amount": "8"
+          },
+          {
+            "name": "暗影鳞片",
+            "image": "Shadow_Scale.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "虚空保险库",
+          "image": "Void_Vault.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "15"
+          },
+          {
+            "name": "丛林孢子",
+            "image": "Jungle_Spores.png",
+            "amount": "8"
+          },
+          {
+            "name": "组织样本",
+            "image": "Tissue_Sample.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "30"
+          },
+          {
+            "name": "丛林孢子",
+            "image": "Jungle_Spores.png",
+            "amount": "15"
+          },
+          {
+            "name": "暗影鳞片",
+            "image": "Shadow_Scale.png",
+            "amount": "30"
+          }
+        ],
+        "result": {
+          "name": "虚空袋",
+          "image": "Void_Bag.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "30"
+          },
+          {
+            "name": "丛林孢子",
+            "image": "Jungle_Spores.png",
+            "amount": "15"
+          },
+          {
+            "name": "组织样本",
+            "image": "Tissue_Sample.png",
+            "amount": "30"
+          }
+        ],
+        "result": {
+          "name": "",
+          "image": ""
+        }
+      },
+      {
+        "station": "蜂蜜分配机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "蜂蜜块",
+            "image": "Honey_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蜂蜜钢琴",
+          "image": "Honey_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "蜘蛛窝块",
+            "image": "Spider_Nest_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "蜘蛛钢琴",
+          "image": "Spider_Piano.png"
+        }
+      },
+      {
+        "station": "血肉克隆台(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "血肉块",
+            "image": "Flesh_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "血肉钢琴",
+          "image": "Flesh_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "针叶木",
+            "image": "Boreal_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "针叶木钢琴",
+          "image": "Boreal_Wood_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "木材",
+            "image": "Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "钢琴",
+          "image": "Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "阴森木",
+            "image": "Spooky_Wood.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "阴森钢琴",
+          "image": "Spooky_Piano.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "陨石砖",
+            "image": "Meteorite_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "陨石钢琴",
+          "image": "Meteorite_Piano.png"
+        }
+      },
+      {
+        "station": "冰雪机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "雪块",
+            "image": "Snow_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "雪钢琴",
+          "image": "Snow_Piano.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png"
+          }
+        ],
+        "result": {
+          "name": "骨块墙",
+          "image": "Bone_Block_Wall.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "20"
+          },
+          {
+            "name": "书",
+            "image": "Book.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "骨头书架",
+          "image": "Bone_Bookcase.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "4"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "骨头吊灯",
+          "image": "Bone_Chandelier.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "骨头工作台",
+          "image": "Bone_Work_Bench.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png"
+          }
+        ],
+        "result": {
+          "name": "骨头平台",
+          "image": "Bone_Platform.png",
+          "amount": "2"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "15"
+          },
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "骨头床",
+          "image": "Bone_Bed.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "3"
+          },
+          {
+            "name": "玻璃",
+            "image": "Glass.png",
+            "amount": "6"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "骨头时钟",
+          "image": "Bone_Clock.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "骨头桌",
+          "image": "Bone_Table.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "16"
+          }
+        ],
+        "result": {
+          "name": "骨头梳妆台",
+          "image": "Bone_Dresser.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "骨头椅",
+          "image": "Bone_Chair.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "6"
+          },
+          {
+            "name": "水桶",
+            "image": "Water_Bucket.png"
+          }
+        ],
+        "result": {
+          "name": "骨头水槽",
+          "image": "Bone_Sink.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "5"
+          },
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "骨头沙发",
+          "image": "Bone_Sofa.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "14"
+          }
+        ],
+        "result": {
+          "name": "骨头浴缸",
+          "image": "Bone_Bathtub.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "骨头灯",
+          "image": "Bone_Lamp.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "6"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "骨头灯笼",
+          "image": "Bone_Lantern.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "5"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "骨头烛台",
+          "image": "Bone_Candelabra.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "19"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "骨头钢琴",
+          "image": "Bone_Piano.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "骨头门",
+          "image": "Bone_Door.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "骨头马桶",
+          "image": "Bone_Toilet.png"
+        }
+      },
+      {
+        "station": "骨头焊机(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "骨箱",
+          "image": "Bone_Chest.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "10"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "骷髅头灯笼",
+          "image": "Skull_Lantern.png"
+        }
+      },
+      {
+        "station": "锯木机",
+        "ingredients": [
+          {
+            "name": "魔矿砖",
+            "image": "Demonite_Brick.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "魔矿钢琴",
+          "image": "Demonite_Piano.png"
+        }
+      },
+      {
+        "station": "天磨(电脑版、主机版、前代主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "鸟妖块",
+            "image": "Harpy_Block.png",
+            "amount": "15"
+          },
+          {
+            "name": "骨头",
+            "image": "Bone.png",
+            "amount": "4"
+          },
+          {
+            "name": "书",
+            "image": "Book.png"
+          }
+        ],
+        "result": {
+          "name": "鸟妖钢琴",
+          "image": "Harpy_Piano.png"
+        }
+      }
+    ]
   },
   "骨头标枪": {
     "name": "骨头标枪",
@@ -43783,7 +46871,8 @@
       "ingredients": [
         {
           "name": "魔矿锭",
-          "image": "Demonite_Bar.png"
+          "image": "Demonite_Bar.png",
+          "amount": "10"
         }
       ],
       "result": {
@@ -43793,7 +46882,34 @@
     },
     "drops": null,
     "description": "魔光剑是一把困难模式之前的剑，由魔矿锭制作而来。它每次挥舞时会在剑的尖端附近创造短时间的黑暗斩切。斩切具有 5盔甲穿透，可穿透一次，并且会自动以 3.125 图格内的敌怪为目标。有两种斩切：默认的小斩切，和随机出现的大斩切。小斩切造成 50% 基础伤害（8 基础伤害），而大斩切造成 100% 基础伤害（16 基础伤害）。大斩切出现的几率等于玩家的近战暴击率。\n\n魔光剑的猩红对应物为血腥屠刀，它更强、更大，但也更慢，并也是制作永夜刃的关键材料之一。\n\n其最佳修饰语是传奇。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "魔光剑",
+            "image": "Light's_Bane.png"
+          },
+          {
+            "name": "村正",
+            "image": "Muramasa.png"
+          },
+          {
+            "name": "草剑",
+            "image": "Blade_of_Grass.png"
+          },
+          {
+            "name": "火山",
+            "image": "Volcano.png"
+          }
+        ],
+        "result": {
+          "name": "永夜刃",
+          "image": "Night's_Edge.png"
+        }
+      }
+    ]
   },
   "魔刺": {
     "name": "魔刺",
@@ -44348,27 +47464,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "秘银砧或山铜砧",
-      "ingredients": [
-        {
-          "name": "魔法飞弹",
-          "image": "Magic_Missile.png"
-        },
-        {
-          "name": "光明碎块",
-          "image": "Light_Shard.png"
-        },
-        {
-          "name": "光明之魂",
-          "image": "Soul_of_Light.png"
-        }
-      ],
-      "result": {
-        "name": "裂天剑",
-        "image": "Sky_Fracture.png"
-      }
-    },
+    "recipe": null,
     "drops": {
       "modes": [
         {
@@ -44428,7 +47524,32 @@
       ]
     },
     "description": "魔法飞弹是一个困难模式之前的魔棒。使用时，它会发射一枚魔法飞弹，按住⚒使用/攻击键时可随光标移动。若拖拽时松开⚒使用/攻击键，导弹会沿当前方向发射。若光标释放时固定不动，它会直线远离玩家发射。释放后，导弹自动追踪附近的敌怪，当接触敌怪或实心块时，它会产生小型爆炸。魔法飞弹有1/7 (14.29%)的概率从地牢内锁住的金箱中找到，且有1/7 (14.29%)的概率从金锁盒中获得。\n\n其最佳修饰语是神话。",
-    "item_category": "weapons"
+    "item_category": "weapons",
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "魔法飞弹",
+            "image": "Magic_Missile.png"
+          },
+          {
+            "name": "光明碎块",
+            "image": "Light_Shard.png",
+            "amount": "2"
+          },
+          {
+            "name": "光明之魂",
+            "image": "Soul_of_Light.png",
+            "amount": "16"
+          }
+        ],
+        "result": {
+          "name": "裂天剑",
+          "image": "Sky_Fracture.png"
+        }
+      }
+    ]
   },
   "鱼叉枪": {
     "name": "鱼叉枪",

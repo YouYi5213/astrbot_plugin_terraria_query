@@ -1495,6 +1495,32 @@ def parse_recipe_table(table: Tag) -> list[dict]:
     return recipes
 
 
+def classify_item_recipes(
+    item_name: str, all_recipes: list[dict]
+) -> tuple[dict | None, list[dict]]:
+    """将 Wiki 配方行分为「合成此物品」与「用于制作其它物品」。"""
+    craft: list[dict] = []
+    used_in: list[dict] = []
+    for recipe in all_recipes:
+        result_name = (recipe.get("result") or {}).get("name", "")
+        ing_names = [ing.get("name", "") for ing in recipe.get("ingredients") or []]
+        if result_name == item_name:
+            craft.append(recipe)
+        elif item_name in ing_names:
+            used_in.append(recipe)
+    return (craft[0] if craft else None), used_in
+
+
+def apply_item_recipes_from_tables(item: dict, all_recipes: list[dict]) -> None:
+    item_name = item.get("name", "")
+    craft_recipe, used_in = classify_item_recipes(item_name, all_recipes)
+    item["recipe"] = craft_recipe
+    if used_in:
+        item["used_in"] = used_in
+    elif "used_in" in item:
+        item.pop("used_in", None)
+
+
 def _attach_armor_set_pieces(soup: BeautifulSoup, item: dict) -> None:
     """为盔甲套装页附加各部件数据，并匹配配方"""
     infoboxes = _collect_set_piece_infoboxes(soup)
@@ -1727,16 +1753,15 @@ def parse_item_page(html: str, fallback_name: str) -> dict | None:
                 continue
             item["stats"].append(_parse_generic_stat(td, label))
 
+    all_recipes: list[dict] = []
     for table in soup.select("table.terraria.cellborder.recipes"):
         if table.select_one("caption"):
             continue
         if fallback_name in OVERVIEW_PAGE_TITLES or item["name"] in OVERVIEW_PAGE_TITLES:
             break
-        recipes = parse_recipe_table(table)
-        if not recipes:
-            continue
-        item["recipe"] = recipes[0]
-        break
+        all_recipes.extend(parse_recipe_table(table))
+    if all_recipes:
+        apply_item_recipes_from_tables(item, all_recipes)
 
     drops = parse_drops_from_soup(soup)
     if drops:
@@ -2809,11 +2834,127 @@ async def backfill_missing_drop_entity_images(
     }
 
 
+def _item_likely_has_craft_usages(item: dict) -> bool:
+    """物品是否可能在 Wiki 配方表中作为材料出现。"""
+    for stat in item.get("stats") or []:
+        if stat.get("label") != "类型":
+            continue
+        val = stat.get("value") or ""
+        if any(k in val for k in ("制作材料", "矿石", "锭", "材料", "Bar", "Material", "Ore")):
+            return True
+    return False
+
+
+def _recipe_needs_used_in_backfill(item: dict) -> bool:
+    if item.get("used_in"):
+        return False
+    name = item.get("name", "")
+    if not name:
+        return False
+    recipe = item.get("recipe")
+    if recipe:
+        result = (recipe.get("result") or {}).get("name", "")
+        ing_names = [ing.get("name", "") for ing in recipe.get("ingredients") or []]
+        if name in ing_names and result != name:
+            return True
+    return _item_likely_has_craft_usages(item)
+
+
+def backfill_used_in_from_mirror(items: dict[str, dict]) -> int:
+    """用本地 Wiki 镜像补全「用于制作」列表（无需联网）。"""
+    updated = 0
+    for key, item in items.items():
+        if not _recipe_needs_used_in_backfill(item):
+            continue
+        title = item.get("wiki_title") or item.get("name") or key
+        path = _wiki_mirror_page_path(title)
+        if not path or not os.path.isfile(path):
+            continue
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                html = f.read()
+        except OSError:
+            continue
+        parsed = parse_item_page(html, title)
+        if not parsed:
+            continue
+        used_in = parsed.get("used_in")
+        if not used_in:
+            continue
+        item["used_in"] = used_in
+        if parsed.get("recipe") is not None:
+            item["recipe"] = parsed.get("recipe")
+        updated += 1
+    return updated
+
+
+async def backfill_used_in_recipes(
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+    limit: int | None = None,
+) -> int:
+    """重新抓取 Wiki 页面，补全材料的「用于制作」配方列表。"""
+    pending = sorted(
+        key
+        for key, item in items.items()
+        if _recipe_needs_used_in_backfill(item)
+    )
+    if limit:
+        pending = pending[:limit]
+    if not pending:
+        return 0
+
+    updated = 0
+    semaphore = asyncio.Semaphore(6)
+
+    async def _process_one(key: str) -> bool:
+        async with semaphore:
+            item = items[key]
+            title = item.get("wiki_title") or item.get("name") or key
+            html = await fetch_page_html(session, title)
+            if not html:
+                return False
+            parsed = parse_item_page(html, title)
+            if not parsed:
+                return False
+            used_in = parsed.get("used_in")
+            if used_in:
+                item["used_in"] = used_in
+                item["recipe"] = parsed.get("recipe")
+                await asyncio.sleep(0.08)
+                return True
+            return False
+
+    batch_size = 40
+    for batch_start in range(0, len(pending), batch_size):
+        batch = pending[batch_start : batch_start + batch_size]
+        results = await asyncio.gather(*[_process_one(key) for key in batch])
+        updated += sum(1 for ok in results if ok)
+        done = batch_start + len(batch)
+        logger.info(f"用于制作配方回填进度 {done}/{len(pending)}，更新 {updated} 个")
+        _persist_items(items)
+
+    return updated
+
+
+def purge_legacy_bosses(bosses: dict[str, dict]) -> int:
+    """从 Boss 库移除旧版（前代主机/3DS）Boss 条目。"""
+    removed = 0
+    for key in list(bosses.keys()):
+        if bosses[key].get("legacy_boss"):
+            del bosses[key]
+            removed += 1
+    return removed
+
+
 def _iter_item_recipes(item: dict) -> list[dict]:
     recipes: list[dict] = []
     recipe = item.get("recipe")
     if recipe:
         recipes.append(recipe)
+    for used in item.get("used_in") or []:
+        if used:
+            recipes.append(used)
     for piece in item.get("set_pieces") or []:
         piece_recipe = piece.get("recipe")
         if piece_recipe:
@@ -3283,9 +3424,10 @@ async def update_wiki_data(
             _treasure_bag_data_module().load_treasure_bags_for_plugin(CATEGORIES_DIR)
         ),
     }
+    legacy_purge_bosses = 0
     legacy_item_result: dict = {}
     legacy_item_tags = 0
-    legacy_boss_tags = 0
+    used_in_backfill_count = 0
     recipe_img_result: dict = {}
     drop_entity_img_result: dict = {}
 
@@ -3388,18 +3530,25 @@ async def update_wiki_data(
             session
         )
         boss_img_result = await _boss_data_module().backfill_boss_images(session)
+        bosses_path = os.path.join(CATEGORIES_DIR, "bosses.json")
+        bosses_raw: dict[str, dict] = {}
+        if os.path.isfile(bosses_path):
+            try:
+                with open(bosses_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, dict):
+                    bosses_raw = data
+            except (json.JSONDecodeError, OSError):
+                bosses_raw = {}
+        legacy_purge_bosses = purge_legacy_bosses(bosses_raw)
+        if legacy_purge_bosses:
+            with open(bosses_path, "w", encoding="utf-8") as f:
+                json.dump(bosses_raw, f, ensure_ascii=False, indent=2)
         legacy_item_result = await _legacy_item_data_module().ingest_legacy_items_into(
             items, session
         )
-        lm = _legacy_metadata_module()
-        legacy_item_tags = lm.backfill_internal_tags_on_items(items)
+        legacy_item_tags = _legacy_metadata_module().backfill_internal_tags_on_items(items)
         bosses = _boss_data_module().load_bosses_for_plugin(CATEGORIES_DIR)
-        legacy_boss_tags = lm.backfill_internal_tags_on_bosses(bosses)
-        if legacy_boss_tags:
-            with open(
-                os.path.join(CATEGORIES_DIR, "bosses.json"), "w", encoding="utf-8"
-            ) as f:
-                json.dump(bosses, f, ensure_ascii=False, indent=2)
 
         recipe_img_result = await backfill_missing_recipe_images(session, items)
 
@@ -3411,6 +3560,9 @@ async def update_wiki_data(
             images_ok += drop_entity_img_result["images_ok"]
         if drop_entity_img_result.get("images_total"):
             images_total += drop_entity_img_result["images_total"]
+
+        used_in_backfill_count = backfill_used_in_from_mirror(items)
+        used_in_backfill_count += await backfill_used_in_recipes(session, items)
 
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
@@ -3450,10 +3602,11 @@ async def update_wiki_data(
         "content_images_total": content_img_result.get("images_total", 0),
         "boss_images_ok": boss_img_result.get("images_ok", 0),
         "boss_images_total": boss_img_result.get("images_total", 0),
+        "legacy_purge_bosses": legacy_purge_bosses,
         "legacy_item_new_count": legacy_item_result.get("new_count", 0),
         "legacy_item_seed_count": legacy_item_result.get("seed_count", 0),
         "legacy_item_tags_backfill": legacy_item_tags,
-        "legacy_boss_tags_backfill": legacy_boss_tags,
+        "used_in_backfill_count": used_in_backfill_count,
         "recipe_images_ok": recipe_img_result.get("images_ok", 0),
         "recipe_images_total": recipe_img_result.get("images_total", 0),
         "recipe_images_normalized": recipe_img_result.get("normalized", 0),

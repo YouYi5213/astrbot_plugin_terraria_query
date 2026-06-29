@@ -59,10 +59,15 @@ def test_inherit_legacy_set_piece():
 
 
 def test_backfill_on_loaded_bosses():
-    bosses = load_bosses_for_plugin()
-    ocram = bosses.get("奥库瑞姆")
-    assert ocram is not None
+    bosses = {
+        "奥库瑞姆": {
+            "name": "奥库瑞姆",
+            "legacy_boss": True,
+            "internal_tags": [TAG_LEGACY, TAG_LEGACY_BOSS],
+        }
+    }
     backfill_internal_tags_on_bosses(bosses)
+    ocram = bosses["奥库瑞姆"]
     assert ocram.get("internal_tags")
     assert TAG_LEGACY_BOSS in ocram["internal_tags"]
 

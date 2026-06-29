@@ -208,7 +208,7 @@ CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
 CARD_BOTTOM_EXTRA = 10
-CARD_VERSION = "v56"
+CARD_VERSION = "v59"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -221,6 +221,12 @@ DROP_COL_QTY = 300
 DROP_COL_CHANCE = 480
 ITEM_ICON_SLOT = (48, 48)
 ING_ICON_SLOT = (28, 28)
+USED_IN_ROW_ICON = (24, 24)
+USED_IN_COL_RESULT = CARD_PADDING + 20
+USED_IN_COL_STATION = CARD_PADDING + 175
+USED_IN_COL_MATERIALS = CARD_PADDING + 340
+USED_IN_TABLE_HEADER = 22
+USED_IN_ROW_GAP = 6
 BUFF_ICON_SLOT = (32, 32)
 MOUNT_PREVIEW_SLOT = (80, 72)
 PET_PREVIEW_SLOT = (80, 72)
@@ -1320,6 +1326,10 @@ _CARD_UI = {
     "mount": "▎召唤坐骑",
     "pet": "▎召唤宠物",
     "recipe": "▎合成配方",
+    "used_in": "▎用于制作",
+    "col_result": "产物",
+    "col_station": "制作站",
+    "col_materials": "材料",
     "drops": "▎来自",
     "col_entity": "实体",
     "col_qty": "数量",
@@ -1685,6 +1695,7 @@ def _display_item(item: dict) -> dict:
         "image": item.get("image", ""),
         "stats": item.get("stats", []),
         "recipe": item.get("recipe"),
+        "used_in": item.get("used_in"),
         "source": item.get("source"),
         "source_rich": item.get("source_rich"),
         "drops": item.get("drops"),
@@ -1825,8 +1836,9 @@ def _format_text_result(data: dict) -> str:
             lines.append(f"  {pet['name']}")
 
     set_pieces = data.get("set_pieces") or []
-    if not recipe:
-        recipe = data.get("recipe") if not set_pieces else None
+    craft_recipe, used_in_recipes = _resolve_item_craft_and_used_in(data)
+    if not craft_recipe:
+        craft_recipe = data.get("recipe") if not set_pieces else None
     if set_pieces:
         lines.append("")
         lines.append(ui["set_pieces"].lstrip("▎"))
@@ -1841,12 +1853,27 @@ def _format_text_result(data: dict) -> str:
             for rline in _format_recipe_plain(piece.get("recipe"), piece.get("name", "")):
                 lines.append(rline)
 
-    if recipe and not is_wing:
+    if craft_recipe and not is_wing:
         lines.append("")
         lines.append(ui["recipe_title"])
         lines.append("-" * 30)
-        for rline in _format_recipe_plain(recipe, data.get("name", "")):
+        for rline in _format_recipe_plain(craft_recipe, data.get("name", "")):
             lines.append(f"  {rline.strip()}")
+
+    if used_in_recipes and not is_wing:
+        lines.append("")
+        lines.append(ui["used_in"].lstrip("▎"))
+        lines.append("-" * 30)
+        lines.append(
+            f"  {ui['col_result']}\t{ui['col_station']}\t{ui['col_materials']}"
+        )
+        for used in used_in_recipes:
+            result = _recipe_item_label(used.get("result") or {})
+            station = used.get("station", "")
+            mats = " + ".join(
+                _recipe_item_label(ing) for ing in used.get("ingredients") or []
+            )
+            lines.append(f"  {result}\t{station}\t{mats}")
 
     drops = data.get("drops")
     if drops:
@@ -1985,6 +2012,164 @@ def _draw_recipe_block(
     return y + 36
 
 
+def _resolve_item_craft_and_used_in(data: dict) -> tuple[dict | None, list[dict]]:
+    name = data.get("name", "")
+    used_in = list(data.get("used_in") or [])
+    recipe = data.get("recipe")
+    if recipe and not used_in:
+        result = (recipe.get("result") or {}).get("name", "")
+        ing_names = [ing.get("name", "") for ing in recipe.get("ingredients") or []]
+        if name in ing_names and result != name:
+            used_in = [recipe]
+            recipe = None
+    return recipe, used_in
+
+
+def _used_in_materials_width() -> int:
+    return max(80, CARD_WIDTH - CARD_PADDING - USED_IN_COL_MATERIALS - 10)
+
+
+def _calc_used_in_row_height(
+    measure,
+    recipe: dict,
+    font_small,
+    items: dict[str, dict] | None,
+) -> int:
+    mat_w = _used_in_materials_width()
+    station = recipe.get("station", "")
+    station_h = (
+        len(_wrap_text_lines(measure, station, font_small, USED_IN_COL_STATION - USED_IN_COL_RESULT - 12))
+        * STAT_LINE_HEIGHT
+        if station
+        else 0
+    )
+    result = recipe.get("result") or {}
+    result_name = result.get("name", "")
+    result_h = (
+        len(_wrap_text_lines(measure, result_name, font_small, USED_IN_COL_STATION - USED_IN_COL_RESULT - 36))
+        * STAT_LINE_HEIGHT
+    )
+    ing_rows = _layout_ingredient_rows(
+        measure,
+        recipe.get("ingredients") or [],
+        font_small,
+        0,
+        mat_w,
+    )
+    ing_h = len(ing_rows) * 30 if ing_rows else 0
+    return max(USED_IN_ROW_ICON[1] + 4, result_h, station_h, ing_h) + USED_IN_ROW_GAP
+
+
+def _calc_used_in_table_height(
+    measure,
+    recipes: list[dict],
+    font_small,
+    items: dict[str, dict] | None,
+) -> int:
+    if not recipes:
+        return 0
+    height = 30 + USED_IN_TABLE_HEADER
+    for recipe in recipes:
+        height += _calc_used_in_row_height(measure, recipe, font_small, items)
+    return height + 12
+
+
+def _draw_used_in_row(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    recipe: dict,
+    font_small,
+    items: dict[str, dict] | None,
+) -> int:
+    row_h = _calc_used_in_row_height(draw, recipe, font_small, items)
+    result = recipe.get("result") or {}
+    result_name = result.get("name", "")
+    result_image = resolve_local_item_image(
+        result.get("name", ""), items, result.get("image", "")
+    )
+    result_img = _load_item_image(result_image, USED_IN_ROW_ICON)
+    rx = USED_IN_COL_RESULT
+    if result_img:
+        _paste_in_slot(card, result_img, rx, y, USED_IN_ROW_ICON[0], row_h)
+        rx += USED_IN_ROW_ICON[0] + 4
+    _draw_wrapped_text_block(
+        draw,
+        rx,
+        y + 2,
+        result_name,
+        font_small,
+        USED_IN_COL_STATION - USED_IN_COL_RESULT - 36,
+        COLORS["text"],
+    )
+
+    station = recipe.get("station", "")
+    if station:
+        _draw_wrapped_text_block(
+            draw,
+            USED_IN_COL_STATION,
+            y + 2,
+            station,
+            font_small,
+            USED_IN_COL_MATERIALS - USED_IN_COL_STATION - 8,
+            COLORS["label"],
+        )
+
+    mat_x = USED_IN_COL_MATERIALS
+    mat_w = _used_in_materials_width()
+    cy = y
+    for row_items in _layout_ingredient_rows(
+        draw, recipe.get("ingredients") or [], font_small, mat_x, mat_x + mat_w
+    ):
+        x_pos = mat_x
+        for ing in row_items:
+            ing_name = _recipe_item_label(ing)
+            ing_image = resolve_local_item_image(
+                ing.get("name", ""), items, ing.get("image", "")
+            )
+            ing_img = _load_item_image(ing_image, USED_IN_ROW_ICON)
+            item_w = _ingredient_item_width(draw, ing, font_small)
+            if ing_img:
+                _paste_in_slot(card, ing_img, x_pos, cy, USED_IN_ROW_ICON[0], 28)
+            draw.text(
+                (x_pos + USED_IN_ROW_ICON[0] + 3, cy + 4),
+                ing_name,
+                fill=COLORS["text"],
+                font=font_small,
+            )
+            x_pos += item_w
+        cy += 30
+    return y + row_h
+
+
+def _draw_used_in_table(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    recipes: list[dict],
+    font_header,
+    font_small,
+    ui: dict,
+    items: dict[str, dict] | None = None,
+) -> int:
+    if not recipes:
+        return y
+    draw.text((CARD_PADDING + 10, y), ui["used_in"], fill=COLORS["accent"], font=font_header)
+    y += 30
+    draw.text((USED_IN_COL_RESULT, y), ui["col_result"], fill=COLORS["label"], font=font_small)
+    draw.text((USED_IN_COL_STATION, y), ui["col_station"], fill=COLORS["label"], font=font_small)
+    draw.text((USED_IN_COL_MATERIALS, y), ui["col_materials"], fill=COLORS["label"], font=font_small)
+    y += USED_IN_TABLE_HEADER
+    for recipe in recipes:
+        y = _draw_used_in_row(draw, card, y, recipe, font_small, items)
+        draw.line(
+            [(CARD_PADDING + 16, y - 2), (CARD_WIDTH - CARD_PADDING - 16, y - 2)],
+            fill=COLORS["separator"],
+            width=1,
+        )
+    return y + 4
+
+
 def _calc_set_pieces_area(
     measure,
     set_pieces: list[dict],
@@ -2105,7 +2290,8 @@ def _generate_item_card(
         or resolve_bool_icon(s)
     ]
     set_pieces = data.get("set_pieces") or []
-    recipe = data.get("recipe") if not set_pieces else None
+    craft_recipe, used_in_recipes = _resolve_item_craft_and_used_in(data)
+    recipe = craft_recipe if not set_pieces else None
     drops = data.get("drops")
     buff = data.get("buff")
     mount = data.get("mount")
@@ -2134,13 +2320,16 @@ def _generate_item_card(
     title_area = 60
     sep_area = 30
     recipe_area = 0
+    used_in_area = 0
     if recipe and not is_wing:
         recipe_area = _calc_recipe_block_height(measure, recipe, font_small, ui)
+    if used_in_recipes and not is_wing:
+        used_in_area = _calc_used_in_table_height(measure, used_in_recipes, font_small, items)
 
     drops_area = 0
     if drops:
         drops_area = 20 + _calc_drops_area(drops, locale)
-        if recipe or set_pieces or buff or mount or pet or source_area:
+        if recipe or used_in_recipes or set_pieces or buff or mount or pet or source_area:
             drops_area += 20
 
     pieces_area = 0
@@ -2176,6 +2365,7 @@ def _generate_item_card(
         + pet_area
         + pieces_area
         + recipe_area
+        + used_in_area
         + drops_area
         + CARD_PADDING * 2
     )
@@ -2321,8 +2511,20 @@ def _generate_item_card(
             draw, card, y, recipe, font_header, font_body, font_small, ui, items=items
         )
 
+    if used_in_recipes and not is_wing:
+        if recipe:
+            draw.line(
+                [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
+                fill=COLORS["separator"],
+                width=1,
+            )
+            y += 20
+        y = _draw_used_in_table(
+            draw, card, y, used_in_recipes, font_header, font_small, ui, items=items
+        )
+
     if drops:
-        if recipe or set_pieces or buff or mount or pet:
+        if recipe or used_in_recipes or set_pieces or buff or mount or pet:
             draw.line(
                 [CARD_PADDING + 10, y, CARD_WIDTH - CARD_PADDING - 10, y],
                 fill=COLORS["separator"],

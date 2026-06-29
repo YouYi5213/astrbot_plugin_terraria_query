@@ -803,7 +803,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Surface.png"
   },
   "地下": {
     "name": "地下",
@@ -1336,7 +1337,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Underground.png"
   },
   "洞穴": {
     "name": "洞穴",
@@ -2284,7 +2286,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Caverns.png"
   },
   "地狱": {
     "name": "地狱",
@@ -2850,7 +2853,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_The_Underworld.png"
   },
   "太空": {
     "name": "太空",
@@ -3088,7 +3092,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Sky.png"
   },
   "雪原生物群系": {
     "name": "雪原生物群系",
@@ -3605,7 +3610,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Snow.png"
   },
   "冰雪生物群系": {
     "name": "冰雪生物群系",
@@ -4150,7 +4156,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Underground_Snow.png"
   },
   "沙漠": {
     "name": "沙漠",
@@ -4576,7 +4583,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Desert.png"
   },
   "地下沙漠": {
     "name": "地下沙漠",
@@ -5132,7 +5140,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Underground_Desert.png"
   },
   "海洋": {
     "name": "海洋",
@@ -5654,7 +5663,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Ocean.png"
   },
   "丛林": {
     "name": "丛林",
@@ -6228,7 +6238,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_The_Jungle.png"
   },
   "地下丛林": {
     "name": "地下丛林",
@@ -7047,7 +7058,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Underground_Jungle.png"
   },
   "丛林神庙": {
     "name": "丛林神庙",
@@ -7369,7 +7381,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_The_Temple.png"
   },
   "发光蘑菇生物群系": {
     "name": "发光蘑菇生物群系",
@@ -7712,7 +7725,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Surface_Mushroom.png"
   },
   "腐化之地": {
     "name": "腐化之地",
@@ -8243,7 +8257,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_The_Corruption.png"
   },
   "地下腐化之地": {
     "name": "地下腐化之地",
@@ -8776,7 +8791,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Underground_Corruption.png"
   },
   "猩红之地": {
     "name": "猩红之地",
@@ -9216,7 +9232,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_The_Crimson.png"
   },
   "地下猩红之地": {
     "name": "地下猩红之地",
@@ -9630,7 +9647,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Underground_Crimson.png"
   },
   "神圣之地": {
     "name": "神圣之地",
@@ -10190,7 +10208,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_The_Hallow.png"
   },
   "地下神圣之地": {
     "name": "地下神圣之地",
@@ -10573,7 +10592,8 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_Underground_Hallow.png"
   },
   "地牢": {
     "name": "地牢",
@@ -11242,6 +11262,7 @@
           }
         ]
       }
-    ]
+    ],
+    "list_icon": "Bestiary_The_Dungeon.png"
   }
 }

@@ -50,6 +50,8 @@ BOSSES_JSON = os.path.join(CATEGORIES_DIR, "bosses.json")
 MANIFEST_JSON = os.path.join(CATEGORIES_DIR, "manifest.json")
 
 BOSS_OVERVIEW_PAGE = "Bosses"
+HOMEPAGE_TITLE = "Terraria Wiki"
+BOSS_BOX_ID = "box-bosses"
 _BOSS_SKIP_STAT_LABELS = frozenset({"免疫", "Immunities"})
 _MODE_ORDER = ("normal", "expert", "master")
 _MODE_LABELS = {"normal": "经典", "expert": "专家", "master": "大师"}
@@ -57,6 +59,10 @@ _MODE_LABELS = {"normal": "经典", "expert": "专家", "master": "大师"}
 
 def _overview_html_path() -> str:
     return os.path.join(_WIKI_MIRROR_DIR, "wiki", "zh", "pages", f"{BOSS_OVERVIEW_PAGE}.html")
+
+
+def _homepage_html_path() -> str:
+    return os.path.join(_WIKI_MIRROR_DIR, "wiki", "zh", "pages", f"{HOMEPAGE_TITLE}.html")
 
 
 def _boss_page_html_path(wiki_title: str) -> str:
@@ -125,6 +131,51 @@ def _category_from_h2(h2: Tag | None) -> str:
     if "特殊" in section_id or "种子" in section_id:
         return "special"
     return "other"
+
+
+def load_boss_catalog_from_homepage(path: str | None = None) -> list[dict[str, str]]:
+    """从 Wiki 主页 #box-bosses 读取 Boss 列表（总览小图标）。"""
+    html_path = path or _homepage_html_path()
+    if not os.path.isfile(html_path):
+        return []
+    soup = BeautifulSoup(open(html_path, "r", encoding="utf-8").read(), "html.parser")
+    box = soup.find(id=BOSS_BOX_ID)
+    if not box:
+        return []
+
+    entries: list[dict[str, str]] = []
+    seen: set[str] = set()
+    content = box.select_one(".content")
+    if not content:
+        return entries
+
+    for section_div in content.find_all("div", recursive=False):
+        classes = set(section_div.get("class") or [])
+        if "prehardmode" in classes:
+            category = "pre_hardmode"
+        elif "hardmode" in classes:
+            category = "hardmode"
+        else:
+            category = ""
+        for li in section_div.select("li"):
+            a = li.select_one("span.i a[title]") or li.select_one("a[title]")
+            if not a:
+                continue
+            wiki_title = _clean_text(a.get("title", ""))
+            label = _clean_text(a.get_text()) or wiki_title
+            if not wiki_title or wiki_title in seen:
+                continue
+            img = li.select_one("img")
+            entries.append(
+                {
+                    "wiki_title": wiki_title,
+                    "label": label,
+                    "category": category,
+                    "image": _image_from_tag(img),
+                }
+            )
+            seen.add(wiki_title)
+    return entries
 
 
 def load_boss_catalog_from_overview(path: str | None = None) -> list[dict[str, str]]:
@@ -755,6 +806,30 @@ def parse_boss_page_file(
     return parse_boss_page_html(html, wiki_title=wiki_title, catalog_entry=catalog_entry)
 
 
+def apply_boss_overview_metadata(
+    bosses: dict[str, dict],
+    catalog: list[dict[str, str]] | None = None,
+) -> None:
+    """写入总览用 category / list_icon（Wiki 主页小图标）。"""
+    catalog = catalog if catalog is not None else load_boss_catalog_from_homepage()
+    if not catalog:
+        return
+    by_title = {entry["wiki_title"]: entry for entry in catalog}
+    by_label = {entry.get("label") or entry["wiki_title"]: entry for entry in catalog}
+    for key, item in bosses.items():
+        entry = (
+            by_title.get(item.get("wiki_title", ""))
+            or by_title.get(key)
+            or by_label.get(key)
+        )
+        if not entry:
+            continue
+        if entry.get("category"):
+            item["category"] = entry["category"]
+        if entry.get("image"):
+            item["list_icon"] = entry["image"]
+
+
 def build_bosses_from_mirror(
     catalog: list[dict[str, str]] | None = None,
 ) -> dict[str, dict]:
@@ -801,6 +876,7 @@ def _collect_boss_image_urls(bosses: dict[str, dict]) -> dict[str, str]:
 
     for boss in bosses.values():
         add(boss.get("image"))
+        add(boss.get("list_icon"))
         add((boss.get("debuff") or {}).get("image"))
         for para in boss.get("description_rich") or []:
             for seg in para:
@@ -890,6 +966,8 @@ async def refresh_bosses(
         bosses[key] = parsed
         new_count += 1
 
+    apply_boss_overview_metadata(bosses)
+
     image_urls = _collect_boss_image_urls(bosses)
     images_total = len(image_urls)
     images_ok = 0
@@ -960,6 +1038,8 @@ def ingest_bosses_local(*, force: bool = False, download_images: bool = True) ->
         existing = _load_existing_bosses()
         for key, value in existing.items():
             bosses.setdefault(key, value)
+
+    apply_boss_overview_metadata(bosses)
 
     with open(BOSSES_JSON, "w", encoding="utf-8") as f:
         json.dump(bosses, f, ensure_ascii=False, indent=2)

@@ -758,7 +758,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Bestiary_Blood_Moon.png"
   },
   "哥布林军队": {
     "name": "哥布林军队",
@@ -953,7 +955,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Bestiary_Goblin_Invasion.png"
   },
   "撒旦军队": {
     "name": "撒旦军队",
@@ -1363,7 +1367,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Bestiary_Old_One's_Army.png"
   },
   "派对": {
     "name": "派对",
@@ -1605,7 +1611,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Bestiary_Party.png"
   },
   "雨": {
     "name": "雨",
@@ -2066,7 +2074,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Bestiary_Rain.png"
   },
   "沙尘暴": {
     "name": "沙尘暴",
@@ -2241,7 +2251,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Bestiary_Sandstorm.png"
   },
   "史莱姆雨": {
     "name": "史莱姆雨",
@@ -2461,7 +2473,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Bestiary_Slime_Rain.png"
   },
   "火把神": {
     "name": "火把神",
@@ -2513,7 +2527,9 @@
           "text": "当火把神活着时，会播放《火把神》音乐。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《血肉墙（异界版）》。"
         }
       ]
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Torch_God's_Favor.png"
   },
   "大风天": {
     "name": "大风天",
@@ -2810,7 +2826,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "pre_hardmode",
+    "list_icon": "Bestiary_Windy_Day.png"
   },
   "雪人军团": {
     "name": "雪人军团",
@@ -2970,7 +2988,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "hardmode",
+    "list_icon": "Bestiary_Frost_Legion.png"
   },
   "霜月": {
     "name": "霜月",
@@ -3317,7 +3337,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "hardmode",
+    "list_icon": "Bestiary_Frost_Moon.png"
   },
   "月亮事件": {
     "name": "月亮事件",
@@ -3713,7 +3735,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "hardmode",
+    "list_icon": "Bestiary_Nebula_Pillar.png"
   },
   "火星暴乱": {
     "name": "火星暴乱",
@@ -4030,7 +4054,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "hardmode",
+    "list_icon": "Bestiary_Martian_Madness.png"
   },
   "海盗入侵": {
     "name": "海盗入侵",
@@ -4306,7 +4332,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "hardmode",
+    "list_icon": "Bestiary_Pirate_Invasion.png"
   },
   "南瓜月": {
     "name": "南瓜月",
@@ -4591,7 +4619,9 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "hardmode",
+    "list_icon": "Bestiary_Pumpkin_Moon.png"
   },
   "日食": {
     "name": "日食",
@@ -5020,6 +5050,8 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "hardmode",
+    "list_icon": "Bestiary_Eclipse.png"
   }
 }

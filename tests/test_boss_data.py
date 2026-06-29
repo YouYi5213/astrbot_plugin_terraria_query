@@ -5,8 +5,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from boss_data import (  # noqa: E402
+    apply_boss_overview_metadata,
     build_bosses_from_mirror,
+    load_boss_catalog_from_homepage,
     load_boss_catalog_from_overview,
+    load_bosses_for_plugin,
     parse_boss_page_file,
 )
 
@@ -17,6 +20,19 @@ def test_load_boss_catalog_has_pre_hardmode_bosses():
     titles = {entry["wiki_title"] for entry in catalog}
     assert "克苏鲁之眼" in titles
     assert "月亮领主" in titles
+
+
+def test_load_boss_homepage_catalog_uses_map_icons():
+    catalog = load_boss_catalog_from_homepage()
+    assert len(catalog) == 18
+    assert catalog[0]["image"] == "Map_Icon_King_Slime.png"
+    assert catalog[0]["category"] == "pre_hardmode"
+
+
+def test_apply_boss_overview_metadata_sets_list_icon():
+    bosses = load_bosses_for_plugin()
+    apply_boss_overview_metadata(bosses)
+    assert bosses["史莱姆王"]["list_icon"] == "Map_Icon_King_Slime.png"
 
 
 def test_parse_moon_lord_boss():

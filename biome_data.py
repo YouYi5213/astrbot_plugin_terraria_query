@@ -7,6 +7,7 @@ import json
 import os
 import re
 from typing import Any
+from urllib.parse import quote
 
 import aiohttp
 from bs4 import BeautifulSoup, Tag
@@ -175,6 +176,28 @@ def parse_biome_page_file(
     return parse_biome_page_html(html, wiki_title=wiki_title, label=label)
 
 
+def apply_biome_overview_metadata(
+    biomes: dict[str, dict],
+    catalog: list[dict[str, str]] | None = None,
+) -> None:
+    """写入总览用 list_icon（Wiki 主页小图标）。"""
+    catalog = catalog if catalog is not None else load_biome_catalog_from_homepage()
+    if not catalog:
+        return
+    by_title = {entry["wiki_title"]: entry for entry in catalog}
+    by_label = {entry.get("label") or entry["wiki_title"]: entry for entry in catalog}
+    for key, item in biomes.items():
+        entry = (
+            by_title.get(item.get("wiki_title", ""))
+            or by_title.get(key)
+            or by_label.get(key)
+        )
+        if not entry:
+            continue
+        if entry.get("image"):
+            item["list_icon"] = entry["image"]
+
+
 def build_biomes_from_mirror(
     catalog: list[dict[str, str]] | None = None,
 ) -> dict[str, dict]:
@@ -204,7 +227,12 @@ def load_biomes_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, di
 
 
 def _collect_biome_image_urls(biomes: dict[str, dict]) -> dict[str, str]:
-    return collect_page_content_image_urls(biomes)
+    urls = collect_page_content_image_urls(biomes)
+    for item in biomes.values():
+        fn = item.get("list_icon")
+        if fn and fn not in urls:
+            urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    return urls
 
 
 def _patch_manifest_biome_count(count: int, categories_dir: str = CATEGORIES_DIR) -> None:
@@ -280,6 +308,8 @@ async def refresh_biomes(
         biomes[key] = parsed
         new_count += 1
 
+    apply_biome_overview_metadata(biomes, catalog)
+
     image_urls = _collect_biome_image_urls(biomes)
     images_total = len(image_urls)
     images_ok = 0
@@ -314,6 +344,8 @@ def ingest_biomes_local(*, force: bool = False, download_images: bool = True) ->
         existing = _load_existing_biomes()
         for key, value in existing.items():
             biomes.setdefault(key, value)
+
+    apply_biome_overview_metadata(biomes)
 
     with open(BIOMES_JSON, "w", encoding="utf-8") as f:
         json.dump(biomes, f, ensure_ascii=False, indent=2)

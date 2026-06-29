@@ -6,6 +6,7 @@ import asyncio
 import json
 import os
 from typing import Any
+from urllib.parse import quote
 
 import aiohttp
 from bs4 import BeautifulSoup, Tag
@@ -277,6 +278,30 @@ def parse_event_page_file(
     return parse_event_page_html(html, wiki_title=wiki_title, label=label)
 
 
+def apply_event_catalog_metadata(
+    events: dict[str, dict],
+    catalog: list[dict[str, str]] | None = None,
+) -> None:
+    """写入总览用 category / list_icon，不依赖本地 Wiki 镜像目录。"""
+    catalog = catalog if catalog is not None else load_event_catalog_from_homepage()
+    if not catalog:
+        return
+    by_title = {entry["wiki_title"]: entry for entry in catalog}
+    by_label = {entry.get("label") or entry["wiki_title"]: entry for entry in catalog}
+    for key, item in events.items():
+        entry = (
+            by_title.get(item.get("wiki_title", ""))
+            or by_title.get(key)
+            or by_label.get(key)
+        )
+        if not entry:
+            continue
+        if entry.get("category"):
+            item["category"] = entry["category"]
+        if entry.get("image"):
+            item["list_icon"] = entry["image"]
+
+
 def build_events_from_mirror(
     catalog: list[dict[str, str]] | None = None,
 ) -> dict[str, dict]:
@@ -289,6 +314,7 @@ def build_events_from_mirror(
         if not parsed:
             continue
         key = parsed.get("name") or label
+        apply_event_catalog_metadata({key: parsed}, [entry])
         events[key] = parsed
     return events
 
@@ -306,7 +332,12 @@ def load_events_for_plugin(categories_dir: str = CATEGORIES_DIR) -> dict[str, di
 
 
 def _collect_event_image_urls(events: dict[str, dict]) -> dict[str, str]:
-    return collect_page_content_image_urls(events)
+    urls = collect_page_content_image_urls(events)
+    for item in events.values():
+        fn = item.get("list_icon")
+        if fn and fn not in urls:
+            urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
+    return urls
 
 
 def _patch_manifest_event_count(count: int, categories_dir: str = CATEGORIES_DIR) -> None:
@@ -374,12 +405,16 @@ async def refresh_events(
         label = entry.get("label") or wiki_title
         key = label
         if not force and key in events:
+            apply_event_catalog_metadata(events, [entry])
             continue
         parsed = parse_event_page_file(wiki_title, label=label)
         if not parsed:
             continue
+        apply_event_catalog_metadata({key: parsed}, [entry])
         events[key] = parsed
         new_count += 1
+
+    apply_event_catalog_metadata(events, catalog)
 
     image_urls = _collect_event_image_urls(events)
     images_total = len(image_urls)
@@ -414,6 +449,8 @@ def ingest_events_local(*, force: bool = False, download_images: bool = True) ->
         existing = _load_existing_events()
         for key, value in existing.items():
             events.setdefault(key, value)
+
+    apply_event_catalog_metadata(events)
 
     with open(EVENTS_JSON, "w", encoding="utf-8") as f:
         json.dump(events, f, ensure_ascii=False, indent=2)

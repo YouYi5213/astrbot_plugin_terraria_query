@@ -75,7 +75,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，向导会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Guide_(Shimmered).png"
+    "shimmer_image": "Guide_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Guide.png"
   },
   "商人": {
     "name": "商人",
@@ -583,7 +585,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，商人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Merchant_(Shimmered).png"
+    "shimmer_image": "Merchant_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Merchant.png"
   },
   "护士": {
     "name": "护士",
@@ -662,7 +666,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，护士会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Nurse_(Shimmered).png"
+    "shimmer_image": "Nurse_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Nurse.png"
   },
   "爆破专家": {
     "name": "爆破专家",
@@ -942,7 +948,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，爆破专家会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Demolitionist_(Shimmered).png"
+    "shimmer_image": "Demolitionist_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Demolitionist.png"
   },
   "染料商": {
     "name": "染料商",
@@ -1166,7 +1174,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，染料商会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Dye_Trader_(Shimmered).png"
+    "shimmer_image": "Dye_Trader_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Dye_Trader.png"
   },
   "渔夫": {
     "name": "渔夫",
@@ -1247,7 +1257,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，渔夫会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Angler_(Shimmered).png"
+    "shimmer_image": "Angler_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Angler.png"
   },
   "动物学家": {
     "name": "动物学家",
@@ -1780,7 +1792,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，动物学家会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Zoologist_(Shimmered).png"
+    "shimmer_image": "Zoologist_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Zoologist.png"
   },
   "树妖": {
     "name": "树妖",
@@ -2500,7 +2514,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，树妖会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Dryad_(Shimmered).png"
+    "shimmer_image": "Dryad_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Dryad.png"
   },
   "油漆工": {
     "name": "油漆工",
@@ -2868,7 +2884,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，油漆工会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Painter_(Shimmered).png"
+    "shimmer_image": "Painter_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Painter.png"
   },
   "高尔夫球手": {
     "name": "高尔夫球手",
@@ -3473,7 +3491,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，高尔夫球手会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Golfer_(Shimmered).png"
+    "shimmer_image": "Golfer_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Golfer.png"
   },
   "军火商": {
     "name": "军火商",
@@ -3790,7 +3810,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，军火商会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Arms_Dealer_(Shimmered).png"
+    "shimmer_image": "Arms_Dealer_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Arms_Dealer.png"
   },
   "酒馆老板": {
     "name": "酒馆老板",
@@ -4005,7 +4027,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，酒馆老板会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Tavernkeep_(Shimmered).png"
+    "shimmer_image": "Tavernkeep_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Tavernkeep.png"
   },
   "发型师": {
     "name": "发型师",
@@ -4262,7 +4286,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，发型师会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Stylist_(Shimmered).png"
+    "shimmer_image": "Stylist_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Stylist.png"
   },
   "哥布林工匠": {
     "name": "哥布林工匠",
@@ -4447,7 +4473,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，哥布林工匠会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Goblin_Tinkerer_(Shimmered).png"
+    "shimmer_image": "Goblin_Tinkerer_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Goblin_Tinkerer.png"
   },
   "巫医": {
     "name": "巫医",
@@ -4827,7 +4855,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，巫医会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Witch_Doctor_(Shimmered).png"
+    "shimmer_image": "Witch_Doctor_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Witch_Doctor.png"
   },
   "服装商": {
     "name": "服装商",
@@ -5904,7 +5934,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，服装商会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Clothier_(Shimmered).png"
+    "shimmer_image": "Clothier_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Clothier.png"
   },
   "机械师": {
     "name": "机械师",
@@ -6373,7 +6405,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，机械师会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Mechanic_(Shimmered).png"
+    "shimmer_image": "Mechanic_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Mechanic.png"
   },
   "派对女孩": {
     "name": "派对女孩",
@@ -6954,7 +6988,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，派对女孩会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Party_Girl_(Shimmered).png"
+    "shimmer_image": "Party_Girl_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Party_Girl.png"
   },
   "巫师": {
     "name": "巫师困难模式独有",
@@ -7179,7 +7215,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，巫师会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Wizard_(Shimmered).png"
+    "shimmer_image": "Wizard_(Shimmered).png",
+    "category": "hardmode",
+    "list_icon": "Map_Icon_Wizard.png"
   },
   "税收官": {
     "name": "税收官困难模式独有",
@@ -7258,7 +7296,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，税收官会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Tax_Collector_(Shimmered).png"
+    "shimmer_image": "Tax_Collector_(Shimmered).png",
+    "category": "hardmode",
+    "list_icon": "Map_Icon_Tax_Collector.png"
   },
   "松露人": {
     "name": "松露人困难模式独有",
@@ -7430,7 +7470,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，松露人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Truffle_(Shimmered).png"
+    "shimmer_image": "Truffle_(Shimmered).png",
+    "category": "hardmode",
+    "list_icon": "Map_Icon_Truffle.png"
   },
   "海盗": {
     "name": "海盗困难模式独有",
@@ -7635,7 +7677,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，海盗会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Pirate_(Shimmered).png"
+    "shimmer_image": "Pirate_(Shimmered).png",
+    "category": "hardmode",
+    "list_icon": "Map_Icon_Pirate.png"
   },
   "蒸汽朋克人": {
     "name": "蒸汽朋克人困难模式独有",
@@ -8127,7 +8171,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，蒸汽朋克人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Steampunker_(Shimmered).png"
+    "shimmer_image": "Steampunker_(Shimmered).png",
+    "category": "hardmode",
+    "list_icon": "Map_Icon_Steampunker.png"
   },
   "机器侠": {
     "name": "机器侠困难模式独有",
@@ -8451,7 +8497,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，机器侠会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Cyborg_(Shimmered).png"
+    "shimmer_image": "Cyborg_(Shimmered).png",
+    "category": "hardmode",
+    "list_icon": "Map_Icon_Cyborg.png"
   },
   "圣诞老人": {
     "name": "圣诞老人",
@@ -8762,7 +8810,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，圣诞老人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Santa_Claus_(Shimmered).png"
+    "shimmer_image": "Santa_Claus_(Shimmered).png",
+    "category": "hardmode",
+    "list_icon": "Map_Icon_Santa_Claus.png"
   },
   "公主": {
     "name": "公主",
@@ -9147,7 +9197,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，公主会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Princess_(Shimmered).png"
+    "shimmer_image": "Princess_(Shimmered).png",
+    "category": "hardmode",
+    "list_icon": "Map_Icon_Princess.png"
   },
   "旅商": {
     "name": "旅商",
@@ -9559,7 +9611,9 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，旅商会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Traveling_Merchant_(Shimmered).png"
+    "shimmer_image": "Traveling_Merchant_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Traveling_Merchant.png"
   },
   "老人": {
     "name": "老人",
@@ -9570,7 +9624,9 @@
     "description": "在 地牢 入口处会碰到。与其交谈会召唤 骷髅王 ，但仅限夜间。一旦骷髅王被击败，老人就会以 服装商 的身份搬到城镇里。",
     "spawn": "老人 是个 NPC ，其主要功能是召唤 骷髅王 。他出现在 地牢 的入口处。若在 夜晚 与其对话，老人会给玩家一个叫“ 诅咒 ”的选项，此选项会召唤骷髅王。若在白天与其对话，老人会告诉玩家晚上再来。他还会把 300 永久最大 生命 （15 颗心）或更低，或者 10 防御 或更低的玩家判断为太弱，但依然会允许他们召唤召唤骷髅王。\n在没打败骷髅王时也可以进入地牢，但在其中前进至低于地表水平面（低于零 深度 ）时会生成 地牢守卫 ，它极有可能一照面就干掉玩家。（ 参见 指南:地牢守卫攻略 ）。",
     "shimmer": "当浸没在 微光 中后，老人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Old_Man_(Shimmered).png"
+    "shimmer_image": "Old_Man_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Old_Man.png"
   },
   "骷髅商人": {
     "name": "骷髅商人",
@@ -10003,6 +10059,8 @@
       }
     ],
     "shimmer": "当浸没在 微光 中后，骷髅商人会变形为其微光形态。这只是视觉上的改变，对游戏玩法和对话没有影响。可以通过再次浸没于微光来将其变回经典外观。",
-    "shimmer_image": "Skeleton_Merchant_(Shimmered).png"
+    "shimmer_image": "Skeleton_Merchant_(Shimmered).png",
+    "category": "pre_hardmode",
+    "list_icon": "Map_Icon_Skeleton_Merchant.png"
   }
 }

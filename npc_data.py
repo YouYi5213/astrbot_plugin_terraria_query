@@ -467,6 +467,12 @@ def parse_npc_page_html(
     }
     if catalog_entry.get("phase"):
         item["phase"] = catalog_entry["phase"]
+        if catalog_entry["phase"] in ("pre_hardmode", "hardmode"):
+            item["category"] = catalog_entry["phase"]
+    if catalog_entry.get("category"):
+        item["category"] = catalog_entry["category"]
+    if catalog_entry.get("image"):
+        item["list_icon"] = catalog_entry["image"]
     if description:
         item["description"] = description
     if spawn:
@@ -536,7 +542,7 @@ def _collect_npc_image_urls(npcs: dict[str, dict]) -> dict[str, str]:
             urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
 
     for npc in npcs.values():
-        for field in ("image", "shimmer_image"):
+        for field in ("image", "shimmer_image", "list_icon"):
             add(npc.get(field))
         for shop_item in npc.get("shop") or []:
             add(shop_item.get("image"))
@@ -590,6 +596,34 @@ def _patch_manifest_npc_count(count: int, categories_dir: str = CATEGORIES_DIR) 
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
 
+def apply_npc_overview_metadata(
+    npcs: dict[str, dict],
+    homepage_catalog: list[dict[str, str]] | None = None,
+) -> None:
+    homepage_catalog = (
+        homepage_catalog
+        if homepage_catalog is not None
+        else load_npc_catalog_from_homepage()
+    )
+    by_title = {entry["wiki_title"]: entry for entry in homepage_catalog}
+    by_label = {entry.get("label") or entry["wiki_title"]: entry for entry in homepage_catalog}
+    for key, item in npcs.items():
+        entry = (
+            by_title.get(item.get("wiki_title", ""))
+            or by_title.get(key)
+            or by_label.get(key)
+        )
+        if entry:
+            if entry.get("category"):
+                item["category"] = entry["category"]
+            elif entry.get("phase") in ("pre_hardmode", "hardmode"):
+                item["category"] = entry["phase"]
+            if entry.get("image"):
+                item["list_icon"] = entry["image"]
+        elif item.get("phase") in ("pre_hardmode", "hardmode"):
+            item.setdefault("category", item["phase"])
+
+
 def _load_existing_npcs() -> dict[str, dict]:
     return load_npcs_for_plugin(CATEGORIES_DIR)
 
@@ -622,6 +656,8 @@ async def refresh_npcs(
             continue
         npcs[key] = parsed
         new_count += 1
+
+    apply_npc_overview_metadata(npcs)
 
     image_urls = _collect_npc_image_urls(npcs)
     images_total = len(image_urls)
@@ -658,6 +694,8 @@ def ingest_npcs_local(*, force: bool = False) -> dict[str, Any]:
         existing = _load_existing_npcs()
         for key, value in existing.items():
             npcs.setdefault(key, value)
+
+    apply_npc_overview_metadata(npcs)
 
     with open(NPCS_JSON, "w", encoding="utf-8") as f:
         json.dump(npcs, f, ensure_ascii=False, indent=2)

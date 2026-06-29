@@ -40,12 +40,64 @@ NPCS_JSON = os.path.join(CATEGORIES_DIR, "npcs.json")
 MANIFEST_JSON = os.path.join(CATEGORIES_DIR, "manifest.json")
 
 NPC_OVERVIEW_PAGE = "NPC"
+HOMEPAGE_TITLE = "Terraria Wiki"
+NPC_BOX_ID = "box-npcs"
 _TOWN_TABLE_HEADS = frozenset({"绘像", "NPC"})
 _SPAWN_INTRO_KEYS = ("出现", "生成", "条件", "满足", "存在")
 
 
 def _overview_html_path() -> str:
     return os.path.join(_WIKI_MIRROR_DIR, "wiki", "zh", "pages", f"{NPC_OVERVIEW_PAGE}.html")
+
+
+def _homepage_html_path() -> str:
+    return os.path.join(_WIKI_MIRROR_DIR, "wiki", "zh", "pages", f"{HOMEPAGE_TITLE}.html")
+
+
+def load_npc_catalog_from_homepage(path: str | None = None) -> list[dict[str, str]]:
+    """从 Wiki 主页 #box-npcs 读取城镇 NPC 列表（含困难模式分组）。"""
+    html_path = path or _homepage_html_path()
+    if not os.path.isfile(html_path):
+        return []
+    soup = BeautifulSoup(open(html_path, "r", encoding="utf-8").read(), "html.parser")
+    box = soup.find(id=NPC_BOX_ID)
+    if not box:
+        return []
+
+    entries: list[dict[str, str]] = []
+    seen: set[str] = set()
+    content = box.select_one(".content")
+    if not content:
+        return entries
+
+    for section_div in content.find_all("div", recursive=False):
+        classes = set(section_div.get("class") or [])
+        if "prehardmode" in classes:
+            category = "pre_hardmode"
+        elif "hardmode" in classes:
+            category = "hardmode"
+        else:
+            category = ""
+        for li in section_div.select("li"):
+            a = li.select_one("span.i a[title]") or li.select_one("a[title]")
+            if not a:
+                continue
+            wiki_title = _clean_text(a.get("title", ""))
+            label = _clean_text(a.get_text()) or wiki_title
+            if not wiki_title or wiki_title in seen:
+                continue
+            img = li.select_one("img")
+            image = _image_from_tag(img)
+            entries.append(
+                {
+                    "wiki_title": wiki_title,
+                    "label": label,
+                    "category": category,
+                    "image": image,
+                }
+            )
+            seen.add(wiki_title)
+    return entries
 
 
 def _npc_page_html_path(wiki_title: str) -> str:

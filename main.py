@@ -30,6 +30,13 @@ from .category_data import (
     load_npcs_for_plugin,
     load_pets_for_plugin,
 )
+from .overview_data import (
+    build_biome_overview,
+    build_boss_overview,
+    build_event_overview,
+    build_npc_overview,
+    build_treasure_bag_overview,
+)
 from .prepare_data import (
     COIN_SPECS,
     RARITY_LABELS,
@@ -199,7 +206,7 @@ CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
 CARD_BOTTOM_EXTRA = 10
-CARD_VERSION = "v48"
+CARD_VERSION = "v50"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -254,6 +261,22 @@ TB_EXPERT_ROW_FILL = (78, 78, 85, 255)
 TB_HEADER_BODY_GAP = 10
 TB_TABLE_ROW_MIN = 36
 TB_TABLE_HEADER = 8
+OV_ENTRY_ICON = (24, 24)
+OV_ROW_HEIGHT = 28
+OV_ROW_GAP = 4
+OV_SECTION_LABEL_H = 26
+OV_SECTION_GAP = 14
+OV_COL_GAP = 18
+OV_TITLE_H = 52
+OV_CONTENT_TOP = 14
+_OVERVIEW_QUERIES = {
+    "宝藏袋": "treasure_bag",
+    "boss": "boss",
+    "事件": "event",
+    "npc": "npc",
+    "生物群系": "biome",
+    "群系": "biome",
+}
 COLORS = {
     "bg": (30, 30, 35, 230),
     "header_bg": (45, 45, 55, 255),
@@ -1308,7 +1331,8 @@ _CARD_UI = {
     "tb_col_item": "物品",
     "tb_col_chance": "几率",
     "tb_col_qty": "数量",
-    "tb_item_id": "内部物品 ID",
+    "ov_pre_hardmode": "困难模式之前",
+    "ov_hardmode": "困难模式",
 }
 
 
@@ -3989,11 +4013,218 @@ def _format_boss_text(data: dict) -> str:
     return "\n".join(lines).strip()
 
 
+def _normalize_overview_query(text: str) -> str | None:
+    key = text.strip()
+    if not key:
+        return None
+    if key in _OVERVIEW_QUERIES:
+        return _OVERVIEW_QUERIES[key]
+    lower = key.lower()
+    if lower in _OVERVIEW_QUERIES:
+        return _OVERVIEW_QUERIES[lower]
+    return None
+
+
+def _overview_col_width(num_cols: int) -> int:
+    inner = CARD_WIDTH - CARD_PADDING * 2 - 20
+    if num_cols <= 1:
+        return inner
+    return max(120, (inner - OV_COL_GAP * (num_cols - 1)) // num_cols)
+
+
+def _calc_overview_entry_height(draw, name: str, font, col_w: int) -> int:
+    text_w = max(40, col_w - OV_ENTRY_ICON[0] - 8)
+    text_h = _calc_wrapped_text_height(draw, name, font, text_w)
+    return max(OV_ROW_HEIGHT, text_h + 6)
+
+
+def _draw_overview_entry(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    x: int,
+    y: int,
+    item: dict,
+    font,
+    col_w: int,
+) -> int:
+    row_h = _calc_overview_entry_height(draw, item.get("name", ""), font, col_w)
+    icon_x = x
+    img = _load_item_image(item.get("image", ""), OV_ENTRY_ICON)
+    text_x = icon_x + OV_ENTRY_ICON[0] + 6
+    if img:
+        _paste_in_slot(card, img, icon_x, y + 2, OV_ENTRY_ICON[0], row_h - 4)
+    _draw_drop_field_lines(
+        draw,
+        item.get("name", ""),
+        text_x,
+        y + 4,
+        max(40, col_w - OV_ENTRY_ICON[0] - 8),
+        font,
+        COLORS["text"],
+    )
+    return row_h
+
+
+def _calc_overview_section_column_height(
+    measure,
+    section: dict,
+    font,
+    col_w: int,
+) -> int:
+    area = 0
+    if section.get("label"):
+        area += OV_SECTION_LABEL_H
+    for item in section.get("items") or []:
+        area += _calc_overview_entry_height(
+            measure, item.get("name", ""), font, col_w
+        ) + OV_ROW_GAP
+    if area:
+        area += OV_SECTION_GAP
+    return area
+
+
+def _calc_overview_card_height(data: dict, font) -> int:
+    measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
+    layout = data.get("layout", "columns")
+    sections = data.get("sections") or []
+    body = OV_CONTENT_TOP
+    if layout == "grid":
+        items = (sections[0].get("items") if sections else []) or []
+        n_cols = max(1, int(data.get("columns") or 3))
+        col_w = _overview_col_width(n_cols)
+        rows = (len(items) + n_cols - 1) // n_cols if items else 0
+        if rows:
+            row_heights = []
+            for row in range(rows):
+                max_h = OV_ROW_HEIGHT
+                for col in range(n_cols):
+                    idx = col * rows + row
+                    if idx >= len(items):
+                        continue
+                    max_h = max(
+                        max_h,
+                        _calc_overview_entry_height(
+                            measure, items[idx].get("name", ""), font, col_w
+                        ),
+                    )
+                row_heights.append(max_h + OV_ROW_GAP)
+            body += sum(row_heights)
+    else:
+        col_w = _overview_col_width(max(1, len(sections)))
+        body += max(
+            (
+                _calc_overview_section_column_height(measure, section, font, col_w)
+                for section in sections
+            ),
+            default=0,
+        )
+    return _card_height(CARD_PADDING * 2 + OV_TITLE_H + body + 8)
+
+
+def _draw_overview_columns_layout(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    sections: list[dict],
+    font,
+    ui: dict,
+) -> int:
+    if not sections:
+        return y
+    col_w = _overview_col_width(len(sections))
+    col_heights: list[int] = []
+    for i, section in enumerate(sections):
+        x = CARD_PADDING + 10 + i * (col_w + OV_COL_GAP)
+        cy = y
+        label = section.get("label") or ""
+        if label:
+            draw.text((x, cy), label, fill=COLORS["accent"], font=font)
+            cy += OV_SECTION_LABEL_H
+        for item in section.get("items") or []:
+            row_h = _draw_overview_entry(draw, card, x, cy, item, font, col_w)
+            cy += row_h + OV_ROW_GAP
+        col_heights.append(cy - y)
+    return y + max(col_heights, default=0) + OV_SECTION_GAP
+
+
+def _draw_overview_grid_layout(
+    draw: ImageDraw.ImageDraw,
+    card: Image.Image,
+    y: int,
+    items: list[dict],
+    font,
+    *,
+    num_cols: int,
+) -> int:
+    if not items:
+        return y
+    n_cols = max(1, num_cols)
+    col_w = _overview_col_width(n_cols)
+    rows = (len(items) + n_cols - 1) // n_cols
+    row_y = y
+    for row in range(rows):
+        row_h = OV_ROW_HEIGHT
+        for col in range(n_cols):
+            idx = col * rows + row
+            if idx >= len(items):
+                continue
+            x = CARD_PADDING + 10 + col * (col_w + OV_COL_GAP)
+            entry_h = _draw_overview_entry(
+                draw, card, x, row_y, items[idx], font, col_w
+            )
+            row_h = max(row_h, entry_h)
+        row_y += row_h + OV_ROW_GAP
+    return row_y + OV_SECTION_GAP
+
+
+def _generate_overview_card(data: dict) -> str:
+    _ensure_dirs()
+    title = data.get("title", "")
+    output_path = _card_output_path(title, "zh", kind=f"overview_{title}")
+    if os.path.isfile(output_path):
+        return output_path
+
+    font_title = _try_get_font(26)
+    font_body = _try_get_font(14)
+    total_height = _calc_overview_card_height(data, font_body)
+    card = Image.new("RGBA", (CARD_WIDTH, total_height), COLORS["bg"])
+    draw = ImageDraw.Draw(card)
+
+    draw.rounded_rectangle(
+        [CARD_PADDING, CARD_PADDING, CARD_WIDTH - CARD_PADDING, CARD_PADDING + OV_TITLE_H],
+        radius=8,
+        fill=COLORS["header_bg"],
+    )
+    draw.text(
+        (CARD_PADDING + 15, CARD_PADDING + 10),
+        title,
+        fill=COLORS["title"],
+        font=font_title,
+    )
+
+    y = CARD_PADDING + OV_TITLE_H + OV_CONTENT_TOP
+    sections = data.get("sections") or []
+    if data.get("layout") == "grid":
+        items = (sections[0].get("items") if sections else []) or []
+        y = _draw_overview_grid_layout(
+            draw,
+            card,
+            y,
+            items,
+            font_body,
+            num_cols=int(data.get("columns") or 3),
+        )
+    else:
+        y = _draw_overview_columns_layout(draw, card, y, sections, font_body, _CARD_UI)
+
+    card.convert("RGB").save(output_path, "PNG")
+    return output_path
+
+
 def _display_treasure_bag(bag: dict) -> dict:
     return {
         "name": bag.get("name", ""),
         "image": bag.get("image", ""),
-        "item_id": bag.get("item_id", ""),
         "drops": bag.get("drops") or [],
         "page_type": "treasure_bag",
     }
@@ -4004,9 +4235,7 @@ def _format_treasure_bag_list(bags: dict[str, dict]) -> str:
     for key in sorted(bags.keys()):
         bag = bags[key]
         display = bag.get("name") or key
-        item_id = (bag.get("item_id") or "").strip()
-        suffix = f"（ID: {item_id}）" if item_id else ""
-        lines.append(f"· {display}宝藏袋{suffix}")
+        lines.append(f"· {display}宝藏袋")
     lines.extend(["", "查询示例: 泰拉 史莱姆王宝藏袋"])
     return "\n".join(lines)
 
@@ -4014,10 +4243,6 @@ def _format_treasure_bag_list(bags: dict[str, dict]) -> str:
 def _format_treasure_bag_text(data: dict) -> str:
     ui = _CARD_UI
     lines = [f"{data.get('name', '')}宝藏袋", ""]
-    item_id = (data.get("item_id") or "").strip()
-    if item_id:
-        lines.append(f"{ui['tb_item_id']}: {item_id}")
-        lines.append("")
     lines.append(f"{ui['tb_col_item']}\t{ui['tb_col_chance']}\t{ui['tb_col_qty']}")
     for drop in data.get("drops") or []:
         label = drop.get("label") or drop.get("name") or ""
@@ -4194,16 +4419,12 @@ def _generate_treasure_bag_card(data: dict) -> str:
 
     font_title = _try_get_font(24)
     font_small = _try_get_font(14)
-    font_id = _try_get_font(13)
     measure = ImageDraw.Draw(Image.new("RGBA", (CARD_WIDTH, 100)))
 
     bag_img = _load_item_image(data.get("image", ""), TB_BAG_ICON_SLOT)
     icon_w = bag_img.width if bag_img else TB_BAG_ICON_SLOT[0]
     title_x = CARD_PADDING + 16 + icon_w + 12
-    item_id = (data.get("item_id") or "").strip()
-    id_text = f"{ui['tb_item_id']}: {item_id}" if item_id else ""
-    id_h = _font_line_height(font_id) + 8 if id_text else 0
-    title_h = max(TB_BAG_ICON_SLOT[1], _font_line_height(font_title)) + id_h + 16
+    title_h = max(TB_BAG_ICON_SLOT[1], _font_line_height(font_title)) + 16
 
     drops = data.get("drops") or []
     drops_area = _calc_treasure_bag_drops_area(measure, drops, font_small)
@@ -4229,15 +4450,6 @@ def _generate_treasure_bag_card(data: dict) -> str:
         fill=COLORS["title"],
         font=font_title,
     )
-    if id_text:
-        id_y = CARD_PADDING + 12 + _font_line_height(font_title) + 6
-        id_w = _text_width(draw, id_text, font_id) + 16
-        draw.rounded_rectangle(
-            [title_x, id_y, title_x + id_w, id_y + _font_line_height(font_id) + 8],
-            radius=4,
-            fill=COLORS["key_bg"],
-        )
-        draw.text((title_x + 8, id_y + 4), id_text, fill=COLORS["value"], font=font_id)
 
     y = header_bottom + TB_TABLE_HEADER
     if drops:
@@ -4647,6 +4859,10 @@ class TerrariaQueryPlugin(Star):
                 "      泰拉查询 月亮领主\n"
                 "      泰拉查询 史莱姆王宝藏袋\n"
                 "      泰拉查询 宝藏袋\n"
+                "      泰拉查询 boss\n"
+                "      泰拉查询 事件\n"
+                "      泰拉查询 npc\n"
+                "      泰拉查询 生物群系\n"
                 "      泰拉查询 军火商\n"
                 "\n"
                 "群系/事件加「内容」后缀可单独查看内容表，例如: 泰拉 森林内容"
@@ -4671,11 +4887,10 @@ class TerrariaQueryPlugin(Star):
 
         search_text, page_content = _split_page_content_query(text)
 
-        if search_text == "宝藏袋":
-            if not self.treasure_bags:
-                yield event.plain_result("❌ 宝藏袋数据尚未准备。")
-                return
-            yield event.plain_result(_format_treasure_bag_list(self.treasure_bags))
+        overview_kind = _normalize_overview_query(search_text)
+        if overview_kind:
+            async for result in self._yield_overview_card(event, overview_kind):
+                yield result
             return
 
         matches = _fuzzy_match_all(
@@ -4745,6 +4960,34 @@ class TerrariaQueryPlugin(Star):
                 event, source, key, page_content=page_content
             ):
                 yield result
+
+    async def _yield_overview_card(
+        self,
+        event: AstrMessageEvent,
+        kind: str,
+    ):
+        builders = {
+            "treasure_bag": (build_treasure_bag_overview, self.treasure_bags, "宝藏袋"),
+            "boss": (build_boss_overview, self.bosses, "Boss"),
+            "event": (build_event_overview, self.events, "事件"),
+            "npc": (build_npc_overview, self.npcs, "NPC"),
+            "biome": (build_biome_overview, self.biomes, "生物群系"),
+        }
+        entry = builders.get(kind)
+        if not entry:
+            yield event.plain_result(f"❌ 未知分类总览：{kind}")
+            return
+        build_fn, pool, label = entry
+        if not pool:
+            yield event.plain_result(f"❌ {label}数据尚未准备。")
+            return
+        try:
+            overview = build_fn(pool)
+            card_path = _generate_overview_card(overview)
+            yield event.image_result(card_path)
+        except Exception as e:
+            logger.error(f"生成分类总览图片失败 ({kind}): {e}")
+            yield event.plain_result(f"❌ 生成{label}总览失败。")
 
     async def _yield_match_card(
         self,

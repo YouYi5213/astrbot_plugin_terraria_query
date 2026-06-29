@@ -88,14 +88,26 @@ def load_biome_catalog_from_homepage(path: str | None = None) -> list[dict[str, 
         return []
 
     entries: list[dict[str, str]] = []
+    seen: set[str] = set()
     for li in box.select("li"):
         a = li.select_one("span.i a[title]") or li.select_one("a[title]")
         if not a:
             continue
         wiki_title = _clean_text(a.get("title", ""))
         label = _clean_text(a.get_text()) or wiki_title
-        if wiki_title:
-            entries.append({"wiki_title": wiki_title, "label": label})
+        if wiki_title and wiki_title not in seen:
+            img = li.select_one("img")
+            image = ""
+            if img and img.get("src"):
+                image = _filename_from_url(_image_url_from_src(img["src"]))
+            entries.append(
+                {
+                    "wiki_title": wiki_title,
+                    "label": label,
+                    "image": image,
+                }
+            )
+            seen.add(wiki_title)
     return entries
 
 

@@ -92,6 +92,40 @@ def load_event_catalog_from_homepage(path: str | None = None) -> list[dict[str, 
 
     entries: list[dict[str, str]] = []
     seen: set[str] = set()
+    content = box.select_one(".content")
+    if content:
+        for section_div in content.find_all("div", recursive=False):
+            classes = set(section_div.get("class") or [])
+            if "prehardmode" in classes:
+                category = "pre_hardmode"
+            elif "hardmode" in classes:
+                category = "hardmode"
+            else:
+                category = ""
+            for li in section_div.select("li"):
+                a = li.select_one("span.i a[title]") or li.select_one("a[title]")
+                if not a:
+                    continue
+                wiki_title = _clean_text(a.get("title", ""))
+                label = _clean_text(a.get_text()) or wiki_title
+                if not wiki_title or wiki_title in seen:
+                    continue
+                img = li.select_one("img")
+                image = ""
+                if img and img.get("src"):
+                    image = _filename_from_url(_image_url_from_src(img["src"]))
+                entries.append(
+                    {
+                        "wiki_title": wiki_title,
+                        "label": label,
+                        "category": category,
+                        "image": image,
+                    }
+                )
+                seen.add(wiki_title)
+        if entries:
+            return entries
+
     for li in box.select("li"):
         a = li.select_one("span.i a[title]") or li.select_one("a[title]")
         if not a:

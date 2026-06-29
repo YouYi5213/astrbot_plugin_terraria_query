@@ -971,8 +971,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "史莱姆王冠",
+          "image": "Slime_Crown.png"
         }
       },
       {
@@ -3818,8 +3818,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "1秒计时器",
+          "image": "1_Second_Timer.png"
         }
       },
       {
@@ -3852,8 +3852,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "3秒计时器",
+          "image": "3_Second_Timer.png"
         }
       },
       {
@@ -3886,8 +3886,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "5秒计时器",
+          "image": "5_Second_Timer.png"
         }
       },
       {

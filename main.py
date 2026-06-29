@@ -208,7 +208,7 @@ CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
 CARD_BOTTOM_EXTRA = 10
-CARD_VERSION = "v59"
+CARD_VERSION = "v61"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -2029,6 +2029,28 @@ def _used_in_materials_width() -> int:
     return max(80, CARD_WIDTH - CARD_PADDING - USED_IN_COL_MATERIALS - 10)
 
 
+def _used_in_result_text_width(has_icon: bool) -> int:
+    base = USED_IN_COL_STATION - USED_IN_COL_RESULT - 8
+    if has_icon:
+        return base - USED_IN_ROW_ICON[0] - 4
+    return base
+
+
+def _calc_used_in_result_block_height(
+    measure,
+    result_name: str,
+    font_small,
+    *,
+    has_icon: bool,
+) -> int:
+    if not result_name and not has_icon:
+        return 0
+    text_h = _calc_wrapped_text_height(
+        measure, result_name, font_small, _used_in_result_text_width(has_icon)
+    )
+    return max((USED_IN_ROW_ICON[1] if has_icon else 0) + 4, text_h + 4)
+
+
 def _calc_used_in_row_height(
     measure,
     recipe: dict,
@@ -2045,9 +2067,9 @@ def _calc_used_in_row_height(
     )
     result = recipe.get("result") or {}
     result_name = result.get("name", "")
-    result_h = (
-        len(_wrap_text_lines(measure, result_name, font_small, USED_IN_COL_STATION - USED_IN_COL_RESULT - 36))
-        * STAT_LINE_HEIGHT
+    has_icon = bool(result_name or result.get("image"))
+    result_h = _calc_used_in_result_block_height(
+        measure, result_name, font_small, has_icon=has_icon
     )
     ing_rows = _layout_ingredient_rows(
         measure,
@@ -2090,8 +2112,9 @@ def _draw_used_in_row(
     )
     result_img = _load_item_image(result_image, USED_IN_ROW_ICON)
     rx = USED_IN_COL_RESULT
+    icon_slot_h = USED_IN_ROW_ICON[1]
     if result_img:
-        _paste_in_slot(card, result_img, rx, y, USED_IN_ROW_ICON[0], row_h)
+        _paste_in_slot(card, result_img, rx, y, USED_IN_ROW_ICON[0], icon_slot_h)
         rx += USED_IN_ROW_ICON[0] + 4
     _draw_wrapped_text_block(
         draw,
@@ -2099,7 +2122,7 @@ def _draw_used_in_row(
         y + 2,
         result_name,
         font_small,
-        USED_IN_COL_STATION - USED_IN_COL_RESULT - 36,
+        _used_in_result_text_width(bool(result_img)),
         COLORS["text"],
     )
 

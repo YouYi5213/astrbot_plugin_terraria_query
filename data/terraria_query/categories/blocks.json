@@ -18078,8 +18078,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "松木时钟",
+          "image": "Pine_Clock.png"
         }
       },
       {
@@ -19632,8 +19632,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "魔镜",
+          "image": "Magic_Mirror.png"
         }
       },
       {
@@ -22728,8 +22728,9 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "粉砖",
+          "image": "Pink_Brick.png",
+          "amount": "5"
         }
       },
       {
@@ -22746,8 +22747,9 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "粉砖",
+          "image": "Pink_Brick.png",
+          "amount": "5"
         }
       },
       {
@@ -22897,8 +22899,9 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "绿砖",
+          "image": "Green_Brick.png",
+          "amount": "5"
         }
       },
       {

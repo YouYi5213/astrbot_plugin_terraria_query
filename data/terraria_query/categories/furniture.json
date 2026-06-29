@@ -1591,8 +1591,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "松木书架",
+          "image": "Pine_Bookcase.png"
         }
       },
       {
@@ -1637,8 +1637,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "松木钢琴",
+          "image": "Pine_Piano.png"
         }
       },
       {
@@ -7784,8 +7784,9 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "贝壳堆",
+          "image": "Shell_Pile.png",
+          "amount": "4"
         }
       }
     ]

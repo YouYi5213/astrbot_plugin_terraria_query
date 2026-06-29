@@ -473,8 +473,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "蘑菇法杖",
+          "image": "Mushroom_Staff.png"
         }
       },
       {
@@ -523,8 +523,9 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "蘑菇火把",
+          "image": "Mushroom_Torch.png",
+          "amount": "3"
         }
       },
       {
@@ -5710,8 +5711,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "战斗药水",
+          "image": "Battle_Potion.png"
         }
       },
       {
@@ -5997,8 +5998,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "洞穴探险药水",
+          "image": "Spelunker_Potion.png"
         }
       },
       {
@@ -6644,8 +6645,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "铁皮药水",
+          "image": "Ironskin_Potion.png"
         }
       },
       {

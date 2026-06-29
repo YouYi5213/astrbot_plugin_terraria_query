@@ -152,6 +152,38 @@ def test_recipe_needs_used_in_backfill_when_craft_recipe_exists():
     assert _recipe_needs_used_in_backfill(obsidian) is False
 
 
+def test_parse_recipe_table_inherits_rowspan_result():
+    from prepare_data import parse_item_page, _wiki_mirror_page_path
+
+    path = _wiki_mirror_page_path("力量之魂")
+    html = open(path, encoding="utf-8").read()
+    item = parse_item_page(html, "力量之魂")
+    avenger_rows = [
+        r
+        for r in item.get("used_in") or []
+        if any(ing.get("name") == "游侠徽章" for ing in r.get("ingredients") or [])
+        or any(ing.get("name") == "巫士徽章" for ing in r.get("ingredients") or [])
+    ]
+    assert len(avenger_rows) == 2
+    assert all((r.get("result") or {}).get("name") == "复仇者徽章" for r in avenger_rows)
+
+
+def test_item_needs_used_in_mirror_refresh_when_result_empty():
+    from prepare_data import _item_needs_used_in_mirror_refresh
+
+    item = {
+        "name": "白马掌气球",
+        "used_in": [
+            {
+                "station": "工匠作坊",
+                "ingredients": [{"name": "白马掌气球"}],
+                "result": {"name": "", "image": ""},
+            }
+        ],
+    }
+    assert _item_needs_used_in_mirror_refresh(item) is True
+
+
 def test_is_set_item_detects_armor_and_vanity():
     assert _is_set_item({"stats": [{"label": "类型", "value": "盔甲套装"}]})
     assert _is_set_item({"stats": [{"label": "Type", "value": "Vanity set"}]})

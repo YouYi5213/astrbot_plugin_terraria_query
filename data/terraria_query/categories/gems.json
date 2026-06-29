@@ -2478,8 +2478,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "魔镜",
+          "image": "Magic_Mirror.png"
         }
       }
     ]
@@ -2733,8 +2733,8 @@
           }
         ],
         "result": {
-          "name": "",
-          "image": ""
+          "name": "魔光护符",
+          "image": "Magiluminescence.png"
         }
       },
       {

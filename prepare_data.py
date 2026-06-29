@@ -1476,6 +1476,20 @@ def _parse_recipe_row(row: Tag) -> dict | None:
     return {"station": station, "ingredients": ingredients, "result": result}
 
 
+def _fill_recipe_results_from_rowspan(recipes: list[dict]) -> int:
+    """Wiki 配方表同一产物多行材料时，后续行 result 单元格被 rowspan 省略。"""
+    updated = 0
+    last_result: dict = {"name": "", "image": ""}
+    for recipe in recipes:
+        result = recipe.get("result") or {}
+        if result.get("name"):
+            last_result = result
+        elif last_result.get("name"):
+            recipe["result"] = dict(last_result)
+            updated += 1
+    return updated
+
+
 def parse_recipe_table(table: Tag) -> list[dict]:
     """解析配方表的全部行"""
     if table.select_one("caption"):
@@ -1483,10 +1497,16 @@ def parse_recipe_table(table: Tag) -> list[dict]:
     rows = [tr for tr in table.select("tbody tr") if tr.get("data-rowid")]
     recipes: list[dict] = []
     last_station = ""
+    last_result: dict = {"name": "", "image": ""}
     for row in rows:
         parsed = _parse_recipe_row(row)
         if not parsed:
             continue
+        result = parsed.get("result") or {}
+        if result.get("name"):
+            last_result = result
+        elif last_result.get("name"):
+            parsed["result"] = dict(last_result)
         if parsed.get("station"):
             last_station = parsed["station"]
         elif last_station:
@@ -2860,11 +2880,20 @@ def _recipe_needs_used_in_backfill(item: dict) -> bool:
     return _item_likely_has_craft_usages(item)
 
 
+def _item_needs_used_in_mirror_refresh(item: dict) -> bool:
+    if _recipe_needs_used_in_backfill(item):
+        return True
+    for recipe in item.get("used_in") or []:
+        if not (recipe.get("result") or {}).get("name"):
+            return True
+    return False
+
+
 def backfill_used_in_from_mirror(items: dict[str, dict]) -> int:
     """用本地 Wiki 镜像补全「用于制作」列表（无需联网）。"""
     updated = 0
     for key, item in items.items():
-        if not _recipe_needs_used_in_backfill(item):
+        if not _item_needs_used_in_mirror_refresh(item):
             continue
         title = item.get("wiki_title") or item.get("name") or key
         path = _wiki_mirror_page_path(title)
@@ -2976,6 +3005,17 @@ def collect_recipe_image_urls(items: dict[str, dict]) -> dict[str, str]:
             if fn and fn not in urls:
                 urls[fn] = f"https://terraria.wiki.gg/images/{quote(fn, safe='')}"
     return urls
+
+
+def normalize_used_in_results_in_items(items: dict[str, dict]) -> int:
+    """补全 used_in 中因 Wiki rowspan 省略的产物名。"""
+    updated = 0
+    for item in items.values():
+        used_in = item.get("used_in")
+        if not used_in:
+            continue
+        updated += _fill_recipe_results_from_rowspan(used_in)
+    return updated
 
 
 def normalize_recipe_images_in_items(items: dict[str, dict]) -> int:
@@ -3563,6 +3603,7 @@ async def update_wiki_data(
 
         used_in_backfill_count = backfill_used_in_from_mirror(items)
         used_in_backfill_count += await backfill_used_in_recipes(session, items)
+        normalize_used_in_results_in_items(items)
 
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)

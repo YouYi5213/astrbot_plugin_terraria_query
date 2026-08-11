@@ -4,6 +4,12 @@ data/terraria_query/cards/
 # 本地发版备忘，不上传
 推送须知.md
 
+# 发布 zip 资产包（随 GitHub Release 提供，不入库）
+*.zip
+
+# 数据审计运行产物（scripts/audit_*.py 的输出）
+scripts/audit_*_result.*
+
 __pycache__/
 *.py[cod]
 *.log

@@ -457,7 +457,7 @@ def _parse_rich_segments(root) -> list[dict]:
             else:
                 segments.append({"type": "text", "text": "\n"})
             return
-        if node.name == "sup" and "reference" in classes:
+        if node.name == "sup" and "reference" in (node.get("class") or []):
             return
         if node.name == "img" and node.get("src"):
             segments.append(
@@ -1092,7 +1092,7 @@ def _parse_tag_rich(el: Tag) -> list[dict]:
         if node.name == "span" and "key" in classes:
             segments.append(_parse_key_element(node))
             return
-        if node.name == "sup" and "reference" in classes:
+        if node.name == "sup" and "reference" in (node.get("class") or []):
             return
         if node.name == "span" and "coin" in classes:
             coin = _parse_coin_span(node)

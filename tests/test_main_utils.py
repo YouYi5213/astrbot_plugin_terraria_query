@@ -5,6 +5,8 @@ import sys
 import types
 from pathlib import Path
 
+from PIL import Image
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
@@ -188,17 +190,41 @@ def test_fuzzy_match_exact_biome_beats_partial_items():
     assert main._fuzzy_match_all("沙漠", items, {}, {}, biomes) == [("biome", "沙漠")]
 
 
-def test_fuzzy_match_list_when_over_card_limit():
-    assert main._FUZZY_MATCH_CARD_MAX == 2
+def test_fuzzy_match_list_uses_search_results_card():
     items = {
-        "测试甲": {"name": "测试甲", "stats": []},
-        "测试乙": {"name": "测试乙", "stats": []},
-        "测试丙": {"name": "测试丙", "stats": []},
+        "测试甲": {"name": "测试甲", "image": "A.png", "stats": []},
+        "测试乙": {"name": "测试乙", "image": "B.png", "stats": []},
+        "测试丙": {"name": "测试丙", "image": "C.png", "stats": []},
     }
     exact, partial = main._split_search_matches("测试", items, {}, {}, {})
     assert not exact
     assert len(partial) == 3
-    assert len(partial) > main._FUZZY_MATCH_CARD_MAX
+    entries = [main._match_list_entry("item", key, items[key]) for _, key in partial]
+    assert len(entries) == 3
+    assert {entry["name"] for entry in entries} == {"测试甲", "测试乙", "测试丙"}
+
+
+def test_generate_search_results_card(tmp_path, monkeypatch):
+    cards_dir = tmp_path / "cards"
+    images_dir = tmp_path / "images"
+    cards_dir.mkdir()
+    images_dir.mkdir()
+    monkeypatch.setattr(main, "CARDS_DIR", str(cards_dir))
+    monkeypatch.setattr(main, "IMAGES_DIR", str(images_dir))
+
+    entries = [
+        {"name": "木剑", "image": ""},
+        {"name": "草剑", "image": ""},
+    ]
+    path = main._generate_search_results_card(
+        "剑",
+        entries,
+        title="「剑」— 找到 2 个匹配结果",
+    )
+    assert os.path.isfile(path)
+    with Image.open(path) as img:
+        assert img.width == main.CARD_WIDTH
+        assert img.height > 100
 
 
 def test_format_partial_item_hints():

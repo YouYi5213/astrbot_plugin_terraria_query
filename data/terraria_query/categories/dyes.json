@@ -1,4 +1,270 @@
 {
+  "Loki的染料": {
+    "name": "Loki的染料",
+    "image": "Loki's_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "Loki的染料是一种困难模式染料，可以从困难模式Boss的宝藏袋（史莱姆皇后的除外）中作为Loki的套装的一部分而得到。它不会改变盔甲的颜色，而是增加了深灰色的火焰效果，类似于另外四种在困难模式中通过将奇异植物与染料商交换而得到的染料。将Loki的染料装备到全部 3 个染料栏中会加强其效果。它还会让所应用的物品在黑暗中发光，无论物品装备在哪个栏位均如此。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Loki的染料是一种困难模式染料，可以从困难模式Boss的宝藏袋（史莱姆皇后的除外）中作为Loki的套装的一部分而得到。它不会改变盔甲的颜色，而是增加了深灰色的火焰效果，类似于另外四种在困难模式中通过将奇异植物与染料商交换而得到的染料。将Loki的染料装备到全部 3 个染料栏中会加强其效果。它还会让所应用的物品在黑暗中发光，无论物品装备在哪个栏位均如此。"
+        }
+      ]
+    ],
+    "wiki_title": "Loki的染料",
+    "item_category": "dyes"
+  },
+  "Skiphs的血": {
+    "name": "Skiphs的血",
+    "image": "Skiphs'_Blood.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“非常适合冒充开发者！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "Skiphs的血是一种困难模式染料，和Skiphs的套装一起从困难模式Boss的宝藏袋（史莱姆皇后的除外）中得到，在打败了月亮领主之后它也能作为完成奇异植物任务的随机奖励从染料商处得到。装备后，它会给玩家一种深紫色的色调，同时为玩家的身体增添闪烁的紫色效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "Skiphs的血是一种困难模式染料，和Skiphs的套装一起从困难模式Boss的宝藏袋（史莱姆皇后的除外）中得到，在打败了月亮领主之后它也能作为完成奇异植物任务的随机奖励从染料商处得到。装备后，它会给玩家一种深紫色的色调，同时为玩家的身体增添闪烁的紫色效果。"
+        }
+      ]
+    ],
+    "wiki_title": "Skiphs的血",
+    "item_category": "dyes"
+  },
+  "七彩染料": {
+    "name": "七彩染料",
+    "image": "Prismatic_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "光之女皇",
+              "image": "Empress_of_Light.gif",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（光之女皇）",
+              "image": "Treasure_Bag_(Empress_of_Light).png",
+              "quantity": "1",
+              "chance": "25%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "光之女皇",
+              "image": "Empress_of_Light.gif",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（光之女皇）",
+              "image": "Treasure_Bag_(Empress_of_Light).png",
+              "quantity": "1",
+              "chance": "25%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "光之女皇",
+              "image": "Empress_of_Light.gif",
+              "quantity": "1",
+              "chance": "25%"
+            },
+            {
+              "name": "宝藏袋（光之女皇）",
+              "image": "Treasure_Bag_(Empress_of_Light).png",
+              "quantity": "1",
+              "chance": "25%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "七彩染料是种困难模式、世纪之花后的染料，掉落自光之女皇，掉落率为1/4 (25%)。这种染料会产生一种七彩效果，使对应的物品看起来像是透明且散发出变幻的彩虹光芒。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "七彩染料是种困难模式、世纪之花后的染料，掉落自光之女皇，掉落率为1/4 (25%)。这种染料会产生一种七彩效果，使对应的物品看起来像是透明且散发出变幻的彩虹光芒。"
+        }
+      ]
+    ],
+    "wiki_title": "七彩染料",
+    "item_category": "dyes"
+  },
+  "冥王染料": {
+    "name": "冥王染料",
+    "image": "Hades_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "冥王染料是种通过将奇异植物交给染料商而得到的困难模式染料。当装备后，它会将被染色的盔甲、配饰、或装备变为蓝色，并加上蓝色的火焰效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "冥王染料是种通过将奇异植物交给染料商而得到的困难模式染料。当装备后，它会将被染色的盔甲、配饰、或装备变为蓝色，并加上蓝色的火焰效果。"
+        }
+      ]
+    ],
+    "wiki_title": "冥王染料",
+    "item_category": "dyes"
+  },
   "凝胶染料": {
     "name": "凝胶染料",
     "image": "Gel_Dye.png",
@@ -39,9 +305,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
-    "description": "凝胶染料是一种困难模式染料，通过将奇异植物交给染料商而得到。它作为随机奖励得到。装备后，凝胶染料会生成类似于史莱姆枪所导致的史莱姆减益的效果。",
-    "item_category": "dyes",
     "used_in": [
       {
         "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
@@ -61,7 +324,1401 @@
           "image": "Pink_Gel_Dye.png"
         }
       }
-    ]
+    ],
+    "description": "凝胶染料是一种困难模式染料，通过将奇异植物交给染料商而得到。它作为随机奖励得到。装备后，凝胶染料会生成类似于史莱姆枪所导致的史莱姆减益的效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "凝胶染料是一种困难模式染料，通过将奇异植物交给染料商而得到。它作为随机奖励得到。装备后，凝胶染料会生成类似于史莱姆枪所导致的史莱姆减益的效果。"
+        }
+      ]
+    ],
+    "wiki_title": "凝胶染料",
+    "item_category": "dyes"
+  },
+  "午夜彩虹染料": {
+    "name": "午夜彩虹染料",
+    "image": "Midnight_Rainbow_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "午夜彩虹染料是一种染料，可以产生“逆”彩虹效果，在整个光谱的颜色中波动。这种染料可以在打败火星暴乱事件后通过将奇异植物与染料商交易得到。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "午夜彩虹染料是一种染料，可以产生“逆”彩虹效果，在整个光谱的颜色中波动。这种染料可以在打败火星暴乱事件后通过将奇异植物与染料商交易得到。"
+        }
+      ]
+    ],
+    "wiki_title": "午夜彩虹染料",
+    "item_category": "dyes"
+  },
+  "反光染料": {
+    "name": "反光染料",
+    "image": "Reflective_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "反光染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。\n\n与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "反光染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。"
+        }
+      ]
+    ],
+    "wiki_title": "反光染料",
+    "item_category": "dyes"
+  },
+  "反光金属染料": {
+    "name": "反光金属染料",
+    "image": "Reflective_Metal_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "反光金属染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种黑色的“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。\n\n与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "反光金属染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种黑色的“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。"
+        }
+      ]
+    ],
+    "wiki_title": "反光金属染料",
+    "item_category": "dyes"
+  },
+  "反光金染料": {
+    "name": "反光金染料",
+    "image": "Reflective_Gold_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "反光金染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种镀金、“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。\n\n与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "反光金染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种镀金、“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。"
+        }
+      ]
+    ],
+    "wiki_title": "反光金染料",
+    "item_category": "dyes"
+  },
+  "反光铜染料": {
+    "name": "反光铜染料",
+    "image": "Reflective_Copper_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "反光铜染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种镀铜、“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。\n\n与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "反光铜染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种镀铜、“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。"
+        }
+      ]
+    ],
+    "wiki_title": "反光铜染料",
+    "item_category": "dyes"
+  },
+  "反光银染料": {
+    "name": "反光银染料",
+    "image": "Reflective_Silver_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "反光银染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种镀银、“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。\n\n与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "反光银染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予选定的配饰/盔甲一种镀银、“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当全面装备此染料时，从某些视角看，玩家看起来是 3D 的。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。"
+        }
+      ]
+    ],
+    "wiki_title": "反光银染料",
+    "item_category": "dyes"
+  },
+  "反光黑曜石染料": {
+    "name": "反光黑曜石染料",
+    "image": "Reflective_Obsidian_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "反光黑曜石染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予相应的装备一种镀了黑曜石、“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当所有栏位都装备此染料时，从某些视角看，玩家看起来是三维的。\n\n与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。\n\n不像其他反光染料，此染料相当暗，导致深色高光。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "反光黑曜石染料是种通过将奇异植物交给染料商而得到的染料。装备后，它将给予相应的装备一种镀了黑曜石、“闪亮”的效果，反射玩家周围的光线。玩家距离光源越近，反射越明显。当玩家在户外时，此染料会优先考虑来自太阳的光线。当所有栏位都装备此染料时，从某些视角看，玩家看起来是三维的。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "与其他反光染料一样，这种染料在站立不动时无动画，但其所染色的装备部件的阴影会根据周围光线而变化，从而给予它一种光线从闪亮的金属物体反射出来的外观感觉。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "不像其他反光染料，此染料相当暗，导致深色高光。"
+        }
+      ]
+    ],
+    "wiki_title": "反光黑曜石染料",
+    "item_category": "dyes"
+  },
+  "发光蘑菇染料": {
+    "name": "发光蘑菇染料",
+    "image": "Glowing_Mushroom_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "发光蘑菇染料是种将奇异植物交给染料商而换来的染料。它会将物体染成深蓝色。就像名字所暗示的那样，用此染料染色的物体在黑暗中也会微微发光。虽然它并不会发出任何光线来帮助观察附近的物体，但这有助于提高对玩家所在位置的认知。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "发光蘑菇染料是种将奇异植物交给染料商而换来的染料。它会将物体染成深蓝色。就像名字所暗示的那样，用此染料染色的物体在黑暗中也会微微发光。虽然它并不会发出任何光线来帮助观察附近的物体，但这有助于提高对玩家所在位置的认知。"
+        }
+      ]
+    ],
+    "wiki_title": "发光蘑菇染料",
+    "item_category": "dyes"
+  },
+  "叶绿染料": {
+    "name": "叶绿染料",
+    "image": "Chlorophyte_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "叶绿染料是种通过将奇异植物交给染料商而得到的困难模式染料。它只能在打败了任意机械 Boss后得到。它让物品呈现出三种颜色：黑、绿、或荧光绿。各种颜色出现的位置看起来是基于饱和度的。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "叶绿染料是种通过将奇异植物交给染料商而得到的困难模式染料。它只能在打败了任意机械 Boss后得到。它让物品呈现出三种颜色：黑、绿、或荧光绿。各种颜色出现的位置看起来是基于饱和度的。"
+        }
+      ]
+    ],
+    "wiki_title": "叶绿染料",
+    "item_category": "dyes"
+  },
+  "团队染料": {
+    "name": "团队染料",
+    "image": "Team_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "团队染料是一种染料，在玩多人模式时可以从染料商处购买。这种染料的颜色将对应于玩家所处的团队；如果玩家不在团队中，它就会表现得像是未装备染料那样。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "团队染料是一种染料，在玩多人模式时可以从染料商处购买。这种染料的颜色将对应于玩家所处的团队；如果玩家不在团队中，它就会表现得像是未装备染料那样。"
+        }
+      ]
+    ],
+    "wiki_title": "团队染料",
+    "item_category": "dyes"
+  },
+  "地狱妖灵染料": {
+    "name": "地狱妖灵染料",
+    "image": "Infernal_Wisp_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "地狱妖灵染料是一种困难模式、世纪之花后的染料，可以通过用奇异植物和染料商交换得到。任何应用了它的装备都会被染成亮橙色，同时还会发出橙色辉光。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "地狱妖灵染料是一种困难模式、世纪之花后的染料，可以通过用奇异植物和染料商交换得到。任何应用了它的装备都会被染成亮橙色，同时还会发出橙色辉光。"
+        }
+      ]
+    ],
+    "wiki_title": "地狱妖灵染料",
+    "item_category": "dyes"
+  },
+  "大屠杀染料": {
+    "name": "大屠杀染料",
+    "image": "Bloodbath_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "7",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "大屠杀染料是种染料，可在血月期间以7 GC从染料商处购买。使用后，它会让物品有一种类似于滴血的外观。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "大屠杀染料是种染料，可在血月期间以"
+        },
+        {
+          "type": "coin",
+          "amount": "7",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "从染料商处购买。使用后，它会让物品有一种类似于滴血的外观。"
+        }
+      ]
+    ],
+    "wiki_title": "大屠杀染料",
+    "item_category": "dyes"
+  },
+  "妖灵染料": {
+    "name": "妖灵染料",
+    "image": "Wisp_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "妖灵染料是困难模式、世纪之花后的染料，通过用奇异植物和染料商交换得到。它会让所应用的装备得到一种密实的亮青色无动画纹理。它是基于妖灵瓶所召唤的照明宠物的。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "妖灵染料是困难模式、世纪之花后的染料，通过用奇异植物和染料商交换得到。它会让所应用的装备得到一种密实的亮青色无动画纹理。它是基于妖灵瓶所召唤的照明宠物的。"
+        }
+      ]
+    ],
+    "wiki_title": "妖灵染料",
+    "item_category": "dyes"
+  },
+  "妖精染料": {
+    "name": "妖精染料",
+    "image": "Pixie_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "妖精染料是一种困难模式染料，有时能在完成了奇异植物任务后从染料商处获得。它只能在打败了世纪之花后得到。装备后，它会将玩家变为黄橙色，并且会轻微地发出妖精所发出的那种光芒。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "妖精染料是一种困难模式染料，有时能在完成了奇异植物任务后从染料商处获得。它只能在打败了世纪之花后得到。装备后，它会将玩家变为黄橙色，并且会轻微地发出妖精所发出的那种光芒。"
+        }
+      ]
+    ],
+    "wiki_title": "妖精染料",
+    "item_category": "dyes"
+  },
+  "幻象染料": {
+    "name": "幻象染料",
+    "image": "Mirage_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "幻象染料是种通过将奇异植物交给染料商而得到的染料。不像其他染料，它不会改变物体的颜色，而是引用多彩的闪烁效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "幻象染料是种通过将奇异植物交给染料商而得到的染料。不像其他染料，它不会改变物体的颜色，而是引用多彩的闪烁效果。"
+        }
+      ]
+    ],
+    "wiki_title": "幻象染料",
+    "item_category": "dyes"
+  },
+  "恐怖染料": {
+    "name": "恐怖染料",
+    "image": "Grim_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "恐怖染料是种将奇异植物交给染料商而换来的困难模式染料。装备后，它将当前选定的盔甲或时装变为血红色，同时在玩家周围发出一种黑暗效果，类似于Loki的染料。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "恐怖染料是种将奇异植物交给染料商而换来的困难模式染料。装备后，它将当前选定的盔甲或时装变为血红色，同时在玩家周围发出一种黑暗效果，类似于Loki的染料。"
+        }
+      ]
+    ],
+    "wiki_title": "恐怖染料",
+    "item_category": "dyes"
+  },
+  "日耀染料": {
+    "name": "日耀染料",
+    "image": "Solar_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png"
+        },
+        {
+          "name": "日耀碎片",
+          "image": "Solar_Fragment.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "日耀染料",
+        "image": "Solar_Dye.png"
+      }
+    },
+    "description": "日耀染料是一种困难模式的终极染料，用掉落自月亮事件中的日耀柱的日耀碎片制作。此染料会给任何使用了它的东西带来一种金色的金属色调和轻微的脉动效果，类似于从染料商的奇异植物任务得到的反光染料。然而，不像金属染料，用日耀染料染色的物品似乎不会动态地反射光线，并且无论玩家是否接近光源都是如此。同样和金属染料不同的是，被染色的物品会周期性地发光（但不会投射出光线）。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "日耀染料是一种困难模式的终极染料，用掉落自月亮事件中的日耀柱的日耀碎片制作。此染料会给任何使用了它的东西带来一种金色的金属色调和轻微的脉动效果，类似于从染料商的奇异植物任务得到的反光染料。然而，不像金属染料，用日耀染料染色的物品似乎不会动态地反射光线，并且无论玩家是否接近光源都是如此。同样和金属染料不同的是，被染色的物品会周期性地发光（但不会投射出光线）。"
+        }
+      ]
+    ],
+    "wiki_title": "日耀染料",
+    "item_category": "dyes"
+  },
+  "星云染料": {
+    "name": "星云染料",
+    "image": "Nebula_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png"
+        },
+        {
+          "name": "星云碎片",
+          "image": "Nebula_Fragment.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "星云染料",
+        "image": "Nebula_Dye.png"
+      }
+    },
+    "description": "星云染料是困难模式，用月亮事件中星云柱所掉落的星云碎片制作的游戏终极染料。这种染料会使玩家的盔甲、装备或配饰呈现出粉色/紫色的闪耀外观，凡是有此染料的地方看起来都像是上面有星星快速向上移动。和其他月亮染料一样，星云染料无法与任何其他染料组合。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "星云染料是困难模式，用月亮事件中星云柱所掉落的星云碎片制作的游戏终极染料。这种染料会使玩家的盔甲、装备或配饰呈现出粉色/紫色的闪耀外观，凡是有此染料的地方看起来都像是上面有星星快速向上移动。和其他月亮染料一样，星云染料无法与任何其他染料组合。"
+        }
+      ]
+    ],
+    "wiki_title": "星云染料",
+    "item_category": "dyes"
+  },
+  "星尘染料": {
+    "name": "星尘染料",
+    "image": "Stardust_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png"
+        },
+        {
+          "name": "星尘碎片",
+          "image": "Stardust_Fragment.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "星尘染料",
+        "image": "Stardust_Dye.png"
+      }
+    },
+    "description": "星尘染料是一种困难模式、游戏末期的染料，用得自月亮事件中的星尘柱的星尘碎片制作。它呈现浅蓝白色，并为所染色的盔甲部件和配饰带来白色闪亮效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "星尘染料是一种困难模式、游戏末期的染料，用得自月亮事件中的星尘柱的星尘碎片制作。它呈现浅蓝白色，并为所染色的盔甲部件和配饰带来白色闪亮效果。"
+        }
+      ]
+    ],
+    "wiki_title": "星尘染料",
+    "item_category": "dyes"
+  },
+  "星旋染料": {
+    "name": "星旋染料",
+    "image": "Vortex_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png"
+        },
+        {
+          "name": "星旋碎片",
+          "image": "Vortex_Fragment.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "星旋染料",
+        "image": "Vortex_Dye.png"
+      }
+    },
+    "description": "星旋染料是困难模式染料，用月亮事件中星旋柱所掉落的星旋碎片和瓶装水制作。此染料施加到衣服和配饰上所产生的效果会让人联想到绿色的传送驱动效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "星旋染料是困难模式染料，用月亮事件中星旋柱所掉落的星旋碎片和瓶装水制作。此染料施加到衣服和配饰上所产生的效果会让人联想到绿色的传送驱动效果。"
+        }
+      ]
+    ],
+    "wiki_title": "星旋染料",
+    "item_category": "dyes"
+  },
+  "暗影染料": {
+    "name": "暗影染料",
+    "image": "Shadow_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "暗影染料是一种染料，可在满月期间从染料商处购买，或者作为奇异植物交换的可能奖励之一得到。应用后，它会使物品的颜色变暗至几乎纯黑。移动时，暗影染料也留下黑色微粒。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "暗影染料是一种染料，可在满月期间从染料商处购买，或者作为奇异植物交换的可能奖励之一得到。应用后，它会使物品的颜色变暗至几乎纯黑。移动时，暗影染料也留下黑色微粒。"
+        }
+      ]
+    ],
+    "wiki_title": "暗影染料",
+    "item_category": "dyes"
+  },
+  "暗影焰冥王染料": {
+    "name": "暗影焰冥王染料",
+    "image": "Shadowflame_Hades_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "暗影焰冥王染料是种通过将奇异植物交给染料商而得到的困难模式染料。应用后，它会将物品变为紫色并在玩家身后添加火焰拖尾效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "暗影焰冥王染料是种通过将奇异植物交给染料商而得到的困难模式染料。应用后，它会将物品变为紫色并在玩家身后添加火焰拖尾效果。"
+        }
+      ]
+    ],
+    "wiki_title": "暗影焰冥王染料",
+    "item_category": "dyes"
+  },
+  "暮光染料": {
+    "name": "暮光染料",
+    "image": "Twilight_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "暮光染料是种通过将奇异植物交给染料商而得到的困难模式的染料物品。和其他染料一样，它可以在玩家的物品栏中装备到装备或配饰区的染料栏中。当使用此染料后，与之相关的盔甲或时装物品将获得非常类似于夜空的效果，此效果会伴随着玩家动态移动。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "暮光染料是种通过将奇异植物交给染料商而得到的困难模式的染料物品。和其他染料一样，它可以在玩家的物品栏中装备到装备或配饰区的染料栏中。当使用此染料后，与之相关的盔甲或时装物品将获得非常类似于夜空的效果，此效果会伴随着玩家动态移动。"
+        }
+      ]
+    ],
+    "wiki_title": "暮光染料",
+    "item_category": "dyes"
+  },
+  "基础染料": {
+    "name": "基础染料",
+    "image": "Red_Dye.png",
+    "stats": [
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "染料是一种装饰性的物品，可以放置在玩家物品栏的“染料栏”中来替换所装备的盔甲、时装物品和配饰的颜色及纹理。染料商NPC出售两种染料(银染料和棕染料)和染缸（5 GC）。其他染料必须用染缸制作或者用奇异植物与染料商 NPC 交换得到。制作出的初级染料可以进一步组合以制作淡色、渐变、和复合染料。一共有(电脑版、主机版、和移动版)119 /(前代主机版)68 种不同的染料（单人模式世界中则是 118 / 67 种，因为团队染料在单人模式世界中不可用）。一些染料可以让外观在完全黑暗中亦可见，其中大多数都是奇异染料。\n\n如果（通过将染料放进相应的配饰染料栏）对小动物香波(电脑版、主机版、和移动版)进行染色，则此染料会应用于玩家的所有仆从。\n\n由于像素着色器不可用，因此任天堂3DS任天堂3DS版版中不提供染料。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "染料是一种装饰性的物品，可以放置在玩家物品栏的“染料栏”中来替换所装备的盔甲、时装物品和配饰的颜色及纹理。染料商NPC出售两种染料(银染料和棕染料)和染缸（"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "）。其他染料必须用染缸制作或者用奇异植物与染料商 NPC 交换得到。制作出的初级染料可以进一步组合以制作淡色、渐变、和复合染料。一共有(电脑版、主机版、和移动版)119 /(前代主机版)68 种不同的染料（单人模式世界中则是 118 / 67 种，因为团队染料在单人模式世界中不可用）。一些染料可以让外观在完全黑暗中亦可见，其中大多数都是奇异染料。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "如果（通过将染料放进相应的配饰染料栏）对小动物香波(电脑版、主机版、和移动版)进行染色，则此染料会应用于玩家的所有仆从。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "由于像素着色器不可用，因此任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版中不提供染料。"
+        }
+      ]
+    ],
+    "wiki_title": "染料",
+    "item_category": "dyes"
   },
   "流沙染料": {
     "name": "流沙染料",
@@ -103,9 +1760,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
-    "description": "流沙染料是种通过将奇异植物交给染料商而得到的困难模式染料。应用后，它会给物品一种类似于落沙的外观。当获得水晶碎块后，它可以用于制作珍珠流沙染料。",
-    "item_category": "dyes",
     "used_in": [
       {
         "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
@@ -125,6 +1779,930 @@
           "image": "Shifting_Pearlsands_Dye.png"
         }
       }
-    ]
+    ],
+    "description": "流沙染料是种通过将奇异植物交给染料商而得到的困难模式染料。应用后，它会给物品一种类似于落沙的外观。当获得水晶碎块后，它可以用于制作珍珠流沙染料。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "流沙染料是种通过将奇异植物交给染料商而得到的困难模式染料。应用后，它会给物品一种类似于落沙的外观。当获得水晶碎块后，它可以用于制作珍珠流沙染料。"
+        }
+      ]
+    ],
+    "wiki_title": "流沙染料",
+    "item_category": "dyes"
+  },
+  "火星染料": {
+    "name": "火星染料",
+    "image": "Martian_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "火星染料是困难模式、石巨人后的染料，有时能在完成了奇异植物任务后从染料商处获得。它只在完成了火星暴乱事件之后才可获得。当装备后，它会给予玩家一种海蓝宝石色调。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "火星染料是困难模式、石巨人后的染料，有时能在完成了奇异植物任务后从染料商处获得。它只在完成了火星暴乱事件之后才可获得。当装备后，它会给予玩家一种海蓝宝石色调。"
+        }
+      ]
+    ],
+    "wiki_title": "火星染料",
+    "item_category": "dyes"
+  },
+  "灰雾染料": {
+    "name": "灰雾染料",
+    "image": "Fogbound_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "7",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "灰雾染料是一种染料，在墓地(电脑版、主机版、和移动版)中时可以7 GC购买自染料商。装备后，它会降低物品的色彩饱和度，赋予其一种灰色色调，并在物品上叠加雾状效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "灰雾染料是一种染料，在墓地(电脑版、主机版、和移动版)中时可以"
+        },
+        {
+          "type": "coin",
+          "amount": "7",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "购买自染料商。装备后，它会降低物品的色彩饱和度，赋予其一种灰色色调，并在物品上叠加雾状效果。"
+        }
+      ]
+    ],
+    "wiki_title": "灰雾染料",
+    "item_category": "dyes"
+  },
+  "烈焰冥王染料": {
+    "name": "烈焰冥王染料",
+    "image": "Burning_Hades_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "烈焰冥王染料是种通过将奇异植物交给染料商而得到的困难模式染料。应用后，它会将物品变为橙色并添加火焰效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "烈焰冥王染料是种通过将奇异植物交给染料商而得到的困难模式染料。应用后，它会将物品变为橙色并添加火焰效果。"
+        }
+      ]
+    ],
+    "wiki_title": "烈焰冥王染料",
+    "item_category": "dyes"
+  },
+  "独角妖灵染料": {
+    "name": "独角妖灵染料",
+    "image": "Unicorn_Wisp_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "独角妖灵染料是一种困难模式、世纪之花后的染料，可以通过将奇异植物带给染料商得到。装备后，它会将所作用的物品变成深粉红色，并产生类似于妖灵瓶的发光效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "独角妖灵染料是一种困难模式、世纪之花后的染料，可以通过将奇异植物带给染料商得到。装备后，它会将所作用的物品变成深粉红色，并产生类似于妖灵瓶的发光效果。"
+        }
+      ]
+    ],
+    "wiki_title": "独角妖灵染料",
+    "item_category": "dyes"
+  },
+  "珍珠流沙染料": {
+    "name": "珍珠流沙染料",
+    "image": "Shifting_Pearlsands_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "流沙染料",
+          "image": "Shifting_Sands_Dye.png"
+        },
+        {
+          "name": "水晶碎块",
+          "image": "Crystal_Shard.png",
+          "amount": "20"
+        }
+      ],
+      "result": {
+        "name": "珍珠流沙染料",
+        "image": "Shifting_Pearlsands_Dye.png"
+      }
+    },
+    "description": "珍珠流沙染料是种困难模式染料，和流沙染料非常相似，但其颜色更偏粉色。它只能通过制作得到，无法由其他途径获得。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "珍珠流沙染料是种困难模式染料，和流沙染料非常相似，但其颜色更偏粉色。它只能通过制作得到，无法由其他途径获得。"
+        }
+      ]
+    ],
+    "wiki_title": "珍珠流沙染料",
+    "item_category": "dyes"
+  },
+  "相位染料": {
+    "name": "相位染料",
+    "image": "Phase_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "相位染料是种通过将奇异植物交给染料商而得到的困难模式染料。它似乎是反转了其所附着物体的颜色，并给出了奇怪的紫色光环效果。\n\n当使用者受到伤害时，此染料会很快地闪烁。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "相位染料是种通过将奇异植物交给染料商而得到的困难模式染料。它似乎是反转了其所附着物体的颜色，并给出了奇怪的紫色光环效果。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当使用者受到伤害时，此染料会很快地闪烁。"
+        }
+      ]
+    ],
+    "wiki_title": "相位染料",
+    "item_category": "dyes"
+  },
+  "粉凝胶染料": {
+    "name": "粉凝胶染料",
+    "image": "Pink_Gel_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "凝胶染料",
+          "image": "Gel_Dye.png"
+        },
+        {
+          "name": "粉凝胶",
+          "image": "Pink_Gel.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "粉凝胶染料",
+        "image": "Pink_Gel_Dye.png"
+      }
+    },
+    "description": "粉凝胶染料是一种用凝胶染料制作的染料。凝胶染料可以从染料商处得到，然后可以与掉落自粉史莱姆的制作材料粉凝胶在染缸处组合。就像凝胶染料那样，粉凝胶染料会生成一种类似于史莱姆枪所造成的史莱姆减益的效果，不过会显示为一种更粉红的颜色，而非蓝色。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "粉凝胶染料是一种用凝胶染料制作的染料。凝胶染料可以从染料商处得到，然后可以与掉落自粉史莱姆的制作材料粉凝胶在染缸处组合。就像凝胶染料那样，粉凝胶染料会生成一种类似于史莱姆枪所造成的史莱姆减益的效果，不过会显示为一种更粉红的颜色，而非蓝色。"
+        }
+      ]
+    ],
+    "wiki_title": "粉凝胶染料",
+    "item_category": "dyes"
+  },
+  "紫泥染料": {
+    "name": "紫泥染料",
+    "image": "Purple_Ooze_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "紫泥染料是种通过将奇异植物交给染料商而得到的染料。装备后，它会给玩家带来种紫色的色调，部分染料会扭曲并变化各种紫色色调。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "紫泥染料是种通过将奇异植物交给染料商而得到的染料。装备后，它会给玩家带来种紫色的色调，部分染料会扭曲并变化各种紫色色调。"
+        }
+      ]
+    ],
+    "wiki_title": "紫泥染料",
+    "item_category": "dyes"
+  },
+  "红酸性染料": {
+    "name": "红酸性染料",
+    "image": "Red_Acid_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "20",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "红酸性染料是种通过将奇异植物交给染料商而得到的染料。放置到染料栏后，它会提供和其他种类酸性染料所生成的效果一样的效果。被它所染色的盔甲在黑暗中可以看见，但不会提供光线。\n\n在暗影珠上装备酸性染料、红酸性染料或蓝酸性染料会让部分或整个球体变得不可见。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "红酸性染料是种通过将奇异植物交给染料商而得到的染料。放置到染料栏后，它会提供和其他种类酸性染料所生成的效果一样的效果。被它所染色的盔甲在黑暗中可以看见，但不会提供光线。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在暗影珠上装备酸性染料、红酸性染料或蓝酸性染料会让部分或整个球体变得不可见。"
+        }
+      ]
+    ],
+    "wiki_title": "红酸性染料",
+    "item_category": "dyes"
+  },
+  "蓝酸性染料": {
+    "name": "蓝酸性染料",
+    "image": "Blue_Acid_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "蓝酸性染料是一种染料，是将奇异植物交给染料商而得到的随机奖励之一。将其装备到染料栏时，它会施加一种类似于酸性染料和红酸性染料的向外脉动的深蓝色波纹效果。用其染色的物品在黑暗中可见，但并不发光。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "蓝酸性染料是一种染料，是将奇异植物交给染料商而得到的随机奖励之一。将其装备到染料栏时，它会施加一种类似于酸性染料和红酸性染料的向外脉动的深蓝色波纹效果。用其染色的物品在黑暗中可见，但并不发光。"
+        }
+      ]
+    ],
+    "wiki_title": "蓝酸性染料",
+    "item_category": "dyes"
+  },
+  "虚空染料": {
+    "name": "虚空染料",
+    "image": "Void_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "04*",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "染缸(电脑版、主机版、前代主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "瓶装水",
+          "image": "Bottled_Water.png"
+        },
+        {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png",
+          "amount": "5"
+        }
+      ],
+      "result": {
+        "name": "虚空染料",
+        "image": "Void_Dye.png"
+      }
+    },
+    "description": "虚空染料是一种困难模式、月亮领主后的染料，用夜明锭制作而成。此染料会产生一种脉动效果，就像月亮领主要生成之前创造的脉动效果一样。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "虚空染料是一种困难模式、月亮领主后的染料，用夜明锭制作而成。此染料会产生一种脉动效果，就像月亮领主要生成之前创造的脉动效果一样。"
+        }
+      ]
+    ],
+    "wiki_title": "虚空染料",
+    "item_category": "dyes"
+  },
+  "酸性染料": {
+    "name": "酸性染料",
+    "image": "Acid_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "酸性染料是一种染料，是将奇异植物交给染料商而得到的随机奖励之一。将其装备到染料栏时，它会施加一种类似于蓝酸性染料和红酸性染料的向外脉动的深绿色波纹效果。用其染色的物品在黑暗中可见，但并不发光。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "酸性染料是一种染料，是将奇异植物交给染料商而得到的随机奖励之一。将其装备到染料栏时，它会施加一种类似于蓝酸性染料和红酸性染料的向外脉动的深绿色波纹效果。用其染色的物品在黑暗中可见，但并不发光。"
+        }
+      ]
+    ],
+    "wiki_title": "酸性染料",
+    "item_category": "dyes"
+  },
+  "阴暗染料": {
+    "name": "阴暗染料",
+    "image": "Negative_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "阴暗染料是种染料，可在满月期间从染料商处购买，或者作为奇异植物交换的可能奖励之一得到。使用后，它会彻底反转所染盔甲或配饰的颜色。它不能和其他染料组合。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "阴暗染料是种染料，可在满月期间从染料商处购买，或者作为奇异植物交换的可能奖励之一得到。使用后，它会彻底反转所染盔甲或配饰的颜色。它不能和其他染料组合。"
+        }
+      ]
+    ],
+    "wiki_title": "阴暗染料",
+    "item_category": "dyes"
+  },
+  "鲜艳彩虹染料": {
+    "name": "鲜艳彩虹染料",
+    "image": "Living_Rainbow_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "鲜艳彩虹染料是种通过将奇异植物交给染料商而得到困难模式染料。它只在打败过任一机械 Boss后才能得到。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "鲜艳彩虹染料是种通过将奇异植物交给染料商而得到困难模式染料。它只在打败过任一机械 Boss后才能得到。"
+        }
+      ]
+    ],
+    "wiki_title": "鲜艳彩虹染料",
+    "item_category": "dyes"
+  },
+  "鲜艳海蓝染料": {
+    "name": "鲜艳海蓝染料",
+    "image": "Living_Ocean_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "鲜艳海蓝染料是一种困难模式染料，通过向染料商提供奇异植物得到。它只在打败了任意机械 Boss后才能得到。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "鲜艳海蓝染料是一种困难模式染料，通过向染料商提供奇异植物得到。它只在打败了任意机械 Boss后才能得到。"
+        }
+      ]
+    ],
+    "wiki_title": "鲜艳海蓝染料",
+    "item_category": "dyes"
+  },
+  "鲜艳红焰染料": {
+    "name": "鲜艳红焰染料",
+    "image": "Living_Flame_Dye.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "染料",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 3 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "鲜艳红焰染料是种通过将奇异植物交给染料商而得到的困难模式染料，通过用奇异植物交换而由染料商给予玩家。它只在打败了一个机械 Boss后才能得到。应用后，此染料会导致栏位中装备了它的所有物品的颜色变为一种带有黄红色波纹效果的火红色。此外，任何受此染料影响的物品都会在承受伤害时闪烁。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "鲜艳红焰染料是种通过将奇异植物交给染料商而得到的困难模式染料，通过用奇异植物交换而由染料商给予玩家。它只在打败了一个机械 Boss后才能得到。应用后，此染料会导致栏位中装备了它的所有物品的颜色变为一种带有黄红色波纹效果的火红色。此外，任何受此染料影响的物品都会在承受伤害时闪烁。"
+        }
+      ]
+    ],
+    "wiki_title": "鲜艳红焰染料",
+    "item_category": "dyes"
   }
 }

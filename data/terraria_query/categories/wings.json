@@ -10,39 +10,39 @@
       },
       {
         "label": "飞行时间",
-        "value": "1.67秒",
+        "value": "1.67 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "53格",
+        "value": "32格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "32 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
     "recipe": {
-      "station": "电脑版、主机版、移动版",
+      "station": "",
       "ingredients": [
         {
           "name": "羽毛",
@@ -51,12 +51,12 @@
         },
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
           "name": "光明之魂",
-          "image": "Soul_of_Light.png",
+          "image": "Soul_of_Light.gif",
           "amount": "15"
         }
       ],
@@ -68,21 +68,6 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "光明之魂 仅在 困难模式 下掉落自 地下神圣之地 中的大部分敌怪。\n\n羽毛 掉落自 鸟妖 。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "光明之魂 仅在 困难模式 下掉落自 地下神圣之地 中的大部分敌怪。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "羽毛 掉落自 鸟妖 。"
-        }
-      ]
-    ],
     "search_terms": [
       "天使"
     ],
@@ -99,39 +84,39 @@
       },
       {
         "label": "飞行时间",
-        "value": "1.67秒",
+        "value": "1.67 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "53格",
+        "value": "32格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "32 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
     "recipe": {
-      "station": "电脑版、主机版、移动版",
+      "station": "",
       "ingredients": [
         {
           "name": "羽毛",
@@ -140,12 +125,12 @@
         },
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
           "name": "暗影之魂",
-          "image": "Soul_of_Night.png",
+          "image": "Soul_of_Night.gif",
           "amount": "15"
         }
       ],
@@ -157,21 +142,6 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "暗影之魂 仅在 困难模式 下掉落自 地下腐化之地 或 地下猩红之地 中的大部分敌怪。\n\n羽毛 掉落自 鸟妖 。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "暗影之魂 仅在 困难模式 下掉落自 地下腐化之地 或 地下猩红之地 中的大部分敌怪。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "羽毛 掉落自 鸟妖 。"
-        }
-      ]
-    ],
     "search_terms": [
       "恶魔"
     ],
@@ -188,43 +158,43 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.17秒",
+        "value": "2.17 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "67格",
+        "value": "35格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "35 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
     "recipe": {
-      "station": "电脑版、主机版、移动版",
+      "station": "",
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -241,18 +211,12 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "粒子效果发出黄光。\n\n妖精尘 掉落自 妖精 。",
+    "description": "粒子效果发出黄光。",
     "description_rich": [
       [
         {
           "type": "text",
           "text": "粒子效果发出黄光。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "妖精尘 掉落自 妖精 。"
         }
       ]
     ],
@@ -272,34 +236,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.17秒",
+        "value": "2.17 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "67格",
+        "value": "35格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "35 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "浅红色",
         "extra": "",
-        "sortkey": "04*",
+        "sortkey": "",
         "color": "#ff7777"
       }
     ],
@@ -307,21 +271,12 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "source": "来自渔夫的任务奖励",
+    "source": "在困难模式且完成了 10 个渔夫任务后，每个任务有1/70 (1.43%)几率得到。",
     "source_rich": [
       [
         {
           "type": "text",
-          "text": "来自渔夫的任务奖励"
-        }
-      ]
-    ],
-    "description": "在完成了第 10 个 任务 后，每个 任务 都有 1/70 几率得到，但仅限 困难模式 。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "在完成了第 10 个 任务 后，每个 任务 都有 1/70 几率得到，但仅限 困难模式 。"
+          "text": "在困难模式且完成了 10 个渔夫任务后，每个任务有1/70 (1.43%)几率得到。"
         }
       ]
     ],
@@ -338,34 +293,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.17秒",
+        "value": "2.17 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "67格",
+        "value": "35格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "35 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -374,7 +329,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -390,18 +345,12 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "在黑暗中可见，且散发出雪粒子。\n\n冰雪羽 掉落自 冰雪巨人 。",
+    "description": "在黑暗中可见，且散发出雪粒子。",
     "description_rich": [
       [
         {
           "type": "text",
           "text": "在黑暗中可见，且散发出雪粒子。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "冰雪羽 掉落自 冰雪巨人 。"
         }
       ]
     ],
@@ -421,34 +370,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.17秒",
+        "value": "2.17 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "67格",
+        "value": "35格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "35 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -457,7 +406,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -473,15 +422,6 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "巨型鸟妖之羽 掉落自 鸟妖 。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "巨型鸟妖之羽 掉落自 鸟妖 。"
-        }
-      ]
-    ],
     "search_terms": [
       "鸟妖"
     ],
@@ -498,34 +438,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -538,7 +478,7 @@
         },
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -555,21 +495,16 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "Chippy的斗篷（停用） 由 骷髅王的红帽变体 掉落。\n\n开发者物品",
+    "description": "主播物品",
     "description_rich": [
       [
         {
           "type": "text",
-          "text": "Chippy的斗篷（停用） 由 骷髅王的红帽变体 掉落。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "开发者物品"
+          "text": "主播物品"
         }
       ]
     ],
+    "drops": null,
     "item_category": "wings"
   },
   "Heroicis的翅膀": {
@@ -583,34 +518,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -623,7 +558,7 @@
         },
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -640,18 +575,60 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "Heroicis的翅膀（停用） 可通过将 铂金币 在 绿洲 中丢入 水 中获得。\n\n开发者物品",
+    "description": "翅膀是一类配饰，让玩家能通过按住↷跳键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住↷跳键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。\n\n装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。\n\n某些类型的翅膀还能让玩家在飞行中可以通过按住▼下键悬浮在固定高度，和/或按住▲上键来加快上升速度。",
     "description_rich": [
       [
         {
           "type": "text",
-          "text": "Heroicis的翅膀（停用） 可通过将 铂金币 在 绿洲 中丢入 水 中获得。"
+          "text": "翅膀是一类配饰，让玩家能通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键来暂时飞行。它们也会提供对掉落伤害的免疫。在飞行时间用尽后，按住"
+        },
+        {
+          "type": "key",
+          "symbol": "↷",
+          "label": "跳"
+        },
+        {
+          "type": "text",
+          "text": "键可让玩家滑翔，减缓掉落速度。在玩家站在物块上、攀爬（如使用绳或鞋钉）、或用钩爪抓到物块上后，飞行时间会重置。相较于火箭靴和类似物品，翅膀提供的飞行更加可控，且有更远的飞行距离。玩家一次只能装备一副翅膀。"
         }
       ],
       [
         {
           "type": "text",
-          "text": "开发者物品"
+          "text": "装备翅膀通常会将跳完全替换为飞行，而无需再次进行跳跃来激活。诸如云朵瓶之类的附加跳配饰仍然会提供额外的跳，可以在半空中激活它们来立即将翅膀加速至最高速度。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "某些类型的翅膀还能让玩家在飞行中可以通过按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▼",
+          "label": "下"
+        },
+        {
+          "type": "text",
+          "text": "键悬浮在固定高度，和/或按住"
+        },
+        {
+          "type": "key",
+          "symbol": "▲",
+          "label": "上"
+        },
+        {
+          "type": "text",
+          "text": "键来加快上升速度。"
         }
       ]
     ],
@@ -668,34 +645,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -734,34 +711,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -787,6 +764,7 @@
         }
       ]
     ],
+    "drops": null,
     "item_category": "wings"
   },
   "Will的翅膀": {
@@ -800,34 +778,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -866,34 +844,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -919,6 +897,7 @@
         }
       ]
     ],
+    "drops": null,
     "item_category": "wings"
   },
   "Cenx的翅膀": {
@@ -932,34 +911,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -985,6 +964,7 @@
         }
       ]
     ],
+    "drops": null,
     "item_category": "wings"
   },
   "Lazure的屏障台": {
@@ -998,34 +978,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36 / 36",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1× / 1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1042,7 +1022,7 @@
         }
       ]
     ],
-    "description": "开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n发出微弱的紫光，且在黑暗中可见。\n\n完全无声。",
+    "description": "开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平 悬停 。\n\n悬停且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍速度消耗飞行时间。\n\n发出微弱的紫光，且在黑暗中可见。\n\n完全无声。",
     "description_rich": [
       [
         {
@@ -1071,13 +1051,13 @@
         },
         {
           "type": "text",
-          "text": "能水平悬浮。"
+          "text": "能水平悬停。"
         }
       ],
       [
         {
           "type": "text",
-          "text": "悬浮且未按下"
+          "text": "悬停且未按下"
         },
         {
           "type": "key",
@@ -1095,7 +1075,7 @@
         },
         {
           "type": "text",
-          "text": "时，以 0.5 倍的原速度消耗飞行时间。"
+          "text": "时，以 0.5 倍速度消耗飞行时间。"
         }
       ],
       [
@@ -1124,34 +1104,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1196,34 +1176,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36 / 36",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1× / 1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1240,7 +1220,7 @@
         }
       ]
     ],
-    "description": "开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。",
+    "description": "开发者物品\n\n用 ▼ 下 + ↷ 跳 能水平 悬停 。",
     "description_rich": [
       [
         {
@@ -1269,7 +1249,7 @@
         },
         {
           "type": "text",
-          "text": "能水平悬浮。"
+          "text": "能水平悬停。"
         }
       ]
     ],
@@ -1286,34 +1266,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1358,34 +1338,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1423,6 +1403,7 @@
         }
       ]
     ],
+    "drops": null,
     "item_category": "wings"
   },
   "Leinfors的卷缠斗篷": {
@@ -1436,34 +1417,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1502,34 +1483,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1568,34 +1549,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1634,34 +1615,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1690,6 +1671,7 @@
     "search_terms": [
       "FoodBarbarian的褴褛龙"
     ],
+    "drops": null,
     "item_category": "wings"
   },
   "Grox The Great的翅膀": {
@@ -1703,34 +1685,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1769,34 +1751,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1835,34 +1817,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1901,34 +1883,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "77格",
+        "value": "36格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -1954,6 +1936,7 @@
         }
       ]
     ],
+    "drops": null,
     "item_category": "wings"
   },
   "叶之翼": {
@@ -1967,34 +1950,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.67秒",
+        "value": "2.67 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "81格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -2002,21 +1985,21 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "source": "由巫医出售",
+    "source": "击败世纪之花后，于夜晚丛林由巫医以1 PC出售。",
     "source_rich": [
       [
         {
           "type": "text",
-          "text": "由巫医出售"
-        }
-      ]
-    ],
-    "description": "在击败世纪之花后， 困难模式 丛林 中，于 夜晚 以 1 PC 50 GC 出售。",
-    "description_rich": [
-      [
+          "text": "击败世纪之花后，于夜晚丛林由巫医以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "pc"
+        },
         {
           "type": "text",
-          "text": "在击败世纪之花后， 困难模式 丛林 中，于 夜晚 以 1 PC 50 GC 出售。"
+          "text": "出售。"
         }
       ]
     ],
@@ -2036,34 +2019,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.67秒",
+        "value": "2.67 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "81格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -2072,7 +2055,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2088,15 +2071,6 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "破蝙蝠之翼 掉落自 日食 事件 的 吸血鬼 。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "破蝙蝠之翼 掉落自 日食 事件 的 吸血鬼 。"
-        }
-      ]
-    ],
     "search_terms": [
       "蝙蝠"
     ],
@@ -2113,34 +2087,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.67秒",
+        "value": "2.67 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "81格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -2149,7 +2123,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2165,15 +2139,6 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "褴褛蜜蜂之翼 在打败至少一个 机械 Boss 后掉落自 苔藓黄蜂 。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "褴褛蜜蜂之翼 在打败至少一个 机械 Boss 后掉落自 苔藓黄蜂 。"
-        }
-      ]
-    ],
     "search_terms": [
       "蜜蜂"
     ],
@@ -2190,34 +2155,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.67秒",
+        "value": "2.67 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "81格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -2226,7 +2191,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2242,18 +2207,12 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "粒子效果发出粉红光。\n\n蝴蝶尘 在打败至少一个 机械 Boss 后掉落自 蛾 。",
+    "description": "粒子效果发出粉红光。",
     "description_rich": [
       [
         {
           "type": "text",
           "text": "粒子效果发出粉红光。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "蝴蝶尘 在打败至少一个 机械 Boss 后掉落自 蛾 。"
         }
       ]
     ],
@@ -2273,34 +2232,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.67秒",
+        "value": "2.67 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "81格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "150%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -2309,7 +2268,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2325,18 +2284,12 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "粒子效果发出橙光，在黑暗中可见，且显得半透明。\n\n火羽 掉落自 红魔鬼 。",
+    "description": "粒子效果发出橙光，在黑暗中可见，且显得半透明。",
     "description_rich": [
       [
         {
           "type": "text",
           "text": "粒子效果发出橙光，在黑暗中可见，且显得半透明。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "火羽 掉落自 红魔鬼 。"
         }
       ]
     ],
@@ -2356,34 +2309,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.83秒",
+        "value": "2.83 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "94格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.66×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "166%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -2392,7 +2345,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2408,15 +2361,6 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "骨之羽 掉落自任何 装甲骷髅 变体种类。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "骨之羽 掉落自任何 装甲骷髅 变体种类。"
-        }
-      ]
-    ],
     "search_terms": [
       "骨"
     ],
@@ -2433,34 +2377,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.83秒",
+        "value": "2.83 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "94格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.66×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "166%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "黄色",
         "extra": "",
-        "sortkey": "08*",
+        "sortkey": "",
         "color": "#ffff66"
       }
     ],
@@ -2468,23 +2412,17 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "source": "掉落自蛾怪",
+    "source": "1/20 (5%)/39/400 (9.75%)几率掉落自蛾怪",
     "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自蛾怪"
+          "text": "1/20 (5%)/39/400 (9.75%)几率掉落自蛾怪"
         }
       ]
     ],
-    "description": "掉落率： 1/20 (5%) / 39/400 (9.75%) 。蛾怪仅会在 世纪之花 后生成。\n\n发出黄色的光，且花纹在黑暗中可见。",
+    "description": "发出黄色的光，且花纹在黑暗中可见。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "掉落率： 1/20 (5%) / 39/400 (9.75%) 。蛾怪仅会在 世纪之花 后生成。"
-        }
-      ],
       [
         {
           "type": "text",
@@ -2508,34 +2446,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.83秒",
+        "value": "2.83 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "94格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.66×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "166%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "黄色",
         "extra": "",
-        "sortkey": "08*",
+        "sortkey": "",
         "color": "#ffff66"
       }
     ],
@@ -2544,7 +2482,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2592,34 +2530,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.83秒",
+        "value": "2.83 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "94格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.66×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "166%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "淡紫色",
         "extra": "",
-        "sortkey": "07*",
+        "sortkey": "",
         "color": "#dd66ff"
       }
     ],
@@ -2628,7 +2566,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2670,34 +2608,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "107格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.805×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "180%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "粉红色",
         "extra": "",
-        "sortkey": "05*",
+        "sortkey": "",
         "color": "#ff88bb"
       }
     ],
@@ -2714,14 +2652,8 @@
         }
       ]
     ],
-    "description": "掉落率：0.74%–2.22% / 1.33%–6.67% ，取决于当前波数。 [ 5 ]\n\n灯泡在黑暗中可见。",
+    "description": "灯泡在黑暗中可见。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "掉落率：0.74%–2.22% / 1.33%–6.67% ，取决于当前波数。 [ 5 ]"
-        }
-      ],
       [
         {
           "type": "text",
@@ -2745,34 +2677,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "107格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.805×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "180%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "淡紫色",
         "extra": "",
-        "sortkey": "07*",
+        "sortkey": "",
         "color": "#dd66ff"
       }
     ],
@@ -2781,7 +2713,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2797,15 +2729,6 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "阴森嫩枝 掉落自 南瓜月 事件 中的 哀木 。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "阴森嫩枝 掉落自 南瓜月 事件 中的 哀木 。"
-        }
-      ]
-    ],
     "search_terms": [
       "阴森"
     ],
@@ -2822,34 +2745,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "107格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.805×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "180%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "淡紫色",
         "extra": "",
-        "sortkey": "07*",
+        "sortkey": "",
         "color": "#dd66ff"
       }
     ],
@@ -2858,7 +2781,7 @@
       "ingredients": [
         {
           "name": "飞翔之魂",
-          "image": "Soul_of_Flight.png",
+          "image": "Soul_of_Flight.gif",
           "amount": "20"
         },
         {
@@ -2874,18 +2797,12 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "粒子效果发出黄光。\n\n黑色仙尘 掉落自 南瓜月 事件 中的 南瓜王 。",
+    "description": "粒子效果发出黄光。",
     "description_rich": [
       [
         {
           "type": "text",
           "text": "粒子效果发出黄光。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "黑色仙尘 掉落自 南瓜月 事件 中的 南瓜王 。"
         }
       ]
     ],
@@ -2905,34 +2822,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "107格",
+        "value": "38格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "38 mph",
+        "value": "1×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "100%",
+        "value": "1.805×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "180%",
+        "value": "31",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "黄色",
         "extra": "",
-        "sortkey": "08*",
+        "sortkey": "",
         "color": "#ffff66"
       }
     ],
@@ -2940,21 +2857,21 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "source": "由蒸汽朋克人出售",
+    "source": "击败石巨人后，由蒸汽朋克人以3 PC出售",
     "source_rich": [
       [
         {
           "type": "text",
-          "text": "由蒸汽朋克人出售"
-        }
-      ]
-    ],
-    "description": "击败 石巨人 后，以 3 PC 出售。",
-    "description_rich": [
-      [
+          "text": "击败石巨人后，由蒸汽朋克人以"
+        },
+        {
+          "type": "coin",
+          "amount": "3",
+          "coin_type": "pc"
+        },
         {
           "type": "text",
-          "text": "击败 石巨人 后，以 3 PC 出售。"
+          "text": "出售"
         }
       ]
     ],
@@ -2974,34 +2891,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "119格",
+        "value": "36 / 61",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "36 mph",
+        "value": "2.5× / 12×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "250%",
+        "value": "2.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "250%",
+        "value": "38",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "黄色",
         "extra": "",
-        "sortkey": "08*",
+        "sortkey": "",
         "color": "#ffff66"
       }
     ],
@@ -3009,23 +2926,17 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "source": "掉落自双足翼龙",
+    "source": "1/4 (25%)几率掉落自双足翼龙",
     "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自双足翼龙"
+          "text": "1/4 (25%)几率掉落自双足翼龙"
         }
       ]
     ],
-    "description": "掉落率： 1/4 (25%)\n\n用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。",
+    "description": "用 ▼ 下 + ↷ 跳 能水平 悬停 。\n\n悬停且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍速度消耗飞行时间。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "掉落率： 1/4 (25%)"
-        }
-      ],
       [
         {
           "type": "text",
@@ -3047,19 +2958,13 @@
         },
         {
           "type": "text",
-          "text": "能水平悬浮。"
+          "text": "能水平悬停。"
         }
       ],
       [
         {
           "type": "text",
-          "text": "悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "悬浮且未按下"
+          "text": "悬停且未按下"
         },
         {
           "type": "key",
@@ -3077,7 +2982,7 @@
         },
         {
           "type": "text",
-          "text": "时，以 0.5 倍的原速度消耗飞行时间。"
+          "text": "时，以 0.5 倍速度消耗飞行时间。"
         }
       ]
     ],
@@ -3097,34 +3002,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "2.5秒",
+        "value": "2.5 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "128格",
+        "value": "41格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "41 mph",
+        "value": "2×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "200%",
+        "value": "2.75× / 2.75×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "275%",
+        "value": "38 / 161",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "渐变色",
         "extra": "",
-        "sortkey": "09*",
+        "sortkey": "",
         "color": "#88ff88"
       }
     ],
@@ -3132,23 +3037,17 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "source": "掉落自光之女皇",
+    "source": "1/15 (6.67%)/1/10 (10%)几率掉落自光之女皇",
     "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自光之女皇"
+          "text": "1/15 (6.67%)/1/10 (10%)几率掉落自光之女皇"
         }
       ]
     ],
-    "description": "掉落率： 1/15 (6.67%) / 1/10 (10%)\n\n用 ▲ 上 键能更快上升。",
+    "description": "用 ▲ 上 键能进行 上升加速 。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "掉落率： 1/15 (6.67%) / 1/10 (10%)"
-        }
-      ],
       [
         {
           "type": "text",
@@ -3161,7 +3060,7 @@
         },
         {
           "type": "text",
-          "text": "键能更快上升。"
+          "text": "键能进行上升加速。"
         }
       ]
     ],
@@ -3181,34 +3080,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "143格",
+        "value": "41格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "41 mph",
+        "value": "2×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "200%",
+        "value": "2.5×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "250%",
+        "value": "38",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "黄色",
         "extra": "",
-        "sortkey": "08*",
+        "sortkey": "",
         "color": "#ffff66"
       }
     ],
@@ -3216,23 +3115,17 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "source": "掉落自猪龙鱼公爵",
+    "source": "1/15 (6.67%)/1/10 (10%)几率掉落自猪龙鱼公爵",
     "source_rich": [
       [
         {
           "type": "text",
-          "text": "掉落自猪龙鱼公爵"
+          "text": "1/15 (6.67%)/1/10 (10%)几率掉落自猪龙鱼公爵"
         }
       ]
     ],
-    "description": "掉落率： 1/15 (6.67%) / 1/10 (10%)\n\n忽略 液体 中的移动惩罚。\n\n身后留下水泡尾迹。",
+    "description": "忽略 液体 中的移动惩罚。\n\n身后留下水泡尾迹。",
     "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "掉落率： 1/15 (6.67%) / 1/10 (10%)"
-        }
-      ],
       [
         {
           "type": "text",
@@ -3262,34 +3155,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "143格",
+        "value": "33 / 61",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "33 mph",
+        "value": "1.5× / 12×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "150%",
+        "value": "2.45×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "245%",
+        "value": "46",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "红色",
         "extra": "",
-        "sortkey": "10*",
+        "sortkey": "",
         "color": "#ff5050"
       }
     ],
@@ -3315,7 +3208,7 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n在黑暗中可见。\n\n穿着全套 星云盔甲 套装时会有带着脉动效果的实心运动残影。",
+    "description": "用 ▼ 下 + ↷ 跳 能水平 悬停 。\n\n悬停且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍速度消耗飞行时间。\n\n在黑暗中可见。\n\n穿着全套 星云盔甲 套装时会有带着脉动效果的实心运动残影。",
     "description_rich": [
       [
         {
@@ -3338,19 +3231,13 @@
         },
         {
           "type": "text",
-          "text": "能水平悬浮。"
+          "text": "能水平悬停。"
         }
       ],
       [
         {
           "type": "text",
-          "text": "悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "悬浮且未按下"
+          "text": "悬停且未按下"
         },
         {
           "type": "key",
@@ -3368,7 +3255,7 @@
         },
         {
           "type": "text",
-          "text": "时，以 0.5 倍的原速度消耗飞行时间。"
+          "text": "时，以 0.5 倍速度消耗飞行时间。"
         }
       ],
       [
@@ -3397,34 +3284,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "143格",
+        "value": "33 / 61",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "33 mph",
+        "value": "1.5× / 12×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "150%",
+        "value": "2.45×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "245%",
+        "value": "46",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "红色",
         "extra": "",
-        "sortkey": "10*",
+        "sortkey": "",
         "color": "#ff5050"
       }
     ],
@@ -3450,7 +3337,7 @@
     "page_type": "wing",
     "from_wings_table": true,
     "parent_page": "翅膀",
-    "description": "用 ▼ 下 + ↷ 跳 能水平悬浮。\n\n悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。\n\n悬浮且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍的原速度消耗飞行时间。\n\n发出天蓝色的光，且推进器火焰在黑暗中可见。\n\n完全无声。",
+    "description": "用 ▼ 下 + ↷ 跳 能水平 悬停 。\n\n悬停且未按下 ◀ 左 和 ▶ 右 时，以 0.5 倍速度消耗飞行时间。\n\n发出天蓝色的光，且推进器火焰在黑暗中可见。\n\n完全无声。",
     "description_rich": [
       [
         {
@@ -3473,19 +3360,13 @@
         },
         {
           "type": "text",
-          "text": "能水平悬浮。"
+          "text": "能水平悬停。"
         }
       ],
       [
         {
           "type": "text",
-          "text": "悬浮速度提升至 61 mph；悬浮时具有 1200% 加速度倍率。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "悬浮且未按下"
+          "text": "悬停且未按下"
         },
         {
           "type": "key",
@@ -3503,7 +3384,7 @@
         },
         {
           "type": "text",
-          "text": "时，以 0.5 倍的原速度消耗飞行时间。"
+          "text": "时，以 0.5 倍速度消耗飞行时间。"
         }
       ],
       [
@@ -3532,34 +3413,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "167格",
+        "value": "46格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "46 mph",
+        "value": "2.5×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "250%",
+        "value": "3×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "300%",
+        "value": "41",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "红色",
         "extra": "",
-        "sortkey": "10*",
+        "sortkey": "",
         "color": "#ff5050"
       }
     ],
@@ -3610,34 +3491,34 @@
       },
       {
         "label": "飞行时间",
-        "value": "3秒",
+        "value": "3 秒",
         "extra": ""
       },
       {
         "label": "高度（格）",
-        "value": "167格",
+        "value": "46格",
         "extra": ""
       },
       {
         "label": "最大水平速度",
-        "value": "46 mph",
+        "value": "2.5×",
         "extra": ""
       },
       {
         "label": "水平加速度",
-        "value": "250%",
+        "value": "3×",
         "extra": ""
       },
       {
         "label": "垂直倍率",
-        "value": "300%",
+        "value": "41",
         "extra": ""
       },
       {
         "label": "稀有度",
         "value": "红色",
         "extra": "",
-        "sortkey": "10*",
+        "sortkey": "",
         "color": "#ff5050"
       }
     ],

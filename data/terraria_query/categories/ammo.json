@@ -1,4 +1,53 @@
 {
+  "照明弹": {
+    "name": "照明弹",
+    "image": "Flare.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药制作材料",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "1",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "1.5",
+        "extra": "（极弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "6",
+        "extra": ""
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "照明弹是一类弹药，仅供信号枪使用。由信号枪发射的照明弹按曲度很小的弧线运动，并且会附着在物块上（类似于粘性荧光棒），但是有更好的射弹速度和范围。它们能在水下使用，并且可以发射进水中或从水中发射出来。发射后，照明弹会发出微弱的有色闪光，持续 10 分钟。它们会附着在击中的方块上并且在水下也会工作。照明弹在发射后就不能被回收。\n\n全部类型的照明弹（诅咒照明弹除外）都会造成着火了！减益。有2/3 (66.67%)的几率此减益会持续 5 秒，1/3 (33.33%)的几率持续 10 秒。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "照明弹是一类弹药，仅供信号枪使用。由信号枪发射的照明弹按曲度很小的弧线运动，并且会附着在物块上（类似于粘性荧光棒），但是有更好的射弹速度和范围。它们能在水下使用，并且可以发射进水中或从水中发射出来。发射后，照明弹会发出微弱的有色闪光，持续 10 分钟。它们会附着在击中的方块上并且在水下也会工作。照明弹在发射后就不能被回收。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "全部类型的照明弹（诅咒照明弹除外）都会造成着火了！减益。有2/3 (66.67%)的几率此减益会持续 5 秒，1/3 (33.33%)的几率持续 10 秒。"
+        }
+      ]
+    ],
+    "wiki_title": "照明弹",
+    "item_category": "ammo"
+  },
   "沙块": {
     "name": "沙块",
     "image": "Sand_Block.png",
@@ -38,9 +87,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
-    "description": "沙块是一种土壤物块，在沙漠生物群系中、海洋的海滩或底部可以大量找到，且可以在地下地层作为微型生物群系小片地找到。它也会作为射弹由蚁狮射出。沙块可以传播或被转化为邪恶生物群系和神圣之地（见下方）。\n\n沙块会受重力影响，此独特特性也被雪泥块、泥沙块、贝壳堆、破裂地牢砖、以及For the Worthy和Get fixed boi世界中的灰烬块所具有。沙块会对砸到的任何玩家或敌怪造成伤害。如果落在玩家上的沙块数量较大，玩家就会受到窒息减益，直到玩家设法逃离。沙块被用于制作一些建筑用物块，以及直接用于制作其他物品，但它也是玻璃的原材料，后者用于一套家具套装和部分其他物品。\n\n黑檀沙块、猩红沙块和珍珠沙块是沙块的生物群系变体种类，分别对应腐化、猩红、和神圣。它们在其对应生物群系中会替代普通沙块出现，无论这些生物群系是与沙漠还是海洋生物群系重叠。和任何其他腐化、猩红、或神圣块一样，在困难模式开始后，它们会开始将最多 3 图格远范围内的可用的物块（包括普通沙块）转化为其对应变体种类。这些沙块变体种类功能上和普通沙块相似，但每种变体种类能用于制作部分生物群系相关物品。它们可以被抛撒粉末、投掷水瓶、或使用绿溶液的环境改造枪重新转换成普通沙块。正在下落的沙块无法被转化。\n\n所有类型的沙块都能用作沙枪的弹药，但它们无法被储存在物品栏中的弹药栏。类似于蚁狮发射的沙球射弹，如果有可用空间，射出的沙块会变成物块被放置在地面上。",
-    "item_category": "ammo",
     "used_in": [
       {
         "station": "固化机",
@@ -138,31 +184,81 @@
           "amount": "10"
         }
       }
-    ]
+    ],
+    "description": "沙块是一种土壤物块，在沙漠生物群系中、海洋的海滩或底部可以大量找到，且可以在地下地层作为微型生物群系小片地找到。它也会作为射弹由蚁狮射出。沙块可以传播或被转化为邪恶生物群系和神圣之地（见下方）。\n\n沙块会受重力影响，此独特特性也被雪泥块、泥沙块、贝壳堆、破裂地牢砖、以及For the Worthy和Get fixed boi世界中的灰烬块所具有。沙块会对砸到的任何玩家或敌怪造成伤害。如果落在玩家上的沙块数量较大，玩家就会受到窒息减益，直到玩家设法逃离。沙块被用于制作一些建筑用物块，以及直接用于制作其他物品，但它也是玻璃的原材料，后者用于一套家具套装和部分其他物品。\n\n黑檀沙块、猩红沙块和珍珠沙块是沙块的生物群系变体种类，分别对应腐化、猩红、和神圣。它们在其对应生物群系中会替代普通沙块出现，无论这些生物群系是与沙漠还是海洋生物群系重叠。和任何其他腐化、猩红、或神圣块一样，在困难模式开始后，它们会开始将最多 3 图格远范围内的可用的物块（包括普通沙块）转化为其对应变体种类。这些沙块变体种类功能上和普通沙块相似，但每种变体种类能用于制作部分生物群系相关物品。它们可以被抛撒粉末、投掷水瓶、或使用绿溶液的环境改造枪重新转换成普通沙块。正在下落的沙块无法被转化。\n\n所有类型的沙块都能用作沙枪的弹药，但它们无法被储存在物品栏中的弹药栏。类似于蚁狮发射的沙球射弹，如果有可用空间，射出的沙块会变成物块被放置在地面上。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "沙块是一种土壤物块，在沙漠生物群系中、海洋的海滩或底部可以大量找到，且可以在地下地层作为微型生物群系小片地找到。它也会作为射弹由蚁狮射出。沙块可以传播或被转化为邪恶生物群系和神圣之地（见下方）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "沙块会受重力影响，此独特特性也被雪泥块、泥沙块、贝壳堆、破裂地牢砖、以及For the Worthy和Get fixed boi世界中的灰烬块所具有。沙块会对砸到的任何玩家或敌怪造成伤害。如果落在玩家上的沙块数量较大，玩家就会受到窒息减益，直到玩家设法逃离。沙块被用于制作一些建筑用物块，以及直接用于制作其他物品，但它也是玻璃的原材料，后者用于一套家具套装和部分其他物品。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "黑檀沙块、猩红沙块和珍珠沙块是沙块的生物群系变体种类，分别对应腐化、猩红、和神圣。它们在其对应生物群系中会替代普通沙块出现，无论这些生物群系是与沙漠还是海洋生物群系重叠。和任何其他腐化、猩红、或神圣块一样，在困难模式开始后，它们会开始将最多 3 图格远范围内的可用的物块（包括普通沙块）转化为其对应变体种类。这些沙块变体种类功能上和普通沙块相似，但每种变体种类能用于制作部分生物群系相关物品。它们可以被抛撒粉末、投掷水瓶、或使用绿溶液的环境改造枪重新转换成普通沙块。正在下落的沙块无法被转化。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "所有类型的沙块都能用作沙枪的弹药，但它们无法被储存在物品栏中的弹药栏。类似于蚁狮发射的沙球射弹，如果有可用空间，射出的沙块会变成物块被放置在地面上。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "沙球",
+      "image": "Sand_Ball.png"
+    },
+    "wiki_title": "沙块",
+    "item_category": "ammo"
   },
-  "照明弹": {
-    "name": "照明弹",
-    "image": "Flare.png",
+  "溶液": {
+    "name": "溶液",
+    "image": "Green_Solution.png",
     "stats": [
       {
         "label": "类型",
-        "value": "弹药制作材料",
+        "value": "弹药",
         "extra": ""
       },
       {
-        "label": "伤害",
-        "value": "1",
-        "extra": "(远程)"
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
       },
       {
-        "label": "击退",
-        "value": "1.5",
-        "extra": "（极弱击退力）"
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "15",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
-        "label": "射弹速度",
-        "value": "6",
-        "extra": ""
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "3",
+            "image": "Silver_Coin.png"
+          }
+        ]
       },
       {
         "label": "研究",
@@ -171,8 +267,22 @@
       }
     ],
     "recipe": null,
-    "drops": null,
-    "description": "照明弹是一类弹药，仅供信号枪使用。由信号枪发射的照明弹按曲度很小的弧线运动，并且会附着在物块上（类似于粘性荧光棒），但是有更好的射弹速度和范围。它们能在水下使用，并且可以发射进水中或从水中发射出来。发射后，照明弹会发出微弱的有色闪光，持续 10 分钟。它们会附着在击中的方块上并且在水下也会工作。照明弹在发射后就不能被回收。\n\n全部类型的照明弹（诅咒照明弹除外）都会造成着火了！减益。有2/3 (66.67%)的几率此减益会持续 5 秒，1/3 (33.33%)的几率持续 10 秒。",
+    "description": "溶液是一类弹药，仅由环境改造枪和泰拉改造枪使用。每种溶液会将特定的物块和墙转化为其他的物块和墙，从而创造和/或摧毁不同的生物群系。7 种溶液由蒸汽朋克人出售，她会基于特定条件出售不同的溶液；还有一种由松露人出售，且一直有售。\n\n在激活了Remix特殊世界种子的世界中无法购买溶液。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "溶液是一类弹药，仅由环境改造枪和泰拉改造枪使用。每种溶液会将特定的物块和墙转化为其他的物块和墙，从而创造和/或摧毁不同的生物群系。7 种溶液由蒸汽朋克人出售，她会基于特定条件出售不同的溶液；还有一种由松露人出售，且一直有售。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在激活了Remix特殊世界种子的世界中无法购买溶液。"
+        }
+      ]
+    ],
+    "wiki_title": "溶液",
     "item_category": "ammo"
   },
   "凝胶": {
@@ -215,6 +325,316 @@
       }
     ],
     "recipe": null,
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "10"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "办公块",
+          "image": "Office_Block.png",
+          "amount": "10"
+        }
+      },
+      {
+        "station": "固化机",
+        "ingredients": [
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "史莱姆块",
+          "image": "Slime_Block.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "凝胶",
+            "image": "Gel.png",
+            "amount": "20"
+          },
+          {
+            "name": "金冠",
+            "image": "Gold_Crown.png"
+          }
+        ],
+        "result": {
+          "name": "史莱姆王冠",
+          "image": "Slime_Crown.png"
+        }
+      },
+      {
+        "station": "恶魔祭坛或猩红祭坛",
+        "ingredients": [
+          {
+            "name": "凝胶",
+            "image": "Gel.png",
+            "amount": "20"
+          },
+          {
+            "name": "铂金冠",
+            "image": "Platinum_Crown.png"
+          }
+        ],
+        "result": {
+          "name": "史莱姆王冠",
+          "image": "Slime_Crown.png"
+        }
+      },
+      {
+        "station": "固化机",
+        "ingredients": [
+          {
+            "name": "凝胶",
+            "image": "Gel.png",
+            "amount": "50"
+          }
+        ],
+        "result": {
+          "name": "史莱姆长矛",
+          "image": "Slime_Spear.png"
+        }
+      },
+      {
+        "station": "固化机",
+        "ingredients": [
+          {
+            "name": "凝胶",
+            "image": "Gel.png",
+            "amount": "50"
+          }
+        ],
+        "result": {
+          "name": "史莱姆鞭",
+          "image": "Slime_Whip.png"
+        }
+      },
+      {
+        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
+        "ingredients": [
+          {
+            "name": "蘑菇",
+            "image": "Mushroom.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png",
+            "amount": "2"
+          },
+          {
+            "name": "玻璃瓶",
+            "image": "Bottle.png",
+            "amount": "2"
+          }
+        ],
+        "result": {
+          "name": "弱效治疗药水",
+          "image": "Lesser_Healing_Potion.png",
+          "amount": "2"
+        }
+      },
+      {
+        "station": "搅拌机",
+        "ingredients": [
+          {
+            "name": "石块",
+            "image": "Stone_Block.png",
+            "amount": "2"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "沥青块",
+          "image": "Asphalt_Block.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif"
+          }
+        ],
+        "result": {
+          "name": "火把",
+          "image": "Torch.png",
+          "amount": "3"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "土炸弹",
+            "image": "Dirt_Bomb.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性土炸弹",
+          "image": "Sticky_Dirt_Bomb.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "强力炸弹",
+            "image": "Power_Bomb.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性强力炸弹",
+          "image": "Sticky_Power_Bomb.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "手榴弹",
+            "image": "Grenade.png",
+            "amount": "5"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性手榴弹",
+          "image": "Sticky_Grenade.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "炸弹",
+            "image": "Bomb.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性炸弹",
+          "image": "Sticky_Bomb.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "荧光棒",
+            "image": "Glowstick.png",
+            "amount": "5"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性荧光棒",
+          "image": "Sticky_Glowstick.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "雷管",
+            "image": "Dynamite.png"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          }
+        ],
+        "result": {
+          "name": "粘性雷管",
+          "image": "Sticky_Dynamite.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "麦芽酒",
+            "image": "Ale.png",
+            "amount": "5"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          },
+          {
+            "name": "丝绸",
+            "image": "Silk.png"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "莫洛托夫鸡尾酒",
+          "image": "Molotov_Cocktail.png",
+          "amount": "5"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          },
+          {
+            "name": "发光蘑菇",
+            "image": "Glowing_Mushroom.png"
+          }
+        ],
+        "result": {
+          "name": "蘑菇火把",
+          "image": "Mushroom_Torch.png",
+          "amount": "3"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -904,317 +1324,314 @@
       ]
     },
     "description": "凝胶是常见的制作材料，大多数史莱姆和史莱姆僵尸都会掉落。凝胶是不可或缺的，因为它是制作火把的材料之一，并且从开始阶段到最终场景全程都经常要用到。它还作为火焰喷射器和精灵熔枪的弹药来使用，因此可以存放在玩家的弹药栏。",
-    "item_category": "ammo",
-    "used_in": [
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "10"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png",
-            "amount": "5"
-          }
-        ],
-        "result": {
-          "name": "办公块",
-          "image": "Office_Block.png",
-          "amount": "10"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "凝胶是常见的制作材料，大多数史莱姆和史莱姆僵尸都会掉落。凝胶是不可或缺的，因为它是制作火把的材料之一，并且从开始阶段到最终场景全程都经常要用到。它还作为火焰喷射器和精灵熔枪的弹药来使用，因此可以存放在玩家的弹药栏。"
         }
+      ]
+    ],
+    "wiki_title": "凝胶",
+    "item_category": "ammo"
+  },
+  "叶绿弹": {
+    "name": "叶绿弹",
+    "image": "Chlorophyte_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
       },
       {
-        "station": "固化机",
-        "ingredients": [
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          }
-        ],
-        "result": {
-          "name": "史莱姆块",
-          "image": "Slime_Block.png"
-        }
+        "label": "伤害",
+        "value": "9 (电脑版、主机版、和移动版) / 15 (前代主机版、和3DS版)",
+        "extra": "(远程)"
       },
       {
-        "station": "恶魔祭坛或猩红祭坛",
-        "ingredients": [
-          {
-            "name": "凝胶",
-            "image": "Gel.png",
-            "amount": "20"
-          },
-          {
-            "name": "金冠",
-            "image": "Gold_Crown.png"
-          }
-        ],
-        "result": {
-          "name": "史莱姆王冠",
-          "image": "Slime_Crown.png"
-        }
+        "label": "击退",
+        "value": "4.5",
+        "extra": "（普通击退力）"
       },
       {
-        "station": "恶魔祭坛或猩红祭坛",
-        "ingredients": [
-          {
-            "name": "凝胶",
-            "image": "Gel.png",
-            "amount": "20"
-          },
-          {
-            "name": "铂金冠",
-            "image": "Platinum_Crown.png"
-          }
-        ],
-        "result": {
-          "name": "史莱姆王冠",
-          "image": "Slime_Crown.png"
-        }
+        "label": "基础射弹速度",
+        "value": "5",
+        "extra": ""
       },
       {
-        "station": "固化机",
-        "ingredients": [
-          {
-            "name": "凝胶",
-            "image": "Gel.png",
-            "amount": "50"
-          }
-        ],
-        "result": {
-          "name": "史莱姆长矛",
-          "image": "Slime_Spear.png"
-        }
+        "label": "射弹速度乘数",
+        "value": "3×",
+        "extra": ""
       },
       {
-        "station": "固化机",
-        "ingredients": [
-          {
-            "name": "凝胶",
-            "image": "Gel.png",
-            "amount": "50"
-          }
-        ],
-        "result": {
-          "name": "史莱姆鞭",
-          "image": "Slime_Whip.png"
-        }
+        "label": "工具提示",
+        "value": "追杀敌人",
+        "extra": ""
       },
       {
-        "station": "放置的瓶子或炼药桌(电脑版、主机版、和移动版)或炼金瓶",
-        "ingredients": [
-          {
-            "name": "蘑菇",
-            "image": "Mushroom.png"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png",
-            "amount": "2"
-          },
-          {
-            "name": "玻璃瓶",
-            "image": "Bottle.png",
-            "amount": "2"
-          }
-        ],
-        "result": {
-          "name": "弱效治疗药水",
-          "image": "Lesser_Healing_Potion.png",
-          "amount": "2"
-        }
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "07*",
+        "color": "#dd66ff"
       },
       {
-        "station": "搅拌机",
-        "ingredients": [
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
           {
-            "name": "石块",
-            "image": "Stone_Block.png",
-            "amount": "2"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
+            "type": "cc",
+            "amount": "10",
+            "image": "Copper_Coin.png"
           }
-        ],
-        "result": {
-          "name": "沥青块",
-          "image": "Asphalt_Block.png"
-        }
+        ]
       },
       {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif"
-          }
-        ],
-        "result": {
-          "name": "火把",
-          "image": "Torch.png",
-          "amount": "3"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "土炸弹",
-            "image": "Dirt_Bomb.png"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          }
-        ],
-        "result": {
-          "name": "粘性土炸弹",
-          "image": "Sticky_Dirt_Bomb.png"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "强力炸弹",
-            "image": "Power_Bomb.png"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          }
-        ],
-        "result": {
-          "name": "粘性强力炸弹",
-          "image": "Sticky_Power_Bomb.png"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "手榴弹",
-            "image": "Grenade.png",
-            "amount": "5"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          }
-        ],
-        "result": {
-          "name": "粘性手榴弹",
-          "image": "Sticky_Grenade.png",
-          "amount": "5"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "炸弹",
-            "image": "Bomb.png"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          }
-        ],
-        "result": {
-          "name": "粘性炸弹",
-          "image": "Sticky_Bomb.png"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "荧光棒",
-            "image": "Glowstick.png",
-            "amount": "5"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          }
-        ],
-        "result": {
-          "name": "粘性荧光棒",
-          "image": "Sticky_Glowstick.png",
-          "amount": "5"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "雷管",
-            "image": "Dynamite.png"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          }
-        ],
-        "result": {
-          "name": "粘性雷管",
-          "image": "Sticky_Dynamite.png"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "麦芽酒",
-            "image": "Ale.png",
-            "amount": "5"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          },
-          {
-            "name": "丝绸",
-            "image": "Silk.png"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png"
-          }
-        ],
-        "result": {
-          "name": "莫洛托夫鸡尾酒",
-          "image": "Molotov_Cocktail.png",
-          "amount": "5"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          },
-          {
-            "name": "发光蘑菇",
-            "image": "Glowing_Mushroom.png"
-          }
-        ],
-        "result": {
-          "name": "蘑菇火把",
-          "image": "Mushroom_Torch.png",
-          "amount": "3"
-        }
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
       }
-    ]
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball_(old).png",
+          "amount": "70"
+        },
+        {
+          "name": "叶绿锭",
+          "image": "Chlorophyte_Bar_(old).png"
+        }
+      ],
+      "result": {
+        "name": "叶绿弹",
+        "image": "Chlorophyte_Bullet.png",
+        "amount": "70"
+      }
+    },
+    "description": "叶绿弹是一种追踪型子弹，能在空中迅速改变运动轨迹甚至转向，以达到追踪敌怪的效果。这些子弹会以最近的敌怪作为目标，如果该敌怪已被击杀，滞空的剩余子弹则会继续追踪第二个最近的目标。叶绿弹在射出直到击中目标前都会闪烁出瞬间的绿光轨迹并微微照亮周围。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "叶绿弹是一种追踪型子弹，能在空中迅速改变运动轨迹甚至转向，以达到追踪敌怪的效果。这些子弹会以最近的敌怪作为目标，如果该敌怪已被击杀，滞空的剩余子弹则会继续追踪第二个最近的目标。叶绿弹在射出直到击中目标前都会闪烁出瞬间的绿光轨迹并微微照亮周围。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "叶绿弹",
+      "image": "Chlorophyte_Bullet_(projectile).png"
+    },
+    "wiki_title": "叶绿弹",
+    "item_category": "ammo"
+  },
+  "叶绿箭": {
+    "name": "叶绿箭",
+    "image": "Chlorophyte_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "16",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3.5",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4.5",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "撞墙后弹回",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "叶绿锭",
+          "image": "Chlorophyte_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "叶绿箭",
+        "image": "Chlorophyte_Arrow.png",
+        "amount": "150"
+      }
+    },
+    "description": "叶绿箭是一种困难模式的箭，可以在击败全部三个机械 Boss后获得。叶绿箭可以在击中物块时反弹四次，且若范围内有目标会尝试向目标的方向反弹。反弹后其伤害会降低 33%。\n\n除了其自动导向的能力以外，叶绿箭反弹的方式和其他射弹有所不同：它们总是会从其撞击表面的方向的反方向返回（转向 180°）。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "叶绿箭是一种困难模式的箭，可以在击败全部三个机械 Boss后获得。叶绿箭可以在击中物块时反弹四次，且若范围内有目标会尝试向目标的方向反弹。反弹后其伤害会降低 33%。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "除了其自动导向的能力以外，叶绿箭反弹的方式和其他射弹有所不同：它们总是会从其撞击表面的方向的反方向返回（转向 180°）。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "叶绿箭",
+      "image": "Chlorophyte_Arrow.png"
+    },
+    "wiki_title": "叶绿箭",
+    "item_category": "ammo"
+  },
+  "圣箭": {
+    "name": "圣箭",
+    "image": "Holy_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "13 (电脑版、主机版、和移动版) / 6 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3.5",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "在撞击时召唤陨星",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "16",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "200"
+        },
+        {
+          "name": "妖精尘",
+          "image": "Pixie_Dust.png",
+          "amount": "3"
+        },
+        {
+          "name": "独角兽角",
+          "image": "Unicorn_Horn.png"
+        }
+      ],
+      "result": {
+        "name": "圣箭",
+        "image": "Holy_Arrow.png",
+        "amount": "200"
+      }
+    },
+    "description": "圣箭是一种困难模式箭。当箭击中物块或实体时，会从天空向击中点落下两个神圣之星射弹。\n\n(电脑版、主机版、和移动版)神圣之星射弹不能穿透，并造成箭基础伤害的 1/3。箭的基础伤害由圣箭的基础伤害（13）和武器的基础伤害相加得出。\n\n(前代主机版、和3DS版)神圣之星射弹能够穿透一次，并造成箭基础伤害的全额。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "圣箭是一种困难模式箭。当箭击中物块或实体时，会从天空向击中点落下两个神圣之星射弹。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(电脑版、主机版、和移动版)神圣之星射弹不能穿透，并造成箭基础伤害的 1/3。箭的基础伤害由圣箭的基础伤害（13）和武器的基础伤害相加得出。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(前代主机版、和3DS版)神圣之星射弹能够穿透一次，并造成箭基础伤害的全额。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "圣箭",
+      "image": "Holy_Arrow.png"
+    },
+    "wiki_title": "圣箭",
+    "item_category": "ammo"
   },
   "坠落之星": {
     "name": "坠落之星",
@@ -1266,9 +1683,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
-    "description": "坠落之星是在夜晚从天空中掉落，并在黎明时 (上午 4:30) 消失的物品。它可用于制作魔力水晶，后者会将玩家的最大魔力永久提升 20。它也用于一系列制作配方中，还可作为星星炮和超级星星炮(电脑版、主机版、和移动版)的弹药使用。因此，坠落之星可存储在弹药栏中。\n\n坠落之星会在整个夜间期间随机生成，而其生成速度由两个因素决定：世界大小，和在夜晚降临时随机设置的一个倍率。见备注获取细节。\n\n坠落之星在地上会发光，使其在夜晚中容易找到。玩家无法将其放置为永久光源，但是可以搭配玻璃瓶将其制作为星星瓶。坠落之星会在白天时消失，无论它们是否是玩家扔出的，但是可以一直保存在玩家的物品栏或是收纳物品（如宝箱）中。\n\n虽然不常见，但坠落之星可以对击中的实体造成 1000 基础伤害。它们无法伤害玩家，除非是在don't dig up(电脑版、主机版、和移动版)或get fixed boi(电脑版、主机版、和移动版)世界中。在这些世界中，从天而降的坠落之星不再在击中时掉落为物品，且只能通过罐子或史莱姆作为其额外掉落获得。",
-    "item_category": "ammo",
     "used_in": [
       {
         "station": "工作台",
@@ -1779,7 +2193,335 @@
           "image": "Magic_Power_Potion.png"
         }
       }
-    ]
+    ],
+    "description": "坠落之星是在夜晚从天空中掉落，并在黎明时 (上午 4:30) 消失的物品。它可用于制作魔力水晶，后者会将玩家的最大魔力永久提升 20。它也用于一系列制作配方中，还可作为星星炮和超级星星炮(电脑版、主机版、和移动版)的弹药使用。因此，坠落之星可存储在弹药栏中。\n\n坠落之星会在整个夜间期间随机生成，而其生成速度由两个因素决定：世界大小，和在夜晚降临时随机设置的一个倍率。见备注获取细节。\n\n坠落之星在地上会发光，使其在夜晚中容易找到。玩家无法将其放置为永久光源，但是可以搭配玻璃瓶将其制作为星星瓶。坠落之星会在白天时消失，无论它们是否是玩家扔出的，但是可以一直保存在玩家的物品栏或是收纳物品（如宝箱）中。\n\n虽然不常见，但坠落之星可以对击中的实体造成 1000 基础伤害。它们无法伤害玩家，除非是在don't dig up(电脑版、主机版、和移动版)或get fixed boi(电脑版、主机版、和移动版)世界中。在这些世界中，从天而降的坠落之星不再在击中时掉落为物品，且只能通过罐子或史莱姆作为其额外掉落获得。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "坠落之星是在夜晚从天空中掉落，并在黎明时 (上午 4:30) 消失的物品。它可用于制作魔力水晶，后者会将玩家的最大魔力永久提升 20。它也用于一系列制作配方中，还可作为星星炮和超级星星炮(电脑版、主机版、和移动版)的弹药使用。因此，坠落之星可存储在弹药栏中。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "坠落之星会在整个夜间期间随机生成，而其生成速度由两个因素决定：世界大小，和在夜晚降临时随机设置的一个倍率。见备注获取细节。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "坠落之星在地上会发光，使其在夜晚中容易找到。玩家无法将其放置为永久光源，但是可以搭配玻璃瓶将其制作为星星瓶。坠落之星会在白天时消失，无论它们是否是玩家扔出的，但是可以一直保存在玩家的物品栏或是收纳物品（如宝箱）中。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "虽然不常见，但坠落之星可以对击中的实体造成 1000 基础伤害。它们无法伤害玩家，除非是在don't dig up(电脑版、主机版、和移动版)或get fixed boi(电脑版、主机版、和移动版)世界中。在这些世界中，从天而降的坠落之星不再在击中时掉落为物品，且只能通过罐子或史莱姆作为其额外掉落获得。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "陨星",
+      "image": "Fallen_Star.png"
+    },
+    "wiki_title": "坠落之星",
+    "item_category": "ammo"
+  },
+  "夜明弹": {
+    "name": "夜明弹",
+    "image": "Luminite_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "20",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "2",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "6×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“鬼怪排成行，一下全扫荡……”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "09*",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "2",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "远古操纵机(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "夜明弹",
+        "image": "Luminite_Bullet.png",
+        "amount": "333"
+      }
+    },
+    "description": "夜明弹是一种困难模式、月亮领主后的子弹，由夜明锭制作。夜明弹可击中无限数量的目标。夜明弹每次击中目标时伤害会下降 4%。这可以将其伤害降低至 0，使其无法造成伤害但仍然继续行进。它会在 1.67 秒后或击中实心块后消失。\n\n夜明弹在击中目标时会产生亮蓝色的粒子。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "夜明弹是一种困难模式、月亮领主后的子弹，由夜明锭制作。夜明弹可击中无限数量的目标。夜明弹每次击中目标时伤害会下降 4%。这可以将其伤害降低至 0，使其无法造成伤害但仍然继续行进。它会在 1.67 秒后或击中实心块后消失。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "夜明弹在击中目标时会产生亮蓝色的粒子。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "夜明弹",
+      "image": "Luminite_Bullet_(projectile).png"
+    },
+    "wiki_title": "夜明弹",
+    "item_category": "ammo"
+  },
+  "夜明箭": {
+    "name": "夜明箭",
+    "image": "Luminite_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "15",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3.5",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "3",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "“以音速射下它们！”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "渐变色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#88ff88"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "2",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "远古操纵机(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "夜明箭",
+        "image": "Luminite_Arrow.png",
+        "amount": "333"
+      }
+    },
+    "description": "夜明箭是一种困难模式、月亮领主后的箭。当一支夜明箭消失时，在大约 0.5 秒后验证会发射出一个夜明箭尾迹射弹，该射弹会复制箭的飞行轨迹并造成和箭相同的基础伤害。夜明箭及其尾迹会在 0.75 秒或击中实心块时消失。夜明箭及其尾迹最多可击中 4 个目标。夜明箭及其尾迹每次击中目标时伤害会下降 4%。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "夜明箭是一种困难模式、月亮领主后的箭。当一支夜明箭消失时，在大约 0.5 秒后验证会发射出一个夜明箭尾迹射弹，该射弹会复制箭的飞行轨迹并造成和箭相同的基础伤害。夜明箭及其尾迹会在 0.75 秒或击中实心块时消失。夜明箭及其尾迹最多可击中 4 个目标。夜明箭及其尾迹每次击中目标时伤害会下降 4%。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "夜明箭",
+      "image": "Luminite_Arrow.png"
+    },
+    "wiki_title": "夜明箭",
+    "item_category": "ammo"
+  },
+  "小丑之箭": {
+    "name": "小丑之箭",
+    "image": "Jester's_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "10 (电脑版、主机版、和移动版) / 9 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "0.5",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "10"
+        },
+        {
+          "name": "坠落之星",
+          "image": "Fallen_Star.png"
+        }
+      ],
+      "result": {
+        "name": "小丑之箭",
+        "image": "Jester's_Arrow.png",
+        "amount": "10"
+      }
+    },
+    "description": "小丑之箭是一种箭。它不受重力影响，可以穿透无限数量的敌怪。它在发射后会发出大量光，对于照亮诸如山洞等黑暗区域很有用。当击中敌怪或物块时，它会在一阵不会造成伤害的火花中消失。除了制作得到外，小丑之箭也会出现在地下和洞穴层中的金箱内。\n\n小丑之箭可以视为是邪箭的升级物。其无限穿透能力使其对于诸如世界吞噬怪等多体节的敌怪非常有效，并且偶尔会让其显得比其他更好的箭（如狱炎箭）更强。\n\n(电脑版、主机版、和移动版)小丑之箭的伤害在每穿透一个目标后降低 10%。\n\n（(前代主机版、和3DS版)和其他箭不同）小丑之箭在使用后永远无法回收。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "小丑之箭是一种箭。它不受重力影响，可以穿透无限数量的敌怪。它在发射后会发出大量光，对于照亮诸如山洞等黑暗区域很有用。当击中敌怪或物块时，它会在一阵不会造成伤害的火花中消失。除了制作得到外，小丑之箭也会出现在地下和洞穴层中的金箱内。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "小丑之箭可以视为是邪箭的升级物。其无限穿透能力使其对于诸如世界吞噬怪等多体节的敌怪非常有效，并且偶尔会让其显得比其他更好的箭（如狱炎箭）更强。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(电脑版、主机版、和移动版)小丑之箭的伤害在每穿透一个目标后降低 10%。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "（(前代主机版、和3DS版)和其他箭不同）小丑之箭在使用后永远无法回收。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "小丑之箭",
+      "image": "Jester's_Arrow.png"
+    },
+    "wiki_title": "小丑之箭",
+    "item_category": "ammo"
   },
   "尖桩发射器": {
     "name": "尖桩发射器",
@@ -1852,7 +2594,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
     "description": "尖桩发射器是一把困难模式、世纪之花后的类连弩武器，能自动开火，将尖桩作为弹药。尖桩不受重力影响，至多穿透 9 个敌怪，至多可攻击到 10 个敌怪，且比大多数箭具有更高的射速。在电脑版电脑版、主机版主机版、和移动版移动版中，尖桩每穿过一个敌人，下一次命中时伤害降低 10%。尖桩发射器拥有 14% 的基础暴击率，高于默认的 4%。另外，它对吸血鬼造成的伤害提升 10 倍。\n\n尖桩发射器在南瓜月事件中由哀木掉落，掉落率为 2.86–20% (5–20%)，基于波次而定。尖桩发射器掉落时，总会同时掉落 30 至 60 个尖桩。它们的额外的尖桩可在玩家物品栏中存在尖桩发射器时从巫医或军火商处以15 CC购买。\n\n其最佳修饰语是虚幻。",
     "description_rich": [
       [
@@ -1910,6 +2651,7 @@
         }
       ]
     ],
+    "wiki_title": "尖桩发射器",
     "item_category": "ammo"
   },
   "彩纸": {
@@ -1964,26 +2706,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
-    "description": "彩纸是一种制作材料，用于制作多种节日物品。它也用作彩纸炮的弹药。它可以从派对女孩处以每个2 SC的价格购买。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "彩纸是一种制作材料，用于制作多种节日物品。它也用作彩纸炮的弹药。它可以从派对女孩处以每个"
-        },
-        {
-          "type": "coin",
-          "amount": "2",
-          "coin_type": "sc"
-        },
-        {
-          "type": "text",
-          "text": "的价格购买。"
-        }
-      ]
-    ],
-    "item_category": "ammo",
     "used_in": [
       {
         "station": "水晶球",
@@ -2056,7 +2778,264 @@
           "image": "Flask_of_Party.png"
         }
       }
-    ]
+    ],
+    "description": "彩纸是一种制作材料，用于制作多种节日物品。它也用作彩纸炮的弹药。它可以从派对女孩处以每个2 SC的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "彩纸是一种制作材料，用于制作多种节日物品。它也用作彩纸炮的弹药。它可以从派对女孩处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "2",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ]
+    ],
+    "wiki_title": "彩纸",
+    "item_category": "ammo"
+  },
+  "微光箭": {
+    "name": "微光箭",
+    "image": "Shimmer_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "12",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "向上坠落",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "2",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "微光箭是一种弹药。它可以通过将木箭或狱炎箭扔进微光中来获得。它们的功能与普通箭相似，但会向上飞行，就如同它们的重力被反转了一样。在击中目标后，它们会产生彩虹色的小型“爆炸”视觉效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "微光箭是一种弹药。它可以通过将木箭或狱炎箭扔进微光中来获得。它们的功能与普通箭相似，但会向上飞行，就如同它们的重力被反转了一样。在击中目标后，它们会产生彩虹色的小型“爆炸”视觉效果。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "微光箭",
+      "image": "Shimmer_Arrow.png"
+    },
+    "wiki_title": "微光箭",
+    "item_category": "ammo"
+  },
+  "无尽火枪袋": {
+    "name": "无尽火枪袋",
+    "image": "Endless_Musket_Pouch.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "7",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball.png",
+          "amount": "9999"
+        }
+      ],
+      "result": {
+        "name": "无尽火枪袋",
+        "image": "Endless_Musket_Pouch.png"
+      }
+    },
+    "description": "无尽火枪袋是个困难模式的物品，可以作为弹药使用，并可以放在玩家物品栏的弹药栏中。当被放在使用者的物品栏时，它的作用就像是一颗能够被任意的枪无限发射的火枪子弹。会射出独特子弹类型的枪会同样地发射其具有特殊效果的子弹，包括强制要求使用火枪子弹才能使子弹取得特殊效果的枪，如乌兹冲锋枪。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "无尽火枪袋是个困难模式的物品，可以作为弹药使用，并可以放在玩家物品栏的弹药栏中。当被放在使用者的物品栏时，它的作用就像是一颗能够被任意的枪无限发射的火枪子弹。会射出独特子弹类型的枪会同样地发射其具有特殊效果的子弹，包括强制要求使用火枪子弹才能使子弹取得特殊效果的枪，如乌兹冲锋枪。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "子弹",
+      "image": "Bullet_(projectile).png"
+    },
+    "wiki_title": "无尽火枪袋",
+    "item_category": "ammo"
+  },
+  "无尽箭袋": {
+    "name": "无尽箭袋",
+    "image": "Endless_Quiver.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "5",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "9999"
+        }
+      ],
+      "result": {
+        "name": "无尽箭袋",
+        "image": "Endless_Quiver.png"
+      }
+    },
+    "description": "无尽箭袋是一件困难模式物品，可作为弹药使用，并可以被放入玩家的物品栏中的弹药栏中。当被放在使用者的物品栏时，它会被作为一支可以被任意合适的弓和连弩无消耗使用的木箭。可将箭转化为特殊类型的弓会无限地发射其具有特殊效果的箭矢，包括强制要求使用木箭才能使箭矢取得特殊效果的蜂膝弓。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "无尽箭袋是一件困难模式物品，可作为弹药使用，并可以被放入玩家的物品栏中的弹药栏中。当被放在使用者的物品栏时，它会被作为一支可以被任意合适的弓和连弩无消耗使用的木箭。可将箭转化为特殊类型的弓会无限地发射其具有特殊效果的箭矢，包括强制要求使用木箭才能使箭矢取得特殊效果的蜂膝弓。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "木箭（友方）",
+      "image": "Wooden_Arrow.png"
+    },
+    "wiki_title": "无尽箭袋",
+    "item_category": "ammo"
   },
   "木箭": {
     "name": "木箭",
@@ -2137,167 +3116,6 @@
         "amount": "25"
       }
     },
-    "drops": {
-      "modes": [
-        {
-          "mode": "normal",
-          "label": "经典",
-          "entries": [
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Armed_Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "宝箱",
-              "image": "Chest.png",
-              "quantity": "25–50",
-              "chance": "1/3 (33.33%)"
-            },
-            {
-              "name": "金箱",
-              "image": "Gold_Chest.png",
-              "quantity": "25–49",
-              "chance": "1/4 (25%) （地下）"
-            }
-          ]
-        },
-        {
-          "mode": "expert",
-          "label": "专家",
-          "entries": [
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Armed_Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "宝箱",
-              "image": "Chest.png",
-              "quantity": "25–50",
-              "chance": "1/3 (33.33%)"
-            },
-            {
-              "name": "金箱",
-              "image": "Gold_Chest.png",
-              "quantity": "25–49",
-              "chance": "1/4 (25%) （地下）"
-            }
-          ]
-        },
-        {
-          "mode": "master",
-          "label": "大师",
-          "entries": [
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "僵尸",
-              "image": "Armed_Pincushion_Zombie.gif",
-              "quantity": "1–9",
-              "chance": "100%"
-            },
-            {
-              "name": "宝箱",
-              "image": "Chest.png",
-              "quantity": "25–50",
-              "chance": "1/3 (33.33%)"
-            },
-            {
-              "name": "金箱",
-              "image": "Gold_Chest.png",
-              "quantity": "25–49",
-              "chance": "1/4 (25%) （地下）"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "木箭是最基础的箭类型。它可以用作所有弓的弹药，并且是若干种更加强力的箭的制作配方的基础。木箭可以制作得到、在罐子和宝箱中找到、掉落自中箭僵尸、或从商人处以每支5 CC的价格购买。在月相3、4、7、8 期间还能从骷髅商人(电脑版、主机版、和移动版)处购买。\n\n(前代主机版、和3DS版)点燃的木箭在击中敌怪或物块后有1/3 (33.33%)几率恢复为木箭（仅当由一次射出一支箭的武器发射时）。\n\n用某些弓射出时，常规的木箭会转变为其他特殊射弹（例如熔火之怒，能将木箭转变为一种烈焰箭）。一些其他弓，比如脉冲弓(电脑版、主机版、前代主机版、和移动版)，能将任何类型的箭转变为其它们的特殊变体。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "木箭是最基础的箭类型。它可以用作所有弓的弹药，并且是若干种更加强力的箭的制作配方的基础。木箭可以制作得到、在罐子和宝箱中找到、掉落自中箭僵尸、或从商人处以每支"
-        },
-        {
-          "type": "coin",
-          "amount": "5",
-          "coin_type": "cc"
-        },
-        {
-          "type": "text",
-          "text": "的价格购买。在月相3、4、7、8 期间还能从骷髅商人(电脑版、主机版、和移动版)处购买。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "(前代主机版、和3DS版)点燃的木箭在击中敌怪或物块后有1/3 (33.33%)几率恢复为木箭（仅当由一次射出一支箭的武器发射时）。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "用某些弓射出时，常规的木箭会转变为其他特殊射弹（例如熔火之怒，能将木箭转变为一种烈焰箭）。一些其他弓，比如脉冲弓(电脑版、主机版、前代主机版、和移动版)，能将任何类型的箭转变为其它们的特殊变体。"
-        }
-      ]
-    ],
-    "item_category": "ammo",
     "used_in": [
       {
         "station": "秘银砧或山铜砧",
@@ -2651,7 +3469,174 @@
           "amount": "5"
         }
       }
-    ]
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "25–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "25–49",
+              "chance": "1/4 (25%) （地下）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "25–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "25–49",
+              "chance": "1/4 (25%) （地下）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "僵尸",
+              "image": "Armed_Pincushion_Zombie.gif",
+              "quantity": "1–9",
+              "chance": "100%"
+            },
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "25–50",
+              "chance": "1/3 (33.33%)"
+            },
+            {
+              "name": "金箱",
+              "image": "Gold_Chest.png",
+              "quantity": "25–49",
+              "chance": "1/4 (25%) （地下）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "木箭是最基础的箭类型。它可以用作所有弓的弹药，并且是若干种更加强力的箭的制作配方的基础。木箭可以制作得到、在罐子和宝箱中找到、掉落自中箭僵尸、或从商人处以每支5 CC的价格购买。在月相3、4、7、8 期间还能从骷髅商人(电脑版、主机版、和移动版)处购买。\n\n(前代主机版、和3DS版)点燃的木箭在击中敌怪或物块后有1/3 (33.33%)几率恢复为木箭（仅当由一次射出一支箭的武器发射时）。\n\n用某些弓射出时，常规的木箭会转变为其他特殊射弹（例如熔火之怒，能将木箭转变为一种烈焰箭）。一些其他弓，比如脉冲弓(电脑版、主机版、前代主机版、和移动版)，能将任何类型的箭转变为其它们的特殊变体。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "木箭是最基础的箭类型。它可以用作所有弓的弹药，并且是若干种更加强力的箭的制作配方的基础。木箭可以制作得到、在罐子和宝箱中找到、掉落自中箭僵尸、或从商人处以每支"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。在月相3、4、7、8 期间还能从骷髅商人(电脑版、主机版、和移动版)处购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(前代主机版、和3DS版)点燃的木箭在击中敌怪或物块后有1/3 (33.33%)几率恢复为木箭（仅当由一次射出一支箭的武器发射时）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "用某些弓射出时，常规的木箭会转变为其他特殊射弹（例如熔火之怒，能将木箭转变为一种烈焰箭）。一些其他弓，比如脉冲弓(电脑版、主机版、前代主机版、和移动版)，能将任何类型的箭转变为其它们的特殊变体。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "木箭（友方）",
+      "image": "Wooden_Arrow.png"
+    },
+    "wiki_title": "木箭",
+    "item_category": "ammo"
   },
   "杰克南瓜灯发射器": {
     "name": "杰克南瓜灯发射器",
@@ -2718,7 +3703,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
     "description": "杰克南瓜灯发射器是一把困难模式、世纪之花后的发射器，其发射的爆炸杰克南瓜灯将在实体物块间弹射，直到接触敌怪或 7 秒后爆炸。爆炸杰克南瓜灯将对敌怪造成两次伤害：一次为接触，一次为爆炸。杰克南瓜灯发射器拥有 10% 基础暴击率，而非通常的 4%。\n\n杰克南瓜灯发射器以 2.5–12.5% （6.25–12.5%）的几率（取决于波数）掉落自南瓜月事件的南瓜王。杰克南瓜灯发射器掉落时，总会伴随着 25 到 50 枚爆炸杰克南瓜灯。如果玩家的物品栏中有杰克南瓜灯发射器，军火商将以15 CC每个的价格出售爆炸杰克南瓜灯。\n\n其最佳修饰语是虚幻。",
     "description_rich": [
       [
@@ -2749,6 +3733,7 @@
         }
       ]
     ],
+    "wiki_title": "杰克南瓜灯发射器",
     "item_category": "ammo"
   },
   "橡实": {
@@ -2814,125 +3799,6 @@
       }
     ],
     "recipe": null,
-    "drops": {
-      "modes": [
-        {
-          "mode": "normal",
-          "label": "经典",
-          "entries": [
-            {
-              "name": "森林树",
-              "image": "30px-Treetop_Forest_1.png",
-              "quantity": "1–2",
-              "chance": "14.1764%"
-            },
-            {
-              "name": "灰烬树",
-              "image": "35px-Treetop_Ash_1.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            },
-            {
-              "name": "珍珠木树",
-              "image": "17px-Treetop_Hallowed_1.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            },
-            {
-              "name": "针叶树",
-              "image": "29px-Treetop_Boreal_Alt1_2.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            }
-          ]
-        },
-        {
-          "mode": "expert",
-          "label": "专家",
-          "entries": [
-            {
-              "name": "森林树",
-              "image": "30px-Treetop_Forest_1.png",
-              "quantity": "1–2",
-              "chance": "14.1764%"
-            },
-            {
-              "name": "灰烬树",
-              "image": "35px-Treetop_Ash_1.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            },
-            {
-              "name": "珍珠木树",
-              "image": "17px-Treetop_Hallowed_1.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            },
-            {
-              "name": "针叶树",
-              "image": "29px-Treetop_Boreal_Alt1_2.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            }
-          ]
-        },
-        {
-          "mode": "master",
-          "label": "大师",
-          "entries": [
-            {
-              "name": "森林树",
-              "image": "30px-Treetop_Forest_1.png",
-              "quantity": "1–2",
-              "chance": "14.1764%"
-            },
-            {
-              "name": "灰烬树",
-              "image": "35px-Treetop_Ash_1.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            },
-            {
-              "name": "珍珠木树",
-              "image": "17px-Treetop_Hallowed_1.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            },
-            {
-              "name": "针叶树",
-              "image": "29px-Treetop_Boreal_Alt1_2.png",
-              "quantity": "1–2",
-              "chance": "14.2857%"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "橡实是一种用来种树的种子。橡实可以种植在普通的绿色草、神圣草、腐化草、猩红草、丛林草、沙、或雪上。种橡实的地方会出现一株树苗，若条件合适，最后会长成一棵树。在砍树或摇晃(电脑版、主机版、和移动版)树时会随机掉落橡实，它也可以从树妖处以10 CC的价格购买。\n\n橡实在放置后便无法回收。摧毁树苗不会产出任何物品。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "橡实是一种用来种树的种子。橡实可以种植在普通的绿色草、神圣草、腐化草、猩红草、丛林草、沙、或雪上。种橡实的地方会出现一株树苗，若条件合适，最后会长成一棵树。在砍树或摇晃(电脑版、主机版、和移动版)树时会随机掉落橡实，它也可以从树妖处以"
-        },
-        {
-          "type": "coin",
-          "amount": "10",
-          "coin_type": "cc"
-        },
-        {
-          "type": "text",
-          "text": "的价格购买。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "橡实在放置后便无法回收。摧毁树苗不会产出任何物品。"
-        }
-      ]
-    ],
-    "item_category": "ammo",
     "used_in": [
       {
         "station": "徒手",
@@ -3053,7 +3919,127 @@
           "image": "Topaz_Gemcorn.png"
         }
       }
-    ]
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "Treetop_Forest_1.png",
+              "quantity": "1–2",
+              "chance": "14.1764%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "Treetop_Ash_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "Treetop_Hallowed_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "针叶树",
+              "image": "Treetop_Boreal_Alt1_2.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "Treetop_Forest_1.png",
+              "quantity": "1–2",
+              "chance": "14.1764%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "Treetop_Ash_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "Treetop_Hallowed_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "针叶树",
+              "image": "Treetop_Boreal_Alt1_2.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "森林树",
+              "image": "Treetop_Forest_1.png",
+              "quantity": "1–2",
+              "chance": "14.1764%"
+            },
+            {
+              "name": "灰烬树",
+              "image": "Treetop_Ash_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "珍珠木树",
+              "image": "Treetop_Hallowed_1.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            },
+            {
+              "name": "针叶树",
+              "image": "Treetop_Boreal_Alt1_2.png",
+              "quantity": "1–2",
+              "chance": "14.2857%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "橡实是一种用来种树的种子。橡实可以种植在普通的绿色草、神圣草、腐化草、猩红草、丛林草、沙、或雪上。种橡实的地方会出现一株树苗，若条件合适，最后会长成一棵树。在砍树或摇晃(电脑版、主机版、和移动版)树时会随机掉落橡实，它也可以从树妖处以10 CC的价格购买。\n\n橡实在放置后便无法回收。摧毁树苗不会产出任何物品。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "橡实是一种用来种树的种子。橡实可以种植在普通的绿色草、神圣草、腐化草、猩红草、丛林草、沙、或雪上。种橡实的地方会出现一株树苗，若条件合适，最后会长成一棵树。在砍树或摇晃(电脑版、主机版、和移动版)树时会随机掉落橡实，它也可以从树妖处以"
+        },
+        {
+          "type": "coin",
+          "amount": "10",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "橡实在放置后便无法回收。摧毁树苗不会产出任何物品。"
+        }
+      ]
+    ],
+    "wiki_title": "橡实",
+    "item_category": "ammo"
   },
   "毒刺发射器": {
     "name": "毒刺发射器",
@@ -3131,7 +4117,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
     "description": "毒刺发射器是一种困难模式、石巨人后的发射器。可以自动开火，毒刺矢是其弹药。毒刺矢会高速飞行，并会在撞击到敌怪或实体物块时爆炸，造成范围伤害。它们可以释放出 2–5 个弹片碎片，它们会向大角度的弧形区域飞行，并造成额外的小爆炸。\n\n(电脑版、主机版、和移动版)毒刺矢会在直接击中单个目标时造成双倍伤害（124 基础伤害）。\n\n毒刺发射器有(电脑版、主机版、和移动版)1/7 (14.29%)/(前代主机版、和3DS版)1/8 (12.5%)几率掉落自石巨人。毒刺发射器总会与 60 至 99 枚毒刺矢一起掉落。如果玩家的物品栏中有毒刺发射器，巫医或军火商将以每个75 CC的价格出售毒刺矢，在前代主机版前代主机版和任天堂3DS任天堂3DS版版中则在爆破专家处购买（每个10 CC）。\n\n其最佳修饰语是虚幻。",
     "description_rich": [
       [
@@ -3195,6 +4180,835 @@
         }
       ]
     ],
+    "page_type": "pet",
+    "pet": {
+      "name": "毒刺发射器",
+      "image": "Stynger_Shot.png"
+    },
+    "wiki_title": "毒刺发射器",
+    "item_category": "ammo"
+  },
+  "毒液弹": {
+    "name": "毒液弹",
+    "image": "Venom_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "15 (电脑版、主机版、和移动版) / 14 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4.1",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "5.3",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "3×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "对目标施放酸性毒液",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "空心子弹",
+          "image": "Empty_Bullet.png",
+          "amount": "50"
+        },
+        {
+          "name": "小瓶毒液",
+          "image": "Vial_of_Venom.png"
+        }
+      ],
+      "result": {
+        "name": "毒液弹",
+        "image": "Venom_Bullet.png",
+        "amount": "50"
+      }
+    },
+    "description": "毒液弹是种世纪之花后的弹药，是用困难模式启用后军火商出售的空心子弹制造的六种可制作子弹之一。它目前有着游戏中所有子弹内第二高的基础伤害，只被夜明弹(电脑版、主机版、和移动版)所超越，在命中目标时造成持续 10 秒的酸性毒液减益。\n\n一组 50 发毒液弹的花费是17 SC，即每发子弹35 CC。制作 1000 发毒液弹（20 组，每组 50 发）的花费是3 GC。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "毒液弹是种世纪之花后的弹药，是用困难模式启用后军火商出售的空心子弹制造的六种可制作子弹之一。它目前有着游戏中所有子弹内第二高的基础伤害，只被夜明弹(电脑版、主机版、和移动版)所超越，在命中目标时造成持续 10 秒的酸性毒液减益。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "一组 50 发毒液弹的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "17",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "，即每发子弹"
+        },
+        {
+          "type": "coin",
+          "amount": "35",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "。制作 1000 发毒液弹（20 组，每组 50 发）的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "3",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "毒液弹",
+      "image": "Venom_Bullet_(projectile).png"
+    },
+    "wiki_title": "毒液弹",
+    "item_category": "ammo"
+  },
+  "毒液箭": {
+    "name": "毒液箭",
+    "image": "Venom_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "19",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4.2",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4.3",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "对目标施放酸性毒液",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "18",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "35"
+        },
+        {
+          "name": "小瓶毒液",
+          "image": "Vial_of_Venom.png"
+        }
+      ],
+      "result": {
+        "name": "毒液箭",
+        "image": "Venom_Arrow.png",
+        "amount": "35"
+      }
+    },
+    "description": "毒液箭是种困难模式、世纪之花后的箭，用作弓和连弩的弹药。它们具有所有箭中最高的基础伤害，当它们击中敌怪时会造成持续 10 秒的酸性毒液减益。\n\n在所有困难模式的箭中，他们是最容易制作的，因为其材料都可以自NPC处购买：它们只需要木箭（每个5 CC，商人处购买）和小瓶毒液（每个15 SC，巫医处购买），35 支毒液箭一共需要16 SC（每支约48 CC），或者说，一整组 9999 支毒液箭要47 GC。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "毒液箭是种困难模式、世纪之花后的箭，用作弓和连弩的弹药。它们具有所有箭中最高的基础伤害，当它们击中敌怪时会造成持续 10 秒的酸性毒液减益。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在所有困难模式的箭中，他们是最容易制作的，因为其材料都可以自NPC处购买：它们只需要木箭（每个"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "，商人处购买）和小瓶毒液（每个"
+        },
+        {
+          "type": "coin",
+          "amount": "15",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "，巫医处购买），35 支毒液箭一共需要"
+        },
+        {
+          "type": "coin",
+          "amount": "16",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "（每支约"
+        },
+        {
+          "type": "coin",
+          "amount": "48",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "），或者说，一整组 9999 支毒液箭要"
+        },
+        {
+          "type": "coin",
+          "amount": "47",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "毒液箭",
+      "image": "Venom_Arrow.png"
+    },
+    "wiki_title": "毒液箭",
+    "item_category": "ammo"
+  },
+  "毒镖": {
+    "name": "毒镖",
+    "image": "Poison_Dart.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "10 (电脑版、主机版、和移动版) / 8 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "2",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "对敌人施毒",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "毒刺",
+          "image": "Stinger.png"
+        }
+      ],
+      "result": {
+        "name": "毒镖",
+        "image": "Poison_Dart.png",
+        "amount": "50"
+      }
+    },
+    "description": "毒镖是一种用于吹箭筒、吹管、飞镖手枪(电脑版、主机版、和移动版)和飞镖步枪(电脑版、主机版、和移动版)的困难模式之前的飞镖。它们总会对敌怪造成中毒减益，有1/3 (33.33%)几率持续 60 秒，2/3 (66.67%)几率持续 30 秒。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "毒镖是一种用于吹箭筒、吹管、飞镖手枪(电脑版、主机版、和移动版)和飞镖步枪(电脑版、主机版、和移动版)的困难模式之前的飞镖。它们总会对敌怪造成中毒减益，有1/3 (33.33%)几率持续 60 秒，2/3 (66.67%)几率持续 30 秒。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "毒镖",
+      "image": "Poison_Dart.png"
+    },
+    "wiki_title": "毒镖",
+    "item_category": "ammo"
+  },
+  "水晶子弹": {
+    "name": "水晶子弹",
+    "image": "Crystal_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "9 (电脑版、主机版、和移动版) / 8 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "1",
+        "extra": "（极弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "5",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "在撞击时产生水晶碎块",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "6",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball.png",
+          "amount": "100"
+        },
+        {
+          "name": "水晶碎块",
+          "image": "Crystal_Shard.png"
+        }
+      ],
+      "result": {
+        "name": "水晶子弹",
+        "image": "Crystal_Bullet.png",
+        "amount": "100"
+      }
+    },
+    "description": "水晶子弹是一种困难模式子弹，是用于枪的弹药。水晶子弹在击中敌怪或实心物块时会破碎，分裂为(电脑版、主机版、和移动版)两个/(前代主机版、和3DS版)三个射程有限的小碎片，造成原射弹伤害的 50%（4 伤害）。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "水晶子弹是一种困难模式子弹，是用于枪的弹药。水晶子弹在击中敌怪或实心物块时会破碎，分裂为(电脑版、主机版、和移动版)两个/(前代主机版、和3DS版)三个射程有限的小碎片，造成原射弹伤害的 50%（4 伤害）。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "水晶子弹",
+      "image": "Crystal_Bullet_(projectile).png"
+    },
+    "wiki_title": "水晶子弹",
+    "item_category": "ammo"
+  },
+  "水晶镖": {
+    "name": "水晶镖",
+    "image": "Crystal_Dart.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "14",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3.5",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "1",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "在敌人之间弹来弹去",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "6",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "水晶碎块",
+          "image": "Crystal_Shard.png"
+        }
+      ],
+      "result": {
+        "name": "水晶镖",
+        "image": "Crystal_Dart.png",
+        "amount": "100"
+      }
+    },
+    "description": "水晶镖是一个困难模式的飞镖。其可在敌怪和物块间反复反弹，自动瞄准附近敌怪。水晶镖能够在物块上反弹或者击中敌怪总计 5 次，每次反弹其伤害降低 15%。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "水晶镖是一个困难模式的飞镖。其可在敌怪和物块间反复反弹，自动瞄准附近敌怪。水晶镖能够在物块上反弹或者击中敌怪总计 5 次，每次反弹其伤害降低 15%。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "水晶镖",
+      "image": "Crystal_Dart.png"
+    },
+    "wiki_title": "水晶镖",
+    "item_category": "ammo"
+  },
+  "派对弹": {
+    "name": "派对弹",
+    "image": "Party_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "10",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "5",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "5.1",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "3×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "碰撞时爆炸成彩纸",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "2",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "空心子弹",
+          "image": "Empty_Bullet.png",
+          "amount": "50"
+        },
+        {
+          "name": "彩纸",
+          "image": "Confetti.png"
+        }
+      ],
+      "result": {
+        "name": "派对弹",
+        "image": "Party_Bullet.png",
+        "amount": "50"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "猪龙彩罐",
+              "image": "Pigronata.png",
+              "quantity": "30–90",
+              "chance": "1/9 (11.11%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "猪龙彩罐",
+              "image": "Pigronata.png",
+              "quantity": "30–90",
+              "chance": "1/9 (11.11%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "猪龙彩罐",
+              "image": "Pigronata.png",
+              "quantity": "30–90",
+              "chance": "1/9 (11.11%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "派对弹是用困难模式中军火商出售的空心子弹制造的六种可制作弹药之一。它们在接触到敌怪或实心块后会释放出一团彩纸，但没有其他特殊属性。\n\n一组 50 发派对弹的花费是4 SC，即每发子弹9 CC。制作 1000 发派对弹（20 组，每组 50 发）的花费是90 SC。\n\n在电脑版电脑版、主机版主机版、和移动版移动版中，它们也会掉落自猪龙彩罐，掉落率为1/9 (11.11%)。猪龙彩罐可以在派对(电脑版、主机版、和移动版)期间在派对女孩处购买。这让派对弹在困难模式之前即可获得。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "派对弹是用困难模式中军火商出售的空心子弹制造的六种可制作弹药之一。它们在接触到敌怪或实心块后会释放出一团彩纸，但没有其他特殊属性。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "一组 50 发派对弹的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "4",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "，即每发子弹"
+        },
+        {
+          "type": "coin",
+          "amount": "9",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "。制作 1000 发派对弹（20 组，每组 50 发）的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "90",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，它们也会掉落自猪龙彩罐，掉落率为1/9 (11.11%)。猪龙彩罐可以在派对(电脑版、主机版、和移动版)期间在派对女孩处购买。这让派对弹在困难模式之前即可获得。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "派对弹",
+      "image": "Party_Bullet_(projectile).png"
+    },
+    "wiki_title": "派对弹",
+    "item_category": "ammo"
+  },
+  "流星弹": {
+    "name": "流星弹",
+    "image": "Meteor_Shot.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "8 (电脑版、主机版、和移动版) / 9 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "1",
+        "extra": "（极弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "3",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "01*",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "1",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball.png",
+          "amount": "70"
+        },
+        {
+          "name": "陨石锭",
+          "image": "Meteorite_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "流星弹",
+        "image": "Meteor_Shot.png",
+        "amount": "70"
+      }
+    },
+    "description": "流星弹是一种由枪使用的子弹。开火后，它们可从坚硬表面反弹，或者穿透一个敌怪，但无法兼而有之。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "流星弹是一种由枪使用的子弹。开火后，它们可从坚硬表面反弹，或者穿透一个敌怪，但无法兼而有之。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "流星弹",
+      "image": "Meteor_Shot_(projectile).png"
+    },
+    "wiki_title": "流星弹",
     "item_category": "ammo"
   },
   "火枪子弹": {
@@ -3264,86 +5078,6 @@
       }
     ],
     "recipe": null,
-    "drops": {
-      "modes": [
-        {
-          "mode": "normal",
-          "label": "经典",
-          "entries": [
-            {
-              "name": "礼物",
-              "image": "Present.png",
-              "quantity": "30–60",
-              "chance": "0.64%0.6% （困难模式）"
-            }
-          ]
-        },
-        {
-          "mode": "expert",
-          "label": "专家",
-          "entries": [
-            {
-              "name": "礼物",
-              "image": "Present.png",
-              "quantity": "30–60",
-              "chance": "0.64%0.6% （困难模式）"
-            }
-          ]
-        },
-        {
-          "mode": "master",
-          "label": "大师",
-          "entries": [
-            {
-              "name": "礼物",
-              "image": "Present.png",
-              "quantity": "30–60",
-              "chance": "0.64%0.6% （困难模式）"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "火枪子弹是基本类型的子弹，用作枪的弹药。它没有任何特殊属性，用于制作各种更先进的弹药。\n\n火枪子弹可以在军火商处以每颗7 CC的价格购买，或者说 1000 发70 SC。它们也可以从暗影珠和猩红之心（随着火枪或夺命枪）、或从圣诞节期间的礼物（随着红莱德枪）中获得。\n\n无尽火枪袋(电脑版、主机版、和移动版)起到了无限数量火枪子弹的作用。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "火枪子弹是基本类型的子弹，用作枪的弹药。它没有任何特殊属性，用于制作各种更先进的弹药。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "火枪子弹可以在军火商处以每颗"
-        },
-        {
-          "type": "coin",
-          "amount": "7",
-          "coin_type": "cc"
-        },
-        {
-          "type": "text",
-          "text": "的价格购买，或者说 1000 发"
-        },
-        {
-          "type": "coin",
-          "amount": "70",
-          "coin_type": "sc"
-        },
-        {
-          "type": "text",
-          "text": "。它们也可以从暗影珠和猩红之心（随着火枪或夺命枪）、或从圣诞节期间的礼物（随着红莱德枪）中获得。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "无尽火枪袋(电脑版、主机版、和移动版)起到了无限数量火枪子弹的作用。"
-        }
-      ]
-    ],
-    "item_category": "ammo",
     "used_in": [
       {
         "station": "秘银砧或山铜砧",
@@ -3568,7 +5302,906 @@
           "amount": "70"
         }
       }
-    ]
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "30–60",
+              "chance": "0.64%0.6% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "30–60",
+              "chance": "0.64%0.6% （困难模式）"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "礼物",
+              "image": "Present.png",
+              "quantity": "30–60",
+              "chance": "0.64%0.6% （困难模式）"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "火枪子弹是基本类型的子弹，用作枪的弹药。它没有任何特殊属性，用于制作各种更先进的弹药。\n\n火枪子弹可以在军火商处以每颗7 CC的价格购买，或者说 1000 发70 SC。它们也可以从暗影珠和猩红之心（随着火枪或夺命枪）、或从圣诞节期间的礼物（随着红莱德枪）中获得。\n\n无尽火枪袋(电脑版、主机版、和移动版)起到了无限数量火枪子弹的作用。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "火枪子弹是基本类型的子弹，用作枪的弹药。它没有任何特殊属性，用于制作各种更先进的弹药。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "火枪子弹可以在军火商处以每颗"
+        },
+        {
+          "type": "coin",
+          "amount": "7",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买，或者说 1000 发"
+        },
+        {
+          "type": "coin",
+          "amount": "70",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "。它们也可以从暗影珠和猩红之心（随着火枪或夺命枪）、或从圣诞节期间的礼物（随着红莱德枪）中获得。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "无尽火枪袋(电脑版、主机版、和移动版)起到了无限数量火枪子弹的作用。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "子弹",
+      "image": "Bullet_(projectile).png"
+    },
+    "wiki_title": "火枪子弹",
+    "item_category": "ammo"
+  },
+  "灵液弹": {
+    "name": "灵液弹",
+    "image": "Ichor_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "13",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "5.25",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "3×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "降低目标的防御",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "6",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball.png",
+          "amount": "150"
+        },
+        {
+          "name": "灵液",
+          "image": "Ichor.png"
+        }
+      ],
+      "result": {
+        "name": "灵液弹",
+        "image": "Ichor_Bullet.png",
+        "amount": "150"
+      }
+    },
+    "description": "灵液弹是一种困难模式的子弹，可以对敌怪造成灵液减益，将敌怪的防御降低(电脑版、主机版、和移动版)15 /(前代主机版、和3DS版)20，可以将其基础的 13 伤害等效提升最高(电脑版、主机版、和移动版)8 /(前代主机版、和3DS版)10，总等效伤害最高为(电脑版、主机版、和移动版)21 /(前代主机版、和3DS版)23。它们是腐化之地的诅咒弹的猩红之地对应物。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "灵液弹是一种困难模式的子弹，可以对敌怪造成灵液减益，将敌怪的防御降低(电脑版、主机版、和移动版)15 /(前代主机版、和3DS版)20，可以将其基础的 13 伤害等效提升最高(电脑版、主机版、和移动版)8 /(前代主机版、和3DS版)10，总等效伤害最高为(电脑版、主机版、和移动版)21 /(前代主机版、和3DS版)23。它们是腐化之地的诅咒弹的猩红之地对应物。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "灵液弹",
+      "image": "Ichor_Bullet_(projectile).png"
+    },
+    "wiki_title": "灵液弹",
+    "item_category": "ammo"
+  },
+  "灵液箭": {
+    "name": "灵液箭",
+    "image": "Ichor_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "16",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4.25",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "降低目标的防御",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "150"
+        },
+        {
+          "name": "灵液",
+          "image": "Ichor.png"
+        }
+      ],
+      "result": {
+        "name": "灵液箭",
+        "image": "Ichor_Arrow.png",
+        "amount": "150"
+      }
+    },
+    "description": "灵液箭是一种困难模式箭，能造成灵液减益，持续 10 秒（在PvP中为 15 秒）。它可被视为诅咒箭的猩红之地对应物，诅咒箭会造成诅咒狱火减益。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "灵液箭是一种困难模式箭，能造成灵液减益，持续 10 秒（在PvP中为 15 秒）。它可被视为诅咒箭的猩红之地对应物，诅咒箭会造成诅咒狱火减益。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "灵液箭",
+      "image": "Ichor_Arrow.png"
+    },
+    "wiki_title": "灵液箭",
+    "item_category": "ammo"
+  },
+  "灵液镖": {
+    "name": "灵液镖",
+    "image": "Ichor_Dart.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "7",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2.5",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "炸成多个飞镖",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "6",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "灵液",
+          "image": "Ichor.png"
+        }
+      ],
+      "result": {
+        "name": "灵液镖",
+        "image": "Ichor_Dart.png",
+        "amount": "100"
+      }
+    },
+    "description": "灵液镖是一个困难模式的飞镖。发射初始时，其可无限穿透。在随机飞行 0.1 秒到 0.5 秒后，灵液镖分裂为 3–5 个无穿透的飞镖。灵液镖造成 7-14 秒灵液减益。\n\n它是腐化的诅咒镖的猩红对应物。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "灵液镖是一个困难模式的飞镖。发射初始时，其可无限穿透。在随机飞行 0.1 秒到 0.5 秒后，灵液镖分裂为 3–5 个无穿透的飞镖。灵液镖造成 7-14 秒灵液减益。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它是腐化的诅咒镖的猩红对应物。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "灵液镖",
+      "image": "Ichor_Dart.png"
+    },
+    "wiki_title": "灵液镖",
+    "item_category": "ammo"
+  },
+  "炮弹": {
+    "name": "炮弹",
+    "image": "Cannonball.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "锤击可改变方向\n不可用于大炮",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "锤击可改变方向\n不可用于大炮"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "40",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 25 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "炮弹是供大炮使用的弹药。在由玩家手持或在热键栏上选定时，对大炮使用⚒使用/攻击就会以大炮当前角度射出一炮。也可以通过按住自动选择按键同时点击大炮来从物品栏内发射炮弹。在接触实心块时，炮弹会爆炸，在小半径内造成伤害但不会破坏放置的物块。炮弹可以每个2 SC购买自海盗。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "炮弹是供大炮使用的弹药。在由玩家手持或在热键栏上选定时，对大炮使用"
+        },
+        {
+          "type": "key",
+          "symbol": "⚒",
+          "label": "使用/攻击"
+        },
+        {
+          "type": "text",
+          "text": "就会以大炮当前角度射出一炮。也可以通过按住自动选择按键同时点击大炮来从物品栏内发射炮弹。在接触实心块时，炮弹会爆炸，在小半径内造成伤害但不会破坏放置的物块。炮弹可以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "2",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "购买自海盗。"
+        }
+      ]
+    ],
+    "wiki_title": "炮弹",
+    "item_category": "ammo"
+  },
+  "烈焰箭": {
+    "name": "烈焰箭",
+    "image": "Flaming_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "7",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3.5",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "2",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "10"
+        },
+        {
+          "name": "火把",
+          "image": "Torch.png"
+        }
+      ],
+      "result": {
+        "name": "烈焰箭",
+        "image": "Flaming_Arrow.png",
+        "amount": "10"
+      }
+    },
+    "description": "烈焰箭是一种困难模式之前的箭。它有1/3 (33.33%)几率对敌怪施加持续 3 秒的着火了！减益。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "烈焰箭是一种困难模式之前的箭。它有1/3 (33.33%)几率对敌怪施加持续 3 秒的着火了！减益。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "烈火箭",
+      "image": "Flaming_Arrow.png"
+    },
+    "wiki_title": "烈焰箭",
+    "item_category": "ammo"
+  },
+  "爆炸兔": {
+    "name": "爆炸兔",
+    "image": "Explosive_Bunny.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "20",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“+800%跳跃高度”",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "7",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 25 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "兔兔",
+          "image": "Bunny.png"
+        },
+        {
+          "name": "雷管",
+          "image": "Dynamite.png"
+        }
+      ],
+      "result": {
+        "name": "爆炸兔",
+        "image": "Explosive_Bunny.png"
+      }
+    },
+    "description": "爆炸兔是一种可作为兔兔炮的弹药的物品。制作它需要一只兔兔，需要用任意虫网捕捉。(电脑版、主机版、和移动版)也可以将其释放为小动物，它会像其他小动物一样四处游荡。释放时它总是会放置在玩家脚下，而非像大多数其他小动物那样出现在光标处。\n\n爆炸兔小动物被杀死时，它会爆炸，对以它为中心 8×8 格范围内的玩家造成 350 /700/1050伤害（对NPC、小动物、和敌怪为 175 伤害），但不会破坏图格。兔兔炮发射的爆炸兔射弹和小动物爆炸时不会伤害玩家。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "爆炸兔是一种可作为兔兔炮的弹药的物品。制作它需要一只兔兔，需要用任意虫网捕捉。(电脑版、主机版、和移动版)也可以将其释放为小动物，它会像其他小动物一样四处游荡。释放时它总是会放置在玩家脚下，而非像大多数其他小动物那样出现在光标处。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "爆炸兔小动物被杀死时，它会爆炸，对以它为中心 8×8 格范围内的玩家造成 350 /700/1050伤害（对NPC、小动物、和敌怪为 175 伤害），但不会破坏图格。兔兔炮发射的爆炸兔射弹和小动物爆炸时不会伤害玩家。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "爆炸兔",
+      "image": "Explosive_Bunny.png"
+    },
+    "wiki_title": "爆炸兔",
+    "item_category": "ammo"
+  },
+  "爆破弹": {
+    "name": "爆破弹",
+    "image": "Exploding_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "10",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "6.6",
+        "extra": "（较强击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4.7",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "3×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "碰撞时爆炸",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "空心子弹",
+          "image": "Empty_Bullet.png",
+          "amount": "50"
+        },
+        {
+          "name": "爆炸粉",
+          "image": "Explosive_Powder.png"
+        }
+      ],
+      "result": {
+        "name": "爆破弹",
+        "image": "Exploding_Bullet.png",
+        "amount": "50"
+      }
+    },
+    "description": "爆破弹是一种困难模式子弹。它会在接触敌怪或物块时爆炸，对爆炸范围内的敌怪造成伤害和击退。\n\n一组 50 发爆破弹的花费是14 SC，即每发子弹29 CC。制作 1000 发爆破弹（20 组，每组 50 发）的花费是2 GC。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "爆破弹是一种困难模式子弹。它会在接触敌怪或物块时爆炸，对爆炸范围内的敌怪造成伤害和击退。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "一组 50 发爆破弹的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "14",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "，即每发子弹"
+        },
+        {
+          "type": "coin",
+          "amount": "29",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "。制作 1000 发爆破弹（20 组，每组 50 发）的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "2",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "爆炸子弹",
+      "image": "Explosive_Bullet_(projectile).png"
+    },
+    "wiki_title": "爆破弹",
+    "item_category": "ammo"
+  },
+  "狱炎箭": {
+    "name": "狱炎箭",
+    "image": "Hellfire_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "13 (电脑版、主机版、和移动版) / 10 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "8",
+        "extra": "（很强击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "6.5",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "02*",
+        "color": "#55dd55"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "100"
+        },
+        {
+          "name": "狱石锭",
+          "image": "Hellstone_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "狱炎箭",
+        "image": "Hellfire_Arrow.png",
+        "amount": "100"
+      }
+    },
+    "description": "狱炎箭是一种弹药，可在击中后如手榴弹一般制造小型爆炸，伤害区域中的所有敌怪。它们总会在击中后被摧毁，并且射弹速度显著高于其他箭。在前代主机版前代主机版和任天堂3DS任天堂3DS版版中，爆炸也会伤害玩家。\n\n狱炎箭可以在地狱中的暗影箱和罐子里找到、在砧处制作、或在困难模式中从爆破专家处以每支1 SC的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "狱炎箭是一种弹药，可在击中后如手榴弹一般制造小型爆炸，伤害区域中的所有敌怪。它们总会在击中后被摧毁，并且射弹速度显著高于其他箭。在"
+        },
+        {
+          "type": "icon",
+          "image": "Old-Gen_Console_only.png",
+          "alt": "前代主机版"
+        },
+        {
+          "type": "text",
+          "text": "前代主机版和任天堂3DS"
+        },
+        {
+          "type": "icon",
+          "image": "3DS.svg",
+          "alt": "任天堂3DS版"
+        },
+        {
+          "type": "text",
+          "text": "版中，爆炸也会伤害玩家。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "狱炎箭可以在地狱中的暗影箱和罐子里找到、在砧处制作、或在困难模式中从爆破专家处以每支"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "狱炎箭",
+      "image": "Hellfire_Arrow.png"
+    },
+    "wiki_title": "狱炎箭",
+    "item_category": "ammo"
   },
   "玉米糖步枪": {
     "name": "玉米糖步枪",
@@ -3640,7 +6273,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
     "description": "玉米糖步枪是一把困难模式世纪之花后的枪，发射玉米糖为弹药。玉米糖射弹可以穿透两个敌怪并反弹四次，在第五次碰撞或命中第三个敌怪时消失。这把枪具有很高的射速，不同于大部分枪，它的射弹受重力影响而无法在半空中停留太久，不过它们的反弹能力帮助它们延长了射程。玉米糖步枪拥有 10% 基础暴击率，而不是通常的 4%，并有1/3 (33.33%)的几率省下弹药。\n\n玉米糖步枪有 2.5–12.5%（6.25–12.5%）几率（取决于波数）由南瓜月事件中的南瓜王掉落。玉米糖步枪掉落时，总会伴随着 50 到 100 颗玉米糖。如果玩家的物品栏中有玉米糖步枪，军火商将以每个5 CC的价格出售玉米糖。\n\n其最佳修饰语是虚幻。",
     "description_rich": [
       [
@@ -3671,6 +6303,7 @@
         }
       ]
     ],
+    "wiki_title": "玉米糖步枪",
     "item_category": "ammo"
   },
   "电线": {
@@ -3697,7 +6330,7 @@
         "label": "稀有度",
         "value": "白色",
         "extra": "",
-        "sortkey": "00*",
+        "sortkey": "",
         "color": "#ffffff"
       },
       {
@@ -3731,62 +6364,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
-    "description": "电线是一种独特的物品，通常用于将机械连接到起动装置（如压力板、计时器、开关、或控制杆）。电线要用扳手（或其升级物）放置，并用钢丝钳（或其升级物）回收，这两者都只能从机械师处获得。用不同颜色的扳手放置的电线也会是不同颜色的，这允许各自独立的电线线路有所交叠而不会互相干扰。\n\n电线本身可以从机械师处以每个5 SC的价格购买，但也可以从自然生成的机械中得到，它们稀疏散布在洞穴，并频繁出现在地牢和丛林神庙中，例如陷阱和挂链灯笼与开关的布置中。\n\n电线在放置时占据的是它们自身专用的放置层，因此可以和物块、墙、家具、甚植物、和液体占据同一格空间。电线也可以放置在半空中，不需要支撑。爆炸不会影响到放置的电线。\n\n默认情况下，放置的电线是不可见的，除非玩家手持机械相关的物品作为手中的工具（例如：压力板、扳手，或者甚至一组电线自身）。但是，如果玩家带着机械透镜(电脑版、主机版、和移动版)（或其升级物宏伟蓝图(电脑版、主机版、和移动版)），他们就不仅能看见电线，还能分别控制各种颜色电线的可见性。\n\n使用扳手和钢丝钳，玩家的电线放置与拆除范围大致上能达到水平与垂直各 25 格。用宏伟蓝图，玩家就能在可见屏幕上的任何地方放置或拆除电线。\n\n当电线放置在与起动装置和机械同一格空间时视为与这些物品“连接”。通常，这可以由电线和物品视觉上“接触”来判断，不过并非所有物品都会完全地占据其图格（例如某些雕像）。\n\n电线被视为扳手的“弹药”，因此能放置在玩家物品栏的弹药栏中。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "电线是一种独特的物品，通常用于将机械连接到起动装置（如压力板、计时器、开关、或控制杆）。电线要用扳手（或其升级物）放置，并用钢丝钳（或其升级物）回收，这两者都只能从机械师处获得。用不同颜色的扳手放置的电线也会是不同颜色的，这允许各自独立的电线线路有所交叠而不会互相干扰。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "电线本身可以从机械师处以每个"
-        },
-        {
-          "type": "coin",
-          "amount": "5",
-          "coin_type": "sc"
-        },
-        {
-          "type": "text",
-          "text": "的价格购买，但也可以从自然生成的机械中得到，它们稀疏散布在洞穴，并频繁出现在地牢和丛林神庙中，例如陷阱和挂链灯笼与开关的布置中。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "电线在放置时占据的是它们自身专用的放置层，因此可以和物块、墙、家具、甚植物、和液体占据同一格空间。电线也可以放置在半空中，不需要支撑。爆炸不会影响到放置的电线。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "默认情况下，放置的电线是不可见的，除非玩家手持机械相关的物品作为手中的工具（例如：压力板、扳手，或者甚至一组电线自身）。但是，如果玩家带着机械透镜(电脑版、主机版、和移动版)（或其升级物宏伟蓝图(电脑版、主机版、和移动版)），他们就不仅能看见电线，还能分别控制各种颜色电线的可见性。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "使用扳手和钢丝钳，玩家的电线放置与拆除范围大致上能达到水平与垂直各 25 格。用宏伟蓝图，玩家就能在可见屏幕上的任何地方放置或拆除电线。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "当电线放置在与起动装置和机械同一格空间时视为与这些物品“连接”。通常，这可以由电线和物品视觉上“接触”来判断，不过并非所有物品都会完全地占据其图格（例如某些雕像）。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "电线被视为扳手的“弹药”，因此能放置在玩家物品栏的弹药栏中。"
-        }
-      ]
-    ],
-    "item_category": "ammo",
     "used_in": [
       {
         "station": "铁砧或铅砧",
@@ -5416,7 +7993,7 @@
         "ingredients": [
           {
             "name": "暗影之魂",
-            "image": "Soul_of_Night.png",
+            "image": "Soul_of_Night.gif",
             "amount": "5"
           },
           {
@@ -5438,7 +8015,7 @@
         "ingredients": [
           {
             "name": "光明之魂",
-            "image": "Soul_of_Light.png",
+            "image": "Soul_of_Light.gif",
             "amount": "5"
           },
           {
@@ -5460,7 +8037,7 @@
         "ingredients": [
           {
             "name": "视域之魂",
-            "image": "Soul_of_Sight.png"
+            "image": "Soul_of_Sight.gif"
           },
           {
             "name": "任何铁锭",
@@ -5714,7 +8291,977 @@
           "image": "Trapped_Obsidian_Chest.png"
         }
       }
-    ]
+    ],
+    "description": "电线是一种独特的物品，通常用于将机械连接到起动装置（如压力板、计时器、开关、或控制杆）。电线要用扳手（或其升级物）放置，并用钢丝钳（或其升级物）回收，这两者都只能从机械师处获得。用不同颜色的扳手放置的电线也会是不同颜色的，这允许各自独立的电线线路有所交叠而不会互相干扰。\n\n电线本身可以从机械师处以每个5 SC的价格购买，但也可以从自然生成的机械中得到，它们稀疏散布在洞穴，并频繁出现在地牢和丛林神庙中，例如陷阱和挂链灯笼与开关的布置中。\n\n电线在放置时占据的是它们自身专用的放置层，因此可以和物块、墙、家具、甚植物、和液体占据同一格空间。电线也可以放置在半空中，不需要支撑。爆炸不会影响到放置的电线。\n\n默认情况下，放置的电线是不可见的，除非玩家手持机械相关的物品作为手中的工具（例如：压力板、扳手，或者甚至一组电线自身）。但是，如果玩家带着机械透镜(电脑版、主机版、和移动版)（或其升级物宏伟蓝图(电脑版、主机版、和移动版)），他们就不仅能看见电线，还能分别控制各种颜色电线的可见性。\n\n使用扳手和钢丝钳，玩家的电线放置与拆除范围大致上能达到水平与垂直各 25 格。用宏伟蓝图，玩家就能在可见屏幕上的任何地方放置或拆除电线。\n\n当电线放置在与起动装置和机械同一格空间时视为与这些物品“连接”。通常，这可以由电线和物品视觉上“接触”来判断，不过并非所有物品都会完全地占据其图格（例如某些雕像）。\n\n电线被视为扳手的“弹药”，因此能放置在玩家物品栏的弹药栏中。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "电线是一种独特的物品，通常用于将机械连接到起动装置（如压力板、计时器、开关、或控制杆）。电线要用扳手（或其升级物）放置，并用钢丝钳（或其升级物）回收，这两者都只能从机械师处获得。用不同颜色的扳手放置的电线也会是不同颜色的，这允许各自独立的电线线路有所交叠而不会互相干扰。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "电线本身可以从机械师处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "5",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买，但也可以从自然生成的机械中得到，它们稀疏散布在洞穴，并频繁出现在地牢和丛林神庙中，例如陷阱和挂链灯笼与开关的布置中。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "电线在放置时占据的是它们自身专用的放置层，因此可以和物块、墙、家具、甚植物、和液体占据同一格空间。电线也可以放置在半空中，不需要支撑。爆炸不会影响到放置的电线。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "默认情况下，放置的电线是不可见的，除非玩家手持机械相关的物品作为手中的工具（例如：压力板、扳手，或者甚至一组电线自身）。但是，如果玩家带着机械透镜(电脑版、主机版、和移动版)（或其升级物宏伟蓝图(电脑版、主机版、和移动版)），他们就不仅能看见电线，还能分别控制各种颜色电线的可见性。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "使用扳手和钢丝钳，玩家的电线放置与拆除范围大致上能达到水平与垂直各 25 格。用宏伟蓝图，玩家就能在可见屏幕上的任何地方放置或拆除电线。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当电线放置在与起动装置和机械同一格空间时视为与这些物品“连接”。通常，这可以由电线和物品视觉上“接触”来判断，不过并非所有物品都会完全地占据其图格（例如某些雕像）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "电线被视为扳手的“弹药”，因此能放置在玩家物品栏的弹药栏中。"
+        }
+      ]
+    ],
+    "wiki_title": "电线",
+    "item_category": "ammo"
+  },
+  "种子": {
+    "name": "种子",
+    "image": "Seed.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "4 (电脑版、主机版、和移动版) / 1 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "工具提示",
+        "value": "搭配吹管使用",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "种子是一种困难模式之前的飞镖，用于吹箭筒、吹管、飞镖手枪(电脑版、主机版、和移动版)和飞镖步枪(电脑版、主机版、和移动版)。可以通过用任意工具或武器来割下长在草地上、粘土盆中或种植盆(电脑版、主机版、和移动版)中的杂草来收集它们。种子只在人物在物品栏中携带有吹管或吹箭筒时才会掉落。花朵通常掉落 4 颗种子，而高草通常掉落 1–2 颗种子。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "种子是一种困难模式之前的飞镖，用于吹箭筒、吹管、飞镖手枪(电脑版、主机版、和移动版)和飞镖步枪(电脑版、主机版、和移动版)。可以通过用任意工具或武器来割下长在草地上、粘土盆中或种植盆(电脑版、主机版、和移动版)中的杂草来收集它们。种子只在人物在物品栏中携带有吹管或吹箭筒时才会掉落。花朵通常掉落 4 颗种子，而高草通常掉落 1–2 颗种子。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "种子",
+      "image": "Seed_(projectile).png"
+    },
+    "wiki_title": "种子",
+    "item_category": "ammo"
+  },
+  "纳米弹": {
+    "name": "纳米弹",
+    "image": "Nano_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "15",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3.6",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4.6",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "3×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "造成困惑效果，并在撞墙后弹回",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "空心子弹",
+          "image": "Empty_Bullet.png",
+          "amount": "50"
+        },
+        {
+          "name": "纳米机器人",
+          "image": "Nanites.png"
+        }
+      ],
+      "result": {
+        "name": "纳米弹",
+        "image": "Nano_Bullet.png",
+        "amount": "50"
+      }
+    },
+    "description": "纳米弹是由空心子弹制成的 6 种可制作子弹之一。用纳米弹射击敌怪会使敌怪受到困惑减益，使他们的动作逆转，远离玩家而不是冲向玩家。纳米弹拥有所有子弹中第二高的基础伤害，与毒液弹并列，并次于夜明弹。\n\n(电脑版、主机版、和移动版)如果纳米弹命中了实体物块，它会弹向最近的敌怪，但只会造成 66% 伤害。纳米弹只能弹射一次。\n\n一组 50 发纳米弹的花费是17 SC，即每发子弹35 CC。制作 1000 发纳米弹（20 组，每组 50 发）的花费是3 GC。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "纳米弹是由空心子弹制成的 6 种可制作子弹之一。用纳米弹射击敌怪会使敌怪受到困惑减益，使他们的动作逆转，远离玩家而不是冲向玩家。纳米弹拥有所有子弹中第二高的基础伤害，与毒液弹并列，并次于夜明弹。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(电脑版、主机版、和移动版)如果纳米弹命中了实体物块，它会弹向最近的敌怪，但只会造成 66%  伤害。纳米弹只能弹射一次。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "一组 50 发纳米弹的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "17",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "，即每发子弹"
+        },
+        {
+          "type": "coin",
+          "amount": "35",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "。制作 1000 发纳米弹（20 组，每组 50 发）的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "3",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "纳米弹",
+      "image": "Nano_Bullet_(projectile).png"
+    },
+    "wiki_title": "纳米弹",
+    "item_category": "ammo"
+  },
+  "诅咒弹": {
+    "name": "诅咒弹",
+    "image": "Cursed_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "12",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "5",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "3×",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "6",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball.png",
+          "amount": "150"
+        },
+        {
+          "name": "诅咒焰",
+          "image": "Cursed_Flame.png"
+        }
+      ],
+      "result": {
+        "name": "诅咒弹",
+        "image": "Cursed_Bullet.png",
+        "amount": "150"
+      }
+    },
+    "description": "诅咒弹是种困难模式子弹，用作枪的弹药。被诅咒弹击中的敌怪总是会染上持续 7 秒的诅咒狱火减益，这会随着时间推移造成伤害并且不会被水所熄灭（不像着火了！减益）。它们是猩红之地的灵液弹的腐化之地对应物。对于子弹而言，诅咒弹有着很高的基础伤害，尽管它们缺乏任何其他效果（诸如流星弹的穿透或水晶子弹的溅射伤害）。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "诅咒弹是种困难模式子弹，用作枪的弹药。被诅咒弹击中的敌怪总是会染上持续 7 秒的诅咒狱火减益，这会随着时间推移造成伤害并且不会被水所熄灭（不像着火了！减益）。它们是猩红之地的灵液弹的腐化之地对应物。对于子弹而言，诅咒弹有着很高的基础伤害，尽管它们缺乏任何其他效果（诸如流星弹的穿透或水晶子弹的溅射伤害）。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "诅咒弹",
+      "image": "Cursed_Bullet_(projectile).png"
+    },
+    "wiki_title": "诅咒弹",
+    "item_category": "ammo"
+  },
+  "诅咒箭": {
+    "name": "诅咒箭",
+    "image": "Cursed_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "17 (电脑版、主机版、和移动版) / 14 (前代主机版、和3DS版)",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "4",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "150"
+        },
+        {
+          "name": "诅咒焰",
+          "image": "Cursed_Flame.png"
+        }
+      ],
+      "result": {
+        "name": "诅咒箭",
+        "image": "Cursed_Arrow.png",
+        "amount": "150"
+      }
+    },
+    "description": "诅咒箭是困难模式的箭，在接触敌怪时对其造成诅咒狱火减益，持续 7 秒。不像烈焰箭，它们在击中水时不会熄灭。它们是猩红的灵液箭的腐化对应物。\n\n(前代主机版、和3DS版)和大多数其他箭一样，诅咒箭有几率不会被破坏。发射出去后，它们有1/6 (16.67%)几率掉落且随后可以回收。然而，2/3 (66.67%)的时间它将掉落为普通的木箭而非诅咒箭。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "诅咒箭是困难模式的箭，在接触敌怪时对其造成诅咒狱火减益，持续 7 秒。不像烈焰箭，它们在击中水时不会熄灭。它们是猩红的灵液箭的腐化对应物。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(前代主机版、和3DS版)和大多数其他箭一样，诅咒箭有几率不会被破坏。发射出去后，它们有1/6 (16.67%)几率掉落且随后可以回收。然而，2/3 (66.67%)的时间它将掉落为普通的木箭而非诅咒箭。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "诅咒箭",
+      "image": "Cursed_Arrow.png"
+    },
+    "wiki_title": "诅咒箭",
+    "item_category": "ammo"
+  },
+  "诅咒镖": {
+    "name": "诅咒镖",
+    "image": "Cursed_Dart.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "9",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2.2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "滴落诅咒焰到地上",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "6",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "诅咒焰",
+          "image": "Cursed_Flame.png"
+        }
+      ],
+      "result": {
+        "name": "诅咒镖",
+        "image": "Cursed_Dart.png",
+        "amount": "100"
+      }
+    },
+    "description": "诅咒镖是一个困难模式的飞镖。飞行过程中，它会产生诅咒镖焰，诅咒镖焰会向下落并停留在物块上，持续存在 2 秒后消失。诅咒镖最多可击中 2 个目标。诅咒镖焰不会穿透敌怪且可造成诅咒镖 80% 的伤害和 50% 的击退。飞镖与火焰击中时均会施加 3–6 秒诅咒狱火减益。\n\n它是猩红的灵液镖的腐化对应物。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "诅咒镖是一个困难模式的飞镖。飞行过程中，它会产生诅咒镖焰，诅咒镖焰会向下落并停留在物块上，持续存在 2 秒后消失。诅咒镖最多可击中 2 个目标。诅咒镖焰不会穿透敌怪且可造成诅咒镖 80% 的伤害和 50% 的击退。飞镖与火焰击中时均会施加 3–6 秒诅咒狱火减益。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它是猩红的灵液镖的腐化对应物。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "诅咒镖",
+      "image": "Cursed_Dart.png"
+    },
+    "wiki_title": "诅咒镖",
+    "item_category": "ammo"
+  },
+  "迷你核弹一型": {
+    "name": "迷你核弹一型",
+    "image": "Mini_Nuke_I.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "75",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "工具提示",
+        "value": "爆破半径巨大。不会破坏图格",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "自动锤炼机",
+      "ingredients": [
+        {
+          "name": "火箭三型",
+          "image": "Rocket_III.png",
+          "amount": "100"
+        },
+        {
+          "name": "蘑菇矿锭",
+          "image": "Shroomite_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "迷你核弹一型",
+        "image": "Mini_Nuke_I.png",
+        "amount": "100"
+      }
+    },
+    "description": "迷你核弹一型是一种火箭弹药。与迷你核弹二型不同，它不会摧毁图格。它是火箭三型的直接升级，爆炸范围更大且造成更高伤害，但击退略低。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "迷你核弹一型是一种火箭弹药。与迷你核弹二型不同，它不会摧毁图格。它是火箭三型的直接升级，爆炸范围更大且造成更高伤害，但击退略低。"
+        }
+      ]
+    ],
+    "wiki_title": "迷你核弹一型",
+    "item_category": "ammo"
+  },
+  "迷你核弹二型": {
+    "name": "迷你核弹二型",
+    "image": "Mini_Nuke_II.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "75",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "工具提示",
+        "value": "爆破半径巨大。会破坏图格",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "2",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "自动锤炼机",
+      "ingredients": [
+        {
+          "name": "火箭四型",
+          "image": "Rocket_IV.png",
+          "amount": "100"
+        },
+        {
+          "name": "蘑菇矿锭",
+          "image": "Shroomite_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "迷你核弹二型",
+        "image": "Mini_Nuke_II.png",
+        "amount": "100"
+      }
+    },
+    "description": "迷你核弹二型是一种火箭弹药。与迷你核弹一型不同，它会摧毁图格。它是火箭四型的直接升级，爆炸范围更大且造成更高伤害。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "迷你核弹二型是一种火箭弹药。与迷你核弹一型不同，它会摧毁图格。它是火箭四型的直接升级，爆炸范围更大且造成更高伤害。"
+        }
+      ]
+    ],
+    "wiki_title": "迷你核弹二型",
+    "item_category": "ammo"
+  },
+  "邪箭": {
+    "name": "邪箭",
+    "image": "Unholy_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "12",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3.4",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "40",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "20"
+        },
+        {
+          "name": "蠕虫毒牙",
+          "image": "Worm_Tooth.png"
+        }
+      ],
+      "result": {
+        "name": "邪箭",
+        "image": "Unholy_Arrow.png",
+        "amount": "20"
+      }
+    },
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "克苏鲁之眼",
+              "image": "Eye_of_Cthulhu_(Phase_1).gif",
+              "quantity": "20–50",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（克苏鲁之眼）",
+              "image": "Treasure_Bag_(Eye_of_Cthulhu).png",
+              "quantity": "20–50",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "克苏鲁之眼",
+              "image": "Eye_of_Cthulhu_(Phase_1).gif",
+              "quantity": "20–50",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（克苏鲁之眼）",
+              "image": "Treasure_Bag_(Eye_of_Cthulhu).png",
+              "quantity": "20–50",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "克苏鲁之眼",
+              "image": "Eye_of_Cthulhu_(Phase_1).gif",
+              "quantity": "20–50",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（克苏鲁之眼）",
+              "image": "Treasure_Bag_(Eye_of_Cthulhu).png",
+              "quantity": "20–50",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "邪箭是一种困难模式之前的箭。它能穿透 4 个敌怪，其伤害每穿透一个敌怪下降 5%。\n\n除制作外，邪箭也由克苏鲁之眼掉落。此外，如果世界吞噬怪或克苏鲁之脑已被击败，那么可以在夜晚从军火商处以40 CC购买。困难模式期间也可以在白天购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "邪箭是一种困难模式之前的箭。它能穿透 4 个敌怪，其伤害每穿透一个敌怪下降 5%。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "除制作外，邪箭也由克苏鲁之眼掉落。此外，如果世界吞噬怪或克苏鲁之脑已被击败，那么可以在夜晚从军火商处以"
+        },
+        {
+          "type": "coin",
+          "amount": "40",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "购买。困难模式期间也可以在白天购买。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "邪箭",
+      "image": "Unholy_Arrow.png"
+    },
+    "wiki_title": "邪箭",
+    "item_category": "ammo"
+  },
+  "金子弹": {
+    "name": "金子弹",
+    "image": "Golden_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "10",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3.6",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4.6",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "3×",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "杀死的敌人会掉落更多的钱",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "空心子弹",
+          "image": "Empty_Bullet.png",
+          "amount": "50"
+        },
+        {
+          "name": "金尘",
+          "image": "Gold_Dust.png"
+        }
+      ],
+      "result": {
+        "name": "金子弹",
+        "image": "Golden_Bullet.png",
+        "amount": "50"
+      }
+    },
+    "description": "金子弹是用困难模式中军火商出售的空心子弹制造的六种可制作子弹之一，就像金药剂一样，它们会对敌怪造成迈达斯减益，使其在被杀死时多掉落 10%-50%钱币。要注意减益在 2 秒后消失。\n\n一组 50 发金子弹的花费是19 SC，即每发子弹39 CC。制作 1000 发金子弹（20 组，每组 50 发）的花费是3 GC。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "金子弹是用困难模式中军火商出售的空心子弹制造的六种可制作子弹之一，就像金药剂一样，它们会对敌怪造成迈达斯减益，使其在被杀死时多掉落 10%-50%钱币。要注意减益在 2 秒后消失。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "一组 50 发金子弹的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "19",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "，即每发子弹"
+        },
+        {
+          "type": "coin",
+          "amount": "39",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "。制作 1000 发金子弹（20 组，每组 50 发）的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "3",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "金子弹",
+      "image": "Golden_Bullet_(projectile).png"
+    },
+    "wiki_title": "金子弹",
+    "item_category": "ammo"
   },
   "钉枪": {
     "name": "钉枪",
@@ -5781,7 +9328,6 @@
       }
     ],
     "recipe": null,
-    "drops": null,
     "description": "钉枪是一把困难模式、世纪之花后的发射器，使用钉子作为其弹药。当钉子接触到敌怪时，它会造成 15% 的伤害（17 基础伤害），并黏附在受伤害的敌怪身上，并在 1.5 秒后爆炸，造成 135% 的伤害（155 基础伤害）。钉子也可以黏附在实体物块上，并以相同的方式爆炸，并且它们造成的爆炸不会伤害使用者。钉子最初不受重力影响，但在飞过大约 30 格后会像箭一样以弧线坠落。如果在PvP中使用，那么钉子并不会黏附在玩家身上，而是会正常地造成伤害（115 基础伤害）。\n\n钉枪有1/25 (4%)/49/625 (7.84%)的几率掉落自日食事件中的钉头。掉落时，钉枪总会与 100 至 200 枚钉子一同掉落。额外的钉子可在玩家物品栏中存在钉枪时从商人和军火商处以1 SC的价格购买。\n\n其最佳修饰语是恶魔，由于它没有任何击退，因此无法得到影响击退的修饰语。",
     "description_rich": [
       [
@@ -5812,6 +9358,469 @@
         }
       ]
     ],
+    "wiki_title": "钉枪",
+    "item_category": "ammo"
+  },
+  "钨子弹": {
+    "name": "钨子弹",
+    "image": "Tungsten_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "9",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4.5",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "18",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "3",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball.png",
+          "amount": "70"
+        },
+        {
+          "name": "钨锭",
+          "image": "Tungsten_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "钨子弹",
+        "image": "Tungsten_Bullet.png",
+        "amount": "70"
+      }
+    },
+    "description": "钨子弹是一种由枪使用的子弹型弹药，可比火枪子弹多造成 2 点伤害，且飞行速度略快于火枪子弹。\n\n钨子弹可从军火商处以每个18 CC，或者说每一千个1 GC的价格，在带有钨的世界中购买。在困难模式之前，它们仅在血月期间有售，但在困难模式开始之后则全天有售。它们也会在困难模式中替换掉罐子里面的木箭，出现在暗影箱中，或者用钨锭制作。\n\n其代用矿石对应物是银子弹。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "钨子弹是一种由枪使用的子弹型弹药，可比火枪子弹多造成 2 点伤害，且飞行速度略快于火枪子弹。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "钨子弹可从军火商处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "18",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "，或者说每一千个"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格，在带有钨的世界中购买。在困难模式之前，它们仅在血月期间有售，但在困难模式开始之后则全天有售。它们也会在困难模式中替换掉罐子里面的木箭，出现在暗影箱中，或者用钨锭制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是银子弹。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "子弹",
+      "image": "Bullet_(projectile).png"
+    },
+    "wiki_title": "钨子弹",
+    "item_category": "ammo"
+  },
+  "银子弹": {
+    "name": "银子弹",
+    "image": "Silver_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "9",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4.5",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "2×",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "15",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "3",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "火枪子弹",
+          "image": "Musket_Ball.png",
+          "amount": "70"
+        },
+        {
+          "name": "银锭",
+          "image": "Silver_Bar.png"
+        }
+      ],
+      "result": {
+        "name": "银子弹",
+        "image": "Silver_Bullet.png",
+        "amount": "70"
+      }
+    },
+    "description": "银子弹是一种枪用子弹，比火枪子弹多造成 2 伤害，速度快了一点。\n\n银子弹可找军火商购买，价格为每 1 个15 CC（每 1000 个1 GC）。困难模式之前，仅在血月期间（(电脑版、主机版、和移动版)且仅限有银的世界中）出售；进入困难模式后，会成为常驻商品。也可在困难模式的罐子中代替木箭出现、在暗影箱中出现，或者用银锭制作。\n\n其代用矿石对应物是钨子弹(电脑版、主机版、和移动版)。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "银子弹是一种枪用子弹，比火枪子弹多造成 2 伤害，速度快了一点。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "银子弹可找军火商购买，价格为每 1 个"
+        },
+        {
+          "type": "coin",
+          "amount": "15",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "（每 1000 个"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "）。困难模式之前，仅在血月期间（(电脑版、主机版、和移动版)且仅限有银的世界中）出售；进入困难模式后，会成为常驻商品。也可在困难模式的罐子中代替木箭出现、在暗影箱中出现，或者用银锭制作。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是钨子弹(电脑版、主机版、和移动版)。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "子弹",
+      "image": "Silver_Bullet_(projectile).png"
+    },
+    "wiki_title": "银子弹",
+    "item_category": "ammo"
+  },
+  "集束火箭一型": {
+    "name": "集束火箭一型",
+    "image": "Cluster_Rocket_I.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "50",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "工具提示",
+        "value": "不会破坏图格",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "7",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "cc",
+            "amount": "50",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          },
+          {
+            "type": "cc",
+            "amount": "50",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "集束火箭一型是一种火箭弹药。与集束火箭二型不同，它不会破坏图格。独特于其它火箭，集束火箭命中时会射出能造成几次小爆炸的弹片。\n\n集束火箭一型可以在完成火星暴乱事件后从机器侠处以每个7 SC的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "集束火箭一型是一种火箭弹药。与集束火箭二型不同，它不会破坏图格。独特于其它火箭，集束火箭命中时会射出能造成几次小爆炸的弹片。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "集束火箭一型可以在完成火星暴乱事件后从机器侠处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "7",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "集束破片一型",
+      "image": "Cluster_Fragments_I.png"
+    },
+    "wiki_title": "集束火箭一型",
+    "item_category": "ammo"
+  },
+  "集束火箭二型": {
+    "name": "集束火箭二型",
+    "image": "Cluster_Rocket_II.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "50",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "工具提示",
+        "value": "会破坏图格",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "15",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "3",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "集束火箭二型是一种火箭类弹药。和集束火箭一型不同，它会破坏图格。与其他火箭不同的是，集束火箭命中时会射出能造成几次小爆炸的弹片。这些小爆炸会破坏额外的更多图格。\n\n集束火箭二型可以在击败火星暴乱事件后的血月或日食期间于机器侠处以每个15 SC的价格购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "集束火箭二型是一种火箭类弹药。和集束火箭一型不同，它会破坏图格。与其他火箭不同的是，集束火箭命中时会射出能造成几次小爆炸的弹片。这些小爆炸会破坏额外的更多图格。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "集束火箭二型可以在击败火星暴乱事件后的血月或日食期间于机器侠处以每个"
+        },
+        {
+          "type": "coin",
+          "amount": "15",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "集束破片二型",
+      "image": "Cluster_Fragments_II.png"
+    },
+    "wiki_title": "集束火箭二型",
     "item_category": "ammo"
   },
   "雪球": {
@@ -5881,8 +9890,362 @@
         "amount": "15"
       }
     },
-    "drops": null,
     "description": "雪球是一种消耗性远程武器，可用雪块制作。雪球也可以用作雪球炮和(前代主机版、和3DS版)雪球发射器的弹药。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "雪球是一种消耗性远程武器，可用雪块制作。雪球也可以用作雪球炮和(前代主机版、和3DS版)雪球发射器的弹药。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "雪球（友方）",
+      "image": "Snowball.png"
+    },
+    "wiki_title": "雪球",
+    "item_category": "ammo"
+  },
+  "霜冻箭": {
+    "name": "霜冻箭",
+    "image": "Frostburn_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "7",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2.2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3.75",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "3",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "木箭",
+          "image": "Wooden_Arrow.png",
+          "amount": "10"
+        },
+        {
+          "name": "冰雪火把",
+          "image": "Ice_Torch.png"
+        }
+      ],
+      "result": {
+        "name": "霜冻箭",
+        "image": "Frostburn_Arrow.png",
+        "amount": "10"
+      }
+    },
+    "description": "霜冻箭是一种弹药，在击中敌怪有几率造成霜冻减益。\n\n(前代主机版、和3DS版)与烈焰箭相似，霜冻箭在撞击后有1/3 (33.33%)的几率重新以物品形式掉落，这让它们得以重新收集——不过这些掉落的箭里面又只有 1/3 还能保持为霜冻箭，剩下的则会变成木箭。这也就是说平均来讲射出每 9 支箭，只能回收到 1 支霜冻箭。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "霜冻箭是一种弹药，在击中敌怪有几率造成霜冻减益。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "(前代主机版、和3DS版)与烈焰箭相似，霜冻箭在撞击后有1/3 (33.33%)的几率重新以物品形式掉落，这让它们得以重新收集——不过这些掉落的箭里面又只有 1/3 还能保持为霜冻箭，剩下的则会变成木箭。这也就是说平均来讲射出每 9 支箭，只能回收到 1 支霜冻箭。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "霜冻箭",
+      "image": "Frostburn_Arrow.png"
+    },
+    "wiki_title": "霜冻箭",
+    "item_category": "ammo"
+  },
+  "骨箭": {
+    "name": "骨箭",
+    "image": "Bone_Arrow.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "8",
+        "extra": "(远程)"
+      },
+      {
+        "label": "击退",
+        "value": "2.5",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "3.5",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "15",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "3",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "骨箭是一种箭，在月相1（满月）、2、5（新月）和 6 期间可从骷髅商人处以每支15 CC的价格购买。骨箭只能穿透一个敌怪。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "骨箭是一种箭，在月相1（满月）、2、5（新月）和 6 期间可从骷髅商人处以每支"
+        },
+        {
+          "type": "coin",
+          "amount": "15",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "的价格购买。骨箭只能穿透一个敌怪。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "骨箭",
+      "image": "Bone_Arrow.png"
+    },
+    "wiki_title": "骨箭",
+    "item_category": "ammo"
+  },
+  "高速子弹": {
+    "name": "高速子弹",
+    "image": "High_Velocity_Bullet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "弹药",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "11(电脑版、主机版、和移动版)/\n10(前代主机版、和3DS版)",
+        "extra": "(远程)",
+        "segments": [
+          {
+            "type": "text",
+            "text": "11(电脑版、主机版、和移动版)/\n10(前代主机版、和3DS版)"
+          }
+        ]
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "基础射弹速度",
+        "value": "4",
+        "extra": ""
+      },
+      {
+        "label": "射弹速度乘数",
+        "value": "8×",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "03*",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "8",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 99 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台",
+      "ingredients": [
+        {
+          "name": "空心子弹",
+          "image": "Empty_Bullet.png",
+          "amount": "50"
+        },
+        {
+          "name": "齿轮",
+          "image": "Cog.png"
+        }
+      ],
+      "result": {
+        "name": "高速子弹",
+        "image": "High_Velocity_Bullet.png",
+        "amount": "50"
+      }
+    },
+    "description": "高速子弹是一类弹药，可在至少击败一个机械 Boss后获得。它们是游戏中飞行最快的子弹。\n\n在电脑版电脑版、主机版主机版、和移动版移动版中，高速子弹最多可击中 3 个目标。高速子弹每次击中目标时伤害会下降 15%。\n\n一组 50 发高速子弹的花费是9 SC，即每发子弹19 CC。制作 1000 发高速子弹（20 组，每组 50 发）的花费是1 GC。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "高速子弹是一类弹药，可在至少击败一个机械 Boss后获得。它们是游戏中飞行最快的子弹。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在"
+        },
+        {
+          "type": "icon",
+          "image": "Desktop_only.png",
+          "alt": "电脑版"
+        },
+        {
+          "type": "text",
+          "text": "电脑版、"
+        },
+        {
+          "type": "icon",
+          "image": "Console_only.png",
+          "alt": "主机版"
+        },
+        {
+          "type": "text",
+          "text": "主机版、和"
+        },
+        {
+          "type": "icon",
+          "image": "Mobile_only.png",
+          "alt": "移动版"
+        },
+        {
+          "type": "text",
+          "text": "移动版中，高速子弹最多可击中 3 个目标。高速子弹每次击中目标时伤害会下降 15%。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "一组 50 发高速子弹的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "9",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "，即每发子弹"
+        },
+        {
+          "type": "coin",
+          "amount": "19",
+          "coin_type": "cc"
+        },
+        {
+          "type": "text",
+          "text": "。制作 1000 发高速子弹（20 组，每组 50 发）的花费是"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "高速子弹",
+      "image": "High-Velocity_Bullet_(projectile).png"
+    },
+    "wiki_title": "高速子弹",
     "item_category": "ammo"
   },
   "麦芽酒": {
@@ -5914,7 +10277,7 @@
         "label": "稀有度",
         "value": "白色",
         "extra": "",
-        "sortkey": "00*",
+        "sortkey": "",
         "color": "#ffffff"
       },
       {
@@ -5960,7 +10323,58 @@
         "image": "Ale.png"
       }
     },
-    "drops": null,
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "麦芽酒",
+            "image": "Ale_(old).png",
+            "amount": "10"
+          },
+          {
+            "name": "丝绸",
+            "image": "Silk_(old).png"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "莫洛托夫鸡尾酒",
+          "image": "Molotov_Cocktail.png",
+          "amount": "10"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "麦芽酒",
+            "image": "Ale.png",
+            "amount": "5"
+          },
+          {
+            "name": "凝胶",
+            "image": "Gel.png"
+          },
+          {
+            "name": "丝绸",
+            "image": "Silk.png"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "莫洛托夫鸡尾酒",
+          "image": "Molotov_Cocktail.png",
+          "amount": "5"
+        }
+      }
+    ],
     "description": "麦芽酒是一种药水，可以给予玩家 2 分钟的踉跄减益，提升近战伤害但会降低玩家的防御。它可以在酒桶制作，或以每个1 SC的价格从酒馆老板(电脑版、主机版、和移动版)处购买。\n\n踉跄减益有以下效果：此内容转载自踉跄。\n\n· -4防御\n· 近战攻击时 +2%暴击\n· +10% 近战攻击速度\n· +10% 近战伤害\n· (电脑版、主机版、和移动版)+5渔力\n\n麦芽酒也用作麦芽酒投掷器(电脑版、主机版、和移动版)的弹药，并可以存放在玩家物品栏的弹药栏。\n\n麦芽酒可以放在盘子(电脑版、主机版、和移动版)里：Ale (on Plate).png",
     "description_rich": [
       [
@@ -6060,58 +10474,7 @@
         }
       ]
     ],
-    "item_category": "ammo",
-    "used_in": [
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "麦芽酒",
-            "image": "Ale_(old).png",
-            "amount": "10"
-          },
-          {
-            "name": "丝绸",
-            "image": "Silk_(old).png"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png"
-          }
-        ],
-        "result": {
-          "name": "莫洛托夫鸡尾酒",
-          "image": "Molotov_Cocktail.png",
-          "amount": "10"
-        }
-      },
-      {
-        "station": "徒手",
-        "ingredients": [
-          {
-            "name": "麦芽酒",
-            "image": "Ale.png",
-            "amount": "5"
-          },
-          {
-            "name": "凝胶",
-            "image": "Gel.png"
-          },
-          {
-            "name": "丝绸",
-            "image": "Silk.png"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png"
-          }
-        ],
-        "result": {
-          "name": "莫洛托夫鸡尾酒",
-          "image": "Molotov_Cocktail.png",
-          "amount": "5"
-        }
-      }
-    ]
+    "wiki_title": "麦芽酒",
+    "item_category": "ammo"
   }
 }

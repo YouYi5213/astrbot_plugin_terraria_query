@@ -1,480 +1,4 @@
 {
-  "地狱熔炉": {
-    "name": "地狱熔炉",
-    "image": "Hellforge.png",
-    "stats": [
-      {
-        "label": "类型",
-        "value": "家具制作站制作材料",
-        "extra": ""
-      },
-      {
-        "label": "可放置",
-        "value": "",
-        "extra": "",
-        "bool_icon": "yes"
-      },
-      {
-        "label": "使用时间",
-        "value": "15",
-        "extra": "（很快速度）"
-      },
-      {
-        "label": "稀有度",
-        "value": "白色",
-        "extra": "",
-        "sortkey": "00*",
-        "color": "#ffffff"
-      },
-      {
-        "label": "卖出",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "sc",
-            "amount": "6",
-            "image": "Silver_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "研究",
-        "value": "需要 1 份",
-        "extra": ""
-      }
-    ],
-    "recipe": null,
-    "drops": {
-      "modes": [
-        {
-          "mode": "normal",
-          "label": "经典",
-          "entries": [
-            {
-              "name": "狱石匣",
-              "image": "Hellstone_Crate.png",
-              "quantity": "1",
-              "chance": "1/20 (5%)"
-            },
-            {
-              "name": "黑曜石匣",
-              "image": "Obsidian_Crate.png",
-              "quantity": "1",
-              "chance": "1/20 (5%)"
-            }
-          ]
-        },
-        {
-          "mode": "expert",
-          "label": "专家",
-          "entries": [
-            {
-              "name": "狱石匣",
-              "image": "Hellstone_Crate.png",
-              "quantity": "1",
-              "chance": "1/20 (5%)"
-            },
-            {
-              "name": "黑曜石匣",
-              "image": "Obsidian_Crate.png",
-              "quantity": "1",
-              "chance": "1/20 (5%)"
-            }
-          ]
-        },
-        {
-          "mode": "master",
-          "label": "大师",
-          "entries": [
-            {
-              "name": "狱石匣",
-              "image": "Hellstone_Crate.png",
-              "quantity": "1",
-              "chance": "1/20 (5%)"
-            },
-            {
-              "name": "黑曜石匣",
-              "image": "Obsidian_Crate.png",
-              "quantity": "1",
-              "chance": "1/20 (5%)"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "地狱熔炉是一种制作站，具有和常规熔炉相同的功能，另外能够将狱石熔炼成狱石锭。它也用于制作困难模式中所必需的精金熔炉/钛金熔炉。\n\n地狱熔炉无法被制作，而是出现在地狱中的废墟建筑内，也可以从黑曜石匣或者狱石匣中开出。地狱熔炉只能用死亡使者镐或梦魇镐或更好（60% 镐力）的工具采挖。在困难模式之前，无法被爆炸物摧毁。",
-    "item_category": "crafting_stations",
-    "used_in": [
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金矿",
-            "image": "Adamantite_Ore.png",
-            "amount": "30"
-          },
-          {
-            "name": "地狱熔炉",
-            "image": "Hellforge.png"
-          }
-        ],
-        "result": {
-          "name": "精金熔炉",
-          "image": "Adamantite_Forge.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金矿",
-            "image": "Titanium_Ore.png",
-            "amount": "30"
-          },
-          {
-            "name": "地狱熔炉",
-            "image": "Hellforge.png"
-          }
-        ],
-        "result": {
-          "name": "钛金熔炉",
-          "image": "Titanium_Forge.png"
-        }
-      }
-    ]
-  },
-  "玻璃杯": {
-    "name": "玻璃杯",
-    "image": "Mug.png",
-    "stats": [
-      {
-        "label": "类型",
-        "value": "家具制作材料",
-        "extra": ""
-      },
-      {
-        "label": "可放置",
-        "value": "",
-        "extra": "",
-        "bool_icon": "yes"
-      },
-      {
-        "label": "使用时间",
-        "value": "15",
-        "extra": "（很快速度）"
-      },
-      {
-        "label": "稀有度",
-        "value": "白色",
-        "extra": "",
-        "sortkey": "00*",
-        "color": "#ffffff"
-      },
-      {
-        "label": "卖出",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "cc",
-            "amount": "4",
-            "image": "Copper_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "研究",
-        "value": "需要 1 份",
-        "extra": ""
-      }
-    ],
-    "recipe": {
-      "station": "熔炉",
-      "ingredients": [
-        {
-          "name": "玻璃",
-          "image": "Glass.png"
-        }
-      ],
-      "result": {
-        "name": "玻璃杯",
-        "image": "Mug.png"
-      }
-    },
-    "drops": null,
-    "description": "玻璃杯是用玻璃制成的杯子。它可用于制作麦芽酒。它可以放置在平坦的家具物品上，作为放置的瓶子制作站使用。",
-    "item_category": "crafting_stations",
-    "used_in": [
-      {
-        "station": "酒桶",
-        "ingredients": [
-          {
-            "name": "玻璃杯",
-            "image": "Mug.png"
-          }
-        ],
-        "result": {
-          "name": "麦芽酒",
-          "image": "Ale.png"
-        }
-      }
-    ]
-  },
-  "腐变室": {
-    "name": "腐变室",
-    "image": "Decay_Chamber.png",
-    "stats": [
-      {
-        "label": "类型",
-        "value": "家具制作站制作材料",
-        "extra": ""
-      },
-      {
-        "label": "可放置",
-        "value": "",
-        "extra": "",
-        "bool_icon": "yes"
-      },
-      {
-        "label": "使用时间",
-        "value": "15",
-        "extra": "（很快速度）"
-      },
-      {
-        "label": "工具提示",
-        "value": "用于特殊制作",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "白色",
-        "extra": "",
-        "sortkey": "00*",
-        "color": "#ffffff"
-      },
-      {
-        "label": "买入",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "gc",
-            "amount": "10",
-            "image": "Gold_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "卖出",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "gc",
-            "amount": "2",
-            "image": "Gold_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "研究",
-        "value": "需要 1 份",
-        "extra": ""
-      }
-    ],
-    "recipe": {
-      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "血肉克隆台",
-          "image": "Flesh_Cloning_Vat.png"
-        },
-        {
-          "name": "暗影之魂",
-          "image": "Soul_of_Night.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "腐变室",
-        "image": "Decay_Chamber.png"
-      }
-    },
-    "drops": null,
-    "description": "腐变室是种用于将病变块制作为病变主题（腐化）家具的困难模式制作站。它可以10 GC的价格从蒸汽朋克人处购买，但仅限于腐化之地世界。它也可以用其猩红对应物血肉克隆台制作而成。\n\n病变块需要于绞肉机处制作，因此若缺失了其，腐变室就会毫无用处。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "腐变室是种用于将病变块制作为病变主题（腐化）家具的困难模式制作站。它可以"
-        },
-        {
-          "type": "coin",
-          "amount": "10",
-          "coin_type": "gc"
-        },
-        {
-          "type": "text",
-          "text": "的价格从蒸汽朋克人处购买，但仅限于腐化之地世界。它也可以用其猩红对应物血肉克隆台制作而成。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "病变块需要于绞肉机处制作，因此若缺失了其，腐变室就会毫无用处。"
-        }
-      ]
-    ],
-    "item_category": "crafting_stations",
-    "used_in": [
-      {
-        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
-        "ingredients": [
-          {
-            "name": "腐变室",
-            "image": "Decay_Chamber.png"
-          },
-          {
-            "name": "暗影之魂",
-            "image": "Soul_of_Night.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "血肉克隆台",
-          "image": "Flesh_Cloning_Vat.png"
-        }
-      }
-    ]
-  },
-  "血肉克隆台": {
-    "name": "血肉克隆台",
-    "image": "Flesh_Cloning_Vat.png",
-    "stats": [
-      {
-        "label": "类型",
-        "value": "家具制作站制作材料",
-        "extra": ""
-      },
-      {
-        "label": "可放置",
-        "value": "",
-        "extra": "",
-        "bool_icon": "yes"
-      },
-      {
-        "label": "使用时间",
-        "value": "15",
-        "extra": "（很快速度）"
-      },
-      {
-        "label": "工具提示",
-        "value": "用于特殊制作",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "白色",
-        "extra": "",
-        "sortkey": "00*",
-        "color": "#ffffff"
-      },
-      {
-        "label": "买入",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "gc",
-            "amount": "10",
-            "image": "Gold_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "卖出",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "gc",
-            "amount": "2",
-            "image": "Gold_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "研究",
-        "value": "需要 1 份",
-        "extra": ""
-      }
-    ],
-    "recipe": {
-      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "腐变室",
-          "image": "Decay_Chamber.png"
-        },
-        {
-          "name": "暗影之魂",
-          "image": "Soul_of_Night.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "血肉克隆台",
-        "image": "Flesh_Cloning_Vat.png"
-      }
-    },
-    "drops": null,
-    "description": "血肉克隆台是个用来以血肉块制作血肉家具（猩红主题家具）的困难模式制作站。血肉克隆台可从蒸汽朋克人处以10 GC购买，但仅限于生成有猩红之地的世界内才有卖。它也可以用其腐化对应物腐变室制作而成。\n\n血肉块是用绞肉机制作的，因此如果没有它那么血肉克隆台就没啥用了。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "血肉克隆台是个用来以血肉块制作血肉家具（猩红主题家具）的困难模式制作站。血肉克隆台可从蒸汽朋克人处以"
-        },
-        {
-          "type": "coin",
-          "amount": "10",
-          "coin_type": "gc"
-        },
-        {
-          "type": "text",
-          "text": "购买，但仅限于生成有猩红之地的世界内才有卖。它也可以用其腐化对应物腐变室制作而成。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "血肉块是用绞肉机制作的，因此如果没有它那么血肉克隆台就没啥用了。"
-        }
-      ]
-    ],
-    "item_category": "crafting_stations",
-    "used_in": [
-      {
-        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
-        "ingredients": [
-          {
-            "name": "血肉克隆台",
-            "image": "Flesh_Cloning_Vat.png"
-          },
-          {
-            "name": "暗影之魂",
-            "image": "Soul_of_Night.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "腐变室",
-          "image": "Decay_Chamber.png"
-        }
-      }
-    ]
-  },
   "精金熔炉": {
     "name": "精金熔炉",
     "image": "Adamantite_Forge.png",
@@ -558,7 +82,7 @@
         }
       ]
     ],
-    "wiki_title": "Adamantite Forge",
+    "wiki_title": "困难模式的熔炉",
     "item_category": "crafting_stations"
   },
   "书架": {
@@ -611,25 +135,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "丛林蜥蜴砖",
-          "image": "Lihzahrd_Brick.png",
-          "amount": "20"
-        },
-        {
-          "name": "书",
-          "image": "Book.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "物品 ID",
-        "image": "Lihzahrd_Bookcase.png"
-      }
-    },
+    "recipe": null,
     "description": "书架是一种家具和制作站，可以用来制作困难模式下的 3 种魔法武器（水晶风暴、诅咒焰和黄金雨），还可以制作由书卷块做成的书卷家具。书架可以满足房屋的平坦表面物品需求。\n\n共有 65 种书架，其中 60 种可制作，还有 5 种可以从环境中获取：1 种来自地狱，3种来自地牢，还有 1 种来自海盗入侵。一些书架还可以在地下小屋中发现，风格与所在小屋的主题一致。",
     "description_rich": [
       [
@@ -645,7 +151,7 @@
         }
       ]
     ],
-    "wiki_title": "Blue Dungeon Bookcase",
+    "wiki_title": "书架",
     "item_category": "crafting_stations"
   },
   "椅子": {
@@ -672,24 +178,11 @@
         "label": "稀有度",
         "value": "白色",
         "extra": "",
-        "sortkey": "00*",
+        "sortkey": "",
         "color": "#ffffff"
       }
     ],
-    "recipe": {
-      "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "丛林蜥蜴砖",
-          "image": "Lihzahrd_Brick.png",
-          "amount": "4"
-        }
-      ],
-      "result": {
-        "name": "物品 ID",
-        "image": "Lihzahrd_Chair.png"
-      }
-    },
+    "recipe": null,
     "description": "椅子是可以放置在地面上的家具物品，它们算作是舒适性物品，这是让房屋适用于 NPC 的必要元素之一。结合工作台或桌子时，也形成了次要制作站。\n\n(电脑版、主机版、和移动版)玩家可以用⚷打开/激活坐上椅子并得到生命再生加成，类似于床和沙发那样。NPC 也能坐在椅子上。\n\n所有椅子都宽 1 格，高 2 格，并且必须放置在固体物块或平台上面。\n\n另外请参阅王座王座，它同样可以满足房屋的舒适性物品需求。包括王座和高脚凳在内，一共有(电脑版、主机版、和移动版)47 /(前代主机版)28 /(3DS版)25 种不同的椅子。",
     "description_rich": [
       [
@@ -735,16 +228,16 @@
         }
       ]
     ],
-    "wiki_title": "Blue Dungeon Chair",
+    "wiki_title": "椅子",
     "item_category": "crafting_stations"
   },
-  "桌子": {
-    "name": "桌子",
-    "image": "Tables.gif",
+  "水槽": {
+    "name": "水槽",
+    "image": "Metal_Sink.png",
     "stats": [
       {
         "label": "类型",
-        "value": "家具",
+        "value": "家具制作站",
         "extra": ""
       },
       {
@@ -755,14 +248,19 @@
       },
       {
         "label": "使用时间",
-        "value": "14",
+        "value": "10",
         "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "“蜘蛛水槽，蜘蛛水槽，蜘蛛能干的它都行……”（蜘蛛水槽）",
+        "extra": ""
       },
       {
         "label": "稀有度",
         "value": "白色",
         "extra": "",
-        "sortkey": "00*",
+        "sortkey": "",
         "color": "#ffffff"
       },
       {
@@ -788,36 +286,23 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "丛林蜥蜴砖",
-          "image": "Lihzahrd_Brick.png",
-          "amount": "8"
-        }
-      ],
-      "result": {
-        "name": "物品 ID",
-        "image": "Lihzahrd_Table.png"
-      }
-    },
-    "description": "桌子是一类可以被放置在地上的家具物品，它常常会与椅子一起使用。它算作平坦表面物品，这是为NPC建造房屋的必要条件之一。\n\n游戏中共有(电脑版、主机版、和移动版)64 种可制作的桌子，和 5 种不可制作的桌子。一些桌子也可以在地下小屋中被找到，桌子类型会随着它所在小屋的主题而改变。",
+    "recipe": null,
+    "description": "水槽是种家具物品兼制作站。它并不满足房屋的平坦表面或舒适性物品要求，但可以作为制作站，用于制作需要水的物品。\n\n目前有 66 种水槽，功能完全相同。",
     "description_rich": [
       [
         {
           "type": "text",
-          "text": "桌子是一类可以被放置在地上的家具物品，它常常会与椅子一起使用。它算作平坦表面物品，这是为NPC建造房屋的必要条件之一。"
+          "text": "水槽是种家具物品兼制作站。它并不满足房屋的平坦表面或舒适性物品要求，但可以作为制作站，用于制作需要水的物品。"
         }
       ],
       [
         {
           "type": "text",
-          "text": "游戏中共有(电脑版、主机版、和移动版)64 种可制作的桌子，和 5 种不可制作的桌子。一些桌子也可以在地下小屋中被找到，桌子类型会随着它所在小屋的主题而改变。"
+          "text": "目前有 66 种水槽，功能完全相同。"
         }
       ]
     ],
-    "wiki_title": "Blue Dungeon Table",
+    "wiki_title": "水槽",
     "item_category": "crafting_stations"
   },
   "工作台": {
@@ -875,20 +360,7 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
-      "ingredients": [
-        {
-          "name": "丛林蜥蜴砖",
-          "image": "Lihzahrd_Brick.png",
-          "amount": "10"
-        }
-      ],
-      "result": {
-        "name": "物品 ID",
-        "image": "Lihzahrd_Work_Bench.png"
-      }
-    },
+    "recipe": null,
     "description": "工作台是种家具，也是制作许多游戏早期物品所必需的一类制作站。它们也是满足房屋的平坦表面物品要求的一种可能的方法。玻璃瓶、粉花瓶、和玻璃杯可以放置在它上面并用作放置的瓶子来制作药水。工作台是玩家在游戏中可制造的第一个制作站，也是整个游戏第一批物品之一。\n\n一共有 60 种可制作的工作台，还有 5 种必须从地牢等区域中拾取。在地下小屋中也能找到一些工作台，它们遵循所在小屋的主题。",
     "description_rich": [
       [
@@ -904,7 +376,205 @@
         }
       ]
     ],
-    "wiki_title": "Blue Dungeon Work Bench",
+    "wiki_title": "工作台",
+    "item_category": "crafting_stations"
+  },
+  "烹饪锅": {
+    "name": "烹饪锅",
+    "image": "Cooking_Pot.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具制作站",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "1",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "任何铁锭",
+          "image": "Any_Iron_Bar.gif",
+          "amount": "10"
+        },
+        {
+          "name": "任何木材",
+          "image": "Any_Wood.gif",
+          "amount": "2"
+        }
+      ],
+      "result": {
+        "name": "烹饪锅",
+        "image": "Cooking_Pot.png"
+      }
+    },
+    "description": "烹饪锅是个制作站，专门用于将各种物品制成食物，即可以带来吃得好、很满意和酒足饭饱增益的消耗品。此类食物材料包括鱼菇汤、熟鱼、熟虾、和蛆虫汤。\n\n大锅是烹饪锅的万圣节主题变体，除了动画外观不同和会发出少量绿光外，各方面的功能都是完全相同的。不像烹饪锅，大锅不能制作，只能在万圣节期间从巫医处以1 GC购买。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "烹饪锅是个制作站，专门用于将各种物品制成食物，即可以带来吃得好、很满意和酒足饭饱增益的消耗品。此类食物材料包括鱼菇汤、熟鱼、熟虾、和蛆虫汤。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "大锅是烹饪锅的万圣节主题变体，除了动画外观不同和会发出少量绿光外，各方面的功能都是完全相同的。不像烹饪锅，大锅不能制作，只能在万圣节期间从巫医处以"
+        },
+        {
+          "type": "coin",
+          "amount": "1",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "购买。"
+        }
+      ]
+    ],
+    "wiki_title": "烹饪锅",
+    "item_category": "crafting_stations"
+  },
+  "杯子": {
+    "name": "杯子",
+    "image": "Honey_Cup.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "4",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "杯子是装饰家具，可以放置在桌子、工作台、或其他平坦家具物品上。所有杯子一旦放置就能作为放置的瓶子制作站使用。\n\n有四种杯子变体。其中三种是制作得到的，一种（圣餐杯）是从旅商处以50 SC购买的。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "杯子是装饰家具，可以放置在桌子、工作台、或其他平坦家具物品上。所有杯子一旦放置就能作为放置的瓶子制作站使用。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "有四种杯子变体。其中三种是制作得到的，一种（圣餐杯）是从旅商处以"
+        },
+        {
+          "type": "coin",
+          "amount": "50",
+          "coin_type": "sc"
+        },
+        {
+          "type": "text",
+          "text": "购买的。"
+        }
+      ]
+    ],
+    "wiki_title": "杯子",
+    "item_category": "crafting_stations"
+  },
+  "恶魔祭坛": {
+    "name": "恶魔祭坛",
+    "image": "Demon_Altar.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作站背景物体",
+        "extra": ""
+      },
+      {
+        "label": "大小",
+        "value": "3 格宽 × 2 格高",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "恶魔祭坛和猩红祭坛是天然生成的制作站，主要出现在腐化之地或猩红之地中的裂隙之中和周围，较少出现在地下。它们用于制作困难模式之前的Boss召唤物品、永夜刃、还有虚空袋和虚空保险库。祭坛会发出一些光，使其易于发现。它们不能被释放、拾取、或制作。如果世界中不存在祭坛，克苏鲁之眼会掉落恶魔祭坛或猩红祭坛物品。\n\n当世界进入困难模式后，可用任何具有 80% 或更高锤力的锤将它们摧毁。在困难模式之前尝试用锤敲击它们则会使玩家失去一半生命，而祭坛不受影响。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "恶魔祭坛和猩红祭坛是天然生成的制作站，主要出现在腐化之地或猩红之地中的裂隙之中和周围，较少出现在地下。它们用于制作困难模式之前的Boss召唤物品、永夜刃、还有虚空袋和虚空保险库。祭坛会发出一些光，使其易于发现。它们不能被释放、拾取、或制作。如果世界中不存在祭坛，克苏鲁之眼会掉落恶魔祭坛或猩红祭坛物品。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当世界进入困难模式后，可用任何具有 80% 或更高锤力的锤将它们摧毁。在困难模式之前尝试用锤敲击它们则会使玩家失去一半生命，而祭坛不受影响。"
+        }
+      ]
+    ],
+    "wiki_title": "祭坛",
     "item_category": "crafting_stations"
   },
   "重型装配台": {
@@ -985,7 +655,7 @@
         }
       ]
     ],
-    "wiki_title": "Heavy Work Bench",
+    "wiki_title": "重型装配台",
     "item_category": "crafting_stations"
   },
   "铁砧": {
@@ -1079,12 +749,12 @@
         }
       ]
     ],
-    "wiki_title": "Iron Anvil",
+    "wiki_title": "困难模式前的砧",
     "item_category": "crafting_stations"
   },
-  "水槽": {
-    "name": "水槽",
-    "image": "Metal_Sink.png",
+  "秘银砧": {
+    "name": "秘银砧",
+    "image": "Mythril_Anvil.png",
     "stats": [
       {
         "label": "类型",
@@ -1099,20 +769,20 @@
       },
       {
         "label": "使用时间",
-        "value": "10",
+        "value": "15",
         "extra": "（很快速度）"
       },
       {
         "label": "工具提示",
-        "value": "“蜘蛛水槽，蜘蛛水槽，蜘蛛能干的它都行……”（蜘蛛水槽）",
+        "value": "用于制作以秘银锭、山铜锭、精金锭和钛金锭为原料的物品",
         "extra": ""
       },
       {
         "label": "稀有度",
-        "value": "白色",
+        "value": "橙色",
         "extra": "",
-        "sortkey": "00*",
-        "color": "#ffffff"
+        "sortkey": "",
+        "color": "#ffaa44"
       },
       {
         "label": "卖出",
@@ -1120,14 +790,9 @@
         "extra": "",
         "coins": [
           {
-            "type": "gc",
-            "amount": "2",
-            "image": "Gold_Coin.png"
-          },
-          {
-            "type": "cc",
-            "amount": "60",
-            "image": "Copper_Coin.png"
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
           }
         ]
       },
@@ -1138,39 +803,29 @@
       }
     ],
     "recipe": {
-      "station": "丛林蜥蜴熔炉(电脑版、主机版、前代主机版、和移动版)",
+      "station": "铁砧或铅砧",
       "ingredients": [
         {
-          "name": "丛林蜥蜴砖",
-          "image": "Lihzahrd_Brick.png",
-          "amount": "6"
-        },
-        {
-          "name": "水桶",
-          "image": "Water_Bucket.png"
+          "name": "秘银锭",
+          "image": "Mythril_Bar.png",
+          "amount": "10"
         }
       ],
       "result": {
-        "name": "物品 ID",
-        "image": "Lihzahrd_Sink.png"
+        "name": "秘银砧",
+        "image": "Mythril_Anvil.png"
       }
     },
-    "description": "水槽是种家具物品兼制作站。它并不满足房屋的平坦表面或舒适性物品要求，但可以作为制作站，用于制作需要水的物品。\n\n目前有 66 种水槽，功能完全相同。",
+    "description": "秘银砧和山铜砧是困难模式的制作站，提供并扩展了困难模式前的砧的功能。这些对于游戏推进是至关重要的，因为它们参与了几乎所有远古操纵机之前的困难模式配方的制作。除了作为铅砧和铁砧的直接替代品并继承了其所有的制作配方外，它们更进一步提供类似的功能，能将由困难模式矿石铸成的锭制作成武器、盔甲和工具，以及一些诸如翅膀等其他物品。",
     "description_rich": [
       [
         {
           "type": "text",
-          "text": "水槽是种家具物品兼制作站。它并不满足房屋的平坦表面或舒适性物品要求，但可以作为制作站，用于制作需要水的物品。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "目前有 66 种水槽，功能完全相同。"
+          "text": "秘银砧和山铜砧是困难模式的制作站，提供并扩展了困难模式前的砧的功能。这些对于游戏推进是至关重要的，因为它们参与了几乎所有远古操纵机之前的困难模式配方的制作。除了作为铅砧和铁砧的直接替代品并继承了其所有的制作配方外，它们更进一步提供类似的功能，能将由困难模式矿石铸成的锭制作成武器、盔甲和工具，以及一些诸如翅膀等其他物品。"
         }
       ]
     ],
-    "wiki_title": "Nebula Sink",
+    "wiki_title": "困难模式的砧",
     "item_category": "crafting_stations"
   },
   "丛林蜥蜴熔炉": {
@@ -1387,82 +1042,6 @@
     "wiki_title": "冰雪机",
     "item_category": "crafting_stations"
   },
-  "秘银砧": {
-    "name": "秘银砧",
-    "image": "Mythril_Anvil.png",
-    "stats": [
-      {
-        "label": "类型",
-        "value": "家具制作站",
-        "extra": ""
-      },
-      {
-        "label": "可放置",
-        "value": "",
-        "extra": "",
-        "bool_icon": "yes"
-      },
-      {
-        "label": "使用时间",
-        "value": "15",
-        "extra": "（很快速度）"
-      },
-      {
-        "label": "工具提示",
-        "value": "用于制作以秘银锭、山铜锭、精金锭和钛金锭为原料的物品",
-        "extra": ""
-      },
-      {
-        "label": "稀有度",
-        "value": "橙色",
-        "extra": "",
-        "sortkey": "03*",
-        "color": "#ffaa44"
-      },
-      {
-        "label": "卖出",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "sc",
-            "amount": "50",
-            "image": "Silver_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "研究",
-        "value": "需要 1 份",
-        "extra": ""
-      }
-    ],
-    "recipe": {
-      "station": "铁砧或铅砧",
-      "ingredients": [
-        {
-          "name": "山铜锭",
-          "image": "Orichalcum_Bar.png",
-          "amount": "12"
-        }
-      ],
-      "result": {
-        "name": "山铜砧",
-        "image": "Orichalcum_Anvil.png"
-      }
-    },
-    "description": "秘银砧和山铜砧是困难模式的制作站，提供并扩展了困难模式前的砧的功能。这些对于游戏推进是至关重要的，因为它们参与了几乎所有远古操纵机之前的困难模式配方的制作。除了作为铅砧和铁砧的直接替代品并继承了其所有的制作配方外，它们更进一步提供类似的功能，能将由困难模式矿石铸成的锭制作成武器、盔甲和工具，以及一些诸如翅膀等其他物品。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "秘银砧和山铜砧是困难模式的制作站，提供并扩展了困难模式前的砧的功能。这些对于游戏推进是至关重要的，因为它们参与了几乎所有远古操纵机之前的困难模式配方的制作。除了作为铅砧和铁砧的直接替代品并继承了其所有的制作配方外，它们更进一步提供类似的功能，能将由困难模式矿石铸成的锭制作成武器、盔甲和工具，以及一些诸如翅膀等其他物品。"
-        }
-      ]
-    ],
-    "wiki_title": "困难模式的砧",
-    "item_category": "crafting_stations"
-  },
   "固化机": {
     "name": "固化机",
     "image": "Solidifier.png",
@@ -1582,6 +1161,166 @@
       ]
     ],
     "wiki_title": "固化机",
+    "item_category": "crafting_stations"
+  },
+  "地狱熔炉": {
+    "name": "地狱熔炉",
+    "image": "Hellforge.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具制作站制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "6",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金矿",
+            "image": "Adamantite_Ore.png",
+            "amount": "30"
+          },
+          {
+            "name": "地狱熔炉",
+            "image": "Hellforge.png"
+          }
+        ],
+        "result": {
+          "name": "精金熔炉",
+          "image": "Adamantite_Forge.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金矿",
+            "image": "Titanium_Ore.png",
+            "amount": "30"
+          },
+          {
+            "name": "地狱熔炉",
+            "image": "Hellforge.png"
+          }
+        ],
+        "result": {
+          "name": "钛金熔炉",
+          "image": "Titanium_Forge.png"
+        }
+      }
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "1",
+              "chance": "1/20 (5%)"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "1",
+              "chance": "1/20 (5%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "1",
+              "chance": "1/20 (5%)"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "1",
+              "chance": "1/20 (5%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "狱石匣",
+              "image": "Hellstone_Crate.png",
+              "quantity": "1",
+              "chance": "1/20 (5%)"
+            },
+            {
+              "name": "黑曜石匣",
+              "image": "Obsidian_Crate.png",
+              "quantity": "1",
+              "chance": "1/20 (5%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "地狱熔炉是一种制作站，具有和常规熔炉相同的功能，另外能够将狱石熔炼成狱石锭。它也用于制作困难模式中所必需的精金熔炉/钛金熔炉。\n\n地狱熔炉无法被制作，而是出现在地狱中的废墟建筑内，也可以从黑曜石匣或者狱石匣中开出。地狱熔炉只能用死亡使者镐或梦魇镐或更好（60% 镐力）的工具采挖。在困难模式之前，无法被爆炸物摧毁。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "地狱熔炉是一种制作站，具有和常规熔炉相同的功能，另外能够将狱石熔炼成狱石锭。它也用于制作困难模式中所必需的精金熔炉/钛金熔炉。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "地狱熔炉无法被制作，而是出现在地狱中的废墟建筑内，也可以从黑曜石匣或者狱石匣中开出。地狱熔炉只能用死亡使者镐或梦魇镐或更好（60% 镐力）的工具采挖。在困难模式之前，无法被爆炸物摧毁。"
+        }
+      ]
+    ],
+    "wiki_title": "地狱熔炉",
     "item_category": "crafting_stations"
   },
   "天磨": {
@@ -1945,92 +1684,6 @@
     "wiki_title": "搅拌机",
     "item_category": "crafting_stations"
   },
-  "杯子": {
-    "name": "杯子",
-    "image": "Honey_Cup.png",
-    "stats": [
-      {
-        "label": "类型",
-        "value": "家具",
-        "extra": ""
-      },
-      {
-        "label": "可放置",
-        "value": "",
-        "extra": "",
-        "bool_icon": "yes"
-      },
-      {
-        "label": "使用时间",
-        "value": "15",
-        "extra": "（很快速度）"
-      },
-      {
-        "label": "稀有度",
-        "value": "白色",
-        "extra": "",
-        "sortkey": "00*",
-        "color": "#ffffff"
-      },
-      {
-        "label": "卖出",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "cc",
-            "amount": "4",
-            "image": "Copper_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "研究",
-        "value": "需要 1 份",
-        "extra": ""
-      }
-    ],
-    "recipe": {
-      "station": "工作台",
-      "ingredients": [
-        {
-          "name": "王朝木",
-          "image": "Dynasty_Wood.png",
-          "amount": "2"
-        }
-      ],
-      "result": {
-        "name": "物品 ID",
-        "image": "Dynasty_Cup.png"
-      }
-    },
-    "description": "杯子是装饰家具，可以放置在桌子、工作台、或其他平坦家具物品上。所有杯子一旦放置就能作为放置的瓶子制作站使用。\n\n有四种杯子变体。其中三种是制作得到的，一种（圣餐杯）是从旅商处以50 SC购买的。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "杯子是装饰家具，可以放置在桌子、工作台、或其他平坦家具物品上。所有杯子一旦放置就能作为放置的瓶子制作站使用。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "有四种杯子变体。其中三种是制作得到的，一种（圣餐杯）是从旅商处以"
-        },
-        {
-          "type": "coin",
-          "amount": "50",
-          "coin_type": "sc"
-        },
-        {
-          "type": "text",
-          "text": "购买的。"
-        }
-      ]
-    ],
-    "wiki_title": "杯子",
-    "item_category": "crafting_stations"
-  },
   "染缸": {
     "name": "染缸",
     "image": "Dye_Vat.png",
@@ -2365,6 +2018,12 @@
         }
       ]
     ],
+    "page_type": "mount",
+    "buff": {
+      "name": "灵视",
+      "image": "Clairvoyance.png",
+      "tooltip": "魔法能力提高"
+    },
     "wiki_title": "水晶球",
     "item_category": "crafting_stations"
   },
@@ -2652,98 +2311,16 @@
         }
       ]
     ],
-    "wiki_title": "炼金瓶",
-    "item_category": "crafting_stations"
-  },
-  "烹饪锅": {
-    "name": "烹饪锅",
-    "image": "Cooking_Pot.png",
-    "stats": [
-      {
-        "label": "类型",
-        "value": "家具制作站",
-        "extra": ""
-      },
-      {
-        "label": "可放置",
-        "value": "",
-        "extra": "",
-        "bool_icon": "yes"
-      },
-      {
-        "label": "使用时间",
-        "value": "15",
-        "extra": "（很快速度）"
-      },
-      {
-        "label": "稀有度",
-        "value": "白色",
-        "extra": "",
-        "sortkey": "00*",
-        "color": "#ffffff"
-      },
-      {
-        "label": "卖出",
-        "value": "",
-        "extra": "",
-        "coins": [
-          {
-            "type": "sc",
-            "amount": "1",
-            "image": "Silver_Coin.png"
-          }
-        ]
-      },
-      {
-        "label": "研究",
-        "value": "需要 1 份",
-        "extra": ""
-      }
-    ],
-    "recipe": {
-      "station": "铁砧或铅砧",
-      "ingredients": [
-        {
-          "name": "任何铁锭",
-          "image": "Any_Iron_Bar.gif",
-          "amount": "10"
-        },
-        {
-          "name": "任何木材",
-          "image": "Any_Wood.gif",
-          "amount": "2"
-        }
-      ],
-      "result": {
-        "name": "烹饪锅",
-        "image": "Cooking_Pot.png"
-      }
+    "page_type": "mount",
+    "buff": {
+      "name": "炼金强化",
+      "image": "Alchemic_Enhancement.png",
+      "tooltip": "新增益持续更长时间"
     },
-    "description": "烹饪锅是个制作站，专门用于将各种物品制成食物，即可以带来吃得好、很满意和酒足饭饱增益的消耗品。此类食物材料包括鱼菇汤、熟鱼、熟虾、和蛆虫汤。\n\n大锅是烹饪锅的万圣节主题变体，除了动画外观不同和会发出少量绿光外，各方面的功能都是完全相同的。不像烹饪锅，大锅不能制作，只能在万圣节期间从巫医处以1 GC购买。",
-    "description_rich": [
-      [
-        {
-          "type": "text",
-          "text": "烹饪锅是个制作站，专门用于将各种物品制成食物，即可以带来吃得好、很满意和酒足饭饱增益的消耗品。此类食物材料包括鱼菇汤、熟鱼、熟虾、和蛆虫汤。"
-        }
-      ],
-      [
-        {
-          "type": "text",
-          "text": "大锅是烹饪锅的万圣节主题变体，除了动画外观不同和会发出少量绿光外，各方面的功能都是完全相同的。不像烹饪锅，大锅不能制作，只能在万圣节期间从巫医处以"
-        },
-        {
-          "type": "coin",
-          "amount": "1",
-          "coin_type": "gc"
-        },
-        {
-          "type": "text",
-          "text": "购买。"
-        }
-      ]
+    "wiki_title": "炼金瓶",
+    "search_terms": [
+      "炼药瓶"
     ],
-    "wiki_title": "烹饪锅",
     "item_category": "crafting_stations"
   },
   "熔炉": {
@@ -2775,7 +2352,7 @@
         "label": "稀有度",
         "value": "白色",
         "extra": "",
-        "sortkey": "00*",
+        "sortkey": "",
         "color": "#ffffff"
       },
       {
@@ -2850,6 +2427,91 @@
     "wiki_title": "熔炉",
     "item_category": "crafting_stations"
   },
+  "玻璃杯": {
+    "name": "玻璃杯",
+    "image": "Mug.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "4",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "玻璃",
+          "image": "Glass.png"
+        }
+      ],
+      "result": {
+        "name": "玻璃杯",
+        "image": "Mug.png"
+      }
+    },
+    "used_in": [
+      {
+        "station": "酒桶",
+        "ingredients": [
+          {
+            "name": "玻璃杯",
+            "image": "Mug.png"
+          }
+        ],
+        "result": {
+          "name": "麦芽酒",
+          "image": "Ale.png"
+        }
+      }
+    ],
+    "description": "玻璃杯是用玻璃制成的杯子。它可用于制作麦芽酒。它可以放置在平坦的家具物品上，作为放置的瓶子制作站使用。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "玻璃杯是用玻璃制成的杯子。它可用于制作麦芽酒。它可以放置在平坦的家具物品上，作为放置的瓶子制作站使用。"
+        }
+      ]
+    ],
+    "wiki_title": "玻璃杯",
+    "item_category": "crafting_stations"
+  },
   "放置的瓶子": {
     "name": "放置的瓶子",
     "image": "Bottle_(crafting_station).png",
@@ -2898,6 +2560,10 @@
       ]
     ],
     "wiki_title": "玻璃瓶（制作站）",
+    "search_terms": [
+      "炼药瓶",
+      "放置瓶子"
+    ],
     "item_category": "crafting_stations"
   },
   "玻璃窑": {
@@ -3553,6 +3219,133 @@
     "wiki_title": "绞肉机",
     "item_category": "crafting_stations"
   },
+  "腐变室": {
+    "name": "腐变室",
+    "image": "Decay_Chamber.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具制作站制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "用于特殊制作",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "血肉克隆台",
+          "image": "Flesh_Cloning_Vat.png"
+        },
+        {
+          "name": "暗影之魂",
+          "image": "Soul_of_Night.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "腐变室",
+        "image": "Decay_Chamber.png"
+      }
+    },
+    "used_in": [
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "腐变室",
+            "image": "Decay_Chamber.png"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "血肉克隆台",
+          "image": "Flesh_Cloning_Vat.png"
+        }
+      }
+    ],
+    "description": "腐变室是种用于将病变块制作为病变主题（腐化）家具的困难模式制作站。它可以10 GC的价格从蒸汽朋克人处购买，但仅限于腐化之地世界。它也可以用其猩红对应物血肉克隆台制作而成。\n\n病变块需要于绞肉机处制作，因此若缺失了其，腐变室就会毫无用处。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "腐变室是种用于将病变块制作为病变主题（腐化）家具的困难模式制作站。它可以"
+        },
+        {
+          "type": "coin",
+          "amount": "10",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "的价格从蒸汽朋克人处购买，但仅限于腐化之地世界。它也可以用其猩红对应物血肉克隆台制作而成。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "病变块需要于绞肉机处制作，因此若缺失了其，腐变室就会毫无用处。"
+        }
+      ]
+    ],
+    "wiki_title": "腐变室",
+    "item_category": "crafting_stations"
+  },
   "自动锤炼机": {
     "name": "自动锤炼机",
     "image": "Autohammer.png",
@@ -3946,6 +3739,133 @@
       ]
     ],
     "wiki_title": "蜂蜜分配机",
+    "item_category": "crafting_stations"
+  },
+  "血肉克隆台": {
+    "name": "血肉克隆台",
+    "image": "Flesh_Cloning_Vat.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "家具制作站制作材料",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "用于特殊制作",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "买入",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "10",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "腐变室",
+          "image": "Decay_Chamber.png"
+        },
+        {
+          "name": "暗影之魂",
+          "image": "Soul_of_Night.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "血肉克隆台",
+        "image": "Flesh_Cloning_Vat.png"
+      }
+    },
+    "used_in": [
+      {
+        "station": "工作台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "血肉克隆台",
+            "image": "Flesh_Cloning_Vat.png"
+          },
+          {
+            "name": "暗影之魂",
+            "image": "Soul_of_Night.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "腐变室",
+          "image": "Decay_Chamber.png"
+        }
+      }
+    ],
+    "description": "血肉克隆台是个用来以血肉块制作血肉家具（猩红主题家具）的困难模式制作站。血肉克隆台可从蒸汽朋克人处以10 GC购买，但仅限于生成有猩红之地的世界内才有卖。它也可以用其腐化对应物腐变室制作而成。\n\n血肉块是用绞肉机制作的，因此如果没有它那么血肉克隆台就没啥用了。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "血肉克隆台是个用来以血肉块制作血肉家具（猩红主题家具）的困难模式制作站。血肉克隆台可从蒸汽朋克人处以"
+        },
+        {
+          "type": "coin",
+          "amount": "10",
+          "coin_type": "gc"
+        },
+        {
+          "type": "text",
+          "text": "购买，但仅限于生成有猩红之地的世界内才有卖。它也可以用其腐化对应物腐变室制作而成。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "血肉块是用绞肉机制作的，因此如果没有它那么血肉克隆台就没啥用了。"
+        }
+      ]
+    ],
+    "wiki_title": "血肉克隆台",
     "item_category": "crafting_stations"
   },
   "远古操纵机": {

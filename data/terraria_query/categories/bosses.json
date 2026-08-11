@@ -432,7 +432,7 @@
     },
     "category": "pre_hardmode",
     "flavor": "“所有黏滑生物的首领。”",
-    "description": "“所有黏滑生物的首领。”\n\n史莱姆王是个困难模式之前的Boss。其外观是戴着珠宝金冠的巨大蓝史莱姆，内部似乎还有个忍者。在游戏的前代主机版前代主机版和任天堂3DS任天堂3DS版版中他没有王冠。史莱姆王受伤害时会额外生成普通的蓝史莱姆（在专家模式和大师模式中还有尖刺史莱姆(电脑版、主机版、和移动版)）并且尺寸也会缩小。\n\n史莱姆王在以下条件之一满足时生成：\n\n· 某个玩家使用了史莱姆王冠。\n· (电脑版、主机版、和移动版)史莱姆雨事件期间打败了 150 只史莱姆（如果在此世界中已经击败过史莱姆王就只要 75 只）。\n· 偶尔出现在地图两侧各六分之一范围内，需要是白天且只出现在草上。\n\n与史莱姆王战斗完全是可选的，并不为游戏推进所必须。但打败它可以给玩家一些钱和有用的物品。\n\n当史莱姆王活着时，会播放《史莱姆王》音乐。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《Boss 1（异界版）》。",
+    "description": "“所有黏滑生物的首领。”\n\n史莱姆王是个困难模式之前的Boss。其外观是戴着珠宝金冠的巨大蓝史莱姆，内部似乎还有个忍者。在游戏的前代主机版和任天堂3DS3DS版中他没有王冠。史莱姆王受伤害时会额外生成普通的蓝史莱姆（在专家模式和大师模式中还有尖刺史莱姆(电脑版、主机版、和移动版)）并且尺寸也会缩小。\n\n史莱姆王在以下条件之一满足时生成：\n\n· 某个玩家使用了史莱姆王冠。\n· (电脑版、主机版、和移动版)史莱姆雨事件期间打败了 150 只史莱姆（如果在此世界中已经击败过史莱姆王就只要 75 只）。\n· 偶尔出现在地图两侧各六分之一范围内，需要是白天且只出现在草上。\n\n与史莱姆王战斗完全是可选的，并不为游戏推进所必须。但打败它可以给玩家一些钱和有用的物品。\n\n当史莱姆王活着时，会播放《史莱姆王》音乐。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《Boss 1（异界版）》。",
     "description_rich": [
       [
         {
@@ -458,7 +458,7 @@
         {
           "type": "icon",
           "image": "Old-Gen_Console_only.png",
-          "alt": "前代主机版"
+          "alt": ""
         },
         {
           "type": "text",
@@ -467,7 +467,7 @@
         {
           "type": "icon",
           "image": "3DS.svg",
-          "alt": "任天堂3DS版"
+          "alt": "3DS"
         },
         {
           "type": "text",
@@ -591,24 +591,9 @@
             "type": "gc",
             "amount": "3",
             "image": "Gold_Coin.png"
-          },
-          {
-            "type": "gc",
-            "amount": "7",
-            "image": "Gold_Coin.png"
-          },
-          {
-            "type": "sc",
-            "amount": "50",
-            "image": "Silver_Coin.png"
           }
         ],
         "expert": [
-          {
-            "type": "gc",
-            "amount": "3",
-            "image": "Gold_Coin.png"
-          },
           {
             "type": "gc",
             "amount": "7",
@@ -623,11 +608,6 @@
         "master": [
           {
             "type": "gc",
-            "amount": "3",
-            "image": "Gold_Coin.png"
-          },
-          {
-            "type": "gc",
             "amount": "7",
             "image": "Gold_Coin.png"
           },
@@ -639,9 +619,378 @@
         ]
       },
       "items": {
-        "normal": [],
-        "expert": [],
-        "master": []
+        "normal": [
+          {
+            "type": "item",
+            "name": "Badger的帽子",
+            "image": "Badger's_Hat.png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "（当和血肉墙在同一天被击败）"
+          },
+          {
+            "type": "item",
+            "name": "双筒望远镜",
+            "image": "Binoculars.png",
+            "quantity": "",
+            "chance": "2.5%"
+          },
+          {
+            "type": "item",
+            "name": "邪箭",
+            "image": "Unholy_Arrow.png",
+            "quantity": "(20–50)",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "仅腐化世界"
+          },
+          {
+            "type": "item",
+            "name": "魔矿",
+            "image": "Demonite_Ore.png",
+            "quantity": "(30–90)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "腐化种子",
+            "image": "Corrupt_Seeds.png",
+            "quantity": "(1–3)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "恶魔祭坛",
+            "image": "Demon_Altar_(item).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(仅当世界中没有祭坛被放置时;同时满足附加条件)"
+          },
+          {
+            "type": "caption",
+            "text": "仅猩红世界"
+          },
+          {
+            "type": "item",
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png",
+            "quantity": "(30–90)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猩红种子",
+            "image": "Crimson_Seeds.png",
+            "quantity": "(1–3)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猩红祭坛",
+            "image": "Crimson_Altar_(item).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(仅当世界中没有祭坛被放置时;同时满足附加条件)"
+          },
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之眼面具",
+            "image": "Eye_of_Cthulhu_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之眼纪念章",
+            "image": "Eye_of_Cthulhu_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "Badger的帽子",
+            "image": "Badger's_Hat.png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "（当和血肉墙在同一天被击败）"
+          },
+          {
+            "type": "caption",
+            "text": "仅腐化世界"
+          },
+          {
+            "type": "item",
+            "name": "恶魔祭坛",
+            "image": "Demon_Altar_(item).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(仅当世界中没有祭坛被放置时;同时满足附加条件)"
+          },
+          {
+            "type": "caption",
+            "text": "仅猩红世界"
+          },
+          {
+            "type": "item",
+            "name": "猩红祭坛",
+            "image": "Crimson_Altar_(item).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(仅当世界中没有祭坛被放置时;同时满足附加条件)"
+          },
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之眼纪念章",
+            "image": "Eye_of_Cthulhu_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（克苏鲁之眼）",
+            "image": "Treasure_Bag_(Eye_of_Cthulhu).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(克苏鲁之眼)"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁护盾",
+            "image": "Shield_of_Cthulhu.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之眼面具",
+            "image": "Eye_of_Cthulhu_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "双筒望远镜",
+            "image": "Binoculars.png",
+            "quantity": "",
+            "chance": "3.33%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(3)",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "仅腐化世界"
+          },
+          {
+            "type": "item",
+            "name": "魔矿",
+            "image": "Demonite_Ore.png",
+            "quantity": "(30–90)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "邪箭",
+            "image": "Unholy_Arrow.png",
+            "quantity": "(20–50)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "腐化种子",
+            "image": "Corrupt_Seeds.png",
+            "quantity": "(1–3)",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "仅猩红世界"
+          },
+          {
+            "type": "item",
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png",
+            "quantity": "(30–90)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猩红种子",
+            "image": "Crimson_Seeds.png",
+            "quantity": "(1–3)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "Badger的帽子",
+            "image": "Badger's_Hat.png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "（当和血肉墙在同一天被击败）"
+          },
+          {
+            "type": "caption",
+            "text": "仅腐化世界"
+          },
+          {
+            "type": "item",
+            "name": "恶魔祭坛",
+            "image": "Demon_Altar_(item).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(仅当世界中没有祭坛被放置时;同时满足附加条件)"
+          },
+          {
+            "type": "caption",
+            "text": "仅猩红世界"
+          },
+          {
+            "type": "item",
+            "name": "猩红祭坛",
+            "image": "Crimson_Altar_(item).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(仅当世界中没有祭坛被放置时;同时满足附加条件)"
+          },
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之眼纪念章",
+            "image": "Eye_of_Cthulhu_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（克苏鲁之眼）",
+            "image": "Treasure_Bag_(Eye_of_Cthulhu).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(克苏鲁之眼)"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁护盾",
+            "image": "Shield_of_Cthulhu.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之眼面具",
+            "image": "Eye_of_Cthulhu_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "双筒望远镜",
+            "image": "Binoculars.png",
+            "quantity": "",
+            "chance": "3.33%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(3)",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "仅腐化世界"
+          },
+          {
+            "type": "item",
+            "name": "魔矿",
+            "image": "Demonite_Ore.png",
+            "quantity": "(30–90)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "邪箭",
+            "image": "Unholy_Arrow.png",
+            "quantity": "(20–50)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "腐化种子",
+            "image": "Corrupt_Seeds.png",
+            "quantity": "(1–3)",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "仅猩红世界"
+          },
+          {
+            "type": "item",
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png",
+            "quantity": "(30–90)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猩红种子",
+            "image": "Crimson_Seeds.png",
+            "quantity": "(1–3)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之眼圣物",
+            "image": "Eye_of_Cthulhu_Relic.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "0x33的飞行员风镜",
+            "image": "0x33's_Aviators.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "可疑咧嘴眼球",
+            "image": "Suspicious_Grinning_Eye.png",
+            "quantity": "",
+            "chance": "25%"
+          }
+        ]
       }
     },
     "subtitle": "第一形态",
@@ -1110,9 +1459,189 @@
         ]
       },
       "items": {
-        "normal": [],
-        "expert": [],
-        "master": []
+        "normal": [
+          {
+            "type": "item",
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png",
+            "quantity": "(40–90)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "骨头拨浪鼓",
+            "image": "Bone_Rattle.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之脑面具",
+            "image": "Brain_of_Cthulhu_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之脑纪念章",
+            "image": "Brain_of_Cthulhu_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之脑纪念章",
+            "image": "Brain_of_Cthulhu_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（克苏鲁之脑）",
+            "image": "Treasure_Bag_(Brain_of_Cthulhu).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(克苏鲁之脑)"
+          },
+          {
+            "type": "item",
+            "name": "混乱之脑",
+            "image": "Brain_of_Confusion.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之脑面具",
+            "image": "Brain_of_Cthulhu_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png",
+            "quantity": "(80–110110–135)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "组织样本",
+            "image": "Tissue_Sample.png",
+            "quantity": "(20–4030–50)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "骨头拨浪鼓",
+            "image": "Bone_Rattle.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(1)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "弱效治疗药水",
+            "image": "Lesser_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之脑纪念章",
+            "image": "Brain_of_Cthulhu_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（克苏鲁之脑）",
+            "image": "Treasure_Bag_(Brain_of_Cthulhu).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(克苏鲁之脑)"
+          },
+          {
+            "type": "item",
+            "name": "混乱之脑",
+            "image": "Brain_of_Confusion.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之脑面具",
+            "image": "Brain_of_Cthulhu_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "猩红矿",
+            "image": "Crimtane_Ore.png",
+            "quantity": "(80–110110–135)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "组织样本",
+            "image": "Tissue_Sample.png",
+            "quantity": "(20–4030–50)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "骨头拨浪鼓",
+            "image": "Bone_Rattle.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(1)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "罐中脑",
+            "image": "Brain_in_a_Jar.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "克苏鲁之脑圣物",
+            "image": "Brain_of_Cthulhu_Relic.png",
+            "quantity": "",
+            "chance": "100%"
+          }
+        ]
       }
     },
     "subtitle": "第一形态",
@@ -2161,8 +2690,8 @@
       "image": "Slow.png",
       "description": "移动速度降低",
       "chance": {
-        "normal": "",
-        "expert": "",
+        "normal": "100% （吼叫）",
+        "expert": "100% （吼叫）",
         "master": "100% （吼叫）"
       },
       "duration": {
@@ -2539,7 +3068,7 @@
     "subtitle": "骷髅王头部",
     "category": "pre_hardmode",
     "flavor": "“被诅咒的地牢守卫。”",
-    "description": "“被诅咒的地牢守卫。”\n\n骷髅王是一个困难模式之前的Boss。首次击败骷髅王可以让所有玩家在该世界获得任意进出地牢区域的权限，并使服装商NPC在有空余房屋的时候入住。\n\n如果玩家在击杀骷髅王之前尝试进入地牢，地牢守卫会在玩家进入 0深度以下地区时生成，这些敌怪造成 9,999 伤害，通常仅需一击即可杀死玩家。成功击杀地牢守卫不会使玩家获得进出地牢的权限，因此要安全地进入地牢，必须击败骷髅王。\n\n当骷髅王活着时，会播放其专有音乐《骷髅王》。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《Boss 1（异界版）》。",
+    "description": "“被诅咒的地牢守卫。”\n\n骷髅王是一个困难模式之前的Boss。首次击败骷髅王可以让所有玩家在该世界获得任意进出地牢区域的权限，并使服装商NPC在有空余房屋的时候入住。\n\n如果玩家在击杀骷髅王之前尝试进入地牢，地牢守卫会在玩家进入 0深度以下地区时生成，这些敌怪造成 9,999 伤害，通常仅需一击即可杀死玩家。成功击杀地牢守卫不会使玩家获得进出地牢的权限，因此要安全地进入地牢，必须击败骷髅王。\n\n当骷髅王活着时，会播放其专有音乐《骷髅王》。若启用了异界版音乐，则会改为播放《Boss 1（异界版）》。",
     "description_rich": [
       [
         {
@@ -2572,7 +3101,7 @@
       [
         {
           "type": "text",
-          "text": "当骷髅王活着时，会播放其专有音乐《骷髅王》。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《Boss 1（异界版）》。"
+          "text": "当骷髅王活着时，会播放其专有音乐《骷髅王》。若启用了异界版音乐，则会改为播放《Boss 1（异界版）》。"
         }
       ]
     ],
@@ -3433,7 +3962,334 @@
         }
       }
     ],
-    "drops": {},
+    "drops": {
+      "money": {
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "6",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "闪耀史莱姆气球",
+            "image": "Sparkle_Slime_Balloon.png",
+            "quantity": "(25–75)",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 3 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客兜帽",
+            "image": "Crystal_Assassin_Hood.png",
+            "quantity": "",
+            "chance": "33.33%"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客上衣",
+            "image": "Crystal_Assassin_Shirt.png",
+            "quantity": "",
+            "chance": "33.33%"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客裤",
+            "image": "Crystal_Assassin_Pants.png",
+            "quantity": "",
+            "chance": "33.33%"
+          },
+          {
+            "type": "item",
+            "name": "刃杖",
+            "image": "Blade_Staff.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "明胶女式鞍",
+            "image": "Gelatinous_Pillion.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "失谐钩爪",
+            "image": "Hook_of_Dissonance.png",
+            "quantity": "",
+            "chance": "33.33%"
+          },
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "史莱姆皇后面具",
+            "image": "Queen_Slime_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "史莱姆皇后纪念章",
+            "image": "Queen_Slime_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "史莱姆皇后纪念章",
+            "image": "Queen_Slime_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（史莱姆皇后）",
+            "image": "Treasure_Bag_(Queen_Slime).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(史莱姆皇后)"
+          },
+          {
+            "type": "item",
+            "name": "挥发明胶",
+            "image": "Volatile_Gelatin.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "闪耀史莱姆气球",
+            "image": "Sparkle_Slime_Balloon.png",
+            "quantity": "(25–74)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "史莱姆皇后面具",
+            "image": "Queen_Slime_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "明胶女式鞍",
+            "image": "Gelatinous_Pillion.png",
+            "quantity": "",
+            "chance": "50%"
+          },
+          {
+            "type": "item",
+            "name": "失谐钩爪",
+            "image": "Hook_of_Dissonance.png",
+            "quantity": "",
+            "chance": "50%"
+          },
+          {
+            "type": "item",
+            "name": "刃杖",
+            "image": "Blade_Staff.png",
+            "quantity": "",
+            "chance": "33.33% (电脑版、主机版、和移动版)"
+          },
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 3 件物品中的两件"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客兜帽",
+            "image": "Crystal_Assassin_Hood.png",
+            "quantity": "",
+            "chance": "67%"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客上衣",
+            "image": "Crystal_Assassin_Shirt.png",
+            "quantity": "",
+            "chance": "67%"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客裤",
+            "image": "Crystal_Assassin_Pants.png",
+            "quantity": "",
+            "chance": "67%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(6)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "史莱姆皇后纪念章",
+            "image": "Queen_Slime_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（史莱姆皇后）",
+            "image": "Treasure_Bag_(Queen_Slime).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(史莱姆皇后)"
+          },
+          {
+            "type": "item",
+            "name": "挥发明胶",
+            "image": "Volatile_Gelatin.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "闪耀史莱姆气球",
+            "image": "Sparkle_Slime_Balloon.png",
+            "quantity": "(25–74)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "史莱姆皇后面具",
+            "image": "Queen_Slime_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "明胶女式鞍",
+            "image": "Gelatinous_Pillion.png",
+            "quantity": "",
+            "chance": "50%"
+          },
+          {
+            "type": "item",
+            "name": "失谐钩爪",
+            "image": "Hook_of_Dissonance.png",
+            "quantity": "",
+            "chance": "50%"
+          },
+          {
+            "type": "item",
+            "name": "刃杖",
+            "image": "Blade_Staff.png",
+            "quantity": "",
+            "chance": "33.33% (电脑版、主机版、和移动版)"
+          },
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 3 件物品中的两件"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客兜帽",
+            "image": "Crystal_Assassin_Hood.png",
+            "quantity": "",
+            "chance": "67%"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客上衣",
+            "image": "Crystal_Assassin_Shirt.png",
+            "quantity": "",
+            "chance": "67%"
+          },
+          {
+            "type": "item",
+            "name": "水晶刺客裤",
+            "image": "Crystal_Assassin_Pants.png",
+            "quantity": "",
+            "chance": "67%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(6)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "王室美食",
+            "image": "Regal_Delicacy.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "史莱姆皇后圣物",
+            "image": "Queen_Slime_Relic.png",
+            "quantity": "",
+            "chance": "100%"
+          }
+        ]
+      }
+    },
     "subtitle": "第一形态",
     "category": "hardmode",
     "flavor": "“所有摇晃之物的君主。”",
@@ -4428,8 +5284,8 @@
       {
         "label": "防御",
         "modes": {
-          "normal": "",
-          "expert": "",
+          "normal": "36",
+          "expert": "36",
           "master": "36"
         }
       },
@@ -4442,7 +5298,455 @@
         }
       }
     ],
-    "drops": {},
+    "drops": {
+      "money": {
+        "normal": [
+          {
+            "type": "gc",
+            "amount": "15",
+            "image": "Gold_Coin.png"
+          }
+        ],
+        "expert": [
+          {
+            "type": "gc",
+            "amount": "37",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ],
+        "master": [
+          {
+            "type": "gc",
+            "amount": "37",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "神庙钥匙",
+            "image": "Temple_Key.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 8 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "榴弹发射器",
+            "image": "Grenade_Launcher.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "维纳斯万能枪",
+            "image": "Venus_Magnum.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "爆裂藤蔓",
+            "image": "Nettle_Burst.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "吹叶机",
+            "image": "Leaf_Blower.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "花之力",
+            "image": "Flower_Pow.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "胡蜂枪",
+            "image": "Wasp_Gun.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "种子弯刀",
+            "image": "Seedler.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "花儿的粗暴展示",
+            "image": "Vulgar_Display_of_Flower.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "矮人法杖",
+            "image": "Pygmy_Staff.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "刺钩",
+            "image": "Thorn_Hook.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "吉他斧",
+            "image": "The_Axe.png",
+            "quantity": "",
+            "chance": "2%"
+          },
+          {
+            "type": "item",
+            "name": "幼苗",
+            "image": "Seedling.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "世纪之花面具",
+            "image": "Plantera_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "世纪之花纪念章",
+            "image": "Plantera_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "世纪之花纪念章",
+            "image": "Plantera_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（世纪之花）",
+            "image": "Treasure_Bag_(Plantera).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(世纪之花)"
+          },
+          {
+            "type": "item",
+            "name": "孢子囊",
+            "image": "Spore_Sac.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "世纪之花面具",
+            "image": "Plantera_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "神庙钥匙",
+            "image": "Temple_Key.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 8 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "榴弹发射器",
+            "image": "Grenade_Launcher.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "维纳斯万能枪",
+            "image": "Venus_Magnum.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "爆裂藤蔓",
+            "image": "Nettle_Burst.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "吹叶机",
+            "image": "Leaf_Blower.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "花之力",
+            "image": "Flower_Pow.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "胡蜂枪",
+            "image": "Wasp_Gun.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "种子弯刀",
+            "image": "Seedler.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "花儿的粗暴展示",
+            "image": "Vulgar_Display_of_Flower.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "幼苗",
+            "image": "Seedling.png",
+            "quantity": "",
+            "chance": "6.67%"
+          },
+          {
+            "type": "item",
+            "name": "吉他斧",
+            "image": "The_Axe.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "矮人法杖",
+            "image": "Pygmy_Staff.png",
+            "quantity": "",
+            "chance": "50%"
+          },
+          {
+            "type": "item",
+            "name": "刺钩",
+            "image": "Thorn_Hook.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(|15)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "世纪之花纪念章",
+            "image": "Plantera_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（世纪之花）",
+            "image": "Treasure_Bag_(Plantera).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(世纪之花)"
+          },
+          {
+            "type": "item",
+            "name": "孢子囊",
+            "image": "Spore_Sac.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "世纪之花面具",
+            "image": "Plantera_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "神庙钥匙",
+            "image": "Temple_Key.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 8 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "榴弹发射器",
+            "image": "Grenade_Launcher.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "维纳斯万能枪",
+            "image": "Venus_Magnum.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "爆裂藤蔓",
+            "image": "Nettle_Burst.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "吹叶机",
+            "image": "Leaf_Blower.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "花之力",
+            "image": "Flower_Pow.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "胡蜂枪",
+            "image": "Wasp_Gun.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "种子弯刀",
+            "image": "Seedler.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "花儿的粗暴展示",
+            "image": "Vulgar_Display_of_Flower.png",
+            "quantity": "",
+            "chance": "12.5%"
+          },
+          {
+            "type": "item",
+            "name": "幼苗",
+            "image": "Seedling.png",
+            "quantity": "",
+            "chance": "6.67%"
+          },
+          {
+            "type": "item",
+            "name": "吉他斧",
+            "image": "The_Axe.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "矮人法杖",
+            "image": "Pygmy_Staff.png",
+            "quantity": "",
+            "chance": "50%"
+          },
+          {
+            "type": "item",
+            "name": "刺钩",
+            "image": "Thorn_Hook.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(|15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "世纪之花幼苗",
+            "image": "Plantera_Seedling.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "世纪之花圣物",
+            "image": "Plantera_Relic.png",
+            "quantity": "",
+            "chance": "100%"
+          }
+        ]
+      }
+    },
     "debuff": {
       "name": "中毒",
       "image": "Poisoned.png",
@@ -4461,7 +5765,7 @@
     "subtitle": "第一形态",
     "category": "hardmode",
     "flavor": "“蔓生在丛林深处的畸形怪花。”",
-    "description": "“蔓生在丛林深处的畸形怪花。”\n\n世纪之花是一个困难模式Boss，在三个机械 Boss（双子魔眼、毁灭者、和机械骷髅王）全部被打败后可以在地下丛林中与之战斗。世纪之花被打败时会掉落一把神庙钥匙，允许进入丛林神庙。\n\n当世纪之花活着时，会播放其专有音乐《世纪之花》。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《世纪之花（异界版）》。",
+    "description": "“蔓生在丛林深处的畸形怪花。”\n\n世纪之花是一个困难模式Boss，在三个机械 Boss（双子魔眼、毁灭者、和机械骷髅王）全部被打败后可以在地下丛林中与之战斗。世纪之花被打败时会掉落一把神庙钥匙，允许进入丛林神庙。\n\n当世纪之花活着时，会播放其专有音乐《世纪之花》。若启用了异界版音乐，则会改为播放《世纪之花（异界版）》。",
     "description_rich": [
       [
         {
@@ -4488,7 +5792,7 @@
       [
         {
           "type": "text",
-          "text": "当世纪之花活着时，会播放其专有音乐《世纪之花》。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《世纪之花（异界版）》。"
+          "text": "当世纪之花活着时，会播放其专有音乐《世纪之花》。若启用了异界版音乐，则会改为播放《世纪之花（异界版）》。"
         }
       ]
     ],
@@ -4896,8 +6200,8 @@
       "image": "On_Fire!.png",
       "description": "缓慢损失生命值",
       "chance": {
-        "normal": "",
-        "expert": "",
+        "normal": "50% （ 火球 ）",
+        "expert": "50% （ 火球 ）",
         "master": "50% （ 火球 ）"
       },
       "duration": {
@@ -5121,24 +6425,9 @@
             "type": "gc",
             "amount": "25",
             "image": "Gold_Coin.png"
-          },
-          {
-            "type": "gc",
-            "amount": "62",
-            "image": "Gold_Coin.png"
-          },
-          {
-            "type": "sc",
-            "amount": "50",
-            "image": "Silver_Coin.png"
           }
         ],
         "expert": [
-          {
-            "type": "gc",
-            "amount": "25",
-            "image": "Gold_Coin.png"
-          },
           {
             "type": "gc",
             "amount": "62",
@@ -5153,11 +6442,6 @@
         "master": [
           {
             "type": "gc",
-            "amount": "25",
-            "image": "Gold_Coin.png"
-          },
-          {
-            "type": "gc",
             "amount": "62",
             "image": "Gold_Coin.png"
           },
@@ -5169,9 +6453,292 @@
         ]
       },
       "items": {
-        "normal": [],
-        "expert": [],
-        "master": []
+        "normal": [
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 6 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "泡泡枪",
+            "image": "Bubble_Gun.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "猪鲨链球",
+            "image": "Flairon.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "利刃台风",
+            "image": "Razorblade_Typhoon.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "暴风雨法杖",
+            "image": "Tempest_Staff.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "海啸",
+            "image": "Tsunami.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "电鳗",
+            "image": "Electric_Eel.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼之翼",
+            "image": "Fishron_Wings.png",
+            "quantity": "",
+            "chance": "6.67%"
+          },
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼公爵面具",
+            "image": "Duke_Fishron_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼公爵纪念章",
+            "image": "Duke_Fishron_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼公爵纪念章",
+            "image": "Duke_Fishron_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（猪龙鱼公爵）",
+            "image": "Treasure_Bag_(Duke_Fishron).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(猪龙鱼公爵)"
+          },
+          {
+            "type": "item",
+            "name": "虾松露",
+            "image": "Shrimpy_Truffle.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼公爵面具",
+            "image": "Duke_Fishron_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 6 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "泡泡枪",
+            "image": "Bubble_Gun.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "猪鲨链球",
+            "image": "Flairon.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "利刃台风",
+            "image": "Razorblade_Typhoon.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "暴风雨法杖",
+            "image": "Tempest_Staff.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "海啸",
+            "image": "Tsunami.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "电鳗",
+            "image": "Electric_Eel.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼之翼",
+            "image": "Fishron_Wings.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(25)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼公爵纪念章",
+            "image": "Duke_Fishron_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（猪龙鱼公爵）",
+            "image": "Treasure_Bag_(Duke_Fishron).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(猪龙鱼公爵)"
+          },
+          {
+            "type": "item",
+            "name": "虾松露",
+            "image": "Shrimpy_Truffle.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼公爵面具",
+            "image": "Duke_Fishron_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "caption",
+            "text": "总是会掉落以下 6 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "泡泡枪",
+            "image": "Bubble_Gun.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "猪鲨链球",
+            "image": "Flairon.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "利刃台风",
+            "image": "Razorblade_Typhoon.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "暴风雨法杖",
+            "image": "Tempest_Staff.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "海啸",
+            "image": "Tsunami.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "电鳗",
+            "image": "Electric_Eel.png",
+            "quantity": "",
+            "chance": "16.67%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼之翼",
+            "image": "Fishron_Wings.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(25)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "海猪肉",
+            "image": "Pork_of_the_Sea.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "猪龙鱼公爵圣物",
+            "image": "Duke_Fishron_Relic.png",
+            "quantity": "",
+            "chance": "100%"
+          }
+        ]
       }
     },
     "debuff": {
@@ -5336,9 +6903,334 @@
         ]
       },
       "items": {
-        "normal": [],
-        "expert": [],
-        "master": []
+        "normal": [
+          {
+            "type": "caption",
+            "text": "总会掉落以下 4 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "夜光",
+            "image": "Nightglow.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "星光",
+            "image": "Starlight.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "万花筒",
+            "image": "Kaleidoscope.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "日暮",
+            "image": "Eventide.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "女皇之翼",
+            "image": "Empress_Wings.png",
+            "quantity": "",
+            "chance": "6.67%"
+          },
+          {
+            "type": "item",
+            "name": "七彩染料",
+            "image": "Prismatic_Dye.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "星星吉他",
+            "image": "Stellar_Tune.png",
+            "quantity": "",
+            "chance": "2%"
+          },
+          {
+            "type": "item",
+            "name": "彩虹光标",
+            "image": "Rainbow_Cursor.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "泰拉棱镜",
+            "image": "Terraprisma.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "光之女皇面具",
+            "image": "Empress_of_Light_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "光之女皇纪念章",
+            "image": "Empress_of_Light_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "泰拉棱镜",
+            "image": "Terraprisma.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "光之女皇纪念章",
+            "image": "Empress_of_Light_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（光之女皇）",
+            "image": "Treasure_Bag_(Empress_of_Light).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(光之女皇)"
+          },
+          {
+            "type": "caption",
+            "text": "总会掉落以下 4 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "夜光",
+            "image": "Nightglow.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "星光",
+            "image": "Starlight.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "万花筒",
+            "image": "Kaleidoscope.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "日暮",
+            "image": "Eventide.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "翱翔徽章",
+            "image": "Soaring_Insignia.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "光之女皇面具",
+            "image": "Empress_of_Light_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "女皇之翼",
+            "image": "Empress_Wings.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "星星吉他",
+            "image": "Stellar_Tune.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "彩虹光标",
+            "image": "Rainbow_Cursor.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "七彩染料",
+            "image": "Prismatic_Dye.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(25)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "泰拉棱镜",
+            "image": "Terraprisma.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "强效治疗药水",
+            "image": "Greater_Healing_Potion.png",
+            "quantity": "(5–15)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "光之女皇纪念章",
+            "image": "Empress_of_Light_Trophy.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "宝藏袋（光之女皇）",
+            "image": "Treasure_Bag_(Empress_of_Light).png",
+            "quantity": "",
+            "chance": "100%",
+            "note": "(光之女皇)"
+          },
+          {
+            "type": "caption",
+            "text": "总会掉落以下 4 件物品之一"
+          },
+          {
+            "type": "item",
+            "name": "夜光",
+            "image": "Nightglow.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "星光",
+            "image": "Starlight.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "万花筒",
+            "image": "Kaleidoscope.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "日暮",
+            "image": "Eventide.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "翱翔徽章",
+            "image": "Soaring_Insignia.png",
+            "quantity": "",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "光之女皇面具",
+            "image": "Empress_of_Light_Mask.png",
+            "quantity": "",
+            "chance": "14.29%"
+          },
+          {
+            "type": "item",
+            "name": "女皇之翼",
+            "image": "Empress_Wings.png",
+            "quantity": "",
+            "chance": "10%"
+          },
+          {
+            "type": "item",
+            "name": "星星吉他",
+            "image": "Stellar_Tune.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "彩虹光标",
+            "image": "Rainbow_Cursor.png",
+            "quantity": "",
+            "chance": "5%"
+          },
+          {
+            "type": "item",
+            "name": "七彩染料",
+            "image": "Prismatic_Dye.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "金币",
+            "image": "Gold_Coin.png",
+            "quantity": "(25)",
+            "chance": "100%"
+          },
+          {
+            "type": "item",
+            "name": "光之珠宝",
+            "image": "Jewel_of_Light.png",
+            "quantity": "",
+            "chance": "25%"
+          },
+          {
+            "type": "item",
+            "name": "光之女皇圣物",
+            "image": "Empress_of_Light_Relic.png",
+            "quantity": "",
+            "chance": "100%"
+          }
+        ]
       }
     },
     "subtitle": "第一形态",
@@ -5584,8 +7476,8 @@
       "image": "On_Fire!.png",
       "description": "缓慢损失生命值",
       "chance": {
-        "normal": "",
-        "expert": "",
+        "normal": "100% （ 火球 ）",
+        "expert": "100% （ 火球 ）",
         "master": "100% （ 火球 ）"
       },
       "duration": {
@@ -5686,8 +7578,8 @@
       {
         "label": "击退抗性",
         "modes": {
-          "normal": "",
-          "expert": "",
+          "normal": "100%",
+          "expert": "100%",
           "master": "100%"
         }
       }
@@ -6170,7 +8062,7 @@
     "subtitle": "困难模式独有",
     "category": "hardmode",
     "flavor": "“ 月亮末日慢慢逼近…… ”",
-    "description": "“月亮末日慢慢逼近……”\n\n月亮领主是一个困难模式、拜月教邪教徒后的Boss。它是电脑版电脑版、主机版主机版、和移动版移动版的《泰拉瑞亚》的最终 Boss。\n\n当月亮领主活着时，会播放其专有音乐《月亮领主》。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《月亮Boss（异界版）》。",
+    "description": "“月亮末日慢慢逼近……”\n\n月亮领主是一个困难模式、拜月教邪教徒后的Boss。它是电脑版、主机版、和移动版的《泰拉瑞亚》的最终 Boss。\n\n当月亮领主活着时，会播放其专有音乐《月亮领主》。若启用了异界版音乐，则会改为播放《月亮Boss（异界版）》。",
     "description_rich": [
       [
         {
@@ -6196,7 +8088,7 @@
         {
           "type": "icon",
           "image": "Desktop_only.png",
-          "alt": "电脑版"
+          "alt": ""
         },
         {
           "type": "text",
@@ -6205,7 +8097,7 @@
         {
           "type": "icon",
           "image": "Console_only.png",
-          "alt": "主机版"
+          "alt": ""
         },
         {
           "type": "text",
@@ -6214,7 +8106,7 @@
         {
           "type": "icon",
           "image": "Mobile_only.png",
-          "alt": "移动版"
+          "alt": ""
         },
         {
           "type": "text",
@@ -6224,7 +8116,7 @@
       [
         {
           "type": "text",
-          "text": "当月亮领主活着时，会播放其专有音乐《月亮领主》。若启用了异界版音乐(电脑版、主机版、和移动版)，则会改为播放《月亮Boss（异界版）》。"
+          "text": "当月亮领主活着时，会播放其专有音乐《月亮领主》。若启用了异界版音乐，则会改为播放《月亮Boss（异界版）》。"
         }
       ]
     ],
@@ -6484,8 +8376,8 @@
       "image": "Oozed.png",
       "description": "移动速度显著降低",
       "chance": {
-        "normal": "",
-        "expert": "",
+        "normal": "100% （ 食人魔唾液 ）",
+        "expert": "100% （ 食人魔唾液 ）",
         "master": "100% （ 食人魔唾液 ）"
       },
       "duration": {
@@ -6779,8 +8671,8 @@
       "image": "On_Fire!.png",
       "description": "缓慢损失生命值",
       "chance": {
-        "normal": "",
-        "expert": "",
+        "normal": "100% （ 双足翼龙吐息 ）",
+        "expert": "100% （ 双足翼龙吐息 ）",
         "master": "100% （ 双足翼龙吐息 ）"
       },
       "duration": {
@@ -7416,12 +9308,12 @@
     },
     "subtitle": "困难模式独有",
     "category": "event",
-    "description": "哀木是个困难模式的小Boss，在南瓜月事件中生成。此 Boss 是活树的形态，面部类似于杰克南瓜灯。它是常绿尖叫怪的南瓜月等价物，常绿尖叫怪的行为方式于哀木几乎相同。\n\n击杀哀木会给南瓜月事件最终分数加上 75 /150/187.5点。",
+    "description": "哀木是个困难模式、世纪之花后的小 Boss，在南瓜月事件中生成。它是常绿尖叫怪的南瓜月等价物，常绿尖叫怪的行为方式与哀木几乎相同。\n\n击杀哀木会给南瓜月事件最终分数加上 75 /150/187.5点。",
     "description_rich": [
       [
         {
           "type": "text",
-          "text": "哀木是个困难模式的小Boss，在南瓜月事件中生成。此 Boss 是活树的形态，面部类似于杰克南瓜灯。它是常绿尖叫怪的南瓜月等价物，常绿尖叫怪的行为方式于哀木几乎相同。"
+          "text": "哀木是个困难模式、世纪之花后的小 Boss，在南瓜月事件中生成。它是常绿尖叫怪的南瓜月等价物，常绿尖叫怪的行为方式与哀木几乎相同。"
         }
       ],
       [
@@ -8550,8 +10442,8 @@
       "image": "Chilled.png",
       "description": "你的移动速度已降低",
       "chance": {
-        "normal": "",
-        "expert": "",
+        "normal": "100% （ 寒霜波 ）\n66.67% （ 寒霜碎块 ）",
+        "expert": "100% （ 寒霜波 ）\n66.67% （ 寒霜碎块 ）",
         "master": "100% （ 寒霜波 ）\n66.67% （ 寒霜碎块 ）"
       },
       "duration": {
@@ -9078,7 +10970,38 @@
         }
       }
     ],
-    "drops": {},
+    "drops": {
+      "money": {},
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ]
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "event",
     "description": "天界柱（又称为月亮柱、月亮塔、或天界塔）是在月亮事件中当拜月教邪教徒被打败后出现的四个Boss。它们出现在地图各处四个等间距的位置上（参见下文的天柱生成机制），并且除了会在原地缓慢上下飘动外，它们不会移动。每个天柱都会控制周围半径 250 格（或者说 500英尺）的圆形地图区域。当玩家在受影响的区域中时，背景会变为天柱特定的那种，并且只有天柱的专属敌怪会大量地生成。\n\n四个天界柱是日耀柱、星旋柱、星云柱、和星尘柱。按照打败它们后掉落的月亮碎片所能制作的装备来看，它们代表了《泰拉瑞亚》中四种主要伤害类型：日耀为近战、星旋为远程、星云为魔法、而星尘为召唤。\n\n最初，天界柱周围有一个很大的护盾，可以防止它们受到任何伤害。为了消除护盾，玩家必须杀死 100 个对应于该特定天柱的敌怪；杀死的敌怪会释放出飞向该天柱的护盾的小型红色能量粒子以提示这一点。在护盾解除后，敌怪会继续生成，直到此天柱被打败。如果玩家未摧毁天柱的情况下退出世界，所有已经造成的伤害会被重置，移除护盾所需要的击杀计数也会被重置。不过，玩家死亡并不会重置这些计数。在击败月亮领主后，解除护盾要求击败的敌怪将下降至 50。\n\n天柱自身相当容易被打败，每个都只有20,000生命、非常巨大、不会移动、并且攻击很弱（或没有攻击）。直接威胁来自于它们所生成的大量敌怪；它们能造成大量伤害、能造成减益、并且如果不快速处理掉会轻松地淹没玩家。\n\n打败天界柱并没有预设的固定顺序。以下状态讯息会在第一、第二、第三、第四个天柱被干掉时出现，而具体是哪个天柱并无关系：\n\n· 打败第一个天柱：“你的头脑变得麻木……”\n· 打败第二个天柱：“你痛苦不堪……”\n· 打败第三个天柱：“阴森的声音在你耳边萦绕不绝……”\n· 打败第四个天柱：“月亮末日慢慢逼近……”\n\n打败全部四个天界柱后，屏幕将开始振动，音乐的音量也会逐渐降低直至最终完全静音。60 秒后，月亮领主就会生成。",
@@ -9222,7 +11145,38 @@
         }
       }
     ],
-    "drops": {},
+    "drops": {
+      "money": {},
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ]
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "event",
     "description": "天界柱（又称为月亮柱、月亮塔、或天界塔）是在月亮事件中当拜月教邪教徒被打败后出现的四个Boss。它们出现在地图各处四个等间距的位置上（参见下文的天柱生成机制），并且除了会在原地缓慢上下飘动外，它们不会移动。每个天柱都会控制周围半径 250 格（或者说 500英尺）的圆形地图区域。当玩家在受影响的区域中时，背景会变为天柱特定的那种，并且只有天柱的专属敌怪会大量地生成。\n\n四个天界柱是日耀柱、星旋柱、星云柱、和星尘柱。按照打败它们后掉落的月亮碎片所能制作的装备来看，它们代表了《泰拉瑞亚》中四种主要伤害类型：日耀为近战、星旋为远程、星云为魔法、而星尘为召唤。\n\n最初，天界柱周围有一个很大的护盾，可以防止它们受到任何伤害。为了消除护盾，玩家必须杀死 100 个对应于该特定天柱的敌怪；杀死的敌怪会释放出飞向该天柱的护盾的小型红色能量粒子以提示这一点。在护盾解除后，敌怪会继续生成，直到此天柱被打败。如果玩家未摧毁天柱的情况下退出世界，所有已经造成的伤害会被重置，移除护盾所需要的击杀计数也会被重置。不过，玩家死亡并不会重置这些计数。在击败月亮领主后，解除护盾要求击败的敌怪将下降至 50。\n\n天柱自身相当容易被打败，每个都只有20,000生命、非常巨大、不会移动、并且攻击很弱（或没有攻击）。直接威胁来自于它们所生成的大量敌怪；它们能造成大量伤害、能造成减益、并且如果不快速处理掉会轻松地淹没玩家。\n\n打败天界柱并没有预设的固定顺序。以下状态讯息会在第一、第二、第三、第四个天柱被干掉时出现，而具体是哪个天柱并无关系：\n\n· 打败第一个天柱：“你的头脑变得麻木……”\n· 打败第二个天柱：“你痛苦不堪……”\n· 打败第三个天柱：“阴森的声音在你耳边萦绕不绝……”\n· 打败第四个天柱：“月亮末日慢慢逼近……”\n\n打败全部四个天界柱后，屏幕将开始振动，音乐的音量也会逐渐降低直至最终完全静音。60 秒后，月亮领主就会生成。",
@@ -9366,7 +11320,38 @@
         }
       }
     ],
-    "drops": {},
+    "drops": {
+      "money": {},
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ]
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "event",
     "description": "天界柱（又称为月亮柱、月亮塔、或天界塔）是在月亮事件中当拜月教邪教徒被打败后出现的四个Boss。它们出现在地图各处四个等间距的位置上（参见下文的天柱生成机制），并且除了会在原地缓慢上下飘动外，它们不会移动。每个天柱都会控制周围半径 250 格（或者说 500英尺）的圆形地图区域。当玩家在受影响的区域中时，背景会变为天柱特定的那种，并且只有天柱的专属敌怪会大量地生成。\n\n四个天界柱是日耀柱、星旋柱、星云柱、和星尘柱。按照打败它们后掉落的月亮碎片所能制作的装备来看，它们代表了《泰拉瑞亚》中四种主要伤害类型：日耀为近战、星旋为远程、星云为魔法、而星尘为召唤。\n\n最初，天界柱周围有一个很大的护盾，可以防止它们受到任何伤害。为了消除护盾，玩家必须杀死 100 个对应于该特定天柱的敌怪；杀死的敌怪会释放出飞向该天柱的护盾的小型红色能量粒子以提示这一点。在护盾解除后，敌怪会继续生成，直到此天柱被打败。如果玩家未摧毁天柱的情况下退出世界，所有已经造成的伤害会被重置，移除护盾所需要的击杀计数也会被重置。不过，玩家死亡并不会重置这些计数。在击败月亮领主后，解除护盾要求击败的敌怪将下降至 50。\n\n天柱自身相当容易被打败，每个都只有20,000生命、非常巨大、不会移动、并且攻击很弱（或没有攻击）。直接威胁来自于它们所生成的大量敌怪；它们能造成大量伤害、能造成减益、并且如果不快速处理掉会轻松地淹没玩家。\n\n打败天界柱并没有预设的固定顺序。以下状态讯息会在第一、第二、第三、第四个天柱被干掉时出现，而具体是哪个天柱并无关系：\n\n· 打败第一个天柱：“你的头脑变得麻木……”\n· 打败第二个天柱：“你痛苦不堪……”\n· 打败第三个天柱：“阴森的声音在你耳边萦绕不绝……”\n· 打败第四个天柱：“月亮末日慢慢逼近……”\n\n打败全部四个天界柱后，屏幕将开始振动，音乐的音量也会逐渐降低直至最终完全静音。60 秒后，月亮领主就会生成。",
@@ -9510,7 +11495,38 @@
         }
       }
     ],
-    "drops": {},
+    "drops": {
+      "money": {},
+      "items": {
+        "normal": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ],
+        "expert": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ],
+        "master": [
+          {
+            "type": "item",
+            "name": "日耀碎片",
+            "image": "Solar_Fragment.png",
+            "quantity": "(12–6024–100)",
+            "chance": "100%"
+          }
+        ]
+      }
+    },
     "subtitle": "困难模式独有",
     "category": "event",
     "description": "天界柱（又称为月亮柱、月亮塔、或天界塔）是在月亮事件中当拜月教邪教徒被打败后出现的四个Boss。它们出现在地图各处四个等间距的位置上（参见下文的天柱生成机制），并且除了会在原地缓慢上下飘动外，它们不会移动。每个天柱都会控制周围半径 250 格（或者说 500英尺）的圆形地图区域。当玩家在受影响的区域中时，背景会变为天柱特定的那种，并且只有天柱的专属敌怪会大量地生成。\n\n四个天界柱是日耀柱、星旋柱、星云柱、和星尘柱。按照打败它们后掉落的月亮碎片所能制作的装备来看，它们代表了《泰拉瑞亚》中四种主要伤害类型：日耀为近战、星旋为远程、星云为魔法、而星尘为召唤。\n\n最初，天界柱周围有一个很大的护盾，可以防止它们受到任何伤害。为了消除护盾，玩家必须杀死 100 个对应于该特定天柱的敌怪；杀死的敌怪会释放出飞向该天柱的护盾的小型红色能量粒子以提示这一点。在护盾解除后，敌怪会继续生成，直到此天柱被打败。如果玩家未摧毁天柱的情况下退出世界，所有已经造成的伤害会被重置，移除护盾所需要的击杀计数也会被重置。不过，玩家死亡并不会重置这些计数。在击败月亮领主后，解除护盾要求击败的敌怪将下降至 50。\n\n天柱自身相当容易被打败，每个都只有20,000生命、非常巨大、不会移动、并且攻击很弱（或没有攻击）。直接威胁来自于它们所生成的大量敌怪；它们能造成大量伤害、能造成减益、并且如果不快速处理掉会轻松地淹没玩家。\n\n打败天界柱并没有预设的固定顺序。以下状态讯息会在第一、第二、第三、第四个天柱被干掉时出现，而具体是哪个天柱并无关系：\n\n· 打败第一个天柱：“你的头脑变得麻木……”\n· 打败第二个天柱：“你痛苦不堪……”\n· 打败第三个天柱：“阴森的声音在你耳边萦绕不绝……”\n· 打败第四个天柱：“月亮末日慢慢逼近……”\n\n打败全部四个天界柱后，屏幕将开始振动，音乐的音量也会逐渐降低直至最终完全静音。60 秒后，月亮领主就会生成。",

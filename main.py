@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import asyncio
+import hashlib
 import json
 import os
 import re
@@ -208,7 +209,7 @@ CARD_WIDTH = 600
 BOSS_CARD_WIDTH = 960
 CARD_PADDING = 20
 CARD_BOTTOM_EXTRA = 10
-CARD_VERSION = "v62"
+CARD_VERSION = "v63"
 ROW_HEIGHT = 32
 STAT_LINE_HEIGHT = 22
 STAT_MIN_ROW = 28
@@ -1538,7 +1539,7 @@ _POOL_SEARCH_ORDER = (
     "item",
 )
 _POOL_PRIORITY = {name: idx for idx, name in enumerate(_POOL_SEARCH_ORDER)}
-_FUZZY_MATCH_CARD_MAX = 2
+_SEARCH_LIST_COLS = 3
 
 
 def _rank_pool_from_index(query: str, pool_name: str) -> list[str]:
@@ -1713,6 +1714,47 @@ def _display_item(item: dict) -> dict:
 
 def _match_list_label(key: str, item: dict, query: str) -> str:
     return item.get("name", key)
+
+
+def _match_list_entry(source: str, key: str, item: dict) -> dict[str, str]:
+    name = _match_list_label(key, item, "")
+    if source in ("biome", "event", "npc", "boss"):
+        image = item.get("list_icon") or item.get("image") or ""
+    else:
+        image = item.get("image") or ""
+    return {"name": name, "image": image}
+
+
+def _search_results_card_path(
+    query: str,
+    entries: list[dict],
+    *,
+    variant: str = "fuzzy",
+) -> str:
+    sig = hashlib.sha256(
+        json.dumps([entry.get("name", "") for entry in entries], ensure_ascii=False).encode()
+    ).hexdigest()[:16]
+    safe_query = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", query or "q")[:40]
+    return _card_output_path(sig, "zh", kind=f"search_{variant}_{safe_query}")
+
+
+def _generate_search_results_card(
+    query: str,
+    entries: list[dict],
+    *,
+    title: str,
+    variant: str = "fuzzy",
+) -> str:
+    data = {
+        "title": title,
+        "layout": "grid",
+        "columns": _SEARCH_LIST_COLS,
+        "sections": [{"label": "", "items": entries}],
+    }
+    return _generate_overview_card(
+        data,
+        output_path=_search_results_card_path(query, entries, variant=variant),
+    )
 
 
 def _format_stat_plain(stat: dict, locale: str) -> str:
@@ -4901,10 +4943,11 @@ def _draw_overview_grid_layout(
     return row_y + OV_SECTION_GAP
 
 
-def _generate_overview_card(data: dict) -> str:
+def _generate_overview_card(data: dict, *, output_path: str | None = None) -> str:
     _ensure_dirs()
     title = data.get("title", "")
-    output_path = _card_output_path(title, "zh", kind=f"overview_{title}")
+    if output_path is None:
+        output_path = _card_output_path(title, "zh", kind=f"overview_{title}")
     if os.path.isfile(output_path):
         return output_path
 
@@ -5728,37 +5771,74 @@ class TerrariaQueryPlugin(Star):
 
             partial_items = [k for pool, k in partial if pool == "item"]
             if partial_items:
-                yield event.plain_result(
-                    _format_partial_item_hints(search_text, partial_items, self.items)
-                )
+                async for result in self._yield_search_results_list(
+                    event,
+                    search_text,
+                    [("item", key) for key in partial_items],
+                    title=f"以下物品名称也包含「{search_text}」",
+                    variant="partial",
+                ):
+                    yield result
             return
 
-        if len(matches) > _FUZZY_MATCH_CARD_MAX:
-            lines = [f"找到 {len(matches)} 个匹配结果，请输入更精确的名称后重新查询：", ""]
-            for source, key in matches:
-                pool = {
-                    "biome": self.biomes,
-                    "event": self.events,
-                    "boss": self.bosses,
-                    "treasure_bag": self.treasure_bags,
-                    "npc": self.npcs,
-                    "mount": self.mounts,
-                    "pet": self.pets,
-                    "item": self.items,
-                }[source]
-                item = pool[key]
-                lines.append(f"· {_match_list_label(key, item, search_text)}")
-            yield event.plain_result("\n".join(lines))
-            return
-
-        if len(matches) > 1:
-            yield event.plain_result(f"找到 {len(matches)} 个匹配结果：")
-
-        for source, key in matches:
+        if len(matches) == 1:
+            source, key = matches[0]
             async for result in self._yield_match_card(
                 event, source, key, page_content=page_content
             ):
                 yield result
+            return
+
+        title = f"「{search_text}」— 找到 {len(matches)} 个匹配结果"
+        if len(matches) > _SEARCH_LIST_COLS:
+            title += "，请输入更精确的名称"
+        async for result in self._yield_search_results_list(
+            event,
+            search_text,
+            matches,
+            title=title,
+            variant="fuzzy",
+        ):
+            yield result
+        return
+
+    async def _yield_search_results_list(
+        self,
+        event: AstrMessageEvent,
+        query: str,
+        matches: list[tuple[str, str]],
+        *,
+        title: str,
+        variant: str = "fuzzy",
+    ):
+        pools = {
+            "biome": self.biomes,
+            "event": self.events,
+            "boss": self.bosses,
+            "treasure_bag": self.treasure_bags,
+            "npc": self.npcs,
+            "mount": self.mounts,
+            "pet": self.pets,
+            "item": self.items,
+        }
+        entries = [
+            _match_list_entry(source, key, pools[source][key])
+            for source, key in matches
+        ]
+        try:
+            card_path = _generate_search_results_card(
+                query,
+                entries,
+                title=title,
+                variant=variant,
+            )
+            yield event.image_result(card_path)
+        except Exception as e:
+            logger.error(f"生成搜索结果列表图片失败 ({query}): {e}")
+            lines = [title, ""]
+            for entry in entries:
+                lines.append(f"· {entry.get('name', '')}")
+            yield event.plain_result("\n".join(lines))
 
     async def _yield_overview_card(
         self,

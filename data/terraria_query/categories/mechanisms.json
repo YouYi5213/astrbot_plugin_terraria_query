@@ -1,4 +1,177 @@
 {
+  "仙人球": {
+    "name": "仙人球",
+    "image": "Rolling_Cactus.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "工具提示",
+        "value": "触碰会造成伤害\n“它们讨厌……”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "触碰会造成伤害\n“它们讨厌……”"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "00*",
+        "color": "#ffffff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "仙人掌",
+          "image": "Cactus.png",
+          "amount": "6"
+        }
+      ],
+      "result": {
+        "name": "仙人球",
+        "image": "Rolling_Cactus.png"
+      }
+    },
+    "description": "仙人球是一个可放置的物体，行为与巨石类似。它放置时是静止的，当被射弹、镐或钻头击中时、或其下方的物块被采掘或被锤敲击后会开始滚动。它的滚动方向由它在世界中的水平坐标为奇数或偶数决定，与其所在表面的斜坡方向无关（除非它有一侧被物块阻挡，这种情况下它会向另一侧滚动）。\n\n当仙人球下方的两个物块都被移除或锤击为半个物块，它会垂直下落，直到撞击一个表面，然后弹起并滚动。\n\n仙人球射弹可以穿透无限数量的实体。当已经开始滚动的仙人球掉落到较低的表面时，它会维持原有的向前动能并向上弹起，放出 2–4 根向随机方向飞出的仙人球尖刺。撞击垂直方向的障碍物时也会放出尖刺，但是这会摧毁仙人球。仙人球的移动会被液体影响，此外它也可以向上坡滚动。\n\n静止的仙人球会对接触它的玩家造成 25 伤害。仙人球射弹对接触到的玩家造成 70 /140/210（对NPC、敌怪和小动物造成 35 伤害）并造成 10击退（极强击退力）。仙人球尖刺对玩家造成 60 /120/180伤害 （对NPC、敌怪和小动物造成 30 伤害）并造成 2击退（很弱击退力），且会穿透实体，在接触物块时破碎。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "仙人球是一个可放置的物体，行为与巨石类似。它放置时是静止的，当被射弹、镐或钻头击中时、或其下方的物块被采掘或被锤敲击后会开始滚动。它的滚动方向由它在世界中的水平坐标为奇数或偶数决定，与其所在表面的斜坡方向无关（除非它有一侧被物块阻挡，这种情况下它会向另一侧滚动）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当仙人球下方的两个物块都被移除或锤击为半个物块，它会垂直下落，直到撞击一个表面，然后弹起并滚动。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "仙人球射弹可以穿透无限数量的实体。当已经开始滚动的仙人球掉落到较低的表面时，它会维持原有的向前动能并向上弹起，放出 2–4 根向随机方向飞出的仙人球尖刺。撞击垂直方向的障碍物时也会放出尖刺，但是这会摧毁仙人球。仙人球的移动会被液体影响，此外它也可以向上坡滚动。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "静止的仙人球会对接触它的玩家造成 25 伤害。仙人球射弹对接触到的玩家造成 70 /140/210（对NPC、敌怪和小动物造成 35 伤害）并造成 10击退（极强击退力）。仙人球尖刺对玩家造成 60 /120/180伤害 （对NPC、敌怪和小动物造成 30 伤害）并造成 2击退（很弱击退力），且会穿透实体，在接触物块时破碎。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "仙人球",
+      "image": "Rolling_Cactus.png"
+    },
+    "wiki_title": "仙人球",
+    "item_category": "mechanisms"
+  },
+  "弹力巨石": {
+    "name": "弹力巨石",
+    "image": "Bouncy_Boulder.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "机械",
+        "extra": ""
+      },
+      {
+        "label": "可放置",
+        "value": "",
+        "extra": "",
+        "bool_icon": "yes"
+      },
+      {
+        "label": "使用时间",
+        "value": "15",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "05*",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "15",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 5 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "重型装配台",
+      "ingredients": [
+        {
+          "name": "巨石",
+          "image": "Boulder.png"
+        },
+        {
+          "name": "粉凝胶",
+          "image": "Pink_Gel.png",
+          "amount": "5"
+        }
+      ],
+      "result": {
+        "name": "弹力巨石",
+        "image": "Bouncy_Boulder.png"
+      }
+    },
+    "description": "弹力巨石是个可放置的物体，会在下方失去支撑后开始滚动和弹跳。一旦开始运动，它就会开始弹跳若干次，随后停止运动。它的运动方式与弹力炸弹相似，但速度更快，还会像巨石那样造成伤害。它可以在Celebrationmk10、No traps、和Get fixed boi特殊世界种子中自然生成。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "弹力巨石是个可放置的物体，会在下方失去支撑后开始滚动和弹跳。一旦开始运动，它就会开始弹跳若干次，随后停止运动。它的运动方式与弹力炸弹相似，但速度更快，还会像巨石那样造成伤害。它可以在Celebrationmk10、No traps、和Get fixed boi特殊世界种子中自然生成。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "弹力巨石",
+      "image": "Bouncy_Boulder_(projectile).png"
+    },
+    "wiki_title": "弹力巨石",
+    "item_category": "mechanisms"
+  },
   "致动器": {
     "name": "致动器",
     "image": "Actuator.png",
@@ -67,7 +240,32 @@
       }
     ],
     "recipe": null,
-    "drops": null,
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "致动器",
+            "image": "Actuator.png",
+            "amount": "50"
+          },
+          {
+            "name": "任何铁锭",
+            "image": "Any_Iron_Bar.gif",
+            "amount": "10"
+          },
+          {
+            "name": "电线",
+            "image": "Wire.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "致动魔杖",
+          "image": "Actuation_Rod.png"
+        }
+      }
+    ],
     "description": "致动器是一个机械，可以在机械师处以每个10 SC的价格购买，或者由落沙、熔岩或死人宝箱陷阱处收集。它需要用电线连接以生效。激活时，它所在的图格会在激活与非激活状态切换，这会让任何物块都能够像通电或未通电石块一样切换。和电线一样，致动器通常情况下是不可见的，仅当选择一件机械物品时才可见。\n\n以下物品可以与致动器交互：\n\n· 它们可以用钢丝钳或宏伟蓝图(电脑版、主机版、和移动版)移除。\n· 它们可以用宏伟蓝图(电脑版、主机版、和移动版)放置。\n· 如果玩家拥有致动器，自动安放器会自动将它们安装到放置的物体上。\n· 致动魔杖可以切换有限距离内的致动器的状态，无需电线连接。",
     "description_rich": [
       [
@@ -138,32 +336,7 @@
         }
       ]
     ],
-    "item_category": "mechanisms",
-    "used_in": [
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "致动器",
-            "image": "Actuator.png",
-            "amount": "50"
-          },
-          {
-            "name": "任何铁锭",
-            "image": "Any_Iron_Bar.gif",
-            "amount": "10"
-          },
-          {
-            "name": "电线",
-            "image": "Wire.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "致动魔杖",
-          "image": "Actuation_Rod.png"
-        }
-      }
-    ]
+    "wiki_title": "致动器",
+    "item_category": "mechanisms"
   }
 }

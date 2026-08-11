@@ -63,9 +63,6 @@
         "image": "Chlorophyte_Bar.png"
       }
     },
-    "drops": null,
-    "description": "叶绿锭是一种困难模式、机械 Boss后的锭。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "秘银砧或山铜砧",
@@ -508,7 +505,18 @@
           "image": "Drill_Containment_Unit.png"
         }
       }
-    ]
+    ],
+    "description": "叶绿锭是一种困难模式、机械 Boss后的锭。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "叶绿锭是一种困难模式、机械 Boss后的锭。"
+        }
+      ]
+    ],
+    "wiki_title": "叶绿锭",
+    "item_category": "bars"
   },
   "夜明锭": {
     "name": "夜明锭",
@@ -579,9 +587,6 @@
         "image": "Luminite_Bar.png"
       }
     },
-    "drops": null,
-    "description": "夜明锭是一种困难模式、月亮领主后的锭。\n\n制作与一种月亮碎片有关的所有物品（即盔甲、翅膀、镐、和锤斧）除了 85 块月亮碎片外还需要 68 块夜明锭（204 个夜明矿）。这需要打败月亮领主 4 /3-4次。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "远古操纵机(电脑版、主机版、和移动版)",
@@ -1218,7 +1223,24 @@
           "image": "Drill_Containment_Unit.png"
         }
       }
-    ]
+    ],
+    "description": "夜明锭是一种困难模式、月亮领主后的锭。\n\n制作与一种月亮碎片有关的所有物品（即盔甲、翅膀、镐、和锤斧）除了 85 块月亮碎片外还需要 68 块夜明锭（204 个夜明矿）。这需要打败月亮领主 4 /3-4次。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "夜明锭是一种困难模式、月亮领主后的锭。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "制作与一种月亮碎片有关的所有物品（即盔甲、翅膀、镐、和锤斧）除了 85 块月亮碎片外还需要 68 块夜明锭（204 个夜明矿）。这需要打败月亮领主 4 /3-4次。"
+        }
+      ]
+    ],
+    "wiki_title": "夜明锭",
+    "item_category": "bars"
   },
   "山铜锭": {
     "name": "山铜锭",
@@ -1279,6 +1301,190 @@
         "image": "Orichalcum_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "山铜剑",
+          "image": "Orichalcum_Sword.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "山铜头盔",
+          "image": "Orichalcum_Helmet.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "山铜头饰",
+          "image": "Orichalcum_Headgear.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "山铜战斧",
+          "image": "Orichalcum_Waraxe.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "山铜护腿",
+          "image": "Orichalcum_Leggings.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "山铜砧",
+          "image": "Orichalcum_Anvil.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "24"
+          }
+        ],
+        "result": {
+          "name": "山铜胸甲",
+          "image": "Orichalcum_Breastplate.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "山铜连弩",
+          "image": "Orichalcum_Repeater.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "山铜钻头",
+          "image": "Orichalcum_Drill.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "山铜链锯",
+          "image": "Orichalcum_Chainsaw.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "山铜镐",
+          "image": "Orichalcum_Pickaxe.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "山铜长戟",
+          "image": "Orichalcum_Halberd.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "山铜锭",
+            "image": "Orichalcum_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "山铜面具",
+          "image": "Orichalcum_Mask.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -1518,191 +1724,22 @@
       ]
     },
     "description": "山铜锭是一种困难模式的锭。它们为制作困难模式的砧所必需，后者用于制作大多数困难模式装备。\n\n其代用矿石对应物是秘银锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "山铜剑",
-          "image": "Orichalcum_Sword.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "山铜锭是一种困难模式的锭。它们为制作困难模式的砧所必需，后者用于制作大多数困难模式装备。"
         }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "山铜头盔",
-          "image": "Orichalcum_Helmet.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是秘银锭。"
         }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "山铜头饰",
-          "image": "Orichalcum_Headgear.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "山铜战斧",
-          "image": "Orichalcum_Waraxe.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "山铜护腿",
-          "image": "Orichalcum_Leggings.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "山铜砧",
-          "image": "Orichalcum_Anvil.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "24"
-          }
-        ],
-        "result": {
-          "name": "山铜胸甲",
-          "image": "Orichalcum_Breastplate.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "山铜连弩",
-          "image": "Orichalcum_Repeater.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "山铜钻头",
-          "image": "Orichalcum_Drill.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "山铜链锯",
-          "image": "Orichalcum_Chainsaw.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "山铜镐",
-          "image": "Orichalcum_Pickaxe.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "山铜长戟",
-          "image": "Orichalcum_Halberd.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "山铜锭",
-            "image": "Orichalcum_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "山铜面具",
-          "image": "Orichalcum_Mask.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "山铜锭",
+    "item_category": "bars"
   },
   "幽灵锭": {
     "name": "幽灵锭",
@@ -1768,9 +1805,6 @@
         "amount": "2"
       }
     },
-    "drops": null,
-    "description": "幽灵锭是一种困难模式、世纪之花后的锭。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "秘银砧或山铜砧",
@@ -1956,7 +1990,18 @@
           "image": "Drill_Containment_Unit.png"
         }
       }
-    ]
+    ],
+    "description": "幽灵锭是一种困难模式、世纪之花后的锭。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "幽灵锭是一种困难模式、世纪之花后的锭。"
+        }
+      ]
+    ],
+    "wiki_title": "幽灵锭",
+    "item_category": "bars"
   },
   "狱石锭": {
     "name": "狱石锭",
@@ -1987,7 +2032,7 @@
         "label": "稀有度",
         "value": "绿色",
         "extra": "",
-        "sortkey": "02*",
+        "sortkey": "",
         "color": "#55dd55"
       },
       {
@@ -2026,9 +2071,6 @@
         "image": "Hellstone_Bar.png"
       }
     },
-    "drops": null,
-    "description": "狱石锭是种困难模式之前的锭。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "铁砧或铅砧",
@@ -2273,7 +2315,18 @@
           "image": "Lavaproof_Bug_Net.png"
         }
       }
-    ]
+    ],
+    "description": "狱石锭是种困难模式之前的锭。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "狱石锭是种困难模式之前的锭。"
+        }
+      ]
+    ],
+    "wiki_title": "狱石锭",
+    "item_category": "bars"
   },
   "猩红矿锭": {
     "name": "猩红矿锭",
@@ -2334,9 +2387,6 @@
         "image": "Crimtane_Bar.png"
       }
     },
-    "drops": null,
-    "description": "猩红矿锭是种困难模式之前的锭。\n\n它是腐化之地的魔矿锭的猩红对应物。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "铁砧或铅砧",
@@ -2616,7 +2666,24 @@
           "image": "Magiluminescence.png"
         }
       }
-    ]
+    ],
+    "description": "猩红矿锭是种困难模式之前的锭。\n\n它是腐化之地的魔矿锭的猩红对应物。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "猩红矿锭是种困难模式之前的锭。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它是腐化之地的魔矿锭的猩红对应物。"
+        }
+      ]
+    ],
+    "wiki_title": "猩红矿锭",
+    "item_category": "bars"
   },
   "神圣锭": {
     "name": "神圣锭",
@@ -2664,138 +2731,6 @@
       }
     ],
     "recipe": null,
-    "drops": {
-      "modes": [
-        {
-          "mode": "normal",
-          "label": "经典",
-          "entries": [
-            {
-              "name": "双子魔眼",
-              "image": "The_Twins.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（双子魔眼）",
-              "image": "Treasure_Bag_(The_Twins).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（机械骷髅王）",
-              "image": "Treasure_Bag_(Skeletron_Prime).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（毁灭者）",
-              "image": "Treasure_Bag_(The_Destroyer).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "机械骷髅王",
-              "image": "Skeletron_Prime.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            },
-            {
-              "name": "毁灭者",
-              "image": "The_Destroyer.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            }
-          ]
-        },
-        {
-          "mode": "expert",
-          "label": "专家",
-          "entries": [
-            {
-              "name": "双子魔眼",
-              "image": "The_Twins.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（双子魔眼）",
-              "image": "Treasure_Bag_(The_Twins).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（机械骷髅王）",
-              "image": "Treasure_Bag_(Skeletron_Prime).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（毁灭者）",
-              "image": "Treasure_Bag_(The_Destroyer).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "机械骷髅王",
-              "image": "Skeletron_Prime.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            },
-            {
-              "name": "毁灭者",
-              "image": "The_Destroyer.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            }
-          ]
-        },
-        {
-          "mode": "master",
-          "label": "大师",
-          "entries": [
-            {
-              "name": "双子魔眼",
-              "image": "The_Twins.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（双子魔眼）",
-              "image": "Treasure_Bag_(The_Twins).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（机械骷髅王）",
-              "image": "Treasure_Bag_(Skeletron_Prime).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "宝藏袋（毁灭者）",
-              "image": "Treasure_Bag_(The_Destroyer).png",
-              "quantity": "20–35",
-              "chance": "100%"
-            },
-            {
-              "name": "机械骷髅王",
-              "image": "Skeletron_Prime.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            },
-            {
-              "name": "毁灭者",
-              "image": "The_Destroyer.png",
-              "quantity": "15–30",
-              "chance": "100%"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "神圣锭是一种困难模式的锭。它掉落自三个机械 Boss：双子魔眼、毁灭者、和机械骷髅王。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "秘银砧或山铜砧",
@@ -3260,7 +3195,148 @@
           "image": "Optic_Staff.png"
         }
       }
-    ]
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "双子魔眼",
+              "image": "The_Twins.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（双子魔眼）",
+              "image": "Treasure_Bag_(The_Twins).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（机械骷髅王）",
+              "image": "Treasure_Bag_(Skeletron_Prime).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（毁灭者）",
+              "image": "Treasure_Bag_(The_Destroyer).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "机械骷髅王",
+              "image": "Skeletron_Prime.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            },
+            {
+              "name": "毁灭者",
+              "image": "The_Destroyer.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "双子魔眼",
+              "image": "The_Twins.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（双子魔眼）",
+              "image": "Treasure_Bag_(The_Twins).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（机械骷髅王）",
+              "image": "Treasure_Bag_(Skeletron_Prime).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（毁灭者）",
+              "image": "Treasure_Bag_(The_Destroyer).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "机械骷髅王",
+              "image": "Skeletron_Prime.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            },
+            {
+              "name": "毁灭者",
+              "image": "The_Destroyer.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "双子魔眼",
+              "image": "The_Twins.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（双子魔眼）",
+              "image": "Treasure_Bag_(The_Twins).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（机械骷髅王）",
+              "image": "Treasure_Bag_(Skeletron_Prime).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "宝藏袋（毁灭者）",
+              "image": "Treasure_Bag_(The_Destroyer).png",
+              "quantity": "20–35",
+              "chance": "100%"
+            },
+            {
+              "name": "机械骷髅王",
+              "image": "Skeletron_Prime.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            },
+            {
+              "name": "毁灭者",
+              "image": "The_Destroyer.png",
+              "quantity": "15–30",
+              "chance": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "神圣锭是一种困难模式的锭。它掉落自三个机械 Boss：双子魔眼、毁灭者、和机械骷髅王。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "神圣锭是一种困难模式的锭。它掉落自三个机械 Boss：双子魔眼、毁灭者、和机械骷髅王。"
+        }
+      ]
+    ],
+    "wiki_title": "神圣锭",
+    "item_category": "bars"
   },
   "秘银锭": {
     "name": "秘银锭",
@@ -3321,6 +3397,190 @@
         "image": "Mythril_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "秘银兜帽",
+          "image": "Mythril_Hood.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "秘银剑",
+          "image": "Mythril_Sword.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "秘银头盔",
+          "image": "Mythril_Helmet.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "秘银帽",
+          "image": "Mythril_Hat.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "秘银战斧",
+          "image": "Mythril_Waraxe.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "秘银护胫",
+          "image": "Mythril_Greaves.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "秘银砧",
+          "image": "Mythril_Anvil.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "秘银连弩",
+          "image": "Mythril_Repeater.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "秘银钻头",
+          "image": "Mythril_Drill.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "秘银链甲",
+          "image": "Mythril_Chainmail.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "秘银链锯",
+          "image": "Mythril_Chainsaw.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "秘银镐",
+          "image": "Mythril_Pickaxe.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "秘银锭",
+            "image": "Mythril_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "秘银长戟",
+          "image": "Mythril_Halberd.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -3596,191 +3856,22 @@
       ]
     },
     "description": "秘银锭是一种困难模式的锭。它们为制作困难模式的砧所必需，后者用于制作大多数困难模式装备。\n\n其代用矿石对应物是山铜锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "秘银兜帽",
-          "image": "Mythril_Hood.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "秘银锭是一种困难模式的锭。它们为制作困难模式的砧所必需，后者用于制作大多数困难模式装备。"
         }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "秘银剑",
-          "image": "Mythril_Sword.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是山铜锭。"
         }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "秘银头盔",
-          "image": "Mythril_Helmet.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "秘银帽",
-          "image": "Mythril_Hat.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "秘银战斧",
-          "image": "Mythril_Waraxe.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "秘银护胫",
-          "image": "Mythril_Greaves.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "秘银砧",
-          "image": "Mythril_Anvil.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "秘银连弩",
-          "image": "Mythril_Repeater.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "秘银钻头",
-          "image": "Mythril_Drill.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "秘银链甲",
-          "image": "Mythril_Chainmail.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "秘银链锯",
-          "image": "Mythril_Chainsaw.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "秘银镐",
-          "image": "Mythril_Pickaxe.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "秘银锭",
-            "image": "Mythril_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "秘银长戟",
-          "image": "Mythril_Halberd.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "秘银锭",
+    "item_category": "bars"
   },
   "精金锭": {
     "name": "精金锭",
@@ -3841,6 +3932,176 @@
         "image": "Adamantite_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "精金关刀",
+          "image": "Adamantite_Glaive.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "精金剑",
+          "image": "Adamantite_Sword.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "精金头盔",
+          "image": "Adamantite_Helmet.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "精金头饰",
+          "image": "Adamantite_Headgear.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "精金战斧",
+          "image": "Adamantite_Waraxe.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "精金护腿",
+          "image": "Adamantite_Leggings.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "24"
+          }
+        ],
+        "result": {
+          "name": "精金胸甲",
+          "image": "Adamantite_Breastplate.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "精金连弩",
+          "image": "Adamantite_Repeater.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "精金钻头",
+          "image": "Adamantite_Drill.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "精金链锯",
+          "image": "Adamantite_Chainsaw.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "精金镐",
+          "image": "Adamantite_Pickaxe.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "精金锭",
+            "image": "Adamantite_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "精金面具",
+          "image": "Adamantite_Mask.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -4098,177 +4359,22 @@
       ]
     },
     "description": "精金锭是种困难模式的锭。\n\n其代用矿石对应物是钛金锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "精金关刀",
-          "image": "Adamantite_Glaive.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "精金锭是种困难模式的锭。"
         }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "精金剑",
-          "image": "Adamantite_Sword.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是钛金锭。"
         }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "精金头盔",
-          "image": "Adamantite_Helmet.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "精金头饰",
-          "image": "Adamantite_Headgear.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "精金战斧",
-          "image": "Adamantite_Waraxe.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "精金护腿",
-          "image": "Adamantite_Leggings.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "24"
-          }
-        ],
-        "result": {
-          "name": "精金胸甲",
-          "image": "Adamantite_Breastplate.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "精金连弩",
-          "image": "Adamantite_Repeater.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "精金钻头",
-          "image": "Adamantite_Drill.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "精金链锯",
-          "image": "Adamantite_Chainsaw.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "精金镐",
-          "image": "Adamantite_Pickaxe.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "精金锭",
-            "image": "Adamantite_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "精金面具",
-          "image": "Adamantite_Mask.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "精金锭",
+    "item_category": "bars"
   },
   "蘑菇矿锭": {
     "name": "蘑菇矿锭",
@@ -4333,9 +4439,6 @@
         "image": "Shroomite_Bar.png"
       }
     },
-    "drops": null,
-    "description": "蘑菇矿锭是一种困难模式、世纪之花后的锭。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "秘银砧或山铜砧",
@@ -4536,7 +4639,18 @@
           "image": "Drill_Containment_Unit.png"
         }
       }
-    ]
+    ],
+    "description": "蘑菇矿锭是一种困难模式、世纪之花后的锭。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "蘑菇矿锭是一种困难模式、世纪之花后的锭。"
+        }
+      ]
+    ],
+    "wiki_title": "蘑菇矿锭",
+    "item_category": "bars"
   },
   "金锭": {
     "name": "金锭",
@@ -4597,6 +4711,385 @@
         "image": "Gold_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "2"
+          },
+          {
+            "name": "粉火把",
+            "image": "Pink_Torch.png"
+          }
+        ],
+        "result": {
+          "name": "和平蜡烛",
+          "image": "Peace_Candle.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "小雪怪皮毛",
+            "image": "Flinx_Fur.png",
+            "amount": "6"
+          },
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "小雪怪法杖",
+          "image": "Flinx_Staff.png"
+        }
+      },
+      {
+        "station": "织布机",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "小雪怪皮毛",
+            "image": "Flinx_Fur.png",
+            "amount": "8"
+          },
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "小雪怪皮毛外套",
+          "image": "Flinx_Fur_Coat.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "5"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "烛台",
+          "image": "Candelabra.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "20"
+          },
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "30"
+          }
+        ],
+        "result": {
+          "name": "王座",
+          "image": "Throne.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "红玉",
+            "image": "Ruby.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "红玉法杖",
+          "image": "Ruby_Staff.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "蜡烛",
+          "image": "Candle.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "5"
+          },
+          {
+            "name": "红玉",
+            "image": "Ruby.png"
+          }
+        ],
+        "result": {
+          "name": "金冠",
+          "image": "Gold_Crown.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "4"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "4"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "金吊灯",
+          "image": "Gold_Chandelier.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "金头盔",
+          "image": "Gold_Helmet.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "7"
+          }
+        ],
+        "result": {
+          "name": "金弓",
+          "image": "Gold_Bow.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "金护胫",
+          "image": "Gold_Greaves.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "金斧",
+          "image": "Gold_Axe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "金短剑",
+          "image": "Gold_Shortsword.png"
+        }
+      },
+      {
+        "station": "桌子 和 椅子",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "金表",
+          "image": "Gold_Watch.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "金表",
+          "image": "Gold_Watch.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "30"
+          }
+        ],
+        "result": {
+          "name": "金链甲",
+          "image": "Gold_Chainmail.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "金锤",
+          "image": "Gold_Hammer.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "金镐",
+          "image": "Gold_Pickaxe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "金阔剑",
+          "image": "Gold_Broadsword.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "玻璃",
+            "image": "Glass.png",
+            "amount": "10"
+          },
+          {
+            "name": "金锭",
+            "image": "Gold_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "钻石",
+            "image": "Diamond.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "魔镜",
+          "image": "Magic_Mirror.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -5016,386 +5509,22 @@
       ]
     },
     "description": "金锭是种困难模式之前的锭。\n\n其代用矿石对应物是铂金锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "2"
-          },
-          {
-            "name": "粉火把",
-            "image": "Pink_Torch.png"
-          }
-        ],
-        "result": {
-          "name": "和平蜡烛",
-          "image": "Peace_Candle.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "金锭是种困难模式之前的锭。"
         }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "小雪怪皮毛",
-            "image": "Flinx_Fur.png",
-            "amount": "6"
-          },
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "小雪怪法杖",
-          "image": "Flinx_Staff.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是铂金锭。"
         }
-      },
-      {
-        "station": "织布机",
-        "ingredients": [
-          {
-            "name": "丝绸",
-            "image": "Silk.png",
-            "amount": "10"
-          },
-          {
-            "name": "小雪怪皮毛",
-            "image": "Flinx_Fur.png",
-            "amount": "8"
-          },
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "小雪怪皮毛外套",
-          "image": "Flinx_Fur_Coat.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "5"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "烛台",
-          "image": "Candelabra.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "丝绸",
-            "image": "Silk.png",
-            "amount": "20"
-          },
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "30"
-          }
-        ],
-        "result": {
-          "name": "王座",
-          "image": "Throne.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "红玉",
-            "image": "Ruby.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "红玉法杖",
-          "image": "Ruby_Staff.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png"
-          }
-        ],
-        "result": {
-          "name": "蜡烛",
-          "image": "Candle.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "5"
-          },
-          {
-            "name": "红玉",
-            "image": "Ruby.png"
-          }
-        ],
-        "result": {
-          "name": "金冠",
-          "image": "Gold_Crown.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "4"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png",
-            "amount": "4"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "金吊灯",
-          "image": "Gold_Chandelier.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "金头盔",
-          "image": "Gold_Helmet.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "7"
-          }
-        ],
-        "result": {
-          "name": "金弓",
-          "image": "Gold_Bow.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "25"
-          }
-        ],
-        "result": {
-          "name": "金护胫",
-          "image": "Gold_Greaves.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "金斧",
-          "image": "Gold_Axe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "6"
-          }
-        ],
-        "result": {
-          "name": "金短剑",
-          "image": "Gold_Shortsword.png"
-        }
-      },
-      {
-        "station": "桌子 和 椅子",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "金表",
-          "image": "Gold_Watch.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "金表",
-          "image": "Gold_Watch.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "30"
-          }
-        ],
-        "result": {
-          "name": "金链甲",
-          "image": "Gold_Chainmail.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "金锤",
-          "image": "Gold_Hammer.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "4"
-          }
-        ],
-        "result": {
-          "name": "金镐",
-          "image": "Gold_Pickaxe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "金阔剑",
-          "image": "Gold_Broadsword.png"
-        }
-      },
-      {
-        "station": "熔炉",
-        "ingredients": [
-          {
-            "name": "玻璃",
-            "image": "Glass.png",
-            "amount": "10"
-          },
-          {
-            "name": "金锭",
-            "image": "Gold_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "钻石",
-            "image": "Diamond.png",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "魔镜",
-          "image": "Magic_Mirror.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "金锭",
+    "item_category": "bars"
   },
   "钛金锭": {
     "name": "钛金锭",
@@ -5456,6 +5585,176 @@
         "image": "Titanium_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "13"
+          }
+        ],
+        "result": {
+          "name": "钛金三叉戟",
+          "image": "Titanium_Trident.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "13"
+          }
+        ],
+        "result": {
+          "name": "钛金剑",
+          "image": "Titanium_Sword.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "13"
+          }
+        ],
+        "result": {
+          "name": "钛金头盔",
+          "image": "Titanium_Helmet.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "13"
+          }
+        ],
+        "result": {
+          "name": "钛金头饰",
+          "image": "Titanium_Headgear.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "13"
+          }
+        ],
+        "result": {
+          "name": "钛金战斧",
+          "image": "Titanium_Waraxe.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "钛金护腿",
+          "image": "Titanium_Leggings.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "26"
+          }
+        ],
+        "result": {
+          "name": "钛金胸甲",
+          "image": "Titanium_Breastplate.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "13"
+          }
+        ],
+        "result": {
+          "name": "钛金连弩",
+          "image": "Titanium_Repeater.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "钛金钻头",
+          "image": "Titanium_Drill.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "13"
+          }
+        ],
+        "result": {
+          "name": "钛金链锯",
+          "image": "Titanium_Chainsaw.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "钛金镐",
+          "image": "Titanium_Pickaxe.png"
+        }
+      },
+      {
+        "station": "秘银砧或山铜砧",
+        "ingredients": [
+          {
+            "name": "钛金锭",
+            "image": "Titanium_Bar.png",
+            "amount": "13"
+          }
+        ],
+        "result": {
+          "name": "钛金面具",
+          "image": "Titanium_Mask.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -5677,177 +5976,22 @@
       ]
     },
     "description": "钛金锭是一种困难模式的锭。\n\n其代用矿石对应物是精金锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "13"
-          }
-        ],
-        "result": {
-          "name": "钛金三叉戟",
-          "image": "Titanium_Trident.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "钛金锭是一种困难模式的锭。"
         }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "13"
-          }
-        ],
-        "result": {
-          "name": "钛金剑",
-          "image": "Titanium_Sword.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是精金锭。"
         }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "13"
-          }
-        ],
-        "result": {
-          "name": "钛金头盔",
-          "image": "Titanium_Helmet.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "13"
-          }
-        ],
-        "result": {
-          "name": "钛金头饰",
-          "image": "Titanium_Headgear.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "13"
-          }
-        ],
-        "result": {
-          "name": "钛金战斧",
-          "image": "Titanium_Waraxe.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "钛金护腿",
-          "image": "Titanium_Leggings.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "26"
-          }
-        ],
-        "result": {
-          "name": "钛金胸甲",
-          "image": "Titanium_Breastplate.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "13"
-          }
-        ],
-        "result": {
-          "name": "钛金连弩",
-          "image": "Titanium_Repeater.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "钛金钻头",
-          "image": "Titanium_Drill.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "13"
-          }
-        ],
-        "result": {
-          "name": "钛金链锯",
-          "image": "Titanium_Chainsaw.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "钛金镐",
-          "image": "Titanium_Pickaxe.png"
-        }
-      },
-      {
-        "station": "秘银砧或山铜砧",
-        "ingredients": [
-          {
-            "name": "钛金锭",
-            "image": "Titanium_Bar.png",
-            "amount": "13"
-          }
-        ],
-        "result": {
-          "name": "钛金面具",
-          "image": "Titanium_Mask.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "钛金锭",
+    "item_category": "bars"
   },
   "钨锭": {
     "name": "钨锭",
@@ -5908,6 +6052,246 @@
         "image": "Tungsten_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "翡翠",
+            "image": "Emerald.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "翡翠法杖",
+          "image": "Emerald_Staff.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "4"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "4"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "钨吊灯",
+          "image": "Tungsten_Chandelier.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "钨头盔",
+          "image": "Tungsten_Helmet.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "火枪子弹",
+            "image": "Musket_Ball.png",
+            "amount": "70"
+          },
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png"
+          }
+        ],
+        "result": {
+          "name": "钨子弹",
+          "image": "Tungsten_Bullet.png",
+          "amount": "70"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "钨宽剑",
+          "image": "Tungsten_Broadsword.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "7"
+          }
+        ],
+        "result": {
+          "name": "钨弓",
+          "image": "Tungsten_Bow.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "钨护胫",
+          "image": "Tungsten_Greaves.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "钨斧",
+          "image": "Tungsten_Axe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "钨短剑",
+          "image": "Tungsten_Shortsword.png"
+        }
+      },
+      {
+        "station": "桌子 和 椅子",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "钨表",
+          "image": "Tungsten_Watch.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "钨表",
+          "image": "Tungsten_Watch.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "钨链甲",
+          "image": "Tungsten_Chainmail.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "钨锤",
+          "image": "Tungsten_Hammer.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钨锭",
+            "image": "Tungsten_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "钨镐",
+          "image": "Tungsten_Pickaxe.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -6345,247 +6729,22 @@
       ]
     },
     "description": "钨锭是种困难模式之前的锭。\n\n其代用矿石对应物是银锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "翡翠",
-            "image": "Emerald.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "翡翠法杖",
-          "image": "Emerald_Staff.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "钨锭是种困难模式之前的锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "4"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png",
-            "amount": "4"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "钨吊灯",
-          "image": "Tungsten_Chandelier.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是银锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "钨头盔",
-          "image": "Tungsten_Helmet.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "火枪子弹",
-            "image": "Musket_Ball.png",
-            "amount": "70"
-          },
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png"
-          }
-        ],
-        "result": {
-          "name": "钨子弹",
-          "image": "Tungsten_Bullet.png",
-          "amount": "70"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "钨宽剑",
-          "image": "Tungsten_Broadsword.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "7"
-          }
-        ],
-        "result": {
-          "name": "钨弓",
-          "image": "Tungsten_Bow.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "钨护胫",
-          "image": "Tungsten_Greaves.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "钨斧",
-          "image": "Tungsten_Axe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "6"
-          }
-        ],
-        "result": {
-          "name": "钨短剑",
-          "image": "Tungsten_Shortsword.png"
-        }
-      },
-      {
-        "station": "桌子 和 椅子",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "钨表",
-          "image": "Tungsten_Watch.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "钨表",
-          "image": "Tungsten_Watch.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "25"
-          }
-        ],
-        "result": {
-          "name": "钨链甲",
-          "image": "Tungsten_Chainmail.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "钨锤",
-          "image": "Tungsten_Hammer.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钨锭",
-            "image": "Tungsten_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "4"
-          }
-        ],
-        "result": {
-          "name": "钨镐",
-          "image": "Tungsten_Pickaxe.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "钨锭",
+    "item_category": "bars"
   },
   "钯金锭": {
     "name": "钯金锭",
@@ -6646,6 +6805,176 @@
         "image": "Palladium_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "钯金刺矛",
+          "image": "Palladium_Pike.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "钯金剑",
+          "image": "Palladium_Sword.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "钯金头盔",
+          "image": "Palladium_Helmet.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "钯金头饰",
+          "image": "Palladium_Headgear.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "钯金战斧",
+          "image": "Palladium_Waraxe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "钯金护腿",
+          "image": "Palladium_Leggings.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "24"
+          }
+        ],
+        "result": {
+          "name": "钯金胸甲",
+          "image": "Palladium_Breastplate.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "钯金连弩",
+          "image": "Palladium_Repeater.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "钯金钻头",
+          "image": "Palladium_Drill.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "钯金链锯",
+          "image": "Palladium_Chainsaw.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "18"
+          }
+        ],
+        "result": {
+          "name": "钯金镐",
+          "image": "Palladium_Pickaxe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钯金锭",
+            "image": "Palladium_Bar.png",
+            "amount": "12"
+          }
+        ],
+        "result": {
+          "name": "钯金面具",
+          "image": "Palladium_Mask.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -6885,177 +7214,22 @@
       ]
     },
     "description": "钯金锭是种困难模式的锭。\n\n其代用矿石对应物是钴锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "钯金刺矛",
-          "image": "Palladium_Pike.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "钯金锭是种困难模式的锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "钯金剑",
-          "image": "Palladium_Sword.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是钴锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "钯金头盔",
-          "image": "Palladium_Helmet.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "钯金头饰",
-          "image": "Palladium_Headgear.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "钯金战斧",
-          "image": "Palladium_Waraxe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "钯金护腿",
-          "image": "Palladium_Leggings.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "24"
-          }
-        ],
-        "result": {
-          "name": "钯金胸甲",
-          "image": "Palladium_Breastplate.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "钯金连弩",
-          "image": "Palladium_Repeater.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "钯金钻头",
-          "image": "Palladium_Drill.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "钯金链锯",
-          "image": "Palladium_Chainsaw.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "18"
-          }
-        ],
-        "result": {
-          "name": "钯金镐",
-          "image": "Palladium_Pickaxe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钯金锭",
-            "image": "Palladium_Bar.png",
-            "amount": "12"
-          }
-        ],
-        "result": {
-          "name": "钯金面具",
-          "image": "Palladium_Mask.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "钯金锭",
+    "item_category": "bars"
   },
   "钴锭": {
     "name": "钴锭",
@@ -7116,6 +7290,176 @@
         "image": "Cobalt_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "钴剑",
+          "image": "Cobalt_Sword.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "钴头盔",
+          "image": "Cobalt_Helmet.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "钴帽",
+          "image": "Cobalt_Hat.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "钴战斧",
+          "image": "Cobalt_Waraxe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "钴护腿",
+          "image": "Cobalt_Leggings.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "钴胸甲",
+          "image": "Cobalt_Breastplate.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "钴薙刀",
+          "image": "Cobalt_Naginata.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "钴连弩",
+          "image": "Cobalt_Repeater.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "钴钻头",
+          "image": "Cobalt_Drill.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "钴链锯",
+          "image": "Cobalt_Chainsaw.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "钴镐",
+          "image": "Cobalt_Pickaxe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "钴锭",
+            "image": "Cobalt_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "钴面具",
+          "image": "Cobalt_Mask.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -7391,177 +7735,22 @@
       ]
     },
     "description": "钴锭是一种困难模式的锭。\n\n其代用矿石对应物是钯金锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "钴剑",
-          "image": "Cobalt_Sword.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "钴锭是一种困难模式的锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "钴头盔",
-          "image": "Cobalt_Helmet.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是钯金锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "钴帽",
-          "image": "Cobalt_Hat.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "钴战斧",
-          "image": "Cobalt_Waraxe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "钴护腿",
-          "image": "Cobalt_Leggings.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "钴胸甲",
-          "image": "Cobalt_Breastplate.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "钴薙刀",
-          "image": "Cobalt_Naginata.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "钴连弩",
-          "image": "Cobalt_Repeater.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "钴钻头",
-          "image": "Cobalt_Drill.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "钴链锯",
-          "image": "Cobalt_Chainsaw.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "钴镐",
-          "image": "Cobalt_Pickaxe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "钴锭",
-            "image": "Cobalt_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "钴面具",
-          "image": "Cobalt_Mask.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "钴锭",
+    "item_category": "bars"
   },
   "铁锭": {
     "name": "铁锭",
@@ -7622,6 +7811,205 @@
         "image": "Iron_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "铁头盔",
+          "image": "Iron_Helmet.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "7"
+          }
+        ],
+        "result": {
+          "name": "铁弓",
+          "image": "Iron_Bow.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "铁护胫",
+          "image": "Iron_Greaves.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铁斧",
+          "image": "Iron_Axe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png"
+          }
+        ],
+        "result": {
+          "name": "铁栅栏",
+          "image": "Iron_Fence.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "铁短剑",
+          "image": "Iron_Shortsword.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "铁砧",
+          "image": "Iron_Anvil.png"
+        }
+      },
+      {
+        "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png"
+          }
+        ],
+        "result": {
+          "name": "铁艺栅栏",
+          "image": "Wrought_Iron_Fence.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "铁链甲",
+          "image": "Iron_Chainmail.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铁锤",
+          "image": "Iron_Hammer.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铁镐",
+          "image": "Iron_Pickaxe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "铁门",
+          "image": "Iron_Door.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铁锭",
+            "image": "Iron_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "铁阔剑",
+          "image": "Iron_Broadsword.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -8077,206 +8465,28 @@
       ]
     },
     "description": "铁锭是种困难模式之前的锭。\n\n其代用矿石对应物是铅锭。\n\n旅行模式中的新建人物总是会以铁短剑、铁镐、和铁斧开局，无论世界中出现的是铁还是铅。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "铁头盔",
-          "image": "Iron_Helmet.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "铁锭是种困难模式之前的锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "7"
-          }
-        ],
-        "result": {
-          "name": "铁弓",
-          "image": "Iron_Bow.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是铅锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "铁护胫",
-          "image": "Iron_Greaves.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "旅行模式中的新建人物总是会以铁短剑、铁镐、和铁斧开局，无论世界中出现的是铁还是铅。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铁斧",
-          "image": "Iron_Axe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png"
-          }
-        ],
-        "result": {
-          "name": "铁栅栏",
-          "image": "Iron_Fence.png",
-          "amount": "4"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "6"
-          }
-        ],
-        "result": {
-          "name": "铁短剑",
-          "image": "Iron_Shortsword.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "5"
-          }
-        ],
-        "result": {
-          "name": "铁砧",
-          "image": "Iron_Anvil.png"
-        }
-      },
-      {
-        "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png"
-          }
-        ],
-        "result": {
-          "name": "铁艺栅栏",
-          "image": "Wrought_Iron_Fence.png",
-          "amount": "4"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "25"
-          }
-        ],
-        "result": {
-          "name": "铁链甲",
-          "image": "Iron_Chainmail.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铁锤",
-          "image": "Iron_Hammer.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铁镐",
-          "image": "Iron_Pickaxe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "4"
-          }
-        ],
-        "result": {
-          "name": "铁门",
-          "image": "Iron_Door.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铁锭",
-            "image": "Iron_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "铁阔剑",
-          "image": "Iron_Broadsword.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "铁锭",
+    "item_category": "bars"
   },
   "铂金锭": {
     "name": "铂金锭",
@@ -8337,6 +8547,385 @@
         "image": "Platinum_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "2"
+          },
+          {
+            "name": "粉火把",
+            "image": "Pink_Torch.png"
+          }
+        ],
+        "result": {
+          "name": "和平蜡烛",
+          "image": "Peace_Candle.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "小雪怪皮毛",
+            "image": "Flinx_Fur.png",
+            "amount": "6"
+          },
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "10"
+          }
+        ],
+        "result": {
+          "name": "小雪怪法杖",
+          "image": "Flinx_Staff.png"
+        }
+      },
+      {
+        "station": "织布机",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "10"
+          },
+          {
+            "name": "小雪怪皮毛",
+            "image": "Flinx_Fur.png",
+            "amount": "8"
+          },
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "小雪怪皮毛外套",
+          "image": "Flinx_Fur_Coat.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "丝绸",
+            "image": "Silk.png",
+            "amount": "20"
+          },
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "30"
+          }
+        ],
+        "result": {
+          "name": "王座",
+          "image": "Throne.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "钻石",
+            "image": "Diamond.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "钻石法杖",
+          "image": "Diamond_Staff.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "5"
+          },
+          {
+            "name": "红玉",
+            "image": "Ruby.png"
+          }
+        ],
+        "result": {
+          "name": "铂金冠",
+          "image": "Platinum_Crown.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "4"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "4"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "铂金吊灯",
+          "image": "Platinum_Chandelier.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "铂金头盔",
+          "image": "Platinum_Helmet.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "铂金宽剑",
+          "image": "Platinum_Broadsword.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "7"
+          }
+        ],
+        "result": {
+          "name": "铂金弓",
+          "image": "Platinum_Bow.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "铂金护胫",
+          "image": "Platinum_Greaves.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铂金斧",
+          "image": "Platinum_Axe.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "5"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铂金烛台",
+          "image": "Platinum_Candelabra.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "铂金短剑",
+          "image": "Platinum_Shortsword.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png"
+          }
+        ],
+        "result": {
+          "name": "铂金蜡烛",
+          "image": "Platinum_Candle.png"
+        }
+      },
+      {
+        "station": "桌子 和 椅子",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "铂金表",
+          "image": "Platinum_Watch.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "铂金表",
+          "image": "Platinum_Watch.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "30"
+          }
+        ],
+        "result": {
+          "name": "铂金链甲",
+          "image": "Platinum_Chainmail.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铂金锤",
+          "image": "Platinum_Hammer.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "铂金镐",
+          "image": "Platinum_Pickaxe.png"
+        }
+      },
+      {
+        "station": "熔炉",
+        "ingredients": [
+          {
+            "name": "玻璃",
+            "image": "Glass.png",
+            "amount": "10"
+          },
+          {
+            "name": "铂金锭",
+            "image": "Platinum_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "钻石",
+            "image": "Diamond.png",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "魔镜",
+          "image": "Magic_Mirror.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -8756,386 +9345,22 @@
       ]
     },
     "description": "铂金锭是种困难模式之前的锭。\n\n其代用矿石对应物是金锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "2"
-          },
-          {
-            "name": "粉火把",
-            "image": "Pink_Torch.png"
-          }
-        ],
-        "result": {
-          "name": "和平蜡烛",
-          "image": "Peace_Candle.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "铂金锭是种困难模式之前的锭。"
         }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "小雪怪皮毛",
-            "image": "Flinx_Fur.png",
-            "amount": "6"
-          },
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "10"
-          }
-        ],
-        "result": {
-          "name": "小雪怪法杖",
-          "image": "Flinx_Staff.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是金锭。"
         }
-      },
-      {
-        "station": "织布机",
-        "ingredients": [
-          {
-            "name": "丝绸",
-            "image": "Silk.png",
-            "amount": "10"
-          },
-          {
-            "name": "小雪怪皮毛",
-            "image": "Flinx_Fur.png",
-            "amount": "8"
-          },
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "小雪怪皮毛外套",
-          "image": "Flinx_Fur_Coat.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "丝绸",
-            "image": "Silk.png",
-            "amount": "20"
-          },
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "30"
-          }
-        ],
-        "result": {
-          "name": "王座",
-          "image": "Throne.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "钻石",
-            "image": "Diamond.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "钻石法杖",
-          "image": "Diamond_Staff.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "5"
-          },
-          {
-            "name": "红玉",
-            "image": "Ruby.png"
-          }
-        ],
-        "result": {
-          "name": "铂金冠",
-          "image": "Platinum_Crown.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "4"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png",
-            "amount": "4"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "铂金吊灯",
-          "image": "Platinum_Chandelier.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "铂金头盔",
-          "image": "Platinum_Helmet.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "铂金宽剑",
-          "image": "Platinum_Broadsword.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "7"
-          }
-        ],
-        "result": {
-          "name": "铂金弓",
-          "image": "Platinum_Bow.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "25"
-          }
-        ],
-        "result": {
-          "name": "铂金护胫",
-          "image": "Platinum_Greaves.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铂金斧",
-          "image": "Platinum_Axe.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "5"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铂金烛台",
-          "image": "Platinum_Candelabra.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "6"
-          }
-        ],
-        "result": {
-          "name": "铂金短剑",
-          "image": "Platinum_Shortsword.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png"
-          }
-        ],
-        "result": {
-          "name": "铂金蜡烛",
-          "image": "Platinum_Candle.png"
-        }
-      },
-      {
-        "station": "桌子 和 椅子",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "铂金表",
-          "image": "Platinum_Watch.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "铂金表",
-          "image": "Platinum_Watch.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "30"
-          }
-        ],
-        "result": {
-          "name": "铂金链甲",
-          "image": "Platinum_Chainmail.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铂金锤",
-          "image": "Platinum_Hammer.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "4"
-          }
-        ],
-        "result": {
-          "name": "铂金镐",
-          "image": "Platinum_Pickaxe.png"
-        }
-      },
-      {
-        "station": "熔炉",
-        "ingredients": [
-          {
-            "name": "玻璃",
-            "image": "Glass.png",
-            "amount": "10"
-          },
-          {
-            "name": "铂金锭",
-            "image": "Platinum_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "钻石",
-            "image": "Diamond.png",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "魔镜",
-          "image": "Magic_Mirror.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "铂金锭",
+    "item_category": "bars"
   },
   "铅锭": {
     "name": "铅锭",
@@ -9201,6 +9426,191 @@
         "image": "Lead_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "铅头盔",
+          "image": "Lead_Helmet.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "铅宽剑",
+          "image": "Lead_Broadsword.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "7"
+          }
+        ],
+        "result": {
+          "name": "铅弓",
+          "image": "Lead_Bow.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "铅护胫",
+          "image": "Lead_Greaves.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铅斧",
+          "image": "Lead_Axe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png"
+          }
+        ],
+        "result": {
+          "name": "铅栅栏",
+          "image": "Lead_Fence.png",
+          "amount": "4"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "铅短剑",
+          "image": "Lead_Shortsword.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "5"
+          }
+        ],
+        "result": {
+          "name": "铅砧",
+          "image": "Lead_Anvil.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "铅链甲",
+          "image": "Lead_Chainmail.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铅锤",
+          "image": "Lead_Hammer.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "铅镐",
+          "image": "Lead_Pickaxe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "铅锭",
+            "image": "Lead_Bar.png",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "铅门",
+          "image": "Lead_Door.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -9656,192 +10066,28 @@
       ]
     },
     "description": "铅锭是种困难模式之前的锭。\n\n其代用矿石对应物是铁锭。\n\n旅行模式中的新建人物总是会以铁短剑、铁镐、和铁斧开局，无论世界中出现的是铁还是铅。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "铅头盔",
-          "image": "Lead_Helmet.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "铅锭是种困难模式之前的锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "铅宽剑",
-          "image": "Lead_Broadsword.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是铁锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "7"
-          }
-        ],
-        "result": {
-          "name": "铅弓",
-          "image": "Lead_Bow.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "旅行模式中的新建人物总是会以铁短剑、铁镐、和铁斧开局，无论世界中出现的是铁还是铅。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "铅护胫",
-          "image": "Lead_Greaves.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铅斧",
-          "image": "Lead_Axe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png"
-          }
-        ],
-        "result": {
-          "name": "铅栅栏",
-          "image": "Lead_Fence.png",
-          "amount": "4"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "6"
-          }
-        ],
-        "result": {
-          "name": "铅短剑",
-          "image": "Lead_Shortsword.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "5"
-          }
-        ],
-        "result": {
-          "name": "铅砧",
-          "image": "Lead_Anvil.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "25"
-          }
-        ],
-        "result": {
-          "name": "铅链甲",
-          "image": "Lead_Chainmail.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铅锤",
-          "image": "Lead_Hammer.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "铅镐",
-          "image": "Lead_Pickaxe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "铅锭",
-            "image": "Lead_Bar.png",
-            "amount": "4"
-          }
-        ],
-        "result": {
-          "name": "铅门",
-          "image": "Lead_Door.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "铅锭",
+    "item_category": "bars"
   },
   "铜锭": {
     "name": "铜锭",
@@ -9907,120 +10153,6 @@
         "image": "Copper_Bar.png"
       }
     },
-    "drops": {
-      "modes": [
-        {
-          "mode": "normal",
-          "label": "经典",
-          "entries": [
-            {
-              "name": "宝箱",
-              "image": "Chest.png",
-              "quantity": "3–10",
-              "chance": "1/4 (25%)"
-            },
-            {
-              "name": "木匣",
-              "image": "Wooden_Crate.png",
-              "quantity": "2–5",
-              "chance": "3/112 (2.68%)"
-            },
-            {
-              "name": "珍珠木匣",
-              "image": "Pearlwood_Crate.png",
-              "quantity": "2–5",
-              "chance": "3/224 (1.34%)"
-            },
-            {
-              "name": "秘银匣",
-              "image": "Mythril_Crate.png",
-              "quantity": "4–7",
-              "chance": "5/432 (1.16%)"
-            },
-            {
-              "name": "铁匣",
-              "image": "Iron_Crate.png",
-              "quantity": "4–7",
-              "chance": "5/144 (3.47%)"
-            }
-          ]
-        },
-        {
-          "mode": "expert",
-          "label": "专家",
-          "entries": [
-            {
-              "name": "宝箱",
-              "image": "Chest.png",
-              "quantity": "3–10",
-              "chance": "1/4 (25%)"
-            },
-            {
-              "name": "木匣",
-              "image": "Wooden_Crate.png",
-              "quantity": "2–5",
-              "chance": "3/112 (2.68%)"
-            },
-            {
-              "name": "珍珠木匣",
-              "image": "Pearlwood_Crate.png",
-              "quantity": "2–5",
-              "chance": "3/224 (1.34%)"
-            },
-            {
-              "name": "秘银匣",
-              "image": "Mythril_Crate.png",
-              "quantity": "4–7",
-              "chance": "5/432 (1.16%)"
-            },
-            {
-              "name": "铁匣",
-              "image": "Iron_Crate.png",
-              "quantity": "4–7",
-              "chance": "5/144 (3.47%)"
-            }
-          ]
-        },
-        {
-          "mode": "master",
-          "label": "大师",
-          "entries": [
-            {
-              "name": "宝箱",
-              "image": "Chest.png",
-              "quantity": "3–10",
-              "chance": "1/4 (25%)"
-            },
-            {
-              "name": "木匣",
-              "image": "Wooden_Crate.png",
-              "quantity": "2–5",
-              "chance": "3/112 (2.68%)"
-            },
-            {
-              "name": "珍珠木匣",
-              "image": "Pearlwood_Crate.png",
-              "quantity": "2–5",
-              "chance": "3/224 (1.34%)"
-            },
-            {
-              "name": "秘银匣",
-              "image": "Mythril_Crate.png",
-              "quantity": "4–7",
-              "chance": "5/432 (1.16%)"
-            },
-            {
-              "name": "铁匣",
-              "image": "Iron_Crate.png",
-              "quantity": "4–7",
-              "chance": "5/144 (3.47%)"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "铜锭是种困难模式之前的锭。\n\n其代用矿石对应物是锡锭。\n\n除了旅行模式，新建人物总是会以铜短剑、铜镐、和铜斧开局，无论世界中出现的是铜还是锡。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "铁砧或铅砧",
@@ -10241,7 +10373,142 @@
           "image": "Copper_Broadsword.png"
         }
       }
-    ]
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–10",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "2–5",
+              "chance": "3/112 (2.68%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "2–5",
+              "chance": "3/224 (1.34%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "4–7",
+              "chance": "5/432 (1.16%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "4–7",
+              "chance": "5/144 (3.47%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–10",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "2–5",
+              "chance": "3/112 (2.68%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "2–5",
+              "chance": "3/224 (1.34%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "4–7",
+              "chance": "5/432 (1.16%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "4–7",
+              "chance": "5/144 (3.47%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "3–10",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "2–5",
+              "chance": "3/112 (2.68%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "2–5",
+              "chance": "3/224 (1.34%)"
+            },
+            {
+              "name": "秘银匣",
+              "image": "Mythril_Crate.png",
+              "quantity": "4–7",
+              "chance": "5/432 (1.16%)"
+            },
+            {
+              "name": "铁匣",
+              "image": "Iron_Crate.png",
+              "quantity": "4–7",
+              "chance": "5/144 (3.47%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "铜锭是种困难模式之前的锭。\n\n其代用矿石对应物是锡锭。\n\n除了旅行模式，新建人物总是会以铜短剑、铜镐、和铜斧开局，无论世界中出现的是铜还是锡。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "铜锭是种困难模式之前的锭。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是锡锭。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "除了旅行模式，新建人物总是会以铜短剑、铜镐、和铜斧开局，无论世界中出现的是铜还是锡。"
+        }
+      ]
+    ],
+    "wiki_title": "铜锭",
+    "item_category": "bars"
   },
   "银锭": {
     "name": "银锭",
@@ -10302,6 +10569,246 @@
         "image": "Silver_Bar.png"
       }
     },
+    "used_in": [
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "蓝玉",
+            "image": "Sapphire.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "蓝玉法杖",
+          "image": "Sapphire_Staff.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "4"
+          },
+          {
+            "name": "火把",
+            "image": "Torch.png",
+            "amount": "4"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "银吊灯",
+          "image": "Silver_Chandelier.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "15"
+          }
+        ],
+        "result": {
+          "name": "银头盔",
+          "image": "Silver_Helmet.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "火枪子弹",
+            "image": "Musket_Ball.png",
+            "amount": "70"
+          },
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png"
+          }
+        ],
+        "result": {
+          "name": "银子弹",
+          "image": "Silver_Bullet.png",
+          "amount": "70"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "7"
+          }
+        ],
+        "result": {
+          "name": "银弓",
+          "image": "Silver_Bow.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "20"
+          }
+        ],
+        "result": {
+          "name": "银护胫",
+          "image": "Silver_Greaves.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "银斧",
+          "image": "Silver_Axe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "6"
+          }
+        ],
+        "result": {
+          "name": "银短剑",
+          "image": "Silver_Shortsword.png"
+        }
+      },
+      {
+        "station": "桌子 和 椅子",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "银表",
+          "image": "Silver_Watch.png"
+        }
+      },
+      {
+        "station": "工作台",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "链条",
+            "image": "Chain.png"
+          }
+        ],
+        "result": {
+          "name": "银表",
+          "image": "Silver_Watch.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "25"
+          }
+        ],
+        "result": {
+          "name": "银链甲",
+          "image": "Silver_Chainmail.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "8"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "3"
+          }
+        ],
+        "result": {
+          "name": "银锤",
+          "image": "Silver_Hammer.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "10"
+          },
+          {
+            "name": "任何木材",
+            "image": "Any_Wood.gif",
+            "amount": "4"
+          }
+        ],
+        "result": {
+          "name": "银镐",
+          "image": "Silver_Pickaxe.png"
+        }
+      },
+      {
+        "station": "铁砧或铅砧",
+        "ingredients": [
+          {
+            "name": "银锭",
+            "image": "Silver_Bar.png",
+            "amount": "8"
+          }
+        ],
+        "result": {
+          "name": "银阔剑",
+          "image": "Silver_Broadsword.png"
+        }
+      }
+    ],
     "drops": {
       "modes": [
         {
@@ -10739,247 +11246,22 @@
       ]
     },
     "description": "银锭是种困难模式之前的锭。\n\n其代用矿石对应物是钨锭。",
-    "item_category": "bars",
-    "used_in": [
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "蓝玉",
-            "image": "Sapphire.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "蓝玉法杖",
-          "image": "Sapphire_Staff.png"
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "银锭是种困难模式之前的锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "4"
-          },
-          {
-            "name": "火把",
-            "image": "Torch.png",
-            "amount": "4"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "银吊灯",
-          "image": "Silver_Chandelier.png"
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是钨锭。"
         }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "15"
-          }
-        ],
-        "result": {
-          "name": "银头盔",
-          "image": "Silver_Helmet.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "火枪子弹",
-            "image": "Musket_Ball.png",
-            "amount": "70"
-          },
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png"
-          }
-        ],
-        "result": {
-          "name": "银子弹",
-          "image": "Silver_Bullet.png",
-          "amount": "70"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "7"
-          }
-        ],
-        "result": {
-          "name": "银弓",
-          "image": "Silver_Bow.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "20"
-          }
-        ],
-        "result": {
-          "name": "银护胫",
-          "image": "Silver_Greaves.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "银斧",
-          "image": "Silver_Axe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "6"
-          }
-        ],
-        "result": {
-          "name": "银短剑",
-          "image": "Silver_Shortsword.png"
-        }
-      },
-      {
-        "station": "桌子 和 椅子",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "银表",
-          "image": "Silver_Watch.png"
-        }
-      },
-      {
-        "station": "工作台",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "链条",
-            "image": "Chain.png"
-          }
-        ],
-        "result": {
-          "name": "银表",
-          "image": "Silver_Watch.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "25"
-          }
-        ],
-        "result": {
-          "name": "银链甲",
-          "image": "Silver_Chainmail.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "8"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "3"
-          }
-        ],
-        "result": {
-          "name": "银锤",
-          "image": "Silver_Hammer.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "10"
-          },
-          {
-            "name": "任何木材",
-            "image": "Any_Wood.gif",
-            "amount": "4"
-          }
-        ],
-        "result": {
-          "name": "银镐",
-          "image": "Silver_Pickaxe.png"
-        }
-      },
-      {
-        "station": "铁砧或铅砧",
-        "ingredients": [
-          {
-            "name": "银锭",
-            "image": "Silver_Bar.png",
-            "amount": "8"
-          }
-        ],
-        "result": {
-          "name": "银阔剑",
-          "image": "Silver_Broadsword.png"
-        }
-      }
-    ]
+      ]
+    ],
+    "wiki_title": "银锭",
+    "item_category": "bars"
   },
   "锡锭": {
     "name": "锡锭",
@@ -11045,9 +11327,6 @@
         "image": "Tin_Bar.png"
       }
     },
-    "drops": null,
-    "description": "锡锭是种困难模式之前的锭。\n\n其代用矿石对应物是铜锭。\n\n除了旅行模式，新建人物总是会以铜短剑、铜镐、和铜斧开局，无论世界中出现的是铜还是锡。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "铁砧或铅砧",
@@ -11268,7 +11547,30 @@
           "image": "Topaz_Staff.png"
         }
       }
-    ]
+    ],
+    "description": "锡锭是种困难模式之前的锭。\n\n其代用矿石对应物是铜锭。\n\n除了旅行模式，新建人物总是会以铜短剑、铜镐、和铜斧开局，无论世界中出现的是铜还是锡。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "锡锭是种困难模式之前的锭。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其代用矿石对应物是铜锭。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "除了旅行模式，新建人物总是会以铜短剑、铜镐、和铜斧开局，无论世界中出现的是铜还是锡。"
+        }
+      ]
+    ],
+    "wiki_title": "锡锭",
+    "item_category": "bars"
   },
   "锭": {
     "name": "锭",
@@ -11296,26 +11598,23 @@
         "extra": ""
       }
     ],
-    "recipe": {
-      "station": "地狱熔炉",
-      "ingredients": [
+    "recipe": null,
+    "description": "锭是一类制作材料，一般用采挖来的矿石在熔炉处制作而来。大多数矿石相关的物品在制作时都需要先把原矿制作成锭。\n\n目前有 23 种不同的锭。其中大部分要想获得只需要有相应的矿石作为制作材料。狱石锭、幽灵锭、和蘑菇矿锭是例外，它们需要另外的辅助材料。神圣锭不是制作而来的，而是由机械 Boss掉落。一些锭也能从宝匣中随机获得。所有有对应物的锭都可使用叶绿提炼机进行转化。",
+    "description_rich": [
+      [
         {
-          "name": "狱石",
-          "image": "Hellstone.png",
-          "amount": "3"
-        },
-        {
-          "name": "黑曜石",
-          "image": "Obsidian.png"
+          "type": "text",
+          "text": "锭是一类制作材料，一般用采挖来的矿石在熔炉处制作而来。大多数矿石相关的物品在制作时都需要先把原矿制作成锭。"
         }
       ],
-      "result": {
-        "name": "狱石锭",
-        "image": "Hellstone_Bar.png"
-      }
-    },
-    "drops": null,
-    "description": "锭是一类制作材料，一般用采挖来的矿石在熔炉处制作而来。大多数矿石相关的物品在制作时都需要先把原矿制作成锭。\n\n目前有 23 种不同的锭。其中大部分要想获得只需要有相应的矿石作为制作材料。狱石锭、幽灵锭、和蘑菇矿锭是例外，它们需要另外的辅助材料。神圣锭不是制作而来的，而是由机械 Boss掉落。一些锭也能从宝匣中随机获得。所有有对应物的锭都可使用叶绿提炼机进行转化。",
+      [
+        {
+          "type": "text",
+          "text": "目前有 23 种不同的锭。其中大部分要想获得只需要有相应的矿石作为制作材料。狱石锭、幽灵锭、和蘑菇矿锭是例外，它们需要另外的辅助材料。神圣锭不是制作而来的，而是由机械 Boss掉落。一些锭也能从宝匣中随机获得。所有有对应物的锭都可使用叶绿提炼机进行转化。"
+        }
+      ]
+    ],
+    "wiki_title": "锭",
     "item_category": "bars"
   },
   "陨石锭": {
@@ -11382,48 +11681,6 @@
         "image": "Meteorite_Bar.png"
       }
     },
-    "drops": {
-      "modes": [
-        {
-          "mode": "normal",
-          "label": "经典",
-          "entries": [
-            {
-              "name": "暗影箱",
-              "image": "Shadow_Chest.png",
-              "quantity": "15–29",
-              "chance": "1/4 (25%)"
-            }
-          ]
-        },
-        {
-          "mode": "expert",
-          "label": "专家",
-          "entries": [
-            {
-              "name": "暗影箱",
-              "image": "Shadow_Chest.png",
-              "quantity": "15–29",
-              "chance": "1/4 (25%)"
-            }
-          ]
-        },
-        {
-          "mode": "master",
-          "label": "大师",
-          "entries": [
-            {
-              "name": "暗影箱",
-              "image": "Shadow_Chest.png",
-              "quantity": "15–29",
-              "chance": "1/4 (25%)"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "陨石锭是种困难模式之前的锭。除制作之外，它也会作为一般物品出现在暗影箱中，或更为罕见地出现在靠近地狱的洞穴层金箱中。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "铁砧或铅砧",
@@ -11824,7 +12081,58 @@
           "image": "Yellow_Phaseblade.png"
         }
       }
-    ]
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "15–29",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "15–29",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "暗影箱",
+              "image": "Shadow_Chest.png",
+              "quantity": "15–29",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "陨石锭是种困难模式之前的锭。除制作之外，它也会作为一般物品出现在暗影箱中，或更为罕见地出现在靠近地狱的洞穴层金箱中。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "陨石锭是种困难模式之前的锭。除制作之外，它也会作为一般物品出现在暗影箱中，或更为罕见地出现在靠近地狱的洞穴层金箱中。"
+        }
+      ]
+    ],
+    "wiki_title": "陨石锭",
+    "item_category": "bars"
   },
   "魔矿锭": {
     "name": "魔矿锭",
@@ -11890,9 +12198,6 @@
         "image": "Demonite_Bar.png"
       }
     },
-    "drops": null,
-    "description": "魔矿锭是种困难模式之前的锭。\n\n它是猩红之地的猩红矿锭的腐化对应物。",
-    "item_category": "bars",
     "used_in": [
       {
         "station": "重型装配台 和 灵雾(电脑版、主机版、和移动版)",
@@ -12153,6 +12458,23 @@
           "image": "The_Breaker.png"
         }
       }
-    ]
+    ],
+    "description": "魔矿锭是种困难模式之前的锭。\n\n它是猩红之地的猩红矿锭的腐化对应物。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "魔矿锭是种困难模式之前的锭。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它是猩红之地的猩红矿锭的腐化对应物。"
+        }
+      ]
+    ],
+    "wiki_title": "魔矿锭",
+    "item_category": "bars"
   }
 }

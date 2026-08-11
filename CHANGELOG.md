@@ -6,6 +6,24 @@
 
 ---
 
+## [1.8.4] - 2026-08-12
+
+### 新增
+
+- 搜索结果列表改为图片卡片展示（含条目图标），超出一屏时提示输入更精确名称
+- 离线数据同步 Wiki 最新更新（08-09 镜像增量 + 线上分类增量），新增约 870 个条目：时装（开发者套装等）+482、药水/食物 +120、杂项 +92、物块 +47、染料 +44、弹药 +41、盔甲 +18 等
+- 修复旧版（前代主机/3DS）物品被普通分类抢先收录后缺失 legacy 标记的问题：30 个条目补全 `internal_tags`，35 个套装部件继承标记
+
+### 修复
+
+- `prepare_data.py` 解析 `<sup class="reference">` 脚注时兼容无 class 属性的情况，避免误跳过引用节点
+
+### 变更
+
+- `CARD_VERSION` v63
+
+---
+
 ## [1.8.3] - 2026-06-29
 
 ### 变更
@@ -656,6 +674,7 @@
 
 ---
 
+[1.8.4]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.8.4
 [1.4.3]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.4.3
 [1.4.2]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.4.2
 [1.4.1]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.4.1

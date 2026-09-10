@@ -110,10 +110,16 @@
       "count": 42
     },
     {
+      "key": "statues",
+      "label": "雕像",
+      "file": "statues.json",
+      "count": 2
+    },
+    {
       "key": "furniture",
       "label": "家具",
       "file": "furniture.json",
-      "count": 219
+      "count": 217
     },
     {
       "key": "mechanisms",
@@ -122,16 +128,10 @@
       "count": 3
     },
     {
-      "key": "statues",
-      "label": "雕像",
-      "file": "statues.json",
-      "count": 0
-    },
-    {
       "key": "misc",
       "label": "杂项",
       "file": "misc.json",
-      "count": 368
+      "count": 372
     },
     {
       "key": "mounts",
@@ -146,5 +146,5 @@
       "count": 87
     }
   ],
-  "total": 3159
+  "total": 3163
 }

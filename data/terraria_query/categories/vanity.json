@@ -46505,9 +46505,7 @@
     "wiki_title": "George的套装",
     "drops": null,
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "navbox",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -46570,9 +46568,7 @@
     "from_armor_set": true,
     "parent_set": "George的套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -46636,9 +46632,7 @@
     "from_armor_set": true,
     "parent_set": "George的套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -46702,9 +46696,7 @@
     "from_armor_set": true,
     "parent_set": "George的套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -46954,9 +46946,7 @@
     ],
     "wiki_title": "十月啤酒节套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "navbox",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47002,9 +46992,7 @@
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47051,9 +47039,7 @@
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47100,9 +47086,7 @@
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47149,9 +47133,7 @@
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47198,9 +47180,7 @@
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47247,9 +47227,7 @@
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47477,9 +47455,7 @@
     ],
     "wiki_title": "多乐套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "navbox",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47731,9 +47707,7 @@
     ],
     "wiki_title": "希炼套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "navbox",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -47960,9 +47934,7 @@
     ],
     "wiki_title": "粉白美套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "navbox",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48197,9 +48169,7 @@
     ],
     "wiki_title": "绝妙套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "navbox",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48262,9 +48232,7 @@
     "from_armor_set": true,
     "parent_set": "绝妙套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48323,9 +48291,7 @@
     "from_armor_set": true,
     "parent_set": "绝妙套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48384,9 +48350,7 @@
     "from_armor_set": true,
     "parent_set": "绝妙套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48506,9 +48470,7 @@
     ],
     "wiki_title": "角神套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "navbox",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48542,9 +48504,7 @@
     "from_armor_set": true,
     "parent_set": "角神套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48579,9 +48539,7 @@
     "from_armor_set": true,
     "parent_set": "角神套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48616,9 +48574,7 @@
     "from_armor_set": true,
     "parent_set": "角神套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -48784,9 +48740,7 @@
     ],
     "wiki_title": "黑白熊套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "navbox",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49321,9 +49275,7 @@
     "from_armor_set": true,
     "parent_set": "多乐套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49382,9 +49334,7 @@
     "from_armor_set": true,
     "parent_set": "多乐套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49443,9 +49393,7 @@
     "from_armor_set": true,
     "parent_set": "多乐套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49492,9 +49440,7 @@
     "from_armor_set": true,
     "parent_set": "希炼套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49553,9 +49499,7 @@
     "from_armor_set": true,
     "parent_set": "希炼套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49614,9 +49558,7 @@
     "from_armor_set": true,
     "parent_set": "希炼套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49675,9 +49617,7 @@
     "from_armor_set": true,
     "parent_set": "粉白美套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49736,9 +49676,7 @@
     "from_armor_set": true,
     "parent_set": "粉白美套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
@@ -49797,9 +49735,7 @@
     "from_armor_set": true,
     "parent_set": "粉白美套装",
     "item_category": "vanity",
-    "legacy_item": true,
     "legacy_scope": "old_gen",
-    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",

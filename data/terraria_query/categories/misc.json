@@ -59795,5 +59795,344 @@
       "old_gen"
     ],
     "item_category": "misc"
+  },
+  "旧世界跑酷指南": {
+    "name": "旧世界跑酷指南",
+    "image": "Guide_to_Old_World_Parkour.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "工具",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffffff"
+      }
+    ],
+    "recipe": {
+      "station": "远古操纵机(电脑版、主机版、和移动版)",
+      "ingredients": [
+        {
+          "name": "书",
+          "image": "Book.png"
+        },
+        {
+          "name": "夜明锭",
+          "image": "Luminite_Bar.png",
+          "amount": "10"
+        }
+      ],
+      "result": {
+        "name": "旧世界跑酷指南",
+        "image": "Guide_to_Old_World_Parkour.png"
+      }
+    },
+    "description": "旧世界跑酷指南是一件困难模式、月亮领主后的工具，它位于物品栏或开启的虚空袋中时会略微修改玩家的 移动能力。\n\n它有如下效果：验证\n\n· 当在使用钩爪的状态下跳跃时，玩家会以减半的高度跳跃，而非完整高度。\n· 降低速度的减益（冷冻、燃烧、和缓慢）的效果强度受到影响。\n· 克苏鲁护盾同时猛冲命中多个目标时的行为受到影响。\n\n在玩家的物品栏或热键栏中对它按下⚷打开/激活会使其在旧世界跑酷指南和旧世界跑酷指南（停用）之间切换，后者会禁用其功能。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "旧世界跑酷指南是一件困难模式、月亮领主后的工具，它位于物品栏或开启的虚空袋中时会略微修改玩家的 移动能力。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "它有如下效果：验证"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "当在使用钩爪的状态下跳跃时，玩家会以减半的高度跳跃，而非完整高度。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "降低速度的减益（冷冻、燃烧、和缓慢）的效果强度受到影响。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "克苏鲁护盾同时猛冲命中多个目标时的行为受到影响。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "在玩家的物品栏或热键栏中对它按下"
+        },
+        {
+          "type": "key",
+          "symbol": "⚷",
+          "label": "打开/激活"
+        },
+        {
+          "type": "text",
+          "text": "会使其在旧世界跑酷指南和旧世界跑酷指南（停用）之间切换，后者会禁用其功能。"
+        }
+      ]
+    ],
+    "wiki_title": "旧世界跑酷指南",
+    "item_category": "misc"
+  },
+  "毁灭法杖": {
+    "name": "毁灭法杖",
+    "image": "Ruinous_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "-1",
+        "extra": ""
+      },
+      {
+        "label": "击退",
+        "value": "0",
+        "extra": "（无击退力）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffffff"
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "暗黑碎块",
+          "image": "Dark_Shard.png"
+        },
+        {
+          "name": "光明碎块",
+          "image": "Light_Shard.png"
+        },
+        {
+          "name": "禁戒碎片",
+          "image": "Forbidden_Fragment.png",
+          "amount": "2"
+        },
+        {
+          "name": "暗影之魂",
+          "image": "Soul_of_Night.gif",
+          "amount": "5"
+        },
+        {
+          "name": "光明之魂",
+          "image": "Soul_of_Light.gif",
+          "amount": "5"
+        }
+      ],
+      "result": {
+        "name": "毁灭法杖",
+        "image": "Ruinous_Staff.png"
+      }
+    },
+    "description": "毁灭法杖是一件困难模式召唤武器，用沙漠和光明/黑暗材料制作。它会召唤一个禁戒遗迹仆从，悬停在玩家上方。在找到目标后，禁戒遗迹会主动追逐它并停留在离目标一小段距离处，并向目标发射高速但会逐渐减速的禁戒弹射弹。禁戒弹不能穿透，在消失时会爆炸，爆炸可对其他附近敌怪造成全额伤害和击退，但不会对禁戒弹直接击中的敌怪（再次）造成伤害。当召唤多个禁戒遗迹时，它们会形成环状的旋转阵型并快速开火。\n\n其最佳修饰语是传说。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "毁灭法杖是一件困难模式召唤武器，用沙漠和光明/黑暗材料制作。它会召唤一个禁戒遗迹仆从，悬停在玩家上方。在找到目标后，禁戒遗迹会主动追逐它并停留在离目标一小段距离处，并向目标发射高速但会逐渐减速的禁戒弹射弹。禁戒弹不能穿透，在消失时会爆炸，爆炸可对其他附近敌怪造成全额伤害和击退，但不会对禁戒弹直接击中的敌怪（再次）造成伤害。当召唤多个禁戒遗迹时，它们会形成环状的旋转阵型并快速开火。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是传说。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "禁戒遗迹",
+      "image": "Forbidden_Ruin_(minion).png"
+    },
+    "wiki_title": "毁灭法杖",
+    "item_category": "misc"
+  },
+  "皇家卫队护具": {
+    "name": "皇家卫队护具",
+    "image": "Royal_Guard's_Harness.png",
+    "stats": [
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffffff"
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "重型投石索",
+          "image": "Heavy_Sling.png"
+        },
+        {
+          "name": "钴护盾",
+          "image": "Cobalt_Shield.png"
+        }
+      ],
+      "result": {
+        "name": "皇家卫队护具",
+        "image": "Royal_Guard's_Harness.png"
+      }
+    },
+    "description": "皇家卫队护具是一个困难模式配饰，佩戴时会给佩戴者带来以下效果\n\n· +1防御\n· 免疫击退\n· 允许玩家在经过哨兵时携带哨兵",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "皇家卫队护具是一个困难模式配饰，佩戴时会给佩戴者带来以下效果"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "免疫击退"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "允许玩家在经过哨兵时携带哨兵"
+        }
+      ]
+    ],
+    "wiki_title": "皇家卫队护具",
+    "item_category": "misc"
+  },
+  "黏土蓓蕾法杖": {
+    "name": "黏土蓓蕾法杖",
+    "image": "Clay_Bud_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "-1",
+        "extra": ""
+      },
+      {
+        "label": "击退",
+        "value": "0",
+        "extra": "（无击退力）"
+      },
+      {
+        "label": "稀有度",
+        "value": "白色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffffff"
+      }
+    ],
+    "recipe": {
+      "station": "熔炉",
+      "ingredients": [
+        {
+          "name": "粘土块",
+          "image": "Clay_Block.png",
+          "amount": "30"
+        },
+        {
+          "name": "弱效治疗药水",
+          "image": "Lesser_Healing_Potion.png"
+        },
+        {
+          "name": "太阳花",
+          "image": "Daybloom.png"
+        },
+        {
+          "name": "闪耀根",
+          "image": "Blinkroot.png"
+        }
+      ],
+      "result": {
+        "name": "黏土蓓蕾法杖",
+        "image": "Clay_Bud_Staff.png"
+      }
+    },
+    "description": "黏土蓓蕾法杖是困难模式之前的召唤武器，可召唤黏土蓓蕾仆从。黏土蓓蕾行走并跳跃向敌怪，用手臂下砸对敌怪造成接触伤害。若黏土蓓蕾距离玩家过远，它会使用它头顶的叶子升空然后飞向玩家。类似于帕鲁，可以按⚷打开/激活来抚摸黏土蓓蕾仆从。\n\n其最佳修饰语是传说。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "黏土蓓蕾法杖是困难模式之前的召唤武器，可召唤黏土蓓蕾仆从。黏土蓓蕾行走并跳跃向敌怪，用手臂下砸对敌怪造成接触伤害。若黏土蓓蕾距离玩家过远，它会使用它头顶的叶子升空然后飞向玩家。类似于帕鲁，可以按"
+        },
+        {
+          "type": "key",
+          "symbol": "⚷",
+          "label": "打开/激活"
+        },
+        {
+          "type": "text",
+          "text": "来抚摸黏土蓓蕾仆从。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是传说。"
+        }
+      ]
+    ],
+    "wiki_title": "黏土蓓蕾法杖",
+    "item_category": "misc"
   }
 }

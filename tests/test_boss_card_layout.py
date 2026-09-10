@@ -19,9 +19,9 @@ def _bootstrap_plugin_package():
     root = Path(__file__).resolve().parents[1]
     if str(root) not in sys.path:
         sys.path.insert(0, str(root))
-    pkg = types.ModuleType("astrbot_plugin_terraria_data_query")
+    pkg = types.ModuleType("astrbot_plugin_terraria_query")
     pkg.__path__ = [str(root)]
-    sys.modules["astrbot_plugin_terraria_data_query"] = pkg
+    sys.modules["astrbot_plugin_terraria_query"] = pkg
     for mod in ["astrbot", "astrbot.api", "astrbot.api.event", "astrbot.api.star"]:
         sys.modules.setdefault(mod, types.ModuleType(mod))
     sys.modules["astrbot.api.event"].filter = _FilterMock()
@@ -36,7 +36,7 @@ def _bootstrap_plugin_package():
 
 def _import_main():
     _bootstrap_plugin_package()
-    from astrbot_plugin_terraria_data_query.main import _compact_boss_stat_multiline
+    from astrbot_plugin_terraria_query.main import _compact_boss_stat_multiline
 
     return _compact_boss_stat_multiline
 

@@ -1,4 +1,4 @@
-# astrbot_plugin_terraria_data_query
+# astrbot_plugin_terraria_query
 
 泰拉瑞亚 Wiki 离线查询 AstrBot 插件。发送 `泰拉查询 <名称>` 或 `泰拉 <名称>`（无需 `/` 前缀），以**中文**图片卡片展示物品属性、合成配方、Boss 信息或生物群系介绍；仅支持**中文名称**搜索。
 
@@ -72,13 +72,13 @@ pip install -r requirements.txt
 
 **手动维护**（开发调试，或 Bot 所在环境不方便发消息时）：在 **本插件目录** 下打开终端执行（路径因安装方式而异，常见如下）：
 
-- WebUI / Release 安装：`AstrBot/data/plugins/astrbot_plugin_terraria_data_query/`
-- 本仓库开发：克隆后的 `astrbot_plugin_terraria_data_query/` 根目录
+- WebUI / Release 安装：`AstrBot/data/plugins/astrbot_plugin_terraria_query/`
+- 本仓库开发：克隆后的 `astrbot_plugin_terraria_query/` 根目录
 
 需已安装 `requirements.txt` 依赖，且机器可访问 [terraria.wiki.gg](https://terraria.wiki.gg)。
 
 ```bash
-cd AstrBot/data/plugins/astrbot_plugin_terraria_data_query   # 按实际路径修改
+cd AstrBot/data/plugins/astrbot_plugin_terraria_query   # 按实际路径修改
 
 python prepare_data.py              # 增量（与「泰拉更新」相同）
 python prepare_data.py --force      # 全量重建（与「泰拉强制更新」相同）
@@ -121,7 +121,7 @@ pytest tests/ -q
 **任选其一：**
 
 1. **临时关闭镜像** — AstrBot WebUI → 插件 → 关闭 GitHub 镜像站，再点更新
-2. **手动安装** — 从 [Releases](https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases) 下载 `astrbot_plugin_terraria_data_query-x.y.z.zip`，解压覆盖到 `data/plugins/astrbot_plugin_terraria_data_query/`
+2. **手动安装** — 从 [Releases](https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases) 下载 `astrbot_plugin_terraria_query-x.y.z.zip`，解压覆盖到 `data/plugins/astrbot_plugin_terraria_query/`
 
 **说明：** `metadata.yaml` 的 `repo` 应写仓库根地址（与 [twrpg 查询插件](https://github.com/YouYi5213/astrbot_plugin_twrpg_query) 相同），AstrBot 会按 **最新 Release 标签** 下载（如 `zipball/v1.6.8`）。若写成 `.../tree/main`，则会改为下载整份 `main` 分支 zip，包体更大、通常更慢。
 

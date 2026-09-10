@@ -12,17 +12,17 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 # 构造插件包，使 main.py 的相对导入可用
-pkg = types.ModuleType("astrbot_plugin_terraria_query")
+pkg = types.ModuleType("astrbot_plugin_terraria_data_query")
 pkg.__path__ = [str(ROOT)]
-sys.modules["astrbot_plugin_terraria_query"] = pkg
+sys.modules["astrbot_plugin_terraria_data_query"] = pkg
 
 prep_spec = importlib.util.spec_from_file_location(
-    "astrbot_plugin_terraria_query.prepare_data",
+    "astrbot_plugin_terraria_data_query.prepare_data",
     ROOT / "prepare_data.py",
 )
 prep = importlib.util.module_from_spec(prep_spec)
 assert prep_spec and prep_spec.loader
-sys.modules["astrbot_plugin_terraria_query.prepare_data"] = prep
+sys.modules["astrbot_plugin_terraria_data_query.prepare_data"] = prep
 prep_spec.loader.exec_module(prep)
 
 for mod_name in ("astrbot", "astrbot.api", "astrbot.api.event", "astrbot.api.star"):
@@ -42,13 +42,13 @@ sys.modules["astrbot.api"].logger = types.SimpleNamespace(
 )
 
 main_spec = importlib.util.spec_from_file_location(
-    "astrbot_plugin_terraria_query.main",
+    "astrbot_plugin_terraria_data_query.main",
     ROOT / "main.py",
     submodule_search_locations=[str(ROOT)],
 )
 main = importlib.util.module_from_spec(main_spec)
 assert main_spec and main_spec.loader
-sys.modules["astrbot_plugin_terraria_query.main"] = main
+sys.modules["astrbot_plugin_terraria_data_query.main"] = main
 main_spec.loader.exec_module(main)
 
 

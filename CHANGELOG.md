@@ -1,6 +1,6 @@
 # 更新日志
 
-本文件记录 [泰拉瑞亚查询](https://github.com/YouYi5213/astrbot_plugin_terraria_query) 插件的版本变更。
+本文件记录 [泰拉瑞亚查询](https://github.com/YouYi5213/astrbot_plugin_terraria_data_query) 插件的版本变更。
 
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，版本号与 GitHub Release 一致。
 
@@ -702,15 +702,15 @@
 
 ---
 
-[1.8.4]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.8.4
-[1.4.3]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.4.3
-[1.4.2]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.4.2
-[1.4.1]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.4.1
-[1.4.0]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.4.0
-[1.3.9]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.3.9
-[1.3.8]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.3.8
-[1.3.7]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.3.7
-[1.3.6]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.3.6
-[1.3.5]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.3.5
-[1.3.4]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.3.4
-[1.3.3]: https://github.com/YouYi5213/astrbot_plugin_terraria_query/releases/tag/v1.3.3
+[1.8.4]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.8.4
+[1.4.3]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.4.3
+[1.4.2]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.4.2
+[1.4.1]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.4.1
+[1.4.0]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.4.0
+[1.3.9]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.3.9
+[1.3.8]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.3.8
+[1.3.7]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.3.7
+[1.3.6]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.3.6
+[1.3.5]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.3.5
+[1.3.4]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.3.4
+[1.3.3]: https://github.com/YouYi5213/astrbot_plugin_terraria_data_query/releases/tag/v1.3.3

@@ -315,18 +315,38 @@ def _ensure_dirs() -> None:
         os.makedirs(d, exist_ok=True)
 
 
+_CARD_CACHE_MAX_FILES = 1000
+
+
 def _prune_old_card_cache(keep_version: str = CARD_VERSION) -> None:
-    """删除旧版本卡片缓存，避免磁盘无限增长。"""
+    """删除旧版本卡片缓存，并把当前版本淘汰到数量上限。"""
     if not os.path.isdir(CARDS_DIR):
         return
     prefix = f"card_{keep_version}_"
+    kept: list[tuple[float, str]] = []
     for name in os.listdir(CARDS_DIR):
-        if not name.startswith("card_v") or name.startswith(prefix):
+        path = os.path.join(CARDS_DIR, name)
+        if not name.startswith("card_v"):
+            continue
+        if not name.startswith(prefix):
+            try:
+                os.remove(path)
+            except OSError:
+                pass
             continue
         try:
-            os.remove(os.path.join(CARDS_DIR, name))
+            kept.append((os.path.getmtime(path), path))
         except OSError:
             pass
+    # 当前版本同样会无限增长（每个不同的模糊检索词都会生成新文件），因此按
+    # 最久未使用淘汰到上限。卡片可按需重生成，删除是安全的。
+    if len(kept) > _CARD_CACHE_MAX_FILES:
+        kept.sort()
+        for _, path in kept[: len(kept) - _CARD_CACHE_MAX_FILES]:
+            try:
+                os.remove(path)
+            except OSError:
+                pass
 
 
 _CARD_CACHE_PRUNED = False
@@ -349,6 +369,34 @@ def _card_output_path(name: str, locale: str = "zh", *, kind: str | None = None)
     safe_name = re.sub(r"[^\w\-\u4e00-\u9fff]", "_", name or "unknown")
     kind_part = f"_{kind}" if kind else ""
     return os.path.join(CARDS_DIR, f"card_{CARD_VERSION}_{locale}{kind_part}_{safe_name}")
+
+
+def _card_cache_hit(path: str) -> bool:
+    """缓存命中判定：文件存在，且是一张完整可解码的 PNG。
+
+    只判断 ``os.path.isfile`` 会让写盘中断 / 磁盘写满留下的半截文件被永久复用
+    （``event.image_result`` 每次失败且永不自愈，只能靠升 CARD_VERSION 清掉），
+    因此这里校验 PNG 结构；损坏文件就地删除，交给本次重新渲染。
+    """
+    try:
+        if not os.path.isfile(path) or os.path.getsize(path) < 8:
+            return False
+        with Image.open(path) as img:
+            img.verify()
+        return True
+    except Exception:
+        try:
+            os.remove(path)
+        except OSError:
+            pass
+        return False
+
+
+def _save_card_image(card: Image.Image, output_path: str) -> None:
+    """原子写出卡片：先写临时文件再 ``os.replace``，避免半截 PNG 覆盖有效缓存。"""
+    tmp_path = f"{output_path}.tmp"
+    card.convert("RGB").save(tmp_path, "PNG")
+    os.replace(tmp_path, output_path)
 
 
 def _image_path(filename: str) -> str:
@@ -1282,6 +1330,15 @@ def _is_force_update_command(text: str) -> bool:
 def _is_update_command(text: str) -> bool:
     normalized = _normalize_message(text)
     return normalized in ("泰拉更新", "泰拉强制更新")
+
+
+def _is_update_command_with_args(text: str) -> bool:
+    """「泰拉更新 xxx」「泰拉强制更新 xxx」这类带多余参数的写法。"""
+    normalized = _normalize_message(text)
+    return any(
+        normalized.startswith(prefix + " ")
+        for prefix in ("泰拉更新", "泰拉强制更新")
+    )
 
 
 # 匹配 泰拉查询/泰拉/泰拉更新/泰拉强制更新/terraria，无需 / 前缀（/ 也兼容）
@@ -2336,7 +2393,7 @@ def _generate_item_card(
     locale = "zh"
     is_wing = _is_wing_item(data)
     output_path = _card_output_path(data.get("name", ""), locale)
-    if os.path.isfile(output_path):
+    if _card_cache_hit(output_path):
         return output_path
 
     font_title = _try_get_font(26)
@@ -2610,7 +2667,7 @@ def _generate_item_card(
             npcs=npcs,
         )
 
-    card.convert("RGB").save(output_path, "PNG")
+    _save_card_image(card, output_path)
     return output_path
 
 
@@ -2816,7 +2873,7 @@ def _generate_biome_card(
     output_path = _card_output_path(
         data.get("name", ""), locale, kind=f"{cache_kind}_{view}"
     )
-    if os.path.isfile(output_path):
+    if _card_cache_hit(output_path):
         return output_path
 
     font_title = _try_get_font(26)
@@ -2903,7 +2960,7 @@ def _generate_biome_card(
             draw, card, y, content, font_header, font_small, font_small, ui
         )
 
-    card.convert("RGB").save(output_path, "PNG")
+    _save_card_image(card, output_path)
     return output_path
 
 
@@ -2925,6 +2982,50 @@ def _npc_pref_entry_lines(entries: list) -> str:
     return "、".join(_npc_entry_label(e) for e in entries if _npc_entry_label(e))
 
 
+def _layout_npc_icon_entries(
+    draw: ImageDraw.ImageDraw,
+    max_w: int,
+    entries: list,
+    font,
+) -> list[list[tuple[str, list[str]]]]:
+    """把条目排成「行 → 条目」结构：行内横向流动，放不下就换行。
+
+    单个条目自身宽于 ``max_w`` 时必须先按行宽折行再摆放；否则它会画到卡片
+    右边界之外并被 PIL 静默裁掉（原实现只在 ``cx > x`` 时换行，首条永不换行）。
+    """
+    rows: list[list[tuple[str, list[str]]]] = []
+    current: list[tuple[str, list[str]]] = []
+    cx = 0
+    for entry in entries:
+        label = _npc_entry_label(entry)
+        if not label:
+            continue
+        image = entry.get("image", "") if isinstance(entry, dict) else ""
+        icon_w = NPC_PREF_ICON_SLOT[0] + 4 if image else 0
+        lines = _wrap_text_lines(draw, label, font, max(40, max_w - icon_w)) or [label]
+        block_w = icon_w + max(_text_width(draw, line, font) for line in lines)
+        if current and cx + block_w + 10 > max_w:
+            rows.append(current)
+            current = []
+            cx = 0
+        current.append((image, lines))
+        cx += block_w + 10
+    if current:
+        rows.append(current)
+    return rows
+
+
+def _npc_icon_row_height(row: list[tuple[str, list[str]]], line_h: int) -> int:
+    lines = max(len(item_lines) for _, item_lines in row)
+    return lines * line_h + max(0, lines - 1) * 4
+
+
+def _npc_icon_entries_height(
+    rows: list[list[tuple[str, list[str]]]], line_h: int
+) -> int:
+    return sum(_npc_icon_row_height(row, line_h) for row in rows) + 4 * (len(rows) - 1)
+
+
 def _draw_npc_icon_entries(
     draw: ImageDraw.ImageDraw,
     card: Image.Image,
@@ -2936,28 +3037,30 @@ def _draw_npc_icon_entries(
 ) -> int:
     if not entries:
         return 0
-    cx = x
-    cy = y
     line_h = max(NPC_PREF_ICON_SLOT[1], STAT_LINE_HEIGHT)
-    for entry in entries:
-        label = _npc_entry_label(entry)
-        if not label:
-            continue
-        image = entry.get("image", "") if isinstance(entry, dict) else ""
-        icon_w = NPC_PREF_ICON_SLOT[0] + 4 if image else 0
-        text_w = _text_width(draw, label, font)
-        block_w = icon_w + text_w + 10
-        if cx + block_w > x + max_w and cx > x:
-            cx = x
-            cy += line_h + 4
-        if image:
-            img = _load_item_image(image, NPC_PREF_ICON_SLOT)
-            if img:
-                _paste_in_slot(card, img, cx, cy, NPC_PREF_ICON_SLOT[0], line_h)
-            cx += icon_w
-        draw.text((cx, cy + 2), label, fill=COLORS["value"], font=font)
-        cx += text_w + 10
-    return max(line_h, cy + line_h - y)
+    rows = _layout_npc_icon_entries(draw, max_w, entries, font)
+    if not rows:
+        return line_h
+    cy = y
+    for row in rows:
+        cx = x
+        for image, lines in row:
+            icon_w = NPC_PREF_ICON_SLOT[0] + 4 if image else 0
+            if image:
+                img = _load_item_image(image, NPC_PREF_ICON_SLOT)
+                if img:
+                    _paste_in_slot(card, img, cx, cy, NPC_PREF_ICON_SLOT[0], line_h)
+                cx += icon_w
+            for index, line in enumerate(lines):
+                draw.text(
+                    (cx, cy + index * (line_h + 4) + 2),
+                    line,
+                    fill=COLORS["value"],
+                    font=font,
+                )
+            cx += max(_text_width(draw, line, font) for line in lines) + 10
+        cy += _npc_icon_row_height(row, line_h) + 4
+    return max(line_h, _npc_icon_entries_height(rows, line_h))
 
 
 def _calc_npc_icon_entries_height(
@@ -2968,24 +3071,11 @@ def _calc_npc_icon_entries_height(
 ) -> int:
     if not entries:
         return STAT_LINE_HEIGHT
-    cx = 0
-    cy = 0
     line_h = max(NPC_PREF_ICON_SLOT[1], STAT_LINE_HEIGHT)
-    row_count = 1
-    for entry in entries:
-        label = _npc_entry_label(entry)
-        if not label:
-            continue
-        image = entry.get("image", "") if isinstance(entry, dict) else ""
-        icon_w = NPC_PREF_ICON_SLOT[0] + 4 if image else 0
-        text_w = _text_width(draw, label, font)
-        block_w = icon_w + text_w + 10
-        if cx + block_w > max_w and cx > 0:
-            cx = 0
-            cy += line_h + 4
-            row_count += 1
-        cx += block_w
-    return row_count * line_h + max(0, row_count - 1) * 4
+    rows = _layout_npc_icon_entries(draw, max_w, entries, font)
+    if not rows:
+        return line_h
+    return max(line_h, _npc_icon_entries_height(rows, line_h))
 
 
 def _draw_npc_shop_price(
@@ -3242,7 +3332,7 @@ def _generate_npc_card(data: dict) -> str:
     ui = _CARD_UI
     locale = "zh"
     output_path = _card_output_path(data.get("name", ""), locale, kind="npc")
-    if os.path.isfile(output_path):
+    if _card_cache_hit(output_path):
         return output_path
 
     font_title = _try_get_font(26)
@@ -3317,7 +3407,7 @@ def _generate_npc_card(data: dict) -> str:
             sx = CARD_PADDING + 20
             card.paste(shimmer_img, (sx, y), shimmer_img)
 
-    card.convert("RGB").save(output_path, "PNG")
+    _save_card_image(card, output_path)
     return output_path
 
 
@@ -4948,7 +5038,7 @@ def _generate_overview_card(data: dict, *, output_path: str | None = None) -> st
     title = data.get("title", "")
     if output_path is None:
         output_path = _card_output_path(title, "zh", kind=f"overview_{title}")
-    if os.path.isfile(output_path):
+    if _card_cache_hit(output_path):
         return output_path
 
     font_title = _try_get_font(26)
@@ -4984,7 +5074,7 @@ def _generate_overview_card(data: dict, *, output_path: str | None = None) -> st
     else:
         y = _draw_overview_columns_layout(draw, card, y, sections, font_body, _CARD_UI)
 
-    card.convert("RGB").save(output_path, "PNG")
+    _save_card_image(card, output_path)
     return output_path
 
 
@@ -5181,7 +5271,7 @@ def _generate_treasure_bag_card(data: dict) -> str:
     locale = "zh"
     card_title = f"{data.get('name', '')}宝藏袋"
     output_path = _card_output_path(card_title, locale, kind="treasure_bag")
-    if os.path.isfile(output_path):
+    if _card_cache_hit(output_path):
         return output_path
 
     font_title = _try_get_font(24)
@@ -5222,7 +5312,7 @@ def _generate_treasure_bag_card(data: dict) -> str:
     if drops:
         y = _draw_treasure_bag_drops_section(draw, card, y, drops, font_small, ui)
 
-    card.convert("RGB").save(output_path, "PNG")
+    _save_card_image(card, output_path)
     return output_path
 
 
@@ -5231,7 +5321,7 @@ def _generate_boss_card(data: dict, *, single_mode: bool = False) -> str:
     ui = _CARD_UI
     locale = "zh"
     output_path = _card_output_path(data.get("name", ""), locale, kind="boss")
-    if os.path.isfile(output_path):
+    if _card_cache_hit(output_path):
         return output_path
 
     card_w = BOSS_CARD_WIDTH
@@ -5411,7 +5501,7 @@ def _generate_boss_card(data: dict, *, single_mode: bool = False) -> str:
         single_mode=single_mode,
     )
 
-    card.convert("RGB").save(output_path, "PNG")
+    _save_card_image(card, output_path)
     return output_path
 
 
@@ -5499,6 +5589,9 @@ class TerrariaQueryPlugin(Star):
 
         self._cron_task: asyncio.Task | None = None
         self._update_lock = asyncio.Lock()
+        # _handle_update 的忙标志：赋值前后没有 await，在单事件循环里是原子的，
+        # 可避免 locked() 检查与随后的 yield 之间形成 TOCTOU。
+        self._update_busy = False
 
         try:
             if self.cron_time:
@@ -5507,6 +5600,13 @@ class TerrariaQueryPlugin(Star):
             pass
 
     def _can_update(self, event: AstrMessageEvent | None) -> bool:
+        """是否允许本次 Wiki 数据更新。
+
+        - 未配置 ``update_admin_id``：不限制，任何人可触发。
+        - ``event is None``：内部/定时调用没有发送者可比对，视为允许。用户侧
+          入口 ``_handle_update`` 始终传入真实 event，不会走到这一分支。
+        - 否则要求发送者 ID 与配置完全一致。
+        """
         if not self.update_admin_id:
             return True
         if event is None:
@@ -5684,6 +5784,14 @@ class TerrariaQueryPlugin(Star):
 
         query_text = _extract_query_text(raw)
         if query_text is None:
+            # 正则已命中但解析不出查询词：此前直接 return，用户得不到任何回复。
+            if _is_update_command_with_args(raw):
+                yield event.plain_result(
+                    "❌ 更新指令不接受参数。\n"
+                    "· 泰拉更新 — Wiki 增量同步\n"
+                    "· 泰拉强制更新 — 全量重建（管理员，耗时较长）"
+                )
+                event.stop_event()
             return
 
         async for result in self._handle_query(event, query_text):
@@ -5960,22 +6068,26 @@ class TerrariaQueryPlugin(Star):
             yield event.plain_result("❌ 仅管理员可执行 Wiki 数据更新。")
             return
 
-        if self._update_lock.locked():
+        if self._update_busy:
             yield event.plain_result("⏳ 已有更新任务进行中，请稍候。")
             return
-
-        if self.show_update_progress:
-            if force:
-                yield event.plain_result("🔄 正在从 Wiki **全量重建**数据，请稍候…")
-            else:
-                yield event.plain_result("🔄 正在从 Wiki 增量更新物品数据，请稍候…")
+        self._update_busy = True
 
         try:
-            result = await self._run_wiki_update(force=force)
-            yield event.plain_result(_format_update_result(result, force=force))
-        except Exception as e:
-            logger.error(f"Wiki 数据更新失败: {e}")
-            yield event.plain_result(f"❌ 更新失败：{str(e)[:120]}")
+            if self.show_update_progress:
+                if force:
+                    yield event.plain_result("🔄 正在从 Wiki **全量重建**数据，请稍候…")
+                else:
+                    yield event.plain_result("🔄 正在从 Wiki 增量更新物品数据，请稍候…")
+
+            try:
+                result = await self._run_wiki_update(force=force)
+                yield event.plain_result(_format_update_result(result, force=force))
+            except Exception as e:
+                logger.error(f"Wiki 数据更新失败: {e}")
+                yield event.plain_result(f"❌ 更新失败：{str(e)[:120]}")
+        finally:
+            self._update_busy = False
 
     async def terminate(self):
         if self._cron_task and not self._cron_task.done():

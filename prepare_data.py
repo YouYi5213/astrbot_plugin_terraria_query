@@ -202,12 +202,17 @@ def _persist_items(items: dict[str, dict]) -> None:
 
 
 async def _persist_items_async(
-    session: aiohttp.ClientSession, items: dict[str, dict]
+    session: aiohttp.ClientSession,
+    items: dict[str, dict],
+    *,
+    refresh_index: bool = False,
 ) -> None:
     cd = _category_data_module()
     strip_english_fields(items)
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
-    title_to_keys = await cd.build_title_category_map(session)
+    # 全量重建时索引必须重抓：随包发布的 _title_index.json 里没有新建物品的
+    # 分类归属，沿用旧索引会让这些物品全部落到 misc。
+    title_to_keys = await cd.build_title_category_map(session, refresh=refresh_index)
     cd.persist_items_to_categories(
         items,
         categories_dir=CATEGORIES_DIR,
@@ -240,7 +245,7 @@ def _image_url_from_src(src: str) -> str:
 def _filename_from_url(url: str) -> str:
     name = unquote(url.split("/")[-1].split("?")[0])
     name = name or "unknown.png"
-    return _normalize_image_filename(name)
+    return _safe_image_filename(name)
 
 
 def _normalize_image_filename(filename: str) -> str:
@@ -248,6 +253,36 @@ def _normalize_image_filename(filename: str) -> str:
     if not filename:
         return ""
     return re.sub(r"^\d+px-", "", filename, flags=re.I) or filename
+
+
+def _safe_image_filename(filename: str) -> str:
+    """把图片名规约成纯文件名。
+
+    Wiki 响应、以及数据文件里的 ``image`` 字段，都可能带 ``../``；而
+    ``unquote`` 会把 ``%2F`` 解成 ``/``。因此必须先按路径分隔符取 basename，
+    否则 ``os.path.join(IMAGES_DIR, name)`` 能写到 IMAGES_DIR 之外。
+    """
+    flat = (filename or "").replace("\\", "/")
+    return _normalize_image_filename(os.path.basename(flat))
+
+
+# 常见栅格图魔数；SVG 是文本，单独判定（仓库内确实存在 .svg 素材）。
+_RASTER_MAGIC = (
+    b"\x89PNG\r\n\x1a\n",
+    b"GIF87a",
+    b"GIF89a",
+    b"\xff\xd8\xff",
+    b"RIFF",
+    b"BM",
+)
+
+
+def _looks_like_image(content: bytes) -> bool:
+    """粗判响应体确实是图片，避免把 403/HTML 错误页当图片落盘。"""
+    if content.startswith(_RASTER_MAGIC):
+        return True
+    head = content[:512].lstrip()
+    return head.startswith(b"<svg") or head.startswith(b"<?xml") or b"<svg" in head
 
 
 RARITY_LABELS = frozenset({"稀有度", "Rarity"})
@@ -1681,6 +1716,16 @@ def migrate_item_image_filenames(items: dict[str, dict]) -> int:
     return total
 
 
+# parse_item_page 不产出、由其它模块（legacy_metadata / legacy_item_data 等）
+# 维护的字段。任何"整体替换条目"的刷新流程都必须保留它们。
+_PLUGIN_MANAGED_ITEM_FIELDS = (
+    "internal_tags",
+    "legacy_scope",
+    "legacy_origin",
+    "item_category",
+)
+
+
 async def refresh_armor_sets(
     session: aiohttp.ClientSession,
     items: dict[str, dict],
@@ -1688,6 +1733,20 @@ async def refresh_armor_sets(
     """刷新所有套装页（盔甲/时装）的部件与配方数据"""
     updated = 0
     image_urls: dict[str, str] = {}
+
+    # parse_item_page 只产出页面本身的数据，而下面这些字段由其它模块维护
+    # （legacy_metadata / legacy_item_data 等）。此前 items[key] = parsed 是
+    # 整体替换，会把它们洗掉：实测一次增量同步静默剥掉 46 个套装部件的
+    # internal_tags / legacy_scope，撤销了 v1.8.4 的 legacy 标记修复。
+    # 因此刷新前快照、刷新后回填，套装与其部件都能覆盖。
+    managed = {
+        name: {
+            field: item[field]
+            for field in _PLUGIN_MANAGED_ITEM_FIELDS
+            if isinstance(item, dict) and item.get(field) is not None
+        }
+        for name, item in items.items()
+    }
 
     targets: list[tuple[str, str]] = []
     for key, item in items.items():
@@ -1710,6 +1769,14 @@ async def refresh_armor_sets(
         for piece in parsed.get("set_pieces") or []:
             image_urls.update(_collect_image_urls(piece))
         await asyncio.sleep(0.12)
+
+    for name, fields in managed.items():
+        target = items.get(name)
+        if not isinstance(target, dict):
+            continue
+        for field, value in fields.items():
+            if target.get(field) is None:
+                target[field] = value
 
     if updated and image_urls:
         semaphore = asyncio.Semaphore(8)
@@ -2579,7 +2646,27 @@ async def fetch_category_members(
     return titles
 
 
+# 单页抓取的硬上限：aiohttp 的超时在读到被中间设备静默丢弃的半开连接时可能
+# 不生效（实测事件循环空转、CPU 归零、卡死 >1 小时），这里再加一层
+# asyncio.wait_for 的截止时间，保证整轮更新不会永久挂起。
+_PAGE_FETCH_DEADLINE_S = 120
+
+
 async def fetch_page_html(
+    session: aiohttp.ClientSession, title: str, api_url: str = API_URL
+) -> str | None:
+    """通过 MediaWiki API 获取页面 HTML；优先读本地镜像。"""
+    try:
+        return await asyncio.wait_for(
+            _fetch_page_html_impl(session, title, api_url),
+            timeout=_PAGE_FETCH_DEADLINE_S,
+        )
+    except asyncio.TimeoutError:
+        logger.warning(f"页面「{title}」抓取超过 {_PAGE_FETCH_DEADLINE_S}s，已放弃")
+        return None
+
+
+async def _fetch_page_html_impl(
     session: aiohttp.ClientSession, title: str, api_url: str = API_URL
 ) -> str | None:
     """通过 MediaWiki API 获取页面 HTML；优先读本地镜像。"""
@@ -2642,20 +2729,30 @@ async def download_image(
 ) -> bool:
     if not filename or not url:
         return False
-    local_path = os.path.join(IMAGES_DIR, filename)
-    if os.path.exists(local_path):
+    local_path = os.path.join(IMAGES_DIR, _safe_image_filename(filename))
+    # 0 字节文件视为无效，需要重下（否则坏文件会被永久跳过）。
+    if os.path.exists(local_path) and os.path.getsize(local_path) > 0:
         return True
 
     async with semaphore:
         try:
             async with session.get(url, headers=HEADERS, timeout=aiohttp.ClientTimeout(total=30)) as resp:
-                if resp.status == 404:
+                if resp.status != 200:
                     return False
                 content = await resp.read()
-                if resp.status >= 500 or not content:
+                if not content:
                     return False
-            with open(local_path, "wb") as f:
+                content_type = resp.headers.get("Content-Type", "").lower()
+                # 仅接受 200；403/HTML 错误页此前会被当作图片落盘并计入成功数。
+                if content_type and not content_type.startswith("image/"):
+                    return False
+                if not _looks_like_image(content):
+                    return False
+            # 原子落盘：中断不会留下半截文件被 exists 检查永久跳过。
+            tmp_path = f"{local_path}.tmp"
+            with open(tmp_path, "wb") as f:
                 f.write(content)
+            os.replace(tmp_path, local_path)
             return True
         except Exception:
             return False
@@ -3471,8 +3568,12 @@ async def update_wiki_data(
     recipe_img_result: dict = {}
     drop_entity_img_result: dict = {}
 
-    connector = aiohttp.TCPConnector(limit=10)
-    timeout = aiohttp.ClientTimeout(total=60)
+    # 长爬取会复用被中间设备静默丢弃的 keep-alive 连接：一旦读到这种半开连接，
+    # 响应头永远读不到，事件循环会空转、CPU 归零，且 ClientTimeout(total) 在这种
+    # 情况下不可靠（实测卡死 >1 小时）。因此限制 keep-alive 寿命，并显式设置
+    # 连接/读取超时，而不是只依赖 total。
+    connector = aiohttp.TCPConnector(limit=10, keepalive_timeout=30)
+    timeout = aiohttp.ClientTimeout(total=60, sock_connect=20, sock_read=45)
     async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
         if desc_only:
             desc_backfill_count = await backfill_descriptions(
@@ -3498,27 +3599,37 @@ async def update_wiki_data(
 
             image_urls: dict[str, str] = {}
 
+            failed_titles: list[str] = []
             for i, title in enumerate(title_list, 1):
-                html = await fetch_page_html(session, title)
-                if not html:
-                    continue
-                item = parse_item_page(html, title)
-                if not item:
-                    continue
-                name = item["name"]
-                if not force and name in items:
-                    continue
-                item["wiki_title"] = title
-                _apply_overview_page_meta(item, title)
-                _apply_search_aliases(item)
-                items[name] = item
-                if _is_set_item(item):
-                    _merge_set_pieces(items, name, item)
-                image_urls.update(_collect_image_urls(item))
-                new_count += 1
+                try:
+                    html = await fetch_page_html(session, title)
+                    if not html:
+                        continue
+                    item = parse_item_page(html, title)
+                    if not item:
+                        continue
+                    name = item["name"]
+                    if not force and name in items:
+                        continue
+                    item["wiki_title"] = title
+                    _apply_overview_page_meta(item, title)
+                    _apply_search_aliases(item)
+                    items[name] = item
+                    if _is_set_item(item):
+                        _merge_set_pieces(items, name, item)
+                    image_urls.update(_collect_image_urls(item))
+                    new_count += 1
+                except Exception as exc:
+                    # 单页失败不得中断整轮抓取：异常此前会一路冒到外层，而
+                    # items 只在本轮末尾才落盘，等于丢掉全部抓取成果。
+                    failed_titles.append(title)
+                    logger.warning(
+                        f"页面「{title}」处理失败，已跳过：{type(exc).__name__}: {exc}"
+                    )
                 if i % 50 == 0 or i == len(title_list):
                     logger.info(
-                        f"Wiki 更新进度 {i}/{len(title_list)}，新增 {new_count}，总计 {len(items)}"
+                        f"Wiki 更新进度 {i}/{len(title_list)}，新增 {new_count}，"
+                        f"总计 {len(items)}，失败 {len(failed_titles)}"
                     )
                 await asyncio.sleep(0.15)
 
@@ -3609,7 +3720,7 @@ async def update_wiki_data(
         strip_count = strip_english_fields(items)
         image_migrate_count = migrate_item_image_filenames(items)
         piece_sync_count = resync_set_piece_locales(items)
-        await _persist_items_async(session, items)
+        await _persist_items_async(session, items, refresh_index=force)
 
     return {
         "ok": True,
@@ -3962,8 +4073,12 @@ async def ingest_new_categories(
     items = _load_existing_items()
     before = len(items)
 
-    connector = aiohttp.TCPConnector(limit=10)
-    timeout = aiohttp.ClientTimeout(total=60)
+    # 长爬取会复用被中间设备静默丢弃的 keep-alive 连接：一旦读到这种半开连接，
+    # 响应头永远读不到，事件循环会空转、CPU 归零，且 ClientTimeout(total) 在这种
+    # 情况下不可靠（实测卡死 >1 小时）。因此限制 keep-alive 寿命，并显式设置
+    # 连接/读取超时，而不是只依赖 total。
+    connector = aiohttp.TCPConnector(limit=10, keepalive_timeout=30)
+    timeout = aiohttp.ClientTimeout(total=60, sock_connect=20, sock_read=45)
     async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
         all_titles: set[str] = set()
         for cat in cats:
@@ -4066,8 +4181,12 @@ async def refresh_sets_only() -> dict:
     """从 Wiki 重新抓取所有套装页并同步部件。"""
     items = _load_existing_items()
     migrate_item_image_filenames(items)
-    connector = aiohttp.TCPConnector(limit=10)
-    timeout = aiohttp.ClientTimeout(total=60)
+    # 长爬取会复用被中间设备静默丢弃的 keep-alive 连接：一旦读到这种半开连接，
+    # 响应头永远读不到，事件循环会空转、CPU 归零，且 ClientTimeout(total) 在这种
+    # 情况下不可靠（实测卡死 >1 小时）。因此限制 keep-alive 寿命，并显式设置
+    # 连接/读取超时，而不是只依赖 total。
+    connector = aiohttp.TCPConnector(limit=10, keepalive_timeout=30)
+    timeout = aiohttp.ClientTimeout(total=60, sock_connect=20, sock_read=45)
     async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
         sets_refreshed = await refresh_armor_sets(session, items)
     piece_sync_count = resync_set_piece_locales(items)

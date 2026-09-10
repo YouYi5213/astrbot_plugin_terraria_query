@@ -3,12 +3,15 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 import re
 from dataclasses import dataclass
 from typing import Any
 
 import aiohttp
+
+logger = logging.getLogger(__name__)
 
 try:
     from .prepare_data import fetch_category_members
@@ -51,9 +54,12 @@ CATEGORY_PRIORITY: tuple[str, ...] = (
     "blocks",
     "walls",
     "crafting_stations",
+    # 雕像只能靠名称后缀 / 类型字段识别（ItemCategorySpec 未声明
+    # wiki_categories），必须排在 furniture 之前，否则会被 furniture 先截获，
+    # 导致 statues.json 恒为空（历史上一直是 {}）。
+    "statues",
     "furniture",
     "mechanisms",
-    "statues",
     "misc",
 )
 
@@ -145,23 +151,37 @@ def _load_json_dict(path: str) -> dict[str, dict]:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return data if isinstance(data, dict) else {}
-    except (json.JSONDecodeError, OSError):
+    except (json.JSONDecodeError, OSError) as exc:
+        # 不静默：损坏/截断的数据文件会让该分类凭空变成 0 条，必须留下线索。
+        logger.error(
+            "数据文件 %s 无法解析（%s: %s），本次按空数据处理",
+            path,
+            type(exc).__name__,
+            exc,
+        )
         return {}
 
 
 def _write_json_dict(path: str, data: dict[str, dict]) -> None:
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
+    """原子写入：先写同目录临时文件再 os.replace，中断不会留下截断 JSON。"""
+    directory = os.path.dirname(path)
+    if directory:
+        os.makedirs(directory, exist_ok=True)
+    tmp_path = f"{path}.tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    os.replace(tmp_path, path)
 
 
 def categories_are_split(categories_dir: str = CATEGORIES_DIR) -> bool:
     if os.path.isfile(os.path.join(categories_dir, MOUNTS_FILE)):
         return True
-    if os.path.isfile(CATEGORY_MANIFEST):
+    # 必须用传入目录下的 manifest，否则自定义目录会被插件自身目录的 manifest 误判。
+    if os.path.isfile(os.path.join(categories_dir, os.path.basename(CATEGORY_MANIFEST))):
         return True
     for key in ITEM_POOL_KEYS:
         path = category_json_path(key, categories_dir)
+        # 空容器序列化后是 "{}" / "[]"，正好 2 字节，故用 > 2 判定"确有数据"。
         if os.path.exists(path) and os.path.getsize(path) > 2:
             return True
     return False
@@ -304,8 +324,13 @@ async def build_title_category_map(
             with open(TITLE_INDEX_PATH, "r", encoding="utf-8") as f:
                 raw = json.load(f)
             return {title: frozenset(keys) for title, keys in raw.items()}
-        except (json.JSONDecodeError, OSError, TypeError):
-            pass
+        except (json.JSONDecodeError, OSError, TypeError) as exc:
+            logger.warning(
+                "标题分类索引 %s 不可用（%s: %s），将重新抓取全部分类成员",
+                TITLE_INDEX_PATH,
+                type(exc).__name__,
+                exc,
+            )
 
     title_to_keys: dict[str, set[str]] = {}
     for spec in ITEM_CATEGORY_SPECS:
@@ -316,8 +341,12 @@ async def build_title_category_map(
 
     serializable = {title: sorted(keys) for title, keys in title_to_keys.items()}
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
-    with open(TITLE_INDEX_PATH, "w", encoding="utf-8") as f:
+    # 原子写入：进程中途被中断不会留下截断的 JSON。截断文件会被上面的读取
+    # 路径判定为损坏缓存，静默丢弃后触发一次全量重新抓取。
+    tmp_path = f"{TITLE_INDEX_PATH}.tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(serializable, f, ensure_ascii=False)
+    os.replace(tmp_path, TITLE_INDEX_PATH)
 
     return {title: frozenset(keys) for title, keys in title_to_keys.items()}
 

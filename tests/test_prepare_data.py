@@ -1,9 +1,25 @@
 import json
+import os
 import sys
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+
+# Optional out-of-repo Wiki mirror (sibling dev checkout ../terraria_data,
+# overridable with TERRARIA_WIKI_MIRROR). Tests that need it must skip
+# explicitly when it is absent instead of returning silently and passing.
+_MIRROR_ROOT = Path(
+    os.environ.get("TERRARIA_WIKI_MIRROR") or (ROOT.parent / "terraria_data")
+)
+MIRROR_PAGES = _MIRROR_ROOT / "wiki" / "zh" / "pages"
+
+
+def _mirror_page(title: str) -> Path:
+    """Page file inside the optional out-of-repo Wiki mirror."""
+    return MIRROR_PAGES / f"{title}.html"
 
 from prepare_data import (  # noqa: E402
     _description_is_tooltip_only,
@@ -45,20 +61,34 @@ def test_resolve_local_item_image_falls_back_to_item_image():
     )
 
 
-def test_resolve_local_entity_image_falls_back_to_boss_and_png():
+def test_resolve_local_entity_image_falls_back_to_boss():
     bosses = {"奥库瑞姆": {"name": "奥库瑞姆", "image": "Ocram_(Phase_1).gif"}}
+    # 必须用一个本地确定不存在的文件名才能走到 Boss 回退分支。原先用的
+    # "Ocram.png" 已随 08-12 的数据同步入库，会被优先返回而绕过回退。
     assert (
-        resolve_local_entity_image("奥库瑞姆", "Ocram.png", bosses=bosses)
+        resolve_local_entity_image("奥库瑞姆", "Ocram_Missing_Variant.png", bosses=bosses)
         == "Ocram_(Phase_1).gif"
     )
-    items = {"脑子": {"name": "脑子", "image": "Brain.png"}}
-    # The_Groom.png must exist in images/ for this test
-    groom_png = ROOT / "data" / "terraria_query" / "images" / "The_Groom.png"
-    if groom_png.is_file():
-        assert (
-            resolve_local_entity_image("僵尸新郎", "The_Groom.gif", items=items)
-            == "The_Groom.png"
-        )
+
+
+def test_resolve_local_entity_image_swaps_gif_to_png():
+    images = ROOT / "data" / "terraria_query" / "images"
+    png_only = next(
+        (
+            p
+            for p in sorted(images.glob("*.png"))
+            if p.stem.isascii()
+            and all(c.isalnum() or c == "_" for c in p.stem)
+            and not p.with_suffix(".gif").is_file()
+        ),
+        None,
+    )
+    if png_only is None:
+        pytest.skip("images/ 中没有「仅有 png、无同名 gif」的素材可供验证 gif→png 回退")
+    assert (
+        resolve_local_entity_image("不存在的实体", f"{png_only.stem}.gif")
+        == png_only.name
+    )
 
 
 def test_normalize_drop_images_in_items_updates_ocram_entry():
@@ -73,7 +103,8 @@ def test_normalize_drop_images_in_items_updates_ocram_entry():
                         "entries": [
                             {
                                 "name": "奥库瑞姆",
-                                "image": "Ocram.png",
+                                # 本地不存在的占位名，才会触发按 Boss 注册表规范化
+                                "image": "Ocram_Missing_Variant.png",
                                 "quantity": "15–25",
                                 "chance": "100%",
                             }
@@ -83,9 +114,9 @@ def test_normalize_drop_images_in_items_updates_ocram_entry():
             }
         }
     }
-    groom_png = ROOT / "data" / "terraria_query" / "images" / "Ocram_(Phase_1).gif"
-    if not groom_png.is_file():
-        return
+    boss_gif = ROOT / "data" / "terraria_query" / "images" / "Ocram_(Phase_1).gif"
+    if not boss_gif.is_file():
+        pytest.skip(f"缺少素材 {boss_gif.name}，无法验证掉落图规范化")
     count = normalize_drop_images_in_items(items, bosses=bosses)
     assert count == 1
     entry = items["枯萎之魂"]["drops"]["modes"][0]["entries"][0]
@@ -321,10 +352,77 @@ def test_assign_items_to_categories_priority():
     assert "天使翅膀" in buckets["wings"]
 
 
+def test_statue_items_are_claimed_before_furniture():
+    """雕像只能靠名称识别，必须排在 furniture 之前，否则会被先截获。"""
+    from category_data import assign_items_to_categories
+
+    items = {
+        "天使雕像": {"name": "天使雕像", "wiki_title": "天使雕像"},
+        "木椅": {"name": "木椅", "wiki_title": "木椅"},
+    }
+    title_to_keys = {
+        "天使雕像": frozenset({"furniture", "statues"}),
+        "木椅": frozenset({"furniture"}),
+    }
+    buckets = assign_items_to_categories(items, title_to_keys)
+    assert "天使雕像" in buckets["statues"]
+    assert "天使雕像" not in buckets["furniture"]
+    assert "木椅" in buckets["furniture"]
+
+
+def test_refresh_armor_sets_preserves_plugin_managed_fields(monkeypatch):
+    """刷新套装页不得丢掉其它模块维护的字段。
+
+    `refresh_armor_sets` 原先用 `items[key] = parsed` 整体替换，会把
+    legacy_metadata 写入的 internal_tags / legacy_scope 洗掉；实测一次增量
+    同步静默剥掉 46 个套装部件的标记，撤销了 v1.8.4 的 legacy 修复。
+    """
+    import asyncio
+
+    import prepare_data
+
+    items = {
+        "龙盔甲": {
+            "name": "龙盔甲",
+            "page_type": "armor_set",
+            "wiki_title": "龙盔甲",
+            "internal_tags": ["legacy", "old_gen"],
+            "legacy_scope": "old_gen",
+            "set_pieces": [],
+        },
+        "龙胸甲": {
+            "name": "龙胸甲",
+            "page_type": "armor_piece",
+            "wiki_title": "龙胸甲",
+            "internal_tags": ["legacy", "old_gen"],
+            "legacy_scope": "old_gen",
+        },
+    }
+    parsed = {
+        "name": "龙盔甲",
+        "stats": [{"label": "类型", "value": "盔甲套装"}],
+        "set_pieces": [{"name": "龙胸甲", "stats": []}],
+    }
+
+    async def fake_fetch(session, title, api_url=None):  # noqa: ANN001
+        return "<html></html>"
+
+    monkeypatch.setattr(prepare_data, "fetch_page_html", fake_fetch)
+    monkeypatch.setattr(
+        prepare_data, "parse_item_page", lambda html, title: dict(parsed)
+    )
+
+    asyncio.run(prepare_data.refresh_armor_sets(object(), items))
+
+    for name in ("龙盔甲", "龙胸甲"):
+        assert items[name]["legacy_scope"] == "old_gen", name
+        assert items[name]["internal_tags"] == ["legacy", "old_gen"], name
+
+
 def test_parse_frozen_shield_multiline_tooltip():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "冰冻护盾.html"
+    html_path = _mirror_page("冰冻护盾")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     item = parse_item_page(html_path.read_text(encoding="utf-8"), "冰冻护盾")
     assert item is not None
     tooltip = next(s for s in item["stats"] if s["label"] == "工具提示")
@@ -338,9 +436,9 @@ def test_parse_frozen_shield_multiline_tooltip():
 
 
 def test_parse_mount_page_shrimpy_truffle():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "虾松露.html"
+    html_path = _mirror_page("虾松露")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     html = html_path.read_text(encoding="utf-8")
     item = parse_item_page(html, "虾松露")
     assert item is not None
@@ -363,9 +461,9 @@ def test_mount_overview_catalog_has_37_items():
 
 
 def test_parse_mount_variant_dusty_saddle():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "蒙尘牛皮鞍.html"
+    html_path = _mirror_page("蒙尘牛皮鞍")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     item = parse_item_page(html_path.read_text(encoding="utf-8"), "蒙尘牛皮鞍")
     assert item is not None
     assert item["name"] == "蒙尘牛皮鞍"
@@ -374,9 +472,9 @@ def test_parse_mount_variant_dusty_saddle():
 
 
 def test_parse_mount_roller_skates_blue():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "蓝轮滑鞋.html"
+    html_path = _mirror_page("蓝轮滑鞋")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     item = parse_item_page(html_path.read_text(encoding="utf-8"), "蓝轮滑鞋")
     assert item is not None
     assert item["name"] == "蓝轮滑鞋"
@@ -385,9 +483,9 @@ def test_parse_mount_roller_skates_blue():
 
 
 def test_parse_pet_page_mosquito_amber():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "蚊子琥珀.html"
+    html_path = _mirror_page("蚊子琥珀")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     item = parse_item_page(html_path.read_text(encoding="utf-8"), "蚊子琥珀")
     assert item is not None
     assert item["name"] == "蚊子琥珀"
@@ -409,9 +507,9 @@ def test_pet_overview_catalog_has_items():
 
 
 def test_parse_wings_source_from_overview_table():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "翅膀.html"
+    html_path = _mirror_page("翅膀")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     from prepare_data import parse_wings_from_soup  # noqa: E402
 
     wings = parse_wings_from_soup(
@@ -420,8 +518,15 @@ def test_parse_wings_source_from_overview_table():
     angel = wings["天使之翼"]
     assert angel["recipe"] is not None
     assert len(angel["recipe"]["ingredients"]) == 3
+    assert {i["name"] for i in angel["recipe"]["ingredients"]} == {
+        "羽毛",
+        "飞翔之魂",
+        "光明之魂",
+    }
     assert "source" not in angel
-    assert "光明之魂" in angel["description"]
+    # 「光明之魂」是总览表配方列（第 4 格）的内容，只应进 recipe；description
+    # 仅来自备注列。此前的断言把它当成描述，因此在备注列为空时 KeyError。
+    assert "光明之魂" not in angel.get("description", "")
 
     fledgling = wings["雏翼"]
     assert fledgling.get("recipe") is None
@@ -443,9 +548,9 @@ def test_description_missing_intro_list_detects_truncated_accessory():
 
 
 def test_parse_description_includes_intro_effect_list():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "月光护身符.html"
+    html_path = _mirror_page("月光护身符")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     from prepare_data import parse_description_from_soup  # noqa: E402
 
     parsed = parse_description_from_soup(
@@ -459,9 +564,9 @@ def test_parse_description_includes_intro_effect_list():
 
 
 def test_parse_description_fire_gauntlet_split_list():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "烈火手套.html"
+    html_path = _mirror_page("烈火手套")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     from prepare_data import parse_description_from_soup  # noqa: E402
 
     parsed = parse_description_from_soup(
@@ -481,9 +586,9 @@ def test_parse_description_fire_gauntlet_split_list():
 
 
 def test_strip_wiki_footnote_markers_from_description():
-    html_path = ROOT.parent / "terraria_data" / "wiki" / "zh" / "pages" / "碎岩龟.html"
+    html_path = _mirror_page("碎岩龟")
     if not html_path.is_file():
-        return
+        pytest.skip(f"optional Wiki mirror page missing: {html_path}")
     parsed = parse_description_from_soup(
         BeautifulSoup(html_path.read_text(encoding="utf-8"), "html.parser")
     )

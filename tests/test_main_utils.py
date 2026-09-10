@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import os
 import re
 import sys
@@ -238,7 +239,7 @@ def test_format_partial_item_hints():
     assert "沙漠虎杖" in text
 
 
-def test_generate_item_card_uses_disk_cache(tmp_path, monkeypatch):
+def test_generate_item_card_reuses_valid_cache(tmp_path, monkeypatch):
     cards_dir = tmp_path / "cards"
     cards_dir.mkdir()
     monkeypatch.setattr(main, "CARDS_DIR", str(cards_dir))
@@ -246,10 +247,73 @@ def test_generate_item_card_uses_disk_cache(tmp_path, monkeypatch):
     data = {"name": "测试物品", "stats": [{"label": "类型", "value": "武器"}]}
     path1 = main._generate_item_card(data)
     assert os.path.isfile(path1)
+    before = Path(path1).read_bytes()
 
+    # 有效缓存命中时不应重新渲染
+    saves: list = []
+    monkeypatch.setattr(main, "_save_card_image", lambda *a, **k: saves.append(a))
+    path2 = main._generate_item_card(data)
+    assert path2 == path1
+    assert saves == []
+    assert Path(path1).read_bytes() == before
+
+
+def test_generate_item_card_regenerates_corrupt_cache(tmp_path, monkeypatch):
+    """写盘中断留下的半截 PNG 必须被识别并重新渲染，而不是永久复用。
+
+    旧实现只判断 os.path.isfile，损坏文件会被永久复用且永不自愈。
+    """
+    cards_dir = tmp_path / "cards"
+    cards_dir.mkdir()
+    monkeypatch.setattr(main, "CARDS_DIR", str(cards_dir))
+
+    data = {"name": "测试物品", "stats": [{"label": "类型", "value": "武器"}]}
+    path1 = main._generate_item_card(data)
     real_path = cards_dir / os.path.basename(path1)
-    real_path.write_bytes(b"cached")
+    real_path.write_bytes(b"NOT A PNG")
 
     path2 = main._generate_item_card(data)
     assert path2 == str(real_path)
-    assert real_path.read_bytes() == b"cached"
+    assert real_path.read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
+    with Image.open(real_path) as img:
+        assert img.width == main.CARD_WIDTH
+        assert img.height > 50
+
+
+def test_content_cards_do_not_overflow_horizontally(tmp_path, monkeypatch):
+    """内容表里的超长条目不得画出卡片右边界。
+
+    旧实现只在 ``cx > x`` 时换行，因此单条 label 宽于 ``max_w`` 时会直接画到
+    画布之外并被 PIL 静默裁切（实测 12 张 biome-content + 1 张 event-content）。
+    这里渲染全部内容卡并逐条比对文字 bbox 与画布宽度。
+    """
+    monkeypatch.setattr(main, "CARDS_DIR", str(tmp_path))
+    cats = ROOT / "data" / "terraria_query" / "categories"
+    cases: list[tuple[dict, str]] = []
+    for filename, kind in (("biomes.json", "biome"), ("events.json", "event")):
+        data = json.loads((cats / filename).read_text(encoding="utf-8"))
+        cases.extend(
+            (entry, kind) for entry in data.values() if entry.get("content")
+        )
+    assert cases, "数据集里没有带内容表的卡片可供验证"
+
+    overflows: list[tuple[str, int]] = []
+    original_text = main.ImageDraw.ImageDraw.text
+
+    def spy(self, xy, text, *args, **kwargs):
+        if isinstance(text, str) and text.strip():
+            font = kwargs.get("font")
+            if font is None and args:
+                font = args[0]
+            box = self.textbbox(xy, text, font=font)
+            if box[2] > main.CARD_WIDTH:
+                overflows.append((text[:30], box[2]))
+        return original_text(self, xy, text, *args, **kwargs)
+
+    monkeypatch.setattr(main.ImageDraw.ImageDraw, "text", spy)
+    for entry, kind in cases:
+        main._generate_biome_card(entry, card_kind=kind, view="content")
+
+    assert not overflows, (
+        f"{len(overflows)} 处文字越过画布宽度 {main.CARD_WIDTH}：{overflows[:3]}"
+    )

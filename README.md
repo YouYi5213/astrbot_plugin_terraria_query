@@ -129,3 +129,33 @@ pytest tests/ -q
 
 - AstrBot >= 4.16
 - Python 依赖见 `requirements.txt`
+
+## 中文字体（Docker / Linux 必看）
+
+插件**不再内置中文字体**（原内置的 Noto Sans SC 约 17MB，已从仓库移除）。卡片渲染会按以下顺序自动查找字体：
+
+1. Windows：微软雅黑 `msyhbd.ttc` / `msyh.ttc`
+2. 内置目录 `assets/fonts/`（可自行放入字体，见下）
+3. Windows：宋体 / 黑体
+4. Linux：文泉驿微米黑、Noto Sans CJK 等系统字体
+
+**若全部未找到，卡片中文会显示为方框。** Docker / 精简 Linux 镜像通常不含中文字体，请任选一种方式处理：
+
+**方式一：给容器装系统字体**
+
+```dockerfile
+RUN apt-get update && apt-get install -y fonts-noto-cjk && rm -rf /var/lib/apt/lists/*
+```
+
+**方式二：手动放入插件字体目录**
+
+将任意中文 OTF/TTF 放到插件的 `assets/fonts/` 下，命名为以下任一名称即可被自动识别：
+
+```
+assets/fonts/NotoSansSC-Bold.otf
+assets/fonts/NotoSansSC-Regular.otf
+assets/fonts/NotoSansSC-Regular.ttf
+assets/fonts/wqy-microhei.ttc
+```
+
+> `assets/fonts/` 已写入 `.gitignore`，放入的字体不会被提交。

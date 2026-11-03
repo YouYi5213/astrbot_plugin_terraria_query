@@ -9518,14 +9518,7 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "忍者盔甲",
-    "item_category": "armor",
-    "legacy_scope": "old_gen",
-    "internal_tags": [
-      "legacy",
-      "legacy_item",
-      "old_gen",
-      "parent_set:忍者盔甲"
-    ]
+    "item_category": "armor"
   },
   "忍者衣": {
     "name": "忍者衣",
@@ -9580,14 +9573,7 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "忍者盔甲",
-    "item_category": "armor",
-    "legacy_scope": "old_gen",
-    "internal_tags": [
-      "legacy",
-      "legacy_item",
-      "old_gen",
-      "parent_set:忍者盔甲"
-    ]
+    "item_category": "armor"
   },
   "忍者裤": {
     "name": "忍者裤",
@@ -9642,14 +9628,7 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "忍者盔甲",
-    "item_category": "armor",
-    "legacy_scope": "old_gen",
-    "internal_tags": [
-      "legacy",
-      "legacy_item",
-      "old_gen",
-      "parent_set:忍者盔甲"
-    ]
+    "item_category": "armor"
   },
   "护目镜": {
     "name": "护目镜",
@@ -41519,13 +41498,15 @@
       }
     ],
     "wiki_title": "泰坦盔甲",
-    "item_category": "armor",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "armor",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "泰坦头盔": {
     "name": "泰坦头盔",
@@ -41610,14 +41591,16 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "泰坦盔甲",
-    "item_category": "armor",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:泰坦盔甲"
-    ]
+    ],
+    "item_category": "armor"
   },
   "泰坦铠甲": {
     "name": "泰坦铠甲",
@@ -41707,14 +41690,16 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "泰坦盔甲",
-    "item_category": "armor",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:泰坦盔甲"
-    ]
+    ],
+    "item_category": "armor"
   },
   "泰坦护腿": {
     "name": "泰坦护腿",
@@ -41804,14 +41789,16 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "泰坦盔甲",
-    "item_category": "armor",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:泰坦盔甲"
-    ]
+    ],
+    "item_category": "armor"
   },
   "灵能盔甲": {
     "name": "灵能盔甲",
@@ -42195,13 +42182,15 @@
       }
     ],
     "wiki_title": "灵能盔甲",
-    "item_category": "armor",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "armor",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "灵能头饰": {
     "name": "灵能头饰",
@@ -42286,14 +42275,16 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "灵能盔甲",
-    "item_category": "armor",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:灵能盔甲"
-    ]
+    ],
+    "item_category": "armor"
   },
   "灵能衬裤": {
     "name": "灵能衬裤",
@@ -42383,14 +42374,16 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "灵能盔甲",
-    "item_category": "armor",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:灵能盔甲"
-    ]
+    ],
+    "item_category": "armor"
   },
   "龙盔甲": {
     "name": "龙盔甲",
@@ -42768,13 +42761,15 @@
       }
     ],
     "wiki_title": "龙盔甲",
-    "item_category": "armor",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "armor",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "龙面具": {
     "name": "龙面具",
@@ -42859,14 +42854,16 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "龙盔甲",
-    "item_category": "armor",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:龙盔甲"
-    ]
+    ],
+    "item_category": "armor"
   },
   "龙胸甲": {
     "name": "龙胸甲",
@@ -42956,14 +42953,16 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "龙盔甲",
-    "item_category": "armor",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:龙盔甲"
-    ]
+    ],
+    "item_category": "armor"
   },
   "龙护胫": {
     "name": "龙护胫",
@@ -43053,13 +43052,15 @@
     "page_type": "armor_piece",
     "from_armor_set": true,
     "parent_set": "龙盔甲",
-    "item_category": "armor",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:龙盔甲"
-    ]
+    ],
+    "item_category": "armor"
   }
 }

@@ -131,7 +131,7 @@
       "key": "misc",
       "label": "杂项",
       "file": "misc.json",
-      "count": 372
+      "count": 407
     },
     {
       "key": "mounts",
@@ -146,5 +146,5 @@
       "count": 87
     }
   ],
-  "total": 3163
+  "total": 3198
 }

@@ -267,8 +267,8 @@
       }
     ],
     "wiki_title": "Aaron的套装",
-    "drops": null,
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "drops": null
   },
   "Aaron的头盔": {
     "name": "Aaron的头盔",
@@ -665,8 +665,8 @@
       }
     ],
     "wiki_title": "Arkhalis的套装",
-    "drops": null,
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "drops": null
   },
   "Arkhalis的兜帽": {
     "name": "Arkhalis的兜帽",
@@ -1224,8 +1224,8 @@
       }
     ],
     "wiki_title": "Cenx的套装",
-    "drops": null,
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "drops": null
   },
   "Cenx的头冠": {
     "name": "Cenx的头冠",
@@ -1587,8 +1587,8 @@
       }
     ],
     "wiki_title": "Cenx的礼服套装",
-    "drops": null,
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "drops": null
   },
   "Cenx的上衣": {
     "name": "Cenx的上衣",
@@ -2314,8 +2314,8 @@
       }
     ],
     "wiki_title": "Crowno的套装",
-    "drops": null,
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "drops": null
   },
   "Crowno的面具": {
     "name": "Crowno的面具",
@@ -2677,8 +2677,8 @@
       }
     ],
     "wiki_title": "D-Town的套装",
-    "drops": null,
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "drops": null
   },
   "D-Town的头盔": {
     "name": "D-Town的头盔",
@@ -3349,8 +3349,8 @@
       }
     ],
     "wiki_title": "FoodBarbarian的套装",
-    "drops": null,
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "drops": null
   },
   "FoodBarbarian的角盔": {
     "name": "FoodBarbarian的角盔",
@@ -4138,8 +4138,8 @@
       }
     ],
     "wiki_title": "Ghostar的套装",
-    "drops": null,
-    "item_category": "vanity"
+    "item_category": "vanity",
+    "drops": null
   },
   "Ghostar的魂罐": {
     "name": "Ghostar的魂罐",
@@ -46503,14 +46503,16 @@
       }
     ],
     "wiki_title": "George的套装",
-    "drops": null,
-    "item_category": "vanity",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "vanity",
+    "drops": null,
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "George的帽子": {
     "name": "George的帽子",
@@ -46567,14 +46569,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "George的套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:George的套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "George的西装上衣": {
     "name": "George的西装上衣",
@@ -46631,14 +46635,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "George的套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:George的套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "George的裤子": {
     "name": "George的裤子",
@@ -46695,14 +46701,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "George的套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:George的套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "十月啤酒节套装": {
     "name": "十月啤酒节套装",
@@ -46945,13 +46953,15 @@
       }
     ],
     "wiki_title": "十月啤酒节套装",
-    "item_category": "vanity",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "vanity",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "登山帽": {
     "name": "登山帽",
@@ -46991,14 +47001,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:十月啤酒节套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "皮背心": {
     "name": "皮背心",
@@ -47038,14 +47050,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:十月啤酒节套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "皮裤": {
     "name": "皮裤",
@@ -47085,14 +47099,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:十月啤酒节套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "啤酒节假发": {
     "name": "啤酒节假发",
@@ -47132,14 +47148,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:十月啤酒节套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "旦多尔女衫": {
     "name": "旦多尔女衫",
@@ -47179,14 +47197,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:十月啤酒节套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "旦多尔裙": {
     "name": "旦多尔裙",
@@ -47226,14 +47246,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "十月啤酒节套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:十月啤酒节套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "多乐套装": {
     "name": "多乐套装トロの衣装",
@@ -47454,13 +47476,15 @@
       }
     ],
     "wiki_title": "多乐套装",
-    "item_category": "vanity",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "vanity",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "希炼套装": {
     "name": "希炼套装ふうらいにんの衣装",
@@ -47706,13 +47730,15 @@
       }
     ],
     "wiki_title": "希炼套装",
-    "item_category": "vanity",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "vanity",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "粉白美套装": {
     "name": "粉白美套装モノミの衣装",
@@ -47933,13 +47959,15 @@
       }
     ],
     "wiki_title": "粉白美套装",
-    "item_category": "vanity",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "vanity",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "绝妙套装": {
     "name": "绝妙套装",
@@ -48168,13 +48196,15 @@
       }
     ],
     "wiki_title": "绝妙套装",
-    "item_category": "vanity",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "vanity",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "绝妙丝带": {
     "name": "绝妙丝带",
@@ -48231,14 +48261,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绝妙套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:绝妙套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "绝妙礼服": {
     "name": "绝妙礼服",
@@ -48290,14 +48322,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绝妙套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:绝妙套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "绝妙拖鞋": {
     "name": "绝妙拖鞋",
@@ -48349,14 +48383,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "绝妙套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:绝妙套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "角神套装": {
     "name": "角神套装",
@@ -48469,13 +48505,15 @@
       }
     ],
     "wiki_title": "角神套装",
-    "item_category": "vanity",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "vanity",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "角神面具": {
     "name": "角神面具",
@@ -48503,14 +48541,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "角神套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:角神套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "角神长袍": {
     "name": "角神长袍",
@@ -48538,14 +48578,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "角神套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:角神套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "角神靴": {
     "name": "角神靴",
@@ -48573,14 +48615,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "角神套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:角神套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "黑白熊套装": {
     "name": "黑白熊套装モノクマの衣装",
@@ -48739,13 +48783,15 @@
       }
     ],
     "wiki_title": "黑白熊套装",
-    "item_category": "vanity",
-    "legacy_scope": "old_gen",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen"
-    ]
+    ],
+    "legacy_scope": "old_gen",
+    "item_category": "vanity",
+    "legacy_item": true,
+    "legacy_source": "craft_chain"
   },
   "黑白熊头部": {
     "name": "黑白熊套装モノクマの衣装",
@@ -49274,14 +49320,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "多乐套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:多乐套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "多乐身体トロのからだ": {
     "name": "多乐身体トロのからだ",
@@ -49333,14 +49381,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "多乐套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:多乐套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "多乐腿部トロのあし": {
     "name": "多乐腿部トロのあし",
@@ -49392,14 +49442,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "多乐套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:多乐套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "希炼帽さんどがさ": {
     "name": "希炼帽さんどがさ",
@@ -49439,14 +49491,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "希炼套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:希炼套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "希炼衣ふうらいにんのふく": {
     "name": "希炼衣ふうらいにんのふく",
@@ -49498,14 +49552,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "希炼套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:希炼套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "希炼裤ふうらいにんのこしあて": {
     "name": "希炼裤ふうらいにんのこしあて",
@@ -49557,14 +49613,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "希炼套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:希炼套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "粉白美头部モノミヘッド": {
     "name": "粉白美头部モノミヘッド",
@@ -49616,14 +49674,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "粉白美套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:粉白美套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "粉白美身体モノミボディ": {
     "name": "粉白美身体モノミボディ",
@@ -49675,14 +49735,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "粉白美套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:粉白美套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "粉白美腿部モノミレッグ": {
     "name": "粉白美腿部モノミレッグ",
@@ -49734,14 +49796,16 @@
     "page_type": "vanity_piece",
     "from_armor_set": true,
     "parent_set": "粉白美套装",
-    "item_category": "vanity",
+    "legacy_item": true,
     "legacy_scope": "old_gen",
+    "legacy_source": "armor_set_piece",
     "internal_tags": [
       "legacy",
       "legacy_item",
       "old_gen",
       "parent_set:粉白美套装"
-    ]
+    ],
+    "item_category": "vanity"
   },
   "黑白熊头部モノクマヘッド": {
     "name": "黑白熊头部モノクマヘッド",

@@ -60134,5 +60134,4341 @@
     ],
     "wiki_title": "黏土蓓蕾法杖",
     "item_category": "misc"
+  },
+  "催化手环": {
+    "name": "催化手环",
+    "image": "Catalyst_Band.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "治疗药水的冷却时间缩短25%\n箭矢附带中毒效果\n提高敌人身上负面效果造成的伤害。",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "治疗药水的冷却时间缩短25%\n箭矢附带中毒效果\n提高敌人身上负面效果造成的伤害。"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "淬毒倒刺",
+          "image": "Poison_Barb.png"
+        },
+        {
+          "name": "点金石",
+          "image": "Philosopher's_Stone.png"
+        }
+      ],
+      "result": {
+        "name": "催化手环",
+        "image": "Catalyst_Band.png"
+      }
+    },
+    "description": "催化手环是一件困难模式配饰物品，通过在工匠作坊将淬毒倒刺和点金石相结合来制作。它装备后提供以下效果：\n\n· 耐药性持续时间降低 25%\n· 玩家射出的箭会造成中毒减益，持续 1.5 秒。\n· 玩家的所有攻击造成加速痛苦减益，持续 5 秒。这会将失血、火焰、和毒素类减益的伤害翻倍（见备注获取完整列表）。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "催化手环是一件困难模式配饰物品，通过在工匠作坊将淬毒倒刺和点金石相结合来制作。它装备后提供以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "耐药性持续时间降低 25%"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "玩家射出的箭会造成中毒减益，持续 1.5 秒。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "玩家的所有攻击造成加速痛苦减益，持续 5 秒。这会将失血、火焰、和毒素类减益的伤害翻倍（见备注获取完整列表）。"
+        }
+      ]
+    ],
+    "wiki_title": "催化手环",
+    "item_category": "misc"
+  },
+  "冰川之牙": {
+    "name": "冰川之牙",
+    "image": "Glacier_Fang.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "11",
+        "extra": "(魔法)"
+      },
+      {
+        "label": "击退",
+        "value": "2",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "魔力",
+        "value": "10",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "15%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "24",
+        "extra": "（快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "4",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "发射蓄能冰锥长枪",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "40",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "冰冻箱",
+              "image": "Frozen_Chest.png",
+              "quantity": "1",
+              "chance": "14.29%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "冰冻箱",
+              "image": "Frozen_Chest.png",
+              "quantity": "1",
+              "chance": "14.29%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "冰冻箱",
+              "image": "Frozen_Chest.png",
+              "quantity": "1",
+              "chance": "14.29%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "冰川之牙是一根困难模式之前的魔棒，会向光标发射可蓄力、受重力影响的冰凌。它可在冰雪生物群系中的冰冻箱、冰冻匣、和针叶木匣内找到。\n\n此武器在按住⚒使用/攻击键时会开始蓄力，逐渐提高冰凌的伤害、击退、射弹速度、大小、和可穿透的敌怪数量（见备注获取细节）。若此武器蓄力了 1 秒，冰凌会达到最大威力并会自动发射。在完全蓄力前松开⚒使用/攻击也可提前发射冰凌。除了在初始使用时消耗魔力以外，此武器也会在蓄力 0.33 秒时再次消耗魔力，在蓄力 0.67 秒时第三次消耗魔力。每次消耗魔力进行蓄力时，玩家手持的冰凌也会在视觉上变大，并发出蓄力音效。冰凌每穿透一个敌怪就会失去 34% 的伤害。冰川之牙也有 15% 的基础暴击率，而非通常的 4%。\n\n当玩家的魔力不足时，冰川之牙的蓄力速度会降低至 40%，每级蓄力需要 0.83 秒，完全蓄力需要 2.5 秒。\n\n其最佳修饰语是神话。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "冰川之牙是一根困难模式之前的魔棒，会向光标发射可蓄力、受重力影响的冰凌。它可在冰雪生物群系中的冰冻箱、冰冻匣、和针叶木匣内找到。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "此武器在按住"
+        },
+        {
+          "type": "key",
+          "symbol": "⚒",
+          "label": "使用/攻击"
+        },
+        {
+          "type": "text",
+          "text": "键时会开始蓄力，逐渐提高冰凌的伤害、击退、射弹速度、大小、和可穿透的敌怪数量（见备注获取细节）。若此武器蓄力了 1 秒，冰凌会达到最大威力并会自动发射。在完全蓄力前松开"
+        },
+        {
+          "type": "key",
+          "symbol": "⚒",
+          "label": "使用/攻击"
+        },
+        {
+          "type": "text",
+          "text": "也可提前发射冰凌。除了在初始使用时消耗魔力以外，此武器也会在蓄力 0.33 秒时再次消耗魔力，在蓄力 0.67 秒时第三次消耗魔力。每次消耗魔力进行蓄力时，玩家手持的冰凌也会在视觉上变大，并发出蓄力音效。冰凌每穿透一个敌怪就会失去 34% 的伤害。冰川之牙也有 15% 的基础暴击率，而非通常的 4%。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "当玩家的魔力不足时，冰川之牙的蓄力速度会降低至 40%，每级蓄力需要 0.83 秒，完全蓄力需要 2.5 秒。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是神话。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "冰川之牙",
+      "image": "Glacier_Fang_(projectile).gif"
+    },
+    "wiki_title": "冰川之牙",
+    "item_category": "misc"
+  },
+  "凤凰箭袋": {
+    "name": "凤凰箭袋",
+    "image": "Phoenix_Quiver.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "定期将箭矢引向敌人\n箭的伤害提高10%并大大提高箭的速度\n20%几率不消耗箭\n点燃木箭，火光熊熊\n“凤凰之焰”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "定期将箭矢引向敌人\n箭的伤害提高10%并大大提高箭的速度\n20%几率不消耗箭\n点燃木箭，火光熊熊\n“凤凰之焰”"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "浅紫色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#cc88ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "4",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "鸟妖护身符",
+          "image": "Harpy_Charm.png"
+        },
+        {
+          "name": "熔火箭袋",
+          "image": "Molten_Quiver.png"
+        }
+      ],
+      "result": {
+        "name": "凤凰箭袋",
+        "image": "Phoenix_Quiver.png"
+      }
+    },
+    "description": "凤凰箭袋是一件困难模式配饰物品，通过在工匠作坊将鸟妖护身符和熔火箭袋相结合制作。它装备后提供以下效果：\n\n· 箭会周期性地被重新导向敌怪\n· 对发射箭或尖桩的武器提供如下强化：+10% 伤害+10%击退+120%射弹速度+20%几率不消耗弹药\n· 木箭和无尽箭袋在发射时被转化为烈焰箭",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "凤凰箭袋是一件困难模式配饰物品，通过在工匠作坊将鸟妖护身符和熔火箭袋相结合制作。它装备后提供以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "箭会周期性地被重新导向敌怪"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "对发射箭或尖桩的武器提供如下强化：+10% 伤害+10%击退+120%射弹速度+20%几率不消耗弹药"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "木箭和无尽箭袋在发射时被转化为烈焰箭"
+        }
+      ]
+    ],
+    "wiki_title": "凤凰箭袋",
+    "item_category": "misc"
+  },
+  "十字心项链": {
+    "name": "十字心项链",
+    "image": "Crossed_Heart_Necklace.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "受到伤害后提高移动速度\n延长受伤后的无敌状态时间",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "受到伤害后提高移动速度\n延长受伤后的无敌状态时间"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "恐慌项链",
+          "image": "Panic_Necklace.png"
+        },
+        {
+          "name": "十字项链",
+          "image": "Cross_Necklace.png"
+        }
+      ],
+      "result": {
+        "name": "十字心项链",
+        "image": "Crossed_Heart_Necklace.png"
+      }
+    },
+    "description": "十字心项链是一件困难模式配饰物品，通过在工匠作坊将恐慌项链和十字项链相结合制作。它装备后提供以下效果：\n\n· 玩家受伤时获得 8 秒的恐慌！增益，将移动速度提高 100%\n· 受伤后的无敌帧长度翻倍",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "十字心项链是一件困难模式配饰物品，通过在工匠作坊将恐慌项链和十字项链相结合制作。它装备后提供以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "玩家受伤时获得 8 秒的恐慌！增益，将移动速度提高 100%"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "受伤后的无敌帧长度翻倍"
+        }
+      ]
+    ],
+    "page_type": "mount",
+    "buff": {
+      "name": "恐慌！",
+      "image": "Panic!.png",
+      "tooltip": "移动速度提高"
+    },
+    "wiki_title": "十字心项链",
+    "item_category": "misc"
+  },
+  "圣殿骑士投石索": {
+    "name": "圣殿骑士投石索",
+    "image": "Templar's_Sling.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "经过哨兵时可将其带走\n哨兵暴击率提高10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "经过哨兵时可将其带走\n哨兵暴击率提高10%"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffff66"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "重型投石索",
+          "image": "Heavy_Sling.png"
+        },
+        {
+          "name": "石巨人之眼",
+          "image": "Eye_of_the_Golem.png"
+        }
+      ],
+      "result": {
+        "name": "圣殿骑士投石索",
+        "image": "Templar's_Sling.png"
+      }
+    },
+    "description": "圣殿骑士投石索是一个困难模式,石巨人后的配饰，当穿戴时会给佩戴者获得以下效果：\n\n· +10%哨兵暴击几率\n· 允许玩家在走过哨兵时携带该哨兵",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "圣殿骑士投石索是一个困难模式,石巨人后的配饰，当穿戴时会给佩戴者获得以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+10%哨兵暴击几率"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "允许玩家在走过哨兵时携带该哨兵"
+        }
+      ]
+    ],
+    "wiki_title": "圣殿骑士投石索",
+    "item_category": "misc"
+  },
+  "太阳花法杖": {
+    "name": "太阳花法杖",
+    "image": "Daybloom_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "8",
+        "extra": "(魔法)"
+      },
+      {
+        "label": "击退",
+        "value": "3",
+        "extra": "（很弱击退力）"
+      },
+      {
+        "label": "魔力",
+        "value": "5",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "40",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "6",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "发射小型魔法弹\n“装满了希望、梦想和黏糊糊的凝胶！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "发射小型魔法弹\n“装满了希望、梦想和黏糊糊的凝胶！”"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "cc",
+            "amount": "20",
+            "image": "Copper_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "徒手",
+      "ingredients": [
+        {
+          "name": "太阳花",
+          "image": "Daybloom.png",
+          "amount": "3"
+        },
+        {
+          "name": "凝胶",
+          "image": "Gel.png",
+          "amount": "5"
+        },
+        {
+          "name": "木材",
+          "image": "Wood.png",
+          "amount": "12"
+        }
+      ],
+      "result": {
+        "name": "太阳花法杖",
+        "image": "Daybloom_Staff.png"
+      }
+    },
+    "description": "太阳花法杖是困难模式之前早期的魔棒，向光标处以略微不精确的爆发状发射短距离的 4 发非穿透性黄色魔法弹。\n\n其最佳修饰语是神话。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "太阳花法杖是困难模式之前早期的魔棒，向光标处以略微不精确的爆发状发射短距离的 4 发非穿透性黄色魔法弹。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是神话。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "太阳花弹丸",
+      "image": "Daybloom_Pellet.png"
+    },
+    "wiki_title": "太阳花法杖",
+    "item_category": "misc"
+  },
+  "宝石镶嵌法杖": {
+    "name": "宝石镶嵌法杖",
+    "image": "Bejeweled_Staff.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "27",
+        "extra": "(魔法)"
+      },
+      {
+        "label": "击退",
+        "value": "6",
+        "extra": "（普通击退力）"
+      },
+      {
+        "label": "魔力",
+        "value": "15",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "22",
+        "extra": "（快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "6",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "汲取众多宝石的力量",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "宝石镶嵌法杖是一件无法获取的魔法武器。它似乎是所有宝石法杖的组合，结合了所有类型宝石的效果。发射的射弹有以下属性和能力：\n\n· 射弹的伤害倍率为 1、持续时间为 1.5 秒、具有 +2 穿透数、+4盔甲穿透、和 4.375×4.375 格的碰撞框。\n· 每次使用发射 3 个射弹，它们会追踪不超过 62.5 格远的有清晰视线的目标，且在低射弹速度时会再次试图追踪。\n· 射弹可以在实心块上反弹，代价为 1 穿透数和 20%射弹速度。在反弹时，它们会追踪不超过 150 格远的有清晰视线的目标。\n· 射弹具有黄玉的消失时产生 10×10 格爆炸的能力，以及翡翠的逐渐失去速度的能力（见宝石法杖 § 宝石附魔获取细节）。\n· 射弹会随机选择所有宝石法杖射弹的外观。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "宝石镶嵌法杖是一件无法获取的魔法武器。它似乎是所有宝石法杖的组合，结合了所有类型宝石的效果。发射的射弹有以下属性和能力："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "射弹的伤害倍率为 1、持续时间为 1.5 秒、具有 +2 穿透数、+4盔甲穿透、和 4.375×4.375 格的碰撞框。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "每次使用发射 3 个射弹，它们会追踪不超过 62.5 格远的有清晰视线的目标，且在低射弹速度时会再次试图追踪。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "射弹可以在实心块上反弹，代价为 1 穿透数和 20%射弹速度。在反弹时，它们会追踪不超过 150 格远的有清晰视线的目标。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "射弹具有黄玉的消失时产生 10×10 格爆炸的能力，以及翡翠的逐渐失去速度的能力（见宝石法杖 § 宝石附魔获取细节）。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "射弹会随机选择所有宝石法杖射弹的外观。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "钻石矢",
+      "image": "Diamond_Bolt.png"
+    },
+    "wiki_title": "宝石镶嵌法杖",
+    "item_category": "misc"
+  },
+  "德鲁伊蛇纹斗篷": {
+    "name": "德鲁伊蛇纹斗篷",
+    "image": "Druidic_Serpent_Cloak.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "每挥动3次，第二条鞭子会协同攻击\n受到伤害后会使星星坠落",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "每挥动3次，第二条鞭子会协同攻击\n受到伤害后会使星星坠落"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "蛇形手环",
+          "image": "Snake_Band.png"
+        },
+        {
+          "name": "星星斗篷",
+          "image": "Star_Cloak.png"
+        }
+      ],
+      "result": {
+        "name": "德鲁伊蛇纹斗篷",
+        "image": "Druidic_Serpent_Cloak.png"
+      }
+    },
+    "description": "德鲁伊蛇纹斗篷是困难模式的配饰，装备时可提供下列效果：\n\n· 使用鞭攻击 3 次，或在 2 秒延迟后，会使玩家自动进行一次额外挥鞭，造成鞭 30% 的伤害（最低为 3 伤害）与 25% 的击退。如果玩家拥有多个标记效果栏，额外挥鞭将改为使用玩家的物品栏中的下一个鞭，若玩家没有其他鞭，则选择当前使用的鞭。\n· 受到伤害时，生成三颗星星落在玩家周围，每颗星星造成 75 /150/225点伤害，具有 25盔甲穿透，且可穿透一次。直到到达玩家的高度前，星星可穿过物块，此后它们会在碰撞物块时消失。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "德鲁伊蛇纹斗篷是困难模式的配饰，装备时可提供下列效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "使用鞭攻击 3 次，或在 2 秒延迟后，会使玩家自动进行一次额外挥鞭，造成鞭 30% 的伤害（最低为 3 伤害）与 25% 的击退。如果玩家拥有多个标记效果栏，额外挥鞭将改为使用玩家的物品栏中的下一个鞭，若玩家没有其他鞭，则选择当前使用的鞭。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "受到伤害时，生成三颗星星落在玩家周围，每颗星星造成 75 /150/225点伤害，具有 25盔甲穿透，且可穿透一次。直到到达玩家的高度前，星星可穿过物块，此后它们会在碰撞物块时消失。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "德鲁伊蛇纹斗篷",
+      "image": "White_Star.png"
+    },
+    "wiki_title": "德鲁伊蛇纹斗篷",
+    "item_category": "misc"
+  },
+  "恢复之盾": {
+    "name": "恢复之盾",
+    "image": "Restoration_Shield.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "1",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "对击退免疫\n缓慢再生生命\n最大魔力值增加40\n提高魔力再生速度",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "对击退免疫\n缓慢再生生命\n最大魔力值增加40\n提高魔力再生速度"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "魔力再生手环",
+          "image": "Mana_Regeneration_Band.png"
+        },
+        {
+          "name": "钴护盾",
+          "image": "Cobalt_Shield.png"
+        }
+      ],
+      "result": {
+        "name": "恢复之盾",
+        "image": "Restoration_Shield.png"
+      }
+    },
+    "description": "恢复之盾是一件困难模式之前、骷髅王后的配饰物品，通过在工匠作坊将钴护盾和魔力再生手环相结合制作。它组合了两件配饰的效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "恢复之盾是一件困难模式之前、骷髅王后的配饰物品，通过在工匠作坊将钴护盾和魔力再生手环相结合制作。它组合了两件配饰的效果。"
+        }
+      ]
+    ],
+    "wiki_title": "恢复之盾",
+    "item_category": "misc"
+  },
+  "斥候投石索": {
+    "name": "斥候投石索",
+    "image": "Scout's_Sling.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "经过哨兵时可将其带走\n敌人不太可能以你为目标\n伤害提高5%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "经过哨兵时可将其带走\n敌人不太可能以你为目标\n伤害提高5%"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "4",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "25",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "重型投石索",
+          "image": "Heavy_Sling.png"
+        },
+        {
+          "name": "腐香囊",
+          "image": "Putrid_Scent.png"
+        }
+      ],
+      "result": {
+        "name": "斥候投石索",
+        "image": "Scout's_Sling.png"
+      }
+    },
+    "description": "斥候投石索是一个困难模式配饰，在穿戴时会获得以下效果：\n\n· +5%伤害\n· –400仇恨\n· 允许玩家在走过哨兵时携带哨兵",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "斥候投石索是一个困难模式配饰，在穿戴时会获得以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+5%伤害"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "–400仇恨"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "允许玩家在走过哨兵时携带哨兵"
+        }
+      ]
+    ],
+    "wiki_title": "斥候投石索",
+    "item_category": "misc"
+  },
+  "暮光之握": {
+    "name": "暮光之握",
+    "image": "Twilight_Grasp.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤标记效果上限增加2\n大幅延长召唤标记效果的持续时间\n提高鞭子的击退",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤标记效果上限增加2\n大幅延长召唤标记效果的持续时间\n提高鞭子的击退"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "25",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "银护腕",
+          "image": "Silver_Bracer.png"
+        },
+        {
+          "name": "邪恶臂环",
+          "image": "Wicked_Armlet.png"
+        }
+      ],
+      "result": {
+        "name": "暮光之握",
+        "image": "Twilight_Grasp.png"
+      }
+    },
+    "description": "暮光之握是困难模式的配饰，装备时提供下列效果：\n\n· +2标记效果栏\n· 标记效果的持续时间延长至三倍\n· +1鞭的击退",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "暮光之握是困难模式的配饰，装备时提供下列效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+2标记效果栏"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "标记效果的持续时间延长至三倍"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1鞭的击退"
+        }
+      ]
+    ],
+    "wiki_title": "暮光之握",
+    "item_category": "misc"
+  },
+  "毁灭臂环": {
+    "name": "毁灭臂环",
+    "image": "Armlet_Of_Ruin.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤标记效果上限增加1\n提高鞭子的击退\n定期积蓄微光能量\n仆从标记命中时释放远古力量",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤标记效果上限增加1\n提高鞭子的击退\n定期积蓄微光能量\n仆从标记命中时释放远古力量"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "碎裂之石",
+          "image": "Snapping_Stone.png"
+        },
+        {
+          "name": "邪恶臂环",
+          "image": "Wicked_Armlet.png"
+        }
+      ],
+      "result": {
+        "name": "毁灭臂环",
+        "image": "Armlet_Of_Ruin.png"
+      }
+    },
+    "description": "毁灭臂环是一件困难模式配饰。它在装备时提供下列效果：\n\n· +1标记效果栏\n· +1 鞭的击退\n· 召唤标记会被周期性强化，在击中时释放远古能量。此效果有 6 秒冷却，由暗淡的蓝光表明。强化攻击最多额外造成 170 基础伤害。远古能量最多能击中附近的 2 个额外目标，对每个目标造成 150 基础伤害和 5（普通击退力）击退。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "毁灭臂环是一件困难模式配饰。它在装备时提供下列效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1标记效果栏"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1 鞭的击退"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "召唤标记会被周期性强化，在击中时释放远古能量。此效果有 6 秒冷却，由暗淡的蓝光表明。强化攻击最多额外造成 170 基础伤害。远古能量最多能击中附近的 2 个额外目标，对每个目标造成 150 基础伤害和 5（普通击退力）击退。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "毁灭臂环",
+      "image": "Armlet_Of_Ruin_(projectile).png"
+    },
+    "wiki_title": "毁灭臂环",
+    "item_category": "misc"
+  },
+  "淬毒倒刺": {
+    "name": "淬毒倒刺",
+    "image": "Poison_Barb.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "箭矢附带中毒效果",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "蓝色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#5a9cff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "淬毒倒刺",
+            "image": "Poison_Barb.png"
+          },
+          {
+            "name": "点金石",
+            "image": "Philosopher's_Stone.png"
+          }
+        ],
+        "result": {
+          "name": "催化手环",
+          "image": "Catalyst_Band.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "淬毒倒刺",
+            "image": "Poison_Barb.png"
+          },
+          {
+            "name": "蜂窝",
+            "image": "Honey_Comb.png"
+          }
+        ],
+        "result": {
+          "name": "甜蜜倒刺",
+          "image": "Sweet_Barb.png"
+        }
+      }
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "1",
+              "chance": "1/11 (9.09%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "1",
+              "chance": "1/120 (0.83%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "1",
+              "chance": "1/120 (0.83%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "1",
+              "chance": "1/11 (9.09%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "1",
+              "chance": "1/120 (0.83%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "1",
+              "chance": "1/120 (0.83%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "宝箱",
+              "image": "Chest.png",
+              "quantity": "1",
+              "chance": "1/11 (9.09%)"
+            },
+            {
+              "name": "木匣",
+              "image": "Wooden_Crate.png",
+              "quantity": "1",
+              "chance": "1/120 (0.83%)"
+            },
+            {
+              "name": "珍珠木匣",
+              "image": "Pearlwood_Crate.png",
+              "quantity": "1",
+              "chance": "1/120 (0.83%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "淬毒倒刺是一件困难模式之前的战斗配饰，有1/11 (9.09%)的几率在地表的宝箱中发现、或者有1/120 (0.83%)的几率从钓鱼获得的木匣和珍珠木匣中获得。装备后，玩家发射的箭会造成中毒减益。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "淬毒倒刺是一件困难模式之前的战斗配饰，有1/11 (9.09%)的几率在地表的宝箱中发现、或者有1/120 (0.83%)的几率从钓鱼获得的木匣和珍珠木匣中获得。装备后，玩家发射的箭会造成中毒减益。"
+        }
+      ]
+    ],
+    "wiki_title": "淬毒倒刺",
+    "item_category": "misc"
+  },
+  "混沌弹筒": {
+    "name": "混沌弹筒",
+    "image": "Chaos_Cylinder.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "8",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "1",
+              "chance": "20%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "1",
+              "chance": "20%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Hallowed_Mimic2.png",
+              "quantity": "1",
+              "chance": "20%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "混沌弹筒是一件困难模式配饰，有1/5 (20%)几率掉落自神圣宝箱怪。装备后，它会提供 +8%远程伤害，并使所有远程武器以特殊方式使用弹药。在物品栏或热键栏中对混沌弹筒按下⚷打开/激活可在四种模式间切换：\n\n· 默认：在弹药栏中轮流使用弹药。\n· 全域：在整个物品栏中轮流使用弹药。\n· 随机：在整个物品栏中随机使用弹药。\n· 普通：禁用效果，弹药以正常行为使用。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "混沌弹筒是一件困难模式配饰，有1/5 (20%)几率掉落自神圣宝箱怪。装备后，它会提供 +8%远程伤害，并使所有远程武器以特殊方式使用弹药。在物品栏或热键栏中对混沌弹筒按下"
+        },
+        {
+          "type": "key",
+          "symbol": "⚷",
+          "label": "打开/激活"
+        },
+        {
+          "type": "text",
+          "text": "可在四种模式间切换："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "默认：在弹药栏中轮流使用弹药。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "全域：在整个物品栏中轮流使用弹药。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "随机：在整个物品栏中随机使用弹药。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "普通：禁用效果，弹药以正常行为使用。"
+        }
+      ]
+    ],
+    "wiki_title": "混沌弹筒",
+    "item_category": "misc"
+  },
+  "火山碎屑石": {
+    "name": "火山碎屑石",
+    "image": "Pyroclastic_Stone.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "近战攻击造成火焰伤害\n定期积蓄微光能量\n近战和远程攻击命中时释放爆裂斩击",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "近战攻击造成火焰伤害\n定期积蓄微光能量\n近战和远程攻击命中时释放爆裂斩击"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "碎裂之石",
+          "image": "Snapping_Stone.png"
+        },
+        {
+          "name": "岩浆石",
+          "image": "Magma_Stone.png"
+        }
+      ],
+      "result": {
+        "name": "火山碎屑石",
+        "image": "Pyroclastic_Stone.png"
+      }
+    },
+    "description": "火山碎屑石是一件困难模式之前的配饰。它装备后提供以下效果：\n\n· 近战攻击在击中时造成狱炎减益，持续 2–6 秒。\n· 近战和远程攻击命中会被周期性强化，在击中时放出爆炸斩切。此效果有 6 秒冷却，由暗淡的橙光表明。强化攻击最多额外造成 90 基础伤害。爆炸斩切最多能击中附近的 2 个额外目标，对每个目标造成 45 基础伤害和 5（普通击退力）击退，并造成持续 3 秒的狱炎减益。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "火山碎屑石是一件困难模式之前的配饰。它装备后提供以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "近战攻击在击中时造成狱炎减益，持续 2–6 秒。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "近战和远程攻击命中会被周期性强化，在击中时放出爆炸斩切。此效果有 6 秒冷却，由暗淡的橙光表明。强化攻击最多额外造成 90 基础伤害。爆炸斩切最多能击中附近的 2 个额外目标，对每个目标造成 45 基础伤害和 5（普通击退力）击退，并造成持续 3 秒的狱炎减益。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "火山碎屑石",
+      "image": "Snapping_Stone_(projectile).png"
+    },
+    "wiki_title": "火山碎屑石",
+    "item_category": "misc"
+  },
+  "炽天使项链": {
+    "name": "炽天使项链",
+    "image": "Seraph_Necklace.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "定期将箭矢引向敌人\n延长受伤后的无敌状态时间",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "定期将箭矢引向敌人\n延长受伤后的无敌状态时间"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "鸟妖护身符",
+          "image": "Harpy_Charm.png"
+        },
+        {
+          "name": "十字项链",
+          "image": "Cross_Necklace.png"
+        }
+      ],
+      "result": {
+        "name": "炽天使项链",
+        "image": "Seraph_Necklace.png"
+      }
+    },
+    "description": "炽天使项链是一件困难模式配饰，通过在工匠作坊将鸟妖护身符和十字项链相结合制作。它组合了两件配饰的效果，周期性将箭重新导向敌怪以及将受伤后的无敌时间翻倍。此外，炽天使项链的箭变向效果的冷却时间比鸟妖护身符的少 20%，只需 1.2 秒。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "炽天使项链是一件困难模式配饰，通过在工匠作坊将鸟妖护身符和十字项链相结合制作。它组合了两件配饰的效果，周期性将箭重新导向敌怪以及将受伤后的无敌时间翻倍。此外，炽天使项链的箭变向效果的冷却时间比鸟妖护身符的少 20%，只需 1.2 秒。"
+        }
+      ]
+    ],
+    "wiki_title": "炽天使项链",
+    "item_category": "misc"
+  },
+  "甜蜜倒刺": {
+    "name": "甜蜜倒刺",
+    "image": "Sweet_Barb.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中\n箭矢附带中毒效果，命中时还可能释放蜜蜂！",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中\n箭矢附带中毒效果，命中时还可能释放蜜蜂！"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "淬毒倒刺",
+          "image": "Poison_Barb.png"
+        },
+        {
+          "name": "蜂窝",
+          "image": "Honey_Comb.png"
+        }
+      ],
+      "result": {
+        "name": "甜蜜倒刺",
+        "image": "Sweet_Barb.png"
+      }
+    },
+    "description": "甜蜜倒刺是一件困难模式之前的配饰。装备后，每当玩家受伤时，会释放 1–3 个自动制导的蜜蜂射弹攻击附近敌怪，并提供持续 5 秒的蜂蜜增益。此外，玩家发射的箭在击中时造成中毒减益，持续 1.5 秒，且最高有1/5 (20%)的几率召唤 3–6 个自动制导的蜜蜂射弹。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "甜蜜倒刺是一件困难模式之前的配饰。装备后，每当玩家受伤时，会释放 1–3 个自动制导的蜜蜂射弹攻击附近敌怪，并提供持续 5 秒的蜂蜜增益。此外，玩家发射的箭在击中时造成中毒减益，持续 1.5 秒，且最高有1/5 (20%)的几率召唤 3–6 个自动制导的蜜蜂射弹。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "buff": {
+      "name": "蜂蜜",
+      "image": "Honey_(buff).png",
+      "tooltip": "生命再生速度提高"
+    },
+    "pet": {
+      "name": "蜜蜂",
+      "image": "Bee_(projectile).gif"
+    },
+    "wiki_title": "甜蜜倒刺",
+    "item_category": "misc"
+  },
+  "电弧涌动": {
+    "name": "电弧涌动",
+    "image": "Arc_Surge.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "180",
+        "extra": "(魔法)"
+      },
+      {
+        "label": "击退",
+        "value": "4",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "魔力",
+        "value": "18",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "18",
+        "extra": "（很快速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "8",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "释放强力闪电轰击敌人\n“无限力量！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "释放强力闪电轰击敌人\n“无限力量！”"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff5050"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.gif",
+              "quantity": "1",
+              "chance": "2%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.gif",
+              "quantity": "1",
+              "chance": "2%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "火星飞碟",
+              "image": "Martian_Saucer.gif",
+              "quantity": "1",
+              "chance": "2%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "电弧涌动是一件困难模式、石巨人后的魔法武器，有1/50 (2%)几率掉落自火星暴乱事件期间的火星飞碟。使用时，它会快速向光标位置发射瞬间命中的红色闪电弧，电弧可攻击到屏幕上的任何位置，并且能无伤害惩罚地无限穿透敌怪，不过它们无法穿过物块或进入液体。除了瞄准光标的电弧以外，电弧涌动还能向最多 2 个附近敌怪发射额外的电弧，每次开火总计发射 3 道电弧。（见备注获取该机制的细节）。电弧会对敌怪和处于PvP状态的其他玩家造成电击减益，持续 4–7 秒。\n\n其最佳修饰语是神话。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "电弧涌动是一件困难模式、石巨人后的魔法武器，有1/50 (2%)几率掉落自火星暴乱事件期间的火星飞碟。使用时，它会快速向光标位置发射瞬间命中的红色闪电弧，电弧可攻击到屏幕上的任何位置，并且能无伤害惩罚地无限穿透敌怪，不过它们无法穿过物块或进入液体。除了瞄准光标的电弧以外，电弧涌动还能向最多 2 个附近敌怪发射额外的电弧，每次开火总计发射 3 道电弧。（见备注获取该机制的细节）。电弧会对敌怪和处于PvP状态的其他玩家造成电击减益，持续 4–7 秒。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是神话。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "电弧涌动",
+      "image": "Arc_Surge.png"
+    },
+    "wiki_title": "电弧涌动",
+    "item_category": "misc"
+  },
+  "碎裂之石": {
+    "name": "碎裂之石",
+    "image": "Snapping_Stone.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "定期积蓄微光能量\n远程攻击命中时释放伤害脉冲",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "定期积蓄微光能量\n远程攻击命中时释放伤害脉冲"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "碎裂之石",
+            "image": "Snapping_Stone.png"
+          },
+          {
+            "name": "邪恶臂环",
+            "image": "Wicked_Armlet.png"
+          }
+        ],
+        "result": {
+          "name": "毁灭臂环",
+          "image": "Armlet_Of_Ruin.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "碎裂之石",
+            "image": "Snapping_Stone.png"
+          },
+          {
+            "name": "岩浆石",
+            "image": "Magma_Stone.png"
+          }
+        ],
+        "result": {
+          "name": "火山碎屑石",
+          "image": "Pyroclastic_Stone.png"
+        }
+      }
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "花岗岩巨人",
+              "image": "Granite_Golem.gif",
+              "quantity": "1",
+              "chance": "1.25%"
+            },
+            {
+              "name": "花岗精",
+              "image": "Granite_Elemental.gif",
+              "quantity": "1",
+              "chance": "1.25%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "花岗岩巨人",
+              "image": "Granite_Golem.gif",
+              "quantity": "1",
+              "chance": "1.25%"
+            },
+            {
+              "name": "花岗精",
+              "image": "Granite_Elemental.gif",
+              "quantity": "1",
+              "chance": "1.25%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "花岗岩巨人",
+              "image": "Granite_Golem.gif",
+              "quantity": "1",
+              "chance": "1.25%"
+            },
+            {
+              "name": "花岗精",
+              "image": "Granite_Elemental.gif",
+              "quantity": "1",
+              "chance": "1.25%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "碎裂之石是一件困难模式之前的配饰，有1/80 (1.25%)几率掉落自花岗岩巨人和花岗精。\n\n装备时，远程攻击命中会被周期性强化，并在击中时放出伤害性脉冲。\n\n· 此效果有 6 秒冷却，由暗淡的蓝光表明。\n· 强化攻击最多额外造成 60 基础伤害。\n· 脉冲最多能击中附近的 2 个额外目标，对每个目标造成 30 基础伤害和 5（普通击退力）击退。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "碎裂之石是一件困难模式之前的配饰，有1/80 (1.25%)几率掉落自花岗岩巨人和花岗精。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备时，远程攻击命中会被周期性强化，并在击中时放出伤害性脉冲。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "此效果有 6 秒冷却，由暗淡的蓝光表明。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "强化攻击最多额外造成 60 基础伤害。"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "脉冲最多能击中附近的 2 个额外目标，对每个目标造成 30 基础伤害和 5（普通击退力）击退。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "碎裂之石",
+      "image": "Snapping_Stone_(projectile).png"
+    },
+    "wiki_title": "碎裂之石",
+    "item_category": "misc"
+  },
+  "神秘绽放": {
+    "name": "神秘绽放",
+    "image": "Mystic_Bloom.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "20",
+        "extra": "(魔法)"
+      },
+      {
+        "label": "击退",
+        "value": "3.5",
+        "extra": "（较弱击退力）"
+      },
+      {
+        "label": "魔力",
+        "value": "20",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "4%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "42",
+        "extra": "（很慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "5",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "绽放出神秘花瓣",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "大自然的恩赐",
+          "image": "Nature's_Gift.png"
+        },
+        {
+          "name": "月光草",
+          "image": "Moonglow.png",
+          "amount": "2"
+        },
+        {
+          "name": "藤蔓",
+          "image": "Vine.png",
+          "amount": "3"
+        },
+        {
+          "name": "红木",
+          "image": "Rich_Mahogany.png",
+          "amount": "7"
+        }
+      ],
+      "result": {
+        "name": "神秘绽放",
+        "image": "Mystic_Bloom.png"
+      }
+    },
+    "description": "神秘绽放是一件困难模式之前的魔法武器，会发射三片不穿透的花瓣，花瓣会缓慢追踪附近 25 格半径内的敌怪并在物块上反弹，每片花瓣造成 100% 武器伤害和击退。若范围内没有敌怪，花瓣在行进短距离后会停留在原地。\n\n其最佳修饰语是神话。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "神秘绽放是一件困难模式之前的魔法武器，会发射三片不穿透的花瓣，花瓣会缓慢追踪附近 25 格半径内的敌怪并在物块上反弹，每片花瓣造成 100% 武器伤害和击退。若范围内没有敌怪，花瓣在行进短距离后会停留在原地。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是神话。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "神秘花瓣",
+      "image": "Mystic_Petal.gif"
+    },
+    "wiki_title": "神秘绽放",
+    "item_category": "misc"
+  },
+  "秘术腰带": {
+    "name": "秘术腰带",
+    "image": "Mystic_Arts_Sash.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "缓慢再生生命\n最大魔力值增加40\n提高魔力再生速度\n有机会闪避攻击",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "缓慢再生生命\n最大魔力值增加40\n提高魔力再生速度\n有机会闪避攻击"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffff66"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "魔力再生手环",
+          "image": "Mana_Regeneration_Band.png"
+        },
+        {
+          "name": "黑腰带",
+          "image": "Black_Belt.png"
+        }
+      ],
+      "result": {
+        "name": "秘术腰带",
+        "image": "Mystic_Arts_Sash.png"
+      }
+    },
+    "description": "秘术腰带是一个困难模式配饰物品，通过在工匠作坊将魔力再生手环和黑腰带相结合制作。它装备后提供以下效果：\n\n· +1生命/秒的生命再生\n· +40 最大魔力\n· +30魔力/秒的魔力再生\n· 1/10 (10%)几率闪避攻击",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "秘术腰带是一个困难模式配饰物品，通过在工匠作坊将魔力再生手环和黑腰带相结合制作。它装备后提供以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1生命/秒的生命再生"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+40 最大魔力"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+30魔力/秒的魔力再生"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "1/10 (10%)几率闪避攻击"
+        }
+      ]
+    ],
+    "wiki_title": "秘术腰带",
+    "item_category": "misc"
+  },
+  "羁绊宝桃": {
+    "name": "羁绊宝桃",
+    "image": "Kinship_Peach.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "极为罕见的魔法果实\n据说帕鲁吃下后会对人类敞开心扉\n务必谨慎选择赠送对象",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "极为罕见的魔法果实\n据说帕鲁吃下后会对人类敞开心扉\n务必谨慎选择赠送对象"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "研究",
+        "value": "需要 10 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "生命果",
+          "image": "Life_Fruit.png"
+        },
+        {
+          "name": "光明之魂",
+          "image": "Soul_of_Light.gif",
+          "amount": "12"
+        },
+        {
+          "name": "暗影之魂",
+          "image": "Soul_of_Night.gif",
+          "amount": "12"
+        }
+      ],
+      "result": {
+        "name": "羁绊宝桃",
+        "image": "Kinship_Peach.png"
+      }
+    },
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "捣蛋猫",
+            "image": "Cattiva.png"
+          },
+          {
+            "name": "羁绊宝桃",
+            "image": "Kinship_Peach.png"
+          }
+        ],
+        "result": {
+          "name": "可靠的捣蛋猫",
+          "image": "Cattiva.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "火绒狐",
+            "image": "Foxparks.png"
+          },
+          {
+            "name": "羁绊宝桃",
+            "image": "Kinship_Peach.png"
+          }
+        ],
+        "result": {
+          "name": "可靠的火绒狐",
+          "image": "Foxparks.png"
+        }
+      }
+    ],
+    "description": "羁绊宝桃是一种困难模式、单个机械 Boss后的制作材料，使用生命果制作。它用于将捣蛋猫和火绒狐升级为其“可靠”变体。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "羁绊宝桃是一种困难模式、单个机械 Boss后的制作材料，使用生命果制作。它用于将捣蛋猫和火绒狐升级为其“可靠”变体。"
+        }
+      ]
+    ],
+    "wiki_title": "羁绊宝桃",
+    "item_category": "misc"
+  },
+  "羁绊小桃": {
+    "name": "羁绊小桃",
+    "image": "Little_Kinship_Peach.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "饱含温情的小小果实\n据说帕鲁吃下后会对人类敞开心扉\n务必谨慎选择赠送对象",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "饱含温情的小小果实\n据说帕鲁吃下后会对人类敞开心扉\n务必谨慎选择赠送对象"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "研究",
+        "value": "需要 10 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "水晶球",
+      "ingredients": [
+        {
+          "name": "任何水果",
+          "image": "Any_Fruit.gif"
+        },
+        {
+          "name": "光明之魂",
+          "image": "Soul_of_Light.gif",
+          "amount": "12"
+        },
+        {
+          "name": "暗影之魂",
+          "image": "Soul_of_Night.gif",
+          "amount": "12"
+        }
+      ],
+      "result": {
+        "name": "羁绊小桃",
+        "image": "Little_Kinship_Peach.png"
+      }
+    },
+    "used_in": [
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "桃旋鼬",
+            "image": "Chillet_Ignis.png"
+          },
+          {
+            "name": "羁绊小桃",
+            "image": "Little_Kinship_Peach.png"
+          }
+        ],
+        "result": {
+          "name": "可靠的桃旋鼬",
+          "image": "Chillet_Ignis.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "疾旋鼬",
+            "image": "Chillet.png"
+          },
+          {
+            "name": "羁绊小桃",
+            "image": "Little_Kinship_Peach.png"
+          }
+        ],
+        "result": {
+          "name": "可靠的疾旋鼬",
+          "image": "Chillet.png"
+        }
+      },
+      {
+        "station": "徒手",
+        "ingredients": [
+          {
+            "name": "碎岩龟",
+            "image": "Digtoise.png"
+          },
+          {
+            "name": "羁绊小桃",
+            "image": "Little_Kinship_Peach.png"
+          }
+        ],
+        "result": {
+          "name": "可靠的碎岩龟",
+          "image": "Digtoise.png"
+        }
+      }
+    ],
+    "description": "羁绊小桃是一种困难模式制作材料。它可以将疾旋鼬升级为可靠的疾旋鼬、将桃旋鼬升级为可靠的桃旋鼬、将碎岩龟升级为可靠的碎岩龟。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "羁绊小桃是一种困难模式制作材料。它可以将疾旋鼬升级为可靠的疾旋鼬、将桃旋鼬升级为可靠的桃旋鼬、将碎岩龟升级为可靠的碎岩龟。"
+        }
+      ]
+    ],
+    "wiki_title": "羁绊小桃",
+    "item_category": "misc"
+  },
+  "莫比乌斯带": {
+    "name": "莫比乌斯带",
+    "image": "Mobius_Strip.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤标记效果上限增加1\n鞭子攻击范围扩大10%",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤标记效果上限增加1\n鞭子攻击范围扩大10%"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "淡紫色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#dd66ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "5",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "蛇形手环",
+            "image": "Snake_Band.png"
+          },
+          {
+            "name": "莫比乌斯带",
+            "image": "Mobius_Strip.png"
+          }
+        ],
+        "result": {
+          "name": "衔尾蛇指环",
+          "image": "Ouroboros_Ring.png"
+        }
+      }
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "宝藏袋（石巨人）",
+              "image": "Treasure_Bag_(Golem).png",
+              "quantity": "1",
+              "chance": "16.67%"
+            },
+            {
+              "name": "石巨人",
+              "image": "Golem.png",
+              "quantity": "1",
+              "chance": "16.67%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "宝藏袋（石巨人）",
+              "image": "Treasure_Bag_(Golem).png",
+              "quantity": "1",
+              "chance": "16.67%"
+            },
+            {
+              "name": "石巨人",
+              "image": "Golem.png",
+              "quantity": "1",
+              "chance": "16.67%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "宝藏袋（石巨人）",
+              "image": "Treasure_Bag_(Golem).png",
+              "quantity": "1",
+              "chance": "16.67%"
+            },
+            {
+              "name": "石巨人",
+              "image": "Golem.png",
+              "quantity": "1",
+              "chance": "16.67%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "莫比乌斯带是一件困难模式配饰，有1/6 (16.67%)几率掉落自石巨人。装备后，它会提供以下效果：\n\n· +1标记效果栏\n· +10%鞭范围",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "莫比乌斯带是一件困难模式配饰，有1/6 (16.67%)几率掉落自石巨人。装备后，它会提供以下效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1标记效果栏"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+10%鞭范围"
+        }
+      ]
+    ],
+    "wiki_title": "莫比乌斯带",
+    "item_category": "misc"
+  },
+  "蛇形手环": {
+    "name": "蛇形手环",
+    "image": "Snake_Band.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "每挥动3次，第二条鞭子会协同攻击\n“麻烦找上门，就得抽它……”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "每挥动3次，第二条鞭子会协同攻击\n“麻烦找上门，就得抽它……”"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "蛇形手环",
+            "image": "Snake_Band.png"
+          },
+          {
+            "name": "星星斗篷",
+            "image": "Star_Cloak.png"
+          }
+        ],
+        "result": {
+          "name": "德鲁伊蛇纹斗篷",
+          "image": "Druidic_Serpent_Cloak.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "蛇形手环",
+            "image": "Snake_Band.png"
+          },
+          {
+            "name": "莫比乌斯带",
+            "image": "Mobius_Strip.png"
+          }
+        ],
+        "result": {
+          "name": "衔尾蛇指环",
+          "image": "Ouroboros_Ring.png"
+        }
+      }
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "拉弥亚",
+              "image": "Lamia.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            },
+            {
+              "name": "拉弥亚",
+              "image": "Lamia2.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "拉弥亚",
+              "image": "Lamia.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            },
+            {
+              "name": "拉弥亚",
+              "image": "Lamia2.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "拉弥亚",
+              "image": "Lamia.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            },
+            {
+              "name": "拉弥亚",
+              "image": "Lamia2.gif",
+              "quantity": "1",
+              "chance": "2.5%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "蛇形手环是困难模式的配饰，有1/40 (2.5%)的概率掉落自地下沙漠的拉弥亚。装备时，每第三次使用鞭攻击会使玩家同时自动进行一次额外挥鞭。若距离玩家上一次使用鞭已过去 2 秒，则其下一次使用鞭也会触发额外挥鞭，此后则在每第三次使用鞭攻击时再次触发。若玩家仅拥有一个标记效果栏，额外挥鞭将选择当前使用的鞭。若玩家拥有多个标记效果栏，额外挥鞭会会选择玩家物品栏中的下一个鞭（详见备注）。额外挥鞭仅会造成此鞭 30% 的伤害与 25% 的击退，但其伤害不能低于 3。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "蛇形手环是困难模式的配饰，有1/40 (2.5%)的概率掉落自地下沙漠的拉弥亚。装备时，每第三次使用鞭攻击会使玩家同时自动进行一次额外挥鞭。若距离玩家上一次使用鞭已过去 2 秒，则其下一次使用鞭也会触发额外挥鞭，此后则在每第三次使用鞭攻击时再次触发。若玩家仅拥有一个标记效果栏，额外挥鞭将选择当前使用的鞭。若玩家拥有多个标记效果栏，额外挥鞭会会选择玩家物品栏中的下一个鞭（详见备注）。额外挥鞭仅会造成此鞭 30% 的伤害与 25% 的击退，但其伤害不能低于 3。"
+        }
+      ]
+    ],
+    "wiki_title": "蛇形手环",
+    "item_category": "misc"
+  },
+  "衔尾蛇指环": {
+    "name": "衔尾蛇指环",
+    "image": "Ouroboros_Ring.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤标记效果上限增加1\n鞭子攻击范围扩大10%\n每挥动3次，第二条鞭子会协同攻击",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤标记效果上限增加1\n鞭子攻击范围扩大10%\n每挥动3次，第二条鞭子会协同攻击"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "黄色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffff66"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "3",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "蛇形手环",
+          "image": "Snake_Band.png"
+        },
+        {
+          "name": "莫比乌斯带",
+          "image": "Mobius_Strip.png"
+        }
+      ],
+      "result": {
+        "name": "衔尾蛇指环",
+        "image": "Ouroboros_Ring.png"
+      }
+    },
+    "description": "衔尾蛇指环是困难模式，石巨人后的配饰，装备时可提供下列效果：\n\n· +1标记效果栏\n· +10%鞭范围\n· 使用鞭攻击 3 次，或在 2 秒延迟后，会使玩家自动进行一次额外挥鞭，造成鞭 30% 的伤害（最低为 3 伤害）与 25% 的击退。额外挥鞭将会使用玩家物品栏中的下一个鞭，若玩家没有其他鞭，则选择当前使用的鞭。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "衔尾蛇指环是困难模式，石巨人后的配饰，装备时可提供下列效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1标记效果栏"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+10%鞭范围"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "使用鞭攻击 3 次，或在 2 秒延迟后，会使玩家自动进行一次额外挥鞭，造成鞭 30% 的伤害（最低为 3 伤害）与 25% 的击退。额外挥鞭将会使用玩家物品栏中的下一个鞭，若玩家没有其他鞭，则选择当前使用的鞭。"
+        }
+      ]
+    ],
+    "wiki_title": "衔尾蛇指环",
+    "item_category": "misc"
+  },
+  "邪恶之爪": {
+    "name": "邪恶之爪",
+    "image": "Wicked_Claws.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤标记效果上限增加1\n提高鞭子的击退\n近战速度提高12%\n近战武器和鞭子可自动挥舞",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤标记效果上限增加1\n提高鞭子的击退\n近战速度提高12%\n近战武器和鞭子可自动挥舞"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "50",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "邪恶臂环",
+          "image": "Wicked_Armlet.png"
+        },
+        {
+          "name": "猛爪手套",
+          "image": "Feral_Claws.png"
+        }
+      ],
+      "result": {
+        "name": "邪恶之爪",
+        "image": "Wicked_Claws.png"
+      }
+    },
+    "description": "邪恶之爪是困难模式的配饰，装备后提供下列效果：\n\n· +1标记效果栏\n· +1 鞭的击退\n· +12%近战速度\n· 使近战武器和鞭可自动挥舞",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "邪恶之爪是困难模式的配饰，装备后提供下列效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1标记效果栏"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1 鞭的击退"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+12%近战速度"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "使近战武器和鞭可自动挥舞"
+        }
+      ]
+    ],
+    "wiki_title": "邪恶之爪",
+    "item_category": "misc"
+  },
+  "邪恶臂环": {
+    "name": "邪恶臂环",
+    "image": "Wicked_Armlet.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤标记效果上限增加1\n提高鞭子的击退",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤标记效果上限增加1\n提高鞭子的击退"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "浅红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff7777"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "2",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "银护腕",
+            "image": "Silver_Bracer.png"
+          },
+          {
+            "name": "邪恶臂环",
+            "image": "Wicked_Armlet.png"
+          }
+        ],
+        "result": {
+          "name": "暮光之握",
+          "image": "Twilight_Grasp.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "碎裂之石",
+            "image": "Snapping_Stone.png"
+          },
+          {
+            "name": "邪恶臂环",
+            "image": "Wicked_Armlet.png"
+          }
+        ],
+        "result": {
+          "name": "毁灭臂环",
+          "image": "Armlet_Of_Ruin.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "邪恶臂环",
+            "image": "Wicked_Armlet.png"
+          },
+          {
+            "name": "猛爪手套",
+            "image": "Feral_Claws.png"
+          }
+        ],
+        "result": {
+          "name": "邪恶之爪",
+          "image": "Wicked_Claws.png"
+        }
+      }
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "猩红斧",
+              "image": "Crimson_Axe.gif",
+              "quantity": "1",
+              "chance": "4%"
+            },
+            {
+              "name": "诅咒锤",
+              "image": "Cursed_Hammer.gif",
+              "quantity": "1",
+              "chance": "4%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "猩红斧",
+              "image": "Crimson_Axe.gif",
+              "quantity": "1",
+              "chance": "4%"
+            },
+            {
+              "name": "诅咒锤",
+              "image": "Cursed_Hammer.gif",
+              "quantity": "1",
+              "chance": "4%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "猩红斧",
+              "image": "Crimson_Axe.gif",
+              "quantity": "1",
+              "chance": "4%"
+            },
+            {
+              "name": "诅咒锤",
+              "image": "Cursed_Hammer.gif",
+              "quantity": "1",
+              "chance": "4%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "邪恶臂环是困难模式的配饰，有1/25 (4%)的概率掉落自诅咒锤和猩红斧。装备时提供下列效果：\n\n· +1标记效果栏\n· +1 鞭的击退",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "邪恶臂环是困难模式的配饰，有1/25 (4%)的概率掉落自诅咒锤和猩红斧。装备时提供下列效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1标记效果栏"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1 鞭的击退"
+        }
+      ]
+    ],
+    "wiki_title": "邪恶臂环",
+    "item_category": "misc"
+  },
+  "重型投石索": {
+    "name": "重型投石索",
+    "image": "Heavy_Sling.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "经过哨兵时可将其带走",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "粉红色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ff88bb"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "重型投石索",
+            "image": "Heavy_Sling.png"
+          },
+          {
+            "name": "石巨人之眼",
+            "image": "Eye_of_the_Golem.png"
+          }
+        ],
+        "result": {
+          "name": "圣殿骑士投石索",
+          "image": "Templar's_Sling.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "重型投石索",
+            "image": "Heavy_Sling.png"
+          },
+          {
+            "name": "腐香囊",
+            "image": "Putrid_Scent.png"
+          }
+        ],
+        "result": {
+          "name": "斥候投石索",
+          "image": "Scout's_Sling.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "重型投石索",
+            "image": "Heavy_Sling.png"
+          },
+          {
+            "name": "钴护盾",
+            "image": "Cobalt_Shield.png"
+          }
+        ],
+        "result": {
+          "name": "皇家卫队护具",
+          "image": "Royal_Guard's_Harness.png"
+        }
+      }
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Ice_Mimic.png",
+              "quantity": "1",
+              "chance": "23.75%"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Ice_Mimic.png",
+              "quantity": "1",
+              "chance": "23.75%"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "宝箱怪",
+              "image": "Ice_Mimic.png",
+              "quantity": "1",
+              "chance": "23.75%"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "重型投石索是一件困难模式的配饰，有19/80 (23.75%)的概率掉落自冰雪宝箱怪。装备时，它允许玩家在接触哨兵时将其拾起，使哨兵附在玩家身上并随着玩家移动，同时仍会进行常规攻击。玩家拾起哨兵后无法将其放下，但可以通过⚷打开/激活点击哨兵，卸下重型投石索，或在没有足够哨兵栏时召唤哨兵来使其消失。拾起的哨兵仍会在被召唤 10 分钟后消失。玩家同时仅能拾起 1 个哨兵。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "重型投石索是一件困难模式的配饰，有19/80 (23.75%)的概率掉落自冰雪宝箱怪。装备时，它允许玩家在接触哨兵时将其拾起，使哨兵附在玩家身上并随着玩家移动，同时仍会进行常规攻击。玩家拾起哨兵后无法将其放下，但可以通过"
+        },
+        {
+          "type": "key",
+          "symbol": "⚷",
+          "label": "打开/激活"
+        },
+        {
+          "type": "text",
+          "text": "点击哨兵，卸下重型投石索，或在没有足够哨兵栏时召唤哨兵来使其消失。拾起的哨兵仍会在被召唤 10 分钟后消失。玩家同时仅能拾起 1 个哨兵。"
+        }
+      ]
+    ],
+    "wiki_title": "重型投石索",
+    "item_category": "misc"
+  },
+  "银护腕": {
+    "name": "银护腕",
+    "image": "Silver_Bracer.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤标记效果上限增加1\n大幅延长召唤标记效果的持续时间\n“真是一线银光！”",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "召唤标记效果上限增加1\n大幅延长召唤标记效果的持续时间\n“真是一线银光！”"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "银护腕",
+            "image": "Silver_Bracer.png"
+          },
+          {
+            "name": "邪恶臂环",
+            "image": "Wicked_Armlet.png"
+          }
+        ],
+        "result": {
+          "name": "暮光之握",
+          "image": "Twilight_Grasp.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "银护腕",
+            "image": "Silver_Bracer.png"
+          },
+          {
+            "name": "黑曜石护盾",
+            "image": "Obsidian_Shield.png"
+          }
+        ],
+        "result": {
+          "name": "银盾",
+          "image": "Silver_Shield.png"
+        }
+      }
+    ],
+    "drops": {
+      "modes": [
+        {
+          "mode": "normal",
+          "label": "经典",
+          "entries": [
+            {
+              "name": "金箱（地牢）（页面不存在）",
+              "image": "Gold_Chest.png",
+              "quantity": "1",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金锁盒",
+              "image": "Golden_Lock_Box.png",
+              "quantity": "1",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        },
+        {
+          "mode": "expert",
+          "label": "专家",
+          "entries": [
+            {
+              "name": "金箱（地牢）（页面不存在）",
+              "image": "Gold_Chest.png",
+              "quantity": "1",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金锁盒",
+              "image": "Golden_Lock_Box.png",
+              "quantity": "1",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        },
+        {
+          "mode": "master",
+          "label": "大师",
+          "entries": [
+            {
+              "name": "金箱（地牢）（页面不存在）",
+              "image": "Gold_Chest.png",
+              "quantity": "1",
+              "chance": "1/4 (25%)"
+            },
+            {
+              "name": "金锁盒",
+              "image": "Golden_Lock_Box.png",
+              "quantity": "1",
+              "chance": "1/4 (25%)"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "银护腕是困难模式之前，骷髅王后的配饰，可作为次要拾取物从地牢内的锁住的金箱中获得，或从地牢匣或围栏匣内的金锁盒中获得。装备时提供下列效果：\n\n· +1标记效果栏\n· 标记效果的持续时间延长至三倍",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "银护腕是困难模式之前，骷髅王后的配饰，可作为次要拾取物从地牢内的锁住的金箱中获得，或从地牢匣或围栏匣内的金锁盒中获得。装备时提供下列效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1标记效果栏"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "标记效果的持续时间延长至三倍"
+        }
+      ]
+    ],
+    "wiki_title": "银护腕",
+    "item_category": "misc"
+  },
+  "银盾": {
+    "name": "银盾",
+    "image": "Silver_Shield.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "盾配饰",
+        "extra": ""
+      },
+      {
+        "label": "防御",
+        "value": "2",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "对击退和火块免疫\n召唤标记效果上限增加1\n大幅延长召唤标记效果的持续时间",
+        "extra": "",
+        "segments": [
+          {
+            "type": "text",
+            "text": "对击退和火块免疫\n召唤标记效果上限增加1\n大幅延长召唤标记效果的持续时间"
+          }
+        ]
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          },
+          {
+            "type": "sc",
+            "amount": "75",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "工匠作坊",
+      "ingredients": [
+        {
+          "name": "银护腕",
+          "image": "Silver_Bracer.png"
+        },
+        {
+          "name": "黑曜石护盾",
+          "image": "Obsidian_Shield.png"
+        }
+      ],
+      "result": {
+        "name": "银盾",
+        "image": "Silver_Shield.png"
+      }
+    },
+    "description": "银盾是困难模式之前，骷髅王后盾配饰，装备后提供下列效果：\n\n· +1标记效果栏\n· 标记效果的持续时间延长至三倍\n· +2防御\n· 免疫击退\n· 免疫燃烧减益",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "银盾是困难模式之前，骷髅王后盾配饰，装备后提供下列效果："
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+1标记效果栏"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "标记效果的持续时间延长至三倍"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "+2防御"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "免疫击退"
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        },
+        {
+          "type": "text",
+          "text": "· "
+        },
+        {
+          "type": "text",
+          "text": "免疫燃烧减益"
+        }
+      ]
+    ],
+    "wiki_title": "银盾",
+    "item_category": "misc"
+  },
+  "锐刺": {
+    "name": "锐刺",
+    "image": "Razortip.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "锐刺是一件无法获取的配饰。装备后，它会提供 +8%远程暴击率，并使所有箭+1 伤害。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "锐刺是一件无法获取的配饰。装备后，它会提供 +8%远程暴击率，并使所有箭+1 伤害。"
+        }
+      ]
+    ],
+    "wiki_title": "锐刺",
+    "item_category": "misc"
+  },
+  "闪电之击": {
+    "name": "闪电之击",
+    "image": "Lightning_Strike.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "武器",
+        "extra": ""
+      },
+      {
+        "label": "伤害",
+        "value": "150",
+        "extra": "(魔法)"
+      },
+      {
+        "label": "击退",
+        "value": "10",
+        "extra": "（极强击退力）"
+      },
+      {
+        "label": "魔力",
+        "value": "30",
+        "extra": ""
+      },
+      {
+        "label": "暴击率",
+        "value": "14%",
+        "extra": ""
+      },
+      {
+        "label": "使用时间",
+        "value": "55",
+        "extra": "（极慢速度）"
+      },
+      {
+        "label": "射弹速度",
+        "value": "8",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "召唤从天而降的闪电",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "浅紫色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#cc88ff"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "秘银砧或山铜砧",
+      "ingredients": [
+        {
+          "name": "霹雳法杖",
+          "image": "Thunder_Zapper.png"
+        },
+        {
+          "name": "任何精金锭",
+          "image": "Any_Adamantite_Bar.gif",
+          "amount": "24"
+        },
+        {
+          "name": "暗影之魂",
+          "image": "Soul_of_Night.gif",
+          "amount": "20"
+        }
+      ],
+      "result": {
+        "name": "闪电之击",
+        "image": "Lightning_Strike.png"
+      }
+    },
+    "description": "闪电之击是一个困难模式的魔棒。它会发射一个电火花，可附着于敌怪身上，在短暂延迟后从天空向电火花所在位置劈下一道闪电。类似于雷雨期间的自然闪电，它可伤害其路径上所有敌怪，并使其击中的液体带电。该武器具有 14% 的基础暴击率，而非通常的 4%。\n\n使用闪电之击会在光标位置召唤一个初始无害的蓝色电火花。如果玩家到光标之间的视线被物块阻挡，电火花将改为生成在到光标方向的最近物块上。然后电火花会试图跟随光标，但无法穿过物块。它会附着在进入其 0.75 格内的第一个敌怪身上，并跟随该敌怪移动，不再跟随光标。\n\n电火花会持续 0.5 秒。随后，一道闪电会从屏幕顶部劈到电火花的位置，可穿过所有物块，对路径上的所有敌怪造成伤害，并使电火花小规模引爆。当击中液体时，闪电还会对较大半径内所有浸入液体中的敌怪造成伤害。闪电本体、引发的爆炸或带电液体击中的敌怪会被施加 4–7 秒狱炎和电击减益。闪电之击每击中一个敌怪，其伤害会降低 20%，且伤害降低与该攻击的三个部分共用。\n\n此外，闪电之击会在击中液体对玩家造成伤害。在此情况下闪电、其爆炸和带电液体均会对玩家造成 120 点基础伤害，并施加 4–7 秒电击（但没有狱炎）。\n\n其最佳修饰语是神话。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "闪电之击是一个困难模式的魔棒。它会发射一个电火花，可附着于敌怪身上，在短暂延迟后从天空向电火花所在位置劈下一道闪电。类似于雷雨期间的自然闪电，它可伤害其路径上所有敌怪，并使其击中的液体带电。该武器具有 14% 的基础暴击率，而非通常的 4%。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "使用闪电之击会在光标位置召唤一个初始无害的蓝色电火花。如果玩家到光标之间的视线被物块阻挡，电火花将改为生成在到光标方向的最近物块上。然后电火花会试图跟随光标，但无法穿过物块。它会附着在进入其 0.75 格内的第一个敌怪身上，并跟随该敌怪移动，不再跟随光标。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "电火花会持续 0.5 秒。随后，一道闪电会从屏幕顶部劈到电火花的位置，可穿过所有物块，对路径上的所有敌怪造成伤害，并使电火花小规模引爆。当击中液体时，闪电还会对较大半径内所有浸入液体中的敌怪造成伤害。闪电本体、引发的爆炸或带电液体击中的敌怪会被施加 4–7 秒狱炎和电击减益。闪电之击每击中一个敌怪，其伤害会降低 20%，且伤害降低与该攻击的三个部分共用。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "此外，闪电之击会在击中液体对玩家造成伤害。在此情况下闪电、其爆炸和带电液体均会对玩家造成 120 点基础伤害，并施加 4–7 秒电击（但没有狱炎）。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "其最佳修饰语是神话。"
+        }
+      ]
+    ],
+    "page_type": "pet",
+    "pet": {
+      "name": "闪电之击",
+      "image": "Lightning_Strike_(projectile).png"
+    },
+    "wiki_title": "闪电之击",
+    "item_category": "misc"
+  },
+  "附魔计时器": {
+    "name": "附魔计时器",
+    "image": "Enchanted_Timer.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "每隔一段时间必定暴击一次",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "橙色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#ffaa44"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "gc",
+            "amount": "1",
+            "image": "Gold_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": null,
+    "description": "附魔计时器是一件无法获取配饰，会周期性地让玩家必定造成暴击。\n\n装备后，若玩家静止不动且未在使用任何物品，它会花费 1.85 秒自动进行充能。移动或使用物品时，充能速度减半，同时移动和使用物品会将充能速度降低至1/3 (33.33%)。完全充能后，玩家的下一次攻击和该次攻击后 0.25 秒内的所有攻击都必定暴击。随后，附魔计时器会重新开始充能。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "附魔计时器是一件无法获取配饰，会周期性地让玩家必定造成暴击。"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "装备后，若玩家静止不动且未在使用任何物品，它会花费 1.85 秒自动进行充能。移动或使用物品时，充能速度减半，同时移动和使用物品会将充能速度降低至1/3 (33.33%)。完全充能后，玩家的下一次攻击和该次攻击后 0.25 秒内的所有攻击都必定暴击。随后，附魔计时器会重新开始充能。"
+        }
+      ]
+    ],
+    "wiki_title": "附魔计时器",
+    "item_category": "misc"
+  },
+  "鸟妖护身符": {
+    "name": "鸟妖护身符",
+    "image": "Harpy_Charm.png",
+    "stats": [
+      {
+        "label": "类型",
+        "value": "配饰制作材料",
+        "extra": ""
+      },
+      {
+        "label": "工具提示",
+        "value": "定期将箭矢引向敌人",
+        "extra": ""
+      },
+      {
+        "label": "稀有度",
+        "value": "绿色",
+        "extra": "",
+        "sortkey": "",
+        "color": "#55dd55"
+      },
+      {
+        "label": "卖出",
+        "value": "",
+        "extra": "",
+        "coins": [
+          {
+            "type": "sc",
+            "amount": "65",
+            "image": "Silver_Coin.png"
+          }
+        ]
+      },
+      {
+        "label": "研究",
+        "value": "需要 1 份",
+        "extra": ""
+      }
+    ],
+    "recipe": {
+      "station": "铁砧或铅砧",
+      "ingredients": [
+        {
+          "name": "琥珀",
+          "image": "Amber.png",
+          "amount": "3"
+        },
+        {
+          "name": "羽毛",
+          "image": "Feather.png",
+          "amount": "7"
+        },
+        {
+          "name": "任何银锭",
+          "image": "Any_Silver_Bar.gif",
+          "amount": "5"
+        }
+      ],
+      "result": {
+        "name": "鸟妖护身符",
+        "image": "Harpy_Charm.png"
+      }
+    },
+    "used_in": [
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "鸟妖护身符",
+            "image": "Harpy_Charm.png"
+          },
+          {
+            "name": "熔火箭袋",
+            "image": "Molten_Quiver.png"
+          }
+        ],
+        "result": {
+          "name": "凤凰箭袋",
+          "image": "Phoenix_Quiver.png"
+        }
+      },
+      {
+        "station": "工匠作坊",
+        "ingredients": [
+          {
+            "name": "鸟妖护身符",
+            "image": "Harpy_Charm.png"
+          },
+          {
+            "name": "十字项链",
+            "image": "Cross_Necklace.png"
+          }
+        ],
+        "result": {
+          "name": "炽天使项链",
+          "image": "Seraph_Necklace.png"
+        }
+      }
+    ],
+    "description": "鸟妖护身符是一件困难模式之前的战斗配饰，能提供 +5%远程暴击率，并且能将玩家发射的箭重新导向最近的敌怪。被变向的箭必须至少距离玩家 25 格。在鸟妖护身符使箭变向后，它会进入 1.5 秒的冷却，冷却期间不会发生该效果。",
+    "description_rich": [
+      [
+        {
+          "type": "text",
+          "text": "鸟妖护身符是一件困难模式之前的战斗配饰，能提供 +5%远程暴击率，并且能将玩家发射的箭重新导向最近的敌怪。被变向的箭必须至少距离玩家 25 格。在鸟妖护身符使箭变向后，它会进入 1.5 秒的冷却，冷却期间不会发生该效果。"
+        }
+      ]
+    ],
+    "wiki_title": "鸟妖护身符",
+    "item_category": "misc"
   }
 }

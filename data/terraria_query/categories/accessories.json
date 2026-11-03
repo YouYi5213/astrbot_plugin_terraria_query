@@ -1247,8 +1247,8 @@
       }
     ],
     "wiki_title": "Chicken Bones的套装",
-    "drops": null,
-    "item_category": "accessories"
+    "item_category": "accessories",
+    "drops": null
   },
   "Chippy的套装": {
     "name": "Chippy的套装",
@@ -1522,8 +1522,8 @@
       }
     ],
     "wiki_title": "Chippy的套装",
-    "drops": null,
-    "item_category": "accessories"
+    "item_category": "accessories",
+    "drops": null
   },
   "披风": {
     "name": "披风",
